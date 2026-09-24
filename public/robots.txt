@@ -1,0 +1,3 @@
+# Prototype: do not index until real content and project acknowledgments are reviewed.
+User-agent: *
+Disallow: /

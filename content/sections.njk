@@ -1,0 +1,11 @@
+---
+layout: layouts/section.njk
+pagination:
+  data: topics
+  size: 1
+  alias: section
+permalink: "/{{ section.id }}/"
+eleventyComputed:
+  title: "{{ section.title }}"
+  description: "{{ section.description }}"
+---

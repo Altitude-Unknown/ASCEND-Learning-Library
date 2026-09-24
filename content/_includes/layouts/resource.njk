@@ -1,0 +1,21 @@
+---
+layout: layouts/base.njk
+---
+{% set t = topic | topic %}
+<div class="container">
+<nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/library/">Resources</a><span aria-hidden="true">/</span><span aria-current="page">{{ title }}</span></nav>
+<div class="resource-detail">
+<article><span class="eyebrow" data-pagefind-filter="Type">{{ kind }}</span><h1>{{ title }}</h1><p class="lead">{{ description }}</p>
+ <div class="meta-line"><a class="pill" href="/{{ topic }}/" data-pagefind-filter="Topic">{{ t.title }}</a><span>{{ status }}</span>{% if format %}<span data-pagefind-filter="Format">{{ format }}</span>{% endif %}</div>
+ {% if status == 'Planned' %}<div class="notice"><strong>Placeholder resource</strong> No file or external material is available yet. This page shows how the resource will be presented.</div>{% endif %}
+ {% if thumbnail %}<img class="resource-thumbnail" src="{{ thumbnail }}" alt="{{ thumbnailAlt or '' }}" loading="lazy">{% endif %}
+ {% if kind == 'Video' %}<div id="video-player" class="video-shell"{% if youtubeId and status == 'Available' %} data-video-id="{{ youtubeId }}" data-video-title="{{ title }}"{% endif %}>
+ <svg class="video-play" aria-hidden="true"><use href="#i-play"/></svg><p>{% if youtubeId and status == 'Available' %}<button class="button light" data-load-video>Load video: {{ title }}</button>{% else %}Video preview coming soon{% endif %}</p><span>YOUTUBE VIDEO{% if youtubeId %} · Loaded only when you choose{% endif %}</span></div>
+ <section class="transcript"><h2>Captions & transcript</h2><p>{{ captionStatus or 'Caption information will be added before publication.' }}</p>{% if transcript %}<a href="{{ transcript }}">Read the transcript for {{ title }}</a>{% else %}<p class="muted">Transcript placeholder — not yet available.</p>{% endif %}</section>{% endif %}
+ <div class="prose">{{ content | safe }}</div>
+ {% if related.length %}<section class="section-block"><h2>Keep exploring</h2><div class="resource-grid two">{% for resource in collections.resources | related(related) %}{% include "components/card.njk" %}{% endfor %}</div></section>{% endif %}
+</article>
+<aside class="resource-panel"><span class="eyebrow">RESOURCE DETAILS</span><h2>At a glance</h2><dl><dt>Availability</dt><dd>{{ status }}</dd><dt>Resource type</dt><dd>{{ kind }}</dd>{% if audience.length %}<dt>For</dt><dd>{{ audience | join(', ') }}</dd>{% endif %}{% if educationLevel %}<dt>Education level</dt><dd>{{ educationLevel }}</dd>{% endif %}{% if estimatedTime %}<dt>Estimated time</dt><dd>{{ estimatedTime }}</dd>{% endif %}{% if format %}<dt>Format</dt><dd>{{ format }}</dd>{% endif %}{% if fileSize %}<dt>File size</dt><dd>{{ fileSize }}</dd>{% endif %}{% if version %}<dt>Version</dt><dd>{{ version }}</dd>{% endif %}{% if updated %}<dt>Record updated</dt><dd>{{ updated }}</dd>{% endif %}{% if author %}<dt>Author</dt><dd>{{ author }}</dd>{% endif %}<dt>License</dt><dd>{{ license or 'Not yet specified' }}</dd></dl>
+ {% if status == 'Available' and downloadUrl %}<a class="button full" href="{{ downloadUrl }}">{{ actionLabel or 'Download resource' }} <svg class="icon" aria-hidden="true"><use href="#i-download"/></svg></a>{% endif %}{% if status == 'Available' and externalUrl %}<a class="button full" href="{{ externalUrl }}">{{ actionLabel or 'Open resource' }} ↗</a><p class="small muted">Opens an external resource.</p>{% endif %}{% if status == 'Available' and youtubeId and not externalUrl and not downloadUrl %}<a class="button full" href="#video-player">Go to video player</a>{% elif status != 'Available' or (not downloadUrl and not externalUrl and not youtubeId) %}<button class="button full" disabled>{{ actionLabel or 'Open resource' }}</button><p class="small muted">Coming soon. The resource is not connected yet.</p>{% endif %}
+ <a class="text-link" href="/library/">← Back to the resource library</a></aside>
+</div></div>

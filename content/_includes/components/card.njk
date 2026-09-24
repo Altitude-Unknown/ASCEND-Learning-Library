@@ -1,0 +1,7 @@
+{% set t = resource.data.topic | topic %}
+<article class="resource-card" data-resource data-topic="{{ resource.data.topic }}" data-kind="{{ resource.data.kind }}" data-audience="{{ resource.data.audience | default([]) | join(' ') }}" data-format="{{ resource.data.format }}" data-search="{{ resource.data.title }} {{ resource.data.description }} {{ resource.data.keywords | default([]) | join(' ') }} {{ t.title }} {{ resource.data.format }}">
+  <div class="card-top"><span class="resource-kind"><svg class="icon" aria-hidden="true"><use href="#i-{% if resource.data.kind == 'Video' %}play{% elif resource.data.kind == 'CAD model' %}layers{% elif resource.data.kind == 'Book' %}book{% else %}file{% endif %}"/></svg>{{ resource.data.kind }}</span><span class="status">{{ resource.data.status }}</span></div>
+  <h3><a href="{{ resource.url }}">{{ resource.data.title }}</a></h3>
+  <p>{{ resource.data.description }}</p>
+  <div class="card-bottom"><span>{{ t.title }}{% if resource.data.format %} <span aria-hidden="true">·</span> {{ resource.data.format }}{% endif %}</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></div>
+</article>

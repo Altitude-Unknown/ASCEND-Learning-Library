@@ -1,0 +1,30 @@
+---
+title: Explore. Learn. ASCEND.
+description: Explore aviation, atmospheric science, and hands-on engineering through the ASCEND Learning Library.
+permalink: /
+---
+<section class="home-hero">
+ <div class="container hero-grid">
+ <div class="hero-copy"><div class="eyebrow"><span class="live-dot" aria-hidden="true"></span> OPEN KNOWLEDGE. HIGHER POSSIBILITIES.</div><h1>A world of learning.<br><em>A new perspective.</em></h1><p>Explore aviation, atmospheric science, and hands-on engineering. Resources for the curious minds building what comes next.</p><div class="hero-actions"><a class="button" href="/library/">Explore the library <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a><a class="text-link" href="/part107/">Start with FAA Part 107 ↗</a></div><div class="hero-note"><span aria-hidden="true">↗</span> For students. For educators. For explorers.</div></div>
+ <div class="hero-art" aria-hidden="true">
+ <div class="art-label">FIELD NOTES / 001 <span>LOOKING UP</span></div>
+ <svg class="flight-art" viewBox="0 0 600 430" fill="none" xmlns="http://www.w3.org/2000/svg">
+ <defs><pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" stroke="#acc8c5" stroke-width=".7"/></pattern><linearGradient id="sky" x1="0" y1="0" x2="550" y2="430" gradientUnits="userSpaceOnUse"><stop stop-color="#e2efea"/><stop offset="1" stop-color="#c2dbd5"/></linearGradient></defs>
+ <rect x="1" y="1" width="598" height="428" rx="6" fill="url(#sky)"/><rect width="600" height="430" fill="url(#grid)"/>
+ <g stroke="#7ca7a2" stroke-width="1"><circle cx="325" cy="216" r="163"/><circle cx="325" cy="216" r="114" stroke-dasharray="3 8"/><path d="M325 25v380M138 216h374" stroke-dasharray="4 7"/></g>
+ <path d="M-20 372C58 268 107 391 183 332s71-182 157-131 96 2 127-89 59-83 135-78" stroke="#347d76" stroke-width="2" stroke-dasharray="7 7"/>
+ <g transform="translate(310 211) rotate(27)" stroke="#123e46" stroke-linejoin="round"><path d="M0-117 12-87 16-13 127 43 127 58 14 34 10 95 40 116 40 130 0 117-40 130-40 116-10 95-14 34-127 58-127 43-16-13-12-87 0-117Z" fill="#f6faf4" stroke-width="2.5"/><path d="M0-109v225M-16-13 0 1 16-13M-14 34 0 27 14 34M-10 95 0 104 10 95M-115 49-15 12M115 49 15 12M-5-74h10v38H-5z" stroke-width="1.5"/><path d="M0-117 12-87H-12Z" fill="#28796c"/><path d="M-127 43-127 58-94 51-92 34ZM127 43v15l-33-7-2-17Z" fill="#e6ba65"/></g>
+ <g fill="#28796c"><circle cx="87" cy="318" r="5"/><circle cx="468" cy="111" r="5"/><circle cx="489" cy="71" r="3"/></g>
+ <g stroke="#527c7b"><path d="M468 111h55v44M87 318H41v-42M40 46h45M40 46v45M560 384h-45M560 384v-45"/></g>
+ <g fill="#355f62" font-family="monospace" font-size="11" letter-spacing="1"><text x="38" y="262">DISCOVER</text><text x="454" y="176">EXPLORE</text><text x="38" y="395">SCIENCE IN EVERY DIRECTION</text><text x="415" y="42">ASCEND / STEM</text></g>
+ </svg><div class="art-caption"><span>Curiosity is your starting point.</span><span>01 — 08</span></div>
+ </div></div>
+</section>
+<div class="mission-strip"><div class="container"><span>BUILT FOR EXPLORATION</span><p>From the classroom to the field.</p><span>Public resources <b aria-hidden="true">/</b> No sign-in required</span></div></div>
+<section class="container section-block" id="explore">
+ <div class="section-heading"><div><span class="eyebrow">FIND YOUR NEXT QUESTION</span><h2>Where will you explore?</h2><p>Eight ways into a connected world of science and engineering.</p></div><a class="text-link" href="/library/">Browse all resources <span aria-hidden="true">↗</span></a></div>
+ <div class="topic-grid">{% for t in topics %}<a class="topic-card" href="/{{ t.id }}/"><div class="topic-top"><span class="topic-icon"><svg class="icon" aria-hidden="true"><use href="#i-{{ t.icon }}"/></svg></span><span class="topic-number">0{{ loop.index }}</span></div><h3>{{ t.title }}</h3><p>{{ t.description }}</p><span class="topic-link">Explore resources <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span></a>{% endfor %}</div>
+</section>
+<section class="spotlight"><div class="container spotlight-grid"><div><span class="eyebrow">START HERE / FAA PART 107</span><h2>A clear path to<br>a broader view.</h2><p>Explore the structure of our remote pilot learning path. The Airspace module brings readings, presentations, video, and practice into one place.</p><a class="button" href="/part107/airspace/">Explore the Airspace module <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div><div class="spotlight-index"><span class="eyebrow">INSIDE THE EXAMPLE MODULE</span><a href="/resources/airspace-book/"><span>01</span> Read & understand <small>Chapter</small> ↗</a><a href="/resources/airspace-presentation/"><span>02</span> Share & discuss <small>Slides</small> ↗</a><a href="/resources/airspace-video/"><span>03</span> Watch & explore <small>Video</small> ↗</a><a href="/part107/airspace/#main"><span>04</span> Reflect & practice <small>Module</small> ↗</a><p class="small muted">Layout preview · Learning materials coming soon</p></div></div></section>
+<section class="container section-block"><div class="section-heading"><div><span class="eyebrow">A LOOK INSIDE</span><h2>Resources for different ways of learning</h2><p>A preview of the collection we’re building together.</p></div><a class="text-link" href="/library/">See the collection ↗</a></div><div class="resource-grid">{% for resource in collections.resources | related(['airspace-book','purpleair-investigation','sensor-mount']) %}{% include "components/card.njk" %}{% endfor %}</div></section>
+<section class="container"><div class="educator-callout"><span class="topic-icon"><svg class="icon" aria-hidden="true"><use href="#i-book"/></svg></span><div><span class="eyebrow">TEACH SOMETHING THAT TAKES FLIGHT</span><h2>Made for learning. Built for sharing.</h2><p>A growing home for lesson plans, classroom activities, and tools for your team.</p></div><a class="button outline" href="/teachers/">Explore teacher resources →</a></div></section>

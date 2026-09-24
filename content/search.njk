@@ -1,0 +1,7 @@
+---
+title: Search the library
+description: Search ASCEND pages and educational resource records.
+permalink: /search/
+searchPage: true
+---
+<div class="container search-page"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><span aria-current="page">Search</span></nav><span class="eyebrow">FOLLOW YOUR CURIOSITY</span><h1>What would you like to explore?</h1><p class="lead">Search across topics, learning modules, and resource records.</p><div id="site-search"></div><p id="search-help" class="muted">Search is loading. You can also <a href="/library/">browse the resource library</a>.</p><noscript><p class="notice">Site search needs JavaScript. All pages and resources are also accessible from the <a href="/library/">resource library</a> and topic navigation.</p></noscript><div class="search-suggestions"><span class="eyebrow">TRY A STARTING POINT</span>{% for term in ['Airspace','PurpleAir','STL','Part 107','Balloon tracking','PM2.5'] %}<a href="/search/?q={{ term | urlencode }}">{{ term }} ↗</a>{% endfor %}</div></div>

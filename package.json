@@ -1,0 +1,24 @@
+{
+  "name": "ascend-learning-library",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A public, static STEM resource library for ASCEND",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "eleventy && pagefind --site _site",
+    "dev": "eleventy --serve",
+    "preview": "npm run build && eleventy --serve",
+    "check": "node scripts/check-site.mjs",
+    "test": "npm run build && npm run check",
+    "test:browser": "playwright test"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2",
+    "@axe-core/playwright": "^4.13.0",
+    "@playwright/test": "^1.63.0",
+    "pagefind": "^1.4.0"
+  }
+}

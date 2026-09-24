@@ -1,0 +1,13 @@
+<div data-browser>
+<form class="filter-bar" data-filters role="search" aria-label="Filter these resources">
+ <div class="filter-search"><label for="resource-query">Search this collection</label><input id="resource-query" name="q" type="search" placeholder="Try airspace, PurpleAir, STL…"></div>
+ <div><label for="resource-topic">Topic</label><select id="resource-topic" name="topic"><option value="">All topics</option>{% for t in topics %}{% if t.id != 'downloads' and t.id != 'videos' %}<option value="{{ t.id }}">{{ t.title }}</option>{% endif %}{% endfor %}</select></div>
+ <div><label for="resource-type">Type</label><select id="resource-type" name="kind"><option value="">All types</option>{% for kind in ['Activity','Book','CAD model','Instructor guide','Presentation','Video','Web application','Worksheet'] %}<option>{{ kind }}</option>{% endfor %}</select></div>
+ <div><label for="resource-audience">Audience</label><select id="resource-audience" name="audience"><option value="">Everyone</option><option>Students</option><option>Teachers</option><option>Mentors</option></select></div>
+ <button class="button subtle" type="reset">Clear filters</button>
+</form>
+<noscript><p class="notice">All resources are listed below. Enable JavaScript to search and filter this collection.</p></noscript>
+<p class="results-count" data-count role="status" aria-live="polite">{{ items.length }} resource{% if items.length != 1 %}s{% endif %} · Prototype collection</p>
+<div class="resource-grid">{% for resource in items %}{% include "components/card.njk" %}{% endfor %}</div>
+<div class="empty-state" data-empty hidden><h2>No matching resources yet</h2><p>Try a broader term or clear your filters. This prototype has a small example collection.</p><a href="/search/">Search the whole site →</a></div>
+</div>

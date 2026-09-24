@@ -1,0 +1,284 @@
+[
+  {
+    "id": "part107",
+    "title": "FAA Part 107",
+    "tagline": "Prepare for your next perspective.",
+    "description": "Build a learning path through remote pilot knowledge, from airspace and weather to safe UAS operations.",
+    "icon": "compass",
+    "subsections": [
+      {
+        "title": "Getting Started",
+        "slug": "getting-started"
+      },
+      {
+        "title": "Regulations",
+        "slug": "regulations"
+      },
+      {
+        "title": "Airspace",
+        "slug": "airspace"
+      },
+      {
+        "title": "Weather",
+        "slug": "weather"
+      },
+      {
+        "title": "UAS Operations",
+        "slug": "uas-operations"
+      },
+      {
+        "title": "Loading and Performance",
+        "slug": "loading-and-performance"
+      },
+      {
+        "title": "Part 107 Study Guide",
+        "slug": "part-107-study-guide"
+      },
+      {
+        "title": "Presentations",
+        "slug": "presentations"
+      },
+      {
+        "title": "Practice Tests",
+        "slug": "practice-tests"
+      }
+    ]
+  },
+  {
+    "id": "uas",
+    "title": "UAS",
+    "tagline": "From first principles to first flight.",
+    "description": "Explore aircraft design, electronics, flight systems, and scientific missions.",
+    "icon": "aircraft",
+    "subsections": [
+      {
+        "title": "Introduction to UAS",
+        "slug": "introduction-to-uas"
+      },
+      {
+        "title": "Aircraft Design",
+        "slug": "aircraft-design"
+      },
+      {
+        "title": "Aircraft Construction",
+        "slug": "aircraft-construction"
+      },
+      {
+        "title": "Electronics",
+        "slug": "electronics"
+      },
+      {
+        "title": "Flight Controllers",
+        "slug": "flight-controllers"
+      },
+      {
+        "title": "Flight Training",
+        "slug": "flight-training"
+      },
+      {
+        "title": "Mission Planning",
+        "slug": "mission-planning"
+      },
+      {
+        "title": "Autonomous Flight",
+        "slug": "autonomous-flight"
+      },
+      {
+        "title": "Scientific Payloads",
+        "slug": "scientific-payloads"
+      }
+    ]
+  },
+  {
+    "id": "air-quality",
+    "title": "Air Quality",
+    "tagline": "Make the invisible measurable.",
+    "description": "Connect air-quality sensors, thoughtful experiments, and environmental data.",
+    "icon": "sensor",
+    "subsections": [
+      {
+        "title": "Introduction to Air Quality",
+        "slug": "introduction-to-air-quality"
+      },
+      {
+        "title": "Particulate Matter",
+        "slug": "particulate-matter"
+      },
+      {
+        "title": "Air Quality Sensors",
+        "slug": "air-quality-sensors"
+      },
+      {
+        "title": "PurpleAir",
+        "slug": "purpleair"
+      },
+      {
+        "title": "Low-Cost PM Sensors",
+        "slug": "low-cost-pm-sensors"
+      },
+      {
+        "title": "Sensor Calibration",
+        "slug": "sensor-calibration"
+      },
+      {
+        "title": "Data Collection",
+        "slug": "data-collection"
+      },
+      {
+        "title": "UAS Air Quality Measurements",
+        "slug": "uas-air-quality-measurements"
+      },
+      {
+        "title": "Data Analysis",
+        "slug": "data-analysis"
+      }
+    ]
+  },
+  {
+    "id": "ballooning",
+    "title": "High-Altitude Ballooning",
+    "tagline": "Take your investigation higher.",
+    "description": "Plan a path from payload design to atmospheric observations and recovery.",
+    "icon": "balloon",
+    "subsections": [
+      {
+        "title": "Introduction",
+        "slug": "introduction"
+      },
+      {
+        "title": "Balloon Systems",
+        "slug": "balloon-systems"
+      },
+      {
+        "title": "Payload Design",
+        "slug": "payload-design"
+      },
+      {
+        "title": "Flight Planning",
+        "slug": "flight-planning"
+      },
+      {
+        "title": "Tracking",
+        "slug": "tracking"
+      },
+      {
+        "title": "Recovery",
+        "slug": "recovery"
+      },
+      {
+        "title": "Sensors",
+        "slug": "sensors"
+      },
+      {
+        "title": "Scientific Investigations",
+        "slug": "scientific-investigations"
+      },
+      {
+        "title": "Safety",
+        "slug": "safety"
+      }
+    ]
+  },
+  {
+    "id": "fabrication",
+    "title": "CAD & Fabrication",
+    "tagline": "Turn an idea into something tangible.",
+    "description": "Find a place for digital designs, fabrication guides, and hardware for field investigations.",
+    "icon": "layers",
+    "subsections": [
+      {
+        "title": "CAD Files",
+        "slug": "cad-files"
+      },
+      {
+        "title": "STL Files",
+        "slug": "stl-files"
+      },
+      {
+        "title": "DXF Files",
+        "slug": "dxf-files"
+      },
+      {
+        "title": "3D Printing",
+        "slug": "3d-printing"
+      },
+      {
+        "title": "Laser Cutting",
+        "slug": "laser-cutting"
+      },
+      {
+        "title": "CNC",
+        "slug": "cnc"
+      },
+      {
+        "title": "Electronics Enclosures",
+        "slug": "electronics-enclosures"
+      },
+      {
+        "title": "Aircraft Parts",
+        "slug": "aircraft-parts"
+      },
+      {
+        "title": "Sensor Mounts",
+        "slug": "sensor-mounts"
+      },
+      {
+        "title": "Balloon Payload Hardware",
+        "slug": "balloon-payload-hardware"
+      }
+    ]
+  },
+  {
+    "id": "teachers",
+    "title": "Teacher Resources",
+    "tagline": "Bring exploration into your classroom.",
+    "description": "Plan learning experiences with materials designed for teachers, mentors, and student teams.",
+    "icon": "book",
+    "subsections": [
+      {
+        "title": "Lesson Plans",
+        "slug": "lesson-plans"
+      },
+      {
+        "title": "Instructor Guides",
+        "slug": "instructor-guides"
+      },
+      {
+        "title": "Student Worksheets",
+        "slug": "student-worksheets"
+      },
+      {
+        "title": "Presentations",
+        "slug": "presentations"
+      },
+      {
+        "title": "Classroom Activities",
+        "slug": "classroom-activities"
+      },
+      {
+        "title": "Standards Alignment",
+        "slug": "standards-alignment"
+      },
+      {
+        "title": "Equipment Lists",
+        "slug": "equipment-lists"
+      }
+    ]
+  },
+  {
+    "id": "videos",
+    "title": "Videos",
+    "tagline": "See the ideas in action.",
+    "description": "Browse the video collection, with space for captions and transcripts alongside every lesson.",
+    "icon": "play",
+    "subsections": []
+  },
+  {
+    "id": "downloads",
+    "title": "Downloads",
+    "tagline": "Resources to take with you.",
+    "description": "Browse documents, presentation files, digital designs, code, and datasets.",
+    "icon": "download",
+    "subsections": []
+  }
+]

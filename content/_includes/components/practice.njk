@@ -1,0 +1,6 @@
+{% set practice = (collections.resources | related(["part107-app"]))[0] %}
+<aside class="practice-callout" aria-label="Part 107 practice tests">
+ <div><span class="eyebrow">PUT YOUR LEARNING TO WORK</span><h2>Ready to check your understanding?</h2><p>The existing Part 107 practice-test app will connect here.</p></div>
+ <a class="button light" href="{% if practice.data.externalUrl and practice.data.status == 'Available' %}{{ practice.data.externalUrl }}{% else %}/resources/part107-app/{% endif %}">Take a Part 107 Practice Test <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+ {% if not practice.data.externalUrl or practice.data.status != 'Available' %}<span class="callout-note">App connection coming soon</span>{% endif %}
+</aside>
