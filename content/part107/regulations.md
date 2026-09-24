@@ -1,16 +1,19 @@
 ---
 title: Regulations
-description: A home for remote pilot rules and responsibilities.
+description: Study remote pilot rules and responsibilities with the supplied guide
+  and presentation.
 order: 2
 permalink: /part107/regulations/
 objectives: []
-resourceIds: []
+resourceIds:
+- airspace-book
+- regulations-presentation
 quiz: false
-status: Prototype
+status: Materials added
 ---
 
-This module is part of the planned Part 107 learning path. Reviewed instructional content will be added here.
+## How to use these materials
 
-## How to use this module
+Read Chapter 1, **Aviation Regulatory System**, in the study guide, then use the matching presentation for discussion.
 
-Use the navigation to explore another module, or browse the resource library. Placeholder materials are not yet available to read or download.
+The files are presented as supplied. The study guide notes updates relative to some of the original slide language; the import preserves both editions.

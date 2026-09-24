@@ -1,13 +1,13 @@
 # GitHub and Cloudflare Pages deployment
 
-No remote repository, account, custom domain, or live site has been created.
-The project is prepared for a dedicated repository with this folder at its root.
+The public repository is https://github.com/Altitude-Unknown/ASCEND-Learning-Library,
+alongside the RC-Airplane project. This folder is the repository root.
+Cloudflare hosting and a custom domain have not yet been connected.
 
 ## Create and connect the repository
 
-1. Create a GitHub repository for ASCEND Learning Library in the appropriate
-   project/organization account. Use the visibility required by the project.
-2. Add that repository as this project's Git remote and push `main`. Commit
+1. Use the existing **Altitude-Unknown/ASCEND-Learning-Library** repository.
+2. Keep `main` pushed to the `origin` remote. Commit
    source, documentation, `.node-version`, and `package-lock.json`; do not commit
    `node_modules/`, `_site/`, test artifacts, secrets, or large binary collections.
 3. In Cloudflare **Workers & Pages**, create a **Pages** application using Git
@@ -71,3 +71,16 @@ path prefix, update URL generation and Pagefind paths and rerun browser checks.
 - [Build image and Node selection](https://developers.cloudflare.com/pages/configuration/build-image/)
 - [Pages limits](https://developers.cloudflare.com/pages/platform/limits/)
 - [Serving pages and custom 404](https://developers.cloudflare.com/pages/configuration/serving-pages/)
+
+## Imported materials: deployment check
+
+Deploy `_site/`, never `_preview/`. The latter includes large local originals
+for private evaluation. Eight assets currently need public HTTPS storage URLs;
+see [the import inventory](IMPORTED-MATERIALS.md). Their pages remain navigable
+in the production build and show Download being prepared until connected.
+
+`npm test` checks distribution-file hashes, original hashes when originals are
+present, asset coverage, and the 25 MiB distribution limit. Intake originals and
+conversion artifacts are intentionally ignored by Git. Builds on GitHub or
+Cloudflare use checked-in distribution files and the centralized manifest,
+without requiring Word, PowerPoint, Python, or the local intake directory.

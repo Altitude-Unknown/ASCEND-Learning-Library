@@ -4,18 +4,18 @@ layout: layouts/base.njk
 <div class="container">
 <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/part107/">FAA Part 107</a><span aria-hidden="true">/</span><span aria-current="page">{{ title }}</span></nav>
 <div class="module-layout">
-<aside class="module-sidebar" data-pagefind-ignore><p class="eyebrow">YOUR LEARNING PATH</p><nav aria-label="Part 107 modules">{% for m in collections.modules %}<a href="{{ m.url }}"{% if m.url == page.url %} aria-current="page"{% endif %}><span>{{ m.data.order }}</span>{{ m.data.title }}</a>{% endfor %}</nav><a class="sidebar-back" href="/part107/">← Part 107 overview</a></aside>
+<aside class="module-sidebar" data-pagefind-ignore><p class="eyebrow">BROWSE PART 107</p><nav aria-label="Part 107 topics">{% for m in collections.modules %}<a href="{{ m.url }}"{% if m.url == page.url %} aria-current="page"{% endif %}>{{ m.data.title }}</a>{% endfor %}</nav><a class="sidebar-back" href="/part107/">← Part 107 overview</a></aside>
 <article class="module-content">
- <span class="eyebrow" data-pagefind-filter="Topic:FAA Part 107">FAA PART 107 / MODULE {{ order }}</span><h1>{{ title }}</h1><p class="lead">{{ description }}</p>
- <div class="meta-line"><span class="pill">Training module</span><span>Self-paced</span><span>Prototype content</span></div>
- <div class="notice"><strong>Content preview</strong> This page is a complete layout example. Reviewed lessons and linked materials are still to come.</div>
+ <span class="eyebrow" data-pagefind-filter="Topic:FAA Part 107">FAA PART 107 / REFERENCE TOPIC</span><h1>{{ title }}</h1><p class="lead">{{ description }}</p>
+ <div class="meta-line"><span class="pill">Reference topic</span><span>Browse as needed</span><span>{{ status }}</span></div>
+ {% if status == 'Prototype' %}<div class="notice"><strong>Content preview</strong> Materials for this topic are still being prepared.</div>{% endif %}
  <div class="prose">{{ content | safe }}</div>
- {% if objectives.length %}<section class="objectives"><span class="eyebrow">LEARN WITH PURPOSE</span><h2>Learning objectives</h2><p class="small muted">Example objectives for the finished module.</p><ol>{% for objective in objectives %}<li>{{ objective }}</li>{% endfor %}</ol></section>{% endif %}
- <section class="section-block"><div class="section-heading"><div><span class="eyebrow">READ · WATCH · EXPLORE</span><h2>Module resources</h2></div></div>
+ {% if objectives.length %}<section class="objectives"><span class="eyebrow">LEARN WITH PURPOSE</span><h2>Learning objectives</h2><p class="small muted">Topics this resource will help you explore.</p><ol>{% for objective in objectives %}<li>{{ objective }}</li>{% endfor %}</ol></section>{% endif %}
+ <section class="section-block"><div class="section-heading"><div><span class="eyebrow">READ · WATCH · EXPLORE</span><h2>Related resources</h2></div></div>
  {% set linked = collections.resources | related(resourceIds) %}
- {% if linked.length %}<div class="resource-grid two">{% for resource in linked %}{% include "components/card.njk" %}{% endfor %}</div>{% else %}<div class="empty-state"><h3>Materials are being prepared</h3><p>This module will bring together readings, presentations, videos, and student materials.</p><a href="/library/">Browse example resources →</a></div>{% endif %}
+ {% if linked.length %}<div class="resource-grid two">{% for resource in linked %}{% include "components/card.njk" %}{% endfor %}</div>{% else %}<div class="empty-state"><h3>Materials are being prepared</h3><p>This topic will bring together readings, presentations, videos, and student materials.</p><a href="/library/">Browse resources →</a></div>{% endif %}
  </section>
- {% if quiz %}<section class="quiz-panel"><svg class="icon" aria-hidden="true"><use href="#i-compass"/></svg><div><h2>Practice what you’ve explored</h2><p>Topic-specific practice will connect here when the quiz app is ready.</p><button class="button" disabled>Take an Airspace Practice Quiz</button><p class="small">Coming soon — this quiz is not yet connected.</p></div></section>{% endif %}
+
  {% if order == 9 %}{% include "components/practice.njk" %}{% endif %}
- <nav class="module-next" aria-label="Continue learning">{% for m in collections.modules %}{% if m.data.order == order + 1 %}<a href="{{ m.url }}">Next module <strong>{{ m.data.title }} →</strong></a>{% endif %}{% endfor %}<a href="/part107/">View all modules →</a></nav>
+ <nav class="module-next" aria-label="More resources"><a href="/part107/">Browse all Part 107 topics →</a><a href="/library/">Browse the resource library →</a></nav>
 </article></div></div>

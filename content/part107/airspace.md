@@ -1,13 +1,10 @@
 ---
 title: Airspace
-description: Explore the learning materials planned for airspace, charts, and flight
-  planning.
+description: Read about the National Airspace System and explore the matching Part
+  107 slides.
 order: 3
 permalink: /part107/airspace/
-objectives:
-- Identify the airspace topics to review for remote pilot preparation.
-- Practice interpreting an airspace scenario using a reviewed training resource.
-- Connect airspace study to a preflight planning checklist.
+objectives: []
 resourceIds:
 - airspace-book
 - airspace-presentation
@@ -15,13 +12,11 @@ resourceIds:
 - airspace-video
 - airspace-instructor
 quiz: true
-status: Prototype
+status: Materials added
 ---
 
-This module demonstrates how a complete learning page will work. Its structure is ready for reviewed ASCEND content; the materials below are clearly marked placeholders.
+## How to use these materials
 
-## How to use this module
+Read Chapter 2, **National Airspace System**, in the complete study guide. The presentation covers airspace, charts, airport operations, and related topics. The worksheet, instructor notes, video, and quiz remain planned.
 
-Begin with the chapter, explore the presentation, and use the student worksheet to organize your questions. When connected, the video and practice quiz will provide additional ways to review.
-
-These are example learning objectives and a publishing structure, not an FAA-approved course or current regulatory guidance.
+The files are presented as supplied. The study guide notes updates relative to some of the original slide language; the import preserves both editions.

@@ -1,5 +1,8 @@
 # Editing the learning library
 
+Start with [the curation workflow](CONTENT-WORKFLOW.md): contributors can send
+ordinary documents and files; Markdown is the publishing format for the curator.
+
 ## The everyday workflow
 
 1. Copy a similar `.md` file in `content/`.
@@ -29,7 +32,8 @@ status: Planned
 permalink: /resources/your-resource/
 audience:
   - Students
-  - Teachers
+  - Faculty Mentors
+  - Pod Leads
 format: PDF
 updated: '2026-09-23'
 ---
@@ -45,16 +49,16 @@ Write instructions in ordinary Markdown.
 
 Keep `id` and `permalink` unchanged after publication. `status` is Planned or
 Available. Topic IDs: `part107`, `uas`, `air-quality`, `ballooning`, `fabrication`,
-`teachers`. Existing types: Activity, Book, CAD model, Instructor guide,
+`teachers`. Existing types: Activity, Assembly guide, Book, CAD model, Instructor guide,
 Presentation, Video, Web application, Worksheet. If adding another type, add
-it to the type select in `components/browser.njk` too.
+it to `content/_data/resourceTaxonomy.json` too.
 
 Optional metadata:
 
 | Field | Use |
 | --- | --- |
-| `audience` | List: Students, Teachers, Mentors |
-| `educationLevel` | Free text, such as a reviewed grade range |
+| `audience` | List: Students, Faculty Mentors, Pod Leads |
+| `educationLevel` | Free text for college coursework or research level; use only verified information |
 | `estimatedTime` | Human-readable estimate; do not invent estimates |
 | `format` | PDF, PPTX, DOCX, STL, DXF, STEP, ZIP, INO, CSV, etc. |
 | `fileSize` | Human-readable value from the actual file |
@@ -128,9 +132,8 @@ resourceIds:
 Write your lesson here.
 ```
 
-The learning-path navigation automatically includes it in numeric order. The
-homepage currently describes the initial nine-module milestone; update that
-copy and the module-count label when changing the path substantially.
+The reference-topic navigation includes it in display order. Ordering is for
+browsing, not a required sequence. Update the topic-count label if adding topics.
 
 For an ordinary page elsewhere, create a Markdown file with
 `layout: layouts/article.njk`, `title`, `description`, and `permalink`.
@@ -153,3 +156,36 @@ Replace `downloadUrl`/`externalUrl`, not a landing page's `permalink`. If a publ
 page must move, add a redirect on the host and preserve its original URL in a
 redirect inventory. No production domain or guessed redirects are baked into
 this prototype. Choose a domain before adding canonical URLs and a sitemap.
+
+## Imported files and multi-file resource pages
+
+For supplied materials, use `assetIds` instead of repeating URLs in resource
+Markdown. IDs resolve through `content/_data/materials.json`:
+
+```yaml
+assetIds:
+  - part107-study-guide-pdf
+  - books-faa-remote-pilot-study-guide
+```
+
+The template shows each original filename, actual file size, format, and a
+meaningful download link. PDF records also offer View PDF. A group can contain
+multiple STL, DXF, or other files. For the full intake/update workflow and files
+awaiting public storage, see [Imported materials](IMPORTED-MATERIALS.md).
+
+The Faculty & Pod Resources section retains the internal topic ID `teachers`
+and URL `/teachers/` to preserve existing links. Its public title and audience
+labels reflect college teams, faculty mentors, and university pod leads.
+
+## Project purpose and science content
+
+Edit `content/about.md`, `content/science.md`, and `content/project.md` in
+Markdown. These pages use the shared `layouts/program.njk` layout.
+`content/_data/programNavigation.json` supplies their homepage cards, project
+navigation, Explore menu entries, and footer links.
+
+Section introductions and science links live in `content/_data/topics.json`
+under `overview`, `contextLinks`, and each subsection's `description`/`links`.
+Preserve existing question anchors (`rq1` through `rq7`) when revising the text.
+Use prospective wording for planned observations, repositories, and results
+until their actual availability is confirmed.

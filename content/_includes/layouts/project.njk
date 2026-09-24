@@ -1,0 +1,9 @@
+---
+layout: layouts/base.njk
+---
+<div class="container">
+<nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/uas/">UAS</a><span aria-hidden="true">/</span><span aria-current="page">{{ title }}</span></nav>
+<header class="section-hero"><span class="eyebrow">AIRCRAFT PROJECT</span><h1>{{ title }}</h1><p class="lead">{{ description }}</p><div class="project-links"><a class="button" href="#project-files">Explore project resources ↓</a><a class="button outline" href="/resources/remote-aircraft-textbook/">Read the aircraft lab manual</a></div></header>
+<div class="prose project-intro">{{ content | safe }}</div>
+<section class="project-resources" id="project-files"><div class="section-heading"><div><span class="eyebrow">FROM DESIGN TO ASSEMBLY</span><h2>Project resources</h2></div></div><div class="resource-grid">{% for resource in collections.resources | related(resourceIds) %}{% include "components/card.njk" %}{% endfor %}</div></section>
+</div>

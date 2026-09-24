@@ -10,8 +10,8 @@ quiz: false
 status: Prototype
 ---
 
-This module is part of the planned Part 107 learning path. Reviewed instructional content will be added here.
+This page gathers references for the Part 107 resource collection. Reviewed instructional content will be added here.
 
-## How to use this module
+## Using these resources
 
-Use the navigation to explore another module, or browse the resource library. Placeholder materials are not yet available to read or download.
+Use the navigation to explore another topic, or browse the resource library. Placeholder materials are not yet available to read or download.

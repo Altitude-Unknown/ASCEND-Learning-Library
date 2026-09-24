@@ -1,0 +1,6 @@
+{
+  "subjects": ["Atmospheric Science", "Aerosols & Air Quality", "Sensors & Instrumentation", "Radiosondes", "High-Altitude Balloons", "UAS", "Data Collection", "Data Analysis & Visualization", "NASA Data", "Scientific Communication", "Field Operations & Safety", "Project Participation"],
+  "platforms": ["Surface Instruments", "Radiosondes", "High-Altitude Balloons", "Multirotor UAS", "Fixed-Wing UAS", "Satellite Data"],
+  "activities": ["Project Planning", "Building & Integration", "Sensor Evaluation", "Field Measurements", "Data Analysis", "Sharing Results"],
+  "kinds": ["Activity", "Assembly guide", "Book", "CAD model", "Checklist", "Dataset", "Equipment guide", "Field procedure", "Instructor guide", "Presentation", "Reference", "Research protocol", "Science primer", "Software / firmware", "Troubleshooting guide", "Tutorial", "Video", "Web application", "Worksheet"]
+}

@@ -1,16 +1,19 @@
 ---
 title: UAS Operations
-description: A home for safe operating procedures and flight decisions.
+description: Study preflight checks, communication, emergency procedures, and operating
+  decisions.
 order: 5
 permalink: /part107/uas-operations/
 objectives: []
-resourceIds: []
+resourceIds:
+- airspace-book
+- operations-presentation
 quiz: false
-status: Prototype
+status: Materials added
 ---
 
-This module is part of the planned Part 107 learning path. Reviewed instructional content will be added here.
+## How to use these materials
 
-## How to use this module
+Read Chapter 4, **Operations**, in the study guide and use the matching UAS Operations slides.
 
-Use the navigation to explore another module, or browse the resource library. Placeholder materials are not yet available to read or download.
+The files are presented as supplied. The study guide notes updates relative to some of the original slide language; the import preserves both editions.

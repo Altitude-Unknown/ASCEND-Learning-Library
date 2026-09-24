@@ -7,7 +7,8 @@ kind: CAD model
 format: STL
 audience:
 - Students
-- Mentors
+- Faculty Mentors
+- Pod Leads
 actionLabel: Download STL
 keywords:
 - CAD
@@ -18,6 +19,11 @@ permalink: /resources/sensor-mount/
 updated: '2026-09-23'
 externalUrl: ''
 downloadUrl: ''
+delivery: download
+subjects:
+- Sensors & Instrumentation
+activities:
+- Building & Integration
 ---
 
 ## About this resource

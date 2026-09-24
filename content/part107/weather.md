@@ -1,16 +1,18 @@
 ---
 title: Weather
-description: A home for aviation weather concepts and observation tools.
+description: Explore the supplied aviation weather chapter and course presentation.
 order: 4
 permalink: /part107/weather/
 objectives: []
-resourceIds: []
+resourceIds:
+- airspace-book
+- weather-presentation
 quiz: false
-status: Prototype
+status: Materials added
 ---
 
-This module is part of the planned Part 107 learning path. Reviewed instructional content will be added here.
+## How to use these materials
 
-## How to use this module
+Read Chapter 3, **Weather**, in the study guide and use the Weather presentation alongside it.
 
-Use the navigation to explore another module, or browse the resource library. Placeholder materials are not yet available to read or download.
+The files are presented as supplied. The study guide notes updates relative to some of the original slide language; the import preserves both editions.

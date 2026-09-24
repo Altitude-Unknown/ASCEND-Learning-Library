@@ -12,7 +12,7 @@ document.addEventListener('click', event => {
 for (const browser of document.querySelectorAll('[data-browser]')) {
   const form = browser.querySelector('[data-filters]');
   const cards = [...browser.querySelectorAll('[data-resource]')];
-  const fields = ['q', 'topic', 'kind', 'audience'];
+  const fields = ['q', 'topic', 'kind', 'audience', 'subject', 'platform', 'activity'];
   const parameters = new URLSearchParams(location.search);
   for (const key of fields) form.elements[key].value = parameters.get(key) || '';
   const apply = () => {
@@ -23,7 +23,8 @@ for (const browser of document.querySelectorAll('[data-browser]')) {
       const show = terms.every(term => card.dataset.search.toLocaleLowerCase().includes(term)) &&
         (!values.topic || card.dataset.topic === values.topic) &&
         (!values.kind || card.dataset.kind === values.kind) &&
-        (!values.audience || card.dataset.audience.includes(values.audience));
+        (!values.audience || card.dataset.audience.includes(values.audience)) &&
+        ['subject','platform','activity'].every(key => !values[key] || JSON.parse(card.dataset[key] || '[]').includes(values[key]));
       card.hidden = !show;
       if (show) visible++;
     }

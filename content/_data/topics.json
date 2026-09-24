@@ -3,7 +3,7 @@
     "id": "part107",
     "title": "FAA Part 107",
     "tagline": "Prepare for your next perspective.",
-    "description": "Build a learning path through remote pilot knowledge, from airspace and weather to safe UAS operations.",
+    "description": "Browse remote pilot references covering airspace, weather, regulations, and UAS operations.",
     "icon": "compass",
     "subsections": [
       {
@@ -53,39 +53,93 @@
     "subsections": [
       {
         "title": "Introduction to UAS",
-        "slug": "introduction-to-uas"
+        "slug": "introduction-to-uas",
+        "resourceIds": [
+          "remote-aircraft-textbook"
+        ]
       },
       {
         "title": "Aircraft Design",
-        "slug": "aircraft-design"
+        "slug": "aircraft-design",
+        "resourceIds": [
+          "remote-aircraft-textbook"
+        ]
       },
       {
         "title": "Aircraft Construction",
-        "slug": "aircraft-construction"
+        "slug": "aircraft-construction",
+        "resourceIds": [
+          "remote-aircraft-textbook",
+          "trainer-build-instructions"
+        ]
       },
       {
         "title": "Electronics",
-        "slug": "electronics"
+        "slug": "electronics",
+        "resourceIds": [
+          "remote-aircraft-textbook"
+        ]
       },
       {
         "title": "Flight Controllers",
-        "slug": "flight-controllers"
+        "slug": "flight-controllers",
+        "resourceIds": [
+          "remote-aircraft-textbook"
+        ]
       },
       {
         "title": "Flight Training",
-        "slug": "flight-training"
+        "slug": "flight-training",
+        "resourceIds": [
+          "remote-aircraft-textbook"
+        ]
       },
       {
         "title": "Mission Planning",
-        "slug": "mission-planning"
+        "slug": "mission-planning",
+        "resourceIds": [
+          "remote-aircraft-textbook"
+        ]
       },
       {
         "title": "Autonomous Flight",
-        "slug": "autonomous-flight"
+        "slug": "autonomous-flight",
+        "resourceIds": [
+          "remote-aircraft-textbook"
+        ]
       },
       {
         "title": "Scientific Payloads",
-        "slug": "scientific-payloads"
+        "slug": "scientific-payloads",
+        "resourceIds": [
+          "remote-aircraft-textbook"
+        ]
+      }
+    ],
+    "projects": [
+      {
+        "title": "ASCEND Trainer Airplane",
+        "url": "/uas/trainer-airplane/",
+        "description": "Illustrated build instructions, printed parts, tail drawings, and Fusion assembly."
+      },
+      {
+        "title": "Fixed-Wing Research UAS",
+        "url": "/uas/fixed-wing-research/",
+        "description": "Research-aircraft assembly, material groups, and equipment mounts."
+      }
+    ],
+    "overview": [
+      "ASCEND’s UAS work connects aircraft engineering with atmospheric research. Fixed-wing aircraft are intended to measure horizontal variability, while multirotor aircraft support detailed vertical profiles in the lower atmosphere.",
+      "Teams will integrate sensors and data systems, test their platforms, and evaluate measurements alongside balloon and surface observations. The aircraft resources below support the engineering skills needed for that work."
+    ],
+    "contextLinks": [
+      {
+        "title": "Connect aircraft to the science goals",
+        "url": "/science/#rq5"
+      },
+      {
+        "title": "Explore the team workflow",
+        "url": "/project/#workflow"
       }
     ]
   },
@@ -93,44 +147,121 @@
     "id": "air-quality",
     "title": "Air Quality",
     "tagline": "Make the invisible measurable.",
-    "description": "Connect air-quality sensors, thoughtful experiments, and environmental data.",
+    "description": "Investigate wildfire smoke and other pollutants through sensor comparisons, vertical profiles, and observations across the landscape.",
     "icon": "sensor",
     "subsections": [
       {
         "title": "Introduction to Air Quality",
-        "slug": "introduction-to-air-quality"
+        "slug": "introduction-to-air-quality",
+        "description": "Connect local air-quality observations to the project’s shared questions about smoke transport.",
+        "links": [
+          {
+            "title": "Explore the science question",
+            "url": "/science/#shared-question"
+          }
+        ]
       },
       {
         "title": "Particulate Matter",
-        "slug": "particulate-matter"
+        "slug": "particulate-matter",
+        "description": "Explore the particulate measurements used to investigate smoke distribution and changes in surface air quality.",
+        "links": [
+          {
+            "title": "Explore the science question",
+            "url": "/science/#rq1"
+          }
+        ]
       },
       {
         "title": "Air Quality Sensors",
-        "slug": "air-quality-sensors"
+        "slug": "air-quality-sensors",
+        "description": "Consider measurement range, reference comparisons, and how a sensor behaves on an airborne platform.",
+        "links": [
+          {
+            "title": "Explore the science question",
+            "url": "/science/#rq4"
+          }
+        ]
       },
       {
         "title": "PurpleAir",
-        "slug": "purpleair"
+        "slug": "purpleair",
+        "description": "Consider surface observations alongside airborne profiles and reference measurements.",
+        "links": [
+          {
+            "title": "Explore the science question",
+            "url": "/science/#rq4"
+          }
+        ]
       },
       {
         "title": "Low-Cost PM Sensors",
-        "slug": "low-cost-pm-sensors"
+        "slug": "low-cost-pm-sensors",
+        "description": "Evaluate candidate sensors and their limitations before interpreting flight measurements.",
+        "links": [
+          {
+            "title": "Explore the science question",
+            "url": "/science/#rq4"
+          }
+        ]
       },
       {
         "title": "Sensor Calibration",
-        "slug": "sensor-calibration"
+        "slug": "sensor-calibration",
+        "description": "Plan comparisons with calibrated reference instruments and evaluate changes to sensor placement or airflow.",
+        "links": [
+          {
+            "title": "Explore the science question",
+            "url": "/science/#rq4"
+          }
+        ]
       },
       {
         "title": "Data Collection",
-        "slug": "data-collection"
+        "slug": "data-collection",
+        "description": "Plan complementary observations at different locations, heights, and times.",
+        "links": [
+          {
+            "title": "Explore the science question",
+            "url": "/science/#rq1"
+          }
+        ]
       },
       {
         "title": "UAS Air Quality Measurements",
-        "slug": "uas-air-quality-measurements"
+        "slug": "uas-air-quality-measurements",
+        "description": "Use vertical profiles and horizontal transects to investigate variability beyond a fixed monitor.",
+        "links": [
+          {
+            "title": "Explore the science question",
+            "url": "/science/#rq5"
+          }
+        ]
       },
       {
         "title": "Data Analysis",
-        "slug": "data-analysis"
+        "slug": "data-analysis",
+        "description": "Investigate the relationship between atmospheric stability, terrain, and changing particulate concentrations.",
+        "links": [
+          {
+            "title": "Explore the science question",
+            "url": "/science/#rq6"
+          }
+        ]
+      }
+    ],
+    "overview": [
+      "ASCEND’s science plan connects measurements near the surface with observations higher in the atmosphere. Teams will investigate how smoke layers, atmospheric conditions, and terrain relate to air quality downwind.",
+      "The work includes sensor evaluation, comparison of surface and airborne observations, and analysis alongside NASA datasets. The aim is to understand both the atmosphere and the limits of the instruments used to measure it."
+    ],
+    "contextLinks": [
+      {
+        "title": "Explore the seven research questions",
+        "url": "/science/"
+      },
+      {
+        "title": "See the data workflow",
+        "url": "/project/#data"
       }
     ]
   },
@@ -138,7 +269,7 @@
     "id": "ballooning",
     "title": "High-Altitude Ballooning",
     "tagline": "Take your investigation higher.",
-    "description": "Plan a path from payload design to atmospheric observations and recovery.",
+    "description": "Use radiosondes and student-integrated balloon payloads to investigate atmospheric structure and the vertical distribution of smoke.",
     "icon": "balloon",
     "subsections": [
       {
@@ -171,11 +302,32 @@
       },
       {
         "title": "Scientific Investigations",
-        "slug": "scientific-investigations"
+        "slug": "scientific-investigations",
+        "description": "Investigate vertical smoke layers, gaps in remote-sensing observations, and transport near the tropopause.",
+        "links": [
+          {
+            "title": "Read the research questions",
+            "url": "/science/"
+          }
+        ]
       },
       {
         "title": "Safety",
         "slug": "safety"
+      }
+    ],
+    "overview": [
+      "Small meteorological balloons with radiosondes provide profiles of temperature, pressure, humidity, and wind. Larger high-altitude balloons support student-integrated payloads for particulate measurements and other observations through a deeper atmospheric column.",
+      "ASCEND plans to combine these observations with UAS and surface measurements. Shared sensing, data logging, and comparison practices will help teams connect observations across platforms."
+    ],
+    "contextLinks": [
+      {
+        "title": "Compare measurement platforms",
+        "url": "/science/#platforms"
+      },
+      {
+        "title": "Explore long-range transport",
+        "url": "/science/#rq7"
       }
     ]
   },
@@ -188,80 +340,205 @@
     "subsections": [
       {
         "title": "CAD Files",
-        "slug": "cad-files"
+        "slug": "cad-files",
+        "resourceIds": [
+          "trainer-fusion-assembly",
+          "research-fusion-assembly"
+        ]
       },
       {
         "title": "STL Files",
-        "slug": "stl-files"
+        "slug": "stl-files",
+        "resourceIds": [
+          "trainer-tpu-parts",
+          "trainer-petg-parts",
+          "research-petg-parts"
+        ]
       },
       {
         "title": "DXF Files",
-        "slug": "dxf-files"
+        "slug": "dxf-files",
+        "resourceIds": [
+          "trainer-dxf-patterns"
+        ]
       },
       {
         "title": "3D Printing",
-        "slug": "3d-printing"
+        "slug": "3d-printing",
+        "resourceIds": [
+          "trainer-tpu-parts",
+          "research-tpu-64d-parts",
+          "research-tpu-95a-parts"
+        ]
       },
       {
         "title": "Laser Cutting",
-        "slug": "laser-cutting"
+        "slug": "laser-cutting",
+        "resourceIds": []
       },
       {
         "title": "CNC",
-        "slug": "cnc"
+        "slug": "cnc",
+        "resourceIds": []
       },
       {
         "title": "Electronics Enclosures",
-        "slug": "electronics-enclosures"
+        "slug": "electronics-enclosures",
+        "resourceIds": []
       },
       {
         "title": "Aircraft Parts",
-        "slug": "aircraft-parts"
+        "slug": "aircraft-parts",
+        "resourceIds": [
+          "trainer-petg-parts",
+          "research-foam-tail"
+        ]
       },
       {
         "title": "Sensor Mounts",
-        "slug": "sensor-mounts"
+        "slug": "sensor-mounts",
+        "resourceIds": [
+          "research-petg-parts"
+        ]
       },
       {
         "title": "Balloon Payload Hardware",
-        "slug": "balloon-payload-hardware"
+        "slug": "balloon-payload-hardware",
+        "resourceIds": []
+      }
+    ],
+    "projects": [
+      {
+        "title": "ASCEND Trainer Airplane",
+        "url": "/uas/trainer-airplane/",
+        "description": "Illustrated build instructions, printed parts, tail drawings, and Fusion assembly."
+      },
+      {
+        "title": "Fixed-Wing Research UAS",
+        "url": "/uas/fixed-wing-research/",
+        "description": "Research-aircraft assembly, material groups, and equipment mounts."
+      }
+    ],
+    "overview": [
+      "Design and fabrication support ASCEND’s measurement platforms: aircraft structures, sensor mounts, electronics enclosures, and balloon payload hardware. Students will connect component design and integration with the needs of an atmospheric investigation."
+    ],
+    "contextLinks": [
+      {
+        "title": "See how platforms support the science",
+        "url": "/science/#platforms"
       }
     ]
   },
   {
     "id": "teachers",
-    "title": "Teacher Resources",
-    "tagline": "Bring exploration into your classroom.",
-    "description": "Plan learning experiences with materials designed for teachers, mentors, and student teams.",
+    "title": "Faculty & Pod Resources",
+    "tagline": "Support college teams from coursework to research.",
+    "description": "Resources for faculty mentors leading community college and university teams, and university pod leads providing mentoring and technical support.",
     "icon": "book",
     "subsections": [
       {
-        "title": "Lesson Plans",
-        "slug": "lesson-plans"
+        "title": "Course & Project Planning",
+        "slug": "lesson-plans",
+        "resourceIds": [],
+        "description": "Connect course and project activities with ASCEND’s science, engineering, and learning goals.",
+        "links": [
+          {
+            "title": "Read the project guide",
+            "url": "/about/#goals"
+          }
+        ]
       },
       {
-        "title": "Instructor Guides",
-        "slug": "instructor-guides"
+        "title": "Faculty Guides",
+        "slug": "instructor-guides",
+        "resourceIds": [],
+        "description": "Support teams as they develop platform, measurement, and analysis skills.",
+        "links": [
+          {
+            "title": "Read the project guide",
+            "url": "/project/#workflow"
+          }
+        ]
       },
       {
         "title": "Student Worksheets",
-        "slug": "student-worksheets"
+        "slug": "student-worksheets",
+        "resourceIds": []
       },
       {
         "title": "Presentations",
-        "slug": "presentations"
+        "slug": "presentations",
+        "resourceIds": [
+          "regulations-presentation",
+          "airspace-presentation",
+          "weather-presentation",
+          "operations-presentation",
+          "loading-performance-presentation"
+        ]
       },
       {
-        "title": "Classroom Activities",
-        "slug": "classroom-activities"
+        "title": "Labs & Team Activities",
+        "slug": "classroom-activities",
+        "resourceIds": [
+          "remote-aircraft-textbook"
+        ]
       },
       {
-        "title": "Standards Alignment",
-        "slug": "standards-alignment"
+        "title": "Learning Outcomes",
+        "slug": "standards-alignment",
+        "resourceIds": [],
+        "description": "Focus on scientific inquiry, technical practice, data quality, communication, and teamwork.",
+        "links": [
+          {
+            "title": "Read the project guide",
+            "url": "/about/#learning"
+          }
+        ]
       },
       {
         "title": "Equipment Lists",
-        "slug": "equipment-lists"
+        "slug": "equipment-lists",
+        "resourceIds": [
+          "trainer-build-instructions"
+        ]
+      },
+      {
+        "title": "Pod Coordination",
+        "slug": "pod-coordination",
+        "resourceIds": [],
+        "description": "Connect platform-specific technical support with regional scientific collaboration.",
+        "links": [
+          {
+            "title": "Read the project guide",
+            "url": "/project/#pods"
+          }
+        ]
+      },
+      {
+        "title": "Technical Support",
+        "slug": "technical-support",
+        "resourceIds": [],
+        "description": "Use the pod network and subject matter experts to connect teams with relevant expertise.",
+        "links": [
+          {
+            "title": "Read the project guide",
+            "url": "/project/#people"
+          }
+        ]
+      }
+    ],
+    "overview": [
+      "ASCEND brings together student teams from two-year community colleges and four-year universities. Each team is led by faculty mentors.",
+      "University pod leads help run the project and mentor small groups of teams, providing technical support alongside the teams’ faculty mentors."
+    ],
+    "contextLinks": [
+      {
+        "title": "Understand teams and pods",
+        "url": "/project/"
+      },
+      {
+        "title": "Explore project goals",
+        "url": "/about/#goals"
       }
     ]
   },

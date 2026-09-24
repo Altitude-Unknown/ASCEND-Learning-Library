@@ -6,14 +6,15 @@ topic: teachers
 kind: Instructor guide
 format: DOCX
 audience:
-- Teachers
-- Mentors
+- Faculty Mentors
+- Pod Leads
 actionLabel: Download instructor materials
 status: Planned
 permalink: /resources/airspace-instructor/
 updated: '2026-09-23'
 externalUrl: ''
 downloadUrl: ''
+delivery: download
 ---
 
 ## About this resource

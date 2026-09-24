@@ -1,0 +1,2 @@
+# Preserve imported downloads byte-for-byte, including CAD line endings.
+public/downloads/** binary

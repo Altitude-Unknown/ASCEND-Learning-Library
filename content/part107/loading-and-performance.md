@@ -1,16 +1,18 @@
 ---
 title: Loading and Performance
-description: A home for aircraft loading, balance, and performance materials.
+description: Explore aircraft loading, weight and balance, stalls, and performance.
 order: 6
 permalink: /part107/loading-and-performance/
 objectives: []
-resourceIds: []
+resourceIds:
+- airspace-book
+- loading-performance-presentation
 quiz: false
-status: Prototype
+status: Materials added
 ---
 
-This module is part of the planned Part 107 learning path. Reviewed instructional content will be added here.
+## How to use these materials
 
-## How to use this module
+Read Chapter 5, **Loading and Performance**, in the study guide, then review the matching presentation.
 
-Use the navigation to explore another module, or browse the resource library. Placeholder materials are not yet available to read or download.
+The files are presented as supplied. The study guide notes updates relative to some of the original slide language; the import preserves both editions.

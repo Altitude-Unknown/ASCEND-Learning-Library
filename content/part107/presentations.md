@@ -1,17 +1,21 @@
 ---
 title: Presentations
-description: A home for classroom-ready Part 107 slide presentations.
+description: Five supplied PowerPoint presentations for the Part 107 resource collection.
 order: 8
 permalink: /part107/presentations/
 objectives: []
 resourceIds:
+- regulations-presentation
 - airspace-presentation
+- weather-presentation
+- operations-presentation
+- loading-performance-presentation
 quiz: false
-status: Prototype
+status: Materials added
 ---
 
-This module is part of the planned Part 107 learning path. Reviewed instructional content will be added here.
+## How to use these materials
 
-## How to use this module
+Choose a topic below. Each presentation has a permanent resource page with a browser-readable PDF and the original PowerPoint download.
 
-Use the navigation to explore another module, or browse the resource library. Placeholder materials are not yet available to read or download.
+The files are presented as supplied. The study guide notes updates relative to some of the original slide language; the import preserves both editions.

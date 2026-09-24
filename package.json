@@ -10,8 +10,8 @@
   "scripts": {
     "build": "eleventy && pagefind --site _site",
     "dev": "eleventy --serve",
-    "preview": "npm run build && eleventy --serve",
-    "check": "node scripts/check-site.mjs",
+    "preview": "node scripts/preview.mjs",
+    "check": "node scripts/check-site.mjs && node scripts/check-materials.mjs && node scripts/check-resource-templates.mjs",
     "test": "npm run build && npm run check",
     "test:browser": "playwright test"
   },

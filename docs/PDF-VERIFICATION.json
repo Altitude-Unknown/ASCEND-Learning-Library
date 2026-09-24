@@ -1,0 +1,90 @@
+[
+  {
+    "file": "airspace.pdf",
+    "pages": 64,
+    "originalBytes": 32745036,
+    "readingBytes": 31016311,
+    "textPreserved": true,
+    "links": 8,
+    "tool": "PyMuPDF 1.28.2",
+    "imageDpi": 160,
+    "jpegQuality": 85
+  },
+  {
+    "file": "loading-performance.pdf",
+    "pages": 15,
+    "originalBytes": 6116001,
+    "readingBytes": 5344917,
+    "textPreserved": true,
+    "links": 0,
+    "tool": "PyMuPDF 1.28.2",
+    "imageDpi": 160,
+    "jpegQuality": 85
+  },
+  {
+    "file": "operations.pdf",
+    "pages": 18,
+    "originalBytes": 11697824,
+    "readingBytes": 10353355,
+    "textPreserved": true,
+    "links": 3,
+    "tool": "PyMuPDF 1.28.2",
+    "imageDpi": 160,
+    "jpegQuality": 85
+  },
+  {
+    "file": "part107-study-guide.pdf",
+    "pages": 68,
+    "originalBytes": 4187058,
+    "readingBytes": 1344667,
+    "textPreserved": true,
+    "links": 123,
+    "tool": "PyMuPDF 1.28.2",
+    "imageDpi": 160,
+    "jpegQuality": 85
+  },
+  {
+    "file": "regulations.pdf",
+    "pages": 49,
+    "originalBytes": 31446500,
+    "readingBytes": 28407647,
+    "textPreserved": true,
+    "links": 97,
+    "tool": "PyMuPDF 1.28.2",
+    "imageDpi": 160,
+    "jpegQuality": 85
+  },
+  {
+    "file": "remote-aircraft-textbook.pdf",
+    "pages": 330,
+    "originalBytes": 342846610,
+    "readingBytes": 38698270,
+    "textPreserved": true,
+    "links": 313,
+    "tool": "PyMuPDF 1.28.2",
+    "imageDpi": 160,
+    "jpegQuality": 85
+  },
+  {
+    "file": "trainer-build-instructions.pdf",
+    "pages": 105,
+    "originalBytes": 269539329,
+    "readingBytes": 21493180,
+    "textPreserved": true,
+    "links": 65,
+    "tool": "PyMuPDF 1.28.2",
+    "imageDpi": 160,
+    "jpegQuality": 85
+  },
+  {
+    "file": "weather.pdf",
+    "pages": 40,
+    "originalBytes": 20463657,
+    "readingBytes": 18594384,
+    "textPreserved": true,
+    "links": 9,
+    "tool": "PyMuPDF 1.28.2",
+    "imageDpi": 160,
+    "jpegQuality": 85
+  }
+]

@@ -1,17 +1,17 @@
 ---
 title: Part 107 Study Guide
-description: Bring the learning path together in one reference.
+description: Read or download the complete five-chapter FAA Remote Pilot Study Guide.
 order: 7
 permalink: /part107/study-guide/
 objectives: []
 resourceIds:
 - airspace-book
 quiz: false
-status: Prototype
+status: Materials added
 ---
 
-This module is part of the planned Part 107 learning path. Reviewed instructional content will be added here.
+## How to use these materials
 
-## How to use this module
+The supplied **FAA Remote Pilot Test Prep** book identifies itself as the 2026 edition. Its five chapters include objectives, knowledge checks, answer keys, and source notes. The resource page provides the complete book.
 
-Use the navigation to explore another module, or browse the resource library. Placeholder materials are not yet available to read or download.
+The files are presented as supplied. The study guide notes updates relative to some of the original slide language; the import preserves both editions.

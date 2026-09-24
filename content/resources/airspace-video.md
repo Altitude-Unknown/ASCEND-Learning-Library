@@ -6,7 +6,8 @@ topic: part107
 kind: Video
 audience:
 - Students
-- Teachers
+- Faculty Mentors
+- Pod Leads
 actionLabel: Watch video
 youtubeId: ''
 captionStatus: Captions must be verified before publishing.
@@ -18,6 +19,10 @@ permalink: /resources/airspace-video/
 updated: '2026-09-23'
 externalUrl: ''
 downloadUrl: ''
+delivery: video
+subjects:
+- UAS
+- Field Operations & Safety
 ---
 
 ## About this resource

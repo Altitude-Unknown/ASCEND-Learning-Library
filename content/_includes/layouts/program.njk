@@ -1,0 +1,9 @@
+---
+layout: layouts/base.njk
+---
+<div class="container">
+<nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><span aria-current="page">{{ title }}</span></nav>
+<div class="module-layout program-layout">
+<aside class="module-sidebar" data-pagefind-ignore><p class="eyebrow">GET TO KNOW ASCEND</p><nav aria-label="Project guide">{% for item in programNavigation %}<a href="{{ item.url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.title }}</a>{% endfor %}</nav>{% if pageSections.length %}<details class="program-contents"><summary>On this page</summary><nav aria-label="On this page">{% for item in pageSections %}<a href="#{{ item.id }}">{{ item.title }}</a>{% endfor %}</nav></details>{% endif %}</aside>
+<article class="module-content"><span class="eyebrow">{{ eyebrow }}</span><h1>{{ title }}</h1><p class="lead">{{ description }}</p><div class="prose program-body">{{ content | safe }}</div>{% include "components/provenance.njk" %}<div class="project-links"><a class="button" href="/library/">Explore learning resources →</a><a class="button outline" href="/teachers/">Faculty & Pod Resources</a></div></article>
+</div></div>

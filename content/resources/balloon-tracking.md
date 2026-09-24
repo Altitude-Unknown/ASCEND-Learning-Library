@@ -8,7 +8,8 @@ kind: Worksheet
 format: PDF
 audience:
 - Students
-- Mentors
+- Faculty Mentors
+- Pod Leads
 actionLabel: Download field notes
 keywords:
 - balloon tracking
@@ -19,6 +20,12 @@ permalink: /resources/balloon-tracking/
 updated: '2026-09-23'
 externalUrl: ''
 downloadUrl: ''
+delivery: download
+subjects:
+- High-Altitude Balloons
+- Field Operations & Safety
+platforms:
+- High-Altitude Balloons
 ---
 
 ## About this resource

@@ -2,11 +2,14 @@ import {readFileSync, readdirSync, statSync, existsSync} from 'node:fs';
 import {resolve, join, dirname} from 'node:path';
 const root = resolve('_site');
 const files = [];
-function walk(dir) { for (const name of readdirSync(dir)) { const p=join(dir,name); if(statSync(p).isDirectory()) walk(p); else if(p.endsWith('.html')) files.push(p); } }
+const assets = [];
+function walk(dir) { for (const name of readdirSync(dir)) { const p=join(dir,name); if(statSync(p).isDirectory()) walk(p); else { assets.push(p); if(p.endsWith('.html')) files.push(p); } } }
 walk(root);
 const errors=[];
+for (const file of assets) if(statSync(file).size > 25*1024*1024) errors.push(`${file}: exceeds Pages 25 MiB asset limit`);
 for (const file of files) {
  const html=readFileSync(file,'utf8');
+ if(html.includes('href="/local-materials/')) errors.push(`${file}: local-only download link in production`);
  if ((html.match(/<h1(?:\s|>)/g)||[]).length!==1) errors.push(`${file}: expected one h1`);
  if(!html.includes('lang="en"')||!html.includes('id="main"')) errors.push(`${file}: missing language/main`);
  if(/(?:undefined|\[object Object\])/.test(html)) errors.push(`${file}: unresolved template value`);
@@ -24,7 +27,7 @@ for (const file of files) {
   }
  }
 }
-for(const route of ['part107/airspace','uas','air-quality','ballooning','fabrication','teachers','videos','downloads','library','search']) {
+for(const route of ['part107/airspace','uas','air-quality','ballooning','fabrication','teachers','videos','downloads','library','search','about','science','project']) {
  if(!existsSync(join(root,route,'index.html')))errors.push(`Missing route ${route}`);
 }
 if(!existsSync(join(root,'pagefind/pagefind.js')))errors.push('Missing Pagefind index');

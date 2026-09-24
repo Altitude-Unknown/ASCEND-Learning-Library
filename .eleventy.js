@@ -1,9 +1,23 @@
+import {materials, localPreview, materialSource, assetFiles, availability} from './lib/materials.js';
+import {existsSync, rmSync} from 'node:fs';
 import { readFileSync } from 'node:fs';
-const topics = JSON.parse(readFileSync(new URL('./content/_data/topics.json', import.meta.url)));
+let topics = JSON.parse(readFileSync(new URL('./content/_data/topics.json', import.meta.url)));
 export default function(eleventy) {
   eleventy.setNunjucksEnvironmentOptions({ autoescape: true });
   eleventy.addPassthroughCopy({public: '/'});
   eleventy.addWatchTarget('public/');
+  eleventy.addGlobalData('localMaterialPreview', localPreview);
+  eleventy.addFilter('assetFiles', assetFiles);
+  eleventy.addFilter('availability', availability);
+  eleventy.on('eleventy.before', () => {
+    topics = JSON.parse(readFileSync(new URL('./content/_data/topics.json', import.meta.url)));
+    // Never leave local-only originals in a subsequent production build.
+    if (!localPreview) rmSync('_site/local-materials', {recursive: true, force: true});
+  });
+  if (localPreview) for (const asset of materials) {
+    if (!asset.hostedLocally && !asset.publicUrl && existsSync(materialSource(asset)))
+      eleventy.addPassthroughCopy({[materialSource(asset)]: asset.localPath});
+  }
   eleventy.addFilter('topic', id => topics.find(t => t.id === id));
   eleventy.addFilter('byTopic', (items, id) => items.filter(i => i.data.topic === id));
   eleventy.addFilter('byKind', (items, kind) => items.filter(i => i.data.kind === kind));
@@ -18,6 +32,6 @@ export default function(eleventy) {
     if (this.page.outputPath?.endsWith('.html') && /(?:href|src)=["']javascript:/i.test(content)) throw new Error('Unsafe URL in ' + this.page.outputPath);
     return content;
   });
-  return { dir: {input: 'content', output: '_site', includes: '_includes', data: '_data'},
+  return { dir: {input: 'content', output: localPreview ? '_preview' : '_site', includes: '_includes', data: '_data'},
     markdownTemplateEngine: 'njk', htmlTemplateEngine: 'njk', templateFormats: ['md','njk','html'] };
 }

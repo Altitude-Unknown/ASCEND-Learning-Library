@@ -1,27 +1,37 @@
 ---
 id: airspace-presentation
-title: Airspace Classroom Presentation
-description: An example slide deck for guided discussion and classroom instruction.
+title: National Airspace System — Part 107 Presentation
+description: Airspace classifications, sectional charts, NOTAMs, airport operations,
+  collision avoidance, and inflight hazards.
 topic: part107
 kind: Presentation
-format: PPTX
+status: Available
+permalink: /resources/airspace-presentation/
 audience:
-- Teachers
-- Mentors
-actionLabel: Download PowerPoint
+- Students
+- Faculty Mentors
+- Pod Leads
+assetIds:
+- airspace-pdf
+- powerpoints-national-airspace-system-107
+updated: '2026-09-23'
+format: PDF / PPTX
+slideCount: 64
 related:
 - airspace-book
-status: Planned
-permalink: /resources/airspace-presentation/
-updated: '2026-09-23'
-externalUrl: ''
-downloadUrl: ''
+delivery: download
+origin: contributed
+subjects:
+- UAS
+- Field Operations & Safety
 ---
 
-## About this resource
+## About this presentation
 
-An example slide deck for guided discussion and classroom instruction. This is a prototype record, not an available educational material.
+This 64-slide presentation accompanies the [National Airspace System module](/part107/airspace/). Airspace classifications, sectional charts, NOTAMs, airport operations, collision avoidance, and inflight hazards.
 
-## What to expect
+Use the PDF to view the slides in a browser and the original PowerPoint for course presentations, team instruction, or editing.
 
-A reviewed description, author attribution, usage license, and accessible files will be added before this resource is made available. Its landing-page address will remain the same when the underlying file is added or replaced.
+## Source edition
+
+The supplied slides are preserved as provided. The accompanying study guide notes that some slide language predates its 2026 updates; importing the file does not update its regulatory content.

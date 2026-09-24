@@ -8,7 +8,8 @@ kind: Activity
 format: PDF
 audience:
 - Students
-- Teachers
+- Faculty Mentors
+- Pod Leads
 actionLabel: Download activity
 keywords:
 - PurpleAir
@@ -20,6 +21,13 @@ permalink: /resources/purpleair-investigation/
 updated: '2026-09-23'
 externalUrl: ''
 downloadUrl: ''
+delivery: download
+subjects:
+- Aerosols & Air Quality
+- Sensors & Instrumentation
+activities:
+- Sensor Evaluation
+- Data Analysis
 ---
 
 ## About this resource

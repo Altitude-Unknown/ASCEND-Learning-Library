@@ -1,18 +1,18 @@
 ---
 title: Getting Started
-description: Find your way through the Part 107 learning path.
+description: Find the study guide and learn how the five topic presentations fit the
+  resource collection.
 order: 1
 permalink: /part107/getting-started/
-objectives:
-- Identify the types of learning materials in this library.
-- Choose a starting point for your study plan.
-resourceIds: []
+objectives: []
+resourceIds:
+- airspace-book
 quiz: false
-status: Prototype
+status: Materials added
 ---
 
-This module is part of the planned Part 107 learning path. Reviewed instructional content will be added here.
+## How to use these materials
 
-## How to use this module
+Start with the complete FAA Remote Pilot Study Guide. Browse the topics for Regulations, Airspace, Weather, UAS Operations, and Loading and Performance; each connects to a chapter and presentation.
 
-Use the navigation to explore another module, or browse the resource library. Placeholder materials are not yet available to read or download.
+The files are presented as supplied. The study guide notes updates relative to some of the original slide language; the import preserves both editions.

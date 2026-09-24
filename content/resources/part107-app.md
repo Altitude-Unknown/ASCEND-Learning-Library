@@ -6,14 +6,18 @@ topic: part107
 kind: Web application
 audience:
 - Students
-- Teachers
-- Mentors
+- Faculty Mentors
+- Pod Leads
 actionLabel: Open practice tests
 status: Planned
 permalink: /resources/part107-app/
 updated: '2026-09-23'
 externalUrl: ''
 downloadUrl: ''
+delivery: external
+subjects:
+- UAS
+- Field Operations & Safety
 ---
 
 ## About this resource

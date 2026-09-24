@@ -1,6 +1,8 @@
 # ASCEND Learning Library
 
-A public educational resource library, not an LMS. Milestone 1 is a working
+A public educational resource library for student teams at two-year community
+colleges and four-year universities, their faculty mentors, and university pod
+leads. The library is a working
 prototype built with **Eleventy, Markdown, Nunjucks templates, and Pagefind**.
 The output is ordinary static HTML/CSS/JavaScript: no database, server runtime,
 accounts, tracking, CMS, or client-side application framework.
@@ -15,7 +17,8 @@ npm run preview
 ```
 
 Open **http://localhost:8080**. `preview` first builds the search index, then
-starts the live-reloading development server. Stop it with Ctrl+C.
+starts the live-reloading development server using `_preview/`, including local
+large-file downloads. Stop it with Ctrl+C. Production builds use `_site/`.
 
 - `npm run dev`: fast live editing; run `npm run build` to refresh search after content changes.
 - `npm run build`: produce the complete static website in `_site/`.
@@ -30,20 +33,25 @@ run `python3 -m http.server 8080 --directory _site` after building.
 ## What is included
 
 - Homepage, global navigation and footer, eight major section landing pages.
-- All nine FAA Part 107 module pages, with Airspace fully prototyped.
-- Nine placeholder resource records: book, PPTX presentation, PDF worksheet,
-  instructor document, YouTube video, STL model, web app, sensor activity,
-  balloon tracking worksheet.
-- Resource browsing with topic/type/audience filters and shareable query URLs.
+- About ASCEND, Science & Research Questions, and Teams & Project Structure
+  pages connect the learning resources to the project’s purpose.
+- All nine FAA Part 107 reference-topic pages, with Airspace fully prototyped.
+- 24 resource records, including two supplied books, five Part 107 slide decks,
+  a trainer build guide, grouped aircraft design files, and future placeholders.
+- Eight browser-readable PDF copies plus original DOCX/PPTX files.
+- Trainer and fixed-wing research UAS project pages with STL, DXF, and Fusion files.
+- Web-first resource pages with optional contributor, source, and review metadata.
+- Resource browsing by collection, subject, platform, activity, type, and audience.
 - Site-wide static full-text search, including metadata filters.
 - Responsive layouts, skip link, keyboard menu, visible focus, reduced-motion
   support, caption/transcript fields, and video loading only on request.
 - A real 404 page, local assets, deployment headers, and GitHub build checks.
 
-No real educational documents, quizzes, videos, licenses, author identities,
-NASA insignia, or live external resource URLs have been invented. Example
-objectives and records are labeled. Only replace a Planned record with Available
-when its real material is ready. This is not an FAA-approved training course.
+Supplied educational files are now connected. Videos, worksheets, and quizzes
+without supplied material remain marked Planned. Originals are preserved;
+importing them does not assert a new content license or regulatory review.
+See [the import inventory](docs/IMPORTED-MATERIALS.md) for all 50 originals,
+eight reading copies, and the remaining public-storage setup.
 
 ## Project structure
 
@@ -51,6 +59,7 @@ when its real material is ready. This is not an FAA-approved training course.
 content/
   _data/topics.json          Navigation, sections, and subsection lists
   _data/site.json            Library name and description
+  _data/materials.json       File inventory, checksums, and centralized URLs
   _includes/layouts/        Page, module, section, and resource templates
   _includes/components/     Cards, browsing tools, practice CTA, icons
   index.njk                 Homepage composition
@@ -61,7 +70,7 @@ content/
   resources/*.md            Central resource records and permanent pages
 public/
   assets/                   Shared styles, progressive enhancement, favicon
-  downloads/                Small locally hosted files (empty in prototype)
+  downloads/imported/       Distribution files within the Pages asset limit
   _headers                  Optional Cloudflare response headers
   robots.txt                Prototype indexing restriction
 scripts/check-site.mjs       Checks built pages and internal links
@@ -70,12 +79,17 @@ docs/                      Editing, architecture, and deployment instructions
 .eleventy.js                Build configuration and content collections
 .node-version               Deployment Node version
 package-lock.json           Reproducible dependencies; commit this file
-_site/                      Generated output; do not edit or commit
+ASCEND-Materials/           Local intake originals; ignored by Git
+artifacts/                  Local PDF conversion outputs; ignored by Git
+_preview/                   Generated local preview including large files
+_site/                      Generated deployment output; do not edit or commit
 ```
 
 ## Edit content without editing HTML
 
-Start with [the editing guide](docs/EDITING.md). Copy an existing Markdown file,
+Start with [the contributor-to-curator workflow](docs/CONTENT-WORKFLOW.md), then
+[the editing guide](docs/EDITING.md). Contributors can send ordinary files;
+Markdown is our publishing format. Copy an existing Markdown file,
 edit the short metadata block at the top, then write normal Markdown below it.
 The site supplies the header, navigation, layout, metadata, and resource cards.
 
@@ -102,7 +116,8 @@ or public deployment. Hosting/account setup is a separate step.
 
 ## Before public launch
 
-Replace prototype content, verify accessibility of actual documents and videos,
+Complete remaining placeholder content, configure the large-file URLs, verify
+accessibility of actual documents and videos,
 set a project accessibility/contact channel, confirm the required award
 acknowledgment and content licenses, and review the actual Part 107 content.
 Then set `prototype: false` in `content/_data/site.json` and change `public/robots.txt` to allow indexing.

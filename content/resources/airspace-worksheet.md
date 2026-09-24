@@ -13,6 +13,10 @@ permalink: /resources/airspace-worksheet/
 updated: '2026-09-23'
 externalUrl: ''
 downloadUrl: ''
+delivery: download
+subjects:
+- UAS
+- Field Operations & Safety
 ---
 
 ## About this resource

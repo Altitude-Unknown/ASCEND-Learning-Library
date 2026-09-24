@@ -1,0 +1,10 @@
+{% if origin or contributors.length or institution or originalSource.length or adaptedFrom.length or externalSource.length or reviewer or lastReviewed or copyright %}
+<section class="provenance" aria-labelledby="provenance-title"><h2 id="provenance-title">Attribution & review</h2><dl>
+{% if origin %}<dt>Content origin</dt><dd>{% if origin == 'original' %}Original ASCEND content{% elif origin == 'contributed' %}Contributed material{% elif origin == 'adapted' %}Adapted material{% elif origin == 'external' %}Externally maintained material{% endif %}</dd>{% endif %}
+{% if contributors.length %}<dt>Contributors</dt><dd><ul>{% for person in contributors %}<li>{{ person.name }}{% if person.institution %} · {{ person.institution }}{% endif %}</li>{% endfor %}</ul></dd>{% endif %}
+{% if institution %}<dt>Institution</dt><dd>{{ institution }}</dd>{% endif %}
+{% for sources in [{label:'Original source',items:originalSource},{label:'Adapted from',items:adaptedFrom},{label:'External source',items:externalSource}] %}{% if sources.items.length %}<dt>{{ sources.label }}</dt><dd><ul>{% for source in sources.items %}<li>{% if source.url %}<a href="{{ source.url }}">{{ source.title }}</a>{% else %}{{ source.title }}{% endif %}</li>{% endfor %}</ul></dd>{% endif %}{% endfor %}
+{% if reviewer %}<dt>Reviewed by</dt><dd>{{ reviewer }}</dd>{% endif %}{% if lastReviewed %}<dt>Last reviewed</dt><dd>{{ lastReviewed }}</dd>{% endif %}
+{% if copyright %}<dt>Copyright</dt><dd>{{ copyright }}</dd>{% endif %}
+{% if license %}<dt>License</dt><dd>{{ license }}</dd>{% endif %}{% if version %}<dt>Version</dt><dd>{{ version }}</dd>{% endif %}
+</dl></section>{% endif %}
