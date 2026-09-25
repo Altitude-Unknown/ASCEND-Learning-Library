@@ -138,7 +138,7 @@ fix('operations_0014', 'Monitor CTAF at a non-towered airport, not an approach f
     prompt='1222 As standard operating practice, manned aircraft approaching a non-towered airport should monitor and communicate on the appropriate CTAF starting how far from the airport?')
 # Mechanical copyediting is logged separately for each affected question.
 replacements = {
- '30NM':'30 NM', 'B$UFLY':'B4UFLY', 'Operation in Class B airspace are':'Operations in Class B airspace are',
+ 'and VR 1668. Could':'and VR1668”. Could', 'in relation to the airport.':'in relation to the airport?', '30NM':'30 NM', 'B$UFLY':'B4UFLY', 'Operation in Class B airspace are':'Operations in Class B airspace are',
  'class C':'Class C', 'class B':'Class B', '(refer to Figure':'(Refer to Figure', 'Area2':'Area 2',
  'Tominson':'Tomlinson', 'Gola Bend':'Gila Bend', 'SIOUX GATEWAY/COL DAT':'SIOUX GATEWAY/COL DAY',
  'Airport (SUR)':'Airport (SLR)', 'all operation will':'all operations will', 'This indicated':'This indicates',

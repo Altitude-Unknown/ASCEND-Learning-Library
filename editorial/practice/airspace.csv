@@ -72,7 +72,7 @@ Option,0,Stay clear of areas to the east and north of your area of operation.
 Option,0,Stay clear of areas to the west and south of your area of operation.
 NewQuestion,MC,
 Title,airspace_0010,
-QuestionText,1118 An aircraft announces that they are on short final for runway 9. Where will the aircraft be in relation to the airport.,
+QuestionText,1118 An aircraft announces that they are on short final for runway 9. Where will the aircraft be in relation to the airport?,
 Points,1,
 Difficulty,1,
 Option,0,North
@@ -288,7 +288,7 @@ Option,100,Authorization from ATC.
 Option,0,Authorization from the National Park Service.
 NewQuestion,MC,
 Title,airspace_0042,
-QuestionText,"1090 (Refer to Figure 59, Area 2) The chart shows a gray line with “VR1667, VR1617, VR1638, and VR 1668. Could this area present a hazard to the operations of a small unmanned aircraft?",
+QuestionText,"1090 (Refer to Figure 59, Area 2) The chart shows a gray line with “VR1667, VR1617, VR1638, and VR1668”. Could this area present a hazard to the operations of a small unmanned aircraft?",
 Points,1,
 Difficulty,1,
 Option,0,"No, all operations will be above 400 feet."

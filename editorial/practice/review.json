@@ -217,6 +217,39 @@
       }
     },
     {
+      "id": "airspace_0010",
+      "disposition": "included",
+      "reason": "",
+      "changes": [
+        {
+          "reason": "Correct spelling, punctuation, spacing, or capitalization."
+        }
+      ],
+      "original": {
+        "id": "airspace_0010",
+        "prompt": "1118 An aircraft announces that they are on short final for runway 9. Where will the aircraft be in relation to the airport.",
+        "choices": [
+          "North",
+          "West",
+          "East"
+        ],
+        "answerIndex": 1
+      },
+      "curated": {
+        "id": "airspace_0010",
+        "prompt": "An aircraft announces that they are on short final for runway 9. Where will the aircraft be in relation to the airport?",
+        "choices": [
+          "North",
+          "West",
+          "East"
+        ],
+        "answerIndex": 1,
+        "sourceCode": "1118",
+        "bank": "Airspace",
+        "figures": []
+      }
+    },
+    {
       "id": "airspace_0014",
       "disposition": "included",
       "reason": "",
@@ -784,7 +817,7 @@
       },
       "curated": {
         "id": "airspace_0042",
-        "prompt": "(Refer to Figure 59, Area 2) The chart shows a gray line with “VR1667, VR1617, VR1638, and VR 1668. Could this area present a hazard to the operations of a small unmanned aircraft?",
+        "prompt": "(Refer to Figure 59, Area 2) The chart shows a gray line with “VR1667, VR1617, VR1638, and VR1668”. Could this area present a hazard to the operations of a small unmanned aircraft?",
         "choices": [
           "No, all operations will be above 400 feet.",
           "Yes, this a Military Training Route from 1,500 feet AGL and below.",
