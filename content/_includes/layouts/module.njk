@@ -16,6 +16,6 @@ layout: layouts/base.njk
  {% if linked.length %}<div class="resource-grid two">{% for resource in linked %}{% include "components/card.njk" %}{% endfor %}</div>{% else %}<div class="empty-state"><h3>Materials are being prepared</h3><p>This topic will bring together readings, presentations, videos, and student materials.</p><a href="/library/">Browse resources →</a></div>{% endif %}
  </section>
 
- {% if order == 9 %}{% include "components/practice.njk" %}{% endif %}
+ {% if order == 9 and not practiceApp %}{% include "components/practice.njk" %}{% endif %}
  <nav class="module-next" aria-label="More resources"><a href="/part107/">Browse all Part 107 topics →</a><a href="/library/">Browse the resource library →</a></nav>
 </article></div></div>

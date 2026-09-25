@@ -1,0 +1,504 @@
+NewQuestion,MC,
+Title,regulations_0001,
+QuestionText,"1001 A 1,280 g (2.8 lb) recreational quadcopter is registered using the small-aircraft registration system. Which regulation governs that registration?",
+Points,1,
+Difficulty,1,
+Option,0,14 CFR Part 107
+Option,100,14 CFR Part 48
+Option,0,This operation is not subject to FAA regulations
+NewQuestion,MC,
+Title,regulations_0002,
+QuestionText,1002 You have accepted football tickets in exchange for using your sUAS to videotape a future construction zone. What FAA regulation is this sUAS operation subject to?,
+Points,1,
+Difficulty,1,
+Option,100,14 CFR Part 107
+Option,0,14 CFR Part 101
+Option,0,This operation is not subject to FAA regulations
+NewQuestion,MC,
+Title,regulations_0003,
+QuestionText,1003 You plan to operate a 33 lb sUAS to capture aerial imagery over real estate for use in sales listings. What FAA regulation is this sUAS operation subject to?,
+Points,1,
+Difficulty,1,
+Option,100,14 CFR Part 107
+Option,0,14 CFR Part 101
+Option,0,This operation is not subject to FAA regulations
+NewQuestion,MC,
+Title,regulations_0004,
+QuestionText,"1004 Under Part 107, a small unmanned aircraft must weigh how much at takeoff, including everything on board or attached?",
+Points,1,
+Difficulty,1,
+Option,100,Less than 55 lbs
+Option,0,55 kg or less
+Option,0,55 lbs or less
+NewQuestion,MC,
+Title,regulations_0005,
+QuestionText,1005 “Unmanned aircraft” is defined as a device operated:,
+Points,1,
+Difficulty,1,
+Option,0,During search and rescue operations other than public.
+Option,100,Without the possibility of direct human intervention from the aircraft.
+Option,0,For hobby and recreational use when not certified.
+NewQuestion,MC,
+Title,regulations_0006,
+QuestionText,1006 Which of the following types of operations are excluded from the requirements in 14 CFR Part 107?,
+Points,1,
+Difficulty,1,
+Option,100,Recreational flight meeting all requirements of 49 U.S.C. 44809.
+Option,0,Crop monitoring for an agricultural business.
+Option,0,UAS operation for a motion-picture filming business.
+NewQuestion,MC,
+Title,regulations_0007,
+QuestionText,1007 Which of the following operations would be regulated by 14 CFR Part 107?,
+Points,1,
+Difficulty,1,
+Option,0,Conducting public operations during a search mission.
+Option,0,Flying for enjoyment with family and friends
+Option,100,Operating your sUAS for an imagery company.
+NewQuestion,MC,
+Title,regulations_0008,
+QuestionText,"1008 As a remote pilot with an sUAS rating, under which situation can you deviate from 14 CFR Part 107?",
+Points,1,
+Difficulty,1,
+Option,0,When conducting public operations during a search mission.
+Option,0,Flying for enjoyment with family and friends.
+Option,100,In response to an in-flight emergency.
+NewQuestion,MC,
+Title,regulations_0009,
+QuestionText,"1009 What action, if any, is appropriate if the remote pilot deviates from Part 107 during an emergency?",
+Points,1,
+Difficulty,1,
+Option,0,Take no special action since you are a pilot-in-command.
+Option,100,File a detailed report to the FAA administrator upon request.
+Option,0,File a report to the FAA administrator as soon as possible.
+NewQuestion,MC,
+Title,regulations_0011,
+QuestionText,"1010 To avoid a possible collision with a manned airplane, you estimate that your small unmanned aircraft climbed to an altitude greater than 600 feet AGL. To whom must you report the deviation?",
+Points,1,
+Difficulty,1,
+Option,100,Upon request to the Federal Aviation Administration.
+Option,0,The National Transportation Safety Board.
+Option,0,Air Traffic Control.
+NewQuestion,MC,
+Title,regulations_0013,
+QuestionText,1012 Which of the following individuals may process an application for a Part 107 remote pilot certificate with an sUAS rating?,
+Points,1,
+Difficulty,1,
+Option,0,Commercial balloon pilot.
+Option,0,Remote pilot in command.
+Option,100,Designated Pilot Examiner.
+NewQuestion,MC,
+Title,regulations_0014,
+QuestionText,"1013 After receiving a Part 107 remote pilot certificate with an sUAS rating, how often must you satisfy recurrent training requirements?",
+Points,1,
+Difficulty,1,
+Option,0,Every 6 calendar months.
+Option,0,Every 12 calendar months.
+Option,100,Within the preceding 24 calendar months.
+NewQuestion,MC,
+Title,regulations_0015,
+QuestionText,"1014 To satisfy medical requirements, all sUAS crewmembers must:",
+Points,1,
+Difficulty,1,
+Option,0,Hold a valid third-class medical certificate.
+Option,100,Be free of any physical or mental condition that would interfere with the safe operation of the small unmanned aircraft system.
+Option,0,Complete a physical with an Aviation Medical Examiner.
+NewQuestion,MC,
+Title,regulations_0016,
+QuestionText,1015 Which of the following would medically disqualify a Remote pilot?,
+Points,1,
+Difficulty,1,
+Option,0,Taking a prescription medication that does not have any noticeable side effects.
+Option,100,A migraine headache with the side effect of blurred vision.
+Option,0,Occasional muscle soreness following exercise.
+NewQuestion,MC,
+Title,regulations_0017,
+QuestionText,1016 Who is responsible for ensuring that there are enough crewmembers for a given sUAS operation?,
+Points,1,
+Difficulty,1,
+Option,100,Remote pilot in command
+Option,0,Person manipulating the controls
+Option,0,Visual observer
+NewQuestion,MC,
+Title,regulations_0018,
+QuestionText,1017 Who is ultimately responsible for preventing a hazardous situation before an accident occurs?,
+Points,1,
+Difficulty,1,
+Option,100,Remote pilot in command
+Option,0,Person manipulating the controls
+Option,0,Visual observer
+NewQuestion,MC,
+Title,regulations_0019,
+QuestionText,1018 Which crewmember must hold a remote pilot certificate with an sUAS rating?,
+Points,1,
+Difficulty,1,
+Option,100,Remote pilot in command
+Option,0,Person manipulating the controls
+Option,0,Visual observer
+NewQuestion,MC,
+Title,regulations_0020,
+QuestionText,"1019 When using a small unmanned aircraft in a commercial operation, who is responsible for briefing the participants about emergency procedures?",
+Points,1,
+Difficulty,1,
+Option,0,The lead visual observer
+Option,0,The FAA inspector-in-charge
+Option,100,Remote pilot in command
+NewQuestion,MC,
+Title,regulations_0021,
+QuestionText,1020 The remote PIC may operate how many sUAS at a time?,
+Points,1,
+Difficulty,1,
+Option,100,1
+Option,0,5
+Option,0,No more than 2
+NewQuestion,MC,
+Title,regulations_0022,
+QuestionText,1021 Which person must be directly supervised by a remote PIC who can immediately take control?,
+Points,1,
+Difficulty,1,
+Option,0,A certificated remote PIC acting alone.
+Option,100,A person manipulating the controls without the required remote pilot qualification.
+Option,0,"Every visual observer, regardless of duties."
+NewQuestion,MC,
+Title,regulations_0023,
+QuestionText,1022 A person without a Part 107 Remote Pilot certificate may operate an sUAS for commercial operations,
+Points,1,
+Difficulty,1,
+Option,100,Under direct supervision of a qualified remote PIC who can immediately take direct control.
+Option,0,Only when visual observers participate in the operation.
+Option,0,"Alone, if operating during daylight hours."
+NewQuestion,MC,
+Title,regulations_0024,
+QuestionText,1023 Whose sole task during an sUAS operation is to watch the sUAS and report potential hazards to the rest of the crew?,
+Points,1,
+Difficulty,1,
+Option,0,Remote pilot in command
+Option,0,Person manipulating the controls
+Option,100,Visual observer
+NewQuestion,MC,
+Title,regulations_0025,
+QuestionText,1024 Which of the following crewmembers must be used during Part 107 sUAS operations?,
+Points,1,
+Difficulty,1,
+Option,100,Remote PIC.
+Option,0,Remote PIC and visual observer.
+Option,0,"Remote PIC, visual observer, and person manipulating the controls."
+NewQuestion,MC,
+Title,regulations_0026,
+QuestionText,1025 An autonomous operation requires the following crewmembers.,
+Points,1,
+Difficulty,1,
+Option,100,Remote PIC.
+Option,0,Remote PIC and visual observer.
+Option,0,"Remote PIC, visual observer, and person manipulating the controls."
+NewQuestion,MC,
+Title,regulations_0028,
+QuestionText,"1027 You are part of a news crew, operating an sUAS to cover a breaking story. You experience a flyaway during landing. The unmanned aircraft strikes a vehicle, causing approximately $800 worth of damage. When must you report the accident to the FAA?",
+Points,1,
+Difficulty,1,
+Option,0,Anytime
+Option,100,Within 10 days.
+Option,0,Not to exceed 30 days.
+NewQuestion,MC,
+Title,regulations_0029,
+QuestionText,1028 Within how many calendar days must an event meeting the reporting criteria of 14 CFR 107.9 be reported to the FAA?,
+Points,1,
+Difficulty,1,
+Option,0,90 days.
+Option,100,10 days.
+Option,0,30 days.
+NewQuestion,MC,
+Title,regulations_0030,
+QuestionText,"1029 While operating a small unmanned aircraft system (sUAS), you experience a flyaway and several people suffer injuries. Which of the following injuries requires reporting to the FAA?",
+Points,1,
+Difficulty,1,
+Option,100,Any loss of consciousness.
+Option,0,Scrapes and cuts bandaged on site.
+Option,0,Minor bruises.
+NewQuestion,MC,
+Title,regulations_0031,
+QuestionText,"1030 An sUAS damages an $800 awning that can be repaired for $400. Nobody is injured or loses consciousness, and there is no other property damage. Is an FAA report required under 14 CFR 107.9?",
+Points,1,
+Difficulty,1,
+Option,0,"Yes, because the awning is worth more than $500."
+Option,0,"Yes, because any property damage must be reported."
+Option,100,"No, these facts do not meet the reporting thresholds in 107.9."
+NewQuestion,MC,
+Title,regulations_0032,
+QuestionText,1031 When must a remote pilot have the remote pilot certificate and identification physically in their possession and readily accessible?,
+Points,1,
+Difficulty,1,
+Option,0,Only during launch and recovery.
+Option,0,Only when carrying a payload.
+Option,100,When exercising the privileges of the remote pilot certificate.
+NewQuestion,MC,
+Title,regulations_0033,
+QuestionText,1032 Which of these may request inspection of a remote pilot certificate and identification under Part 107?,
+Points,1,
+Difficulty,1,
+Option,0,Any member of the public.
+Option,0,An authorized representative of the Department of State.
+Option,100,"A federal, state, or local law enforcement officer."
+NewQuestion,MC,
+Title,regulations_0034,
+QuestionText,"1304 If requested, to whom must I provide my Remote Pilot Certificate?",
+Points,1,
+Difficulty,1,
+Option,0,A person of authority.
+Option,100,FAA inspector.
+Option,0,Authorized representative of the Department of State.
+NewQuestion,MC,
+Title,regulations_0035,
+QuestionText,"1033 According to 14 CFR Part 48, when would a small unmanned aircraft owner not be permitted to register it?",
+Points,1,
+Difficulty,1,
+Option,0,All persons must register their small unmanned aircraft.
+Option,0,If the owner does not have a valid United States driver’s license.
+Option,100,The owner is less than 13 years of age.
+NewQuestion,MC,
+Title,regulations_0036,
+QuestionText,1034 Which small unmanned aircraft used under Part 107 must be registered?,
+Points,1,
+Difficulty,1,
+Option,100,"All of them, including aircraft weighing 0.55 pounds or less."
+Option,0,Only aircraft weighing more than 0.55 pounds.
+Option,0,Only aircraft used to carry cargo for payment.
+NewQuestion,MC,
+Title,regulations_0037,
+QuestionText,1035 Under what conditions would a small unmanned aircraft not have to be registered before it is operated in the United States?,
+Points,1,
+Difficulty,1,
+Option,100,An aircraft weighing 0.55 pounds or less flown exclusively under the limited recreational exception.
+Option,0,An aircraft weighing more than 0.55 pounds used commercially.
+Option,0,Any aircraft weighing less than 55 pounds used under Part 107.
+NewQuestion,MC,
+Title,regulations_0038,
+QuestionText,"1036 According to 14 CFR Part 107, the responsibility to inspect the small unmanned aircraft system (sUAS) to ensure it is in safe operating condition rests with the",
+Points,1,
+Difficulty,1,
+Option,0,Owner of the sUAS
+Option,0,Visual Observer.
+Option,100,Remote Pilot-in-command.
+NewQuestion,MC,
+Title,regulations_0039,
+QuestionText,1037 Which preflight action is specifically required of the pilot prior to each flight?,
+Points,1,
+Difficulty,1,
+Option,0,Check the aircraft logbooks for appropriate entries.
+Option,100,"Assess the operating environment including local weather conditions, local airspace and any flight restrictions, the location of persons and property on the surface, and other ground hazards."
+Option,0,Visually inspect the pilot certificates of all crew members.
+NewQuestion,MC,
+Title,regulations_0041,
+QuestionText,"1039 According to 14 CFR Part 107, what is required to operate a small unmanned aircraft within 30 minutes after official sunset?",
+Points,1,
+Difficulty,1,
+Option,0,Use of a transponder.
+Option,100,"Anti-collision lighting visible for at least 3 statute miles, with a flash rate sufficient to avoid a collision."
+Option,0,Operation only in a rural area.
+NewQuestion,MC,
+Title,regulations_0043,
+QuestionText,"1041 Power company employees use an sUAS to inspect a long stretch of high voltage powerlines. Due to muddy conditions, their vehicle must stay beside the road and the crew must use binoculars to maintain visual line of sight with the aircraft. Is this sUAS operation in compliance with 14 CFR Part 107?",
+Points,1,
+Difficulty,1,
+Option,0,"Yes, the operation is compliant with Part 107."
+Option,0,There is not enough information to make a determination.
+Option,100,"No, the operation is not in compliance with Part 107."
+NewQuestion,MC,
+Title,regulations_0044,
+QuestionText,"1043 In accordance with 14 CFR Part 107, except when within a 400’ radius of a structure, at what maximum altitude can you operate sUAS?",
+Points,1,
+Difficulty,1,
+Option,0,600 feet AGL
+Option,0,500 feet AGL
+Option,100,400 feet AGL
+NewQuestion,MC,
+Title,regulations_0045,
+QuestionText,1047 Which aircraft has right-of-way over the other traffic?,
+Points,1,
+Difficulty,1,
+Option,100,An airplane
+Option,0,An sUAS
+Option,0,A quadcopter
+NewQuestion,MC,
+Title,regulations_0046,
+QuestionText,1049 What may be used to assist compliance with sUAS see-and-avoid requirements?,
+Points,1,
+Difficulty,1,
+Option,0,Binoculars
+Option,0,First-person view camera
+Option,100,Remote pilot diligence.
+NewQuestion,MC,
+Title,regulations_0047,
+QuestionText,"1050 For a flight that will not use an applicable category or waiver for operations over people, which plan protects non-participants?",
+Points,1,
+Difficulty,1,
+Option,0,Check the aircraft logbooks to ensure maintenance is current.
+Option,100,"Make a plan to keep non-participants clear, indoors, or under cover."
+Option,0,Identify a non-participant who will be near the sUAS operation to help with see-and-avoid procedures.
+NewQuestion,MC,
+Title,regulations_0048,
+QuestionText,"1054 In accordance with 14 CFR Part 107, you may operate an sUAS from a moving vehicle when no property is carried for compensation or hire",
+Points,1,
+Difficulty,1,
+Option,0,Over suburban areas
+Option,0,Over a parade or other social event
+Option,100,Over a sparsely populated area.
+NewQuestion,MC,
+Title,regulations_0049,
+QuestionText,1057 Under what conditions may objects be dropped from the sUAS?,
+Points,1,
+Difficulty,1,
+Option,0,In an emergency
+Option,100,If precautions are taken to avoid injury or damage to persons or property on the surface.
+Option,0,If prior permission is received from the federal Aviation Administration.
+NewQuestion,MC,
+Title,regulations_0050,
+QuestionText,1059 Who holds the responsibility to ensure all crew-members who are participating in the operation are not impaired by drugs or alcohol?,
+Points,1,
+Difficulty,1,
+Option,100,Remote pilot in command
+Option,0,The FAA
+Option,0,Site Supervisor
+NewQuestion,MC,
+Title,regulations_0052,
+QuestionText,"1066 The FAA aims to review and approve or disapprove a Part 107 waiver request within how many days of submission, although processing time varies?",
+Points,1,
+Difficulty,1,
+Option,0,30 days
+Option,0,10 days
+Option,100,90 days
+NewQuestion,MC,
+Title,regulations_0053,
+QuestionText,1344 Under which operational requirement would the unmanned aircraft be restricted to visual line of sight operations?,
+Points,1,
+Difficulty,1,
+Option,0,If operating with ADS-B capabilities
+Option,0,If operating with standard remote identification.
+Option,100,If operating with a remote identification broadcast module.
+NewQuestion,MC,
+Title,regulations_0054,
+QuestionText,1345 What must a person who is manipulating the controls of a small unmanned aircraft do if the standard remote identification fails during flight?,
+Points,1,
+Difficulty,1,
+Option,100,Land the aircraft as soon as practical
+Option,0,Notify the nearest FAA Air Traffic Facility.
+Option,0,Activate the aircraft’s navigation lights.
+NewQuestion,MC,
+Title,regulations_0055,
+QuestionText,1346 Where must a small unmanned aircraft’s serial number be listed when using either standard remote identification or a broadcast module?,
+Points,1,
+Difficulty,1,
+Option,0,The aircraft’s Document of Compliance
+Option,0,The manufacturer’s Method of Compliance
+Option,100,The Certificate of Aircraft Registration
+NewQuestion,MC,
+Title,regulations_0056,
+QuestionText,1347 Under which operational condition may you be approved to fly without remote identification capability?,
+Points,1,
+Difficulty,1,
+Option,0,If the operation is being conducted in an FAA-recognized identification area outside line of sight.
+Option,100,If the operation is being conducted for aeronautical research.
+Option,0,If the operation is being conducted at altitudes of 400 feet AGL and below.
+NewQuestion,MC,
+Title,regulations_0057,
+QuestionText,1357 Does an sUAS equipped with ADS-B meet the requirements for remote identification?,
+Points,1,
+Difficulty,1,
+Option,100,No
+Option,0,Yes
+Option,0,Always
+NewQuestion,MC,
+Title,regulations_0060,
+QuestionText,"1274 During a Category 1 operation over occupied moving vehicles outside a closed- or restricted-access site, the small unmanned aircraft",
+Points,1,
+Difficulty,1,
+Option,0,May not fly directly over the vehicle.
+Option,0,May maintain sustained flight over the vehicle for any extended period of time.
+Option,100,Must not maintain sustained flight over the vehicle.
+NewQuestion,MC,
+Title,regulations_0061,
+QuestionText,1040 Which categories of operation require an FAA accepted current DOC?,
+Points,1,
+Difficulty,1,
+Option,0,Categories 1 and 2.
+Option,100,Categories 2 and 3.
+Option,0,Categories 1 and 4.
+NewQuestion,MC,
+Title,regulations_0062,
+QuestionText,1042 A crew conducting surveillance anticipates losing visual sight with the sUAS within a small segment of the flight plan. The flight,
+Points,1,
+Difficulty,1,
+Option,0,May be conducted using binoculars
+Option,100,Must be rerouted to maintain visual line of sight.
+Option,0,May be conducted if the visual line of sight can be maintained for 50% of the route.
+NewQuestion,MC,
+Title,regulations_0063,
+QuestionText,1055 Which of the following operations is compliant with 14 CFR Part 107?,
+Points,1,
+Difficulty,1,
+Option,0,Remote PIC is driving a moving vehicle while operating an sUAS in a sparsely populated area.
+Option,0,Remote PIC is a passenger on an aircraft in flight while operating a sUAS.
+Option,100,Remote PIC is a passenger in a moving boat while operating an sUAS in an unpopulated area.
+NewQuestion,MC,
+Title,regulations_0065,
+QuestionText,1044 What speed limit applies to sUAS operations?,
+Points,1,
+Difficulty,1,
+Option,0,200 knots
+Option,0,80 mph
+Option,100,100 mph
+NewQuestion,MC,
+Title,regulations_0066,
+QuestionText,"1322 According to 14 CFR part 107, what is the maximum ground speed for a small UA?",
+Points,1,
+Difficulty,1,
+Option,100,87 knots
+Option,0,87 mph
+Option,0,100 knots
+NewQuestion,MC,
+Title,regulations_0068,
+QuestionText,1361 At which frequency must the anti-collision lights flash during a nighttime operation?,
+Points,1,
+Difficulty,1,
+Option,0,The anti-collision lights do not need to flash.
+Option,100,The flash rate should be sufficient to avoid a collision.
+Option,0,The flash rate must be at least 2 flashes per minute.
+NewQuestion,MC,
+Title,regulations_0069,
+QuestionText,1353 How should the control station backlighting be set for night flight?,
+Points,1,
+Difficulty,1,
+Option,0,As bright as possible
+Option,100,As low as possible to maintain night vision
+Option,0,Set to pulsating mode.
+NewQuestion,MC,
+Title,regulations_0071,
+QuestionText,"1052 What is the maximum aircraft weight, including everything on board or attached, for Category 1 operations over people?",
+Points,1,
+Difficulty,1,
+Option,100,0.55 pounds or less.
+Option,0,0.65 pounds or less.
+Option,0,0.75 pounds or less.
+NewQuestion,MC,
+Title,regulations_0072,
+QuestionText,1317 A small unmanned aircraft must be operated in a manner which,
+Points,1,
+Difficulty,1,
+Option,100,Does not endanger the life or property of another.
+Option,0,Requires more than one visual observer
+Option,0,Never exceeds 200 feet AGL.
+NewQuestion,MC,
+Title,regulations_0073,
+QuestionText,1354 What is required to conduct Category 3 operations over people?,
+Points,1,
+Difficulty,1,
+Option,100,Have a label displayed on the sUAS indicating eligibility to conduct category 3 operations.
+Option,0,Must be ADS-B equipped
+Option,0,Must have an airworthiness certificate
+NewQuestion,MC,
+Title,regulations_0075,
+QuestionText,"1053 A wildlife photographer flies from a moving truck over sparsely populated wetlands. A separate driver performs no flight duties, and the aircraft carries no other person’s property for compensation or hire. Does this satisfy the moving-vehicle restriction in 107.25?",
+Points,1,
+Difficulty,1,
+Option,100,Yes.
+Option,0,"No, land vehicles are always prohibited."
+Option,0,"No, a visual observer must drive the truck."

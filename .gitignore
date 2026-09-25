@@ -15,3 +15,6 @@ _preview/
 # Curator-only source files and unfinished working content.
 editorial/intake/
 editorial/drafts/
+
+# Original practice-site intake, including its unrelated Windows executable.
+Hosted-Website-Files/

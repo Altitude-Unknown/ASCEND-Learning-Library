@@ -1,0 +1,3733 @@
+{
+  "reviewed": "2026-09-24",
+  "originalCount": 296,
+  "includedCount": 266,
+  "counts": {
+    "Airspace": 46,
+    "Loading and Performance": 44,
+    "Weather": 63,
+    "Regulations": 63,
+    "Operations": 50
+  },
+  "heldCount": 22,
+  "duplicateCount": 8,
+  "sourceFiles": [
+    {
+      "path": "whisky-alpha-fullsite-with-figlinks-v4/bank_A_airspace.js",
+      "sha256": "7a65f687931c4a7bd82983cb6e5e371b1893512a4fb3ab370e16c812478c7f8c"
+    },
+    {
+      "path": "test-banks/airspace.csv",
+      "sha256": "8c0fda1e04f30373be7c2117bd670175b6e91e300f34bdcfc8714a05b38a3814"
+    },
+    {
+      "path": "whisky-alpha-fullsite-with-figlinks-v4/bank_B_loading_performance.js",
+      "sha256": "04fd2f8f286f9dfbae082273483a408db9a96827c71034283788336cf5e4e6e6"
+    },
+    {
+      "path": "test-banks/loading and performance.csv",
+      "sha256": "83971673e3c48fc1b907d26126e052b7e383f325654d9bd9bc2c1db634b70733"
+    },
+    {
+      "path": "whisky-alpha-fullsite-with-figlinks-v4/bank_C_weather.js",
+      "sha256": "c95bf250fd44f26ce1ea4873d29afba1abe6c67ebdde97cbe166daa07ac48ee5"
+    },
+    {
+      "path": "test-banks/weather.csv",
+      "sha256": "437a033fb0fef4efd21c23c9a22d275333114ed58cfd8bb8272da02e0915f4d8"
+    },
+    {
+      "path": "whisky-alpha-fullsite-with-figlinks-v4/bank_D_regulations.js",
+      "sha256": "8b3a1ae95d6a5cb06abc218463120b34ba889626e6efc6a33ae8d697762c381f"
+    },
+    {
+      "path": "test-banks/regulations.csv",
+      "sha256": "960d6e56f010942b0370094e14f8eec856bb415b68b4f3dd2b08db95512855ed"
+    },
+    {
+      "path": "whisky-alpha-fullsite-with-figlinks-v4/bank_E_operations.js",
+      "sha256": "ab921c36bdb9e1abba04fb752af2f070df33e313255ee65c7b7c934e71c0764c"
+    },
+    {
+      "path": "test-banks/operations.csv",
+      "sha256": "fed09cc7b5a29904d6a030a4effea2b8f198af4d0f78df72a5a3a3ef17352035"
+    }
+  ],
+  "csvFindings": [
+    {
+      "id": "airspace_0014",
+      "csvType": "MC",
+      "csvPositiveChoices": [
+        3
+      ],
+      "jsAnswerIndex": 3,
+      "csvChoiceCount": 4,
+      "jsChoiceCount": 3
+    },
+    {
+      "id": "airspace_0015",
+      "csvType": "MS",
+      "csvPositiveChoices": [
+        1
+      ],
+      "jsAnswerIndex": 1,
+      "csvChoiceCount": 3,
+      "jsChoiceCount": 3
+    },
+    {
+      "id": "airspace_0016",
+      "csvType": "MS",
+      "csvPositiveChoices": [
+        1
+      ],
+      "jsAnswerIndex": 1,
+      "csvChoiceCount": 3,
+      "jsChoiceCount": 3
+    },
+    {
+      "id": "airspace_0026",
+      "csvType": "MS",
+      "csvPositiveChoices": [
+        1
+      ],
+      "jsAnswerIndex": 1,
+      "csvChoiceCount": 3,
+      "jsChoiceCount": 3
+    },
+    {
+      "id": "operations_0052",
+      "csvType": "MS",
+      "csvPositiveChoices": [
+        0
+      ],
+      "jsAnswerIndex": 0,
+      "csvChoiceCount": 3,
+      "jsChoiceCount": 3
+    },
+    {
+      "id": "operations_0053",
+      "csvType": "MC",
+      "csvPositiveChoices": [
+        2
+      ],
+      "jsAnswerIndex": 0,
+      "csvChoiceCount": 3,
+      "jsChoiceCount": 3
+    }
+  ],
+  "changes": [
+    {
+      "id": "airspace_0002",
+      "disposition": "included",
+      "reason": "",
+      "changes": [
+        {
+          "reason": "Correct spelling, punctuation, spacing, or capitalization."
+        }
+      ],
+      "original": {
+        "id": "airspace_0002",
+        "prompt": "1079 According to 14 CFR Part 107, the remote PIC of a small unmanned aircraft planning to operate within class C airspace",
+        "choices": [
+          "Is required to receive ATC authorization.",
+          "Is required to file a flight plan.",
+          "Must use a visual observer."
+        ],
+        "answerIndex": 0
+      },
+      "curated": {
+        "id": "airspace_0002",
+        "prompt": "According to 14 CFR Part 107, the remote PIC of a small unmanned aircraft planning to operate within Class C airspace",
+        "choices": [
+          "Is required to receive ATC authorization.",
+          "Is required to file a flight plan.",
+          "Must use a visual observer."
+        ],
+        "answerIndex": 0,
+        "sourceCode": "1079",
+        "bank": "Airspace",
+        "figures": []
+      }
+    },
+    {
+      "id": "airspace_0003",
+      "disposition": "included",
+      "reason": "",
+      "changes": [
+        {
+          "reason": "Distinguish the 10 NM charted shelf from the 20 NM service outer area.",
+          "source": "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap3_section_2.html"
+        }
+      ],
+      "original": {
+        "id": "airspace_0003",
+        "prompt": "1305 The typical outer radius limits of class C airspace are",
+        "choices": [
+          "10 NM",
+          "20 NM",
+          "30NM"
+        ],
+        "answerIndex": 1
+      },
+      "curated": {
+        "id": "airspace_0003",
+        "prompt": "What is the typical outer radius of the charted Class C shelf?",
+        "choices": [
+          "10 NM",
+          "20 NM",
+          "30 NM"
+        ],
+        "answerIndex": 0,
+        "sourceCode": "1305",
+        "bank": "Airspace",
+        "figures": []
+      }
+    },
+    {
+      "id": "airspace_0008",
+      "disposition": "included",
+      "reason": "",
+      "changes": [
+        {
+          "reason": "Correct spelling, punctuation, spacing, or capitalization."
+        }
+      ],
+      "original": {
+        "id": "airspace_0008",
+        "prompt": "1115  What is required to enter an airport SIDA?",
+        "choices": [
+          "You must pass TSA screening.",
+          "You must have an FAA-issued pilot certificate.",
+          "You must have an airport-issued or approved ID."
+        ],
+        "answerIndex": 2
+      },
+      "curated": {
+        "id": "airspace_0008",
+        "prompt": "What is required to enter an airport SIDA?",
+        "choices": [
+          "You must pass TSA screening.",
+          "You must have an FAA-issued pilot certificate.",
+          "You must have an airport-issued or approved ID."
+        ],
+        "answerIndex": 2,
+        "sourceCode": "1115",
+        "bank": "Airspace",
+        "figures": []
+      }
+    },
+    {
+      "id": "airspace_0014",
+      "disposition": "included",
+      "reason": "",
+      "changes": [
+        {
+          "reason": "CSV incorrectly stored part of the prompt as a choice; JS retained an out-of-range answer index.",
+          "source": "https://www.faa.gov/about/office_org/headquarters_offices/ato/service_units/systemops/fs"
+        }
+      ],
+      "original": {
+        "id": "airspace_0014",
+        "prompt": "1068 (Refer to Figure 20, Area 5.) How would a remote PIC “CHECK NOTAMS” as noted in the CAUTION box regarding the unmanned balloon?",
+        "choices": [
+          "By utilizing the B$UFLY mobile application.",
+          "By contacting the FAA district office.",
+          "By obtaining a briefing via an online source such as 1800WXbrief.com"
+        ],
+        "answerIndex": 3
+      },
+      "curated": {
+        "id": "airspace_0014",
+        "prompt": "(Refer to Figure 20, Area 5.) How would a remote PIC “CHECK NOTAMS” as noted in the CAUTION box regarding the unmanned balloon?",
+        "choices": [
+          "By reviewing only the airport diagram.",
+          "By contacting the FAA district office.",
+          "By obtaining a Flight Service briefing that includes the applicable NOTAMs."
+        ],
+        "answerIndex": 2,
+        "sourceCode": "1068",
+        "bank": "Airspace",
+        "figures": [
+          "20"
+        ]
+      }
+    },
+    {
+      "id": "airspace_0016",
+      "disposition": "included",
+      "reason": "",
+      "changes": [
+        {
+          "reason": "Correct spelling, punctuation, spacing, or capitalization."
+        }
+      ],
+      "original": {
+        "id": "airspace_0016",
+        "prompt": "1075 (refer to Figure 31) Within what airspace is Coeur D’Alene Pappy Boyington Fld located?",
+        "choices": [
+          "Class B",
+          "Class E",
+          "Class D"
+        ],
+        "answerIndex": 1
+      },
+      "curated": {
+        "id": "airspace_0016",
+        "prompt": "(Refer to Figure 31) Within what airspace is Coeur D’Alene Pappy Boyington Fld located?",
+        "choices": [
+          "Class B",
+          "Class E",
+          "Class D"
+        ],
+        "answerIndex": 1,
+        "sourceCode": "1075",
+        "bank": "Airspace",
+        "figures": [
+          "31"
+        ]
+      }
+    },
+    {
+      "id": "airspace_0018",
+      "disposition": "held",
+      "reason": "TFR question lacks the actual restriction and effective times; generic ATC permission is not a sufficient answer.",
+      "changes": [],
+      "original": {
+        "id": "airspace_0018",
+        "prompt": "1276 Checking the NOTAMs confirms the Blue Angels are scheduled to perform at the local airport. When can UAS operations resume relative to this NOTAM?",
+        "choices": [
+          "Once the Blue Angels have landed.",
+          "With ATC authorization.",
+          "Immediately, so long as a 1 NM distance is maintained."
+        ],
+        "answerIndex": 1
+      },
+      "curated": {
+        "id": "airspace_0018",
+        "prompt": "Checking the NOTAMs confirms the Blue Angels are scheduled to perform at the local airport. When can UAS operations resume relative to this NOTAM?",
+        "choices": [
+          "Once the Blue Angels have landed.",
+          "With ATC authorization.",
+          "Immediately, so long as a 1 NM distance is maintained."
+        ],
+        "answerIndex": 1,
+        "sourceCode": "1276",
+        "bank": "Airspace",
+        "figures": []
+      }
+    },
+    {
+      "id": "airspace_0019",
+      "disposition": "included",
+      "reason": "",
+      "changes": [
+        {
+          "reason": "Correct spelling, punctuation, spacing, or capitalization."
+        }
+      ],
+      "original": {
+        "id": "airspace_0019",
+        "prompt": "1360 What is required when operating in Class B airspace?",
+        "choices": [
+          "Operation in Class B airspace are prohibited.",
+          "The remote PIC or operator must receive an airspace authorization for operations in Class B airspace.",
+          "Two-way radio communication and ADS-B capabilities."
+        ],
+        "answerIndex": 1
+      },
+      "curated": {
+        "id": "airspace_0019",
+        "prompt": "What is required when operating in Class B airspace?",
+        "choices": [
+          "Operations in Class B airspace are prohibited.",
+          "The remote PIC or operator must receive an airspace authorization for operations in Class B airspace.",
+          "Two-way radio communication and ADS-B capabilities."
+        ],
+        "answerIndex": 1,
+        "sourceCode": "1360",
+        "bank": "Airspace",
+        "figures": []
+      }
+    },
+    {
+      "id": "airspace_0020",
+      "disposition": "included",
+      "reason": "",
+      "changes": [
+        {
+          "reason": "Correct spelling, punctuation, spacing, or capitalization."
+        }
+      ],
+      "original": {
+        "id": "airspace_0020",
+        "prompt": "1326 (Refer to Figure 25, Area 3.) The floor of class B airspace at Dallas Executive (RBD) is",
+        "choices": [
+          "At the surface.",
+          "3,000 feet MSL.",
+          "3,100 feet MSL."
+        ],
+        "answerIndex": 1
+      },
+      "curated": {
+        "id": "airspace_0020",
+        "prompt": "(Refer to Figure 25, Area 3.) The floor of Class B airspace at Dallas Executive (RBD) is",
+        "choices": [
+          "At the surface.",
+          "3,000 feet MSL.",
+          "3,100 feet MSL."
+        ],
+        "answerIndex": 1,
+        "sourceCode": "1326",
+        "bank": "Airspace",
+        "figures": [
+          "25"
+        ]
+      }
+    },
+    {
+      "id": "airspace_0021",
+      "disposition": "held",
+      "reason": "Holton Head is not the charted airport name; location and operating altitude are ambiguous. Requires author clarification.",
+      "changes": [],
+      "original": {
+        "id": "airspace_0021",
+        "prompt": "1340 (Refer to Figure 23) You have been hired to inspect a farm 3 miles west of Holton Head Airport, in what type of airspace will you be operating?",
+        "choices": [
+          "Class G.",
+          "Class E.",
+          "Class C."
+        ],
+        "answerIndex": 2
+      },
+      "curated": {
+        "id": "airspace_0021",
+        "prompt": "(Refer to Figure 23) You have been hired to inspect a farm 3 miles west of Holton Head Airport, in what type of airspace will you be operating?",
+        "choices": [
+          "Class G.",
+          "Class E.",
+          "Class C."
+        ],
+        "answerIndex": 2,
+        "sourceCode": "1340",
+        "bank": "Airspace",
+        "figures": [
+          "23"
+        ]
+      }
+    },
+    {
+      "id": "airspace_0023",
+      "disposition": "duplicate",
+      "reason": "Duplicate of airspace_0002; excluded from sampling.",
+      "changes": [],
+      "original": {
+        "id": "airspace_0023",
+        "prompt": "1079 According to 14 CFR Part 107, the remote PIC of a small unmanned aircraft planning to operate within Class C airspace",
+        "choices": [
+          "Is required to receive ATC authorization.",
+          "Is required to file a flight plan.",
+          "Must use a visual observer."
+        ],
+        "answerIndex": 0
+      },
+      "curated": {
+        "id": "airspace_0023",
+        "prompt": "According to 14 CFR Part 107, the remote PIC of a small unmanned aircraft planning to operate within Class C airspace",
+        "choices": [
+          "Is required to receive ATC authorization.",
+          "Is required to file a flight plan.",
+          "Must use a visual observer."
+        ],
+        "answerIndex": 0,
+        "sourceCode": "1079",
+        "bank": "Airspace",
+        "figures": []
+      }
+    },
+    {
+      "id": "airspace_0025",
+      "disposition": "included",
+      "reason": "",
+      "changes": [
+        {
+          "reason": "Specify the airspace immediately above the airport, not a blanket five-mile area.",
+          "source": "/assets/practice/figures/26.jpg"
+        }
+      ],
+      "original": {
+        "id": "airspace_0025",
+        "prompt": "1083 (Refer to Figure 26, Area 5) The airspace overlying and within 5 Miles of Barnes County Airport is",
+        "choices": [
+          "Class D airspace from the surface to the floor of the overlying Class E airspace.",
+          "Class E airspace from the surface to 1,200 feet MSL.",
+          "Class G airspace from the surface up to but not including 700 feet AGL."
+        ],
+        "answerIndex": 2
+      },
+      "curated": {
+        "id": "airspace_0025",
+        "prompt": "(Refer to Figure 26, Area 5.) Immediately above Barnes County Airport, which airspace extends from the surface to the overlying Class E airspace?",
+        "choices": [
+          "Class D airspace from the surface to the floor of the overlying Class E airspace.",
+          "Class E airspace from the surface to 1,200 feet MSL.",
+          "Class G airspace from the surface up to but not including 700 feet AGL."
+        ],
+        "answerIndex": 2,
+        "sourceCode": "1083",
+        "bank": "Airspace",
+        "figures": [
+          "26"
+        ]
+      }
+    },
+    {
+      "id": "airspace_0026",
+      "disposition": "held",
+      "reason": "Near Anderson Airport does not specify a location or altitude sufficient to determine authorization.",
+      "changes": [
+        {
+          "reason": "Correct spelling, punctuation, spacing, or capitalization."
+        }
+      ],
+      "original": {
+        "id": "airspace_0026",
+        "prompt": "1084 (refer to Figure 76) What ATC permissions are required to operate near Anderson Airport?",
+        "choices": [
+          "ATC clearance required.",
+          "No ATC permission is required.",
+          "Waiver must be requested."
+        ],
+        "answerIndex": 1
+      },
+      "curated": {
+        "id": "airspace_0026",
+        "prompt": "(Refer to Figure 76) What ATC permissions are required to operate near Anderson Airport?",
+        "choices": [
+          "ATC clearance required.",
+          "No ATC permission is required.",
+          "Waiver must be requested."
+        ],
+        "answerIndex": 1,
+        "sourceCode": "1084",
+        "bank": "Airspace",
+        "figures": [
+          "76"
+        ]
+      }
+    },
+    {
+      "id": "airspace_0028",
+      "disposition": "included",
+      "reason": "",
+      "changes": [
+        {
+          "reason": "Correct spelling, punctuation, spacing, or capitalization."
+        }
+      ],
+      "original": {
+        "id": "airspace_0028",
+        "prompt": "1327 (Refer to Figure 78, near the center of the chart) What class of airspace is associated with SIOUX GATEWAY/COL DAT (SUX) Airport?",
+        "choices": [
+          "Class B airspace",
+          "Class C airspace",
+          "Class D airspace"
+        ],
+        "answerIndex": 2
+      },
+      "curated": {
+        "id": "airspace_0028",
+        "prompt": "(Refer to Figure 78, near the center of the chart) What class of airspace is associated with SIOUX GATEWAY/COL DAY (SUX) Airport?",
+        "choices": [
+          "Class B airspace",
+          "Class C airspace",
+          "Class D airspace"
+        ],
+        "answerIndex": 2,
+        "sourceCode": "1327",
+        "bank": "Airspace",
+        "figures": [
+          "78"
+        ]
+      }
+    },
+    {
+      "id": "airspace_0029",
+      "disposition": "included",
+      "reason": "",
+      "changes": [
+        {
+          "reason": "The supplied chart shows surface Class G at Fentress; remove the misleading area marker.",
+          "source": "/assets/practice/figures/20.jpg"
+        }
+      ],
+      "original": {
+        "id": "airspace_0029",
+        "prompt": "1328 (Refer to Figure 20, Area 1) The Fentress NALF Airport (NFE) is in what type of airspace?",
+        "choices": [
+          "Class C.",
+          "Class E.",
+          "Class G."
+        ],
+        "answerIndex": 1
+      },
+      "curated": {
+        "id": "airspace_0029",
+        "prompt": "(Refer to Figure 20.) What class of airspace is immediately above the surface at Fentress NALF Airport (NFE), as depicted?",
+        "choices": [
+          "Class C.",
+          "Class E.",
+          "Class G."
+        ],
+        "answerIndex": 2,
+        "sourceCode": "1328",
+        "bank": "Airspace",
+        "figures": [
+          "20"
+        ]
+      }
+    },
+    {
+      "id": "airspace_0030",
+      "disposition": "duplicate",
+      "reason": "Duplicate of airspace_0003; excluded from sampling.",
+      "changes": [
+        {
+          "reason": "Duplicate of corrected Class C shelf question.",
+          "source": "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap3_section_2.html"
+        }
+      ],
+      "original": {
+        "id": "airspace_0030",
+        "prompt": "1305 The typical outer radius limits of class C airspace are",
+        "choices": [
+          "10 NM",
+          "20 NM",
+          "30 NM"
+        ],
+        "answerIndex": 1
+      },
+      "curated": {
+        "id": "airspace_0030",
+        "prompt": "What is the typical outer radius of the charted Class C shelf?",
+        "choices": [
+          "10 NM",
+          "20 NM",
+          "30 NM"
+        ],
+        "answerIndex": 0,
+        "sourceCode": "1305",
+        "bank": "Airspace",
+        "figures": []
+      }
+    },
+    {
+      "id": "airspace_0031",
+      "disposition": "included",
+      "reason": "",
+      "changes": [
+        {
+          "reason": "Correct spelling, punctuation, spacing, or capitalization."
+        }
+      ],
+      "original": {
+        "id": "airspace_0031",
+        "prompt": "1307 (Refer to Figure 25, Area2) The airspace directly overlying Addison Airport (ADS) is",
+        "choices": [
+          "Class D up 3,000 feet MSL.",
+          "Class D up to but not including 3,000 feet MSL.",
+          "Class E from the surface up to 3,000 feet MSL."
+        ],
+        "answerIndex": 1
+      },
+      "curated": {
+        "id": "airspace_0031",
+        "prompt": "(Refer to Figure 25, Area 2) The airspace directly overlying Addison Airport (ADS) is",
+        "choices": [
+          "Class D up 3,000 feet MSL.",
+          "Class D up to but not including 3,000 feet MSL.",
+          "Class E from the surface up to 3,000 feet MSL."
+        ],
+        "answerIndex": 1,
+        "sourceCode": "1307",
+        "bank": "Airspace",
+        "figures": [
+          "25"
+        ]
+      }
+    },
+    {
+      "id": "airspace_0032",
+      "disposition": "included",
+      "reason": "",
+      "changes": [
+        {
+          "reason": "Correct airport spelling and distinguish AGL floor from MSL ceiling.",
+          "source": "/assets/practice/figures/26.jpg"
+        }
+      ],
+      "original": {
+        "id": "airspace_0032",
+        "prompt": "1295 (Refer to Figure 26, Area 1) The airspace overlying Tominson Airport is",
+        "choices": [
+          "Class G up to 18,000",
+          "Class E from 1,200 up to but not including 18,000.",
+          "Class E from 700 up to but not including 18,000."
+        ],
+        "answerIndex": 1
+      },
+      "curated": {
+        "id": "airspace_0032",
+        "prompt": "(Refer to Figure 26, Area 1.) What is the Class E airspace floor above Tomlinson Airport?",
+        "choices": [
+          "18,000 feet MSL.",
+          "1,200 feet AGL.",
+          "700 feet AGL."
+        ],
+        "answerIndex": 1,
+        "sourceCode": "1295",
+        "bank": "Airspace",
+        "figures": [
+          "26"
+        ]
+      }
+    },
+    {
+      "id": "airspace_0034",
+      "disposition": "included",
+      "reason": "",
+      "changes": [
+        {
+          "reason": "Specify low-altitude flight for the Class G route answer.",
+          "source": "/assets/practice/figures/78.jpg"
+        }
+      ],
+      "original": {
+        "id": "airspace_0034",
+        "prompt": "1321 (Refer to Figure 78) You have been hired to use your small UAS to inspect the railroad tracks from Blencoe (SE of SIOUX City) to Onawa. Will ATC authorization be required?",
+        "choices": [
+          "Yes, Onawa is in Class D airspace that is designated for an airport.",
+          "No, your entire flight is in Class G airspace.",
+          "Yes, you must contact the Onawa control tower to operate within 5 miles of the airport."
+        ],
+        "answerIndex": 1
+      },
+      "curated": {
+        "id": "airspace_0034",
+        "prompt": "(Refer to Figure 78.) For an inspection below 400 feet AGL along the railroad from Blencoe to Onawa, does the depicted airspace require ATC authorization?",
+        "choices": [
+          "Yes, Onawa is in Class D airspace that is designated for an airport.",
+          "No, your entire flight is in Class G airspace.",
+          "Yes, you must contact the Onawa control tower to operate within 5 miles of the airport."
+        ],
+        "answerIndex": 1,
+        "sourceCode": "1321",
+        "bank": "Airspace",
+        "figures": [
+          "78"
+        ]
+      }
+    },
+    {
+      "id": "airspace_0040",
+      "disposition": "included",
+      "reason": "",
+      "changes": [
+        {
+          "reason": "A three-digit MTR includes at least one segment above 1,500 feet AGL; not necessarily the entire route.",
+          "source": "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap3_section_5.html"
+        }
+      ],
+      "original": {
+        "id": "airspace_0040",
+        "prompt": "1301 (Refer to Figure 26, Area 3) What type of flights are being conducted as indicated by IR678?",
+        "choices": [
+          "IFR military training route above 1,500 feet AGL.",
+          "VFR military training route above 1,500 feet AGL.",
+          "VFR military training route below 1,500 feet AGL."
+        ],
+        "answerIndex": 0
+      },
+      "curated": {
+        "id": "airspace_0040",
+        "prompt": "(Refer to Figure 26, Area 3) What type of flights are being conducted as indicated by IR678?",
+        "choices": [
+          "An IFR military training route with at least one segment above 1,500 feet AGL.",
+          "A VFR military training route entirely above 1,500 feet AGL.",
+          "A VFR military training route entirely at or below 1,500 feet AGL."
+        ],
+        "answerIndex": 0,
+        "sourceCode": "1301",
+        "bank": "Airspace",
+        "figures": [
+          "26"
+        ]
+      }
+    },
+    {
+      "id": "airspace_0042",
+      "disposition": "included",
+      "reason": "",
+      "changes": [
+        {
+          "reason": "Correct spelling, punctuation, spacing, or capitalization."
+        }
+      ],
+      "original": {
+        "id": "airspace_0042",
+        "prompt": "1090 (Refer to Figure 59, Area 2) The chart shows a gray line with “VR1667, VR1617, VR1638, and VR 1668. Could this area present a hazard to the operations of a small unmanned aircraft?",
+        "choices": [
+          "No, all operation will be above 400 feet.",
+          "Yes, this is a Military Training Route from 1,500 feet AGL and below.",
+          "Yes, the defined route provides traffic separation to manned aircraft."
+        ],
+        "answerIndex": 1
+      },
+      "curated": {
+        "id": "airspace_0042",
+        "prompt": "(Refer to Figure 59, Area 2) The chart shows a gray line with “VR1667, VR1617, VR1638, and VR 1668. Could this area present a hazard to the operations of a small unmanned aircraft?",
+        "choices": [
+          "No, all operations will be above 400 feet.",
+          "Yes, this a Military Training Route from 1,500 feet AGL and below.",
+          "Yes, the defined route provides traffic separation to manned aircraft."
+        ],
+        "answerIndex": 1,
+        "sourceCode": "1090",
+        "bank": "Airspace",
+        "figures": [
+          "59"
+        ]
+      }
+    },
+    {
+      "id": "airspace_0043",
+      "disposition": "included",
+      "reason": "",
+      "changes": [
+        {
+          "reason": "Correct spelling, punctuation, spacing, or capitalization."
+        }
+      ],
+      "original": {
+        "id": "airspace_0043",
+        "prompt": "1091 (Refer to Figure 24, Area 5) You are operating an sUAS in the vicinity of Sulphur Springs Airport (SUR) where there is active air traffic. Who has priority and right-of-way within the traffic pattern?",
+        "choices": [
+          "Priority and right-of-way goes to the aircraft closest to the landing runway.",
+          "The sUAS.",
+          "The existing manned aircraft."
+        ],
+        "answerIndex": 2
+      },
+      "curated": {
+        "id": "airspace_0043",
+        "prompt": "(Refer to Figure 24, Area 5) You are operating an sUAS in the vicinity of Sulphur Springs Airport (SLR) where there is active air traffic. Who has priority and right-of-way within the traffic pattern?",
+        "choices": [
+          "Priority and right-of-way goes to the aircraft closest to the landing runway.",
+          "The sUAS.",
+          "The existing manned aircraft."
+        ],
+        "answerIndex": 2,
+        "sourceCode": "1091",
+        "bank": "Airspace",
+        "figures": [
+          "24"
+        ]
+      }
+    },
+    {
+      "id": "airspace_0044",
+      "disposition": "included",
+      "reason": "",
+      "changes": [
+        {
+          "reason": "Correct spelling, punctuation, spacing, or capitalization."
+        },
+        {
+          "reason": "Link previously unmapped Figure 71."
+        }
+      ],
+      "original": {
+        "id": "airspace_0044",
+        "prompt": "1092 (refer to Figure 71, Area 6) Sky Way Airport is",
+        "choices": [
+          "An airport restricted to use by private and recreational pilots.",
+          "A restricted military stage field within restricted airspace.",
+          "A non-public use airport."
+        ],
+        "answerIndex": 2
+      },
+      "curated": {
+        "id": "airspace_0044",
+        "prompt": "(Refer to Figure 71, Area 6) Sky Way Airport is",
+        "choices": [
+          "An airport restricted to use by private and recreational pilots.",
+          "A restricted military stage field within restricted airspace.",
+          "A non-public use airport."
+        ],
+        "answerIndex": 2,
+        "sourceCode": "1092",
+        "bank": "Airspace",
+        "figures": [
+          "71"
+        ]
+      }
+    },
+    {
+      "id": "airspace_0045",
+      "disposition": "included",
+      "reason": "",
+      "changes": [
+        {
+          "reason": "Original choices 700 AGL and 3,823 MSL describe the same floor; request AGL and remove the equivalent distractor.",
+          "source": "/assets/practice/figures/71.jpg"
+        }
+      ],
+      "original": {
+        "id": "airspace_0045",
+        "prompt": "1093 (Refer to Figure 71, Area 1.) The floor of the Class E airspace above Georgetown Airport (E36) is at",
+        "choices": [
+          "The surface.",
+          "700 feet AGL.",
+          "3.823 feet MSL."
+        ],
+        "answerIndex": 2
+      },
+      "curated": {
+        "id": "airspace_0045",
+        "prompt": "(Refer to Figure 71, Area 1.) In feet AGL, what is the floor of Class E airspace above Georgetown Airport (E36)?",
+        "choices": [
+          "The surface.",
+          "700 feet AGL.",
+          "1,200 feet AGL."
+        ],
+        "answerIndex": 1,
+        "sourceCode": "1093",
+        "bank": "Airspace",
+        "figures": [
+          "71"
+        ]
+      }
+    },
+    {
+      "id": "airspace_0046",
+      "disposition": "included",
+      "reason": "",
+      "changes": [
+        {
+          "reason": "Correct spelling, punctuation, spacing, or capitalization."
+        }
+      ],
+      "original": {
+        "id": "airspace_0046",
+        "prompt": "1094 (Refer to Figure 75). The airspace surrounding the Gola Bend AF AUX Airport (GXF) (area 6) is classified as Class",
+        "choices": [
+          "B",
+          "C",
+          "D"
+        ],
+        "answerIndex": 2
+      },
+      "curated": {
+        "id": "airspace_0046",
+        "prompt": "(Refer to Figure 75). The airspace surrounding the Gila Bend AF AUX Airport (GXF) (area 6) is classified as Class",
+        "choices": [
+          "B",
+          "C",
+          "D"
+        ],
+        "answerIndex": 2,
+        "sourceCode": "1094",
+        "bank": "Airspace",
+        "figures": [
+          "75"
+        ]
+      }
+    },
+    {
+      "id": "airspace_0048",
+      "disposition": "duplicate",
+      "reason": "Duplicate of airspace_0005; excluded from sampling.",
+      "changes": [],
+      "original": {
+        "id": "airspace_0048",
+        "prompt": "1296 Where can you find information about operating in an MOA along your planned route of flight?",
+        "choices": [
+          "Sectional chart.",
+          "Chart Supplement.",
+          "Aeronautical Information Manual."
+        ],
+        "answerIndex": 0
+      },
+      "curated": {
+        "id": "airspace_0048",
+        "prompt": "Where can you find information about operating in an MOA along your planned route of flight?",
+        "choices": [
+          "Sectional chart.",
+          "Chart Supplement.",
+          "Aeronautical Information Manual."
+        ],
+        "answerIndex": 0,
+        "sourceCode": "1296",
+        "bank": "Airspace",
+        "figures": []
+      }
+    },
+    {
+      "id": "airspace_0049",
+      "disposition": "included",
+      "reason": "",
+      "changes": [
+        {
+          "reason": "Correct spelling, punctuation, spacing, or capitalization."
+        }
+      ],
+      "original": {
+        "id": "airspace_0049",
+        "prompt": "1309 (Refer to Figure 75, Area 6) During preflight planning, you plan to operate in R-2305. Where would you find additional information regarding this airspace?",
+        "choices": [
+          "In the Special Use Airspace area of the chart.",
+          "In the Aeronautical Information Manual.",
+          "In the Charts Supplements U.S."
+        ],
+        "answerIndex": 0
+      },
+      "curated": {
+        "id": "airspace_0049",
+        "prompt": "(Refer to Figure 75, Area 6) During preflight planning, you plan to operate in R-2305. Where would you find additional information regarding this airspace?",
+        "choices": [
+          "In the Special Use Airspace area of the chart.",
+          "In the Aeronautical Information Manual.",
+          "In the Chart Supplements U.S."
+        ],
+        "answerIndex": 0,
+        "sourceCode": "1309",
+        "bank": "Airspace",
+        "figures": [
+          "75"
+        ]
+      }
+    },
+    {
+      "id": "airspace_0050",
+      "disposition": "included",
+      "reason": "",
+      "changes": [
+        {
+          "reason": "Correct spelling, punctuation, spacing, or capitalization."
+        }
+      ],
+      "original": {
+        "id": "airspace_0050",
+        "prompt": "1331 (refer to Figure 24, Area 6) What type of airport is Card Airport?",
+        "choices": [
+          "Public towered.",
+          "Public non-towered.",
+          "Private non-towered."
+        ],
+        "answerIndex": 2
+      },
+      "curated": {
+        "id": "airspace_0050",
+        "prompt": "(Refer to Figure 24, Area 6) What type of airport is Card Airport?",
+        "choices": [
+          "Public towered.",
+          "Public non-towered.",
+          "Private non-towered."
+        ],
+        "answerIndex": 2,
+        "sourceCode": "1331",
+        "bank": "Airspace",
+        "figures": [
+          "24"
+        ]
+      }
+    },
+    {
+      "id": "airspace_0052",
+      "disposition": "included",
+      "reason": "",
+      "changes": [
+        {
+          "reason": "Correct spelling, punctuation, spacing, or capitalization."
+        }
+      ],
+      "original": {
+        "id": "airspace_0052",
+        "prompt": "1101 (Refer to Figure 20, Area 2) Why would the small flag at Lake Drummond be important to a remote pilot?",
+        "choices": [
+          "This is a VFR check point for manned aircraft, and a higher volume of air traffic should be expected there.",
+          "This is a GPS check point that can be used by both manned and remote pilots for orientation.",
+          "This indicated that there will be a large obstruction depicted on the next printing of the chart."
+        ],
+        "answerIndex": 0
+      },
+      "curated": {
+        "id": "airspace_0052",
+        "prompt": "(Refer to Figure 20, Area 2) Why would the small flag at Lake Drummond be important to a remote pilot?",
+        "choices": [
+          "This a VFR check point for manned aircraft, and a higher volume of air traffic should be expected there.",
+          "This a GPS check point that can be used by both manned and remote pilots for orientation.",
+          "This indicates that there will be a large obstruction depicted on the next printing of the chart."
+        ],
+        "answerIndex": 0,
+        "sourceCode": "1101",
+        "bank": "Airspace",
+        "figures": [
+          "20"
+        ]
+      }
+    },
+    {
+      "id": "loading_0006",
+      "disposition": "included",
+      "reason": "",
+      "changes": [
+        {
+          "reason": "Correct spelling, punctuation, spacing, or capitalization."
+        }
+      ],
+      "original": {
+        "id": "loading_0006",
+        "prompt": "1190 When loading cameras or other equipment on an sUAS, mount the items in a manner that",
+        "choices": [
+          "Is  visible to the visual observer or other crew members.",
+          "Does not adversely affect the center of gravity.",
+          "Can be easily removed without the use of tools."
+        ],
+        "answerIndex": 1
+      },
+      "curated": {
+        "id": "loading_0006",
+        "prompt": "When loading cameras or other equipment on an sUAS, mount the items in a manner that",
+        "choices": [
+          "Is visible to the visual observer or other crew members.",
+          "Does not adversely affect the center of gravity.",
+          "Can be easily removed without the use of tools."
+        ],
+        "answerIndex": 1,
+        "sourceCode": "1190",
+        "bank": "Loading and Performance",
+        "figures": []
+      }
+    },
+    {
+      "id": "loading_0016",
+      "disposition": "included",
+      "reason": "",
+      "changes": [
+        {
+          "reason": "Correct spelling, punctuation, spacing, or capitalization."
+        }
+      ],
+      "original": {
+        "id": "loading_0016",
+        "prompt": "1202 The angle of attack at which an airfoil stalls will",
+        "choices": [
+          "increase of the CG is moved forward.",
+          "remain the same regardless of gross weight.",
+          "change with an increase in gross weight."
+        ],
+        "answerIndex": 1
+      },
+      "curated": {
+        "id": "loading_0016",
+        "prompt": "The angle of attack at which an airfoil stalls will",
+        "choices": [
+          "increase if the CG is moved forward.",
+          "remain the same regardless of gross weight.",
+          "change with an increase in gross weight."
+        ],
+        "answerIndex": 1,
+        "sourceCode": "1202",
+        "bank": "Loading and Performance",
+        "figures": []
+      }
+    },
+    {
+      "id": "loading_0017",
+      "disposition": "included",
+      "reason": "",
+      "changes": [
+        {
+          "reason": "Correct spelling, punctuation, spacing, or capitalization."
+        }
+      ],
+      "original": {
+        "id": "loading_0017",
+        "prompt": "1203 A stall occurs when the smooth airflow over the unmanned aircraft’s wing/propeller(s) is disrupted, and the lift degenerates rapidly. This is caused when the wing/propeller(s)",
+        "choices": [
+          "exceeds maximum allowable operating weight.",
+          "exceeds the maximum speed.",
+          "exceeds its critical angle of attack."
+        ],
+        "answerIndex": 2
+      },
+      "curated": {
+        "id": "loading_0017",
+        "prompt": "A stall occurs when the smooth airflow over the unmanned aircraft’s wing/propeller(s) is disrupted, and the lift degenerates rapidly. This caused when the wing/propeller(s)",
+        "choices": [
+          "exceeds maximum allowable operating weight.",
+          "exceeds the maximum speed.",
+          "exceeds its critical angle of attack."
+        ],
+        "answerIndex": 2,
+        "sourceCode": "1203",
+        "bank": "Loading and Performance",
+        "figures": []
+      }
+    },
+    {
+      "id": "loading_0018",
+      "disposition": "included",
+      "reason": "",
+      "changes": [
+        {
+          "reason": "Correct spelling, punctuation, spacing, or capitalization."
+        }
+      ],
+      "original": {
+        "id": "loading_0018",
+        "prompt": "1204 An increased in load factor will cause an unmanned aircraft to",
+        "choices": [
+          "stall at a higher airspeed.",
+          "have a tendency to spin.",
+          "be more difficult to control."
+        ],
+        "answerIndex": 0
+      },
+      "curated": {
+        "id": "loading_0018",
+        "prompt": "An increase in load factor will cause an unmanned aircraft to",
+        "choices": [
+          "stall at a higher airspeed.",
+          "have a tendency to spin.",
+          "be more difficult to control."
+        ],
+        "answerIndex": 0,
+        "sourceCode": "1204",
+        "bank": "Loading and Performance",
+        "figures": []
+      }
+    },
+    {
+      "id": "loading_0024",
+      "disposition": "included",
+      "reason": "",
+      "changes": [
+        {
+          "reason": "Correct spelling, punctuation, spacing, or capitalization."
+        }
+      ],
+      "original": {
+        "id": "loading_0024",
+        "prompt": "1209 When range and economy of operation are the principle goals, the remote pilot must ensure that the sUAS will be operated at the recommended",
+        "choices": [
+          "Specific endurance",
+          "Long-range cruise performance",
+          "Equivalent speed"
+        ],
+        "answerIndex": 1
+      },
+      "curated": {
+        "id": "loading_0024",
+        "prompt": "When range and economy of operation are the principal goals, the remote pilot must ensure that the sUAS will be operated at the recommended",
+        "choices": [
+          "Specific endurance",
+          "Long-range cruise performance",
+          "Equivalent speed"
+        ],
+        "answerIndex": 1,
+        "sourceCode": "1209",
+        "bank": "Loading and Performance",
+        "figures": []
+      }
+    },
+    {
+      "id": "loading_0026",
+      "disposition": "included",
+      "reason": "",
+      "changes": [
+        {
+          "reason": "Correct spelling, punctuation, spacing, or capitalization."
+        }
+      ],
+      "original": {
+        "id": "loading_0026",
+        "prompt": "1196 (Refer to Figure 2.) If an sUAS weighs 10 pounds, what approximate weight would the sUAS structure be required to support during a 60 degree banked turn while maintain altitude?",
+        "choices": [
+          "10.15 pounds",
+          "30 pounds",
+          "20 pounds"
+        ],
+        "answerIndex": 2
+      },
+      "curated": {
+        "id": "loading_0026",
+        "prompt": "(Refer to Figure 2.) If an sUAS weighs 10 pounds, what approximate weight would the sUAS structure be required to support during a 60 degree banked turn while maintaining altitude?",
+        "choices": [
+          "10.15 pounds",
+          "30 pounds",
+          "20 pounds"
+        ],
+        "answerIndex": 2,
+        "sourceCode": "1196",
+        "bank": "Loading and Performance",
+        "figures": [
+          "2"
+        ]
+      }
+    },
+    {
+      "id": "loading_0030",
+      "disposition": "held",
+      "reason": "Incomplete fatigue-recognition wording; the keyed phrase does not supply a clear answer.",
+      "changes": [
+        {
+          "reason": "Correct spelling, punctuation, spacing, or capitalization."
+        }
+      ],
+      "original": {
+        "id": "loading_0030",
+        "prompt": "1256 Fatigue can be recognized",
+        "choices": [
+          "easily by an experienced pilot.",
+          "as being in an impaired state.",
+          "by a ability to overcome sleep deprivation"
+        ],
+        "answerIndex": 1
+      },
+      "curated": {
+        "id": "loading_0030",
+        "prompt": "Fatigue can be recognized",
+        "choices": [
+          "easily by an experienced pilot.",
+          "as being in an impaired state.",
+          "by an ability to overcome sleep deprivation"
+        ],
+        "answerIndex": 1,
+        "sourceCode": "1256",
+        "bank": "Loading and Performance",
+        "figures": []
+      }
+    },
+    {
+      "id": "loading_0031",
+      "disposition": "included",
+      "reason": "",
+      "changes": [
+        {
+          "reason": "Specify duration: physical/mental is also a valid classification of fatigue.",
+          "source": "https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/remote_pilot_study_guide.pdf"
+        }
+      ],
+      "original": {
+        "id": "loading_0031",
+        "prompt": "1257 Fatigue can be either",
+        "choices": [
+          "Physiological or psychological",
+          "Physical or mental",
+          "Acute or chronic"
+        ],
+        "answerIndex": 2
+      },
+      "curated": {
+        "id": "loading_0031",
+        "prompt": "By duration, fatigue is classified as which two types?",
+        "choices": [
+          "Physiological or psychological",
+          "Physical or mental",
+          "Acute or chronic"
+        ],
+        "answerIndex": 2,
+        "sourceCode": "1257",
+        "bank": "Loading and Performance",
+        "figures": []
+      }
+    },
+    {
+      "id": "loading_0035",
+      "disposition": "held",
+      "reason": "Malformed medication question (will almost affect); several choices can impair performance.",
+      "changes": [],
+      "original": {
+        "id": "loading_0035",
+        "prompt": "1261 Which will almost affect your ability to fly?",
+        "choices": [
+          "Over-the-counter analgesics and antihistamines.",
+          "Antibiotics and anesthetic drugs.",
+          "Prescription analgesics and antihistamines."
+        ],
+        "answerIndex": 2
+      },
+      "curated": {
+        "id": "loading_0035",
+        "prompt": "Which will almost affect your ability to fly?",
+        "choices": [
+          "Over-the-counter analgesics and antihistamines.",
+          "Antibiotics and anesthetic drugs.",
+          "Prescription analgesics and antihistamines."
+        ],
+        "answerIndex": 2,
+        "sourceCode": "1261",
+        "bank": "Loading and Performance",
+        "figures": []
+      }
+    },
+    {
+      "id": "loading_0036",
+      "disposition": "held",
+      "reason": "Manned-flight altitude explanation does not establish the cause of dehydration for a ground-based remote pilot.",
+      "changes": [],
+      "original": {
+        "id": "loading_0036",
+        "prompt": "1262 As a pilot, flying for long periods in hot summer temperatures increases the susceptibility of dehydration since the",
+        "choices": [
+          "dry air at altitude tends to increase the rate of water loss from the body.",
+          "moist air at altitude helps retain the body’s moisture.",
+          "temperature decreases with altitude."
+        ],
+        "answerIndex": 0
+      },
+      "curated": {
+        "id": "loading_0036",
+        "prompt": "As a pilot, flying for long periods in hot summer temperatures increases the susceptibility of dehydration since the",
+        "choices": [
+          "dry air at altitude tends to increase the rate of water loss from the body.",
+          "moist air at altitude helps retain the body’s moisture.",
+          "temperature decreases with altitude."
+        ],
+        "answerIndex": 0,
+        "sourceCode": "1262",
+        "bank": "Loading and Performance",
+        "figures": []
+      }
+    },
+    {
+      "id": "loading_0037",
+      "disposition": "included",
+      "reason": "",
+      "changes": [
+        {
+          "reason": "Original wording reversed the cause and effect of hyperventilation.",
+          "source": "https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/remote_pilot_study_guide.pdf"
+        }
+      ],
+      "original": {
+        "id": "loading_0037",
+        "prompt": "1273 Which would most likely result in hyperventilation?",
+        "choices": [
+          "Insufficient oxygen.",
+          "Excessive carbon monoxide.",
+          "Insufficient carbon dioxide."
+        ],
+        "answerIndex": 2
+      },
+      "curated": {
+        "id": "loading_0037",
+        "prompt": "Excessive breathing during hyperventilation can produce which change in the blood?",
+        "choices": [
+          "Insufficient oxygen.",
+          "Excessive carbon monoxide.",
+          "Insufficient carbon dioxide."
+        ],
+        "answerIndex": 2,
+        "sourceCode": "1273",
+        "bank": "Loading and Performance",
+        "figures": []
+      }
+    },
+    {
+      "id": "loading_0039",
+      "disposition": "included",
+      "reason": "",
+      "changes": [
+        {
+          "reason": "Replace absolute removal of personal stress with a realistic mitigation.",
+          "source": "https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/remote_pilot_study_guide.pdf"
+        }
+      ],
+      "original": {
+        "id": "loading_0039",
+        "prompt": "1297 What can help a pilot mitigate stress?",
+        "choices": [
+          "Increasing stress tolerance.",
+          "Removing stress from personal life.",
+          "Breathing into a paper bag."
+        ],
+        "answerIndex": 1
+      },
+      "curated": {
+        "id": "loading_0039",
+        "prompt": "What can help a pilot mitigate stress?",
+        "choices": [
+          "Ignoring signs of stress.",
+          "Reducing avoidable stressors and using healthy coping strategies.",
+          "Increasing workload when already fatigued."
+        ],
+        "answerIndex": 1,
+        "sourceCode": "1297",
+        "bank": "Loading and Performance",
+        "figures": []
+      }
+    },
+    {
+      "id": "weather_0005",
+      "disposition": "held",
+      "reason": "Thermal-current key selects the Lake Drummond area; the intended land-surface comparison needs clarification.",
+      "changes": [],
+      "original": {
+        "id": "weather_0005",
+        "prompt": "1139 (Refer to Figure 20.) Over which area should a remote pilot expect to find the highest amount of thermal currents under normal conditions?",
+        "choices": [
+          "2.",
+          "7.",
+          "5."
+        ],
+        "answerIndex": 0
+      },
+      "curated": {
+        "id": "weather_0005",
+        "prompt": "(Refer to Figure 20.) Over which area should a remote pilot expect to find the highest amount of thermal currents under normal conditions?",
+        "choices": [
+          "2.",
+          "7.",
+          "5."
+        ],
+        "answerIndex": 0,
+        "sourceCode": "1139",
+        "bank": "Weather",
+        "figures": [
+          "20"
+        ]
+      }
+    },
+    {
+      "id": "weather_0007",
+      "disposition": "included",
+      "reason": "",
+      "changes": [
+        {
+          "reason": "Correct spelling, punctuation, spacing, or capitalization."
+        }
+      ],
+      "original": {
+        "id": "weather_0007",
+        "prompt": "1140  While operating around buildings, the remote PIC should be aware of the creation of wind gusts that",
+        "choices": [
+          "Change rapidly in direction and speed causing turbulence.",
+          "Enhanced stability and imagery.",
+          "Increased performance of the aircraft."
+        ],
+        "answerIndex": 0
+      },
+      "curated": {
+        "id": "weather_0007",
+        "prompt": "While operating around buildings, the remote PIC should be aware of the creation of wind gusts that",
+        "choices": [
+          "Change rapidly in direction and speed causing turbulence.",
+          "Enhanced stability and imagery.",
+          "Increased performance of the aircraft."
+        ],
+        "answerIndex": 0,
+        "sourceCode": "1140",
+        "bank": "Weather",
+        "figures": []
+      }
+    },
+    {
+      "id": "weather_0014",
+      "disposition": "included",
+      "reason": "",
+      "changes": [
+        {
+          "reason": "Clarify the boundary between air masses.",
+          "source": "https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/remote_pilot_study_guide.pdf"
+        },
+        {
+          "reason": "Correct spelling, punctuation, spacing, or capitalization."
+        }
+      ],
+      "original": {
+        "id": "weather_0014",
+        "prompt": "1277 The zone between different temperature, humidity, and wind is called?",
+        "choices": [
+          "A front.",
+          "An air mass.",
+          "Wind Sheer."
+        ],
+        "answerIndex": 0
+      },
+      "curated": {
+        "id": "weather_0014",
+        "prompt": "What is the boundary between air masses with different temperature and moisture characteristics called?",
+        "choices": [
+          "A front.",
+          "An air mass.",
+          "Wind shear."
+        ],
+        "answerIndex": 0,
+        "sourceCode": "1277",
+        "bank": "Weather",
+        "figures": []
+      }
+    },
+    {
+      "id": "weather_0025",
+      "disposition": "included",
+      "reason": "",
+      "changes": [
+        {
+          "reason": "Specify cloud altitude above the operating terrain and ordinary Part 107 cloud clearance.",
+          "source": "https://www.ecfr.gov/current/title-14/chapter-I/subchapter-F/part-107#p-107.51(d)"
+        }
+      ],
+      "original": {
+        "id": "weather_0025",
+        "prompt": "1271 The weather report lists the ceiling at 800 feet. What is the highest you can operate your sUAS?",
+        "choices": [
+          "200 feet AGL.",
+          "800 feet AGL.",
+          "300 feet AGL."
+        ],
+        "answerIndex": 2
+      },
+      "curated": {
+        "id": "weather_0025",
+        "prompt": "A cloud base is 800 feet above the terrain at your operating location. Without a waiver, what is the highest altitude that maintains the required vertical cloud clearance?",
+        "choices": [
+          "200 feet AGL.",
+          "800 feet AGL.",
+          "300 feet AGL."
+        ],
+        "answerIndex": 2,
+        "sourceCode": "1271",
+        "bank": "Weather",
+        "figures": []
+      }
+    },
+    {
+      "id": "weather_0026",
+      "disposition": "included",
+      "reason": "",
+      "changes": [
+        {
+          "reason": "Specify Part 107 visibility rather than general manned VFR minima.",
+          "source": "https://www.ecfr.gov/current/title-14/chapter-I/subchapter-F/part-107#p-107.51(c)"
+        }
+      ],
+      "original": {
+        "id": "weather_0026",
+        "prompt": "1289 (Refer to Figure 23.) What are the VFR minimum visibility requirements over Plantation Airport?",
+        "choices": [
+          "1 SM.",
+          "5 SM.",
+          "3 SM."
+        ],
+        "answerIndex": 2
+      },
+      "curated": {
+        "id": "weather_0026",
+        "prompt": "(Refer to Figure 23.) Without a waiver, what minimum flight visibility applies to Part 107 operations near Plantation Airport?",
+        "choices": [
+          "1 SM.",
+          "5 SM.",
+          "3 SM."
+        ],
+        "answerIndex": 2,
+        "sourceCode": "1289",
+        "bank": "Weather",
+        "figures": [
+          "23"
+        ]
+      }
+    },
+    {
+      "id": "weather_0033",
+      "disposition": "included",
+      "reason": "",
+      "changes": [
+        {
+          "reason": "Correct spelling, punctuation, spacing, or capitalization."
+        }
+      ],
+      "original": {
+        "id": "weather_0033",
+        "prompt": "1157 Thunderstorms  reach their greatest intensity during the",
+        "choices": [
+          "mature stage.",
+          "downdraft stage.",
+          "cumulus stage."
+        ],
+        "answerIndex": 0
+      },
+      "curated": {
+        "id": "weather_0033",
+        "prompt": "Thunderstorms reach their greatest intensity during the",
+        "choices": [
+          "mature stage.",
+          "downdraft stage.",
+          "cumulus stage."
+        ],
+        "answerIndex": 0,
+        "sourceCode": "1157",
+        "bank": "Weather",
+        "figures": []
+      }
+    },
+    {
+      "id": "weather_0038",
+      "disposition": "held",
+      "reason": "Question ranks thunderstorm hazards without a defined scenario; lightning key needs subject-matter review.",
+      "changes": [],
+      "original": {
+        "id": "weather_0038",
+        "prompt": "1162 Which is considered to be the most hazardous condition when flying an sUAS in the vicinity of thunderstorms?",
+        "choices": [
+          "Static electricity.",
+          "Lightning.",
+          "Wind shear and turbulence."
+        ],
+        "answerIndex": 1
+      },
+      "curated": {
+        "id": "weather_0038",
+        "prompt": "Which is considered to be the most hazardous condition when flying an sUAS in the vicinity of thunderstorms?",
+        "choices": [
+          "Static electricity.",
+          "Lightning.",
+          "Wind shear and turbulence."
+        ],
+        "answerIndex": 1,
+        "sourceCode": "1162",
+        "bank": "Weather",
+        "figures": []
+      }
+    },
+    {
+      "id": "weather_0039",
+      "disposition": "included",
+      "reason": "",
+      "changes": [
+        {
+          "reason": "Correct spelling, punctuation, spacing, or capitalization."
+        }
+      ],
+      "original": {
+        "id": "weather_0039",
+        "prompt": "1163 What is the expected duration of an individual microburst/",
+        "choices": [
+          "Two minutes with maximum winds lasting approximately 1 minute.",
+          "One microburst may continue for as long as 2 to 4 hours.",
+          "Seldom longer than 15 minutes from the time the burst strikes the ground until dissipation."
+        ],
+        "answerIndex": 2
+      },
+      "curated": {
+        "id": "weather_0039",
+        "prompt": "What is the expected duration of an individual microburst?",
+        "choices": [
+          "Two minutes with maximum winds lasting approximately 1 minute.",
+          "One microburst may continue for as long as 2 to 4 hours.",
+          "Seldom longer than 15 minutes from the time the burst strikes the ground until dissipation."
+        ],
+        "answerIndex": 2,
+        "sourceCode": "1163",
+        "bank": "Weather",
+        "figures": []
+      }
+    },
+    {
+      "id": "weather_0041",
+      "disposition": "held",
+      "reason": "Squall altitude question is underspecified and its at-any-altitude key needs subject-matter review.",
+      "changes": [],
+      "original": {
+        "id": "weather_0041",
+        "prompt": "1287 Where are squalls most likely to form?",
+        "choices": [
+          "High altitude.",
+          "Low altitude.",
+          "At any altitude."
+        ],
+        "answerIndex": 2
+      },
+      "curated": {
+        "id": "weather_0041",
+        "prompt": "Where are squalls most likely to form?",
+        "choices": [
+          "High altitude.",
+          "Low altitude.",
+          "At any altitude."
+        ],
+        "answerIndex": 2,
+        "sourceCode": "1287",
+        "bank": "Weather",
+        "figures": []
+      }
+    },
+    {
+      "id": "weather_0045",
+      "disposition": "included",
+      "reason": "",
+      "changes": [
+        {
+          "reason": "Original frost answer is internally contradictory; use the surface-temperature relationship.",
+          "source": "https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/remote_pilot_study_guide.pdf"
+        }
+      ],
+      "original": {
+        "id": "weather_0045",
+        "prompt": "1298 What environment is most conducive to frost formation?",
+        "choices": [
+          "Dewpoint of surface is below freezing, dewpoint is above freezing.",
+          "Surface temperature is below freezing, air temperature is below freezing.",
+          "Surface temperature is above freezing, air temperature is below freezing."
+        ],
+        "answerIndex": 0
+      },
+      "curated": {
+        "id": "weather_0045",
+        "prompt": "What environment is most conducive to frost formation?",
+        "choices": [
+          "The surface cools below freezing and below the dew point of the adjacent air.",
+          "The surface remains warmer than the dew point.",
+          "The surface remains above freezing."
+        ],
+        "answerIndex": 0,
+        "sourceCode": "1298",
+        "bank": "Weather",
+        "figures": []
+      }
+    },
+    {
+      "id": "weather_0051",
+      "disposition": "included",
+      "reason": "",
+      "changes": [
+        {
+          "reason": "Correct spelling, punctuation, spacing, or capitalization."
+        }
+      ],
+      "original": {
+        "id": "weather_0051",
+        "prompt": "1172 What is the best way for a remote pilot to determine the likelihood of local fog formation?",
+        "choices": [
+          "Monitor the temperature/dew point spread.",
+          "Monitor the wind conditions to insure the wind speed is not increasing.",
+          "Monitor the barometric pressure to insure that it is not decreasing."
+        ],
+        "answerIndex": 0
+      },
+      "curated": {
+        "id": "weather_0051",
+        "prompt": "What is the best way for a remote pilot to determine the likelihood of local fog formation?",
+        "choices": [
+          "Monitor the temperature/dew point spread.",
+          "Monitor the wind conditions to ensure the wind speed is not increasing.",
+          "Monitor the barometric pressure to ensure that it is not decreasing."
+        ],
+        "answerIndex": 0,
+        "sourceCode": "1172",
+        "bank": "Weather",
+        "figures": []
+      }
+    },
+    {
+      "id": "weather_0052",
+      "disposition": "included",
+      "reason": "",
+      "changes": [
+        {
+          "reason": "Performance depends on whether density altitude increases or decreases.",
+          "source": "https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/remote_pilot_study_guide.pdf"
+        }
+      ],
+      "original": {
+        "id": "weather_0052",
+        "prompt": "1173 How would density altitude affect the performance of a small unmanned aircraft?",
+        "choices": [
+          "No change in performance.",
+          "Increased performance.",
+          "Decreased performance."
+        ],
+        "answerIndex": 2
+      },
+      "curated": {
+        "id": "weather_0052",
+        "prompt": "All else equal, how does an increase in density altitude affect small unmanned aircraft performance?",
+        "choices": [
+          "No change in performance.",
+          "Increased performance.",
+          "Decreased performance."
+        ],
+        "answerIndex": 2,
+        "sourceCode": "1173",
+        "bank": "Weather",
+        "figures": []
+      }
+    },
+    {
+      "id": "weather_0054",
+      "disposition": "included",
+      "reason": "",
+      "changes": [
+        {
+          "reason": "Correct spelling, punctuation, spacing, or capitalization."
+        }
+      ],
+      "original": {
+        "id": "weather_0054",
+        "prompt": "1175 What are the standard temperature and pressure values for sea level?",
+        "choices": [
+          "15°C and 29.92 “Hg.",
+          "59°C and 1013.2 millibars.",
+          "59°F and 29.92 millibars."
+        ],
+        "answerIndex": 0
+      },
+      "curated": {
+        "id": "weather_0054",
+        "prompt": "What are the standard temperature and pressure values for sea level?",
+        "choices": [
+          "15°C and 29.92 inHg.",
+          "59°C and 1013.2 millibars.",
+          "59°F and 29.92 millibars."
+        ],
+        "answerIndex": 0,
+        "sourceCode": "1175",
+        "bank": "Weather",
+        "figures": []
+      }
+    },
+    {
+      "id": "weather_0063",
+      "disposition": "held",
+      "reason": "Supplied Figure 15 mixes date groups; forecast date and interval need clarification before grading this question.",
+      "changes": [],
+      "original": {
+        "id": "weather_0063",
+        "prompt": "1183 (Refer to Figure 15.) Between 1000Z and 1200Z the visibility at KMEM is forecast to be",
+        "choices": [
+          "1/2 statute mile.",
+          "3 statute miles.",
+          "6 statute miles."
+        ],
+        "answerIndex": 1
+      },
+      "curated": {
+        "id": "weather_0063",
+        "prompt": "(Refer to Figure 15.) Between 1000Z and 1200Z the visibility at KMEM is forecast to be",
+        "choices": [
+          "1/2 statute mile.",
+          "3 statute miles.",
+          "6 statute miles."
+        ],
+        "answerIndex": 1,
+        "sourceCode": "1183",
+        "bank": "Weather",
+        "figures": [
+          "15"
+        ]
+      }
+    },
+    {
+      "id": "weather_0067",
+      "disposition": "included",
+      "reason": "",
+      "changes": [
+        {
+          "reason": "Correct spelling, punctuation, spacing, or capitalization."
+        }
+      ],
+      "original": {
+        "id": "weather_0067",
+        "prompt": "1292 (Refer to Figure 12.) The remarks section for KMDW has “RAB35” listed. This entry means",
+        "choices": [
+          "blowing mist has reduced the visibility to 1-1/2 SM.",
+          "rain began at 1835Z.",
+          "the barometer has risen .35 “Hg."
+        ],
+        "answerIndex": 1
+      },
+      "curated": {
+        "id": "weather_0067",
+        "prompt": "(Refer to Figure 12.) The remarks section for KMDW has “RAB35” listed. This entry means",
+        "choices": [
+          "blowing mist has reduced the visibility to 1-1/2 SM.",
+          "rain began at 1835Z.",
+          "the barometer has risen 0.35 inHg."
+        ],
+        "answerIndex": 1,
+        "sourceCode": "1292",
+        "bank": "Weather",
+        "figures": [
+          "12"
+        ]
+      }
+    },
+    {
+      "id": "regulations_0001",
+      "disposition": "included",
+      "reason": "",
+      "changes": [
+        {
+          "reason": "Part 48 is a registration rule, not the full operating framework for recreational flight.",
+          "source": "https://www.faa.gov/uas/getting_started/register_drone"
+        }
+      ],
+      "original": {
+        "id": "regulations_0001",
+        "prompt": "1001 You are operating a 1,280 g (2.8 lb) quadcopter for your own enjoyment. What FAA regulation is this sUAS operation subject to?",
+        "choices": [
+          "14 CFR Part 107",
+          "14 CFR Part 48",
+          "This operation is not subject to FAA regulations"
+        ],
+        "answerIndex": 1
+      },
+      "curated": {
+        "id": "regulations_0001",
+        "prompt": "A 1,280 g (2.8 lb) recreational quadcopter is registered using the small-aircraft registration system. Which regulation governs that registration?",
+        "choices": [
+          "14 CFR Part 107",
+          "14 CFR Part 48",
+          "This operation is not subject to FAA regulations"
+        ],
+        "answerIndex": 1,
+        "sourceCode": "1001",
+        "bank": "Regulations",
+        "figures": []
+      }
+    },
+    {
+      "id": "regulations_0002",
+      "disposition": "included",
+      "reason": "",
+      "changes": [
+        {
+          "reason": "Correct spelling, punctuation, spacing, or capitalization."
+        }
+      ],
+      "original": {
+        "id": "regulations_0002",
+        "prompt": "1002 You have accepted football tickets in exchange for using you sUAS to videotape a future construction zone. What FAA regulation is this sUAS operation subject to?",
+        "choices": [
+          "14 CFR Part 107",
+          "14 CFR Part 101",
+          "This operation is not subject to FAA regulations"
+        ],
+        "answerIndex": 0
+      },
+      "curated": {
+        "id": "regulations_0002",
+        "prompt": "You have accepted football tickets in exchange for using your sUAS to videotape a future construction zone. What FAA regulation is this sUAS operation subject to?",
+        "choices": [
+          "14 CFR Part 107",
+          "14 CFR Part 101",
+          "This operation is not subject to FAA regulations"
+        ],
+        "answerIndex": 0,
+        "sourceCode": "1002",
+        "bank": "Regulations",
+        "figures": []
+      }
+    },
+    {
+      "id": "regulations_0004",
+      "disposition": "included",
+      "reason": "",
+      "changes": [
+        {
+          "reason": "Weight definition applies to the aircraft and its attached load at takeoff.",
+          "source": "https://www.ecfr.gov/current/title-14/chapter-I/subchapter-F/part-107#p-107.3"
+        }
+      ],
+      "original": {
+        "id": "regulations_0004",
+        "prompt": "1004 According to 14 CFR Part 107, an sUAS is an unmanned aircraft system weighing:",
+        "choices": [
+          "Less than 55 lbs",
+          "55 kg or less",
+          "55 lbs or less"
+        ],
+        "answerIndex": 0
+      },
+      "curated": {
+        "id": "regulations_0004",
+        "prompt": "Under Part 107, a small unmanned aircraft must weigh how much at takeoff, including everything on board or attached?",
+        "choices": [
+          "Less than 55 lbs",
+          "55 kg or less",
+          "55 lbs or less"
+        ],
+        "answerIndex": 0,
+        "sourceCode": "1004",
+        "bank": "Regulations",
+        "figures": []
+      }
+    },
+    {
+      "id": "regulations_0006",
+      "disposition": "included",
+      "reason": "",
+      "changes": [
+        {
+          "reason": "Recreational exclusion requires compliance with the statutory exception.",
+          "source": "https://www.ecfr.gov/current/title-14/chapter-I/subchapter-F/part-107#p-107.1(b)(2)"
+        }
+      ],
+      "original": {
+        "id": "regulations_0006",
+        "prompt": "1006 Which of the following types of operations are excluded from the requirements in 14 CFR Part 107?",
+        "choices": [
+          "Model aircraft for hobby use",
+          "Quadcopter capturing aerial imagery for crop monitoring",
+          "UAS used for motion picture filming"
+        ],
+        "answerIndex": 0
+      },
+      "curated": {
+        "id": "regulations_0006",
+        "prompt": "Which of the following types of operations are excluded from the requirements in 14 CFR Part 107?",
+        "choices": [
+          "Recreational flight meeting all requirements of 49 U.S.C. 44809.",
+          "Crop monitoring for an agricultural business.",
+          "UAS operation for a motion-picture filming business."
+        ],
+        "answerIndex": 0,
+        "sourceCode": "1006",
+        "bank": "Regulations",
+        "figures": []
+      }
+    },
+    {
+      "id": "regulations_0010",
+      "disposition": "held",
+      "reason": "All civil operations is overbroad: Part 107 has exclusions. Needs a specific operation.",
+      "changes": [],
+      "original": {
+        "id": "regulations_0010",
+        "prompt": "1280 Which of these operations must comply with 14 CFR Part 107?",
+        "choices": [
+          "Civil operations",
+          "Civil and public operations.",
+          "Public and military operations."
+        ],
+        "answerIndex": 0
+      },
+      "curated": {
+        "id": "regulations_0010",
+        "prompt": "Which of these operations must comply with 14 CFR Part 107?",
+        "choices": [
+          "Civil operations",
+          "Civil and public operations.",
+          "Public and military operations."
+        ],
+        "answerIndex": 0,
+        "sourceCode": "1280",
+        "bank": "Regulations",
+        "figures": []
+      }
+    },
+    {
+      "id": "regulations_0011",
+      "disposition": "included",
+      "reason": "",
+      "changes": [
+        {
+          "reason": "Correct spelling, punctuation, spacing, or capitalization."
+        }
+      ],
+      "original": {
+        "id": "regulations_0011",
+        "prompt": "1010 To avoid a possible collision with a manned airplane, you estimate that your small unmanned aircraft climbed to an altitude greater than 600 feel AGL. To whom must you report the deviation?",
+        "choices": [
+          "Upon request to the Federal Aviation Administration.",
+          "The National Transportation Safety Board.",
+          "Air Traffic Control."
+        ],
+        "answerIndex": 0
+      },
+      "curated": {
+        "id": "regulations_0011",
+        "prompt": "To avoid a possible collision with a manned airplane, you estimate that your small unmanned aircraft climbed to an altitude greater than 600 feet AGL. To whom must you report the deviation?",
+        "choices": [
+          "Upon request to the Federal Aviation Administration.",
+          "The National Transportation Safety Board.",
+          "Air Traffic Control."
+        ],
+        "answerIndex": 0,
+        "sourceCode": "1010",
+        "bank": "Regulations",
+        "figures": []
+      }
+    },
+    {
+      "id": "regulations_0012",
+      "disposition": "held",
+      "reason": "Generic manned-aircraft ATC clearance wording needs a precise Part 107 authorization scenario.",
+      "changes": [],
+      "original": {
+        "id": "regulations_0012",
+        "prompt": "1011 When an ATC clearance has been obtained, no remote PIC may deviate from that clearance, unless that pilot obtains an amended clearance. The one exception to this regulation is:",
+        "choices": [
+          "When the clearance states “at pilot’s discretion”",
+          "An emergency",
+          "If the clearance contains a restriction"
+        ],
+        "answerIndex": 1
+      },
+      "curated": {
+        "id": "regulations_0012",
+        "prompt": "When an ATC clearance has been obtained, no remote PIC may deviate from that clearance, unless that pilot obtains an amended clearance. The one exception to this regulation is:",
+        "choices": [
+          "When the clearance states “at pilot’s discretion”",
+          "An emergency",
+          "If the clearance contains a restriction"
+        ],
+        "answerIndex": 1,
+        "sourceCode": "1011",
+        "bank": "Regulations",
+        "figures": []
+      }
+    },
+    {
+      "id": "regulations_0014",
+      "disposition": "included",
+      "reason": "",
+      "changes": [
+        {
+          "reason": "Use calendar-month recency wording.",
+          "source": "https://www.ecfr.gov/current/title-14/chapter-I/subchapter-F/part-107#p-107.65"
+        }
+      ],
+      "original": {
+        "id": "regulations_0014",
+        "prompt": "1013 After receiving a Part 107 remote pilot certificate with an sUAS rating, how often must you satisfy recurrent training requirements?",
+        "choices": [
+          "Every 6 months.",
+          "Every 12 months.",
+          "Every 24 months."
+        ],
+        "answerIndex": 2
+      },
+      "curated": {
+        "id": "regulations_0014",
+        "prompt": "After receiving a Part 107 remote pilot certificate with an sUAS rating, how often must you satisfy recurrent training requirements?",
+        "choices": [
+          "Every 6 calendar months.",
+          "Every 12 calendar months.",
+          "Within the preceding 24 calendar months."
+        ],
+        "answerIndex": 2,
+        "sourceCode": "1013",
+        "bank": "Regulations",
+        "figures": []
+      }
+    },
+    {
+      "id": "regulations_0015",
+      "disposition": "included",
+      "reason": "",
+      "changes": [
+        {
+          "reason": "Correct spelling, punctuation, spacing, or capitalization."
+        }
+      ],
+      "original": {
+        "id": "regulations_0015",
+        "prompt": "1014 To satisfy medical requirements, all sUAS crewmembers must”",
+        "choices": [
+          "Hold a valid third-class medical certificate.",
+          "Be free of any physical or mental condition that would interfere with the safe operation of the small unmanned aircraft system.",
+          "Complete a physical with an Aviation Medical Examiner."
+        ],
+        "answerIndex": 1
+      },
+      "curated": {
+        "id": "regulations_0015",
+        "prompt": "To satisfy medical requirements, all sUAS crewmembers must:",
+        "choices": [
+          "Hold a valid third-class medical certificate.",
+          "Be free of any physical or mental condition that would interfere with the safe operation of the small unmanned aircraft system.",
+          "Complete a physical with an Aviation Medical Examiner."
+        ],
+        "answerIndex": 1,
+        "sourceCode": "1014",
+        "bank": "Regulations",
+        "figures": []
+      }
+    },
+    {
+      "id": "regulations_0017",
+      "disposition": "included",
+      "reason": "",
+      "changes": [
+        {
+          "reason": "Correct spelling, punctuation, spacing, or capitalization."
+        }
+      ],
+      "original": {
+        "id": "regulations_0017",
+        "prompt": "1016 Who is responsible for ensuring the there are enough crewmembers for a given sUAS operation?",
+        "choices": [
+          "Remote pilot in command",
+          "Person manipulating the controls",
+          "Visual observer"
+        ],
+        "answerIndex": 0
+      },
+      "curated": {
+        "id": "regulations_0017",
+        "prompt": "Who is responsible for ensuring that there are enough crewmembers for a given sUAS operation?",
+        "choices": [
+          "Remote pilot in command",
+          "Person manipulating the controls",
+          "Visual observer"
+        ],
+        "answerIndex": 0,
+        "sourceCode": "1016",
+        "bank": "Regulations",
+        "figures": []
+      }
+    },
+    {
+      "id": "regulations_0022",
+      "disposition": "included",
+      "reason": "",
+      "changes": [
+        {
+          "reason": "Correct apparent source-code typo and specify an uncertificated control manipulator.",
+          "source": "https://www.ecfr.gov/current/title-14/chapter-I/subchapter-F/part-107#p-107.12(a)(2)"
+        }
+      ],
+      "original": {
+        "id": "regulations_0022",
+        "prompt": "2021 Which crewmember is required to be under the direct supervision of the remote PIC when operating an sUAS?",
+        "choices": [
+          "Remote pilot in command",
+          "Person manipulating the controls",
+          "Visual observer"
+        ],
+        "answerIndex": 1
+      },
+      "curated": {
+        "id": "regulations_0022",
+        "prompt": "Which person must be directly supervised by a remote PIC who can immediately take control?",
+        "choices": [
+          "A certificated remote PIC acting alone.",
+          "A person manipulating the controls without the required remote pilot qualification.",
+          "Every visual observer, regardless of duties."
+        ],
+        "answerIndex": 1,
+        "sourceCode": "1021",
+        "bank": "Regulations",
+        "figures": []
+      }
+    },
+    {
+      "id": "regulations_0023",
+      "disposition": "included",
+      "reason": "",
+      "changes": [
+        {
+          "reason": "Supervision requires ability to immediately take direct control.",
+          "source": "https://www.ecfr.gov/current/title-14/chapter-I/subchapter-F/part-107#p-107.12(a)(2)"
+        }
+      ],
+      "original": {
+        "id": "regulations_0023",
+        "prompt": "1022 A person without a Part 107 Remote Pilot certificate may operate an sUAS for commercial operations",
+        "choices": [
+          "Under the direct supervision of a remote PIC.",
+          "Only when visual observers participate in the operation.",
+          "Alone, if operating during daylight hours."
+        ],
+        "answerIndex": 0
+      },
+      "curated": {
+        "id": "regulations_0023",
+        "prompt": "A person without a Part 107 Remote Pilot certificate may operate an sUAS for commercial operations",
+        "choices": [
+          "Under direct supervision of a qualified remote PIC who can immediately take direct control.",
+          "Only when visual observers participate in the operation.",
+          "Alone, if operating during daylight hours."
+        ],
+        "answerIndex": 0,
+        "sourceCode": "1022",
+        "bank": "Regulations",
+        "figures": []
+      }
+    },
+    {
+      "id": "regulations_0027",
+      "disposition": "held",
+      "reason": "Maximum penalty claim omits other consequences and conflates administrative and criminal sanctions.",
+      "changes": [],
+      "original": {
+        "id": "regulations_0027",
+        "prompt": "1026 Under Title 14 of the Code of Federal Regulations, what is the maximum penalty for falsification, alteration, or fraudulent reproduction of certificates, logbooks, reports, and records?",
+        "choices": [
+          "Ineligibility to receive any certificate or rating for one year.",
+          "Imprisonment for one year and a $50,000.00 fine.",
+          "Suspension or revocation of any certificate held."
+        ],
+        "answerIndex": 2
+      },
+      "curated": {
+        "id": "regulations_0027",
+        "prompt": "Under Title 14 of the Code of Federal Regulations, what is the maximum penalty for falsification, alteration, or fraudulent reproduction of certificates, logbooks, reports, and records?",
+        "choices": [
+          "Ineligibility to receive any certificate or rating for one year.",
+          "Imprisonment for one year and a $50,000.00 fine.",
+          "Suspension or revocation of any certificate held."
+        ],
+        "answerIndex": 2,
+        "sourceCode": "1026",
+        "bank": "Regulations",
+        "figures": []
+      }
+    },
+    {
+      "id": "regulations_0028",
+      "disposition": "included",
+      "reason": "",
+      "changes": [
+        {
+          "reason": "Correct spelling, punctuation, spacing, or capitalization."
+        }
+      ],
+      "original": {
+        "id": "regulations_0028",
+        "prompt": "1027  You are part of a news crew, operating an sUAS to cover a breaking story. You experience a flyaway during landing. The unmanned aircraft strikes a vehicle, causing approximately $800 worth of damage. When must you report the accident to the FAA?",
+        "choices": [
+          "Anytime",
+          "Within 10 days.",
+          "Not to exceed 30 days."
+        ],
+        "answerIndex": 1
+      },
+      "curated": {
+        "id": "regulations_0028",
+        "prompt": "You are part of a news crew, operating an sUAS to cover a breaking story. You experience a flyaway during landing. The unmanned aircraft strikes a vehicle, causing approximately $800 worth of damage. When must you report the accident to the FAA?",
+        "choices": [
+          "Anytime",
+          "Within 10 days.",
+          "Not to exceed 30 days."
+        ],
+        "answerIndex": 1,
+        "sourceCode": "1027",
+        "bank": "Regulations",
+        "figures": []
+      }
+    },
+    {
+      "id": "regulations_0029",
+      "disposition": "included",
+      "reason": "",
+      "changes": [
+        {
+          "reason": "Not every accident meets the FAA reporting threshold.",
+          "source": "https://www.ecfr.gov/current/title-14/chapter-I/subchapter-F/part-107#p-107.9"
+        }
+      ],
+      "original": {
+        "id": "regulations_0029",
+        "prompt": "1028 Within how many days must an sUAS accident be reported to the FAA?",
+        "choices": [
+          "90 days.",
+          "10 days.",
+          "30 days."
+        ],
+        "answerIndex": 1
+      },
+      "curated": {
+        "id": "regulations_0029",
+        "prompt": "Within how many calendar days must an event meeting the reporting criteria of 14 CFR 107.9 be reported to the FAA?",
+        "choices": [
+          "90 days.",
+          "10 days.",
+          "30 days."
+        ],
+        "answerIndex": 1,
+        "sourceCode": "1028",
+        "bank": "Regulations",
+        "figures": []
+      }
+    },
+    {
+      "id": "regulations_0030",
+      "disposition": "included",
+      "reason": "",
+      "changes": [
+        {
+          "reason": "Overnight hospitalization alone does not define a serious injury; loss of consciousness is an explicit trigger.",
+          "source": "https://www.ecfr.gov/current/title-14/chapter-I/subchapter-F/part-107#p-107.9(a)"
+        }
+      ],
+      "original": {
+        "id": "regulations_0030",
+        "prompt": "1029 While operating a small unmanned aircraft system (sUAS), you experience a flyaway and several people suffer injuries. Which of the following injuries requires reporting to the FAA?",
+        "choices": [
+          "An injury requiring an overnight hospital stay.",
+          "Scrapes and cuts bandaged on site.",
+          "Minor bruises."
+        ],
+        "answerIndex": 0
+      },
+      "curated": {
+        "id": "regulations_0030",
+        "prompt": "While operating a small unmanned aircraft system (sUAS), you experience a flyaway and several people suffer injuries. Which of the following injuries requires reporting to the FAA?",
+        "choices": [
+          "Any loss of consciousness.",
+          "Scrapes and cuts bandaged on site.",
+          "Minor bruises."
+        ],
+        "answerIndex": 0,
+        "sourceCode": "1029",
+        "bank": "Regulations",
+        "figures": []
+      }
+    },
+    {
+      "id": "regulations_0031",
+      "disposition": "included",
+      "reason": "",
+      "changes": [
+        {
+          "reason": "Limit the conclusion to FAA reporting under this section and state no injury.",
+          "source": "https://www.ecfr.gov/current/title-14/chapter-I/subchapter-F/part-107#p-107.9"
+        }
+      ],
+      "original": {
+        "id": "regulations_0031",
+        "prompt": "1030 As you are flying your sUAS, valued at $1,000, over a home to photograph it for real estate sales purposes, the sUAS has a failure causing it to fall onto an awning causing some minor damage. The fair market value of the awning is $800 but it can be repaired for $400. What type of report is required?",
+        "choices": [
+          "An sUAS accident report to the FAA, within 10 days of the operation.",
+          "An SUAS incident report to the FAA, within 10 days of the operation.",
+          "No report is required."
+        ],
+        "answerIndex": 2
+      },
+      "curated": {
+        "id": "regulations_0031",
+        "prompt": "An sUAS damages an $800 awning that can be repaired for $400. Nobody is injured or loses consciousness, and there is no other property damage. Is an FAA report required under 14 CFR 107.9?",
+        "choices": [
+          "Yes, because the awning is worth more than $500.",
+          "Yes, because any property damage must be reported.",
+          "No, these facts do not meet the reporting thresholds in 107.9."
+        ],
+        "answerIndex": 2,
+        "sourceCode": "1030",
+        "bank": "Regulations",
+        "figures": []
+      }
+    },
+    {
+      "id": "regulations_0032",
+      "disposition": "included",
+      "reason": "",
+      "changes": [
+        {
+          "reason": "Remove manned-aircraft certificate storage wording and unnecessary crew requirement.",
+          "source": "https://www.ecfr.gov/current/title-14/chapter-I/subchapter-F/part-107#p-107.7(a)(1)"
+        }
+      ],
+      "original": {
+        "id": "regulations_0032",
+        "prompt": "1031 When must a current remote pilot certificate be in the pilot’s personal possession or readily accessible in the aircraft?",
+        "choices": [
+          "When acting as a crew chief during launch and recovery.",
+          "Only when a payload is carried.",
+          "Anytime when acting as pilot-in-command or as a required crew member."
+        ],
+        "answerIndex": 2
+      },
+      "curated": {
+        "id": "regulations_0032",
+        "prompt": "When must a remote pilot have the remote pilot certificate and identification physically in their possession and readily accessible?",
+        "choices": [
+          "Only during launch and recovery.",
+          "Only when carrying a payload.",
+          "When exercising the privileges of the remote pilot certificate."
+        ],
+        "answerIndex": 2,
+        "sourceCode": "1031",
+        "bank": "Regulations",
+        "figures": []
+      }
+    },
+    {
+      "id": "regulations_0033",
+      "disposition": "included",
+      "reason": "",
+      "changes": [
+        {
+          "reason": "Correct the inspection authority and specify remote pilot credentials.",
+          "source": "https://www.ecfr.gov/current/title-14/chapter-I/subchapter-F/part-107#p-107.7(a)(2)"
+        }
+      ],
+      "original": {
+        "id": "regulations_0033",
+        "prompt": "1032 Each person who holds a pilot certificate, a U.S. driver’s license, or a medical certificate shall present it for inspection upon the request of the administrator, the National Transportation Safety Board or any",
+        "choices": [
+          "Authorized representative of the administrator of the Department of Transportation.",
+          "Authorized representative of the Department of State.",
+          "Federal, state, or local law enforcement officer."
+        ],
+        "answerIndex": 0
+      },
+      "curated": {
+        "id": "regulations_0033",
+        "prompt": "Which of these may request inspection of a remote pilot certificate and identification under Part 107?",
+        "choices": [
+          "Any member of the public.",
+          "An authorized representative of the Department of State.",
+          "A federal, state, or local law enforcement officer."
+        ],
+        "answerIndex": 2,
+        "sourceCode": "1032",
+        "bank": "Regulations",
+        "figures": []
+      }
+    },
+    {
+      "id": "regulations_0036",
+      "disposition": "included",
+      "reason": "",
+      "changes": [
+        {
+          "reason": "Remove multiple plausible answers and cover Part 107 aircraft under 250 g.",
+          "source": "https://www.faa.gov/uas/getting_started/register_drone"
+        }
+      ],
+      "original": {
+        "id": "regulations_0036",
+        "prompt": "1034 According to 14 CFR Part 48, when must a person register a small UA with the Federal Aviation Administration?",
+        "choices": [
+          "All civilian small UAs weighing greater than .55 pounds must be registered regardless of its intended use.",
+          "When the small UA is used for any purpose other than as a model aircraft.",
+          "Only when the operator will be paid for commercial services."
+        ],
+        "answerIndex": 0
+      },
+      "curated": {
+        "id": "regulations_0036",
+        "prompt": "Which small unmanned aircraft used under Part 107 must be registered?",
+        "choices": [
+          "All of them, including aircraft weighing 0.55 pounds or less.",
+          "Only aircraft weighing more than 0.55 pounds.",
+          "Only aircraft used to carry cargo for payment."
+        ],
+        "answerIndex": 0,
+        "sourceCode": "1034",
+        "bank": "Regulations",
+        "figures": []
+      }
+    },
+    {
+      "id": "regulations_0037",
+      "disposition": "included",
+      "reason": "",
+      "changes": [
+        {
+          "reason": "Original key was wrong and omitted recreational-only conditions.",
+          "source": "https://www.faa.gov/uas/getting_started/register_drone"
+        }
+      ],
+      "original": {
+        "id": "regulations_0037",
+        "prompt": "1035 Under what conditions would a small unmanned aircraft not have to be registered before it is operated in the United States?",
+        "choices": [
+          "When the aircraft weighs less than .55 pounds on takeoff, including everything that is on-board or attached to the aircraft.",
+          "When the aircraft has a takeoff weight that is more than .55 pounds but less than 55 pounds, not including fuel and necessary attachments.",
+          "All small unmanned aircraft need to be registered regardless of the weight of the aircraft before, during, or after flight."
+        ],
+        "answerIndex": 1
+      },
+      "curated": {
+        "id": "regulations_0037",
+        "prompt": "Under what conditions would a small unmanned aircraft not have to be registered before it is operated in the United States?",
+        "choices": [
+          "An aircraft weighing 0.55 pounds or less flown exclusively under the limited recreational exception.",
+          "An aircraft weighing more than 0.55 pounds used commercially.",
+          "Any aircraft weighing less than 55 pounds used under Part 107."
+        ],
+        "answerIndex": 0,
+        "sourceCode": "1035",
+        "bank": "Regulations",
+        "figures": []
+      }
+    },
+    {
+      "id": "regulations_0040",
+      "disposition": "held",
+      "reason": "Only primary-power lithium batteries is overly restrictive; equipment batteries and hazardous-material rules need a scoped question.",
+      "changes": [],
+      "original": {
+        "id": "regulations_0040",
+        "prompt": "1038 Under what circumstances may lithium batteries be carried during sUAS operations?",
+        "choices": [
+          "Lithium batteries are prohibited from sUAS operations.",
+          "Lithium batteries may be carried in a sealed storage container away from the sUAS fuel source.",
+          "Lithium batteries may be carried only when installed as the primary power for the operation of the aircraft."
+        ],
+        "answerIndex": 2
+      },
+      "curated": {
+        "id": "regulations_0040",
+        "prompt": "Under what circumstances may lithium batteries be carried during sUAS operations?",
+        "choices": [
+          "Lithium batteries are prohibited from sUAS operations.",
+          "Lithium batteries may be carried in a sealed storage container away from the sUAS fuel source.",
+          "Lithium batteries may be carried only when installed as the primary power for the operation of the aircraft."
+        ],
+        "answerIndex": 2,
+        "sourceCode": "1038",
+        "bank": "Regulations",
+        "figures": []
+      }
+    },
+    {
+      "id": "regulations_0041",
+      "disposition": "included",
+      "reason": "",
+      "changes": [
+        {
+          "reason": "Specify the required anti-collision visibility rather than just any light.",
+          "source": "https://www.faa.gov/uas/commercial_operators/operations_over_people"
+        }
+      ],
+      "original": {
+        "id": "regulations_0041",
+        "prompt": "1039 According to 14 CFR Part 107, what is required to operate a small unmanned aircraft within 30 minutes after official sunset?",
+        "choices": [
+          "Use of a transponder.",
+          "Use of lighted anti-collision lights.",
+          "Must be operated in a rural area."
+        ],
+        "answerIndex": 1
+      },
+      "curated": {
+        "id": "regulations_0041",
+        "prompt": "According to 14 CFR Part 107, what is required to operate a small unmanned aircraft within 30 minutes after official sunset?",
+        "choices": [
+          "Use of a transponder.",
+          "Anti-collision lighting visible for at least 3 statute miles, with a flash rate sufficient to avoid a collision.",
+          "Operation only in a rural area."
+        ],
+        "answerIndex": 1,
+        "sourceCode": "1039",
+        "bank": "Regulations",
+        "figures": []
+      }
+    },
+    {
+      "id": "regulations_0042",
+      "disposition": "held",
+      "reason": "Obsolete sunrise-only launch limit; current night operations are possible subject to requirements.",
+      "changes": [],
+      "original": {
+        "id": "regulations_0042",
+        "prompt": "1274 Sunrise is 0645, when can you launch your sUAS operation?",
+        "choices": [
+          "0645",
+          "0615",
+          "0715"
+        ],
+        "answerIndex": 1
+      },
+      "curated": {
+        "id": "regulations_0042",
+        "prompt": "Sunrise is 0645, when can you launch your sUAS operation?",
+        "choices": [
+          "0645",
+          "0615",
+          "0715"
+        ],
+        "answerIndex": 1,
+        "sourceCode": "1274",
+        "bank": "Regulations",
+        "figures": []
+      }
+    },
+    {
+      "id": "regulations_0047",
+      "disposition": "included",
+      "reason": "",
+      "changes": [
+        {
+          "reason": "Scope protection of non-participants to operations without an applicable over-people authorization.",
+          "source": "https://www.faa.gov/uas/commercial_operators/operations_over_people"
+        },
+        {
+          "reason": "Correct spelling, punctuation, spacing, or capitalization."
+        }
+      ],
+      "original": {
+        "id": "regulations_0047",
+        "prompt": "1050 Which action is specifically required of the remote pilot prior to each flight?",
+        "choices": [
+          "Check the aircraft logbooks to ensure maintenance is current.",
+          "Make a plan to keep non-participants clear, indoors, or undercover.",
+          "Identify a non-participant who will be near the sUAS operation to help with see-and-avoid procedures."
+        ],
+        "answerIndex": 1
+      },
+      "curated": {
+        "id": "regulations_0047",
+        "prompt": "For a flight that will not use an applicable category or waiver for operations over people, which plan protects non-participants?",
+        "choices": [
+          "Check the aircraft logbooks to ensure maintenance is current.",
+          "Make a plan to keep non-participants clear, indoors, or under cover.",
+          "Identify a non-participant who will be near the sUAS operation to help with see-and-avoid procedures."
+        ],
+        "answerIndex": 1,
+        "sourceCode": "1050",
+        "bank": "Regulations",
+        "figures": []
+      }
+    },
+    {
+      "id": "regulations_0051",
+      "disposition": "held",
+      "reason": "Automatic immediate certificate revocation claim is not a reliably stated enforcement rule.",
+      "changes": [],
+      "original": {
+        "id": "regulations_0051",
+        "prompt": "1306 If you are caught smoking marijuana the FAA will",
+        "choices": [
+          "Send you to a drug treatment center",
+          "Issue an immediate suspension or revocation of your pilot certificate.",
+          "Deny all future pilot applications."
+        ],
+        "answerIndex": 1
+      },
+      "curated": {
+        "id": "regulations_0051",
+        "prompt": "If you are caught smoking marijuana the FAA will",
+        "choices": [
+          "Send you to a drug treatment center",
+          "Issue an immediate suspension or revocation of your pilot certificate.",
+          "Deny all future pilot applications."
+        ],
+        "answerIndex": 1,
+        "sourceCode": "1306",
+        "bank": "Regulations",
+        "figures": []
+      }
+    },
+    {
+      "id": "regulations_0052",
+      "disposition": "included",
+      "reason": "",
+      "changes": [
+        {
+          "reason": "90 days is an FAA review target, not a guaranteed approval or blanket legal deadline.",
+          "source": "https://www.faa.gov/uas/commercial_operators/part_107_waivers"
+        }
+      ],
+      "original": {
+        "id": "regulations_0052",
+        "prompt": "1066  When requesting a waiver, the required documents should be presented to the FAA at least how many days prior to the planned operation?",
+        "choices": [
+          "30 days",
+          "10 days",
+          "90 days"
+        ],
+        "answerIndex": 2
+      },
+      "curated": {
+        "id": "regulations_0052",
+        "prompt": "The FAA aims to review and approve or disapprove a Part 107 waiver request within how many days of submission, although processing time varies?",
+        "choices": [
+          "30 days",
+          "10 days",
+          "90 days"
+        ],
+        "answerIndex": 2,
+        "sourceCode": "1066",
+        "bank": "Regulations",
+        "figures": []
+      }
+    },
+    {
+      "id": "regulations_0053",
+      "disposition": "included",
+      "reason": "",
+      "changes": [
+        {
+          "reason": "Correct spelling, punctuation, spacing, or capitalization."
+        }
+      ],
+      "original": {
+        "id": "regulations_0053",
+        "prompt": "1344  Under which operational requirement would the unmanned aircraft be restricted to visual line of sight operations?",
+        "choices": [
+          "If operating with ADS-B capabilities",
+          "If operating with standard remote identification.",
+          "If operating with a remote identification broadcast module."
+        ],
+        "answerIndex": 2
+      },
+      "curated": {
+        "id": "regulations_0053",
+        "prompt": "Under which operational requirement would the unmanned aircraft be restricted to visual line of sight operations?",
+        "choices": [
+          "If operating with ADS-B capabilities",
+          "If operating with standard remote identification.",
+          "If operating with a remote identification broadcast module."
+        ],
+        "answerIndex": 2,
+        "sourceCode": "1344",
+        "bank": "Regulations",
+        "figures": []
+      }
+    },
+    {
+      "id": "regulations_0054",
+      "disposition": "included",
+      "reason": "",
+      "changes": [
+        {
+          "reason": "Correct spelling, punctuation, spacing, or capitalization."
+        }
+      ],
+      "original": {
+        "id": "regulations_0054",
+        "prompt": "1345 What must a person who is manipulating the controls of a small unmanned aircraft do if the standard remote identification fails during flight?",
+        "choices": [
+          "Land the aircraft as soon as practical",
+          "Notify the nearest FAA Air Traffic Facility.",
+          "Activate the aircrafts navigation lights."
+        ],
+        "answerIndex": 0
+      },
+      "curated": {
+        "id": "regulations_0054",
+        "prompt": "What must a person who is manipulating the controls of a small unmanned aircraft do if the standard remote identification fails during flight?",
+        "choices": [
+          "Land the aircraft as soon as practical",
+          "Notify the nearest FAA Air Traffic Facility.",
+          "Activate the aircraft’s navigation lights."
+        ],
+        "answerIndex": 0,
+        "sourceCode": "1345",
+        "bank": "Regulations",
+        "figures": []
+      }
+    },
+    {
+      "id": "regulations_0055",
+      "disposition": "included",
+      "reason": "",
+      "changes": [
+        {
+          "reason": "Correct spelling, punctuation, spacing, or capitalization."
+        }
+      ],
+      "original": {
+        "id": "regulations_0055",
+        "prompt": "1346 Where must a small unmanned aircraft’s serial number be listed when using either standard remote identification or a broadcast module?",
+        "choices": [
+          "The aircraft’s Document of Compliance",
+          "The manufacture’s Method of Compliance",
+          "The Certificate of Aircraft Registration"
+        ],
+        "answerIndex": 2
+      },
+      "curated": {
+        "id": "regulations_0055",
+        "prompt": "Where must a small unmanned aircraft’s serial number be listed when using either standard remote identification or a broadcast module?",
+        "choices": [
+          "The aircraft’s Document of Compliance",
+          "The manufacturer’s Method of Compliance",
+          "The Certificate of Aircraft Registration"
+        ],
+        "answerIndex": 2,
+        "sourceCode": "1346",
+        "bank": "Regulations",
+        "figures": []
+      }
+    },
+    {
+      "id": "regulations_0058",
+      "disposition": "held",
+      "reason": "Concert question omits aircraft category and the hazard posed by dropped objects; cannot grade a blanket prohibition.",
+      "changes": [],
+      "original": {
+        "id": "regulations_0058",
+        "prompt": "1056 Personnel at an outdoor concert venue use an sUAS to drop promotional T-shirts and CDs over the audience. Is this sUAS operation in compliance with 14 CFR Part 107?",
+        "choices": [
+          "Yes, compliant with Part 107.",
+          "Not compliant with Part 107.",
+          "No, unless authorized by the venue."
+        ],
+        "answerIndex": 1
+      },
+      "curated": {
+        "id": "regulations_0058",
+        "prompt": "Personnel at an outdoor concert venue use an sUAS to drop promotional T-shirts and CDs over the audience. Is this sUAS operation in compliance with 14 CFR Part 107?",
+        "choices": [
+          "Yes, compliant with Part 107.",
+          "Not compliant with Part 107.",
+          "No, unless authorized by the venue."
+        ],
+        "answerIndex": 1,
+        "sourceCode": "1056",
+        "bank": "Regulations",
+        "figures": []
+      }
+    },
+    {
+      "id": "regulations_0059",
+      "disposition": "held",
+      "reason": "Delivery question conflates VLOS, moving vehicles, waivers, and air-carrier operations; requires a defined scenario.",
+      "changes": [
+        {
+          "reason": "Correct spelling, punctuation, spacing, or capitalization."
+        }
+      ],
+      "original": {
+        "id": "regulations_0059",
+        "prompt": "1058 You wish to start a local delivery business using an sUAS to drop small packages at the front door of customer. The customer’s residence is not always within visual line-of-sight (VLOS) of the remote PIC located at the delivery facility. Under which circumstances would the be authorized?",
+        "choices": [
+          "With a waiver from the FAA",
+          "By utilizing a vehicle to follow the sUAS while enroute to maintain VLOS.",
+          "There is currently no way to do this in compliance with AC 107-2."
+        ],
+        "answerIndex": 2
+      },
+      "curated": {
+        "id": "regulations_0059",
+        "prompt": "You wish to start a local delivery business using an sUAS to drop small packages at the front door of a customer. The customer’s residence is not always within visual line-of-sight (VLOS) of the remote PIC located at the delivery facility. Under which circumstances would this be authorized?",
+        "choices": [
+          "With a waiver from the FAA",
+          "By utilizing a vehicle to follow the sUAS while enroute to maintain VLOS.",
+          "There is currently no way to do this in compliance with AC 107-2."
+        ],
+        "answerIndex": 2,
+        "sourceCode": "1058",
+        "bank": "Regulations",
+        "figures": []
+      }
+    },
+    {
+      "id": "regulations_0060",
+      "disposition": "included",
+      "reason": "",
+      "changes": [
+        {
+          "reason": "State the missing exception for closed/restricted-access sites.",
+          "source": "https://www.ecfr.gov/current/title-14/chapter-I/subchapter-F/part-107#p-107.145(b)"
+        }
+      ],
+      "original": {
+        "id": "regulations_0060",
+        "prompt": "1274 You are conducting a Category 1 operation over a moving vehicle with a human being inside. Because of such operation, the small unmanned aircraft",
+        "choices": [
+          "May not fly directly over the vehicle.",
+          "May maintain sustained flight over the vehicle for any extended period of time.",
+          "Must not maintain sustained flight over the vehicle."
+        ],
+        "answerIndex": 2
+      },
+      "curated": {
+        "id": "regulations_0060",
+        "prompt": "During a Category 1 operation over occupied moving vehicles outside a closed- or restricted-access site, the small unmanned aircraft",
+        "choices": [
+          "May not fly directly over the vehicle.",
+          "May maintain sustained flight over the vehicle for any extended period of time.",
+          "Must not maintain sustained flight over the vehicle."
+        ],
+        "answerIndex": 2,
+        "sourceCode": "1274",
+        "bank": "Regulations",
+        "figures": []
+      }
+    },
+    {
+      "id": "regulations_0064",
+      "disposition": "duplicate",
+      "reason": "Duplicate of regulations_0048; excluded from sampling.",
+      "changes": [],
+      "original": {
+        "id": "regulations_0064",
+        "prompt": "1054 In accordance with 14 CFR Part 107, you may operate an sUAS from a moving vehicle when no property is carried for compensation or hire",
+        "choices": [
+          "Over suburban areas.",
+          "Over a parade or other social event.",
+          "Over a sparsely populated area."
+        ],
+        "answerIndex": 2
+      },
+      "curated": {
+        "id": "regulations_0064",
+        "prompt": "In accordance with 14 CFR Part 107, you may operate an sUAS from a moving vehicle when no property is carried for compensation or hire",
+        "choices": [
+          "Over suburban areas.",
+          "Over a parade or other social event.",
+          "Over a sparsely populated area."
+        ],
+        "answerIndex": 2,
+        "sourceCode": "1054",
+        "bank": "Regulations",
+        "figures": []
+      }
+    },
+    {
+      "id": "regulations_0067",
+      "disposition": "held",
+      "reason": "Night-lighting question has no clearly supported safe answer among the supplied options.",
+      "changes": [],
+      "original": {
+        "id": "regulations_0067",
+        "prompt": "1352 What should you do if there are high intensity pulsating lights in the area during a night flight?",
+        "choices": [
+          "Determine if they are turned on full strength",
+          "Ask them to be turned off",
+          "Use first person view (FPV)"
+        ],
+        "answerIndex": 0
+      },
+      "curated": {
+        "id": "regulations_0067",
+        "prompt": "What should you do if there are high intensity pulsating lights in the area during a night flight?",
+        "choices": [
+          "Determine if they are turned on full strength",
+          "Ask them to be turned off",
+          "Use first person view (FPV)"
+        ],
+        "answerIndex": 0,
+        "sourceCode": "1352",
+        "bank": "Regulations",
+        "figures": []
+      }
+    },
+    {
+      "id": "regulations_0070",
+      "disposition": "duplicate",
+      "reason": "Duplicate of regulations_0047; excluded from sampling.",
+      "changes": [
+        {
+          "reason": "Duplicate of the scoped non-participant planning question.",
+          "source": "https://www.faa.gov/uas/commercial_operators/operations_over_people"
+        }
+      ],
+      "original": {
+        "id": "regulations_0070",
+        "prompt": "1050 Which action is specifically required of the remote pilot prior to each flight?",
+        "choices": [
+          "Check the aircraft logbooks to ensure maintenance is current.",
+          "Make a plan to keep non-participants clear, indoors, or under cover.",
+          "Identify a non-participant who will be near the sUAS operation to help with see-and-avoid procedures."
+        ],
+        "answerIndex": 1
+      },
+      "curated": {
+        "id": "regulations_0070",
+        "prompt": "For a flight that will not use an applicable category or waiver for operations over people, which plan protects non-participants?",
+        "choices": [
+          "Check the aircraft logbooks to ensure maintenance is current.",
+          "Make a plan to keep non-participants clear, indoors, or under cover.",
+          "Identify a non-participant who will be near the sUAS operation to help with see-and-avoid procedures."
+        ],
+        "answerIndex": 1,
+        "sourceCode": "1050",
+        "bank": "Regulations",
+        "figures": []
+      }
+    },
+    {
+      "id": "regulations_0071",
+      "disposition": "included",
+      "reason": "",
+      "changes": [
+        {
+          "reason": "Weight is one requirement, not complete Category 1 eligibility.",
+          "source": "https://www.faa.gov/uas/commercial_operators/operations_over_people"
+        }
+      ],
+      "original": {
+        "id": "regulations_0071",
+        "prompt": "1052 To conduct Category 1 operations, a remote pilot in command must use a small unmanned aircraft that weighs",
+        "choices": [
+          "0.55 pounds or less.",
+          "0.65 pounds or less.",
+          "0.75 pounds or less."
+        ],
+        "answerIndex": 0
+      },
+      "curated": {
+        "id": "regulations_0071",
+        "prompt": "What is the maximum aircraft weight, including everything on board or attached, for Category 1 operations over people?",
+        "choices": [
+          "0.55 pounds or less.",
+          "0.65 pounds or less.",
+          "0.75 pounds or less."
+        ],
+        "answerIndex": 0,
+        "sourceCode": "1052",
+        "bank": "Regulations",
+        "figures": []
+      }
+    },
+    {
+      "id": "regulations_0074",
+      "disposition": "held",
+      "reason": "Responsibility for markings/declaration wording conflates applicant and operating responsibilities.",
+      "changes": [],
+      "original": {
+        "id": "regulations_0074",
+        "prompt": "1355 Who is responsible for making sure the sUAS is marked and listed on the declaration of compliance?",
+        "choices": [
+          "The person who submits the declaration of compliance for the sUAS.",
+          "Owner or operator.",
+          "Remote PIC"
+        ],
+        "answerIndex": 0
+      },
+      "curated": {
+        "id": "regulations_0074",
+        "prompt": "Who is responsible for making sure the sUAS is marked and listed on the declaration of compliance?",
+        "choices": [
+          "The person who submits the declaration of compliance for the sUAS.",
+          "Owner or operator.",
+          "Remote PIC"
+        ],
+        "answerIndex": 0,
+        "sourceCode": "1355",
+        "bank": "Regulations",
+        "figures": []
+      }
+    },
+    {
+      "id": "regulations_0075",
+      "disposition": "included",
+      "reason": "",
+      "changes": [
+        {
+          "reason": "State sparse population and clarify the question covers the moving-vehicle rule only.",
+          "source": "https://www.ecfr.gov/current/title-14/chapter-I/subchapter-F/part-107#p-107.25"
+        }
+      ],
+      "original": {
+        "id": "regulations_0075",
+        "prompt": "1053 A professional wildlife photographer operates an sUAS from a moving truck to capture aerial images of migrating birds in remote wetlands. The driver of the truck does not serve any crewmember role in the operation. Is this sUAS operation in compliance with 14 CFR Part 107?",
+        "choices": [
+          "Compliant with Part 107.",
+          "Not compliant with Part 107.",
+          "Not compliant with state and local traffic laws."
+        ],
+        "answerIndex": 0
+      },
+      "curated": {
+        "id": "regulations_0075",
+        "prompt": "A wildlife photographer flies from a moving truck over sparsely populated wetlands. A separate driver performs no flight duties, and the aircraft carries no other person’s property for compensation or hire. Does this satisfy the moving-vehicle restriction in 107.25?",
+        "choices": [
+          "Yes.",
+          "No, land vehicles are always prohibited.",
+          "No, a visual observer must drive the truck."
+        ],
+        "answerIndex": 0,
+        "sourceCode": "1053",
+        "bank": "Regulations",
+        "figures": []
+      }
+    },
+    {
+      "id": "operations_0005",
+      "disposition": "included",
+      "reason": "",
+      "changes": [
+        {
+          "reason": "Correct spelling, punctuation, spacing, or capitalization."
+        }
+      ],
+      "original": {
+        "id": "operations_0005",
+        "prompt": "1215 While preparing your sUAS for flight, you notice that one of the propeller blades has a nick. What action should you take?",
+        "choices": [
+          "If the nick is less than ¼ the length of the blade, it is safe to operate without replacement.",
+          "Remove and replace the propellor, consult manufacturer guidelines for repair, if any.",
+          "Repair by filling the nick to a smooth curve or with adhesive approved for use on the propeller material."
+        ],
+        "answerIndex": 1
+      },
+      "curated": {
+        "id": "operations_0005",
+        "prompt": "While preparing your sUAS for flight, you notice that one of the propeller blades has a nick. What action should you take?",
+        "choices": [
+          "If the nick is less than ¼ the length of the blade, it is safe to operate without replacement.",
+          "Remove and replace the propeller, consult manufacturer guidelines for repair, if any.",
+          "Repair by filling the nick to a smooth curve or with adhesive approved for use on the propeller material."
+        ],
+        "answerIndex": 1,
+        "sourceCode": "1215",
+        "bank": "Operations",
+        "figures": []
+      }
+    },
+    {
+      "id": "operations_0009",
+      "disposition": "held",
+      "reason": "Radio example suggests requesting Part 107 airspace authorization by tower radio; needs a clearly scoped communications exercise.",
+      "changes": [
+        {
+          "reason": "Correct spelling, punctuation, spacing, or capitalization."
+        }
+      ],
+      "original": {
+        "id": "operations_0009",
+        "prompt": "1218 When flying HAWK N666CB, the proper phraseology for initial contact with Whitted ATC tower is",
+        "choices": [
+          "”Whitted Tower, HAWK SIX SIX SIX CHARLIE BRAVO, five NM west of the airport, request permission to enter Class D airspace for unmanned aircraft operations below four hundred AGL, three NM west of the airport”",
+          "“Whitted, HAWK SIX SIX SIX CEE BEE, requesting to operate within Class D, west of the field”",
+          "“Whitted tower, Triple Six Charlie Bravo, five NM west, operating in Class D below four hundred AGL west of the airport”"
+        ],
+        "answerIndex": 0
+      },
+      "curated": {
+        "id": "operations_0009",
+        "prompt": "When flying HAWK N666CB, the proper phraseology for initial contact with Whitted ATC tower is",
+        "choices": [
+          "“Whitted Tower, HAWK SIX SIX SIX CHARLIE BRAVO, five NM west of the airport, request permission to enter Class D airspace for unmanned aircraft operations below four hundred AGL, three NM west of the airport”",
+          "“Whitted, HAWK SIX SIX SIX CEE BEE, requesting to operate within Class D, west of the field”",
+          "“Whitted tower, Triple Six Charlie Bravo, five NM west, operating in Class D below four hundred AGL west of the airport”"
+        ],
+        "answerIndex": 0,
+        "sourceCode": "1218",
+        "bank": "Operations",
+        "figures": []
+      }
+    },
+    {
+      "id": "operations_0010",
+      "disposition": "included",
+      "reason": "",
+      "changes": [
+        {
+          "reason": "Correct spelling, punctuation, spacing, or capitalization."
+        }
+      ],
+      "original": {
+        "id": "operations_0010",
+        "prompt": "1219 The correct method of stating 4,500 feet MSL to ATC is is",
+        "choices": [
+          "”FOUR THOUSAND FIVE HUNDRED.”",
+          "“FOUR POINT FIVE.”",
+          "“FOUR-FIVE HUNDRED FEET MSL.”"
+        ],
+        "answerIndex": 0
+      },
+      "curated": {
+        "id": "operations_0010",
+        "prompt": "The correct method of stating 4,500 feet MSL to ATC is",
+        "choices": [
+          "“FOUR THOUSAND FIVE HUNDRED.”",
+          "“FOUR POINT FIVE.”",
+          "“FOUR-FIVE HUNDRED FEET MSL.”"
+        ],
+        "answerIndex": 0,
+        "sourceCode": "1219",
+        "bank": "Operations",
+        "figures": []
+      }
+    },
+    {
+      "id": "operations_0011",
+      "disposition": "held",
+      "reason": "Best interference mitigation depends on equipment and site; spectral-analyzer answer needs an operational context.",
+      "changes": [],
+      "original": {
+        "id": "operations_0011",
+        "prompt": "1233 What is the best way for the remote PIC to minimize the risk of radio frequency interference during sUAS operations?",
+        "choices": [
+          "Never transmit on aviation frequency ranges during flight operations.",
+          "Monitor frequency use with a spectral analyzer.",
+          "Avoid the use of cellphones in the vicinity of the control station."
+        ],
+        "answerIndex": 1
+      },
+      "curated": {
+        "id": "operations_0011",
+        "prompt": "What is the best way for the remote PIC to minimize the risk of radio frequency interference during sUAS operations?",
+        "choices": [
+          "Never transmit on aviation frequency ranges during flight operations.",
+          "Monitor frequency use with a spectral analyzer.",
+          "Avoid the use of cellphones in the vicinity of the control station."
+        ],
+        "answerIndex": 1,
+        "sourceCode": "1233",
+        "bank": "Operations",
+        "figures": []
+      }
+    },
+    {
+      "id": "operations_0012",
+      "disposition": "included",
+      "reason": "",
+      "changes": [
+        {
+          "reason": "Correct spelling, punctuation, spacing, or capitalization."
+        }
+      ],
+      "original": {
+        "id": "operations_0012",
+        "prompt": "1220 (Refer to Figure 20, area 3.) What is the recommended communications procedure for a landing at Currituck County Airport?",
+        "choices": [
+          "Transmit intentions on 122.9 MHz when 10 miles out and give position reports in the traffic pattern.",
+          "Contract Elizabeth City FSS for airport advisory service.",
+          "Contact New Bern FSS for area traffic information."
+        ],
+        "answerIndex": 0
+      },
+      "curated": {
+        "id": "operations_0012",
+        "prompt": "(Refer to Figure 20, area 3.) What is the recommended communications procedure for a landing at Currituck County Airport?",
+        "choices": [
+          "Transmit intentions on 122.9 MHz when 10 miles out and give position reports in the traffic pattern.",
+          "Contact Elizabeth City FSS for airport advisory service.",
+          "Contact New Bern FSS for area traffic information."
+        ],
+        "answerIndex": 0,
+        "sourceCode": "1220",
+        "bank": "Operations",
+        "figures": [
+          "20"
+        ]
+      }
+    },
+    {
+      "id": "operations_0014",
+      "disposition": "included",
+      "reason": "",
+      "changes": [
+        {
+          "reason": "Monitor CTAF at a non-towered airport, not an approach facility by default.",
+          "source": "https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap4_section_1.html"
+        }
+      ],
+      "original": {
+        "id": "operations_0014",
+        "prompt": "1222 As standard operating practice, all inbound and local traffic approaching or near an airport without a control tower should continually monitor the approach facility from a distance of",
+        "choices": [
+          "25 miles",
+          "20 miles",
+          "10 miles"
+        ],
+        "answerIndex": 2
+      },
+      "curated": {
+        "id": "operations_0014",
+        "prompt": "As standard operating practice, manned aircraft approaching a non-towered airport should monitor and communicate on the appropriate CTAF starting how far from the airport?",
+        "choices": [
+          "25 miles",
+          "20 miles",
+          "10 miles"
+        ],
+        "answerIndex": 2,
+        "sourceCode": "1222",
+        "bank": "Operations",
+        "figures": []
+      }
+    },
+    {
+      "id": "operations_0016",
+      "disposition": "included",
+      "reason": "",
+      "changes": [
+        {
+          "reason": "Link both Figure 22 and Figure 31, including answer review."
+        }
+      ],
+      "original": {
+        "id": "operations_0016",
+        "prompt": "1224 (Refer to Figure 22 area 2; and Figure 31.) At Coeur D’Alene, which frequency should be used as a Common Traffic Advisory Frequency (CTAF) to monitor airport traffic?",
+        "choices": [
+          "122.05 MHz.",
+          "135.075 MHz.",
+          "122.8 MHz."
+        ],
+        "answerIndex": 2
+      },
+      "curated": {
+        "id": "operations_0016",
+        "prompt": "(Refer to Figure 22 area 2; and Figure 31.) At Coeur D’Alene, which frequency should be used as a Common Traffic Advisory Frequency (CTAF) to monitor airport traffic?",
+        "choices": [
+          "122.05 MHz.",
+          "135.075 MHz.",
+          "122.8 MHz."
+        ],
+        "answerIndex": 2,
+        "sourceCode": "1224",
+        "bank": "Operations",
+        "figures": [
+          "22",
+          "31"
+        ]
+      }
+    },
+    {
+      "id": "operations_0029",
+      "disposition": "included",
+      "reason": "",
+      "changes": [
+        {
+          "reason": "Correct spelling, punctuation, spacing, or capitalization."
+        }
+      ],
+      "original": {
+        "id": "operations_0029",
+        "prompt": "1236 What is the proper response by the remote PIC if experiencing a lost link situation?",
+        "choices": [
+          "Notify all available crew and ATC (if applicable) while executing the briefed lost link procedure.",
+          "Wait for the unit to reestablish link while notifying law enforcement of possible dangers to nonparticipants.",
+          "Turning the control station off and ten back on to attempt to reestablish the link."
+        ],
+        "answerIndex": 0
+      },
+      "curated": {
+        "id": "operations_0029",
+        "prompt": "What is the proper response by the remote PIC if experiencing a lost link situation?",
+        "choices": [
+          "Notify all available crew and ATC (if applicable) while executing the briefed lost link procedure.",
+          "Wait for the unit to reestablish link while notifying law enforcement of possible dangers to nonparticipants.",
+          "Turning the control station off and then back on to attempt to reestablish the link."
+        ],
+        "answerIndex": 0,
+        "sourceCode": "1236",
+        "bank": "Operations",
+        "figures": []
+      }
+    },
+    {
+      "id": "operations_0039",
+      "disposition": "included",
+      "reason": "",
+      "changes": [
+        {
+          "reason": "Correct spelling, punctuation, spacing, or capitalization."
+        }
+      ],
+      "original": {
+        "id": "operations_0039",
+        "prompt": "1246 Identify the hazardous attitude of characteristic a remote pilot in command displays while taking risks in order to impress others?",
+        "choices": [
+          "Impulsivity",
+          "Invulnerability",
+          "Machoism"
+        ],
+        "answerIndex": 2
+      },
+      "curated": {
+        "id": "operations_0039",
+        "prompt": "Identify the hazardous attitude or characteristic a remote pilot in command displays while taking risks in order to impress others?",
+        "choices": [
+          "Impulsivity",
+          "Invulnerability",
+          "Macho"
+        ],
+        "answerIndex": 2,
+        "sourceCode": "1246",
+        "bank": "Operations",
+        "figures": []
+      }
+    },
+    {
+      "id": "operations_0040",
+      "disposition": "included",
+      "reason": "",
+      "changes": [
+        {
+          "reason": "Correct spelling, punctuation, spacing, or capitalization."
+        }
+      ],
+      "original": {
+        "id": "operations_0040",
+        "prompt": "1247 You have been hired as a remote pilot-in-command by a local TV news station to film breaking news with a small unmanned aircraft. You expressed a safety concern and the station manager has instructed you to “fly first, ask questions later.” What type of hazardous attitude does this attitude represent?",
+        "choices": [
+          "Invulnerability.",
+          "Impulsivity.",
+          "Machoism."
+        ],
+        "answerIndex": 1
+      },
+      "curated": {
+        "id": "operations_0040",
+        "prompt": "You have been hired as a remote pilot-in-command by a local TV news station to film breaking news with a small unmanned aircraft. You expressed a safety concern and the station manager has instructed you to “fly first, ask questions later.” What type of hazardous attitude does this attitude represent?",
+        "choices": [
+          "Invulnerability.",
+          "Impulsivity.",
+          "Macho."
+        ],
+        "answerIndex": 1,
+        "sourceCode": "1247",
+        "bank": "Operations",
+        "figures": []
+      }
+    },
+    {
+      "id": "operations_0046",
+      "disposition": "included",
+      "reason": "",
+      "changes": [
+        {
+          "reason": "Correct spelling, punctuation, spacing, or capitalization."
+        }
+      ],
+      "original": {
+        "id": "operations_0046",
+        "prompt": "1253 Which statement is not correct concerning crew resources management in sUAS operations?",
+        "choices": [
+          "Crewmembers cannot, under any circumstances, challenge the decisions of the Remote PIC.",
+          "Individuals who are exhibiting signs of hazardous attitudes should be approached about the issue.",
+          "The remote PIC and all crewmembers should communicate any observed hazards or concerns to one another."
+        ],
+        "answerIndex": 0
+      },
+      "curated": {
+        "id": "operations_0046",
+        "prompt": "Which statement is not correct concerning crew resource management in sUAS operations?",
+        "choices": [
+          "Crewmembers cannot, under any circumstances, challenge the decisions of the Remote PIC.",
+          "Individuals who are exhibiting signs of hazardous attitudes should be approached about the issue.",
+          "The remote PIC and all crewmembers should communicate any observed hazards or concerns to one another."
+        ],
+        "answerIndex": 0,
+        "sourceCode": "1253",
+        "bank": "Operations",
+        "figures": []
+      }
+    },
+    {
+      "id": "operations_0047",
+      "disposition": "included",
+      "reason": "",
+      "changes": [
+        {
+          "reason": "Correct spelling, punctuation, spacing, or capitalization."
+        }
+      ],
+      "original": {
+        "id": "operations_0047",
+        "prompt": "1284 A remote pilot-in-command and a visual observer define their roles and responsibilities prior to and during the operation of a small unmanned aircraft. This is a good use of",
+        "choices": [
+          "crew resource management.",
+          "authoritarian resource management.",
+          "single-pilot resource management."
+        ],
+        "answerIndex": 0
+      },
+      "curated": {
+        "id": "operations_0047",
+        "prompt": "A remote pilot-in-command and a visual observer define their roles and responsibilities prior to and during the operation of a small unmanned aircraft. This a good use of",
+        "choices": [
+          "crew resource management.",
+          "authoritarian resource management.",
+          "single-pilot resource management."
+        ],
+        "answerIndex": 0,
+        "sourceCode": "1284",
+        "bank": "Operations",
+        "figures": []
+      }
+    },
+    {
+      "id": "operations_0052",
+      "disposition": "duplicate",
+      "reason": "Duplicate of operations_0050; excluded from sampling.",
+      "changes": [],
+      "original": {
+        "id": "operations_0052",
+        "prompt": "1315 The accurate perception and understanding of all the risk element factors and conditions is",
+        "choices": [
+          "Situational awareness.",
+          "Judgment.",
+          "Aeronautical decision making."
+        ],
+        "answerIndex": 0
+      },
+      "curated": {
+        "id": "operations_0052",
+        "prompt": "The accurate perception and understanding of all the risk element factors and conditions is",
+        "choices": [
+          "Situational awareness.",
+          "Judgment.",
+          "Aeronautical decision making."
+        ],
+        "answerIndex": 0,
+        "sourceCode": "1315",
+        "bank": "Operations",
+        "figures": []
+      }
+    },
+    {
+      "id": "operations_0053",
+      "disposition": "duplicate",
+      "reason": "Duplicate of loading_0031; excluded from sampling.",
+      "changes": [
+        {
+          "reason": "CSV marks acute/chronic with weight 1; JS incorrectly keyed the first choice. Also a duplicate.",
+          "source": "https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/remote_pilot_study_guide.pdf"
+        }
+      ],
+      "original": {
+        "id": "operations_0053",
+        "prompt": "1257 Fatigue can be either",
+        "choices": [
+          "Physiological or psychological",
+          "Physical or mental",
+          "Acute or chronic"
+        ],
+        "answerIndex": 0
+      },
+      "curated": {
+        "id": "operations_0053",
+        "prompt": "By duration, fatigue is classified as which two types?",
+        "choices": [
+          "Physiological or psychological",
+          "Physical or mental",
+          "Acute or chronic"
+        ],
+        "answerIndex": 2,
+        "sourceCode": "1257",
+        "bank": "Operations",
+        "figures": []
+      }
+    },
+    {
+      "id": "operations_0054",
+      "disposition": "duplicate",
+      "reason": "Duplicate of loading_0037; excluded from sampling.",
+      "changes": [
+        {
+          "reason": "Original wording reversed the cause and effect of hyperventilation.",
+          "source": "https://www.faa.gov/sites/faa.gov/files/regulations_policies/handbooks_manuals/aviation/remote_pilot_study_guide.pdf"
+        }
+      ],
+      "original": {
+        "id": "operations_0054",
+        "prompt": "1273 Which would most likely result in hyperventilation?",
+        "choices": [
+          "Insufficient oxygen.",
+          "Excessive carbon monoxide.",
+          "Insufficient carbon dioxide."
+        ],
+        "answerIndex": 2
+      },
+      "curated": {
+        "id": "operations_0054",
+        "prompt": "Excessive breathing during hyperventilation can produce which change in the blood?",
+        "choices": [
+          "Insufficient oxygen.",
+          "Excessive carbon monoxide.",
+          "Insufficient carbon dioxide."
+        ],
+        "answerIndex": 2,
+        "sourceCode": "1273",
+        "bank": "Operations",
+        "figures": []
+      }
+    }
+  ]
+}

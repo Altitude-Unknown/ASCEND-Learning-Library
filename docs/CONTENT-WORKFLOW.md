@@ -19,7 +19,10 @@ Resource pages present their Markdown explanation before supporting files.
 `delivery: web` is a complete resource even without a downloadable file. The
 Part 107 pages are independent reference topics; their historic filenames,
 URLs, and internal collection name remain unchanged. The existing practice-app
-connection remains a future external resource, not a new quiz system.
+is now integrated at `/part107/practice-tests/` at the owner's request. This
+optional Part 107 tool grades a session in browser memory only; no grades,
+accounts, or learner records are stored. It does not add assessment features
+to other resources. See `docs/PRACTICE-TEST-REVIEW.md` for question curation.
 
 Resource metadata supports optional provenance and review information. A shared
 taxonomy adds subjects, platforms, activities, and more resource types without

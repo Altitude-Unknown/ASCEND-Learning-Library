@@ -1,7 +1,7 @@
 ---
 id: part107-app
 title: Part 107 Practice-Test Generator
-description: The future connection point for the existing Part 107 practice-test application.
+description: Optional practice quizzes with five topic banks, mixed questions, linked figures, and answer review.
 topic: part107
 kind: Web application
 audience:
@@ -9,21 +9,29 @@ audience:
 - Faculty Mentors
 - Pod Leads
 actionLabel: Open practice tests
-status: Planned
+status: Available
 permalink: /resources/part107-app/
-updated: '2026-09-23'
-externalUrl: ''
-downloadUrl: ''
-delivery: external
+updated: '2026-09-24'
+delivery: web
+origin: adapted
+version: '1.0'
 subjects:
 - UAS
 - Field Operations & Safety
 ---
 
-## About this resource
+## Practice at your own pace
 
-The future connection point for the existing Part 107 practice-test application. This is a prototype record, not an available educational material.
+[Open the Part 107 practice tests](/part107/practice-tests/#practice-app).
 
-## What to expect
+Choose 10 questions from one topic, all questions in that topic, or a mixed set of 50 questions. The five banks cover airspace, loading and performance, weather, regulations, and operations. Figures are available alongside the questions and again during answer review.
 
-A reviewed description, author attribution, usage license, and accessible files will be added before this resource is made available. Its landing-page address will remain the same when the underlying file is added or replaced.
+## How it works
+
+Choose an answer for each question, then select **Check answers**. The review shows your score and the correct answer for each missed question. No account is required; answers and scores are not saved or sent to a server.
+
+## About the material
+
+Adapted from the project owner’s supplied Whisky Alpha Part 107 Test Prep site and CSV question banks. Structural and editorial review completed September 24, 2026; known ambiguous items are withheld from scoring. These are practice materials, not official FAA examination questions or a certification result. Chart figures are historical testing examples and must not be used for navigation.
+
+The quiz requires JavaScript. Weather-report figures also include text transcripts. Detailed sectional-chart interpretation still requires visual access to the chart; the figure labels do not provide a complete nonvisual equivalent.

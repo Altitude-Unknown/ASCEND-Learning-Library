@@ -11,7 +11,7 @@
     "build": "eleventy && pagefind --site _site",
     "dev": "eleventy --serve",
     "preview": "node scripts/preview.mjs",
-    "check": "node scripts/check-site.mjs && node scripts/check-materials.mjs && node scripts/check-resource-templates.mjs",
+    "check": "node scripts/check-site.mjs && node scripts/check-materials.mjs && node scripts/check-resource-templates.mjs && node scripts/check-practice.mjs",
     "test": "npm run build && npm run check",
     "test:browser": "playwright test"
   },

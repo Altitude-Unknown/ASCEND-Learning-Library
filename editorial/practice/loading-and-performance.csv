@@ -1,0 +1,352 @@
+NewQuestion,MC,
+Title,loading_0001,
+QuestionText,"1186 Before each flight, the remote PIC must ensure that",
+Points,1,
+Difficulty,1,
+Option,0,ATC has granted clearance.
+Option,0,the site supervisor has approved the flight.
+Option,100,objects carried in the sUAS are secure
+NewQuestion,MC,
+Title,loading_0002,
+QuestionText,1300 What purpose does a rudder perform on an sUAS airplane?,
+Points,1,
+Difficulty,1,
+Option,100,The rudder controls yaw.
+Option,0,The rudder controls bank.
+Option,0,The rudder controls pitch.
+NewQuestion,MC,
+Title,loading_0003,
+QuestionText,1187 You are operating an sUAS that does not have GPS or an installed ground speed limiter. How can you determine the speed you are operating?,
+Points,1,
+Difficulty,1,
+Option,100,Dead reckoning
+Option,0,Pilotage
+Option,0,Wind triangle
+NewQuestion,MC,
+Title,loading_0004,
+QuestionText,1188 How can a remote pilot determine the altitude of the terrain and structures where the flight will be conducted?,
+Points,1,
+Difficulty,1,
+Option,100,Sectional chart.
+Option,0,Manufacturer’s data.
+Option,0,Road Maps.
+NewQuestion,MC,
+Title,loading_0005,
+QuestionText,1189 You are operating an sUAS that does not have GPS or an installed altimeter. How can you determine the altitude you are operating?,
+Points,1,
+Difficulty,1,
+Option,100,Gaining a visual perspective of what 400 feet looks like on the ground before a flight.
+Option,0,Operating a second sUAS that has an altimeter to gain a visual perspective of 400 feet from the air.
+Option,0,Operating the sUAS in close proximity of a tower known to be 400 feet tall.
+NewQuestion,MC,
+Title,loading_0006,
+QuestionText,"1190 When loading cameras or other equipment on an sUAS, mount the items in a manner that",
+Points,1,
+Difficulty,1,
+Option,0,Is visible to the visual observer or other crew members.
+Option,100,Does not adversely affect the center of gravity.
+Option,0,Can be easily removed without the use of tools.
+NewQuestion,MC,
+Title,loading_0007,
+QuestionText,"1191 To ensure that the unmanned aircraft center of gravity (CG) limits are not exceeded, follow the aircraft loading instructions specified in the",
+Points,1,
+Difficulty,1,
+Option,0,Aircraft Weight and Balance Handbook.
+Option,100,Pilot’s Operating Handbook or sUAS Flight Manual.
+Option,0,Aeronautical Information Manual (AIM).
+NewQuestion,MC,
+Title,loading_0008,
+QuestionText,1192 What could be a consequence of operating a small unmanned aircraft above its maximum allowable weight?,
+Points,1,
+Difficulty,1,
+Option,100,Shorter endurance.
+Option,0,Increased maneuverability.
+Option,0,Faster speed.
+NewQuestion,MC,
+Title,loading_0009,
+QuestionText,"1193 When operating an aircraft, the Remote PIC is responsible for using",
+Points,1,
+Difficulty,1,
+Option,100,The most current weight and balance data.
+Option,0,Weight and balance data from the factory.
+Option,0,Recent weight and balance data.
+NewQuestion,MC,
+Title,loading_0010,
+QuestionText,1194 Which of the following is true regarding weight and balance of small unmanned aircraft?,
+Points,1,
+Difficulty,1,
+Option,0,CG cannot change during flight.
+Option,0,Lateral CG is not important to small unmanned aircraft operations.
+Option,100,Operations outside weight and balance limitations may result in loss of control.
+NewQuestion,MC,
+Title,loading_0011,
+QuestionText,1293 A UAS loaded with the most rearward center of gravity is,
+Points,1,
+Difficulty,1,
+Option,100,Less stable at all speeds.
+Option,0,More stable at slow speeds.
+Option,0,More stable at fast speeds.
+NewQuestion,MC,
+Title,loading_0012,
+QuestionText,"1195 When operating an unmanned aircraft, the remote pilot-in-command should consider that the load factor on the wings or rotors may be increased anytime",
+Points,1,
+Difficulty,1,
+Option,100,the aircraft is subjected to maneuvers other than straight and level flight.
+Option,0,the CG is shifted rearward to the aft CG limit.
+Option,0,the gross weight is reduced.
+NewQuestion,MC,
+Title,loading_0013,
+QuestionText,1199 The amount of excess load that can be imposed on the wing of an airplane depends upon the,
+Points,1,
+Difficulty,1,
+Option,0,Position of the CG
+Option,100,Speed of the airplane
+Option,0,Abruptness at which the load is applied
+NewQuestion,MC,
+Title,loading_0014,
+QuestionText,1200 Which basic flight maneuver increases the load factor on an sUAS as compared to straight-and-level flight?,
+Points,1,
+Difficulty,1,
+Option,0,Climbs
+Option,100,Turns
+Option,0,Stalls
+NewQuestion,MC,
+Title,loading_0015,
+QuestionText,1201 The term “angle of attack” is defined as the angle,
+Points,1,
+Difficulty,1,
+Option,100,between the wing chord line and the relative wind.
+Option,0,between the airplane’s climb angle and the horizon.
+Option,0,formed by the longitudinal axis of the airplane and the chord line of the wing.
+NewQuestion,MC,
+Title,loading_0016,
+QuestionText,1202 The angle of attack at which an airfoil stalls will,
+Points,1,
+Difficulty,1,
+Option,0,increase if the CG is moved forward.
+Option,100,remain the same regardless of gross weight.
+Option,0,change with an increase in gross weight.
+NewQuestion,MC,
+Title,loading_0017,
+QuestionText,"1203 A stall occurs when the smooth airflow over the unmanned aircraft’s wing/propeller(s) is disrupted, and the lift degenerates rapidly. This caused when the wing/propeller(s)",
+Points,1,
+Difficulty,1,
+Option,0,exceeds maximum allowable operating weight.
+Option,0,exceeds the maximum speed.
+Option,100,exceeds its critical angle of attack.
+NewQuestion,MC,
+Title,loading_0018,
+QuestionText,1204 An increase in load factor will cause an unmanned aircraft to,
+Points,1,
+Difficulty,1,
+Option,100,stall at a higher airspeed.
+Option,0,have a tendency to spin.
+Option,0,be more difficult to control.
+NewQuestion,MC,
+Title,loading_0019,
+QuestionText,"1314 In a 45° banking turn, a small unmanned aircraft will",
+Points,1,
+Difficulty,1,
+Option,0,be more susceptible to spinning.
+Option,100,stall at a higher airspeed.
+Option,0,stall at a lower airspeed.
+NewQuestion,MC,
+Title,loading_0020,
+QuestionText,"1205 According to 14 CFR Part 107, who is responsible for determining the performance of a small unmanned aircraft?",
+Points,1,
+Difficulty,1,
+Option,100,Remote pilot-in-command.
+Option,0,Manufacturer.
+Option,0,Owner or operator.
+NewQuestion,MC,
+Title,loading_0021,
+QuestionText,1206 What effect does an uphill terrain slope have on launch performance?,
+Points,1,
+Difficulty,1,
+Option,0,Increases launch speed.
+Option,100,Increases launch distance.
+Option,0,Decreases launch distance.
+NewQuestion,MC,
+Title,loading_0022,
+QuestionText,"1207 The most critical conditions of launch performance are the result of some combination of high gross weight, altitude, temperature, and",
+Points,1,
+Difficulty,1,
+Option,100,unfavorable wind.
+Option,0,obstacles surrounding the launch site.
+Option,0,powerplant systems.
+NewQuestion,MC,
+Title,loading_0023,
+QuestionText,1208 Maximum endurance is obtained at the point of minimum power to maintain the aircraft,
+Points,1,
+Difficulty,1,
+Option,100,"in steady, level flight."
+Option,0,in a long range descent.
+Option,0,at its slowest possible indicated airspeed.
+NewQuestion,MC,
+Title,loading_0024,
+QuestionText,"1209 When range and economy of operation are the principal goals, the remote pilot must ensure that the sUAS will be operated at the recommended",
+Points,1,
+Difficulty,1,
+Option,0,Specific endurance
+Option,100,Long-range cruise performance
+Option,0,Equivalent speed
+NewQuestion,MC,
+Title,loading_0025,
+QuestionText,1210 What is the best source for sUAS performance data and information?,
+Points,1,
+Difficulty,1,
+Option,100,Manufacturer publications
+Option,0,Pilot reports
+Option,0,Estimates based upon similar systems.
+NewQuestion,MC,
+Title,loading_0026,
+QuestionText,"1196 (Refer to Figure 2.) If an sUAS weighs 10 pounds, what approximate weight would the sUAS structure be required to support during a 60 degree banked turn while maintaining altitude?",
+Points,1,
+Difficulty,1,
+Option,0,10.15 pounds
+Option,0,30 pounds
+Option,100,20 pounds
+NewQuestion,MC,
+Title,loading_0027,
+QuestionText,"1254 Who is responsible for determining whether a pilot is fit to fly for a particular flight, even though he or she holds a current medical certificate?",
+Points,1,
+Difficulty,1,
+Option,0,The FAA.
+Option,0,The medical examiner.
+Option,100,The pilot.
+NewQuestion,MC,
+Title,loading_0028,
+QuestionText,"1255 You are a remote pilot-in-command for a co-op energy service provider. You plan to use your unmanned aircraft to inspect powerlines in the remote area 15 hours away from your home office. After the drive, fatigue impacts your abilities to complete your assignment on time. What kind of fatigue is this?",
+Points,1,
+Difficulty,1,
+Option,0,Chronic fatigue.
+Option,100,Acute fatigue.
+Option,0,Exhaustion.
+NewQuestion,MC,
+Title,loading_0029,
+QuestionText,1302 What can affect your performance?,
+Points,1,
+Difficulty,1,
+Option,0,Prescription medications.
+Option,0,Over-the-counter medications.
+Option,100,Over-the-counter and prescribed medications.
+NewQuestion,MC,
+Title,loading_0031,
+QuestionText,"1257 By duration, fatigue is classified as which two types?",
+Points,1,
+Difficulty,1,
+Option,0,Physiological or psychological
+Option,0,Physical or mental
+Option,100,Acute or chronic
+NewQuestion,MC,
+Title,loading_0032,
+QuestionText,1258 Fatigue is one of the most treacherous hazards to flight safety,
+Points,1,
+Difficulty,1,
+Option,0,because it results in slow performance.
+Option,100,as it may not be apparent until serious errors are made.
+Option,0,as it may be a function of physical robustness or mental acuity.
+NewQuestion,MC,
+Title,loading_0033,
+QuestionText,"1259 When a stressful situation is encountered in flight, an abnormal increase in the volume of air breathed in and out can cause a condition known as",
+Points,1,
+Difficulty,1,
+Option,100,hyperventilation.
+Option,0,aerosinusitis.
+Option,0,aerotitis.
+NewQuestion,MC,
+Title,loading_0034,
+QuestionText,1260 Which would most likely result in hyperventilation?,
+Points,1,
+Difficulty,1,
+Option,100,"Emotional tension, anxiety, or fear."
+Option,0,The excessive consumption of alcohol.
+Option,0,An extremely slow rate of breathing and insufficient oxygen.
+NewQuestion,MC,
+Title,loading_0037,
+QuestionText,1273 Excessive breathing during hyperventilation can produce which change in the blood?,
+Points,1,
+Difficulty,1,
+Option,0,Insufficient oxygen.
+Option,0,Excessive carbon monoxide.
+Option,100,Insufficient carbon dioxide.
+NewQuestion,MC,
+Title,loading_0038,
+QuestionText,"1263 When setting up the location of the control station and placement of crewmembers for an afternoon flight, which of the following would be most appropriate for ensuring that vision is not impaired by the environment?",
+Points,1,
+Difficulty,1,
+Option,100,The operation should be set up so that the remote PIC and crewmembers can face east.
+Option,0,The operation should be set up so that the remote PIC and crewmembers can face west.
+Option,0,The operation should be set up so that the remote PIC and crewmembers are facing any reflective objects in the area.
+NewQuestion,MC,
+Title,loading_0039,
+QuestionText,1297 What can help a pilot mitigate stress?,
+Points,1,
+Difficulty,1,
+Option,0,Ignoring signs of stress.
+Option,100,Reducing avoidable stressors and using healthy coping strategies.
+Option,0,Increasing workload when already fatigued.
+NewQuestion,MC,
+Title,loading_0040,
+QuestionText,"1264 When setting up the location of the control station and placement of crewmembers for a flight over snowy terrain, which of the following would be most appropriate for ensuring that vision is not impaired by the environment?",
+Points,1,
+Difficulty,1,
+Option,0,The operation should be set up so that the crewmembers are the most comfortable.
+Option,100,The operation should be set up so that the crewmembers will experience the minimum glare from the snow.
+Option,0,The operation should be set up so that the crewmembers face the direction in which the terrain most closely matches the color of the unmanned aircraft.
+NewQuestion,MC,
+Title,loading_0041,
+QuestionText,"1351 When preparing for a night flight, what should a small unmanned aircraft pilot be aware of after assembling and conducting a preflight of an aircraft while using a bright flashlight or work light?",
+Points,1,
+Difficulty,1,
+Option,0,"Once adapted to darkness, a person’s eyes are relatively immune to bright lights."
+Option,100,It takes approximately 30 minutes for a person’s eyes to fully adapt to darkness.
+Option,0,The person should use a flashlight equipped with LED lights to facilitate their night vision.
+NewQuestion,MC,
+Title,loading_0042,
+QuestionText,1265 Which of the following sources of information should you consult first when determining what maintenance should be performed on an sUAS or its components?,
+Points,1,
+Difficulty,1,
+Option,0,Local pilot best practices.
+Option,0,14 CFR Part 107.
+Option,100,Manufacturer guidance.
+NewQuestion,MC,
+Title,loading_0043,
+QuestionText,1266 Under what condition should the operator of a small unmanned aircraft establish a scheduled maintenance protocol?,
+Points,1,
+Difficulty,1,
+Option,100,When the manufacturer does not provide a maintenance schedule.
+Option,0,"When the FAA requires you to, following an accident."
+Option,0,Small unmanned aircraft systems do not require maintenance.
+NewQuestion,MC,
+Title,loading_0044,
+QuestionText,1336 What action should the operator of an sUAS take if the manufacturer does not provide information about scheduled maintenance?,
+Points,1,
+Difficulty,1,
+Option,0,The operator should contact the FAA for a minimum equipment list.
+Option,100,The operator should establish a scheduled maintenance protocol.
+Option,0,The operator should contact the NTSB for component failure rates for their specific sUAS.
+NewQuestion,MC,
+Title,loading_0045,
+QuestionText,1267 Scheduled maintenance should be performed in accordance with the,
+Points,1,
+Difficulty,1,
+Option,100,Manufacturer’s suggested procedures.
+Option,0,Stipulations in 14 CFR Part 43.
+Option,0,Contractor requirements.
+NewQuestion,MC,
+Title,loading_0046,
+QuestionText,1268 The responsibility for ensuring that an sUAS is maintained in an airworthy condition is primarily that of the,
+Points,1,
+Difficulty,1,
+Option,100,Remote pilot-in-command.
+Option,0,owner or operator.
+Option,0,mechanic who performs the work.
+NewQuestion,MC,
+Title,loading_0047,
+QuestionText,1269 When should the battery for a small unmanned aircraft be replaced?,
+Points,1,
+Difficulty,1,
+Option,0,Once recharged more than 10 times in the preceding 30 days.
+Option,100,"Per the guidelines of the sUAS manufacturer or the battery manufacturer, whichever is more restrictive."
+Option,0,"Per the guidelines of the sUAS manufacturer or the battery manufacturer, whichever is least restrictive."

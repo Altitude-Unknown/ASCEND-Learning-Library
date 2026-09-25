@@ -1,0 +1,504 @@
+NewQuestion,MC,
+Title,weather_0001,
+QuestionText,1135 Which of the following considerations is most relevant to a remote PIC when evaluating unmanned aircraft performance?,
+Points,1,
+Difficulty,1,
+Option,100,Current weather conditions
+Option,0,The number of available ground crew
+Option,0,The type of sUAS operation.
+NewQuestion,MC,
+Title,weather_0002,
+QuestionText,"1136 Every physical process of weather is accompanied by, or is the result of a:",
+Points,1,
+Difficulty,1,
+Option,0,Movement of air
+Option,0,Pressure differential
+Option,100,Heat exchange
+NewQuestion,MC,
+Title,weather_0003,
+QuestionText,1137 What causes variations in altimeter settings between weather reporting points?,
+Points,1,
+Difficulty,1,
+Option,100,Unequal heating of the earth’s surface.
+Option,0,Variation of terrain elevation.
+Option,0,Coriolis effect.
+NewQuestion,MC,
+Title,weather_0004,
+QuestionText,1138 The development of thermals depends upon,
+Points,1,
+Difficulty,1,
+Option,0,A counterclockwise circulation of air.
+Option,0,Temperature inversions.
+Option,100,Solar heating.
+NewQuestion,MC,
+Title,weather_0006,
+QuestionText,"1272 Clouds, fog, or dew will always form when",
+Points,1,
+Difficulty,1,
+Option,100,Water vapor condenses
+Option,0,Water vapor is present
+Option,0,Relative humidity reaches 100%
+NewQuestion,MC,
+Title,weather_0007,
+QuestionText,"1140 While operating around buildings, the remote PIC should be aware of the creation of wind gusts that",
+Points,1,
+Difficulty,1,
+Option,100,Change rapidly in direction and speed causing turbulence.
+Option,0,Enhanced stability and imagery.
+Option,0,Increased performance of the aircraft.
+NewQuestion,MC,
+Title,weather_0008,
+QuestionText,1141 A strong steady wind exists out of the north. You need to photograph an area to the south of your location. You are located in an open field with no obstructions. Which of the following is not a concern during this operation?,
+Points,1,
+Difficulty,1,
+Option,0,Strong wind conditions may consume more battery power at a faster rate than in calm conditions.
+Option,100,Turbulent conditions will likely be a significant factor during the operation.
+Option,0,Strong wind may exceed the performance of the sUAS making it impossible to recover.
+NewQuestion,MC,
+Title,weather_0009,
+QuestionText,1278 Wind shear can exist,
+Points,1,
+Difficulty,1,
+Option,100,At all altitudes.
+Option,0,At low altitudes.
+Option,0,At high altitudes.
+NewQuestion,MC,
+Title,weather_0010,
+QuestionText,1142 One of the most easily recognized discontinuities across a front is,
+Points,1,
+Difficulty,1,
+Option,100,A change in temperature
+Option,0,An increase in cloud coverage
+Option,0,An increase in relative humidity.
+NewQuestion,MC,
+Title,weather_0011,
+QuestionText,1143 One weather phenomenon which will always occur when flying across a front is a change in the,
+Points,1,
+Difficulty,1,
+Option,100,Wind direction.
+Option,0,Type of precipitation.
+Option,0,Stability of the air mass.
+NewQuestion,MC,
+Title,weather_0012,
+QuestionText,1144 Which type of weather phenomenon that may concern a remote pilot is common among cold fronts?,
+Points,1,
+Difficulty,1,
+Option,0,Long-term periods of reduced visibility.
+Option,0,Long periods of steady precipitation.
+Option,100,Thunderstorms and heavy rain.
+NewQuestion,MC,
+Title,weather_0013,
+QuestionText,1286 What weather provides the best flying conditions?,
+Points,1,
+Difficulty,1,
+Option,0,"Warm, moist air"
+Option,100,"Cool, dry air."
+Option,0,Turbulence.
+NewQuestion,MC,
+Title,weather_0014,
+QuestionText,1277 What is the boundary between air masses with different temperature and moisture characteristics called?,
+Points,1,
+Difficulty,1,
+Option,100,A front.
+Option,0,An air mass.
+Option,0,Wind shear.
+NewQuestion,MC,
+Title,weather_0015,
+QuestionText,1145 A stable air mass is most likely to have which characteristic?,
+Points,1,
+Difficulty,1,
+Option,0,Showery precipitation.
+Option,0,Turbulent air.
+Option,100,Poor surface visibility.
+NewQuestion,MC,
+Title,weather_0016,
+QuestionText,"1146 What are the characteristics of a moist, unstable air mass?",
+Points,1,
+Difficulty,1,
+Option,100,Turbulence and showery precipitation.
+Option,0,Poor visibility and smooth air.
+Option,0,Haze and smoke.
+NewQuestion,MC,
+Title,weather_0017,
+QuestionText,1147 What are the characteristics of stable air?,
+Points,1,
+Difficulty,1,
+Option,0,Good visibility and steady precipitation.
+Option,100,Poor visibility and steady precipitation.
+Option,0,Poor visibility and intermittent precipitation.
+NewQuestion,MC,
+Title,weather_0018,
+QuestionText,1148 What measurement can be used to determine the stability of the atmosphere?,
+Points,1,
+Difficulty,1,
+Option,0,Atmospheric pressure.
+Option,100,Actual lapse rate.
+Option,0,Surface temperature.
+NewQuestion,MC,
+Title,weather_0019,
+QuestionText,1149 What would decrease the stability of an air mass?,
+Points,1,
+Difficulty,1,
+Option,100,Warming from below.
+Option,0,Cooling from below.
+Option,0,Decrease in water vapor.
+NewQuestion,MC,
+Title,weather_0020,
+QuestionText,"1150 Upon your preflight evaluation of weather, the forecasts you reference state there is an unstable air mass approaching your location. Which would not be a concern for your impending operation?",
+Points,1,
+Difficulty,1,
+Option,0,Thunderstorms.
+Option,100,Stratiform clouds.
+Option,0,Turbulent conditions.
+NewQuestion,MC,
+Title,weather_0021,
+QuestionText,1285 You have received an outlook briefing from flight services through 1800wxbrief.com. The briefing indicates you can expect a low-level temperature inversion with high relative humidity. What weather conditions would you expect?,
+Points,1,
+Difficulty,1,
+Option,100,"Smooth air, poor visibility, fog, haze, or low clouds."
+Option,0,"Light wind shear, poor visibility, haze, and light rain."
+Option,0,"Turbulent air, poor visibility, fog, low stratus type clouds, and showery precipitation."
+NewQuestion,MC,
+Title,weather_0022,
+QuestionText,1151 What minimum visibility is required for sUAS operations?,
+Points,1,
+Difficulty,1,
+Option,0,1 mile
+Option,100,3 miles
+Option,0,4 miles
+NewQuestion,MC,
+Title,weather_0023,
+QuestionText,1152 The minimum distance from clouds required for sUAS Part 107 operations is:,
+Points,1,
+Difficulty,1,
+Option,0,Clear of clouds.
+Option,100,"500 feet below, 2,000 feet horizontally."
+Option,0,"500 feet below, 1,000 feet horizontally."
+NewQuestion,MC,
+Title,weather_0024,
+QuestionText,1288 (Refer to Figure 69.) You are inspecting the lighted towers approximately 8 NM SW of the Corpus Christi Intl Airport (CRP). What is the lowest cloud cover that will enable you to inspect the top of the tower?,
+Points,1,
+Difficulty,1,
+Option,0,"1,104 feet MSL."
+Option,100,"1,604 feet MSL."
+Option,0,"1,054 feet MSL."
+NewQuestion,MC,
+Title,weather_0025,
+QuestionText,"1271 A cloud base is 800 feet above the terrain at your operating location. Without a waiver, what is the highest altitude that maintains the required vertical cloud clearance?",
+Points,1,
+Difficulty,1,
+Option,0,200 feet AGL.
+Option,0,800 feet AGL.
+Option,100,300 feet AGL.
+NewQuestion,MC,
+Title,weather_0026,
+QuestionText,"1289 (Refer to Figure 23.) Without a waiver, what minimum flight visibility applies to Part 107 operations near Plantation Airport?",
+Points,1,
+Difficulty,1,
+Option,0,1 SM.
+Option,0,5 SM.
+Option,100,3 SM.
+NewQuestion,MC,
+Title,weather_0027,
+QuestionText,"1329 (Refer to Figure 23, Area 4.) What is the required flight visibility for a remote pilot operating an unmanned aircraft near the Plantation Airport (JYL)?",
+Points,1,
+Difficulty,1,
+Option,0,5 statute miles.
+Option,0,1 statute mile.
+Option,100,3 statute miles.
+NewQuestion,MC,
+Title,weather_0028,
+QuestionText,1310 (Refer to Figure 78.) What is the minimum base of the cloud layer to fly to the top of the towers 4 NM east of Onawa (K36)?,
+Points,1,
+Difficulty,1,
+Option,100,792 feet AGL.
+Option,0,292 feet AGL.
+Option,0,"1,335 feet MSL."
+NewQuestion,MC,
+Title,weather_0029,
+QuestionText,1153 What feature is normally associated with the cumulus stage of a thunderstorm?,
+Points,1,
+Difficulty,1,
+Option,0,Roll cloud.
+Option,100,Continuous updraft.
+Option,0,Frequent lightning.
+NewQuestion,MC,
+Title,weather_0030,
+QuestionText,1154 Which weather phenomenon signals the beginning of the mature stage of a thunderstorm?,
+Points,1,
+Difficulty,1,
+Option,0,The appearance of an anvil top.
+Option,100,Precipitation beginning to fall.
+Option,0,Maximum growth rate of the clouds.
+NewQuestion,MC,
+Title,weather_0031,
+QuestionText,1155 What conditions are necessary for the formation of thunderstorms?,
+Points,1,
+Difficulty,1,
+Option,100,"High humidity, lifting force, and unstable conditions."
+Option,0,"High humidity, high temperature, and cumulus clouds."
+Option,0,"Lifting force, moist air, and extensive cloud cover."
+NewQuestion,MC,
+Title,weather_0032,
+QuestionText,"1156 During the life cycle of a thunderstorm, which stage is characterized predominantly by downdrafts?",
+Points,1,
+Difficulty,1,
+Option,0,Cumulus.
+Option,100,Dissipating.
+Option,0,Mature.
+NewQuestion,MC,
+Title,weather_0033,
+QuestionText,1157 Thunderstorms reach their greatest intensity during the,
+Points,1,
+Difficulty,1,
+Option,100,mature stage.
+Option,0,downdraft stage.
+Option,0,cumulus stage.
+NewQuestion,MC,
+Title,weather_0034,
+QuestionText,1158 Thunderstorms which generally produce the most intense hazard to aircraft are,
+Points,1,
+Difficulty,1,
+Option,100,squall line thunderstorms.
+Option,0,steady-state thunderstorms.
+Option,0,warm front thunderstorms.
+NewQuestion,MC,
+Title,weather_0035,
+QuestionText,"1159 A nonfrontal, narrow band of active thunderstorms that often develop ahead of a cold front is known as a",
+Points,1,
+Difficulty,1,
+Option,0,prefrontal system.
+Option,100,squall line.
+Option,0,dry line.
+NewQuestion,MC,
+Title,weather_0036,
+QuestionText,"1160 If there is thunderstorm activity in the vicinity of an airport at which you plan to land, which hazardous atmospheric phenomenon might be expected during recovery/landing of the sUAS?",
+Points,1,
+Difficulty,1,
+Option,0,Precipitation static.
+Option,100,Wind-shear turbulence.
+Option,0,Steady rain.
+NewQuestion,MC,
+Title,weather_0037,
+QuestionText,1161 Which weather phenomenon is always associated with a thunderstorm?,
+Points,1,
+Difficulty,1,
+Option,100,Lightning.
+Option,0,Heavy rain.
+Option,0,Hail.
+NewQuestion,MC,
+Title,weather_0039,
+QuestionText,1163 What is the expected duration of an individual microburst?,
+Points,1,
+Difficulty,1,
+Option,0,Two minutes with maximum winds lasting approximately 1 minute.
+Option,0,One microburst may continue for as long as 2 to 4 hours.
+Option,100,Seldom longer than 15 minutes from the time the burst strikes the ground until dissipation.
+NewQuestion,MC,
+Title,weather_0040,
+QuestionText,1283 In what stage are thunderstorms the strongest?,
+Points,1,
+Difficulty,1,
+Option,100,Mature.
+Option,0,Dissipating.
+Option,0,Cumulus.
+NewQuestion,MC,
+Title,weather_0042,
+QuestionText,1164 The presence of ice pellets at the surface is evidence that there,
+Points,1,
+Difficulty,1,
+Option,0,are thunderstorms in the area.
+Option,0,has been cold frontal passage.
+Option,100,is a temperature inversion with freezing rain at a higher altitude.
+NewQuestion,MC,
+Title,weather_0043,
+QuestionText,1165 One in-flight condition necessary for structural icing to form is,
+Points,1,
+Difficulty,1,
+Option,0,small temperature/dewpoint spread.
+Option,0,stratiform clouds.
+Option,100,visible moisture
+NewQuestion,MC,
+Title,weather_0044,
+QuestionText,1166 In which environment is aircraft structural ice most likely to have the highest accumulation rate?,
+Points,1,
+Difficulty,1,
+Option,0,Cumulus clouds with below freezing temperatures.
+Option,0,Freezing drizzle.
+Option,100,Freezing rain.
+NewQuestion,MC,
+Title,weather_0045,
+QuestionText,1298 What environment is most conducive to frost formation?,
+Points,1,
+Difficulty,1,
+Option,100,The surface cools below freezing and below the dew point of the adjacent air.
+Option,0,The surface remains warmer than the dew point.
+Option,0,The surface remains above freezing.
+NewQuestion,MC,
+Title,weather_0046,
+QuestionText,1167 What situation is most conducive to the formation of radiation fog?,
+Points,1,
+Difficulty,1,
+Option,100,"Warm, moist air over low, flatland areas on clear, calm nights."
+Option,0,"Moist, tropical air moving over cold, offshore water."
+Option,0,The movement of cold air over much warmer water.
+NewQuestion,MC,
+Title,weather_0047,
+QuestionText,1168 In which situation is advection fog most likely to form?,
+Points,1,
+Difficulty,1,
+Option,0,"A warm, moist air mass on the windward side of mountains."
+Option,100,An air mass moving inland from the coast in winter.
+Option,0,A light breeze blowing colder air out to sea.
+NewQuestion,MC,
+Title,weather_0048,
+QuestionText,1169 An air mass moving inland from the coast in the winter is likely to result in,
+Points,1,
+Difficulty,1,
+Option,0,rain.
+Option,100,fog.
+Option,0,frost.
+NewQuestion,MC,
+Title,weather_0049,
+QuestionText,1170 What types of fog depend upon wind in order to exist?,
+Points,1,
+Difficulty,1,
+Option,0,Radiation fog and ice fog.
+Option,0,Steam fog and ground fog.
+Option,100,Advection fog and upslope fog.
+NewQuestion,MC,
+Title,weather_0050,
+QuestionText,1171 Low-level turbulence can occur and icing can become hazardous in which type of fog?,
+Points,1,
+Difficulty,1,
+Option,0,Rain-induced fog.
+Option,0,Upslope fog.
+Option,100,Steam fog.
+NewQuestion,MC,
+Title,weather_0051,
+QuestionText,1172 What is the best way for a remote pilot to determine the likelihood of local fog formation?,
+Points,1,
+Difficulty,1,
+Option,100,Monitor the temperature/dew point spread.
+Option,0,Monitor the wind conditions to ensure the wind speed is not increasing.
+Option,0,Monitor the barometric pressure to ensure that it is not decreasing.
+NewQuestion,MC,
+Title,weather_0052,
+QuestionText,"1173 All else equal, how does an increase in density altitude affect small unmanned aircraft performance?",
+Points,1,
+Difficulty,1,
+Option,0,No change in performance.
+Option,0,Increased performance.
+Option,100,Decreased performance.
+NewQuestion,MC,
+Title,weather_0053,
+QuestionText,"1174 If the outside air temperature (OAT) at a given altitude is warmer than standard, the density altitude is",
+Points,1,
+Difficulty,1,
+Option,0,equal to pressure altitude.
+Option,0,lower than pressure altitude.
+Option,100,higher than pressure altitude.
+NewQuestion,MC,
+Title,weather_0054,
+QuestionText,1175 What are the standard temperature and pressure values for sea level?,
+Points,1,
+Difficulty,1,
+Option,100,15°C and 29.92 inHg.
+Option,0,59°C and 1013.2 millibars.
+Option,0,59°F and 29.92 millibars.
+NewQuestion,MC,
+Title,weather_0055,
+QuestionText,1176 Which factor would tend to increase the density altitude at a given airport referenced in the weather briefing?,
+Points,1,
+Difficulty,1,
+Option,0,An increase in barometric pressure.
+Option,100,An increase in ambient temperature.
+Option,0,A decrease in relative humidity.
+NewQuestion,MC,
+Title,weather_0056,
+QuestionText,1177 What effect does high density altitude have on the efficiency of a small unmanned aircraft propeller?,
+Points,1,
+Difficulty,1,
+Option,0,Propeller efficiency is increased.
+Option,100,Propeller efficiency is decreased.
+Option,0,Density altitude does not affect propeller efficiency.
+NewQuestion,MC,
+Title,weather_0057,
+QuestionText,1290 What effect does humidity have on performance?,
+Points,1,
+Difficulty,1,
+Option,0,It has no effect on performance.
+Option,0,It increases performance.
+Option,100,It decreases performance.
+NewQuestion,MC,
+Title,weather_0058,
+QuestionText,"1178 To get complete weather overview for the planned flight, the remote pilot-in-command should obtain",
+Points,1,
+Difficulty,1,
+Option,0,An outlook briefing.
+Option,0,An abbreviated briefing.
+Option,100,A standard briefing.
+NewQuestion,MC,
+Title,weather_0059,
+QuestionText,1179 Which statement is true concerning ASOS/AWOS weather reporting systems?,
+Points,1,
+Difficulty,1,
+Option,0,Each AWOS station is part of a nationwide network of weather reporting stations.
+Option,100,ASOS locations perform weather observing functions necessary to generate METAR reports.
+Option,0,"Both ASOS and AWOS have the capability of reporting density altitude, as long as it exceeds the airport elevation by more than 1,000 feet."
+NewQuestion,MC,
+Title,weather_0060,
+QuestionText,1180 (Refer to Figure 12.) The wind direction and velocity at KJFK is from:,
+Points,1,
+Difficulty,1,
+Option,100,180° true at 4 knots.
+Option,0,180° magnetic at 4 knots.
+Option,0,040° true at 18 knots.
+NewQuestion,MC,
+Title,weather_0061,
+QuestionText,1181 (Refer to Figure 12.) What are the current conditions for Chicago Midway Airport (KMDW)?,
+Points,1,
+Difficulty,1,
+Option,100,"Sky 700 feet overcast, visibility 1-1/2 SM, rain."
+Option,0,"Sky 7,000 feet overcast, visibility 1-1/2 SM, heavy rain."
+Option,0,"Sky 700 feet overcast, visibility 11, occasionally 2 SM, with rain."
+NewQuestion,MC,
+Title,weather_0062,
+QuestionText,"1182 (Refer to Figure 15.) In the TAF for KMEM, what does “SHRA” stand for?",
+Points,1,
+Difficulty,1,
+Option,100,Rain showers.
+Option,0,A shift in wind direction is expected.
+Option,0,A significant change in precipitation is possible.
+NewQuestion,MC,
+Title,weather_0064,
+QuestionText,1184 (Refer to Figure 15.) What is the forecast wind for KMEM from 1600Z until the end of the forecast?,
+Points,1,
+Difficulty,1,
+Option,0,No significant wind.
+Option,0,Variable in direction at 4 knots.
+Option,100,Variable in direction at 6 knots.
+NewQuestion,MC,
+Title,weather_0065,
+QuestionText,"1185 (Refer to Figure 15.) According to the KMEM forecast, what is the earliest time on the 12th (today) at which the visibility may be reduced below the 3 SM minimum for sUAS operations?",
+Points,1,
+Difficulty,1,
+Option,0,1720Z.
+Option,0,2200Z.
+Option,100,2000Z
+NewQuestion,MC,
+Title,weather_0066,
+QuestionText,1311 What will a convective SIGMET be issued for?,
+Points,1,
+Difficulty,1,
+Option,100,Squall line thunderstorms.
+Option,0,Visibility less than 3 miles.
+Option,0,Surface winds greater than 40 knots.
+NewQuestion,MC,
+Title,weather_0067,
+QuestionText,1292 (Refer to Figure 12.) The remarks section for KMDW has “RAB35” listed. This entry means,
+Points,1,
+Difficulty,1,
+Option,0,blowing mist has reduced the visibility to 1-1/2 SM.
+Option,100,rain began at 1835Z.
+Option,0,the barometer has risen 0.35 inHg.

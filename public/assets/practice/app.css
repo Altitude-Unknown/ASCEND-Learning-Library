@@ -1,0 +1,29 @@
+.practice-app{margin:2rem 0;padding:clamp(1rem,3vw,2rem);background:#fff;border:1px solid #ccd6d2;border-radius:1rem;color:#173c46;overflow-wrap:anywhere}
+.practice-app [hidden]{display:none!important}
+.practice-app h2{font-size:clamp(1.35rem,3vw,1.8rem)}
+.practice-app h3{font-size:1.15rem;line-height:1.5}
+.practice-controls{display:flex;flex-wrap:wrap;align-items:end;gap:1rem}
+.practice-controls>div{flex:1 1 12rem;min-width:0}
+.practice-controls label{display:block;font-weight:700;margin-bottom:.4rem}
+.practice-controls select{width:100%;max-width:100%;padding:.75rem;border:1px solid #637c76;border-radius:.4rem;background:#fff;color:#173c46;font:inherit}
+.practice-app .button{white-space:normal;max-width:100%;min-height:44px}
+.practice-session-bar{display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between;align-items:center;margin:1rem 0}
+.practice-question{min-width:0;margin:1.5rem 0;padding:1rem;border:1px solid #a8bbb4;border-radius:.5rem}
+.practice-question legend{font-size:1.1rem;font-weight:700;padding:0 .35rem;max-width:100%;scroll-margin-top:2rem}
+.practice-question-meta{font-size:.85rem;color:#4b625d}
+.practice-choices{display:grid;gap:.65rem}
+.practice-choices label{display:flex;gap:.75rem;align-items:flex-start;padding:.85rem;border:1px solid #b9c9c3;border-radius:.4rem;cursor:pointer;min-height:44px}
+.practice-choices label:has(input:checked){background:#e4f0e9;border-color:#246249}
+.practice-choices input{flex:0 0 auto;margin:.3rem 0 0;width:1.15rem;height:1.15rem;accent-color:#246249}
+.practice-app :focus-visible{outline:3px solid #9b4a00;outline-offset:3px}
+.practice-figure{margin:.75rem 0 1rem;border:1px solid #b9c9c3;border-radius:.4rem;padding:.75rem}
+.practice-figure summary{cursor:pointer;font-weight:700;min-height:28px}
+.practice-figure figure{margin:1rem 0 0}
+.practice-figure img{display:block;width:100%;height:auto;margin:.75rem 0;background:#fff}
+.practice-figure a{display:inline-block;min-height:28px;text-decoration:underline}
+.practice-figure figcaption{font-size:.85rem;color:#4b625d}
+.practice-figure pre{white-space:pre-wrap;overflow-wrap:anywhere;word-break:break-word;font-size:.85rem;background:#f1f5f2;padding:.5rem}
+.practice-review{margin-top:1.5rem;padding:1rem;border:1px solid #b9c9c3;border-left:5px solid #246249;border-radius:.4rem}
+.practice-incorrect{border-left-color:#9f3526}
+#practice-results-heading{scroll-margin-top:2rem}
+@media(max-width:480px){.practice-app{padding:.85rem}.practice-question{padding:.6rem}.practice-choices label{padding:.65rem}.practice-controls{display:block}.practice-controls>div{margin-bottom:1rem}}

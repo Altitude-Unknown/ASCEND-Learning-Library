@@ -1,0 +1,20 @@
+<section class="practice-app" id="practice-app" aria-labelledby="practice-heading" data-pagefind-ignore>
+ <h2 id="practice-heading">Build a practice quiz</h2>
+ <p>Choose 10 questions from one topic, all questions in a topic, or a mixed set of 50. Answers and scores stay in this page and disappear when you restart or leave.</p>
+ <p class="small">These are practice questions, not an official FAA exam. Figures are historical testing examples, not current navigation charts.</p>
+ <div id="practice-fallback" class="notice">Enable JavaScript to use the practice quiz. You can still <a href="/part107/study-guide/">read the study guide</a> and browse the other Part 107 resources.</div>
+ <p id="practice-status" role="status"></p>
+ <form id="practice-setup" hidden>
+  <div class="practice-controls">
+   <div><label for="practice-bank">Topic</label><select id="practice-bank" name="bank"></select></div>
+   <div><label for="practice-count">Questions</label><select id="practice-count" name="count"><option value="10">10 questions</option><option value="all">All questions in this topic</option></select></div>
+   <button class="button" type="submit">Start practice</button>
+  </div>
+ </form>
+ <button id="practice-retry" class="button outline" type="button" hidden>Retry loading questions</button>
+ <div id="practice-session" hidden>
+  <div class="practice-session-bar"><p id="practice-progress" role="status"></p><button class="button outline" type="button" id="practice-reset">Start over</button></div>
+  <form id="practice-quiz"><div id="practice-questions"></div><p id="practice-incomplete" role="status"></p><button class="button" type="submit">Check answers</button></form>
+ </div>
+ <section id="practice-results" aria-labelledby="practice-results-heading" hidden></section>
+</section>

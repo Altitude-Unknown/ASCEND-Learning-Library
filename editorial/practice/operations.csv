@@ -1,0 +1,400 @@
+NewQuestion,MC,
+Title,operations_0001,
+QuestionText,1211 During the preflight inspection who is responsible for determining the aircraft is safe for flight?,
+Points,1,
+Difficulty,1,
+Option,100,The remote pilot-in-command.
+Option,0,The owner or operator.
+Option,0,The certificated mechanic who performed the annual inspection.
+NewQuestion,MC,
+Title,operations_0002,
+QuestionText,1212 How often is the remote PIC required to inspect the sUAS to ensure that it is in a condition for safe operation?,
+Points,1,
+Difficulty,1,
+Option,0,Annually
+Option,0,Monthly
+Option,100,Before each flight
+NewQuestion,MC,
+Title,operations_0003,
+QuestionText,1213 How should an sUAS preflight inspection be accomplished for the first flight of the day?,
+Points,1,
+Difficulty,1,
+Option,0,Quick walk around with a check of gas and oil.
+Option,100,Thorough and systematic means recommended by the manufacturer.
+Option,0,Any sequence as determined by the pilot-in-command.
+NewQuestion,MC,
+Title,operations_0004,
+QuestionText,"1214 During your preflight inspection, you discover that the casing of your sUAS battery has expanded beyond the normal dimensions. What action should you take?",
+Points,1,
+Difficulty,1,
+Option,0,Throw it away with your household trash.
+Option,0,Use it as long as it will still hold a charge.
+Option,100,Follow the manufacturer’s guidance.
+NewQuestion,MC,
+Title,operations_0005,
+QuestionText,"1215 While preparing your sUAS for flight, you notice that one of the propeller blades has a nick. What action should you take?",
+Points,1,
+Difficulty,1,
+Option,0,"If the nick is less than ¼ the length of the blade, it is safe to operate without replacement."
+Option,100,"Remove and replace the propeller, consult manufacturer guidelines for repair, if any."
+Option,0,Repair by filling the nick to a smooth curve or with adhesive approved for use on the propeller material.
+NewQuestion,MC,
+Title,operations_0006,
+QuestionText,1216 In which of the following scenarios is a remote PIC not required to perform a preflight inspection of their sUAS?,
+Points,1,
+Difficulty,1,
+Option,0,If the subsequent flight occurs immediately following a flight before which an inspection was made.
+Option,0,"Preflight inspections are only required for the first flight of the day, so any other flight does not require such an inspection."
+Option,100,"Preflight inspections are required before each flight, thus there is no scenario that precludes such an inspection."
+NewQuestion,MC,
+Title,operations_0007,
+QuestionText,"1217 Inbound to an airport with no tower, FSS, or UNICOM in operation, a pilot should self-announce on MULTICOM frequency",
+Points,1,
+Difficulty,1,
+Option,0,123
+Option,100,122.9
+Option,0,122.7
+NewQuestion,MC,
+Title,operations_0008,
+QuestionText,1279 The aircraft call sign N169US will be spoken in this way:,
+Points,1,
+Difficulty,1,
+Option,100,November one six niner uniform sierra
+Option,0,November one six niner unmanned system
+Option,0,November one hundred sixty nine uniform sierra.
+NewQuestion,MC,
+Title,operations_0010,
+QuestionText,"1219 The correct method of stating 4,500 feet MSL to ATC is",
+Points,1,
+Difficulty,1,
+Option,100,“FOUR THOUSAND FIVE HUNDRED.”
+Option,0,“FOUR POINT FIVE.”
+Option,0,“FOUR-FIVE HUNDRED FEET MSL.”
+NewQuestion,MC,
+Title,operations_0012,
+QuestionText,"1220 (Refer to Figure 20, area 3.) What is the recommended communications procedure for a landing at Currituck County Airport?",
+Points,1,
+Difficulty,1,
+Option,100,Transmit intentions on 122.9 MHz when 10 miles out and give position reports in the traffic pattern.
+Option,0,Contact Elizabeth City FSS for airport advisory service.
+Option,0,Contact New Bern FSS for area traffic information.
+NewQuestion,MC,
+Title,operations_0013,
+QuestionText,1221 When should pilots state their position on the airport when calling the tower for takeoff?,
+Points,1,
+Difficulty,1,
+Option,0,When visibility is less than 1 mile.
+Option,0,When parallel runways are in use.
+Option,100,When departing from a runway intersection
+NewQuestion,MC,
+Title,operations_0014,
+QuestionText,"1222 As standard operating practice, manned aircraft approaching a non-towered airport should monitor and communicate on the appropriate CTAF starting how far from the airport?",
+Points,1,
+Difficulty,1,
+Option,0,25 miles
+Option,0,20 miles
+Option,100,10 miles
+NewQuestion,MC,
+Title,operations_0015,
+QuestionText,1223 Absence of the sky condition and visibility on an ATIS broadcast indicates that,
+Points,1,
+Difficulty,1,
+Option,0,weather conditions are at or above VFR minimums.
+Option,0,the sky condition is clear and visibility is unrestricted.
+Option,100,"the ceiling is at least 5,000 feet and visibility is 5 miles or more."
+NewQuestion,MC,
+Title,operations_0016,
+QuestionText,"1224 (Refer to Figure 22 area 2; and Figure 31.) At Coeur D’Alene, which frequency should be used as a Common Traffic Advisory Frequency (CTAF) to monitor airport traffic?",
+Points,1,
+Difficulty,1,
+Option,0,122.05 MHz.
+Option,0,135.075 MHz.
+Option,100,122.8 MHz.
+NewQuestion,MC,
+Title,operations_0017,
+QuestionText,"1330 (Refer to Figure 21, Area 1.) After receiving authorization from ATC to operate a small UA near Minot International airport (MOT) while the control tower is operational, which radio communication frequency could be used to monitor manned aircraft and ATC communications?",
+Points,1,
+Difficulty,1,
+Option,0,UNICOM 122.95
+Option,0,ASOS 118.725
+Option,100,CT-118.2
+NewQuestion,MC,
+Title,operations_0018,
+QuestionText,"1225 (Refer to Figure 26, area 2.) What is the recommended communication procedure when operating in the vicinity of Cooperstown Airport?",
+Points,1,
+Difficulty,1,
+Option,100,"Broadcast intentions when 10 miles out and monitor transmissions on the CTAF/MULTICOM frequency, 122.9 MHz."
+Option,0,Contact UNICOM when 10 miles out on 122.8 MHz.
+Option,0,Circle the airport in a left turn prior to entering traffic monitoring transmissions on 122.9.
+NewQuestion,MC,
+Title,operations_0019,
+QuestionText,1308 The Common Traffic Advisory Frequency (CTAF) is used for manned aircraft to,
+Points,1,
+Difficulty,1,
+Option,100,Announce ground and flight intentions.
+Option,0,Request air traffic control clearance.
+Option,0,Request fuel services.
+NewQuestion,MC,
+Title,operations_0020,
+QuestionText,1226 Automatic Terminal Information Service (ATIS) is the continuous broadcast of recorded information concerning,
+Points,1,
+Difficulty,1,
+Option,0,pilots of radar-identified aircraft whose aircraft is in dangerous proximity to terrain or to an obstruction.
+Option,0,nonessential information to reduce frequency congestion.
+Option,100,noncontrol information in selected high-activity terminal areas
+NewQuestion,MC,
+Title,operations_0021,
+QuestionText,1227 What services will a FSS provide?,
+Points,1,
+Difficulty,1,
+Option,0,Fuel pricing.
+Option,100,Assistance during an emergency.
+Option,0,Clearance to taxi and takeoff.
+NewQuestion,MC,
+Title,operations_0022,
+QuestionText,"1230 An ATC radar facility issues the following advisory to a pilot flying on a heading of 090°: “UNMANNED AIRCRAFT OPERATIONS THREE O’CLOCK, 2 MILES, WESTBOUND…” Where should the remote PIC (also visual observer and crew, if applicable) look for this traffic in reference to the small unmanned aircraft?",
+Points,1,
+Difficulty,1,
+Option,100,North.
+Option,0,South.
+Option,0,West.
+NewQuestion,MC,
+Title,operations_0023,
+QuestionText,"1231 An ATC radar facility issues the following advisory to a manned aircraft pilot flying north in a calm wind: “Unmanned aircraft operations at 9 o’clock 2 miles” Where should the Remote PIC (also visual observer and crew, if applicable) look for this traffic?",
+Points,1,
+Difficulty,1,
+Option,100,East.
+Option,0,North.
+Option,0,West.
+NewQuestion,MC,
+Title,operations_0024,
+QuestionText,"1232 A visual observer notices a manned aircraft approaching the area in which sUAS operations are taking place, flying just north of the area from west to east. What call could the remote PIC/visual observer make on CTAF to alert the manned pilot?",
+Points,1,
+Difficulty,1,
+Option,100,"Zephyrhills traffic, unmanned aircraft Xray Yankee Zulu, operating five NM south of the airport at or below 400 AGL, located at the three o’clock position of the Cessna just north of our position, Zephyrhills traffic."
+Option,0,"Zephyrhills traffic, unmanned aircraft at three o’clock of manned aircraft in the area, Zephyrhills traffic."
+Option,0,"Zephyrhills traffic, unmanned aircraft Xray Yankee Zulu to Cessna in the area, look for us at your three o’clock position, we are about a mile south."
+NewQuestion,MC,
+Title,operations_0025,
+QuestionText,1234 Damaged lithium batteries can cause,
+Points,1,
+Difficulty,1,
+Option,100,An inflight fire
+Option,0,A change in aircraft center of gravity.
+Option,0,Increased endurance.
+NewQuestion,MC,
+Title,operations_0026,
+QuestionText,1334 What precautions should a remote PIC take to prevent possible inflight emergencies when using lithium-based batteries?,
+Points,1,
+Difficulty,1,
+Option,0,Store the batteries in a freezer to allow proper recharging.
+Option,100,Follow the manufacturer’s recommendations for safe battery handling.
+Option,0,Allow the battery to charge until it reaches a minimum temperature of 100°C.
+NewQuestion,MC,
+Title,operations_0027,
+QuestionText,1335 A remote pilot-in-command and a visual observer defining their roles and responsibilities prior to and during the operation of a small unmanned aircraft is a good use of,
+Points,1,
+Difficulty,1,
+Option,100,Crew resource management.
+Option,0,Authoritarian resource management.
+Option,0,Single pilot resource management.
+NewQuestion,MC,
+Title,operations_0028,
+QuestionText,1235 Which of the following lithium batteries should not be used?,
+Points,1,
+Difficulty,1,
+Option,0,A partially discharged battery that is warm from recent prior use.
+Option,0,"A new battery that has only been charged once, several charging cycles are required prior to normal use."
+Option,100,A battery with a bulge on one of the sides of its case.
+NewQuestion,MC,
+Title,operations_0029,
+QuestionText,1236 What is the proper response by the remote PIC if experiencing a lost link situation?,
+Points,1,
+Difficulty,1,
+Option,100,Notify all available crew and ATC (if applicable) while executing the briefed lost link procedure.
+Option,0,Wait for the unit to reestablish link while notifying law enforcement of possible dangers to nonparticipants.
+Option,0,Turning the control station off and then back on to attempt to reestablish the link.
+NewQuestion,MC,
+Title,operations_0030,
+QuestionText,1237 Which of the following events is considered a flyaway?,
+Points,1,
+Difficulty,1,
+Option,0,Loss of link between the remote PIC and the unmanned aircraft?
+Option,0,Loss of communication link between the Remote PIC and ATC.
+Option,100,Unmanned aircraft does not respond to control inputs and does not execute known lost link maneuvers.
+NewQuestion,MC,
+Title,operations_0031,
+QuestionText,1238 What action should be taken by the remote PIC during a sUAS flyaway event?,
+Points,1,
+Difficulty,1,
+Option,0,Immediately notify the NTSB.
+Option,100,"Immediately notify any/all crewmembers, bystanders, and ATC (if applicable)."
+Option,0,"Immediately notify any/all crewmembers, local law enforcement personnel, and bystanders."
+NewQuestion,MC,
+Title,operations_0032,
+QuestionText,1239 A common cause of sUAS flyaway events is,
+Points,1,
+Difficulty,1,
+Option,100,Frequency interference.
+Option,0,Loss of GPS signals.
+Option,0,Persons standing close to the control station antenna.
+NewQuestion,MC,
+Title,operations_0033,
+QuestionText,"1240 Upon GPS signal loss, the remote pilot should immediately",
+Points,1,
+Difficulty,1,
+Option,0,contact ATC and declare an emergency.
+Option,0,perform the planned lost link contingency procedure.
+Option,100,"operate the sUAS normally, noting to account for any mode or control changes that occur if GPS is lost."
+NewQuestion,MC,
+Title,operations_0034,
+QuestionText,1241 What action should the remote PIC take upon GPS signal loss?,
+Points,1,
+Difficulty,1,
+Option,0,Perform the planned flyaway emergency procedure.
+Option,100,"Follow normal sUAS operational procedures, noting any mode or control changes that normally occur if GPS is lost."
+Option,0,Land the unmanned aircraft immediately prior to loss of control.
+NewQuestion,MC,
+Title,operations_0035,
+QuestionText,"1242 The effective use of all available resources – human, hardware, and information – prior to and during flight to ensure the successful outcome of the operation is called",
+Points,1,
+Difficulty,1,
+Option,0,risk management.
+Option,100,crew resource management.
+Option,0,safety management system.
+NewQuestion,MC,
+Title,operations_0036,
+QuestionText,"1243 When adapting crew resource management (CRM) concepts to the operation of a small unmanned aircraft, CRM must be integrated into",
+Points,1,
+Difficulty,1,
+Option,0,the communications only.
+Option,0,the flight portion only.
+Option,100,all phases of the operation.
+NewQuestion,MC,
+Title,operations_0037,
+QuestionText,"1244 Safety is an important element for a remote pilot to consider prior to operating an unmanned aircraft system. To prevent the final “link” in the accident chain, a remote pilot must consider which methodology?",
+Points,1,
+Difficulty,1,
+Option,0,Crew resource management.
+Option,0,Safety management system.
+Option,100,Risk management.
+NewQuestion,MC,
+Title,operations_0038,
+QuestionText,1245 A local TV station has hired a remote pilot to operate their small unmanned aircraft to cover breaking news stories. The remote pilot has had multiple near misses with obstacles on the ground and two small unmanned aircraft accidents. What would be a solution for the news station to improve their operating safety culture?,
+Points,1,
+Difficulty,1,
+Option,0,The news station should implement a policy of no more than five crashes/incidents within 6 months.
+Option,0,The news station does not need to make any changes; there are times that an accident is unavoidable.
+Option,100,The news station should recognize hazardous attitudes and situations and develop standard operating procedures that emphasize safety.
+NewQuestion,MC,
+Title,operations_0039,
+QuestionText,1246 Identify the hazardous attitude or characteristic a remote pilot in command displays while taking risks in order to impress others?,
+Points,1,
+Difficulty,1,
+Option,0,Impulsivity
+Option,0,Invulnerability
+Option,100,Macho
+NewQuestion,MC,
+Title,operations_0040,
+QuestionText,"1247 You have been hired as a remote pilot-in-command by a local TV news station to film breaking news with a small unmanned aircraft. You expressed a safety concern and the station manager has instructed you to “fly first, ask questions later.” What type of hazardous attitude does this attitude represent?",
+Points,1,
+Difficulty,1,
+Option,0,Invulnerability.
+Option,100,Impulsivity.
+Option,0,Macho.
+NewQuestion,MC,
+Title,operations_0041,
+QuestionText,1248 What antidotal phrase can help reverse the hazardous attitude of “antiauthority”,
+Points,1,
+Difficulty,1,
+Option,0,Rules do not apply in this situation.
+Option,0,I know what I am doing.
+Option,100,Follow the rules.
+NewQuestion,MC,
+Title,operations_0042,
+QuestionText,1249 Hazardous attitudes occur to every pilot to some degree at some time. What are some of these hazardous attitudes?,
+Points,1,
+Difficulty,1,
+Option,0,Poor risk management and lack of stress management.
+Option,100,"Antiauthority, impulsivity, macho, resignation, and invulnerability."
+Option,0,"Poor situational awareness, snap judgments, and lack of a decision making process."
+NewQuestion,MC,
+Title,operations_0043,
+QuestionText,"1250 Risk management, as part of the aeronautical decision making (ADM) process, relies on which features to reduce the risks associated with each flight?",
+Points,1,
+Difficulty,1,
+Option,0,Application of stress management and risk element procedures.
+Option,100,"Situational awareness, problem recognition, and good judgment."
+Option,0,The mental process of analyzing all information in a particular situation and making a timely decision on what action to take.
+NewQuestion,MC,
+Title,operations_0044,
+QuestionText,"1251 To avoid missing important steps, always use the",
+Points,1,
+Difficulty,1,
+Option,100,appropriate checklists.
+Option,0,placarded airspeeds.
+Option,0,airworthiness certificate.
+NewQuestion,MC,
+Title,operations_0045,
+QuestionText,1252 An extreme case of a pilot getting behind the aircraft can lead to the operational pitfall of,
+Points,1,
+Difficulty,1,
+Option,100,loss of situational awareness.
+Option,0,loss of workload.
+Option,0,internal stress.
+NewQuestion,MC,
+Title,operations_0046,
+QuestionText,1253 Which statement is not correct concerning crew resource management in sUAS operations?,
+Points,1,
+Difficulty,1,
+Option,100,"Crewmembers cannot, under any circumstances, challenge the decisions of the Remote PIC."
+Option,0,Individuals who are exhibiting signs of hazardous attitudes should be approached about the issue.
+Option,0,The remote PIC and all crewmembers should communicate any observed hazards or concerns to one another.
+NewQuestion,MC,
+Title,operations_0047,
+QuestionText,1284 A remote pilot-in-command and a visual observer define their roles and responsibilities prior to and during the operation of a small unmanned aircraft. This a good use of,
+Points,1,
+Difficulty,1,
+Option,100,crew resource management.
+Option,0,authoritarian resource management.
+Option,0,single-pilot resource management.
+NewQuestion,MC,
+Title,operations_0048,
+QuestionText,1291 What antidotal phrase can help reverse the hazardous attitude of impulsivity.,
+Points,1,
+Difficulty,1,
+Option,0,It could happen to me.
+Option,0,Do it quickly to get it over with.
+Option,100,"Not so fast, think first."
+NewQuestion,MC,
+Title,operations_0049,
+QuestionText,1299 What is the best way to mitigate risk?,
+Points,1,
+Difficulty,1,
+Option,0,SMS plan
+Option,0,Weekly meetings
+Option,100,Establishing an operational procedure guideline.
+NewQuestion,MC,
+Title,operations_0050,
+QuestionText,1315 The accurate perception and understanding of all the risk element factors and conditions is,
+Points,1,
+Difficulty,1,
+Option,100,situational awareness.
+Option,0,judgment.
+Option,0,aeronautical decision making.
+NewQuestion,MC,
+Title,operations_0051,
+QuestionText,1337 Aeronautical decision making (ADM) can be described as the pilot’s ability for,
+Points,1,
+Difficulty,1,
+Option,100,sound judgment and good decision making.
+Option,0,making quick decisive actions.
+Option,0,interpreting dangerous situations.
+NewQuestion,MC,
+Title,operations_0055,
+QuestionText,1268 The responsibility for ensuring that an sUAS is maintained in an airworthy condition is primarily that of the,
+Points,1,
+Difficulty,1,
+Option,100,Remote pilot in command
+Option,0,Owner operator
+Option,0,Mechanic who performs the work.

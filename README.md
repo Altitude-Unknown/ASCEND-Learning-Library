@@ -138,3 +138,9 @@ layout updates. Review external URLs and learning content regularly, especially
 regulatory material. Search updates with each production build. Large files
 belong in object storage, not an ever-growing Git history. An export of `_site/`
 can run on another static host without Eleventy, Node, or Cloudflare services.
+
+## Part 107 practice tests
+
+The supplied practice app is integrated at `/part107/practice-tests/`. See
+[the review and maintenance notes](docs/PRACTICE-TEST-REVIEW.md) for corrections,
+held questions, source CSVs, figure checks, and regeneration instructions.

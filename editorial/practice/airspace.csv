@@ -1,0 +1,368 @@
+NewQuestion,MC,
+Title,airspace_0001,
+QuestionText,1067 The most comprehensive information on a given airport is provided by,
+Points,1,
+Difficulty,1,
+Option,100,The Chart Supplement U.S. (formerly Airport/Facility Directory).
+Option,0,Notices to Airmen (NOTAMs).
+Option,0,Terminal Area Chart (TAC).
+NewQuestion,MC,
+Title,airspace_0002,
+QuestionText,"1079 According to 14 CFR Part 107, the remote PIC of a small unmanned aircraft planning to operate within Class C airspace",
+Points,1,
+Difficulty,1,
+Option,100,Is required to receive ATC authorization.
+Option,0,Is required to file a flight plan.
+Option,0,Must use a visual observer.
+NewQuestion,MC,
+Title,airspace_0003,
+QuestionText,1305 What is the typical outer radius of the charted Class C shelf?,
+Points,1,
+Difficulty,1,
+Option,100,10 NM
+Option,0,20 NM
+Option,0,30 NM
+NewQuestion,MC,
+Title,airspace_0004,
+QuestionText,1087 Responsibility for collision avoidance in an alert area rests with,
+Points,1,
+Difficulty,1,
+Option,0,The controlling agency
+Option,100,All pilots
+Option,0,Air Traffic Control
+NewQuestion,MC,
+Title,airspace_0005,
+QuestionText,1296 Where can you find information about operating in an MOA along your planned route of flight?,
+Points,1,
+Difficulty,1,
+Option,100,Sectional chart
+Option,0,Chart supplement
+Option,0,Aeronautical Information Manual.
+NewQuestion,MC,
+Title,airspace_0006,
+QuestionText,1098 Which statement about longitude and latitude is true?,
+Points,1,
+Difficulty,1,
+Option,0,Lines of longitude are parallel to the equator.
+Option,100,Lines of longitude cross the equator at right angles.
+Option,0,"The 0 degree latitude passes through Greenwich, England."
+NewQuestion,MC,
+Title,airspace_0007,
+QuestionText,1112 The recommended entry position for manned aircraft to enter an airport traffic pattern is,
+Points,1,
+Difficulty,1,
+Option,0,45 degrees to the base leg just below traffic pattern altitude.
+Option,100,To enter 45 degrees at the midpoint of the downwind leg at traffic pattern altitude.
+Option,0,To cross directly over the airport at traffic pattern altitude and join the downwind leg.
+NewQuestion,MC,
+Title,airspace_0008,
+QuestionText,1115 What is required to enter an airport SIDA?,
+Points,1,
+Difficulty,1,
+Option,0,You must pass TSA screening.
+Option,0,You must have an FAA-issued pilot certificate.
+Option,100,You must have an airport-issued or approved ID.
+NewQuestion,MC,
+Title,airspace_0009,
+QuestionText,"1120 While operating a sUAS just south of a controlled airport with authorization, ATC notifies you to stay clear of the runway 6 final approach course. What action should you take to comply with this request?",
+Points,1,
+Difficulty,1,
+Option,100,Stay clear of areas to the west and north of your area of operation.
+Option,0,Stay clear of areas to the east and north of your area of operation.
+Option,0,Stay clear of areas to the west and south of your area of operation.
+NewQuestion,MC,
+Title,airspace_0010,
+QuestionText,1118 An aircraft announces that they are on short final for runway 9. Where will the aircraft be in relation to the airport.,
+Points,1,
+Difficulty,1,
+Option,0,North
+Option,100,West
+Option,0,East
+NewQuestion,MC,
+Title,airspace_0011,
+QuestionText,1130 Most midair collision accidents occur during,
+Points,1,
+Difficulty,1,
+Option,0,Hazy days
+Option,100,Clear days
+Option,0,Cloudy nights
+NewQuestion,MC,
+Title,airspace_0012,
+QuestionText,1131 Which technique should a remote pilot use to scan for traffic?,
+Points,1,
+Difficulty,1,
+Option,0,Continuously scan the sky from right to left.
+Option,0,Concentrate on relative movement detected in the peripheral vision area.
+Option,100,Systematically focus on different segments of the sky for short intervals.
+NewQuestion,MC,
+Title,airspace_0013,
+QuestionText,1312 A larger UAS is converging head-on; what should you do?,
+Points,1,
+Difficulty,1,
+Option,0,The smaller aircraft should adjust course to the right.
+Option,0,The larger aircraft should adjust course to the right.
+Option,100,Both aircraft should adjust course to the right.
+NewQuestion,MC,
+Title,airspace_0014,
+QuestionText,"1068 (Refer to Figure 20, Area 5.) How would a remote PIC “CHECK NOTAMS” as noted in the CAUTION box regarding the unmanned balloon?",
+Points,1,
+Difficulty,1,
+Option,0,By reviewing only the airport diagram.
+Option,0,By contacting the FAA district office.
+Option,100,By obtaining a Flight Service briefing that includes the applicable NOTAMs.
+NewQuestion,MC,
+Title,airspace_0015,
+QuestionText,1072 One of the purposes for issuing a temporary flight restriction (TFR) is to,
+Points,1,
+Difficulty,1,
+Option,0,announce Parachute Jump Areas
+Option,100,protect public figures
+Option,0,identify Airport Advisory Areas
+NewQuestion,MC,
+Title,airspace_0016,
+QuestionText,1075 (Refer to Figure 31) Within what airspace is Coeur D’Alene Pappy Boyington Fld located?,
+Points,1,
+Difficulty,1,
+Option,0,Class B
+Option,100,Class E
+Option,0,Class D
+NewQuestion,MC,
+Title,airspace_0017,
+QuestionText,1076 (Refer to Figure 52) What special conditions do remote pilots need to be on the lookout for while operating near Lincoln Airport?,
+Points,1,
+Difficulty,1,
+Option,0,Deer near the runway
+Option,100,Birds in the Vicinity
+Option,0,Parachute operations
+NewQuestion,MC,
+Title,airspace_0019,
+QuestionText,1360 What is required when operating in Class B airspace?,
+Points,1,
+Difficulty,1,
+Option,0,Operations in Class B airspace are prohibited.
+Option,100,The remote PIC or operator must receive an airspace authorization for operations in Class B airspace.
+Option,0,Two-way radio communication and ADS-B capabilities.
+NewQuestion,MC,
+Title,airspace_0020,
+QuestionText,"1326 (Refer to Figure 25, Area 3.) The floor of Class B airspace at Dallas Executive (RBD) is",
+Points,1,
+Difficulty,1,
+Option,0,At the surface.
+Option,100,"3,000 feet MSL."
+Option,0,"3,100 feet MSL."
+NewQuestion,MC,
+Title,airspace_0022,
+QuestionText,"1078 (Refer to Figure 23, Area 3) What is the floor of the Savannah Class C airspace at the shelf area (outer circle)?",
+Points,1,
+Difficulty,1,
+Option,0,"1,300 feet AGL."
+Option,100,"1,300 feet MSL."
+Option,0,"1,700 feet MSL."
+NewQuestion,MC,
+Title,airspace_0024,
+QuestionText,1081 The Lateral dimensions of Class D airspace are based on,
+Points,1,
+Difficulty,1,
+Option,0,The number of airports that lie within the Class D airspace.
+Option,0,5 statute miles from the geographical center of the primary airport.
+Option,100,The instrument procedures for which the controlled airspace is established.
+NewQuestion,MC,
+Title,airspace_0025,
+QuestionText,"1083 (Refer to Figure 26, Area 5.) Immediately above Barnes County Airport, which airspace extends from the surface to the overlying Class E airspace?",
+Points,1,
+Difficulty,1,
+Option,0,Class D airspace from the surface to the floor of the overlying Class E airspace.
+Option,0,"Class E airspace from the surface to 1,200 feet MSL."
+Option,100,Class G airspace from the surface up to but not including 700 feet AGL.
+NewQuestion,MC,
+Title,airspace_0027,
+QuestionText,1085 (Refer to Figure 78) In what airspace is Onawa (K36) located?,
+Points,1,
+Difficulty,1,
+Option,0,Class E
+Option,100,Class G
+Option,0,Class D
+NewQuestion,MC,
+Title,airspace_0028,
+QuestionText,"1327 (Refer to Figure 78, near the center of the chart) What class of airspace is associated with SIOUX GATEWAY/COL DAY (SUX) Airport?",
+Points,1,
+Difficulty,1,
+Option,0,Class B airspace
+Option,0,Class C airspace
+Option,100,Class D airspace
+NewQuestion,MC,
+Title,airspace_0029,
+QuestionText,"1328 (Refer to Figure 20.) What class of airspace is immediately above the surface at Fentress NALF Airport (NFE), as depicted?",
+Points,1,
+Difficulty,1,
+Option,0,Class C.
+Option,0,Class E.
+Option,100,Class G.
+NewQuestion,MC,
+Title,airspace_0031,
+QuestionText,"1307 (Refer to Figure 25, Area 2) The airspace directly overlying Addison Airport (ADS) is",
+Points,1,
+Difficulty,1,
+Option,0,"Class D up 3,000 feet MSL."
+Option,100,"Class D up to but not including 3,000 feet MSL."
+Option,0,"Class E from the surface up to 3,000 feet MSL."
+NewQuestion,MC,
+Title,airspace_0032,
+QuestionText,"1295 (Refer to Figure 26, Area 1.) What is the Class E airspace floor above Tomlinson Airport?",
+Points,1,
+Difficulty,1,
+Option,0,"18,000 feet MSL."
+Option,100,"1,200 feet AGL."
+Option,0,700 feet AGL.
+NewQuestion,MC,
+Title,airspace_0033,
+QuestionText,1282 (Refer to Figure 78) You have been hired to fly your UA to inspect train tracks from the town of Hinton to the town of Winnebago. Will you be able to conduct this flight without contacting ATC?,
+Points,1,
+Difficulty,1,
+Option,0,"Yes, because you will remain under 400 feet."
+Option,0,"No, because you will pass through Echo airspace."
+Option,100,"No, because you will pass through Delta airspace."
+NewQuestion,MC,
+Title,airspace_0034,
+QuestionText,"1321 (Refer to Figure 78.) For an inspection below 400 feet AGL along the railroad from Blencoe to Onawa, does the depicted airspace require ATC authorization?",
+Points,1,
+Difficulty,1,
+Option,0,"Yes, Onawa is in Class D airspace that is designated for an airport."
+Option,100,"No, your entire flight is in Class G airspace."
+Option,0,"Yes, you must contact the Onawa control tower to operate within 5 miles of the airport."
+NewQuestion,MC,
+Title,airspace_0035,
+QuestionText,"1338 (Refer to Figure 78) You are hired to inspect the railroad tracks from the town of Hinton, north of Sioux City, to the town of Winnebago. Will you require ATC authorization?",
+Points,1,
+Difficulty,1,
+Option,0,"No, the flight will remain clear of controlled airspace."
+Option,100,"Yes, your route of flight will pass through Class D airspace."
+Option,0,"Yes, Your route of flight will pass through Class E airspace."
+NewQuestion,MC,
+Title,airspace_0036,
+QuestionText,1358 What is required when operating in an MOA?,
+Points,1,
+Difficulty,1,
+Option,0,Obtain authorization from the controlling agency prior to operating in the MOA.
+Option,100,Exercise extreme caution when military activity is being conducted.
+Option,0,Fly only along Military Training Routes (MTRs).
+NewQuestion,MC,
+Title,airspace_0037,
+QuestionText,"1086 (Refer to Figure 21) You have been hired by a farmer to use your small unmanned aircraft to inspect his crops. The area that you are to survey is in the Devil’s Lake West MOA, east of area 2. How would you find out if the MOA is active?",
+Points,1,
+Difficulty,1,
+Option,100,Refer to the legend for special use airspace phone number.
+Option,0,This information is available in the Small UAS database.
+Option,0,Refer to the Military Operations Directory.
+NewQuestion,MC,
+Title,airspace_0038,
+QuestionText,"1088 (Refer to Figure 22, Area 2) At Coeur D’Alene which frequency should be used as a common Traffic Advisory Frequency (CTAF) to monitor airport traffic?",
+Points,1,
+Difficulty,1,
+Option,0,122.05 MHz
+Option,0,135.075 MHz
+Option,100,122.8 MHz
+NewQuestion,MC,
+Title,airspace_0039,
+QuestionText,1341 (Refer to Figure 52) On what frequency can you expect to monitor air traffic in and around Lincoln Airport?,
+Points,1,
+Difficulty,1,
+Option,100,118.5
+Option,0,122.95
+Option,0,124
+NewQuestion,MC,
+Title,airspace_0040,
+QuestionText,"1301 (Refer to Figure 26, Area 3) What type of flights are being conducted as indicated by IR678?",
+Points,1,
+Difficulty,1,
+Option,100,"An IFR military training route with at least one segment above 1,500 feet AGL."
+Option,0,"A VFR military training route entirely above 1,500 feet AGL."
+Option,0,"A VFR military training route entirely at or below 1,500 feet AGL."
+NewQuestion,MC,
+Title,airspace_0041,
+QuestionText,"1089 (Refer to Figure 26, Area 4) You have been hired to inspect the tower under construction at 46.9N and 98.6W, near Jamestown Regional (JMS). What must you receive prior to flying your unmanned aircraft in this area?",
+Points,1,
+Difficulty,1,
+Option,0,Authorization from the military.
+Option,100,Authorization from ATC.
+Option,0,Authorization from the National Park Service.
+NewQuestion,MC,
+Title,airspace_0042,
+QuestionText,"1090 (Refer to Figure 59, Area 2) The chart shows a gray line with “VR1667, VR1617, VR1638, and VR 1668. Could this area present a hazard to the operations of a small unmanned aircraft?",
+Points,1,
+Difficulty,1,
+Option,0,"No, all operations will be above 400 feet."
+Option,100,"Yes, this a Military Training Route from 1,500 feet AGL and below."
+Option,0,"Yes, the defined route provides traffic separation to manned aircraft."
+NewQuestion,MC,
+Title,airspace_0043,
+QuestionText,"1091 (Refer to Figure 24, Area 5) You are operating an sUAS in the vicinity of Sulphur Springs Airport (SLR) where there is active air traffic. Who has priority and right-of-way within the traffic pattern?",
+Points,1,
+Difficulty,1,
+Option,0,Priority and right-of-way goes to the aircraft closest to the landing runway.
+Option,0,The sUAS.
+Option,100,The existing manned aircraft.
+NewQuestion,MC,
+Title,airspace_0044,
+QuestionText,"1092 (Refer to Figure 71, Area 6) Sky Way Airport is",
+Points,1,
+Difficulty,1,
+Option,0,An airport restricted to use by private and recreational pilots.
+Option,0,A restricted military stage field within restricted airspace.
+Option,100,A non-public use airport.
+NewQuestion,MC,
+Title,airspace_0045,
+QuestionText,"1093 (Refer to Figure 71, Area 1.) In feet AGL, what is the floor of Class E airspace above Georgetown Airport (E36)?",
+Points,1,
+Difficulty,1,
+Option,0,The surface.
+Option,100,700 feet AGL.
+Option,0,"1,200 feet AGL."
+NewQuestion,MC,
+Title,airspace_0046,
+QuestionText,1094 (Refer to Figure 75). The airspace surrounding the Gila Bend AF AUX Airport (GXF) (area 6) is classified as Class,
+Points,1,
+Difficulty,1,
+Option,0,B
+Option,0,C
+Option,100,D
+NewQuestion,MC,
+Title,airspace_0047,
+QuestionText,"1095 Under what condition, if any, may remote pilots fly through a restricted Area?",
+Points,1,
+Difficulty,1,
+Option,0,When flying on airways with an ATC clearance.
+Option,100,With the controlling agency’s authorization.
+Option,0,Regulations do not allow this.
+NewQuestion,MC,
+Title,airspace_0049,
+QuestionText,"1309 (Refer to Figure 75, Area 6) During preflight planning, you plan to operate in R-2305. Where would you find additional information regarding this airspace?",
+Points,1,
+Difficulty,1,
+Option,100,In the Special Use Airspace area of the chart.
+Option,0,In the Aeronautical Information Manual.
+Option,0,In the Chart Supplements U.S.
+NewQuestion,MC,
+Title,airspace_0050,
+QuestionText,"1331 (Refer to Figure 24, Area 6) What type of airport is Card Airport?",
+Points,1,
+Difficulty,1,
+Option,0,Public towered.
+Option,0,Public non-towered.
+Option,100,Private non-towered.
+NewQuestion,MC,
+Title,airspace_0051,
+QuestionText,1096 (Refer to Figure 26) What does the line of latitude at area 4 measure?,
+Points,1,
+Difficulty,1,
+Option,0,The degrees of latitude east and west of the Prime Meridian.
+Option,100,The degrees of latitude north and south of the equator.
+Option,0,"The degrees of latitude east and west of the line that passes through Greenwich, England."
+NewQuestion,MC,
+Title,airspace_0052,
+QuestionText,"1101 (Refer to Figure 20, Area 2) Why would the small flag at Lake Drummond be important to a remote pilot?",
+Points,1,
+Difficulty,1,
+Option,100,"This a VFR check point for manned aircraft, and a higher volume of air traffic should be expected there."
+Option,0,This a GPS check point that can be used by both manned and remote pilots for orientation.
+Option,0,This indicates that there will be a large obstruction depicted on the next printing of the chart.
