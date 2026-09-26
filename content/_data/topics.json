@@ -97,7 +97,8 @@
         "slug": "flight-training",
         "resourceIds": [
           "remote-aircraft-textbook",
-          "flight-lab-rc"
+          "flight-lab-rc",
+          "fixed-wing-launch-video"
         ]
       },
       {
@@ -139,7 +140,8 @@
     "overview": [
       "ASCEND’s UAS work connects aircraft engineering with atmospheric research. Fixed-wing aircraft are intended to measure horizontal variability, while multirotor aircraft support detailed vertical profiles in the lower atmosphere.",
       "Teams will integrate sensors and data systems, test their platforms, and evaluate measurements alongside balloon and surface observations. The aircraft resources below support the engineering skills needed for that work.",
-      "YELLOWSTONE will serve primarily as an onboard data logger on UAS and will also transmit data to a ground station. It shares its PCB with the balloon system, while using a UAS-specific firmware variant."
+      "YELLOWSTONE will serve primarily as an onboard data logger on UAS and will also transmit data to a ground station. It shares its PCB with the balloon system, while using a UAS-specific firmware variant.",
+      "The Flight Training collection brings together simulator practice, aircraft references, and a fixed-wing launch demonstration. Additional learning-to-fly materials will be added here."
     ],
     "contextLinks": [
       {

@@ -6,6 +6,7 @@ order: 3
 permalink: /part107/airspace/
 objectives: []
 resourceIds:
+- tfr-video
 - dfw-airspace-chart
 - airspace-book
 - airspace-presentation

@@ -6,6 +6,9 @@ order: 5
 permalink: /part107/uas-operations/
 objectives: []
 resourceIds:
+- atis-listening-video
+- atis-captioned-video
+- flight-service-video
 - operations-video
 - uas-field-applications
 - operations-activity

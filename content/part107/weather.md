@@ -5,6 +5,8 @@ order: 4
 permalink: /part107/weather/
 objectives: []
 resourceIds:
+- metar-video
+- aviation-weather-video
 - weather-activity
 - airspace-book
 - weather-presentation
