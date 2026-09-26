@@ -51,10 +51,12 @@ links in the production build. `_preview/` is ignored by Git and must not be
 used as Cloudflare's deployment directory.
 
 Cloudflare Pages permits assets up to 25 MiB; large files should use object
-storage. No storage service or public uploads have been created by this import.
+storage. The eight large files were uploaded to the `ascend-files` R2 bucket on
+September 25, 2026, under `r2-upload/`. Their manifest URLs use the temporary
+public development endpoint; a custom downloads domain remains to be configured.
 [Cloudflare asset limits](https://developers.cloudflare.com/pages/platform/limits/)
 
-### Files still needing public storage
+### Large files hosted on R2
 
 Set the actual HTTPS `publicUrl` on each matching record in
 `content/_data/materials.json`. Both resource pages and local preview will use

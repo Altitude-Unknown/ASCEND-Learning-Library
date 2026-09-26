@@ -76,9 +76,13 @@ path prefix, update URL generation and Pagefind paths and rerun browser checks.
 ## Imported materials: deployment check
 
 Deploy `_site/`, never `_preview/`. The latter includes large local originals
-for private evaluation. Eight assets currently need public HTTPS storage URLs;
-see [the import inventory](IMPORTED-MATERIALS.md). Their pages remain navigable
-in the production build and show Download being prepared until connected.
+for private evaluation. Eight large assets use public R2 HTTPS URLs;
+see [the import inventory](IMPORTED-MATERIALS.md). The bucket is `ascend-files`, with objects under `r2-upload/`.
+The current endpoint is
+`https://pub-c44fad737a904733b8cd98e5e7e81ea9.r2.dev`.
+This rate-limited development endpoint is temporary: connect a custom R2 domain
+for ongoing public use, then replace the URL origin in the eight manifest records
+while preserving `/r2-upload/` and the filenames.
 
 `npm test` checks distribution-file hashes, original hashes when originals are
 present, asset coverage, and the 25 MiB distribution limit. Intake originals and

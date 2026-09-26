@@ -19,7 +19,7 @@
     "sha256": "5561d1da9eb4acd8d80bc834d7a2966f427a160407bbe47b58f8933c63b1f57d",
     "localPath": "local-materials/books-remote-aircraft-textbook.docx",
     "hostedLocally": false,
-    "publicUrl": ""
+    "publicUrl": "https://pub-c44fad737a904733b8cd98e5e7e81ea9.r2.dev/r2-upload/books-remote-aircraft-textbook.docx"
   },
   {
     "id": "powerpoints-aviation-regulatory-system-107",
@@ -52,7 +52,7 @@
     "sha256": "76b551c9f47bdcd5bf153f33f3c87c42cc4a5c5779fb91c7543767dd881e21bb",
     "localPath": "local-materials/powerpoints-national-airspace-system-107.pptx",
     "hostedLocally": false,
-    "publicUrl": ""
+    "publicUrl": "https://pub-c44fad737a904733b8cd98e5e7e81ea9.r2.dev/r2-upload/powerpoints-national-airspace-system-107.pptx"
   },
   {
     "id": "powerpoints-operations-107",
@@ -195,7 +195,7 @@
     "sha256": "0fe7539d9d29d8158841a070f01ef37687b69fd1c32042dba75203a18d614e29",
     "localPath": "local-materials/rc-airplanes-fixed-wing-research-uas-plane-v3.f3z",
     "hostedLocally": false,
-    "publicUrl": ""
+    "publicUrl": "https://pub-c44fad737a904733b8cd98e5e7e81ea9.r2.dev/r2-upload/rc-airplanes-fixed-wing-research-uas-plane-v3.f3z"
   },
   {
     "id": "rc-airplanes-fixed-wing-research-uas-tpu-64d-back",
@@ -382,7 +382,7 @@
     "sha256": "d82634dbd141e04165ca8c2e5e730b63938374be72263a785824be37b4651ba9",
     "localPath": "local-materials/rc-airplanes-trainer-airplane-au-assembly.f3z",
     "hostedLocally": false,
-    "publicUrl": ""
+    "publicUrl": "https://pub-c44fad737a904733b8cd98e5e7e81ea9.r2.dev/r2-upload/rc-airplanes-trainer-airplane-au-assembly.f3z"
   },
   {
     "id": "rc-airplanes-trainer-airplane-altitudeunknown-trainer-build-instructions",
@@ -393,7 +393,7 @@
     "sha256": "b58b0f27afc4974cd2b97e6df8a98dbce8e229918ec45ba750133d8a0e6f8c1b",
     "localPath": "local-materials/rc-airplanes-trainer-airplane-altitudeunknown-trainer-build-instructions.docx",
     "hostedLocally": false,
-    "publicUrl": ""
+    "publicUrl": "https://pub-c44fad737a904733b8cd98e5e7e81ea9.r2.dev/r2-upload/rc-airplanes-trainer-airplane-altitudeunknown-trainer-build-instructions.docx"
   },
   {
     "id": "rc-airplanes-trainer-airplane-dxfs-rudder-vert-stab",
@@ -558,7 +558,7 @@
     "sha256": "e8df98f4bd4b87479a1db255b9689b6a7c18de8a44a6f0fb0a71560ae6430401",
     "localPath": "local-materials/airspace.pdf",
     "hostedLocally": false,
-    "publicUrl": "",
+    "publicUrl": "https://pub-c44fad737a904733b8cd98e5e7e81ea9.r2.dev/r2-upload/airspace.pdf",
     "derived": true,
     "pages": 64
   },
@@ -610,7 +610,7 @@
     "sha256": "4e3a6a77821bf626287c071b1d61dbe9eacb293dcd018ecce3e5d98252405698",
     "localPath": "local-materials/regulations.pdf",
     "hostedLocally": false,
-    "publicUrl": "",
+    "publicUrl": "https://pub-c44fad737a904733b8cd98e5e7e81ea9.r2.dev/r2-upload/regulations.pdf",
     "derived": true,
     "pages": 49
   },
@@ -623,7 +623,7 @@
     "sha256": "bb367e00ba2e6a0526db0278f1ce18a86b57c858ef7cb06a4a6b42dbbbcbfc1a",
     "localPath": "local-materials/remote-aircraft-textbook.pdf",
     "hostedLocally": false,
-    "publicUrl": "",
+    "publicUrl": "https://pub-c44fad737a904733b8cd98e5e7e81ea9.r2.dev/r2-upload/remote-aircraft-textbook.pdf",
     "derived": true,
     "pages": 330
   },
