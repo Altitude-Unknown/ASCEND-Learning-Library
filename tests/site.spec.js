@@ -49,7 +49,7 @@ test('Keyboard navigation and mobile menu',async({page})=>{
 test('No fabricated files or unsolicited YouTube embeds', async({page})=>{
  await page.goto('/resources/airspace-video/');
  await expect(page.locator('iframe')).toHaveCount(0);
- await expect(page.getByRole('button',{name:'Watch video'})).toBeDisabled();
+ await expect(page.getByRole('button',{name:/Load video:/})).toBeVisible();
  await page.goto('/resources/sensor-mount/');
  await expect(page.getByRole('button',{name:'Download STL'})).toBeDisabled();
 });
@@ -112,7 +112,7 @@ test('New Part 107 activities and YELLOWSTONE documents have readable PDFs and n
 
 test('Published lessons load YouTube only on request and retain a direct link', async({page})=>{
  await page.route('https://www.youtube-nocookie.com/**',route=>route.fulfill({contentType:'text/html',body:'<title>Video test frame</title>'}));
- for(const [name,id] of [['regulations','6_vm2nQtgQM'],['operations','Z9VZ-8zJkJ4'],['loading-performance','Y0MSfvZialw']]){
+ for(const [name,id] of [['airspace','DUzC1lTjQJk'],['regulations','6_vm2nQtgQM'],['operations','Z9VZ-8zJkJ4'],['loading-performance','Y0MSfvZialw']]){
   await page.goto('/resources/'+name+'-video/');
   await expect(page.locator('iframe')).toHaveCount(0);
   await expect(page.getByRole('link',{name:/Watch on YouTube/})).toHaveAttribute('href','https://www.youtube.com/watch?v='+id);

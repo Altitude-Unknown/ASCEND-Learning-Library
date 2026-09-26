@@ -7,7 +7,6 @@ permalink: /part107/airspace/
 objectives: []
 resourceIds:
 - dfw-airspace-chart
-- airspace-worksheet
 - airspace-book
 - airspace-presentation
 - airspace-worksheet
@@ -19,6 +18,6 @@ status: Materials added
 
 ## How to use these materials
 
-Read Chapter 2, **National Airspace System**, in the complete study guide. The presentation covers airspace, charts, airport operations, and related topics. The worksheet, instructor notes, video, and quiz remain planned.
+Read Chapter 2, **National Airspace System**, in the complete study guide. The presentation covers airspace, charts, airport operations, and related topics. Watch the Airspace video and use the supplied worksheet and DFW chart handout for discussion. Dedicated instructor notes remain planned.
 
 The files are presented as supplied. The study guide notes updates relative to some of the original slide language; the import preserves both editions.
