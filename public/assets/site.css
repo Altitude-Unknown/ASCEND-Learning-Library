@@ -26,3 +26,6 @@
 .program-contents{margin-top:24px;border-top:1px solid var(--line);padding-top:12px}.program-contents summary{padding:10px 12px;min-height:44px;font-size:.85rem;font-weight:650;color:var(--green);cursor:pointer}.program-contents[open] summary{margin-bottom:8px}
 
 .provenance{margin:30px 0;padding:22px;border:1px solid var(--line);border-radius:var(--radius);background:var(--mint)}.provenance h2{font-size:1.6rem}.provenance dl{margin-bottom:0}.provenance dt{font-weight:650;margin-top:12px}.provenance dd{margin:3px 0 0;overflow-wrap:anywhere}.provenance ul{list-style:none;padding:0;margin:0}
+
+/* Keep setup commands readable on narrow resource pages. */
+.prose pre{white-space:pre-wrap;overflow-wrap:anywhere}

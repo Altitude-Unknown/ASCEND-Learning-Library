@@ -77,7 +77,8 @@
         "title": "Electronics",
         "slug": "electronics",
         "resourceIds": [
-          "remote-aircraft-textbook"
+          "remote-aircraft-textbook",
+          "transmitter-configurator"
         ]
       },
       {
@@ -91,7 +92,8 @@
         "title": "Flight Training",
         "slug": "flight-training",
         "resourceIds": [
-          "remote-aircraft-textbook"
+          "remote-aircraft-textbook",
+          "flight-lab-rc"
         ]
       },
       {
