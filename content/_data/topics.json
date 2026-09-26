@@ -571,7 +571,13 @@
     "tagline": "See the ideas in action.",
     "description": "Browse the video collection, with space for captions and transcripts alongside every lesson.",
     "icon": "play",
-    "subsections": []
+    "subsections": [],
+    "contextLinks": [
+      {
+        "title": "Visit ASCEND-BOREALIS on YouTube",
+        "url": "https://www.youtube.com/@ASCEND-BOREALIS"
+      }
+    ]
   },
   {
     "id": "downloads",
