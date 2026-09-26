@@ -5,6 +5,7 @@ order: 4
 permalink: /part107/weather/
 objectives: []
 resourceIds:
+- weather-activity
 - airspace-book
 - weather-presentation
 quiz: false

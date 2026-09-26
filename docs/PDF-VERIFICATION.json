@@ -86,5 +86,115 @@
     "tool": "PyMuPDF 1.28.2",
     "imageDpi": 160,
     "jpegQuality": 85
+  },
+  {
+    "file": "airspace-worksheet.pdf",
+    "pages": 1,
+    "originalBytes": 1892540,
+    "readingBytes": 395039,
+    "textPreserved": true,
+    "links": 0,
+    "tool": "PyMuPDF 1.28.2",
+    "imageDpi": 160,
+    "jpegQuality": 85
+  },
+  {
+    "file": "dfw-airspace-chart.pdf",
+    "pages": 1,
+    "originalBytes": 5263645,
+    "readingBytes": 1344849,
+    "textPreserved": true,
+    "links": 0,
+    "tool": "PyMuPDF 1.28.2",
+    "imageDpi": 160,
+    "jpegQuality": 85
+  },
+  {
+    "file": "dronezone-activity.pdf",
+    "pages": 1,
+    "originalBytes": 21368,
+    "readingBytes": 19213,
+    "textPreserved": true,
+    "links": 1,
+    "tool": "PyMuPDF 1.28.2",
+    "imageDpi": 160,
+    "jpegQuality": 85
+  },
+  {
+    "file": "loading-performance-activity.pdf",
+    "pages": 1,
+    "originalBytes": 653098,
+    "readingBytes": 534470,
+    "textPreserved": true,
+    "links": 0,
+    "tool": "PyMuPDF 1.28.2",
+    "imageDpi": 160,
+    "jpegQuality": 85
+  },
+  {
+    "file": "operations-activity.pdf",
+    "pages": 1,
+    "originalBytes": 5410312,
+    "readingBytes": 1202184,
+    "textPreserved": true,
+    "links": 0,
+    "tool": "PyMuPDF 1.28.2",
+    "imageDpi": 160,
+    "jpegQuality": 85
+  },
+  {
+    "file": "regulations-activity.pdf",
+    "pages": 2,
+    "originalBytes": 28326,
+    "readingBytes": 24093,
+    "textPreserved": true,
+    "links": 0,
+    "tool": "PyMuPDF 1.28.2",
+    "imageDpi": 160,
+    "jpegQuality": 85
+  },
+  {
+    "file": "uas-field-applications.pdf",
+    "pages": 1,
+    "originalBytes": 21347,
+    "readingBytes": 18058,
+    "textPreserved": true,
+    "links": 0,
+    "tool": "PyMuPDF 1.28.2",
+    "imageDpi": 160,
+    "jpegQuality": 85
+  },
+  {
+    "file": "weather-activity.pdf",
+    "pages": 2,
+    "originalBytes": 1915492,
+    "readingBytes": 462691,
+    "textPreserved": true,
+    "links": 0,
+    "tool": "PyMuPDF 1.28.2",
+    "imageDpi": 160,
+    "jpegQuality": 85
+  },
+  {
+    "file": "yellowstone-guide.pdf",
+    "pages": 41,
+    "originalBytes": 7658625,
+    "readingBytes": 2165137,
+    "textPreserved": true,
+    "links": 61,
+    "tool": "PyMuPDF 1.28.2",
+    "imageDpi": 160,
+    "jpegQuality": 85
+  },
+  {
+    "file": "yellowstone-io-map.pdf",
+    "pages": 1,
+    "originalBytes": 149635,
+    "readingBytes": 144301,
+    "textPreserved": true,
+    "links": 0,
+    "tool": "PyMuPDF 1.28.2",
+    "imageDpi": 160,
+    "jpegQuality": 85
   }
 ]

@@ -2,14 +2,17 @@
 Optional authoring tool: Python + PyMuPDF 1.28.2 (not used by the site build).
 """
 from pathlib import Path
-import json, hashlib, shutil
+import json, hashlib, shutil, sys
 import pymupdf
 ROOT=Path(__file__).resolve().parents[1]
 SOURCE=ROOT/'artifacts/pdf-exports'
 OUTPUT=ROOT/'artifacts/reading-copies'
 OUTPUT.mkdir(parents=True,exist_ok=True)
-report=[]
+report_path=ROOT/'artifacts/pdf-verification.json'
+selected=set(sys.argv[1:])
+report=[item for item in json.loads(report_path.read_text()) if Path(item['file']).stem not in selected] if selected and report_path.exists() else []
 for source in sorted(SOURCE.glob('*.pdf')):
+ if selected and source.stem not in selected: continue
  output=OUTPUT/source.name
  with pymupdf.open(source) as doc:
   before_text=[page.get_text() for page in doc]

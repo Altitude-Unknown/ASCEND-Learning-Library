@@ -4,7 +4,11 @@ The intake folder is `ASCEND-Materials/` inside this repository. It is preserved
 unchanged and ignored by Git. Back it up independently. The provided
 `ASCEND_Logo_v2.jpg` is copied unchanged to `public/assets/ascend-logo.jpg`.
 
-## What was incorporated
+## September 26 additions
+
+Added eight Part 107 activity/handout documents and six YELLOWSTONE originals, plus ten PDF reading copies. See [intake review](SEPTEMBER-26-INTAKE.md) for file grouping and review notes. All new files are hosted directly on Pages. The library now contains 40 resources and 82 material records.
+
+## Original September 24 import
 
 - 2 books: the FAA Remote Pilot Study Guide and Remote and Autonomous Aircraft Systems lab manual.
 - 5 Part 107 PowerPoint decks, linked to their corresponding modules.
@@ -13,7 +17,7 @@ unchanged and ignored by Git. Back it up independently. The provided
 - 8 derived PDF reading copies, exported locally using Microsoft Word/PowerPoint.
 - 2 aircraft project pages grouping the trainer and fixed-wing research UAS files.
 
-All 50 originals have manifest records and resource-page links. There are
+All 50 initial originals have manifest records and resource-page links. At that stage there were
 24 resource pages total, including the retained future-resource placeholders.
 Existing Airspace resource URLs were preserved: the old example book page now
 hosts the actual **complete** Part 107 study guide, clearly labeled as such.
@@ -92,8 +96,10 @@ Do not invent URLs or use expiring signed links for public educational files.
    GitHub checks need only the checked-in static files and Node dependencies.
 6. Run `npm test`, `npm run test:browser`, and review `npm run preview`.
 
-The eight PDF source mappings are listed in `scripts/export-pdfs.py`. Extend
+The initial eight PDF source mappings are listed in `scripts/export-pdfs.py`. Extend
 that list and the reading-copy registration map for additional documents.
 Metadata defaults do not assert an author, version, or reuse license unless
 supported by the supplied document. The manifest centralizes file delivery;
 resource Markdown remains the place for learner-facing titles and descriptions.
+
+Additional reading-copy mappings are in scripts/additional-reading-copies.json. Both export-pdfs.py and prepare-reading-copies.py accept optional PDF stems to process selected documents.

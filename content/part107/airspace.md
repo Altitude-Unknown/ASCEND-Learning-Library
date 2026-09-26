@@ -6,6 +6,8 @@ order: 3
 permalink: /part107/airspace/
 objectives: []
 resourceIds:
+- dfw-airspace-chart
+- airspace-worksheet
 - airspace-book
 - airspace-presentation
 - airspace-worksheet

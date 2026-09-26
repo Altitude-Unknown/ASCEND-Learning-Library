@@ -5,6 +5,7 @@ order: 6
 permalink: /part107/loading-and-performance/
 objectives: []
 resourceIds:
+- loading-performance-activity
 - airspace-book
 - loading-performance-presentation
 quiz: false

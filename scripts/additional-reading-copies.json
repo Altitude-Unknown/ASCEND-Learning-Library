@@ -1,0 +1,52 @@
+[
+  {
+    "source": "Part107 Activities/regulations.docx",
+    "name": "regulations-activity",
+    "resource": "regulations-activity"
+  },
+  {
+    "source": "Part107 Activities/Regulations and Airspace.docx",
+    "name": "airspace-worksheet",
+    "resource": "airspace-worksheet"
+  },
+  {
+    "source": "Part107 Activities/DFW-Airspace-full.docx",
+    "name": "dfw-airspace-chart",
+    "resource": "dfw-airspace-chart"
+  },
+  {
+    "source": "Part107 Activities/Weather.docx",
+    "name": "weather-activity",
+    "resource": "weather-activity"
+  },
+  {
+    "source": "Part107 Activities/Loading and Performance.docx",
+    "name": "loading-performance-activity",
+    "resource": "loading-performance-activity"
+  },
+  {
+    "source": "Part107 Activities/Operations Activity.docx",
+    "name": "operations-activity",
+    "resource": "operations-activity"
+  },
+  {
+    "source": "Part107 Activities/UAS Field  Applications.docx",
+    "name": "uas-field-applications",
+    "resource": "uas-field-applications"
+  },
+  {
+    "source": "Part107 Activities/waivers-registration-FRIA.docx",
+    "name": "dronezone-activity",
+    "resource": "dronezone-activity"
+  },
+  {
+    "source": "YELLOWSTONE/Yellowstone PCB.docx",
+    "name": "yellowstone-guide",
+    "resource": "yellowstone-guide"
+  },
+  {
+    "source": "YELLOWSTONE/YELLOWSTONE I-O Map.pptx",
+    "name": "yellowstone-io-map",
+    "resource": "yellowstone-io-map"
+  }
+]

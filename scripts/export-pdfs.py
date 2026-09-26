@@ -2,7 +2,7 @@
 Exports temporary copies, never saves or edits intake originals. Not part of CI.
 """
 from pathlib import Path
-import subprocess, shutil, hashlib, json
+import subprocess, shutil, hashlib, json, sys
 ROOT=Path(__file__).resolve().parents[1]
 JOBS=[
  ('Books/FAA Remote Pilot Study Guide.docx','part107-study-guide'),
@@ -14,7 +14,10 @@ JOBS=[
  ('PowerPoints/Operations-107.pptx','operations'),
  ('PowerPoints/Loading and Performance-107.pptx','loading-performance'),
 ]
+JOBS += [(job['source'],job['name']) for job in json.loads((ROOT/'scripts/additional-reading-copies.json').read_text())]
+selected=set(sys.argv[1:])
 for relative,name in JOBS:
+ if selected and name not in selected: continue
  source=ROOT/'ASCEND-Materials'/relative
  working=ROOT/'artifacts/conversion-inputs'/(name+source.suffix)
  output=ROOT/'artifacts/pdf-exports'/(name+'.pdf')

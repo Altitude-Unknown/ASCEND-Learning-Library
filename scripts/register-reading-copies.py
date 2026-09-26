@@ -7,6 +7,7 @@ previous={a['id']:a for a in json.loads(manifest.read_text())}
 assets=[a for a in previous.values() if not a.get('derived')]
 report=json.loads((ROOT/'artifacts/pdf-verification.json').read_text())
 resource_ids={'airspace':'airspace-presentation','regulations':'regulations-presentation','weather':'weather-presentation','operations':'operations-presentation','loading-performance':'loading-performance-presentation','part107-study-guide':'airspace-book','remote-aircraft-textbook':'remote-aircraft-textbook','trainer-build-instructions':'trainer-build-instructions'}
+resource_ids.update({job['name']:job['resource'] for job in json.loads((ROOT/'scripts/additional-reading-copies.json').read_text())})
 for item in report:
  source=ROOT/'artifacts/reading-copies'/item['file'];name=source.stem;asset_id=name+'-pdf'
  size=source.stat().st_size;hosted=size<=25*1024*1024

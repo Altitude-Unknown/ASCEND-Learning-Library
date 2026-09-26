@@ -6,6 +6,8 @@ order: 2
 permalink: /part107/regulations/
 objectives: []
 resourceIds:
+- dronezone-activity
+- regulations-activity
 - airspace-book
 - regulations-presentation
 quiz: false

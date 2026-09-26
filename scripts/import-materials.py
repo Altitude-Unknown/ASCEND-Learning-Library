@@ -21,9 +21,12 @@ def main():
             continue
         relative = path.relative_to(SOURCE).as_posix()
         asset_id = slug(str(Path(relative).with_suffix('')))
-        if path.suffix.lower() not in {'.docx','.pptx','.stl','.dxf','.f3d','.f3z','.pdf'}:
+        if sum(1 for sibling in path.parent.glob(path.stem + '.*') if sibling.is_file()) > 1:
+            asset_id += '-' + path.suffix[1:].lower()
+        asset_id = previous.get(relative, {}).get('id', asset_id)
+        if path.suffix.lower() not in {'.docx','.pptx','.stl','.dxf','.f3d','.f3z','.pdf','.xlsx','.brd','.sch'}:
             raise ValueError(f'Unreviewed file type: {relative}')
-        if path.suffix.lower() in {'.docx','.pptx'}:
+        if path.suffix.lower() in {'.docx','.pptx','.xlsx','.f3z'}:
             with zipfile.ZipFile(path) as archive:
                 bad = archive.testzip()
                 if bad: raise ValueError(f'Corrupt archive entry: {relative}: {bad}')

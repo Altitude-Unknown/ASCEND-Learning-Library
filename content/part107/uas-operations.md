@@ -6,6 +6,8 @@ order: 5
 permalink: /part107/uas-operations/
 objectives: []
 resourceIds:
+- uas-field-applications
+- operations-activity
 - airspace-book
 - operations-presentation
 quiz: false

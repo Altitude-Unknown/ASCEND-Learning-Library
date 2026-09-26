@@ -114,7 +114,9 @@
         "title": "Scientific Payloads",
         "slug": "scientific-payloads",
         "resourceIds": [
-          "remote-aircraft-textbook"
+          "remote-aircraft-textbook",
+          "yellowstone-guide",
+          "yellowstone-io-map"
         ]
       }
     ],
@@ -280,11 +282,18 @@
       },
       {
         "title": "Balloon Systems",
-        "slug": "balloon-systems"
+        "slug": "balloon-systems",
+        "resourceIds": [
+          "yellowstone-guide"
+        ]
       },
       {
         "title": "Payload Design",
-        "slug": "payload-design"
+        "slug": "payload-design",
+        "resourceIds": [
+          "yellowstone-buildsheet",
+          "yellowstone-design-files"
+        ]
       },
       {
         "title": "Flight Planning",
@@ -300,7 +309,10 @@
       },
       {
         "title": "Sensors",
-        "slug": "sensors"
+        "slug": "sensors",
+        "resourceIds": [
+          "yellowstone-io-map"
+        ]
       },
       {
         "title": "Scientific Investigations",
