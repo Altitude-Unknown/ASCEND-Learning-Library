@@ -14,7 +14,7 @@ audience:
 assetIds:
 - trainer-build-instructions-pdf
 - rc-airplanes-trainer-airplane-altitudeunknown-trainer-build-instructions
-updated: '2026-09-23'
+updated: '2026-09-26'
 format: PDF / DOCX
 author: Mike Walach
 related:
@@ -37,6 +37,10 @@ platforms:
 The supplied guide is headed **ASCEND Trainer Airplane**, designed by Mike Walach, 2026. It includes a parts list, tools and materials, wing construction, foamboard and plywood tail options, optional landing gear, and final assembly.
 
 Start at the [Trainer Airplane project page](/uas/trainer-airplane/) for the matching printed parts, DXF outlines, and Fusion assembly.
+
+## Updated guide
+
+The September 26 reading copy has **113 pages**, including revised tail assembly and control-horn details, receiver connections, and final flight-control checks. The updated PDF is available below; the editable Word download is being updated.
 
 ## Printing materials
 

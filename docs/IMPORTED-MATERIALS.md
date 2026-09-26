@@ -4,6 +4,10 @@ The intake folder is `ASCEND-Materials/` inside this repository. It is preserved
 unchanged and ignored by Git. Back it up independently. The provided
 `ASCEND_Logo_v2.jpg` is copied unchanged to `public/assets/ascend-logo.jpg`.
 
+## Trainer guide replacement — September 26
+
+The revised trainer guide replaces the previous 105-page reading copy with a verified 113-page PDF (22.2 MiB), hosted directly on Pages. The new Word original is 211.7 MiB and awaits R2 upload; its old public URL was cleared so the current resource cannot download the superseded edition. Prepared object: r2-upload/trainer-build-instructions-2026-09-26.docx in ascend-files. The previous edition is backed up locally under artifacts/trainer-guide-previous.
+
 ## September 26 additions
 
 Added eight Part 107 activity/handout documents and six YELLOWSTONE originals, plus ten PDF reading copies. See [intake review](SEPTEMBER-26-INTAKE.md) for file grouping and review notes. All new files are hosted directly on Pages. The library now contains 40 resources and 82 material records.

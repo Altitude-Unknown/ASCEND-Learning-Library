@@ -477,11 +477,11 @@
     "source": "RC-Airplanes/Trainer-Airplane/AltitudeUnknown_Trainer_Build_Instructions.docx",
     "filename": "AltitudeUnknown_Trainer_Build_Instructions.docx",
     "format": "DOCX",
-    "bytes": 203563779,
-    "sha256": "b58b0f27afc4974cd2b97e6df8a98dbce8e229918ec45ba750133d8a0e6f8c1b",
+    "bytes": 222002709,
+    "sha256": "8e532c74e74ef2a5146b2b98878534410735e50aea1c70bf65c79457bae3d8a9",
     "localPath": "local-materials/rc-airplanes-trainer-airplane-altitudeunknown-trainer-build-instructions.docx",
     "hostedLocally": false,
-    "publicUrl": "https://pub-c44fad737a904733b8cd98e5e7e81ea9.r2.dev/r2-upload/rc-airplanes-trainer-airplane-altitudeunknown-trainer-build-instructions.docx"
+    "publicUrl": ""
   },
   {
     "id": "rc-airplanes-trainer-airplane-dxfs-rudder-vert-stab",
@@ -782,19 +782,6 @@
     "pages": 330
   },
   {
-    "id": "trainer-build-instructions-pdf",
-    "source": "trainer-build-instructions.pdf",
-    "filename": "trainer-build-instructions.pdf",
-    "format": "PDF",
-    "bytes": 21493180,
-    "sha256": "0e03b98183e24482a996c2fa9a576284b57cf334a22a0ef51efccf96c33b6634",
-    "localPath": "downloads/imported/trainer-build-instructions.pdf",
-    "hostedLocally": true,
-    "publicUrl": "",
-    "derived": true,
-    "pages": 105
-  },
-  {
     "id": "weather-pdf",
     "source": "weather.pdf",
     "filename": "weather.pdf",
@@ -936,5 +923,18 @@
     "publicUrl": "",
     "derived": true,
     "pages": 1
+  },
+  {
+    "id": "trainer-build-instructions-pdf",
+    "source": "trainer-build-instructions.pdf",
+    "filename": "trainer-build-instructions.pdf",
+    "format": "PDF",
+    "bytes": 23277068,
+    "sha256": "75b1106b71e40e2954a26306ba92ce576a58f79303b4e79185249109ac3d82fc",
+    "localPath": "downloads/imported/trainer-build-instructions.pdf",
+    "hostedLocally": true,
+    "publicUrl": "",
+    "derived": true,
+    "pages": 113
   }
 ]
