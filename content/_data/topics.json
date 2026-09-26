@@ -78,7 +78,11 @@
         "slug": "electronics",
         "resourceIds": [
           "remote-aircraft-textbook",
-          "transmitter-configurator"
+          "transmitter-configurator",
+          "yellowstone-guide",
+          "yellowstone-io-map",
+          "yellowstone-buildsheet",
+          "yellowstone-design-files"
         ]
       },
       {
@@ -134,7 +138,8 @@
     ],
     "overview": [
       "ASCEND’s UAS work connects aircraft engineering with atmospheric research. Fixed-wing aircraft are intended to measure horizontal variability, while multirotor aircraft support detailed vertical profiles in the lower atmosphere.",
-      "Teams will integrate sensors and data systems, test their platforms, and evaluate measurements alongside balloon and surface observations. The aircraft resources below support the engineering skills needed for that work."
+      "Teams will integrate sensors and data systems, test their platforms, and evaluate measurements alongside balloon and surface observations. The aircraft resources below support the engineering skills needed for that work.",
+      "YELLOWSTONE will serve primarily as an onboard data logger on UAS and will also transmit data to a ground station. It shares its PCB with the balloon system, while using a UAS-specific firmware variant."
     ],
     "contextLinks": [
       {
@@ -300,8 +305,11 @@
         "slug": "flight-planning"
       },
       {
-        "title": "Tracking",
-        "slug": "tracking"
+        "title": "Tracking & Flight Termination",
+        "slug": "tracking",
+        "resourceIds": [
+          "yellowstone-guide"
+        ]
       },
       {
         "title": "Recovery",
@@ -332,7 +340,8 @@
     ],
     "overview": [
       "Small meteorological balloons with radiosondes provide profiles of temperature, pressure, humidity, and wind. Larger high-altitude balloons support student-integrated payloads for particulate measurements and other observations through a deeper atmospheric column.",
-      "ASCEND plans to combine these observations with UAS and surface measurements. Shared sensing, data logging, and comparison practices will help teams connect observations across platforms."
+      "ASCEND plans to combine these observations with UAS and surface measurements. Shared sensing, data logging, and comparison practices will help teams connect observations across platforms.",
+      "Balloons will use YELLOWSTONE for tracking, flight termination, and data logging. The same PCB will also fly on UAS, with a separate HAB firmware variant for the balloon mission."
     ],
     "contextLinks": [
       {

@@ -17,6 +17,8 @@ updated: '2026-09-26'
 permalink: /resources/yellowstone-io-map/
 subjects:
 - Sensors & Instrumentation
+- High-Altitude Balloons
+- UAS
 - Data Collection
 assetIds:
 - yellowstone-io-map-pdf
@@ -35,7 +37,7 @@ related:
 
 A visual reference for YELLOWSTONE board headers, signal names, power, and ground.
 
-Use the related YELLOWSTONE resources together when studying the board or planning a payload.
+YELLOWSTONE is shared hardware for ASCEND balloon and UAS payloads. Use the related resources together when studying the board or planning a payload. [Compare its balloon and UAS roles and firmware variants](/resources/yellowstone-guide/#platform-roles).
 
 ## Notes for using the supplied material
 

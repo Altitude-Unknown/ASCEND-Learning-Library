@@ -16,6 +16,8 @@ updated: '2026-09-26'
 permalink: /resources/yellowstone-design-files/
 subjects:
 - Sensors & Instrumentation
+- High-Altitude Balloons
+- UAS
 - Data Collection
 assetIds:
 - yellowstone-walach-aerospace-cubesat-f3z
@@ -35,7 +37,7 @@ related:
 
 Fusion electronics archive, EAGLE schematic, and board layout for studying or adapting the supplied YELLOWSTONE design.
 
-Use the related YELLOWSTONE resources together when studying the board or planning a payload.
+YELLOWSTONE is shared hardware for ASCEND balloon and UAS payloads. Use the related resources together when studying the board or planning a payload. [Compare its balloon and UAS roles and firmware variants](/resources/yellowstone-guide/#platform-roles).
 
 ## Notes for using the supplied material
 
