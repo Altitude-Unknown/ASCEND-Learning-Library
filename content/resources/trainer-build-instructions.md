@@ -40,7 +40,7 @@ Start at the [Trainer Airplane project page](/uas/trainer-airplane/) for the mat
 
 ## Updated guide
 
-The September 26 reading copy has **113 pages**, including revised tail assembly and control-horn details, receiver connections, and final flight-control checks. The updated PDF is available below; the editable Word download is being updated.
+The September 26 reading copy has **113 pages**, including revised tail assembly and control-horn details, receiver connections, and final flight-control checks. The updated PDF and editable Word document are both available below.
 
 ## Printing materials
 

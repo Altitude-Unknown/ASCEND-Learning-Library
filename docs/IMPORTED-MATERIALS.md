@@ -6,7 +6,7 @@ unchanged and ignored by Git. Back it up independently. The provided
 
 ## Trainer guide replacement — September 26
 
-The revised trainer guide replaces the previous 105-page reading copy with a verified 113-page PDF (22.2 MiB), hosted directly on Pages. The new Word original is 211.7 MiB and awaits R2 upload; its old public URL was cleared so the current resource cannot download the superseded edition. Prepared object: r2-upload/trainer-build-instructions-2026-09-26.docx in ascend-files. The previous edition is backed up locally under artifacts/trainer-guide-previous.
+The revised trainer guide replaces the previous 105-page reading copy with a verified 113-page PDF (22.2 MiB), hosted directly on Pages. The new Word original is 211.7 MiB and is hosted in ascend-files at r2-upload/AltitudeUnknown_Trainer_Build_Instructions.docx. Its full downloaded size and SHA-256 match the updated source. The previous edition is backed up locally under artifacts/trainer-guide-previous.
 
 ## September 26 additions
 
