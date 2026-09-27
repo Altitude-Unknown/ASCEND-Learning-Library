@@ -70,7 +70,13 @@
         "slug": "aircraft-construction",
         "resourceIds": [
           "remote-aircraft-textbook",
-          "trainer-build-instructions"
+          "trainer-build-instructions",
+          "esc-programming-video",
+          "spektrum-model-setup-video",
+          "motor-esc-connection-video",
+          "esc-receiver-connection-video",
+          "venom-battery-charger-video",
+          "spektrum-binding-video"
         ]
       },
       {
@@ -82,7 +88,13 @@
           "yellowstone-guide",
           "yellowstone-io-map",
           "yellowstone-buildsheet",
-          "yellowstone-design-files"
+          "yellowstone-design-files",
+          "esc-programming-video",
+          "spektrum-model-setup-video",
+          "motor-esc-connection-video",
+          "esc-receiver-connection-video",
+          "venom-battery-charger-video",
+          "spektrum-binding-video"
         ]
       },
       {
@@ -105,7 +117,8 @@
         "title": "Mission Planning",
         "slug": "mission-planning",
         "resourceIds": [
-          "remote-aircraft-textbook"
+          "remote-aircraft-textbook",
+          "mission-planner-video"
         ]
       },
       {

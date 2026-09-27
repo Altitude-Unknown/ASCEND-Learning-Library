@@ -5,6 +5,12 @@ description: Build the trainer with illustrated instructions, 64D TPU and PETG p
   tail patterns, and the original Fusion assembly.
 permalink: /uas/trainer-airplane/
 resourceIds:
+- esc-programming-video
+- spektrum-model-setup-video
+- motor-esc-connection-video
+- esc-receiver-connection-video
+- venom-battery-charger-video
+- spektrum-binding-video
 - trainer-build-instructions
 - trainer-tpu-parts
 - trainer-petg-parts
@@ -24,3 +30,7 @@ Mike Walach’s illustrated instructions cover the parts list, foamboard wing, c
 - **Fusion:** the original `AU-Assembly.f3z` archive.
 
 Follow the guide’s material assignments. Original filenames are retained in every download list.
+
+## Construction and setup videos
+
+The supporting videos cover motor and ESC connections, ESC programming, receiver connections, Spektrum radio setup and binding, and a Venom battery charger demonstration. Choose the clips that match your equipment alongside the written guide.
