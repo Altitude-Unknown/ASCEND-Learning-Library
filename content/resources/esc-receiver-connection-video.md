@@ -1,7 +1,7 @@
 ---
 id: esc-receiver-connection-video
-title: Connecting an ESC to a Receiver
-description: An ASCEND-BOREALIS demonstration of connecting an ESC to a Receiver.
+title: How to connect an esc to receiver
+description: An ASCEND-BOREALIS demonstration of how to connect an ESC to a receiver.
 topic: uas
 kind: Video
 audience:

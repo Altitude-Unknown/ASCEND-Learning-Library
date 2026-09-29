@@ -1,7 +1,7 @@
 ---
 id: spektrum-binding-video
-title: Binding a Spektrum Transmitter and Receiver
-description: An ASCEND-BOREALIS demonstration of binding a Spektrum Transmitter and Receiver.
+title: Bind a Spektrum transmitter to a reciever
+description: An ASCEND-BOREALIS demonstration of binding a Spektrum transmitter to a receiver.
 topic: uas
 kind: Video
 audience:

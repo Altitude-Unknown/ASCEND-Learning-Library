@@ -1,7 +1,7 @@
 ---
 id: venom-battery-charger-video
-title: Charging a Battery with a Venom Charger
-description: An ASCEND-BOREALIS demonstration of charging a Battery with a Venom Charger.
+title: How to add a new model to a Spektrum Dx6e transmitter.
+description: An ASCEND-BOREALIS demonstration of adding a new model to a Spektrum DX6e transmitter.
 topic: uas
 kind: Video
 audience:

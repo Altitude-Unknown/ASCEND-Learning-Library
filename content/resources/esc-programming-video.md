@@ -1,7 +1,7 @@
 ---
 id: esc-programming-video
-title: Programming an ESC
-description: An ASCEND-BOREALIS demonstration of programming an ESC.
+title: How to program an esc
+description: An ASCEND-BOREALIS demonstration of how to program an ESC.
 topic: uas
 kind: Video
 audience:

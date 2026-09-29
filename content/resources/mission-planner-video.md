@@ -1,6 +1,6 @@
 ---
 id: mission-planner-video
-title: Mission Planner Demonstration
+title: Mission planner demo
 description: An ASCEND-BOREALIS demonstration of Mission Planner software for UAS mission planning.
 topic: uas
 kind: Video

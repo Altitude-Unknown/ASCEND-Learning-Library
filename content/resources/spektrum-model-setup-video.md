@@ -1,7 +1,7 @@
 ---
 id: spektrum-model-setup-video
-title: Setting Up an Aircraft on a Spektrum Transmitter
-description: An ASCEND-BOREALIS demonstration of setting Up an Aircraft on a Spektrum Transmitter.
+title: How to set up dual rates and expo on a Spektrum transmitter.
+description: An ASCEND-BOREALIS demonstration of setting up dual rates and expo on a Spektrum transmitter.
 topic: uas
 kind: Video
 audience:

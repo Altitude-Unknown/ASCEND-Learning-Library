@@ -1,7 +1,7 @@
 ---
 id: motor-esc-connection-video
-title: Connecting a Motor to an ESC
-description: An ASCEND-BOREALIS demonstration of connecting a Motor to an ESC.
+title: How to connect a motor to esc
+description: An ASCEND-BOREALIS demonstration of how to connect a motor to an ESC.
 topic: uas
 kind: Video
 audience:
