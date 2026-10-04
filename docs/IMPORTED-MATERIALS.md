@@ -4,6 +4,13 @@ The intake folder is `ASCEND-Materials/` inside this repository. It is preserved
 unchanged and ignored by Git. Back it up independently. The provided
 `ASCEND_Logo_v2.jpg` is copied unchanged to `public/assets/ascend-logo.jpg`.
 
+## Trainer DXF replacement — October 4
+
+The six original trainer tail drawings have been replaced with
+`horizontal-feathers.dxf` and `vertical-feathers.dxf`. The resource page and
+published downloads now use these two byte-identical copies of the new originals.
+The September inventory below describes the original intake.
+
 ## Trainer guide replacement — September 26
 
 The revised trainer guide replaces the previous 105-page reading copy with a verified 113-page PDF (22.2 MiB), hosted directly on Pages. The new Word original is 211.7 MiB and is hosted in ascend-files at r2-upload/AltitudeUnknown_Trainer_Build_Instructions.docx. Its full downloaded size and SHA-256 match the updated source. The previous edition is backed up locally under artifacts/trainer-guide-previous.

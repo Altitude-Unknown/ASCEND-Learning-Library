@@ -1,7 +1,7 @@
 ---
 id: trainer-dxf-patterns
 title: Trainer Airplane — DXF Tail Patterns
-description: Six supplied tail-pattern files, including conventional and V-tail variants.
+description: Two DXF patterns for the trainer airplane’s horizontal and vertical tailfeathers.
 topic: fabrication
 kind: CAD model
 status: Available
@@ -11,13 +11,9 @@ audience:
 - Faculty Mentors
 - Pod Leads
 assetIds:
-- rc-airplanes-trainer-airplane-dxfs-rudder-vert-stab
-- rc-airplanes-trainer-airplane-dxfs-t-tail-elevator-stab
-- rc-airplanes-trainer-airplane-dxfs-v-tail-45-foam
-- rc-airplanes-trainer-airplane-dxfs-v-tail-45-2mm-ply
-- rc-airplanes-trainer-airplane-dxfs-rudder-vert-stab-1
-- rc-airplanes-trainer-airplane-dxfs-ruddervaterdxf
-updated: '2026-09-23'
+- rc-airplanes-trainer-airplane-dxfs-horizontal-feathers
+- rc-airplanes-trainer-airplane-dxfs-vertical-feathers
+updated: '2026-10-04'
 format: DXF
 related:
 - trainer-build-instructions
@@ -33,10 +29,11 @@ platforms:
 
 ## About these files
 
-Six supplied tail-pattern files, including conventional and V-tail variants.
+Two DXF patterns for the trainer airplane’s horizontal and vertical tailfeathers.
 
 These downloads preserve the original file contents and filenames. Visit the [aircraft project page](/uas/trainer-airplane/) for the related components.
 
-## Tail variants
+## Tail patterns
 
-The similarly named rudder files are not byte-for-byte duplicates. They are kept separately; select the drawing that matches your intended tail configuration.
+- **Horizontal tailfeathers:** `horizontal-feathers.dxf`
+- **Vertical tailfeathers:** `vertical-feathers.dxf`

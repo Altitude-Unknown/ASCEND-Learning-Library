@@ -26,7 +26,7 @@ Mike Walach’s illustrated instructions cover the parts list, foamboard wing, c
 
 - **64D TPU:** fuselage, nose, canopy, servo brackets, empennage clips, and landing gear.
 - **PETG:** motor mounting, wing supports and clips, a control horn, and tail clips.
-- **DXF:** six supplied tail drawings, kept as separate variants.
+- **DXF:** two patterns for the horizontal and vertical tailfeathers.
 - **Fusion:** the original `AU-Assembly.f3z` archive.
 
 Follow the guide’s material assignments. Original filenames are retained in every download list.
