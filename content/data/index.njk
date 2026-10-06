@@ -1,0 +1,39 @@
+---
+layout: layouts/base.njk
+title: ASCEND Data Explorer
+description: Explore atmospheric measurements, trajectories, and vertical profiles from ASCEND missions.
+permalink: /data/
+dataApp: explorer
+---
+<div class="container data-page" id="data-explorer" data-api="{{ dataExplorer.apiBase }}">
+ <span class="eyebrow">Atmospheric science · Shared observations</span>
+ <h1>ASCEND Data Explorer</h1>
+ <p class="lead">Follow a flight. Explore the atmosphere. Connect measurements across platforms.</p>
+ <div class="data-actions"><a href="/data/upload/">Upload a CSV</a><a href="/data/standard/">Data standard & template</a></div>
+ {% if dataExplorer.demo %}<p class="data-notice"><strong>DEMO / SYNTHETIC DATA</strong> — These three missions and all measurements are generated examples. They are not real ASCEND observations or participating institutions.</p>{% else %}<p class="data-notice">Showing approved public missions. Check each mission’s license and QC status before using its measurements.</p>{% endif %}
+ <noscript><p>The interactive explorer requires JavaScript. Download the <a href="/assets/data/demo/fixed_wing_uas.csv">synthetic fixed-wing example</a>, <a href="/assets/data/demo/hab.csv">synthetic HAB example</a>, or <a href="/assets/data/demo/radiosonde.csv">synthetic radiosonde example</a> to explore in a spreadsheet.</p></noscript>
+ <form id="explorer-filters" class="data-filters" aria-label="Filter scientific observations">
+  <label>Year<input id="year" name="year" type="number" min="1900" max="2200" placeholder="All years" list="year-options"><datalist id="year-options"></datalist></label>
+  <label>Institution<select id="institution" name="institution"><option value="">All institutions</option></select></label>
+  <label>Team<select id="team" name="team"><option value="">All teams</option></select></label>
+  <label>Platform<select id="platform" name="platform"><option value="">All platforms</option><option value="fixed_wing_uas">Fixed-wing UAS</option><option value="multirotor_uas">Multirotor UAS</option><option value="hab">High-altitude balloon</option><option value="radiosonde">Radiosonde</option><option value="ground_station">Ground station</option></select></label>
+  <label class="data-wide">Mission<select id="mission" name="mission" aria-label="Mission"><option value="">All missions</option></select></label>
+  <label>Measurement<select id="parameter" name="parameter" aria-label="Measurement"><option value="pm1_ugm3">PM1</option><option value="pm25_ugm3" selected>PM2.5</option><option value="pm10_ugm3">PM10</option><option value="temperature_c">Temperature</option><option value="relative_humidity_pct">Relative humidity</option><option value="pressure_hpa">Pressure</option><option value="wind_speed_ms">Wind speed</option><option value="wind_direction_deg">Wind direction</option></select></label>
+  <label>Start date (UTC)<input id="from" name="from" type="date"></label>
+  <label>End date (UTC)<input id="to" name="to" type="date"></label>
+  <label>Minimum altitude (m MSL)<input name="altitude_min" type="number" step="any"></label>
+  <label>Maximum altitude (m MSL)<input name="altitude_max" type="number" step="any"></label>
+  <div class="data-actions"><button class="button" type="submit">Apply filters</button><button class="button outline" id="reset-filters" type="button">Reset</button></div>
+ </form>
+ <p id="catalog-notice"></p><p id="map-limit-notice"></p>
+ <p id="explorer-status" class="data-status" role="status" aria-live="polite">Loading observations…</p>
+ <section aria-labelledby="map-heading"><h2 id="map-heading">Mission map</h2><p>Choose a mission marker or use the mission selector. Pan or zoom to filter by geographic area. The basemap shows coarse land boundaries.</p><div id="mission-map" class="data-map" role="region" aria-label="Interactive mission map"></div><div id="legend" class="data-legend" aria-label="Measurement legend"></div></section>
+ <div class="data-actions"><button id="load-more" class="button outline" disabled>Load next 1,000 observations</button><button id="download-csv" class="button outline" disabled>Download displayed CSV</button><button id="download-geojson" class="button outline" disabled>Download displayed GeoJSON</button></div>
+ <p class="small">Downloads include only displayed observations and provenance. CSV also downloads a metadata JSON file; allow both downloads in your browser. Missing positions remain in non-geographic results but cannot appear inside a map extent filter.</p>
+ <div class="data-charts"><section aria-labelledby="time-heading"><h2 id="time-heading">Time series</h2><div id="time-chart" class="data-chart"></div></section><section aria-labelledby="profile-heading"><h2 id="profile-heading">Vertical profile</h2><p class="small">Select a radiosonde mission and temperature, humidity, pressure, or wind. Height uses measured MSL altitude.</p><div id="profile-chart" class="data-chart"></div></section></div>
+ <section aria-labelledby="observations-heading"><h2 id="observations-heading">Observations</h2><p>Use Inspect for coordinates, sensor information, source provenance and QC details. “No screening flags” does not imply scientific approval.</p>
+ <div class="data-table-wrap" tabindex="0" role="region" aria-label="Scrollable observation table"><table class="data-table"><thead><tr><th scope="col">UTC timestamp</th><th scope="col">Mission</th><th scope="col">Altitude (m MSL)</th><th scope="col" id="value-column">Measurement</th><th scope="col">QC</th><th scope="col">Details</th></tr></thead><tbody id="observation-rows"></tbody></table></div>
+ <div class="data-actions"><button id="table-prev" class="button outline" disabled>Previous table page</button><span id="table-page">Page 1</span><button id="table-next" class="button outline" disabled>Next table page</button></div>
+ </section>
+ <section aria-labelledby="point-heading"><h2 id="point-heading">Point inspection</h2><div id="point-detail" aria-live="polite">Select an observation to inspect it.</div></section>
+</div>

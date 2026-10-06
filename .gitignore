@@ -25,3 +25,10 @@ Hosted-Website-Files/
 
 # Updated trainer-guide intake; publish the prepared distribution files.
 /AltitudeUnknown_Trainer_Build_Instructions.docx
+
+# Data Explorer generated bundles and local service configuration.
+/public/assets/data/dist/
+/data-api/.wrangler/
+/data-api/wrangler.local.jsonc
+**/.dev.vars
+**/.dev.vars.*

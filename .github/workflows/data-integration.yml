@@ -1,0 +1,35 @@
+name: Data Explorer PostGIS integration
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  postgis:
+    runs-on: ubuntu-latest
+    services:
+      database:
+        image: postgis/postgis:16-3.5
+        # Isolated disposable CI service only. No production credentials or URLs.
+        env:
+          POSTGRES_HOST_AUTH_METHOD: trust
+        ports:
+          - 5432/tcp
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+          cache: npm
+      - run: npm ci
+      - run: npm run test:integration
+        env:
+          ASCEND_DISPOSABLE_DATABASE: '1'
+          PGHOST: localhost
+          PGPORT: ${{ job.services.database.ports[5432] }}
+          PGUSER: postgres
+          PGDATABASE: postgres
+      - run: npm run check:api
