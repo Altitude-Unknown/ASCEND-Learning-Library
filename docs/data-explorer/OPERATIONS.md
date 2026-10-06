@@ -182,8 +182,9 @@ storage are V2 work; V1 records upload metadata and parser provenance only.
 
 Local tests cover shared parsing/conversion/QC, authorization, signed confirmation,
 R2-before-database behavior, exports, frontend interaction/accessibility and existing
-site regression checks. `npm run test:integration` requires a disposable PostGIS
-database in `TEST_DATABASE_URL`; it checks real migration/import/spatial queries.
+site regression checks. `npm run test:integration` requires an empty disposable PostGIS
+database, `ASCEND_DISPOSABLE_DATABASE=1`, and either a private `TEST_DATABASE_URL`
+or standard `PGHOST`, `PGPORT`, `PGUSER`, `PGDATABASE` and authentication settings; it checks real migration/import/spatial queries.
 GitHub's data integration job runs this against an isolated PostGIS service.
 Cloud resources must still receive an end-to-end smoke test after provisioning.
 No local/mock test demonstrates a deployed Hyperdrive or R2 connection.
@@ -200,3 +201,11 @@ GeoServer/OGC, NASA adapters, and real-time telemetry.
 - [Hyperdrive setup](https://developers.cloudflare.com/hyperdrive/get-started/)
 - [R2 Worker API and conditional writes](https://developers.cloudflare.com/r2/api/workers/workers-api-reference/)
 - [MapLibre examples](https://maplibre.org/maplibre-gl-js/docs/examples/)
+
+## Dependency audit at implementation
+
+The audit reports existing Eleventy development-tool dependencies (`braces` and
+`sprintf-js`, with transitive entries). Its suggested automatic fix downgrades
+Eleventy to 0.6.0; that incompatible change was not applied. These packages do not
+run in the scientific Worker or browser bundles. Track upstream compatible fixes
+separately. Re-run `npm audit` as advisory data changes.

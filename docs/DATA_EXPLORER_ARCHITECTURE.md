@@ -81,3 +81,22 @@ parameter/altitude data and can later feed Skew-T/log-P. Larger imports should u
 R2 staged uploads, Queues and resumable jobs; large exports should use asynchronous
 R2 artifacts. Vector tiles, temporal/spatial aggregates, NetCDF, KML, OGC services,
 calibration histories, NASA dataset adapters and telemetry are separate extensions.
+
+## V1 implementation result
+
+The planned routes, Worker API, migration, original-file archive adapter, shared
+CSV pipeline, sample data and documentation are implemented. The demonstration
+is explicitly synthetic. The map uses bundled MapLibre and Natural Earth land
+boundaries; no map account or tiles URL is assumed. Mission markers honor filters
+and use a launch/study site or the first valid committed position.
+
+The public UI loads at most 1,000 observations per request and 5,000 for display.
+Mission markers are bounded to 100 matches per query, with a notice when partial.
+Exports say when they are partial; the API supports further keyset pagination.
+The single-team filter and scatter plots are V1; multiple-team selection and
+comparison styling remain V2. There is no 3-D mode presented as implemented.
+
+Database behavior is checked in CI against an actual disposable PostGIS instance.
+R2 is a test adapter in that integration test. No production scientific database,
+Hyperdrive binding, private archive or authentication secret has been provisioned.
+The code lives on a feature branch for review rather than changing production main.

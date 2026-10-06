@@ -19,7 +19,8 @@
     "dev:api": "wrangler dev --config data-api/wrangler.jsonc",
     "check:api": "wrangler deploy --dry-run --config data-api/wrangler.jsonc",
     "demo:data": "node scripts/data-explorer/generate-demo.mjs",
-    "test:integration": "node data-api/tests/integration.mjs"
+    "test:integration": "node data-api/tests/integration.mjs",
+    "format:data": "prettier --write \"src/data/*.js\" \"data-api/src/*.js\" \"data-api/tests/*.{js,mjs}\" \"scripts/data-explorer/*.mjs\" content/_data/dataExplorer.js tests/data-explorer.spec.js public/assets/data/data.css"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.1.2",
@@ -27,6 +28,7 @@
     "@playwright/test": "^1.63.0",
     "esbuild": "^0.28.2",
     "pagefind": "^1.4.0",
+    "prettier": "^3.9.9",
     "topojson-client": "^3.1.0",
     "world-atlas": "^2.0.2",
     "wrangler": "^4.147.0"
