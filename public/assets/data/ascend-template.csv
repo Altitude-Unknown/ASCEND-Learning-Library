@@ -1,0 +1,1 @@
+project,team_id,mission_id,platform,timestamp_utc,latitude,longitude,altitude_msl_m,altitude_agl_m,pm1_ugm3,pm25_ugm3,pm10_ugm3,temperature_c,relative_humidity_pct,pressure_hpa,wind_speed_ms,wind_direction_deg,sensor,qc_flag

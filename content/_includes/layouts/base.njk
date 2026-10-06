@@ -7,6 +7,7 @@
 <meta name="theme-color" content="#102f3a">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/assets/site.css">
+{% if dataApp %}<link rel="stylesheet" href="/assets/data/dist/maplibre.css"><link rel="stylesheet" href="/assets/data/data.css"><script type="module" src="/assets/data/dist/{{ dataApp }}.js"></script>{% endif %}
 {% if practiceApp %}<link rel="stylesheet" href="/assets/practice/app.css"><script type="module" src="/assets/practice/app.js"></script>{% endif %}
 {% if searchPage %}<link rel="stylesheet" href="/pagefind/pagefind-ui.css"><script src="/pagefind/pagefind-ui.js" defer></script>{% endif %}
 <script src="/assets/site.js" defer></script>
@@ -21,10 +22,11 @@
  <nav aria-label="Primary navigation" class="desktop-nav">
  <a href="/library/"{% if page.url == '/library/' %} aria-current="page"{% endif %}>Resource library</a>
  <a href="/part107/"{% if topic == 'part107' or section.id == 'part107' %} aria-current="page"{% endif %}>FAA Part 107</a>
+ <a href="/data/"{% if dataApp %} aria-current="page"{% endif %}>Data Explorer</a>
  <a href="/teachers/"{% if page.url == '/teachers/' %} aria-current="page"{% endif %}>Faculty & Pods</a>
  </nav>
  <div class="header-actions"><a class="search-link" href="/search/" aria-label="Search"><svg class="icon" aria-hidden="true"><use href="#i-search"/></svg><span>Search</span></a>
- <details class="topic-menu"><summary>Explore <span aria-hidden="true">＋</span></summary><nav aria-label="Explore all topics">{% for item in programNavigation %}<a href="{{ item.url }}">{{ item.title }}</a>{% endfor %}<a href="/library/">All resources</a>{% for t in topics %}<a href="/{{ t.id }}/">{{ t.title }}</a>{% endfor %}</nav></details></div>
+ <details class="topic-menu"><summary>Explore <span aria-hidden="true">＋</span></summary><nav aria-label="Explore all topics">{% for item in programNavigation %}<a href="{{ item.url }}">{{ item.title }}</a>{% endfor %}<a href="/data/">Data Explorer</a><a href="/library/">All resources</a>{% for t in topics %}<a href="/{{ t.id }}/">{{ t.title }}</a>{% endfor %}</nav></details></div>
  </div>
 </header>
 <main id="main" tabindex="-1"{% if page.url != '/search/' and page.url != '/404.html' %} data-pagefind-body{% endif %}>

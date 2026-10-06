@@ -1,0 +1,27 @@
+---
+layout: layouts/base.njk
+title: ASCEND Data Upload
+description: Map, validate, and preview atmospheric CSV data before an administrator imports it.
+permalink: /data/upload/
+dataApp: upload
+---
+<div class="container data-page" id="data-upload" data-api="{{ dataExplorer.apiBase }}">
+ <span class="eyebrow">Scientific data · Import review</span><h1>ASCEND Data Upload</h1>
+ <p class="lead">Inspect a CSV, confirm its columns and units, and review its measurements before import.</p>
+ <div class="data-actions"><a href="/data/">Data Explorer</a><a href="/data/standard/">Format guide & CSV template</a><a href="/assets/data/demo/radiosonde.csv" download>Download synthetic practice CSV</a></div>
+ <p class="data-notice">{% if dataExplorer.demo %}<strong>Local preview only.</strong> No upload service is configured. Your file stays in this browser; final import is disabled.{% else %}<strong>Administrator workflow.</strong> Preview in your browser first. Server validation sends the file to the API; final confirmation archives it and imports observations. Publishing requires separate approval.{% endif %}</p>
+ <noscript><p>This CSV preview requires JavaScript. Use the format guide to prepare your file.</p></noscript>
+ <section aria-labelledby="file-heading"><h2 id="file-heading">1. Select a CSV</h2><label class="data-file-label">CSV file (UTF-8; up to 2 MiB and 5,000 rows)<input id="csv-file" type="file" accept=".csv,text/csv"></label></section>
+ <section id="mapping-section" hidden aria-labelledby="mapping-heading"><h2 id="mapping-heading">2. Confirm columns & units</h2><p>Recognized names are suggestions. Confirm every unit. Leave irrelevant fields unmapped. Timestamps need an explicit timezone.</p><div id="column-mapping" class="data-mapping"></div><button id="validate-csv" class="button" type="button">Validate & preview</button></section>
+ <p id="upload-status" class="data-status" role="status" aria-live="polite">Choose a file to begin.</p>
+ <section id="preview-section" hidden aria-labelledby="preview-heading"><h2 id="preview-heading">3. Review observations</h2><div id="upload-summary"></div><div id="upload-map" class="data-map" role="region" aria-label="CSV GPS track preview"></div><div id="upload-warnings"></div></section>
+ <section aria-labelledby="import-heading"><h2 id="import-heading">4. Confirm administrator import</h2><p>The original file is archived unchanged. Rows with QC flags are retained. Credentials are kept in memory only.</p>
+ <fieldset id="server-controls" {% if dataExplorer.demo %}disabled{% endif %}><legend>Server validation and import</legend>
+ <label>Administrator token<input id="admin-token" type="password" autocomplete="off" spellcheck="false"></label><button id="connect-admin" class="button outline" type="button">Load import destinations</button>
+ <label>Mission, platform & sensor configuration<select id="import-context"><option value="">Choose a configured destination</option></select></label>
+ <button id="server-preview" class="button outline" type="button" disabled>Validate with server</button>
+ <label class="data-checkbox"><input id="qc-ack" type="checkbox">I reviewed the preview and acknowledge all QC flags. Preserve every row and the original file.</label>
+ <label class="data-checkbox"><input id="confirm-ack" type="checkbox">I confirm that this file belongs to the selected mission and sensor configuration.</label>
+ <button id="confirm-import" class="button" type="button" disabled>Archive original & import observations</button>
+ </fieldset></section>
+</div>

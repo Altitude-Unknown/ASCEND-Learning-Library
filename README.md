@@ -144,3 +144,20 @@ can run on another static host without Eleventy, Node, or Cloudflare services.
 The supplied practice app is integrated at `/part107/practice-tests/`. See
 [the review and maintenance notes](docs/PRACTICE-TEST-REVIEW.md) for corrections,
 held questions, source CSVs, figure checks, and regeneration instructions.
+
+## ASCEND Data Explorer
+
+`/data/` adds a labeled synthetic demonstration, MapLibre trajectories, filters,
+point inspection, time series, altitude profiles and CSV/GeoJSON export.
+`/data/upload/` previews and validates CSV locally; administrator import requires
+a configured Worker, Hyperdrive, private R2 bucket and PostgreSQL/PostGIS.
+
+- [Architecture and V1 design](docs/DATA_EXPLORER_ARCHITECTURE.md)
+- [Setup, deployment, secrets and recovery](docs/data-explorer/OPERATIONS.md)
+- [Data standard](docs/ASCEND_DATA_STANDARD.md)
+- [API](docs/data-explorer/API.md) and [schema](docs/data-explorer/SCHEMA.md)
+
+No new Cloudflare resources or scientific database are assumed to exist. Leave
+`ASCEND_DATA_API_BASE` unset for the synthetic demo; set it only to your deployed
+API's actual origin. Build browser bundles with `npm run build:data` after changing
+`src/data/`; the normal build and preview commands include this step.
