@@ -8,8 +8,17 @@ import {
   MAX_BYTES,
 } from "./core.js";
 import { createMap } from "./map.js";
+import { initializeClerk } from "./session.js";
 const $ = (id) => document.getElementById(id),
   api = $("data-upload").dataset.api;
+const teamMode = new URLSearchParams(location.search).get('team') === '1';
+let clerkPromise;
+if (teamMode) {
+  $("admin-token").closest('label').hidden = true;
+  $("import-heading").textContent = '4. Confirm team upload';
+  document.querySelector('.data-notice').textContent = 'Team upload. Preview and validate your file, then archive and import it into your team mission. Public release requires administrator approval.';
+  $("connect-admin").textContent = 'Load my team missions';
+}
 let file,
   parsed,
   normalized,
@@ -164,7 +173,14 @@ $("validate-csv").addEventListener("click", () => {
   }
 });
 async function request(path, options = {}) {
-  const token = $("admin-token").value;
+  let token;
+  if (teamMode) {
+    clerkPromise ||= initializeClerk($("data-upload"));
+    const clerk = await clerkPromise;
+    if (!clerk.session) throw new Error('Sign in at Team Login first.');
+    token = await clerk.session.getToken();
+    path = path.replace('/api/admin/', '/api/team/');
+  } else token = $("admin-token").value;
   if (!token) throw new Error("Enter an administrator token.");
   const r = await fetch(api + path, {
     ...options,
@@ -176,6 +192,7 @@ async function request(path, options = {}) {
 }
 $("connect-admin").addEventListener("click", async () => {
   try {
+    status('Loading mission destinations…');
     const body = await request("/api/admin/missions");
     contexts = body.data;
     const select = $("import-context");
@@ -195,7 +212,7 @@ $("connect-admin").addEventListener("click", async () => {
     status(
       contexts.length
         ? "Choose the mission and sensor configuration."
-        : "No import destinations exist. Create mission metadata using the setup guide.",
+        : teamMode ? 'No missions yet. Create a mission in your team workspace first.' : "No import destinations exist. Create mission metadata using the setup guide.",
     );
   } catch (e) {
     status(e.message);

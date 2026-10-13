@@ -5,7 +5,7 @@ description: Map, validate, and preview atmospheric CSV data before an administr
 permalink: /data/upload/
 dataApp: upload
 ---
-<div class="container data-page" id="data-upload" data-api="{{ dataExplorer.apiBase }}">
+<div class="container data-page" id="data-upload" data-api="{{ dataExplorer.apiBase }}" data-clerk-key="{{ dataExplorer.clerkKey }}" data-clerk-domain="{{ dataExplorer.clerkDomain }}">
  <span class="eyebrow">Scientific data · Import review</span><h1>ASCEND Data Upload</h1>
  <p class="lead">Inspect a CSV, confirm its columns and units, and review its measurements before import.</p>
  <div class="data-actions"><a href="/data/">Data Explorer</a><a href="/data/standard/">Format guide & CSV template</a><a href="/assets/data/demo/radiosonde.csv" download>Download synthetic practice CSV</a></div>

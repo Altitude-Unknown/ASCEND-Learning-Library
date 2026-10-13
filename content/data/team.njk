@@ -12,5 +12,25 @@ dataApp: team
  <p id="team-status" class="data-status" role="status" aria-live="polite">Loading sign-in…</p>
  <div id="team-sign-in"></div>
  <section id="team-account" hidden><h2 id="team-name">Your account</h2><div id="team-user-button"></div><p id="team-role"></p></section>
+ <section id="team-workspace" hidden>
+ <div class="data-actions"><a href="/data/upload/?team=1">Upload a CSV to my team</a></div>
+ <h2>Create a mission</h2><p>New missions stay private until approved by the ASCEND administrator. Use a separate mission for each flight.</p>
+ <form id="mission-form" class="data-mapping">
+ <label>Mission name<input name="name" required maxlength="160"></label>
+ <label>Mission date<input name="mission_date" type="date" required></label>
+ <label>Faculty mentor / investigator<input name="principal_investigator" maxlength="160"></label>
+ <label>Data license<select name="data_license" required><option value="">Choose a license</option><option value="CC0-1.0">CC0 — public domain dedication</option><option value="CC-BY-4.0">CC BY 4.0 — attribution required</option><option value="All rights reserved">All rights reserved</option></select></label>
+ <label>Platform type<select name="platform_type" required><option value="hab">High-altitude balloon</option><option value="fixed_wing_uas">Fixed-wing UAS</option><option value="multirotor_uas">Multirotor UAS</option><option value="radiosonde">Radiosonde</option><option value="ground_station">Ground station</option></select></label>
+ <label>Platform name<input name="platform_name" required maxlength="160"></label>
+ <label>Sensor / logger name<input name="sensor_name" required maxlength="160"></label>
+ <label>Sensor / logger model<input name="sensor_model" maxlength="160"></label>
+ <label>Description<textarea name="description" maxlength="4000"></textarea></label>
+ <label class="data-checkbox"><input name="synthetic" type="checkbox">Synthetic test mission (no real observations)</label>
+ <button class="button" type="submit">Create private mission</button>
+ </form>
+ <p id="mission-status" class="data-status" role="status" aria-live="polite"></p>
+ <h2>My missions</h2><div id="my-missions"></div>
+ <h2>My uploads</h2><div id="my-uploads"></div>
+ </section>
  <noscript><p>Team sign-in requires JavaScript.</p></noscript>
 </div>

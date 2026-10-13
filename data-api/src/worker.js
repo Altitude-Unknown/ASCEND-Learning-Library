@@ -10,6 +10,7 @@ import {
 import { parseFilters, UUID } from "../../src/data/filters.js";
 import * as repository from "./repository.js";
 import { verifySession, requireAccount } from "./auth.js";
+import * as teamPortal from "./team.js";
 const encoder = new TextEncoder();
 function fail(message, status = 400) {
   throw Object.assign(new Error(message), { status });
@@ -68,9 +69,9 @@ export async function readTicket(ticket, secret) {
     fail("Preview expired; validate the file again.");
   return payload;
 }
-async function limitedBody(request) {
+async function limitedBytes(request, maximum = MAX_BYTES + 65536) {
   const length = Number(request.headers.get("content-length"));
-  if (length > MAX_BYTES + 65536)
+  if (length > maximum)
     fail("Upload exceeds the V1 size limit.", 413);
   if (!request.body) fail("Missing upload.");
   const reader = request.body.getReader(),
@@ -80,7 +81,7 @@ async function limitedBody(request) {
     const { done, value } = await reader.read();
     if (done) break;
     size += value.length;
-    if (size > MAX_BYTES + 65536) {
+    if (size > maximum) {
       await reader.cancel();
       fail("Upload exceeds the V1 size limit.", 413);
     }
@@ -92,11 +93,14 @@ async function limitedBody(request) {
     bytes.set(c, offset);
     offset += c.length;
   }
-  return new Response(bytes, {
+  return bytes;
+}
+async function limitedBody(request) {
+  return new Response(await limitedBytes(request), {
     headers: { "Content-Type": request.headers.get("content-type") || "" },
   }).formData();
 }
-async function upload(request, env, db, path) {
+async function upload(request, env, db, path, account) {
   if (!env.ORIGINALS || !env.IMPORT_SIGNING_SECRET)
     fail("Upload storage and signing secret are not configured.", 503);
   const form = await limitedBody(request),
@@ -129,6 +133,10 @@ async function upload(request, env, db, path) {
   )
     fail("Mission, sensor configuration, mapping and units are required.");
   const context = await repository.resolveContext(db, meta);
+  if (account) {
+    teamPortal.authorizeContext(account, context);
+    context.subject = account.subject;
+  }
   let normalized;
   try {
     normalized = normalizeCSV(
@@ -148,6 +156,7 @@ async function upload(request, env, db, path) {
         meta,
         parserVersion: normalized.parserVersion,
         expires: Date.now() + 15 * 60 * 1000,
+        ...(account ? { subject: account.subject, team_id: account.team_id } : {}),
       },
       env.IMPORT_SIGNING_SECRET,
     );
@@ -164,6 +173,8 @@ async function upload(request, env, db, path) {
     form.get("ticket"),
     env.IMPORT_SIGNING_SECRET,
   );
+  if (account ? payload.subject !== account.subject || payload.team_id !== account.team_id : !!payload.subject)
+    fail("Preview belongs to a different account. Validate again.", 403);
   if (
     payload.parserVersion !== normalized.parserVersion ||
     payload.sha !== sha ||
@@ -254,10 +265,12 @@ export async function handle(
     const isUpload = [
       "/api/admin/imports/preview",
       "/api/admin/imports/confirm",
+      "/api/team/imports/preview",
+      "/api/team/imports/confirm",
     ].includes(path);
     if (
       (isUpload && request.method !== "POST") ||
-      (!isUpload && request.method !== "GET")
+      (!isUpload && request.method !== "GET" && !(path === "/api/team/missions" && request.method === "POST"))
     )
       fail("Method not allowed.", 405);
     if (!env.HYPERDRIVE) fail("Scientific database is not configured.", 503);
@@ -266,11 +279,24 @@ export async function handle(
       await db.query("SET statement_timeout = '12s'");
       if (team) {
         const account = await requireAccount(db, subject);
-        if (path !== "/api/team/me") fail("API route not found.", 404);
+        if (isUpload) response = await upload(request, env, db, path, account);
+        else if (path === "/api/team/workspace") response = json(await teamPortal.workspace(db, account));
+        else if (path === "/api/team/missions" && request.method === "POST") {
+          const raw = await limitedBytes(request, 16384);
+          let input;
+          try { input = JSON.parse(new TextDecoder().decode(raw)); } catch { fail("Invalid mission details."); }
+          response = json(await teamPortal.createMission(db, account, input), 201);
+        }
+        else if (path === "/api/team/missions" && request.method === "GET") {
+          const rows = await teamPortal.contexts(db, account);
+          response = json({ data: rows.slice(0,1000), truncated: rows.length > 1000 });
+        }
+        else if (path === "/api/team/me") {
         const result = account.team_id
           ? await db.query("SELECT id,name FROM teams WHERE id=$1", [account.team_id])
           : { rows: [] };
         response = json({ account, team: result.rows[0] || null });
+        } else fail("API route not found.", 404);
       }
       else if (isUpload) response = await upload(request, env, db, path);
       else if (path === "/api/admin/missions")

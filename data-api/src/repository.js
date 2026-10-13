@@ -160,6 +160,10 @@ export async function saveImport(
       return { id: prior.rows[0].id, duplicate: true };
     }
     const id = inserted.rows[0].id;
+    if (context.subject) {
+      await db.query('UPDATE data_files SET uploaded_by=$1 WHERE id=$2', [context.subject,id]);
+      await db.query("INSERT INTO portal_audit_events(subject,team_id,action,resource_id) VALUES($1,$2,'import_file',$3)", [context.subject,context.team_id,id]);
+    }
     for (let i = 0; i < normalized.rows.length; i += 100) {
       const rows = normalized.rows.slice(i, i + 100);
       await db.query(
