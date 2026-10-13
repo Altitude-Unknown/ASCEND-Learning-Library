@@ -18,5 +18,12 @@ export default function () {
         "ASCEND_DATA_API_BASE must be an HTTPS origin (HTTP localhost is allowed for development).",
       );
   }
-  return { apiBase, demo: !apiBase };
+  const clerkKey = process.env.ASCEND_CLERK_PUBLISHABLE_KEY || "";
+  let clerkDomain = "";
+  if (clerkKey) {
+    if (!/^pk_(test|live)_[A-Za-z0-9_-]+$/.test(clerkKey)) throw new Error("Invalid Clerk publishable key.");
+    clerkDomain = Buffer.from(clerkKey.split("_")[2], "base64").toString("utf8").replace(/\$$/, "");
+    if (!/^[a-z0-9]+(?:[.-][a-z0-9]+)+$/.test(clerkDomain)) throw new Error("Invalid Clerk frontend domain.");
+  }
+  return { apiBase, demo: !apiBase, clerkKey, clerkDomain };
 }

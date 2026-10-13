@@ -1,5 +1,5 @@
 import pg from "pg";
-import { readFileSync } from "node:fs";
+import { readFileSync, readdirSync } from "node:fs";
 if (!process.env.DATABASE_URL)
   throw new Error(
     "Set DATABASE_URL in your shell or secret manager; never commit it.",
@@ -16,12 +16,13 @@ try {
         (r) => r.version,
       )
     : [];
-  if (!applied.includes(1)) {
-    await db.query(
-      readFileSync("data-api/migrations/001_scientific_data.sql", "utf8"),
-    );
-    console.log("Applied scientific schema version 1.");
-  } else console.log("Scientific schema is current.");
+  for (const filename of readdirSync("data-api/migrations").filter(name => /^\d+_.*\.sql$/.test(name)).sort()) {
+    const version = Number(filename.split("_")[0]);
+    if (applied.includes(version)) continue;
+    await db.query(readFileSync("data-api/migrations/" + filename, "utf8"));
+    console.log("Applied scientific schema version " + version + ".");
+  }
+  console.log("Scientific schema is current.");
 } finally {
   await db.end();
 }

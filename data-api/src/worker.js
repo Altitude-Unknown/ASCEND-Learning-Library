@@ -9,6 +9,7 @@ import {
 } from "../../src/data/core.js";
 import { parseFilters, UUID } from "../../src/data/filters.js";
 import * as repository from "./repository.js";
+import { verifySession, requireAccount } from "./auth.js";
 const encoder = new TextEncoder();
 function fail(message, status = 400) {
   throw Object.assign(new Error(message), { status });
@@ -219,6 +220,12 @@ export async function handle(
     if (request.method === "OPTIONS")
       return decorate(new Response(null, { status: 204 }), origin, allowed);
     const admin = path.startsWith("/api/admin/");
+    const team = path.startsWith("/api/team/");
+    let subject;
+    if (team) {
+      const authorization = request.headers.get("authorization") || "";
+      subject = await verifySession(authorization.startsWith("Bearer ") ? authorization.slice(7) : null, env);
+    }
     if (admin) {
       if (!env.ADMIN_TOKEN)
         fail("Administrator uploads are not configured.", 503);
@@ -257,7 +264,15 @@ export async function handle(
     const db = await connect();
     try {
       await db.query("SET statement_timeout = '12s'");
-      if (isUpload) response = await upload(request, env, db, path);
+      if (team) {
+        const account = await requireAccount(db, subject);
+        if (path !== "/api/team/me") fail("API route not found.", 404);
+        const result = account.team_id
+          ? await db.query("SELECT id,name FROM teams WHERE id=$1", [account.team_id])
+          : { rows: [] };
+        response = json({ account, team: result.rows[0] || null });
+      }
+      else if (isUpload) response = await upload(request, env, db, path);
       else if (path === "/api/admin/missions")
         response = json({
           data: await repository.importContexts(db),

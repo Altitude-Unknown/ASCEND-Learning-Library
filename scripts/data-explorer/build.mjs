@@ -4,7 +4,7 @@ import { feature } from "topojson-client";
 const output = "public/assets/data/dist";
 mkdirSync(output, { recursive: true });
 await build({
-  entryPoints: ["src/data/explorer.js", "src/data/upload.js"],
+  entryPoints: ["src/data/explorer.js", "src/data/upload.js", "src/data/team.js"],
   outdir: output,
   bundle: true,
   format: "esm",

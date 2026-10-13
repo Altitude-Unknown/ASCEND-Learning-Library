@@ -1,0 +1,16 @@
+---
+layout: layouts/base.njk
+title: ASCEND Team Login
+description: Sign in to your ASCEND team workspace.
+permalink: /data/team/
+dataApp: team
+---
+<div class="container data-page" id="team-portal" data-api="{{ dataExplorer.apiBase }}" data-clerk-key="{{ dataExplorer.clerkKey }}" data-clerk-domain="{{ dataExplorer.clerkDomain }}">
+ <span class="eyebrow">ASCEND · Team workspace</span>
+ <h1>Team login</h1>
+ <p class="lead">Use your team's designated account. Team access is assigned by the ASCEND administrator.</p>
+ <p id="team-status" class="data-status" role="status" aria-live="polite">Loading sign-in…</p>
+ <div id="team-sign-in"></div>
+ <section id="team-account" hidden><h2 id="team-name">Your account</h2><div id="team-user-button"></div><p id="team-role"></p></section>
+ <noscript><p>Team sign-in requires JavaScript.</p></noscript>
+</div>
