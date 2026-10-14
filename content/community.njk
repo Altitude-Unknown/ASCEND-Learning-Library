@@ -10,10 +10,12 @@ dataApp: community
  <p class="lead">Ask a question, share your progress, and help fellow ASCEND members. All groups are shared with signed-in ASCEND members.</p>
  <p id="community-status" class="data-status" role="status" aria-live="polite">Loading member sign-in…</p>
  <div id="community-sign-in"></div><div id="community-user"></div>
+ <form id="enrollment-form" hidden><h2>Request ASCEND membership</h2><p>A moderator or administrator must approve your account before you can access discussions or uploads.</p><label>Your name<input name="display_name" required maxlength="80"></label><label>School or project affiliation<input name="affiliation" maxlength="200"></label><button class="button" type="submit">Request membership</button></form>
+ <section id="membership-review" hidden><h2>Membership requests</h2><div id="membership-requests"></div></section>
  <div id="community-board" hidden class="community-layout">
  <aside><h2>Groups</h2><nav id="community-groups" aria-label="Discussion groups"></nav>
  <form id="group-form" hidden><h3>Create a group</h3><label>Group name<input name="name" required maxlength="120"></label><label>Description<textarea name="description" maxlength="1000"></textarea></label><button class="button" type="submit">Create group</button></form></aside>
- <section><h2 id="group-heading">Choose a group</h2><p id="group-description"></p>
+ <section><h2 id="group-heading">Choose a group</h2><p id="group-description"></p><div id="group-tools"></div>
  <form id="topic-form" hidden><h3>Start a conversation</h3><label>Topic title<input name="title" required maxlength="160"></label><label>Message<textarea name="body" required maxlength="8000" rows="5"></textarea></label><button class="button" type="submit">Post topic</button></form>
  <div id="community-topics"></div><button id="more-topics" type="button" class="button outline" hidden>More topics</button>
  <section id="conversation" hidden><h2 id="topic-heading"></h2><div id="topic-tools" class="data-actions"></div><div id="community-posts"></div><button id="more-posts" type="button" class="button outline" hidden>More replies</button>

@@ -33,6 +33,6 @@ export async function requireAccount(db, subject) {
   const { rows } = await db.query(
     'SELECT subject,role,team_id,display_name,owner FROM portal_accounts WHERE subject=$1 AND active=true', [subject],
   );
-  if (rows.length !== 1) denied('Your account has not been assigned access. Contact the ASCEND administrator.', 403);
+  if (rows.length !== 1) denied('Your membership is awaiting approval or has been disabled. Open Community to request access.', 403);
   return rows[0];
 }

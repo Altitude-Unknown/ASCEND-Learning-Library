@@ -31,12 +31,12 @@ export async function saveMember(db,account,input){
  const subject=text(input.subject,'Clerk user ID',255),name=text(input.display_name,'display name',80);
  if(!/^user_[A-Za-z0-9]+$/.test(subject)||!['member','moderator','administrator'].includes(input.role)||typeof input.active!=='boolean')fail('Invalid member details.');
  const team=input.team_id||null;
- if((team&&!UUID.test(team))||(input.role==='member'&&!team))fail('Assign members to a team.');
+ if(team&&!UUID.test(team))fail('Invalid team assignment.');
  return transaction(db,async()=>{
    await db.query('SELECT pg_advisory_xact_lock(81462027)');
    const existing=(await db.query('SELECT role,owner FROM portal_accounts WHERE subject=$1 FOR UPDATE',[subject])).rows[0];
    if(existing?.owner)fail('The project owner account cannot be changed here.',403);
-   if((input.role==='administrator'||existing?.role==='administrator')&&!account.owner)fail('Only the project owner can assign or change administrators.',403);
+   if((['moderator','administrator'].includes(input.role)||['moderator','administrator'].includes(existing?.role))&&!account.owner)fail('Only the project owner can assign or change staff roles.',403);
    if(input.role==='administrator'&&input.active){const result=await db.query("SELECT count(*)::integer AS count FROM portal_accounts WHERE role='administrator' AND active AND NOT owner AND subject<>$1",[subject]);if(result.rows[0].count>=12)fail('Up to 12 active helper administrators are supported.');}
    if(team&&!(await db.query('SELECT id FROM teams WHERE id=$1',[team])).rows.length)fail('Team not found.',404);
    await db.query('INSERT INTO portal_accounts(subject,role,team_id,display_name,active) VALUES($1,$2,$3,$4,$5) ON CONFLICT(subject) DO UPDATE SET role=EXCLUDED.role,team_id=EXCLUDED.team_id,display_name=EXCLUDED.display_name,active=EXCLUDED.active WHERE NOT portal_accounts.owner',[subject,input.role,team,name,input.active]);

@@ -36,10 +36,10 @@ export async function administratorWorkspace(root,clerk) {
     if(!data.files.length) files.textContent='No imports yet.';
     const memberForm=document.getElementById('member-form');
     const select=document.getElementById('member-team');
-    if(select){const selected=select.value;select.replaceChildren();const blank=element('option','No team (staff only)');blank.value='';select.append(blank);for(const team of data.teams){const option=element('option',team.name);option.value=team.id;select.append(option);}select.value=selected;}
+    if(select){const selected=select.value;select.replaceChildren();const blank=element('option','No team assigned');blank.value='';select.append(blank);for(const team of data.teams){const option=element('option',team.name);option.value=team.id;select.append(option);}select.value=selected;}
     const members=document.getElementById('administrator-members');
     if(members){members.replaceChildren();for(const row of data.members||[]){const card=element('article','');card.append(element('h3',row.display_name||'ASCEND member'),element('p',`${row.role} · ${row.team||'Project staff'} · ${row.active?'Active':'Disabled'}${row.owner?' · Project owner':''}`));if(!row.owner&&(data.owner||row.role!=='administrator'))action(card,'Edit member',async()=>{for(const field of ['subject','display_name','team_id','role'])memberForm.elements[field].value=row[field]||'';memberForm.elements.active.checked=row.active;memberForm.scrollIntoView({block:'start'});});members.append(card);}}
-    if(memberForm) memberForm.querySelector('option[value="administrator"]').disabled=!data.owner;
+    if(memberForm) for(const role of ['moderator','administrator'])memberForm.querySelector('option[value="'+role+'"]').disabled=!data.owner;
     if(data.truncated) status.textContent='Showing at most 1,000 records per list.';
   }
   await refresh();document.getElementById('administrator-workspace').hidden=false;

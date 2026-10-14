@@ -46,3 +46,24 @@ Cache-Control: no-store and require server-verified sessions plus active members
 Rate limits, content validation and bounded paging supplement authentication.
 Testing membership/deactivation and content moderation on the live database remains
 part of rollout; local browser fixtures are not live identity verification.
+
+## Membership approval and group deletion — October 14, 2026
+
+Run migration 006 once as Neon owner before deploying this revision. New verified
+Clerk sessions can request membership from Community, but cannot read discussions
+or upload until approved. Moderators and administrators review pending requests in
+Community. Approval grants only ordinary membership, without a team assignment;
+a team assignment remains necessary to create missions or upload. Rejected and
+disabled accounts cannot bypass the decision by submitting again. Only the project
+owner grants or changes moderator/administrator roles. Moderator access is prepared
+for 12 leadership members; accounts await the actual names/email roster.
+
+Administrators can Delete group after a confirmation. This archives the group:
+its topics and replies disappear from member views, and new posts/moves into it
+are rejected. Content and audit history remain in the database.
+
+Production Clerk is a separate identity instance. Create the production owner
+login and map its new user subject explicitly before changing live keys/issuer.
+Never assume development users or their IDs transfer. Verify Clerk DNS/certificates,
+configure production publishable key in Pages and issuer in Worker, and test owner
+access plus pending/approved member access. No secret keys belong in this repository.

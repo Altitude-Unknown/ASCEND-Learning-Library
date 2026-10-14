@@ -9,6 +9,7 @@ import {
 } from "../../src/data/core.js";
 import { parseFilters, UUID } from "../../src/data/filters.js";
 import * as repository from "./repository.js";
+import { enrollment } from "./enrollment.js";
 import { verifySession, requireAccount } from "./auth.js";
 import * as teamPortal from "./team.js";
 import * as administration from "./administration.js";
@@ -272,7 +273,7 @@ export async function handle(
     ].includes(path);
     if (
       (isUpload && request.method !== "POST") ||
-      (!isUpload && request.method !== "GET" && !((path.startsWith('/api/team/community/') || ["/api/team/missions", "/api/team/administration/teams", "/api/team/administration/access", "/api/team/administration/review", "/api/team/administration/members"].includes(path)) && request.method === "POST"))
+      (!isUpload && request.method !== "GET" && !((path.startsWith('/api/team/community/') || path === "/api/team/enrollment" || ["/api/team/missions", "/api/team/administration/teams", "/api/team/administration/access", "/api/team/administration/review", "/api/team/administration/members"].includes(path)) && request.method === "POST"))
     )
       fail("Method not allowed.", 405);
     if (!env.HYPERDRIVE) fail("Scientific database is not configured.", 503);
@@ -280,6 +281,11 @@ export async function handle(
     try {
       await db.query("SET statement_timeout = '12s'");
       if (team) {
+        if(path === '/api/team/enrollment') {
+          let input={};
+          if(request.method==='POST'){const bytes=await limitedBytes(request,4096);try{input=JSON.parse(new TextDecoder().decode(bytes));}catch{fail('Invalid membership request.');}}
+          return decorate(json(await enrollment(db,subject,request.method,input)),origin,allowed);
+        }
         const account = await requireAccount(db, subject);
         if(path.startsWith('/api/team/community/')){
           let input={};
