@@ -38,6 +38,7 @@ try {
     readFileSync("data-api/migrations/001_scientific_data.sql", "utf8"),
   );
   const insert = async (sql, args) => (await db.query(sql, args)).rows[0].id;
+  await db.query('ALTER TABLE missions ADD COLUMN publication_blocked boolean NOT NULL DEFAULT false');
   const organization = await insert(
     "INSERT INTO organizations(name) VALUES('SYNTHETIC TEST Institution') RETURNING id",
   );

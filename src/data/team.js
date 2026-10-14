@@ -7,7 +7,7 @@ async function start() {
   if (!clerkKey || !api) throw new Error('Team sign-in is still being configured.');
   const clerk = await initializeClerk(root);
   if (!clerk.session) {
-    status.textContent = 'Sign in with your team email and password.';
+    status.textContent = 'Sign in with your ASCEND email and password.';
     clerk.mountSignIn(document.getElementById('team-sign-in'), { forceRedirectUrl: location.origin + '/data/team/' });
     return;
   }
@@ -18,10 +18,10 @@ async function start() {
   const body = await response.json();
   if (!response.ok) throw new Error(body.error || 'Could not load your account.');
   document.getElementById('team-name').textContent = body.team?.name || 'ASCEND administration';
-  document.getElementById('team-role').textContent = body.account.role === 'administrator' ? 'Program administrator' : 'Team account';
+  document.getElementById('team-role').textContent = body.account.role === 'administrator' ? 'Program administrator' : body.account.role === 'moderator' ? 'Moderator' : 'ASCEND member';
   status.textContent = 'Login verified.';
-  if (body.account.role === 'team') await workspace(clerk);
-  else { await administratorWorkspace(root,clerk); status.textContent = 'Administrator workspace ready.'; }
+  if (body.account.team_id) await workspace(clerk);
+  if (body.account.role === 'administrator') { await administratorWorkspace(root,clerk); status.textContent = 'Administrator workspace ready.'; }
 }
 async function workspace(clerk) {
   const section = document.getElementById('team-workspace');
@@ -59,7 +59,7 @@ async function workspace(clerk) {
       const input = Object.fromEntries(new FormData(form)); input.synthetic = form.elements.synthetic.checked;
       await request('/api/team/missions', { method: 'POST', body: JSON.stringify(input) });
       form.reset(); await refresh();
-      missionStatus.textContent = 'Private mission created. You can now upload its CSV.';
+      missionStatus.textContent = 'Mission created. Its validated uploads will be publicly available.';
     } catch (error) { missionStatus.textContent = error.message; }
     finally { button.disabled = false; }
   });

@@ -1,12 +1,12 @@
 import { UUID } from '../../src/data/filters.js';
 export function fail(message, status = 400) { throw Object.assign(new Error(message), { status }); }
 export function requireTeam(account) {
-  if (account.role !== 'team' || !UUID.test(account.team_id || '')) fail('Use a team account for this workspace.', 403);
+  if (!['team','member','moderator','administrator'].includes(account.role) || !UUID.test(account.team_id || '')) fail('A team assignment is required for uploads.', 403);
   return account.team_id;
 }
 export function authorizeContext(account, context) {
   if (context.team_id !== requireTeam(account)) fail('This mission is not available to your team.', 403);
-  if(context.visibility!=='private' || context.publication_status!=='pending') fail('Team uploads require a private, pending mission. Ask the administrator to withdraw it or create a new mission.',403);
+  if(context.publication_blocked) fail('This dataset has been withdrawn by an administrator. Create a new mission or contact an administrator.',403);
 }
 export function missionInput(input) {
   if (!input || typeof input !== 'object' || Array.isArray(input)) fail('Invalid mission details.');

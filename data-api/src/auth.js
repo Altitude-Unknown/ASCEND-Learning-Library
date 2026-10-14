@@ -31,7 +31,7 @@ export async function verifySession(token, env, verificationKey) {
 }
 export async function requireAccount(db, subject) {
   const { rows } = await db.query(
-    'SELECT subject,role,team_id FROM portal_accounts WHERE subject=$1 AND active=true', [subject],
+    'SELECT subject,role,team_id,display_name,owner FROM portal_accounts WHERE subject=$1 AND active=true', [subject],
   );
   if (rows.length !== 1) denied('Your account has not been assigned access. Contact the ASCEND administrator.', 403);
   return rows[0];

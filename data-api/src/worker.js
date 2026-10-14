@@ -12,6 +12,7 @@ import * as repository from "./repository.js";
 import { verifySession, requireAccount } from "./auth.js";
 import * as teamPortal from "./team.js";
 import * as administration from "./administration.js";
+import { community } from "./community.js";
 const encoder = new TextEncoder();
 function fail(message, status = 400) {
   throw Object.assign(new Error(message), { status });
@@ -203,7 +204,7 @@ async function upload(request, env, db, path, account) {
       ...saved,
       summary: normalized.summary,
       message:
-        "Archived and imported. Publication is controlled separately by mission approval.",
+        account ? "Archived, imported and publicly available." : "Archived and imported.",
     },
     saved.duplicate ? 200 : 201,
   );
@@ -271,7 +272,7 @@ export async function handle(
     ].includes(path);
     if (
       (isUpload && request.method !== "POST") ||
-      (!isUpload && request.method !== "GET" && !(["/api/team/missions", "/api/team/administration/teams", "/api/team/administration/access", "/api/team/administration/review"].includes(path) && request.method === "POST"))
+      (!isUpload && request.method !== "GET" && !((path.startsWith('/api/team/community/') || ["/api/team/missions", "/api/team/administration/teams", "/api/team/administration/access", "/api/team/administration/review", "/api/team/administration/members"].includes(path)) && request.method === "POST"))
     )
       fail("Method not allowed.", 405);
     if (!env.HYPERDRIVE) fail("Scientific database is not configured.", 503);
@@ -280,11 +281,16 @@ export async function handle(
       await db.query("SET statement_timeout = '12s'");
       if (team) {
         const account = await requireAccount(db, subject);
-        if (path.startsWith('/api/team/administration')) {
+        if(path.startsWith('/api/team/community/')){
+          let input={};
+          if(request.method==='POST'){const bytes=await limitedBytes(request,16384);try{input=JSON.parse(new TextDecoder().decode(bytes));}catch{fail('Invalid discussion request.');}if(!input||typeof input!=='object'||Array.isArray(input))fail('Invalid discussion request.');}
+          response=json(await community(db,account,request,path,input));
+        }
+        else if (path.startsWith('/api/team/administration')) {
           administration.requireAdministrator(account);
           if(path === '/api/team/administration' && request.method === 'GET') response = json(await administration.dashboard(db,account));
           else {
-            const operation = { '/api/team/administration/teams':administration.createTeam, '/api/team/administration/access':administration.setTeamAccess, '/api/team/administration/review':administration.reviewMission }[path];
+            const operation = { '/api/team/administration/teams':administration.createTeam, '/api/team/administration/access':administration.setTeamAccess, '/api/team/administration/review':administration.reviewMission, '/api/team/administration/members':administration.saveMember }[path];
             if(!operation || request.method!=='POST') fail('API route not found.',404);
             const bytes = await limitedBytes(request,16384);
             let input;

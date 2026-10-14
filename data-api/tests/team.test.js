@@ -5,9 +5,9 @@ const account = { subject:'user_testA', role:'team', team_id:'92000000-0000-4000
 const input = { name:'Test', mission_date:'2026-10-12', description:'', principal_investigator:'', data_license:'CC0-1.0', synthetic:true, platform_type:'hab', platform_name:'Balloon', sensor_name:'Logger', sensor_model:'' };
 test('team ownership rejects another team and administrator impersonation', () => {
   authorizeContext(account, { team_id:account.team_id, visibility:'private', publication_status:'pending' });
-  assert.throws(() => authorizeContext(account, {team_id:account.team_id,visibility:'public',publication_status:'approved'}), error=>error.status===403);
+  assert.throws(() => authorizeContext(account, {team_id:account.team_id,publication_blocked:true}), error=>error.status===403);
   assert.throws(() => authorizeContext(account, {team_id:'92000000-0000-4000-8000-000000000003'}), error => error.status === 403);
-  assert.throws(() => authorizeContext({...account,role:'administrator'}, {team_id:account.team_id}), error => error.status === 403);
+  authorizeContext({...account,role:'administrator'}, {team_id:account.team_id});
 });
 test('mission creation rejects ownership/publication injection and invalid dates', () => {
   assert.equal(missionInput(input).synthetic, true);

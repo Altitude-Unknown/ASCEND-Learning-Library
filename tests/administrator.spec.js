@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-test('administrator review requires acknowledgment and supports private withdrawal',async({page})=>{
+test('administrator can restore public access and withdraw a dataset',async({page})=>{
   const operations=[];
   let published=false;
   await page.route('**/data/team/',async route=>{
@@ -20,11 +20,10 @@ test('administrator review requires acknowledgment and supports private withdraw
     await route.fulfill({json:body,headers:{'Access-Control-Allow-Origin':'*'}});
   });
   await page.goto('/data/team/');
-  const publish=page.getByRole('button',{name:'Approve and publish mission'});
-  await expect(publish).toBeDisabled();
-  await page.getByLabel('I reviewed provenance, QC, license and privacy for public release.').check();
+  const publish=page.getByRole('button',{name:'Restore public access'});
+  await expect(publish).toBeEnabled();
   await publish.click();
-  await expect(page.getByText('Mission published.',{exact:true})).toBeVisible();
+  await expect(page.getByText('Saved.',{exact:true})).toBeVisible();
   expect(operations[0]).toEqual({mission_id:'91000000-0000-4000-8000-000000000006',action:'publish',reviewed:true});
   await page.getByRole('button',{name:'Withdraw public access'}).click();
   await expect(page.getByText('Test Team · 2026-10-12 · private/pending · SYNTHETIC')).toBeVisible();

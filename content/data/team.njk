@@ -7,14 +7,15 @@ dataApp: team
 ---
 <div class="container data-page" id="team-portal" data-api="{{ dataExplorer.apiBase }}" data-clerk-key="{{ dataExplorer.clerkKey }}" data-clerk-domain="{{ dataExplorer.clerkDomain }}">
  <span class="eyebrow">ASCEND · Team workspace</span>
- <h1>Team login</h1>
- <p class="lead">Use your team's designated account. Team access is assigned by the ASCEND administrator.</p>
+ <h1>Member workspace</h1>
+ <p class="lead">Sign in with your own ASCEND account. Your team and role are assigned by an administrator.</p>
+ <div class="data-actions"><a href="/community/">Community discussions</a><a href="/data/">Public Data Explorer</a></div>
  <p id="team-status" class="data-status" role="status" aria-live="polite">Loading sign-in…</p>
  <div id="team-sign-in"></div>
  <section id="team-account" hidden><h2 id="team-name">Your account</h2><div id="team-user-button"></div><p id="team-role"></p></section>
  <section id="team-workspace" hidden>
  <div class="data-actions"><a href="/data/upload/?team=1">Upload a CSV to my team</a></div>
- <h2>Create a mission</h2><p>New missions stay private until approved by the ASCEND administrator. Use a separate mission for each flight.</p>
+ <h2>Create a mission</h2><p>Validated uploads become publicly available automatically. Use a separate mission for each flight; confirm the data license before uploading.</p>
  <form id="mission-form" class="data-mapping">
  <label>Mission name<input name="name" required maxlength="160"></label>
  <label>Mission date<input name="mission_date" type="date" required></label>
@@ -26,7 +27,7 @@ dataApp: team
  <label>Sensor / logger model<input name="sensor_model" maxlength="160"></label>
  <label>Description<textarea name="description" maxlength="4000"></textarea></label>
  <label class="data-checkbox"><input name="synthetic" type="checkbox">Synthetic test mission (no real observations)</label>
- <button class="button" type="submit">Create private mission</button>
+ <button class="button" type="submit">Create mission</button>
  </form>
  <p id="mission-status" class="data-status" role="status" aria-live="polite"></p>
  <h2>My missions</h2><div id="my-missions"></div>
@@ -43,8 +44,10 @@ dataApp: team
  </form>
  <p id="administrator-status" class="data-status" role="status" aria-live="polite"></p>
  <div id="administrator-teams"></div>
- <h2>Mission publication review</h2>
- <p>Review source provenance, QC flags, license and site privacy before making data public. Publication exposes the mission's committed observations in Data Explorer.</p>
+ <h2>Manage members and roles</h2><p>Each person uses an individual Clerk login. Assign multiple members to a team. The project owner can assign up to 12 helper administrators.</p>
+ <form id="member-form" class="data-mapping"><label>Clerk User ID<input name="subject" required maxlength="255" pattern="user_[A-Za-z0-9]+"></label><label>Display name<input name="display_name" required maxlength="80"></label><label>Team<select name="team_id" id="member-team"></select></label><label>Role<select name="role"><option value="member">Member</option><option value="moderator">Moderator</option><option value="administrator">Administrator</option></select></label><label class="data-checkbox"><input name="active" type="checkbox" checked>Active membership</label><button type="submit" class="button">Save member</button></form><div id="administrator-members"></div>
+ <h2>Public data management</h2>
+ <p>Successful validated uploads are public automatically. Withdraw erroneous datasets here; withdrawal also blocks further uploads to that mission until restored.</p>
  <div id="administrator-missions"></div>
  <h2>Import verification</h2><div id="administrator-files"></div>
  </section>

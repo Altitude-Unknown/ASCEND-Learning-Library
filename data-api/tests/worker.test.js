@@ -7,6 +7,12 @@ test("unconfigured services fail closed", async () => {
   assert.equal((await handle(req("/api/observations"), {})).status, 503);
   assert.equal((await handle(req("/api/admin/missions"), {})).status, 503);
 });
+test('discussion API blocks signed-out requests before connecting to database',async()=>{
+  let connected=false;
+  const env={CLERK_ISSUER:'https://clerk.example.test',ALLOWED_ORIGIN:'https://site.example.test',HYPERDRIVE:{}};
+  const response=await handle(req('/api/team/community/groups'),env,async()=>{connected=true;throw Error('must not connect');});
+  assert.equal(response.status,401);assert.equal(connected,false);
+});
 test("authorization and CORS block before database connection", async () => {
   let connects = 0;
   const connect = () => {

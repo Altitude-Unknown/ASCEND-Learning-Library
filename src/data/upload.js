@@ -16,7 +16,7 @@ let clerkPromise;
 if (teamMode) {
   $("admin-token").closest('label').hidden = true;
   $("import-heading").textContent = '4. Confirm team upload';
-  document.querySelector('.data-notice').textContent = 'Team upload. Preview and validate your file, then archive and import it into your team mission. Public release requires administrator approval.';
+  document.querySelector('.data-notice').textContent = 'Team upload. Preview and validate your file, then archive and import it. Successful uploads become publicly available automatically.';
   $("connect-admin").textContent = 'Load my team missions';
 }
 let file,

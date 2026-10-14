@@ -25,7 +25,7 @@ test('publication and audit commit together after review',async()=>{
 });
 test('team-login disable cannot target administrator accounts',async()=>{
   let update;const db={query:async(sql)=>{if(sql.startsWith('UPDATE')){update=sql;return {rows:[]};}return {rows:[]};}};
-  await assert.rejects(setTeamAccess(db,admin,{subject:admin.subject,active:false}),error=>error.status===404);assert.match(update,/role='team'/);
+  await assert.rejects(setTeamAccess(db,admin,{subject:admin.subject,active:false}),error=>error.status===404);assert.match(update,/role IN \('member','moderator'\)/);
 });
 test('team creation rejects attempts to assign administrator role',async()=>{
   await assert.rejects(createTeam({},admin,{institution:'ASCEND',name:'Test',subject:'user_test',role:'administrator'}),error=>error.status===400);
