@@ -29,3 +29,6 @@
 
 /* Keep setup commands readable on narrow resource pages. */
 .prose pre{white-space:pre-wrap;overflow-wrap:anywhere}
+
+.community-header-link{white-space:nowrap}.community-header-link[aria-current]{border-bottom:2px solid var(--green)}
+@media(max-width:620px){.header-inner{flex-wrap:wrap}.header-actions{width:100%;justify-content:flex-end}.community-header-link{margin-right:auto}}
