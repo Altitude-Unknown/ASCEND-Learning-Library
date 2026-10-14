@@ -22,11 +22,12 @@
  <nav aria-label="Primary navigation" class="desktop-nav">
  <a href="/library/"{% if page.url == '/library/' %} aria-current="page"{% endif %}>Resource library</a>
  <a href="/part107/"{% if topic == 'part107' or section.id == 'part107' %} aria-current="page"{% endif %}>FAA Part 107</a>
- <a href="/data/"{% if dataApp %} aria-current="page"{% endif %}>Data Explorer</a>
+ <a href="/data/"{% if dataApp and page.url != '/data/team/' %} aria-current="page"{% endif %}>Data Explorer</a>
+ <a href="/data/team/"{% if page.url == '/data/team/' %} aria-current="page"{% endif %}>Team login</a>
  <a href="/teachers/"{% if page.url == '/teachers/' %} aria-current="page"{% endif %}>Faculty & Pods</a>
  </nav>
  <div class="header-actions"><a class="search-link" href="/search/" aria-label="Search"><svg class="icon" aria-hidden="true"><use href="#i-search"/></svg><span>Search</span></a>
- <details class="topic-menu"><summary>Explore <span aria-hidden="true">＋</span></summary><nav aria-label="Explore all topics">{% for item in programNavigation %}<a href="{{ item.url }}">{{ item.title }}</a>{% endfor %}<a href="/data/">Data Explorer</a><a href="/library/">All resources</a>{% for t in topics %}<a href="/{{ t.id }}/">{{ t.title }}</a>{% endfor %}</nav></details></div>
+ <details class="topic-menu"><summary>Explore <span aria-hidden="true">＋</span></summary><nav aria-label="Explore all topics"><a href="/data/team/">Team login</a>{% for item in programNavigation %}<a href="{{ item.url }}">{{ item.title }}</a>{% endfor %}<a href="/data/">Data Explorer</a><a href="/library/">All resources</a>{% for t in topics %}<a href="/{{ t.id }}/">{{ t.title }}</a>{% endfor %}</nav></details></div>
  </div>
 </header>
 <main id="main" tabindex="-1"{% if page.url != '/search/' and page.url != '/404.html' %} data-pagefind-body{% endif %}>

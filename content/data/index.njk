@@ -9,7 +9,7 @@ dataApp: explorer
  <span class="eyebrow">Atmospheric science · Shared observations</span>
  <h1>ASCEND Data Explorer</h1>
  <p class="lead">Follow a flight. Explore the atmosphere. Connect measurements across platforms.</p>
- <div class="data-actions"><a href="/data/upload/">Upload a CSV</a><a href="/data/standard/">Data standard & template</a></div>
+ <div class="data-actions"><a href="/data/team/">Team login & workspace</a><a href="/data/upload/?team=1">Upload team data</a><a href="/data/standard/">Data standard & template</a></div>
  {% if dataExplorer.demo %}<p class="data-notice"><strong>DEMO / SYNTHETIC DATA</strong> — These three missions and all measurements are generated examples. They are not real ASCEND observations or participating institutions.</p>{% else %}<p class="data-notice">Showing approved public missions. Check each mission’s license and QC status before using its measurements.</p>{% endif %}
  <noscript><p>The interactive explorer requires JavaScript. Download the <a href="/assets/data/demo/fixed_wing_uas.csv">synthetic fixed-wing example</a>, <a href="/assets/data/demo/hab.csv">synthetic HAB example</a>, or <a href="/assets/data/demo/radiosonde.csv">synthetic radiosonde example</a> to explore in a spreadsheet.</p></noscript>
  <form id="explorer-filters" class="data-filters" aria-label="Filter scientific observations">
