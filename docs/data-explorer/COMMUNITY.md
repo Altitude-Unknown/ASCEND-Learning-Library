@@ -67,3 +67,16 @@ login and map its new user subject explicitly before changing live keys/issuer.
 Never assume development users or their IDs transfer. Verify Clerk DNS/certificates,
 configure production publishable key in Pages and issuer in Worker, and test owner
 access plus pending/approved member access. No secret keys belong in this repository.
+
+### Moderator provisioning
+
+The owner-authorized October 14 list contains 13 moderators (all 13 confirmed).
+The actual roster is kept locally in ignored `artifacts/onboarding/moderators.json`,
+not in GitHub. `python3 scripts/data-explorer/provision-moderators.py <roster>`
+validates the roster without network requests. With `--apply`, the script prompts
+for the production Clerk secret key without echoing/saving it, reuses matching
+users or creates accounts with email-code sign-in, and writes local Neon SQL to
+assign moderator roles. It sends no emails and creates no shared passwords.
+Enable production email-code sign-in first. Apply the resulting SQL as DB owner;
+review verified production identities before granting access. Where names were
+not supplied, email addresses are initial display names and can be edited later.
