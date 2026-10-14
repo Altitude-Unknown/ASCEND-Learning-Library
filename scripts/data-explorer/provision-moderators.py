@@ -36,20 +36,34 @@ def main():
     if not args.apply:
         print(f'Validated {len(people)} moderator entries. No accounts created. Use --apply when production is ready.')
         return
-    key = getpass.getpass('Production Clerk secret key (hidden; never saved): ')
+    key = getpass.getpass('Production Clerk secret key (hidden; never saved): ').strip()
     if not key.startswith('sk_live_'):
         raise SystemExit('A production sk_live_ key is required.')
 
     def api(path, body=None):
         request = urllib.request.Request('https://api.clerk.com/v1' + path,
             data=json.dumps(body).encode() if body is not None else None,
-            headers={'Authorization': 'Bearer ' + key, 'Content-Type': 'application/json'},
+            headers={'Authorization': 'Bearer ' + key, 'Content-Type': 'application/json',
+                'Accept': 'application/json', 'User-Agent': 'ASCEND-Moderator-Provisioning/1.0'},
             method='POST' if body is not None else 'GET')
         try:
             with urllib.request.urlopen(request, timeout=30) as response:
                 return json.load(response)
         except urllib.error.HTTPError as error:
-            raise SystemExit(f'Clerk request failed (HTTP {error.code}). Check production settings; completed accounts are safe to reuse on rerun.') from None
+            # Print only structured error codes, never response bodies or credentials.
+            codes = []
+            try:
+                payload = json.loads(error.read(16384))
+                for item in payload.get('errors', []):
+                    code = item.get('code', '')
+                    if isinstance(code, str) and re.fullmatch(r'[A-Za-z0-9_]{1,100}', code):
+                        codes.append(code)
+            except (ValueError, TypeError, AttributeError):
+                pass
+            detail = ', '.join(codes) or 'non-JSON response (possible network/security block)'
+            operation = 'create user' if body is not None else 'look up user'
+            raise SystemExit(f'Clerk could not {operation}: HTTP {error.code}; {detail}. '
+                'Completed accounts are safe to reuse on rerun.') from None
 
     statements = ['BEGIN;']
     for person in people:
