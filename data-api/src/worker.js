@@ -11,6 +11,7 @@ import { parseFilters, UUID } from "../../src/data/filters.js";
 import * as repository from "./repository.js";
 import { verifySession, requireAccount } from "./auth.js";
 import * as teamPortal from "./team.js";
+import * as administration from "./administration.js";
 const encoder = new TextEncoder();
 function fail(message, status = 400) {
   throw Object.assign(new Error(message), { status });
@@ -270,7 +271,7 @@ export async function handle(
     ].includes(path);
     if (
       (isUpload && request.method !== "POST") ||
-      (!isUpload && request.method !== "GET" && !(path === "/api/team/missions" && request.method === "POST"))
+      (!isUpload && request.method !== "GET" && !(["/api/team/missions", "/api/team/administration/teams", "/api/team/administration/access", "/api/team/administration/review"].includes(path) && request.method === "POST"))
     )
       fail("Method not allowed.", 405);
     if (!env.HYPERDRIVE) fail("Scientific database is not configured.", 503);
@@ -279,7 +280,19 @@ export async function handle(
       await db.query("SET statement_timeout = '12s'");
       if (team) {
         const account = await requireAccount(db, subject);
-        if (isUpload) response = await upload(request, env, db, path, account);
+        if (path.startsWith('/api/team/administration')) {
+          administration.requireAdministrator(account);
+          if(path === '/api/team/administration' && request.method === 'GET') response = json(await administration.dashboard(db,account));
+          else {
+            const operation = { '/api/team/administration/teams':administration.createTeam, '/api/team/administration/access':administration.setTeamAccess, '/api/team/administration/review':administration.reviewMission }[path];
+            if(!operation || request.method!=='POST') fail('API route not found.',404);
+            const bytes = await limitedBytes(request,16384);
+            let input;
+            try { input=JSON.parse(new TextDecoder().decode(bytes)); } catch { fail('Invalid administrator request.'); }
+            response=json(await operation(db,account,input),path.endsWith('/teams')?201:200);
+          }
+        }
+        else if (isUpload) response = await upload(request, env, db, path, account);
         else if (path === "/api/team/workspace") response = json(await teamPortal.workspace(db, account));
         else if (path === "/api/team/missions" && request.method === "POST") {
           const raw = await limitedBytes(request, 16384);

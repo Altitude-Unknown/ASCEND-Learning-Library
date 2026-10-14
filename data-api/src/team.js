@@ -6,6 +6,7 @@ export function requireTeam(account) {
 }
 export function authorizeContext(account, context) {
   if (context.team_id !== requireTeam(account)) fail('This mission is not available to your team.', 403);
+  if(context.visibility!=='private' || context.publication_status!=='pending') fail('Team uploads require a private, pending mission. Ask the administrator to withdraw it or create a new mission.',403);
 }
 export function missionInput(input) {
   if (!input || typeof input !== 'object' || Array.isArray(input)) fail('Invalid mission details.');

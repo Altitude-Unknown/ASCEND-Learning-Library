@@ -32,5 +32,21 @@ dataApp: team
  <h2>My missions</h2><div id="my-missions"></div>
  <h2>My uploads</h2><div id="my-uploads"></div>
  </section>
+ <section id="administrator-workspace" hidden>
+ <h2>Manage teams</h2>
+ <p>Create the team's email/password user in Clerk, then assign its User ID here. No invitations are sent by this form.</p>
+ <form id="team-create-form" class="data-mapping">
+ <label>Institution<input name="institution" required maxlength="160"></label>
+ <label>Team name<input name="name" required maxlength="160"></label>
+ <label>Clerk User ID<input name="subject" required maxlength="255" pattern="user_[A-Za-z0-9]+"></label>
+ <button type="submit" class="button">Create team and assign login</button>
+ </form>
+ <p id="administrator-status" class="data-status" role="status" aria-live="polite"></p>
+ <div id="administrator-teams"></div>
+ <h2>Mission publication review</h2>
+ <p>Review source provenance, QC flags, license and site privacy before making data public. Publication exposes the mission's committed observations in Data Explorer.</p>
+ <div id="administrator-missions"></div>
+ <h2>Import verification</h2><div id="administrator-files"></div>
+ </section>
  <noscript><p>Team sign-in requires JavaScript.</p></noscript>
 </div>

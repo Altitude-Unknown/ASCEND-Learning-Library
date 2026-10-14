@@ -3,7 +3,9 @@
 The public repository is https://github.com/Altitude-Unknown/ASCEND-Learning-Library,
 alongside the RC-Airplane project. This folder is the repository root.
 Cloudflare Pages is connected at https://ascend-learning-library.pages.dev/.
-A custom domain has not yet been connected.
+The custom domain https://ascendflight.org/ is connected (verified October 13, 2026).
+Use this origin for the upload Worker's `ALLOWED_ORIGIN` and login authorized-party
+checks. The Pages address remains the underlying hosting address.
 
 ## Create and connect the repository
 

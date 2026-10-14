@@ -96,7 +96,7 @@ export async function importContexts(db) {
 }
 export async function resolveContext(db, meta) {
   const { rows } = await db.query(
-    `SELECT m.id AS mission_id,m.team_id,p.id AS platform_id,p.name AS platform,s.name AS sensor,sc.id AS sensor_configuration_id FROM missions m JOIN mission_platforms mp ON mp.mission_id=m.id JOIN platforms p ON p.id=mp.platform_id JOIN sensor_configurations sc ON sc.platform_id=p.id AND sc.team_id=m.team_id JOIN sensors s ON s.id=sc.sensor_id WHERE m.id=$1 AND sc.id=$2`,
+    `SELECT m.id AS mission_id,m.team_id,m.visibility,m.publication_status,p.id AS platform_id,p.name AS platform,s.name AS sensor,sc.id AS sensor_configuration_id FROM missions m JOIN mission_platforms mp ON mp.mission_id=m.id JOIN platforms p ON p.id=mp.platform_id JOIN sensor_configurations sc ON sc.platform_id=p.id AND sc.team_id=m.team_id JOIN sensors s ON s.id=sc.sensor_id WHERE m.id=$1 AND sc.id=$2`,
     [meta.mission_id, meta.sensor_configuration_id],
   );
   if (rows.length !== 1)
@@ -134,6 +134,11 @@ export async function saveImport(
   }
   await db.query("BEGIN");
   try {
+    if(context.subject) {
+      const mission = (await db.query('SELECT team_id,visibility,publication_status FROM missions WHERE id=$1 FOR UPDATE',[context.mission_id])).rows[0];
+      if(!mission || mission.team_id!==context.team_id || mission.visibility!=='private' || mission.publication_status!=='pending')
+        throw Object.assign(new Error('Team uploads require a private, pending mission. Ask the administrator to withdraw it or create a new mission.'),{status:403});
+    }
     const inserted = await db.query(
       `INSERT INTO data_files(mission_id,platform_id,sensor_configuration_id,team_id,original_filename,r2_key,sha256,bytes,parser_version,mapping,units,import_status,row_count) VALUES($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,'importing',$12) ON CONFLICT(mission_id,sha256) DO NOTHING RETURNING id`,
       [

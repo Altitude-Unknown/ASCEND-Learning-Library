@@ -1,4 +1,5 @@
 import { initializeClerk } from "./session.js";
+import { administratorWorkspace } from "./administration.js";
 const root = document.getElementById('team-portal');
 const status = document.getElementById('team-status');
 async function start() {
@@ -20,7 +21,7 @@ async function start() {
   document.getElementById('team-role').textContent = body.account.role === 'administrator' ? 'Program administrator' : 'Team account';
   status.textContent = 'Login verified.';
   if (body.account.role === 'team') await workspace(clerk);
-  else status.textContent = 'Administrator login verified. Review tools are being prepared.';
+  else { await administratorWorkspace(root,clerk); status.textContent = 'Administrator workspace ready.'; }
 }
 async function workspace(clerk) {
   const section = document.getElementById('team-workspace');
