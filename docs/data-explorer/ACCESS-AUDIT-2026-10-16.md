@@ -1,5 +1,32 @@
 # Community access audit — October 16, 2026
 
+## Current production status: website rolled back
+
+After the owner reported that multiple team members could no longer sign in or
+receive verification codes, the website was rolled back to the pre-proxy Pages
+deployment `2bf25775-77f4-47a3-a708-c2e632ac6684`. Production
+`ASCEND_CLERK_PROXY_PATH` is now empty to prevent subsequent builds from
+reactivating the proxy. This is an incident rollback; the email failure's exact
+cause has not been established.
+
+Cloudflare confirms that deployment as canonical. Live Community and Member
+Login HTML no longer contain the proxy setting. At 19:57 UTC, both forms rendered
+in Chromium and Firefox using `clerk.ascendflight.org`, with no HTTP errors.
+The Chromium Member Login check observed aborted Clerk Protect probes; this is
+recorded separately from form-loading success and has not been diagnosed.
+The owner tested a fresh tab after rollback and still reached the code screen
+without receiving an email. The website rollback did not resolve the incident.
+
+The Worker and Clerk dashboard proxy configuration remain available for existing
+clients; the restored website does not opt into them. The next rollback action
+is removal of the domain's proxy configuration in the owner's authenticated Clerk
+dashboard, preserving its existing CNAME records. The agent has no authenticated
+dashboard access or local Clerk Backend API secret to perform that action.
+No account, membership,
+email-delivery policy, DNS record, or database change was made during rollback.
+Do not reactivate the proxy or call the incident resolved based solely on rendered
+forms. The remaining sections record the investigation and superseded rollout.
+
 ## Findings and limits
 
 The reported “Could not load sign-in. Please try again.” originates in
@@ -119,10 +146,64 @@ checks with no direct Clerk-host requests or request failures. Full GitHub build
 browser, and PostGIS checks passed. Real account sign-in and affected-institution
 access still need confirmation. See `SESSION-2026-10-16.md` for the deployment record.
 
+## Follow-up: missing verification email
+
+After cutover, the owner reported reaching the emailed-code entry screen after
+credentials, but not receiving the code. A single resend displayed a sent message
+without an email arriving. The owner found no matching production Email Logs
+entry. End-to-end owner sign-in is therefore **not confirmed**.
+
+Read-only comparisons found that both direct and proxied environment/client
+requests returned 200, with Clerk client cookies scoped to `ascendflight.org`.
+Deliberately empty sign-in POSTs returned the same 422 / `form_param_nil` through
+both routes, without using an identity or requesting an email. A temporary,
+sanitized Worker tail observed code-preparation POSTs returning HTTP 200 with no
+Worker exceptions. Only method, redacted path, status, and outcome were retained;
+no request body, credentials, cookie values, or verification codes were captured.
+HTTP 200 establishes transport success, not delivery or completion of sign-in.
+
+Public DNS showed the Clerk mail CNAME/SPF chain and DKIM CNAMEs, but no apex MX
+or TXT records and no `_dmarc.ascendflight.org` TXT record. Missing DMARC and a
+receiving mailbox are deliverability gaps, not an established cause of the absent
+email-log entry. No DNS, account roles, verification policy, or delivery templates
+were changed. Do not disable verification merely to hide this issue.
+
+The owner subsequently supplied a production Application Logs screenshot. The
+selected attempt is dated October 16, 2026, 1:44:42 PM as displayed in the dashboard
+(the screenshot does not label the timezone). Its sequence includes
+`sign_in.client_trust.required`,
+`sign_in.email_address.verification.code_sent`,
+`sign_in.prepare_second_factor.passed`, `sign_in.email_address.verified`,
+`sign_in.attempt_second_factor.passed`, `sign_in.client_trust.passed`,
+`session.created`, and `sign_in.completed`.
+
+This confirms that one production attempt passed email verification and device
+trust and established a Clerk session. It does not establish that this was the
+owner's missing-email attempt, that the community groups opened, or that the
+original affected institutional network now works. The owner subsequently
+confirmed that no code arrived and that the successful attempt may belong to
+someone else. Owner sign-in remains unresolved. Filter Application Logs by the
+owner's identifier and attempt time before diagnosing delivery templates or
+Protect policy. Account identifiers and IP addresses from the screenshot are
+intentionally omitted from this record.
+
+The owner then reported no recent Application Log events when filtering by their
+email. This is not proof that no requests reached Clerk: the Identifier filter
+matches a stored identifier exactly and returns events where its user is actor
+or subject. A public configuration comparison confirmed that both live sign-in
+pages use the live key for `clerk.ascendflight.org` and `/__clerk`. Direct and
+proxied environment endpoints both identify `ASCEND Flight`, `production`, and
+`https://ascendflight.org`; their display, authentication, and user-settings
+configurations match. No production instance mismatch was found. The next
+evidence requested is the actual code-entry screen's domain/path and whether its
+displayed recipient matches the mailbox being checked. No additional login
+attempt or email send was triggered by this comparison.
+
 ## References
 
 - [Clerk Frontend API proxy requirements](https://clerk.com/docs/guides/dashboard/dns-domains/proxy-fapi)
 - [Clerk JavaScript installation](https://clerk.com/docs/js-frontend/getting-started/quickstart)
+- [Clerk log filters and retention](https://clerk.com/docs/guides/dashboard/logs/overview)
 - [Microsoft network protection](https://learn.microsoft.com/defender-endpoint/network-protection)
 - [Microsoft web content filtering](https://learn.microsoft.com/en-us/defender-endpoint/web-content-filtering/)
 

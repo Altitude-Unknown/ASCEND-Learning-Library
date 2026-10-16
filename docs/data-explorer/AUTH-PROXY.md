@@ -1,5 +1,10 @@
 # Activate same-origin authentication
 
+**Production status (October 16): disabled in the website following reports of
+team-wide sign-in/email failure.** Pages was rolled back to the pre-proxy
+deployment and its production proxy flag cleared. The exact failure remains
+under investigation. Do not repeat the rollout based on form-loading checks alone.
+
 This is a Clerk Frontend API proxy, not a replacement authentication system.
 See [the access audit](ACCESS-AUDIT-2026-10-16.md) for evidence and limitations.
 Clerk documents proxying as advanced configuration. Keep the existing CNAME,
@@ -47,6 +52,12 @@ production publishable key, API issuer, and membership database.
    institutional issue fixed.
 
 ## Rollback
+
+For immediate incident response, use Pages' rollback operation to restore a known
+successful pre-proxy production deployment, then clear the production proxy flag
+to prevent the next build from re-enabling it. On October 16 the restored target
+was `2bf25775-77f4-47a3-a708-c2e632ac6684`. Check the project's canonical deployment,
+not `latest_deployment`, which may refer to a skipped or queued Git push.
 
 Unset `ASCEND_CLERK_PROXY_PATH` in Pages and rebuild the same frontend revision
 to restore the direct Clerk connection. Verify direct sign-in before removing
