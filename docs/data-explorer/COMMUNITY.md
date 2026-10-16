@@ -70,6 +70,12 @@ access plus pending/approved member access. No secret keys belong in this reposi
 
 ### Moderator provisioning
 
+October 16 correction: local provisioning records did not match the production
+Clerk dashboard. Verify each live production identity before assigning staff roles;
+do not treat the roster or generated SQL as proof of successful account creation.
+Users must create an account before using Sign in. See
+[the current checkpoint](SESSION-2026-10-16.md).
+
 The owner-authorized October 14 list contains 13 moderators (all 13 confirmed).
 The actual roster is kept locally in ignored `artifacts/onboarding/moderators.json`,
 not in GitHub. `python3 scripts/data-explorer/provision-moderators.py <roster>`

@@ -4,7 +4,10 @@
   "main": "src/worker.js",
   "compatibility_date": "2026-10-05",
   "compatibility_flags": ["nodejs_compat"],
-  "workers_dev": true
+  "workers_dev": true,
+  "routes": [
+    { "pattern": "api.ascendflight.org", "custom_domain": true }
+  ]
   // Add actual HYPERDRIVE and ORIGINALS bindings to ignored wrangler.local.jsonc.
   // See docs/data-explorer/OPERATIONS.md. No invented IDs are checked in.
 }

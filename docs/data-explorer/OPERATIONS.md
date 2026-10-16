@@ -3,6 +3,24 @@
 See [architecture](../DATA_EXPLORER_ARCHITECTURE.md), [data standard](../ASCEND_DATA_STANDARD.md),
 [API](API.md), and [schema](SCHEMA.md). Existing Pages hosting remains unchanged.
 
+## Production API domain
+
+The production browser API is `https://api.ascendflight.org` (connected October 16,
+2026). It routes to the existing `ascend-data-api` Worker with its existing
+database, private upload storage, authentication, and allowed website origin.
+Pages production `ASCEND_DATA_API_BASE` must use this origin; rebuilding Pages
+is required after changing that setting. Preserve the custom-domain `routes`
+entry in both the tracked template and ignored `data-api/wrangler.local.jsonc`
+when deploying the Worker. The old `workers.dev` address remains enabled for
+compatibility, but production pages should no longer send browser requests there.
+
+Verify `/api/health`, the CORS preflight from `https://ascendflight.org`, and a
+401 response to signed-out `/api/team/community/groups` requests after routing
+changes. Signed-in groups and staff controls were confirmed by user screenshot;
+discussion posting and uploads were not exercised after the migration. A custom
+domain does not establish why a university blocked a request;
+retain its exact block message and hostname for diagnosis.
+
 ## What must be created
 
 | Resource | Purpose | Configuration |
