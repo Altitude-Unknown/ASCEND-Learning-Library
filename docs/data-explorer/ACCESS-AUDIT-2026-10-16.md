@@ -112,8 +112,12 @@ stored the production secret through Wrangler's secret prompt. Both initial
 scripts and their version redirects then passed live proxy checks. The
 environment endpoint returned HTTP 400 / `host_invalid` before dashboard proxy
 validation, then HTTP 200 after the owner saved the proxy path in production
-Clerk. Live candidate browser checks passed; frontend publication follows this
-checkpoint. See `SESSION-2026-10-16.md` for the final deployment record.
+Clerk. Frontend commit `4d9975d` is deployed in Pages deployment
+`a6d9364c-9696-4adc-86f6-86293e6c1cca` with the production proxy flag enabled.
+The published Community and Member Login forms passed all four Chromium/Firefox
+checks with no direct Clerk-host requests or request failures. Full GitHub build,
+browser, and PostGIS checks passed. Real account sign-in and affected-institution
+access still need confirmation. See `SESSION-2026-10-16.md` for the deployment record.
 
 ## References
 
