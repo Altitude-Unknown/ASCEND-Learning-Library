@@ -1,0 +1,13 @@
+{
+  "name": "ascend-auth-proxy",
+  "main": "src/worker.js",
+  "compatibility_date": "2026-10-16",
+  "workers_dev": false,
+  "preview_urls": false,
+  "routes": [{ "pattern": "ascendflight.org/__clerk/*", "zone_name": "ascendflight.org" }],
+  "vars": {
+    "CLERK_PROXY_URL": "https://ascendflight.org/__clerk",
+    "CLERK_FRONTEND_ORIGIN": "https://clerk.ascendflight.org"
+  },
+  "observability": { "enabled": false }
+}

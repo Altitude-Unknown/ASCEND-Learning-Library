@@ -29,6 +29,7 @@ Hosted-Website-Files/
 # Data Explorer generated bundles and local service configuration.
 /public/assets/data/dist/
 /data-api/.wrangler/
+/auth-proxy/.wrangler/
 /data-api/wrangler.local.jsonc
 **/.dev.vars
 **/.dev.vars.*

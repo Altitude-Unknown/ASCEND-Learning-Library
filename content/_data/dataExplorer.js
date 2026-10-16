@@ -25,5 +25,10 @@ export default function () {
     clerkDomain = Buffer.from(clerkKey.split("_")[2], "base64").toString("utf8").replace(/\$$/, "");
     if (!/^[a-z0-9]+(?:[.-][a-z0-9]+)+$/.test(clerkDomain)) throw new Error("Invalid Clerk frontend domain.");
   }
-  return { apiBase, demo: !apiBase, clerkKey, clerkDomain };
+  // Enable only after the proxy is deployed and verified in Clerk's dashboard.
+  const clerkProxyPath = process.env.ASCEND_CLERK_PROXY_PATH || "";
+  if (clerkProxyPath && clerkProxyPath !== '/__clerk') {
+    throw new Error('ASCEND_CLERK_PROXY_PATH must be /__clerk or unset.');
+  }
+  return { apiBase, demo: !apiBase, clerkKey, clerkDomain, clerkProxyPath };
 }
