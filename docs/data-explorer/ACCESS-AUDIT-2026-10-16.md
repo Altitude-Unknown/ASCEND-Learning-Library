@@ -1,6 +1,6 @@
 # Community access audit — October 16, 2026
 
-## Current production status: website rolled back
+## Current production status: website and Clerk configuration rolled back
 
 After the owner reported that multiple team members could no longer sign in or
 receive verification codes, the website was rolled back to the pre-proxy Pages
@@ -17,13 +17,17 @@ recorded separately from form-loading success and has not been diagnosed.
 The owner tested a fresh tab after rollback and still reached the code screen
 without receiving an email. The website rollback did not resolve the incident.
 
-The Worker and Clerk dashboard proxy configuration remain available for existing
-clients; the restored website does not opt into them. The next rollback action
-is removal of the domain's proxy configuration in the owner's authenticated Clerk
-dashboard, preserving its existing CNAME records. The agent has no authenticated
-dashboard access or local Clerk Backend API secret to perform that action.
-No account, membership,
-email-delivery policy, DNS record, or database change was made during rollback.
+The owner then removed the domain proxy configuration in Clerk. Their screenshot
+shows the optional "Set proxy config" control, verified Frontend API and account
+portal CNAME records, all three email DNS records verified, and SSL certificates
+issued. This confirms configuration rollback, not successful email delivery.
+The Worker remains deployed but is unused by the restored website. No account,
+membership, email-delivery policy, DNS record, or database change was made during
+rollback. Real-account sign-in after removal of the Clerk setting still needs
+confirmation.
+Post-removal checks at 20:03 UTC rendered Community and Member Login in Chromium
+and Firefox using the direct Clerk host. All four checks recorded no failed
+requests or HTTP errors. They did not submit credentials or request email.
 Do not reactivate the proxy or call the incident resolved based solely on rendered
 forms. The remaining sections record the investigation and superseded rollout.
 
