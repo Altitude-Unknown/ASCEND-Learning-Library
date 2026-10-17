@@ -1,5 +1,11 @@
 # Community access audit — October 16, 2026
 
+**October 17 follow-up:** the owner explicitly confirmed successful sign-in on
+the restored site. The proxy remains disabled. Group access, other participants'
+recovery, and the original institutional filtering issue remain unconfirmed.
+See [the October 17 checkpoint](SESSION-2026-10-17.md) for current state and
+reproduction of the separately reported `origin_invalid` error.
+
 ## Current production status: website and Clerk configuration rolled back
 
 After the owner reported that multiple team members could no longer sign in or
@@ -23,8 +29,11 @@ portal CNAME records, all three email DNS records verified, and SSL certificates
 issued. This confirms configuration rollback, not successful email delivery.
 The Worker remains deployed but is unused by the restored website. No account,
 membership, email-delivery policy, DNS record, or database change was made during
-rollback. Real-account sign-in after removal of the Clerk setting still needs
-confirmation.
+rollback. The owner subsequently received a code and entered it, but reported
+another identical code screen with no second email. Email receipt is now confirmed
+for one attempt; successful verification, session creation, and group access are
+not. This may be a repeated verification step rather than a distinct second
+challenge; the first code's acceptance has not been established.
 Post-removal checks at 20:03 UTC rendered Community and Member Login in Chromium
 and Firefox using the direct Clerk host. All four checks recorded no failed
 requests or HTTP errors. They did not submit credentials or request email.
