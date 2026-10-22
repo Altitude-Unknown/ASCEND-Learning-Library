@@ -37,6 +37,7 @@
 .leadership-profile{display:flow-root;padding:32px 0;border-top:1px solid var(--line)}
 .leadership-profile-pi{padding:26px;background:var(--mint);border:1px solid var(--line);border-radius:var(--radius);margin-bottom:24px}
 .leadership-portrait{float:right;width:180px;max-height:240px;object-fit:contain;margin:0 0 20px 26px;border-radius:var(--radius)}
+.leadership-profile[aria-labelledby="jill-schmidt"] .leadership-portrait{height:240px;object-fit:cover;object-position:76% center}
 .leadership-biography .leadership-role{color:var(--green);font-weight:700;margin:0 0 8px}
 .leadership-biography h2{margin:0 0 8px;font-size:2rem}
 .leadership-biography .leadership-institution{color:var(--muted);margin:0 0 20px}
