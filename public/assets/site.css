@@ -32,3 +32,12 @@
 
 .community-header-link{white-space:nowrap}.community-header-link[aria-current]{border-bottom:2px solid var(--green)}
 @media(max-width:620px){.header-inner{flex-wrap:wrap}.header-actions{width:100%;justify-content:flex-end}.community-header-link{margin-right:auto}}
+
+/* Leadership biographies use the project guide's existing typography and palette. */
+.leadership-profile{display:flow-root;padding:32px 0;border-top:1px solid var(--line)}
+.leadership-profile-pi{padding:26px;background:var(--mint);border:1px solid var(--line);border-radius:var(--radius);margin-bottom:24px}
+.leadership-portrait{float:right;width:180px;max-height:240px;object-fit:contain;margin:0 0 20px 26px;border-radius:var(--radius)}
+.leadership-biography .leadership-role{color:var(--green);font-weight:700;margin:0 0 8px}
+.leadership-biography h2{margin:0 0 8px;font-size:2rem}
+.leadership-biography .leadership-institution{color:var(--muted);margin:0 0 20px}
+@media(max-width:620px){.leadership-portrait{float:none;display:block;width:160px;margin:0 0 22px}.leadership-profile-pi{padding:20px}.leadership-biography h2{font-size:1.7rem}}

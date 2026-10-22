@@ -1,0 +1,18 @@
+---
+layout: layouts/program.njk
+title: ASCEND Leadership
+description: Meet the team supporting ASCEND's atmospheric research, hands-on learning, and collaboration across colleges and universities.
+permalink: /leadership/
+eyebrow: People behind the project
+---
+{% for person in leadership %}
+<section class="leadership-profile{% if loop.first %} leadership-profile-pi{% endif %}" aria-labelledby="{{ person.id }}">
+{% if person.image %}<img class="leadership-portrait" src="{{ person.image }}" alt="{{ person.name }}"{% if not loop.first %} loading="lazy"{% endif %}>{% endif %}
+<div class="leadership-biography">
+<p class="leadership-role">{{ person.role }}</p>
+<h2 id="{{ person.id }}">{{ person.name }}</h2>
+<p class="leadership-institution">{{ person.institution }}</p>
+{% for paragraph in person.bio %}<p>{{ paragraph }}</p>{% endfor %}
+</div>
+</section>
+{% endfor %}
