@@ -39,6 +39,8 @@ audience:
 
 ASCEND brings together teams from **two-year community colleges and four-year universities**. Faculty mentors lead the student teams. University pod leads help run the project and support small groups of participating teams.
 
+Visit [Who Are the Teams?](/teams/) to explore the participating institution map and team directory as the network grows.
+
 ### Student teams
 
 Students help shape investigations, build and integrate platforms, collect measurements, evaluate data, and communicate results. Teams can enter with different levels of experience and contribute through engineering, observations, analysis, or several of these activities.

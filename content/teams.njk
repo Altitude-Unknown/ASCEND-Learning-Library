@@ -1,0 +1,32 @@
+---
+layout: layouts/program.njk
+title: Who Are the Teams?
+description: Meet the institutions taking part in ASCEND and explore our growing network of college and university teams.
+permalink: /teams/
+eyebrow: A growing network for discovery
+teamsMap: true
+---
+<section aria-labelledby="teams-map-heading">
+<h2 id="teams-map-heading">Our teams, on the map</h2>
+<p id="teams-map-help">Select a dot to see the institution's name. Drag to explore, or use the zoom controls. You can also choose an institution from the list below.</p>
+<div class="teams-map-toolbar" data-pagefind-ignore>
+<span class="teams-map-key"><span aria-hidden="true"></span> Participating institution</span>
+<button class="button outline" id="teams-map-reset" type="button" hidden>Show all teams</button>
+</div>
+<div id="teams-map" class="teams-map" role="region" aria-label="ASCEND participating institutions map" aria-describedby="teams-map-help" hidden></div>
+<p id="teams-map-status" class="small" role="status" data-pagefind-ignore></p>
+<noscript><p>The interactive map needs JavaScript. Participating institutions are also listed below.</p></noscript>
+{% if not teams.length %}<div class="teams-empty"><h3>The network starts here</h3><p>Our team directory is getting started. As institutions join ASCEND, their locations will appear on this map and in the list below.</p></div>{% endif %}
+</section>
+<section class="teams-directory-section" aria-labelledby="teams-directory-heading">
+<h2 id="teams-directory-heading">Participating institutions</h2>
+<p>{% if teams.length %}{{ teams.length }} participating institution{% if teams.length != 1 %}s{% endif %}, listed alphabetically.{% else %}Participating institutions will be listed here as teams join.{% endif %}</p>
+<ul id="teams-directory" class="teams-directory">
+{% for team in teams %}<li id="team-{{ team.id }}" data-team-id="{{ team.id }}" data-latitude="{{ team.latitude }}" data-longitude="{{ team.longitude }}">
+<h3 class="team-institution">{{ team.institution }}</h3>
+<p class="team-location">{{ team.city }}, {{ team.state }}</p>
+<button type="button" class="team-map-link" hidden>Show on map<span class="visually-hidden">: {{ team.institution }}</span></button>
+</li>{% endfor %}
+</ul>
+</section>
+<p>Learn <a href="/project/">how teams and pods work together</a>, or meet the <a href="/leadership/">ASCEND leadership team</a>.</p>
