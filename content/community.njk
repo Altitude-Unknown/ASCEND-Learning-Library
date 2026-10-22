@@ -7,7 +7,15 @@ dataApp: community
 ---
 <div class="container data-page" id="community" data-api="{{ dataExplorer.apiBase }}" data-clerk-key="{{ dataExplorer.clerkKey }}" data-clerk-domain="{{ dataExplorer.clerkDomain }}" data-clerk-proxy-path="{{ dataExplorer.clerkProxyPath }}">
  <span class="eyebrow">ASCEND · Collaborate & learn</span><h1>Community</h1>
- <p class="lead">Ask a question, share your progress, and help fellow ASCEND members. All groups are shared with signed-in ASCEND members.</p>
+ <p class="lead">Ask a question, share your progress, and help fellow ASCEND members.</p>
+ <section class="data-notice" aria-labelledby="zulip-pilot-heading">
+  <h2 id="zulip-pilot-heading">Try the ASCEND Zulip community</h2>
+  <p>We’re testing Zulip for team conversations and technical help. Open the pilot and sign in with your Zulip account. You can reach it directly without signing in on this page.</p>
+  <p><a class="button" href="https://ascendflight.zulipchat.com/">Open ASCEND on Zulip</a></p>
+  <p>If you don’t have access yet, contact your ASCEND project lead for an invitation. Your member login for data uploads remains separate.</p>
+ </section>
+ <h2>Existing ASCEND discussion board</h2>
+ <p>The current board remains available during the pilot. All groups below are shared with signed-in ASCEND members.</p>
  <p id="community-status" class="data-status" role="status" aria-live="polite">Loading member sign-in…</p>
  <div id="community-sign-in"></div><div id="community-user"></div>
  <form id="enrollment-form" hidden><h2>Request ASCEND membership</h2><p>A moderator or administrator must approve your account before you can access discussions or uploads.</p><label>Your name<input name="display_name" required maxlength="80"></label><label>School or project affiliation<input name="affiliation" maxlength="200"></label><button class="button" type="submit">Request membership</button></form>
