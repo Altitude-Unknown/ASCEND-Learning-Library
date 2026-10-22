@@ -7,7 +7,7 @@ test('Leadership profiles preserve PI priority, surname order, and accessible la
   await page.goto('/leadership/');
   await expect(page.locator('h1')).toHaveText('ASCEND Leadership');
   await expect(page.locator('.leadership-profile h2')).toHaveText([
-   'Mike Walach, Ph.D.', 'Katelyn Barber, Ph.D.', 'Matthew Bernards',
+   'Mike Walach, Ph.D.', 'Sean Bailey', 'Katelyn Barber, Ph.D.', 'Matthew Bernards',
    'Beth A. Covitt', 'Jie Gong', 'Marissa Saad', 'Jill Schmidt, Ph.D.'
   ]);
   await expect(page.locator('.leadership-profile').first()).toContainText('Principal Investigator');

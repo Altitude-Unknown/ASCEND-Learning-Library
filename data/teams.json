@@ -1,1 +1,122 @@
-[]
+[
+  {
+    "id": "valparaiso-university",
+    "institution": "Valparaiso University",
+    "city": "Valparaiso",
+    "state": "Indiana",
+    "latitude": 41.464,
+    "longitude": -87.043,
+    "kind": "pod",
+    "person": "Katelyn Barber, Ph.D.",
+    "profileId": "katelyn-barber",
+    "locationSource": "https://www.valpo.edu/about/campus/maps-directions/"
+  },
+  {
+    "id": "university-of-idaho",
+    "institution": "University of Idaho",
+    "city": "Moscow",
+    "state": "Idaho",
+    "latitude": 46.726,
+    "longitude": -117.012,
+    "kind": "pod",
+    "person": "Matthew Bernards",
+    "profileId": "matthew-bernards",
+    "locationSource": "https://www.uidaho.edu/search"
+  },
+  {
+    "id": "missouri-st",
+    "institution": "Missouri S&T",
+    "city": "Rolla",
+    "state": "Missouri",
+    "latitude": 37.954,
+    "longitude": -91.774,
+    "kind": "pod",
+    "person": "Jill Schmidt, Ph.D.",
+    "profileId": "jill-schmidt",
+    "locationSource": "https://calendar.mst.edu/rolla_building_927"
+  },
+  {
+    "id": "university-of-kentucky",
+    "institution": "University of Kentucky",
+    "city": "Lexington",
+    "state": "Kentucky",
+    "latitude": 38.038,
+    "longitude": -84.503,
+    "kind": "pod",
+    "person": "Sean Bailey",
+    "profileId": "sean-bailey",
+    "locationSource": "https://www.uky.edu/contact-uk/"
+  },
+  {
+    "id": "university-of-bridgeport",
+    "institution": "University of Bridgeport",
+    "city": "Bridgeport",
+    "state": "Connecticut",
+    "latitude": 41.165,
+    "longitude": -73.191,
+    "kind": "pod",
+    "locationSource": "https://www.bridgeport.edu/about/campus-map-directions",
+    "person": "Jani Macari Pallis",
+    "personSource": "https://profiles.bridgeport.edu/user/jpallis/"
+  },
+  {
+    "id": "nasa-goddard",
+    "institution": "NASA Goddard Space Flight Center",
+    "city": "Greenbelt",
+    "state": "Maryland",
+    "latitude": 38.992,
+    "longitude": -76.853,
+    "kind": "sme",
+    "person": "Jie Gong",
+    "profileId": "jie-gong",
+    "locationSource": "https://www.nasa.gov/goddard/"
+  },
+  {
+    "id": "nasa-langley",
+    "institution": "NASA Langley Research Center",
+    "city": "Hampton",
+    "state": "Virginia",
+    "latitude": 37.086,
+    "longitude": -76.381,
+    "kind": "sme",
+    "person": "Margaret Pippin",
+    "locationSource": "https://www.nasa.gov/centers-and-facilities/langley/maps-directions/",
+    "personSource": "https://science.larc.nasa.gov/capable/contacts/"
+  },
+  {
+    "id": "plymouth-state",
+    "institution": "Plymouth State University",
+    "city": "Plymouth",
+    "state": "New Hampshire",
+    "latitude": 43.759,
+    "longitude": -71.688,
+    "kind": "pod",
+    "person": "Eric Kelsey",
+    "locationSource": "https://www.plymouth.edu/person/eric-kelsey"
+  },
+  {
+    "id": "johns-hopkins-apl",
+    "institution": "Johns Hopkins University Applied Physics Laboratory",
+    "city": "Laurel",
+    "state": "Maryland",
+    "latitude": 39.165,
+    "longitude": -76.899,
+    "kind": "leadership",
+    "role": "Co-investigator",
+    "person": "Ginny Smith",
+    "locationSource": "https://www.jhuapl.edu/about/directions"
+  },
+  {
+    "id": "montana-state",
+    "institution": "Montana State University",
+    "city": "Bozeman",
+    "state": "Montana",
+    "latitude": 45.667,
+    "longitude": -111.05,
+    "kind": "leadership",
+    "role": "Principal Investigator",
+    "person": "Mike Walach, Ph.D.",
+    "profileId": "mike-walach",
+    "locationSource": "https://www.montana.edu/about/"
+  }
+]

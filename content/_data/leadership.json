@@ -12,6 +12,17 @@
     ]
   },
   {
+    "name": "Sean Bailey",
+    "role": "Pod Lead",
+    "institution": "University of Kentucky",
+    "id": "sean-bailey",
+    "image": "/assets/leadership/sean-bailey.jpg",
+    "bio": [
+      "Sean Bailey is a professor in the Department of Mechanical and Aerospace Engineering at the University of Kentucky. He earned his Ph.D. in Mechanical Engineering from the University of Ottawa in 2006, studying the interactions between large-scale rotational flows and turbulence and continued his research on high-Reynolds-number turbulence in wall-bounded flows as a postdoctoral fellow and associate research scientist at Princeton University.",
+      "Since joining University of Kentucky, Bailey’s research has combined experimental studies of turbulent flows with the development of new measurement methods. His interests include coherent structures in boundary layers, unsteady vortex flows, interactions between coherent structures and homogeneous turbulence, and the scaling of wall-bounded flows at high Reynolds numbers. Bailey received an NSF CAREER award in 2014 which expanded his work into atmospheric research, including the use of autonomous uncrewed aerial vehicles (UAVs) to measure turbulence in the atmospheric boundary layer. This work has included deploying UAVs to investigate atmospheric boundary-layer turbulence, drainage flows, urban turbulence, sea-breeze evolution, wind-turbine wakes, and stratospheric turbulence."
+    ]
+  },
+  {
     "name": "Katelyn Barber, Ph.D.",
     "role": "Pod Lead",
     "institution": "Valparaiso University",
