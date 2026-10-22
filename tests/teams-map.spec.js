@@ -34,7 +34,8 @@ test('Pod leads and SMEs have distinct markers, names, and accessible responsive
     await expect(page.locator('#team-university-of-bridgeport')).toContainText('Jani Macari Pallis');
     await expect(page.locator('#team-nasa-langley')).toContainText('Margaret Pippin');
     await expect(page.locator('#team-plymouth-state')).toContainText('Eric Kelsey');
-    await expect(page.locator('#team-johns-hopkins-apl')).toContainText('Co-investigator');
+    await expect(page.locator('#team-plymouth-state .team-role')).toContainText('Pod lead');
+    await expect(page.locator('#team-johns-hopkins-apl')).toContainText('Major Co-investigator');
     await expect(page.locator('#team-johns-hopkins-apl')).toContainText('Ginny Smith');
     await expect(page.locator('#teams-directory')).not.toContainText('@');
     await page.getByRole('button', {name: 'Zoom in', exact: true}).click();
