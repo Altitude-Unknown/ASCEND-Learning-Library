@@ -41,6 +41,11 @@ Keep approximate campus/research center coordinates and source URLs with the
 record. Names and institutions can be published without creating a placeholder
 biography. Only supplied biographies are imported to the leadership page.
 
+Montana State's principal investigator location uses the approved gold-ring
+ASCEND logo badge at `/assets/teams/ascend-pi-badge.svg`, with a matching legend
+and directory icon. Its map button is 60 pixels wide; nearby-marker grouping
+accounts for that larger size. The major co-investigator retains a purple square.
+
 Run `npm test` and `npx playwright test tests/teams-map.spec.js` before publishing
 through the existing GitHub/Cloudflare workflow. Rebuilding updates the page,
 search index, map markers, and directory together. The directory also works

@@ -11,6 +11,7 @@ const teams = [...document.querySelectorAll('#teams-directory [data-team-id]')].
   name: item.querySelector('.team-institution').textContent,
   location: item.querySelector('.team-location').textContent,
   kind: item.dataset.kind || 'team',
+  piBadge: item.dataset.teamId === 'montana-state',
   role: item.querySelector('.team-role')?.textContent.replace(/[★◆●■]/g, '').trim() || roles[item.dataset.kind || 'team'],
   person: item.querySelector('.team-person')?.textContent,
   profile: item.querySelector('.team-profile-link'),
@@ -86,7 +87,7 @@ function groupNearbyLocations() {
   const groups = teams.map(team => [team]);
   for (let i = 0; i < groups.length; i++) {
     for (let j = i + 1; j < groups.length; j++) {
-      if (groups[i].some(a => groups[j].some(b => map.project(a.coordinates).dist(map.project(b.coordinates)) < 52))) {
+      if (groups[i].some(a => groups[j].some(b => map.project(a.coordinates).dist(map.project(b.coordinates)) < ((a.piBadge ? 60 : 44) + (b.piBadge ? 60 : 44)) / 2 + 8))) {
         groups[i].push(...groups[j]);
         groups.splice(j, 1);
         // Recheck all groups after a merge to include transitive neighbors.
@@ -154,10 +155,17 @@ try {
     teams.forEach(team => {
       const dot = document.createElement('button');
       dot.type = 'button';
-      dot.className = `team-map-dot team-map-${team.kind}`;
-      const symbol = document.createElement('span');
-      symbol.className = `team-symbol team-symbol-${team.kind}`;
-      symbol.textContent = symbols[team.kind];
+      dot.className = `team-map-dot team-map-${team.kind}${team.piBadge ? ' team-map-msu' : ''}`;
+      const symbol = document.createElement(team.piBadge ? 'img' : 'span');
+      if (team.piBadge) {
+        symbol.src = '/assets/teams/ascend-pi-badge.svg';
+        symbol.alt = '';
+        symbol.width = 60;
+        symbol.height = 60;
+      } else {
+        symbol.className = `team-symbol team-symbol-${team.kind}`;
+        symbol.textContent = symbols[team.kind];
+      }
       symbol.setAttribute('aria-hidden', 'true');
       dot.append(symbol);
       dot.setAttribute('aria-label', `Show ${team.role.toLowerCase()}: ${team.name}`);

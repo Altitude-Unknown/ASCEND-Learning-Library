@@ -28,6 +28,8 @@ test('Pod leads and SMEs have distinct markers, names, and accessible responsive
     await expect(page.locator('.team-map-pod')).toHaveCount(6);
     await expect(page.locator('.team-map-sme')).toHaveCount(2);
     await expect(page.locator('.team-map-leadership')).toHaveCount(2);
+    await expect(page.locator('.team-map-msu img')).toHaveAttribute('src', '/assets/teams/ascend-pi-badge.svg');
+    await expect.poll(() => page.locator('.team-map-msu img').evaluate(img => img.complete && img.naturalWidth > 0)).toBeTruthy();
     await expect(page.locator('.team-map-team')).toHaveCount(0);
     await expect(page.locator('.team-map-pod .team-symbol').first()).toHaveText('★');
     await expect(page.locator('.team-map-sme .team-symbol').first()).toHaveText('◆');
@@ -71,6 +73,13 @@ test('SME and pod popups show the right institution, role, and person', async ({
   await expect(page.locator('.maplibregl-popup')).toContainText('Jani Macari Pallis');
   await expect(page.locator('.maplibregl-popup')).toContainText('Pod lead');
   await expect(page.locator('.maplibregl-popup')).not.toContainText('@');
+  await page.keyboard.press('Escape');
+  await page.locator('#team-montana-state .team-map-link').click();
+  await page.keyboard.press('Escape');
+  await page.locator('.team-map-msu').click();
+  await expect(page.locator('.maplibregl-popup')).toContainText('Montana State University');
+  await expect(page.locator('.maplibregl-popup')).toContainText('Principal Investigator');
+  await expect(page.locator('.maplibregl-popup')).toContainText('Mike Walach');
 });
 
 test('Nearby research centers remain available through a grouped marker', async ({page}) => {

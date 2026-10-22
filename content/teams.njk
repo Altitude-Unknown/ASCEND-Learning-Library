@@ -8,9 +8,9 @@ teamsMap: true
 ---
 <section aria-labelledby="teams-map-heading">
 <h2 id="teams-map-heading">Our network, on the map</h2>
-<p id="teams-map-help">Select a marker to see the institution, its role, and the people supporting ASCEND. Stars mark pod leads, diamonds mark subject matter experts, squares mark project leadership, and dots mark student teams. Nearby locations are grouped under a number; select it to see each institution, or zoom in. You can also choose an institution from the list below.</p>
+<p id="teams-map-help">Select a marker to see the institution, its role, and the people supporting ASCEND. The gold-ring ASCEND badge marks the principal investigator at Montana State University. Stars mark pod leads, diamonds mark subject matter experts, a square marks the major co-investigator, and dots mark student teams. Nearby locations are grouped under a number; select it to see each institution, or zoom in. You can also choose an institution from the list below.</p>
 <div class="teams-map-toolbar" data-pagefind-ignore>
-<div class="teams-map-legend" aria-label="Map legend"><span class="teams-map-key"><span class="team-symbol team-symbol-team" aria-hidden="true">●</span> Student team</span><span class="teams-map-key"><span class="team-symbol team-symbol-pod" aria-hidden="true">★</span> Pod lead</span><span class="teams-map-key"><span class="team-symbol team-symbol-sme" aria-hidden="true">◆</span> Subject matter expert</span><span class="teams-map-key"><span class="team-symbol team-symbol-leadership" aria-hidden="true">■</span> Project leadership</span></div>
+<div class="teams-map-legend" aria-label="Map legend"><span class="teams-map-key"><img class="team-pi-badge" src="/assets/teams/ascend-pi-badge.svg" width="28" height="28" alt=""> Principal investigator</span><span class="teams-map-key"><span class="team-symbol team-symbol-team" aria-hidden="true">●</span> Student team</span><span class="teams-map-key"><span class="team-symbol team-symbol-pod" aria-hidden="true">★</span> Pod lead</span><span class="teams-map-key"><span class="team-symbol team-symbol-sme" aria-hidden="true">◆</span> Subject matter expert</span><span class="teams-map-key"><span class="team-symbol team-symbol-leadership" aria-hidden="true">■</span> Major co-investigator</span></div>
 <button class="button outline" id="teams-map-reset" type="button" hidden>Show all locations</button>
 </div>
 <div id="teams-map" class="teams-map" role="region" aria-label="ASCEND teams, pod leads, and subject matter experts map" aria-describedby="teams-map-help" hidden></div>
@@ -24,7 +24,7 @@ teamsMap: true
 <p>{% if teams.length %}{{ teams.length }} network location{% if teams.length != 1 %}s{% endif %}, listed alphabetically.{% else %}Participating institutions will be listed here as teams join.{% endif %}</p>
 <ul id="teams-directory" class="teams-directory">
 {% for team in teams %}<li id="team-{{ team.id }}" data-team-id="{{ team.id }}" data-kind="{{ team.kind }}" data-latitude="{{ team.latitude }}" data-longitude="{{ team.longitude }}">
-<p class="team-role"><span class="team-symbol team-symbol-{{ team.kind }}" aria-hidden="true">{% if team.kind == 'pod' %}★{% elif team.kind == 'sme' %}◆{% elif team.kind == 'leadership' %}■{% else %}●{% endif %}</span> {{ team.role }}</p>
+<p class="team-role">{% if team.id == 'montana-state' %}<img class="team-pi-badge" src="/assets/teams/ascend-pi-badge.svg" width="28" height="28" alt="">{% else %}<span class="team-symbol team-symbol-{{ team.kind }}" aria-hidden="true">{% if team.kind == 'pod' %}★{% elif team.kind == 'sme' %}◆{% elif team.kind == 'leadership' %}■{% else %}●{% endif %}</span>{% endif %} {{ team.role }}</p>
 <h3 class="team-institution">{{ team.institution }}</h3>
 <p class="team-location">{{ team.city }}, {{ team.state }}</p>
 {% if team.person %}<p class="team-person">{{ team.person }}</p>{% endif %}
