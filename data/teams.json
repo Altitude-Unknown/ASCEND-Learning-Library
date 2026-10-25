@@ -92,7 +92,8 @@
     "longitude": -71.688,
     "kind": "pod",
     "person": "Eric Kelsey",
-    "locationSource": "https://www.plymouth.edu/person/eric-kelsey"
+    "locationSource": "https://www.plymouth.edu/person/eric-kelsey",
+    "profileId": "eric-kelsey"
   },
   {
     "id": "johns-hopkins-apl",
