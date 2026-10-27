@@ -1,0 +1,96 @@
+{
+  "units": [
+    {
+      "slug": "regulations",
+      "title": "Regulations",
+      "bank": "Regulations",
+      "chapter": "1 \u00b7 Aviation Regulatory System",
+      "summary": "Understand the rules, responsibilities, and limits that shape a remote pilot\u2019s decisions.",
+      "outcomes": [
+        "Identify remote pilot responsibilities and operating limitations.",
+        "Apply regulatory requirements to realistic flight scenarios."
+      ],
+      "watch": [
+        "regulations-video"
+      ],
+      "slides": "regulations-presentation",
+      "activity": "regulations-activity",
+      "number": 1,
+      "url": "/part107/regulations/"
+    },
+    {
+      "slug": "airspace",
+      "title": "Airspace",
+      "bank": "Airspace",
+      "chapter": "2 \u00b7 National Airspace System",
+      "summary": "Read aviation charts and determine where a proposed UAS operation can take place.",
+      "outcomes": [
+        "Interpret airspace classifications and sectional-chart information.",
+        "Recognize airport operations, restrictions, and authorization needs."
+      ],
+      "watch": [
+        "airspace-video"
+      ],
+      "slides": "airspace-presentation",
+      "activity": "airspace-worksheet",
+      "number": 2,
+      "url": "/part107/airspace/"
+    },
+    {
+      "slug": "weather",
+      "title": "Weather",
+      "bank": "Weather",
+      "chapter": "3 \u00b7 Weather",
+      "summary": "Connect weather information to aircraft performance, flight planning, and safe operating decisions.",
+      "outcomes": [
+        "Find and interpret aviation weather reports.",
+        "Explain how weather conditions can affect a UAS operation."
+      ],
+      "watch": [
+        "aviation-weather-video",
+        "metar-video"
+      ],
+      "watchNote": "Start with the aviation-weather and METAR demonstrations. A full Weather overview video has not yet been added.",
+      "slides": "weather-presentation",
+      "activity": "weather-activity",
+      "number": 3,
+      "url": "/part107/weather/"
+    },
+    {
+      "slug": "loading-and-performance",
+      "title": "Loading & Performance",
+      "bank": "Loading and Performance",
+      "chapter": "5 \u00b7 Loading and Performance",
+      "summary": "Evaluate how loading, balance, and operating conditions affect aircraft performance.",
+      "outcomes": [
+        "Explain the effects of weight, balance, and center of gravity.",
+        "Apply performance concepts to a proposed aircraft load and flight."
+      ],
+      "watch": [
+        "loading-performance-video"
+      ],
+      "slides": "loading-performance-presentation",
+      "activity": "loading-performance-activity",
+      "number": 4,
+      "url": "/part107/loading-and-performance/"
+    },
+    {
+      "slug": "uas-operations",
+      "title": "Operations",
+      "bank": "Operations",
+      "chapter": "4 \u00b7 Operations",
+      "summary": "Bring the course concepts together in preflight planning, communication, and operational judgment.",
+      "outcomes": [
+        "Plan preflight checks, crew communication, and emergency responses.",
+        "Use sound judgment to assess and manage an operational scenario."
+      ],
+      "watch": [
+        "operations-video"
+      ],
+      "slides": "operations-presentation",
+      "activity": "operations-activity",
+      "number": 5,
+      "url": "/part107/uas-operations/"
+    }
+  ]
+}

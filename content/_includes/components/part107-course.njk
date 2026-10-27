@@ -1,0 +1,57 @@
+<div class="course-intro prose">
+  <p>This guide helps you navigate ASCEND’s FAA Part 107 training materials and prepare for the Remote Pilot knowledge exam. Work through the five units in order, or return to a topic when you need a refresher.</p>
+  <p>The goal is to develop the knowledge and decision-making skills needed to operate an unmanned aircraft safely and responsibly, as well as prepare for the exam.</p>
+</div>
+<div class="project-links course-actions"><a class="button" href="/part107/regulations/">Start Unit 1: Regulations →</a><a class="button outline" href="#learning-path">Explore the five-unit path</a></div>
+<nav class="course-jump" aria-label="On this course page"><a href="#study-method">How to study</a><a href="#learning-path">Scope & sequence</a><a href="#learning-together">Individual, club, or course</a><a href="#practice-and-readiness">Practice & exam readiness</a></nav>
+
+<section class="section-block" id="study-method" aria-labelledby="study-method-heading">
+  <div class="section-heading"><div><span class="eyebrow">ONE APPROACH FOR EVERY UNIT</span><h2 id="study-method-heading">Watch. Read. Apply. Check.</h2><p>Build understanding before moving on. You can repeat any step at your own pace.</p></div></div>
+  <ol class="course-method">
+    <li><h3>Watch & review</h3><p>Begin with the video resources and presentation slides. Videos introduce the concepts; PowerPoint slides provide detailed notes and additional information.</p></li>
+    <li><h3>Read & clarify</h3><p>Use the companion textbook to revisit concepts, clarify difficult topics, or study in a written format. Each unit below identifies its chapter.</p></li>
+    <li><h3>Apply & explain</h3><p>Complete the activity using a realistic situation. Interpret information and explain your decisions rather than memorizing facts.</p></li>
+    <li><h3>Check & revisit</h3><p>Take a practice quiz, review missed concepts, and return to the relevant lesson or reading. Be able to explain why an answer is correct.</p></li>
+  </ol>
+</section>
+
+<section class="section-block" id="learning-path" aria-labelledby="learning-path-heading">
+  <div class="section-heading"><div><span class="eyebrow">SCOPE & SEQUENCE</span><h2 id="learning-path-heading">Your five-unit learning path</h2><p>Follow this order for the course. The textbook keeps its original chapter numbers: Loading & Performance is Chapter 5, and Operations is Chapter 4.</p></div><span class="count-label">05 UNITS · YOUR OWN PACE</span></div>
+  <ol class="course-units">
+    {% for unit in part107Course.units %}
+    <li class="course-unit" id="unit-{{ unit.number }}">
+      <div class="course-unit-main"><span class="eyebrow">UNIT 0{{ unit.number }}</span><h3>{{ unit.title }}</h3><p>{{ unit.summary }}</p><ul>{% for outcome in unit.outcomes %}<li>{{ outcome }}</li>{% endfor %}</ul><a class="button outline" href="{{ unit.url }}">Study Unit {{ unit.number }}: {{ unit.title }} →</a></div>
+      <div class="course-unit-resources"><h4>Materials & practice</h4>
+        <p class="small"><strong>Textbook:</strong> <a href="/resources/airspace-book/">Chapter {{ unit.chapter }}</a></p>
+        {% if unit.watchNote %}<p class="small muted">{{ unit.watchNote }}</p>{% endif %}
+        <ul>{% for resource in collections.resources | related(unit.watch) %}<li><a href="{{ resource.url }}">{{ resource.data.title }}</a></li>{% endfor %}
+        {% for resource in collections.resources | related([unit.slides, unit.activity]) %}<li><a href="{{ resource.url }}">{{ resource.data.title }}</a></li>{% endfor %}</ul>
+        <div class="course-quiz-links"><a href="/part107/practice-tests/?bank={{ unit.bank | urlencode }}">10-question {{ unit.title }} quiz →</a><a href="/part107/practice-tests/?bank={{ unit.bank | urlencode }}&amp;count=all">Practice the full {{ unit.title }} bank →</a></div>
+      </div>
+    </li>
+    {% endfor %}
+  </ol>
+</section>
+
+<section class="section-block" id="learning-together" aria-labelledby="learning-together-heading">
+  <div class="section-heading"><div><span class="eyebrow">CHOOSE HOW YOU LEARN</span><h2 id="learning-together-heading">One path, different settings</h2><p>The same materials support independent study, club meetings, and a scheduled course.</p></div></div>
+  <div class="course-settings">
+    <section><h3>On your own</h3><p>Choose a regular study time and work through the units in order. Keep notes on unfamiliar concepts, complete each activity, and review your quiz results before continuing.</p></section>
+    <section><h3>With a club or team</h3><p>Watch and read before meeting. Use meeting time to compare activity answers, interpret charts and reports, and explain decisions together. Take quizzes individually to check your own understanding.</p></section>
+    <section><h3>As part of a course</h3><p>Follow your instructor’s schedule, assignments, and assessment requirements. Instructors can use the five units as a sequence for lessons, discussions, applied work, and review.</p></section>
+  </div>
+</section>
+
+<section class="section-block course-readiness" id="practice-and-readiness" aria-labelledby="practice-readiness-heading">
+  <div class="section-heading"><div><span class="eyebrow">UNDERSTANDING BEFORE MEMORIZATION</span><h2 id="practice-readiness-heading">Practice, review, then prepare for the exam</h2></div></div>
+  <div class="course-readiness-grid">
+    <div class="prose"><h3>Practice quizzes & exams</h3><p>For each unit, choose a 10-question practice quiz or work through the full available question bank for that topic. After all five units, take the <strong>50-question comprehensive practice exam</strong>, with 10 questions drawn from each section.</p><p>Practice questions cover the same kinds of concepts and information you will need for the FAA knowledge test. Many charts, maps, diagrams, and reference figures come from the FAA Airman Knowledge Testing Supplement, helping you practice interpreting those resources.</p><p>The 50-question mixed exam is ASCEND’s practice format. The actual FAA UAG test has 60 questions; see the <a href="https://www.faa.gov/sites/faa.gov/files/training_testing/training/testing_matrix.pdf">FAA testing matrix</a>.</p><a class="button" href="/part107/practice-tests/?bank=mixed">Take the comprehensive practice exam →</a></div>
+    <div class="course-readiness-target prose"><span class="eyebrow">RECOMMENDED STUDY TARGET</span><h3>Aim for 90% or higher, consistently</h3><p>Before attempting the FAA exam, we recommend consistently scoring <strong>90% or higher</strong> on practice exams and being able to explain your answers. This is a course recommendation, not an FAA passing-score requirement.</p><p>Repeatedly taking the same questions can produce high scores through memorization. The FAA may word questions differently or ask you to apply a concept to a new situation. Review why each answer is correct and practice using the supporting references.</p><p>Your exam result depends on your understanding, preparation, and test-taking skills. A practice score does not guarantee a passing FAA result.</p><p><a href="https://www.faa.gov/uas/commercial_operators/become_a_drone_pilot">Review the FAA’s certification steps →</a></p></div>
+  </div>
+</section>
+
+<section class="section-block" aria-labelledby="course-references-heading"><div class="section-heading"><div><span class="eyebrow">KEEP THESE CLOSE</span><h2 id="course-references-heading">Course references</h2></div></div><div class="module-grid">
+  <a class="module-card" href="/part107/study-guide/"><div><h3>Companion textbook</h3><p>Read or download the complete five-chapter study guide.</p></div><span aria-hidden="true">→</span></a>
+  <a class="module-card" href="/part107/presentations/"><div><h3>Presentation slides</h3><p>Find the five topic presentations for study and discussion.</p></div><span aria-hidden="true">→</span></a>
+  <a class="module-card" href="/part107/practice-tests/"><div><h3>Practice-test software</h3><p>Choose a unit quiz, full topic bank, or mixed practice exam.</p></div><span aria-hidden="true">→</span></a>
+</div></section>

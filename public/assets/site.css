@@ -42,3 +42,31 @@
 .leadership-biography h2{margin:0 0 8px;font-size:2rem}
 .leadership-biography .leadership-institution{color:var(--muted);margin:0 0 20px}
 @media(max-width:620px){.leadership-portrait{float:none;display:block;width:160px;margin:0 0 22px}.leadership-profile-pi{padding:20px}.leadership-biography h2{font-size:1.7rem}}
+
+/* A shared learning sequence for independent study, clubs, and courses. */
+.course-intro{max-width:850px}.course-actions{margin-block:28px}
+.course-jump{display:flex;flex-wrap:wrap;gap:8px 24px;border-block:1px solid var(--line);padding:14px 0}
+.course-jump a{display:inline-flex;align-items:center;min-height:44px;font-size:.88rem;font-weight:650}
+.course-method{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;padding:0;list-style:none;counter-reset:study}
+.course-method>li{counter-increment:study;border-top:3px solid var(--green);padding-top:18px}
+.course-method>li:before{content:"0" counter(study);color:var(--green);font-size:.8rem;font-weight:750;letter-spacing:.08em}
+.course-method h3{font-size:1.15rem;margin:10px 0}.course-method p,.course-settings p{font-size:.92rem}
+.course-units{list-style:none;padding:0;margin:0;display:grid;gap:24px}
+.course-unit{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);border:1px solid var(--line);border-radius:var(--radius);background:var(--white);overflow:hidden}
+.course-unit-main,.course-unit-resources{padding:30px;min-width:0}
+.course-unit-main h3{font-size:2rem;margin:8px 0 12px}.course-unit-main>ul{padding-left:20px;margin:18px 0 24px;font-size:.94rem}
+.course-unit-main li+li{margin-top:8px}.course-unit-main .button{white-space:normal}
+.course-unit-resources{background:var(--mint);border-left:1px solid var(--line)}
+.course-unit-resources h4{font-size:1rem;margin:0 0 15px}.course-unit-resources ul{padding-left:20px;margin-block:16px}
+.course-unit-resources li a{display:inline-block;padding-block:6px;font-size:.91rem}
+.course-quiz-links{border-top:1px solid #bccbc2;padding-top:12px;display:grid;gap:8px;font-size:.87rem;font-weight:650}
+.course-quiz-links a{display:flex;align-items:center;min-height:44px}
+.course-settings{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+.course-settings section{border-top:1px solid var(--line);padding-top:16px}.course-settings h3{font-size:1.25rem}
+.course-readiness{border-top:1px solid var(--line)}.course-readiness-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px;align-items:start}
+.course-readiness-grid>div{min-width:0}.course-readiness-grid h3{font-size:1.5rem;margin-top:0}
+.course-readiness-target{padding:26px;background:var(--mint);border-radius:var(--radius)}
+.course-readiness-target h3{margin-top:12px}.course-readiness-grid .button{white-space:normal}
+@media(max-width:850px){.course-method{grid-template-columns:repeat(2,minmax(0,1fr))}.course-unit-main,.course-unit-resources{padding:24px}.course-settings{gap:20px}}
+@media(max-width:620px){.course-unit,.course-settings,.course-readiness-grid{grid-template-columns:1fr}.course-unit-resources{border-left:0;border-top:1px solid var(--line)}.course-unit-main,.course-unit-resources{padding:22px}.course-unit-main h3{font-size:1.7rem}.course-method{gap:18px}.course-method h3{font-size:1.05rem}.course-method p{font-size:.87rem}.course-actions .button{width:100%;white-space:normal}.course-readiness-target{padding:22px}.course-jump{gap:4px 18px}}
+@media print{.course-unit,.course-readiness-grid{display:block}.course-unit{break-inside:avoid}.course-unit-resources{border-left:0}.course-method{grid-template-columns:repeat(2,1fr)}.course-jump{display:none}}

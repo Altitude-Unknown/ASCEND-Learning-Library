@@ -3,7 +3,7 @@
     "id": "part107",
     "title": "FAA Part 107",
     "tagline": "Prepare for your next perspective.",
-    "description": "Browse remote pilot references covering airspace, weather, regulations, and UAS operations.",
+    "description": "Follow a five-unit learning path through remote pilot rules, airspace, weather, loading and performance, and safe operations.",
     "icon": "compass",
     "subsections": [
       {
@@ -23,12 +23,12 @@
         "slug": "weather"
       },
       {
-        "title": "UAS Operations",
-        "slug": "uas-operations"
-      },
-      {
         "title": "Loading and Performance",
         "slug": "loading-and-performance"
+      },
+      {
+        "title": "UAS Operations",
+        "slug": "uas-operations"
       },
       {
         "title": "Part 107 Study Guide",

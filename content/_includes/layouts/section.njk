@@ -3,13 +3,11 @@ layout: layouts/base.njk
 ---
 <div class="container">
 <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><span aria-current="page">{{ section.title }}</span></nav>
-<header class="section-hero"><span class="eyebrow">EXPLORE THE LIBRARY</span><div class="section-hero-row"><div><h1>{{ section.title }}</h1><p class="lead">{{ section.description }}</p></div><span class="section-symbol" aria-hidden="true"><svg><use href="#i-{{ section.icon }}"/></svg></span></div></header>
+<header class="section-hero"><span class="eyebrow">EXPLORE THE LIBRARY</span><div class="section-hero-row"><div><h1>{% if section.id == 'part107' %}FAA Part 107 Commercial Remote Pilot Certification Training{% else %}{{ section.title }}{% endif %}</h1><p class="lead">{{ section.description }}</p></div><span class="section-symbol" aria-hidden="true"><svg><use href="#i-{{ section.icon }}"/></svg></span></div></header>
 {% if section.overview.length %}<div class="prose project-intro">{% for paragraph in section.overview %}<p>{{ paragraph }}</p>{% endfor %}</div>{% endif %}
 {% if section.contextLinks.length %}<div class="project-links">{% for link in section.contextLinks %}<a class="button outline" href="{{ link.url }}">{{ link.title }} →</a>{% endfor %}</div>{% endif %}
 {% if section.id == 'part107' %}
-<div class="section-heading"><div><span class="eyebrow">REFERENCE MATERIAL FOR REMOTE PILOTS</span><h2>Part 107 reference topics</h2><p>Choose the topic you need. These resources can be used independently.</p></div><span class="count-label">09 TOPICS</span></div>
-<div class="module-grid">{% for m in collections.modules %}<a class="module-card{% if m.data.order == 3 %} featured-module{% endif %}" href="{{ m.url }}"><div><h3>{{ m.data.title }}</h3><p>{{ m.data.description }}</p></div><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>{% if m.data.order == 3 %}<span class="module-badge">READINGS & PRESENTATION</span>{% endif %}</a>{% endfor %}</div>
-{% include "components/practice.njk" %}
+{% include "components/part107-course.njk" %}
 {% elif section.id == 'videos' or section.id == 'downloads' %}
  {% if section.id == 'videos' %}{% set items = collections.resources | byKind('Video') %}{% else %}{% set items = collections.resources | downloadable %}{% endif %}
  <p class="notice">Available resources include file links. Items marked “Planned” are future additions.{% if section.id == 'downloads' %} The library supports PDF, PPTX, DOCX, STL, DXF, STEP, ZIP, code, and datasets.{% endif %}</p>

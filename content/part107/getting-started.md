@@ -11,8 +11,10 @@ quiz: false
 status: Materials added
 ---
 
-## How to use these materials
+## Start with the learning path
 
-Start with the complete FAA Remote Pilot Study Guide. Browse the topics for Regulations, Airspace, Weather, UAS Operations, and Loading and Performance; each connects to a chapter and presentation.
+The [Part 107 course overview](/part107/) brings together the scope, sequence, and study approach for individuals, clubs, and courses.
 
-The files are presented as supplied. The study guide notes updates relative to some of the original slide language; the import preserves both editions.
+Work through **Regulations → Airspace → Weather → Loading & Performance → Operations**. In each unit, watch the video resources and review the slides, read the corresponding textbook chapter, complete an applied activity, and check your understanding with a quiz.
+
+Start with [Unit 1: Regulations](/part107/regulations/). If you are studying as part of a course, follow your instructor’s schedule and assignment requirements.

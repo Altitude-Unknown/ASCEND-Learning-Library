@@ -11,7 +11,7 @@ practiceApp: true
 status: Available
 ---
 
-Use these optional quizzes to check your understanding as you explore the Part 107 library. Start with one topic or try a mixed set. Figure questions include the chart or weather report you need, with a link to open it full size.
+Use these quizzes alongside the [five-unit learning path](/part107/). Choose 10 questions from one unit, all available questions in that unit, or the comprehensive mixed practice exam with 50 questions—10 per unit. Figure questions include the chart or weather report you need, with a link to open it full size.
 
 {% include "components/practice-app.njk" %}
 

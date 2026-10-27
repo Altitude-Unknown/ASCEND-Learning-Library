@@ -2,6 +2,7 @@
 title: Weather
 description: Explore the supplied aviation weather chapter and course presentation.
 order: 4
+courseOrder: 3
 permalink: /part107/weather/
 objectives: []
 resourceIds:
@@ -14,8 +15,11 @@ quiz: false
 status: Materials added
 ---
 
-## How to use these materials
+## Work through this unit
 
-Read Chapter 3, **Weather**, in the study guide and use the Weather presentation alongside it.
+1. **Watch and review the slides.** Use the short aviation-weather and METAR demonstrations, then review the Weather presentation.
+2. **Read and clarify.** Use Chapter 3 · Weather in the companion study guide to review concepts and work through difficult topics.
+3. **Apply your understanding.** Complete the linked activity. Explain your decisions using the rules, charts, or other references that support them.
+4. **Check and revisit.** Take the unit quiz, review missed concepts, and return to the materials before continuing.
 
-The files are presented as supplied. The study guide notes updates relative to some of the original slide language; the import preserves both editions.
+The study guide retains its original chapter numbering, so the course sequence moves from Chapter 3 to Chapter 5, then Chapter 4. The book notes updates relative to some original slide language; use current FAA references when checking operating requirements.

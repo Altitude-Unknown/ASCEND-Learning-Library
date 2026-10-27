@@ -23,6 +23,10 @@ async function load() {
   if(!Array.isArray(data.questions)||!data.questions.length||!Array.isArray(data.banks)||!data.figures)throw new Error('Invalid question bank');
   if(data.questions.some(q=>!Number.isInteger(q.answerIndex)||q.answerIndex<0||q.answerIndex>=q.choices.length||q.figures.some(n=>!data.figures[n])))throw new Error('Invalid question');
   find('practice-bank').innerHTML='<option value="mixed">Mixed — 10 from each topic</option>'+data.banks.map(bank=>`<option value="${esc(bank)}">${esc(bank)} (${data.questions.filter(q=>q.bank===bank).length} available)</option>`).join('');
+  const params=new URLSearchParams(location.search);
+  const bank=params.get('bank');
+  if(bank==='mixed'||data.banks.includes(bank))find('practice-bank').value=bank;
+  if(params.get('count')==='all'&&find('practice-bank').value!=='mixed')find('practice-count').value='all';
   find('practice-setup').hidden=false;setCount();
   status.textContent=`${data.questions.length} questions available across five topics.`;
  } catch {

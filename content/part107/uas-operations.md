@@ -2,7 +2,8 @@
 title: UAS Operations
 description: Study preflight checks, communication, emergency procedures, and operating
   decisions.
-order: 5
+order: 6
+courseOrder: 5
 permalink: /part107/uas-operations/
 objectives: []
 resourceIds:
@@ -19,8 +20,11 @@ quiz: false
 status: Materials added
 ---
 
-## How to use these materials
+## Work through this unit
 
-Read Chapter 4, **Operations**, in the study guide and use the matching UAS Operations slides.
+1. **Watch and review the slides.** Begin with the topic video, then review the matching presentation and its notes.
+2. **Read and clarify.** Use Chapter 4 · Operations in the companion study guide to review concepts and work through difficult topics.
+3. **Apply your understanding.** Complete the linked activity. Explain your decisions using the rules, charts, or other references that support them.
+4. **Check and revisit.** Take the unit quiz, review missed concepts, and return to the materials before continuing.
 
-The files are presented as supplied. The study guide notes updates relative to some of the original slide language; the import preserves both editions.
+The study guide retains its original chapter numbering, so the course sequence moves from Chapter 3 to Chapter 5, then Chapter 4. The book notes updates relative to some original slide language; use current FAA references when checking operating requirements.
