@@ -11,13 +11,13 @@
   </div>
   {% set videos = linked | byKind('Video') %}
   {% if videos.length > 1 or (videos.length and not courseUnit.lessonVideo) %}
-  <details class="unit-supplemental"><summary>Supplemental videos for this unit</summary><div class="resource-grid two">{% for resource in videos %}{% if resource.data.id != courseUnit.lessonVideo %}{% include "components/card.njk" %}{% endif %}{% endfor %}</div></details>
+  <section class="unit-supplemental" aria-label="Supplemental videos"><h3>Supplemental videos for this unit</h3><div class="resource-grid two">{% for resource in videos %}{% if resource.data.id != courseUnit.lessonVideo %}{% include "components/card.njk" %}{% endif %}{% endfor %}</div></section>
   {% endif %}
 </section>
 
 <section class="section-block unit-study-step" id="reading" aria-labelledby="reading-heading">
   <div class="section-heading"><div><span class="eyebrow">STEP 2 · READ & CLARIFY</span><h2 id="reading-heading">Read the companion textbook</h2><p>Study Chapter {{ courseUnit.chapter }}. Use the reading to clarify the concepts introduced in the lesson.</p></div></div>
-  <div class="resource-grid two">{% for resource in linked | byKind('Book') %}{% include "components/card.njk" %}{% endfor %}</div>
+  <div class="resource-grid two"><article class="resource-card"><span class="resource-kind">Textbook · Web chapter</span><h3><a href="{{ courseUnit.chapterUrl }}">Read Chapter {{ courseUnit.chapter }} online</a></h3><p>Read the complete chapter on this website, with section navigation, accessible tables, and descriptions of figures.</p></article>{% for resource in linked | byKind('Book') %}{% include "components/card.njk" %}{% endfor %}</div>
 </section>
 
 <section class="section-block unit-study-step" id="activity" aria-labelledby="activity-heading">

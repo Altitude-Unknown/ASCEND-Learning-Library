@@ -1,0 +1,533 @@
+---
+{
+  "layout": "layouts/textbook-chapter.njk",
+  "tags": [],
+  "eleventyExcludeFromCollections": true,
+  "topic": "part107",
+  "title": "Chapter 3: Weather",
+  "description": "Read the complete Weather textbook chapter online, including its knowledge check and answer key.",
+  "chapterNumber": 3,
+  "courseOrder": 3,
+  "toc": [
+    {
+      "title": "How to Use This Chapter",
+      "id": "how-to-use-this-chapter"
+    },
+    {
+      "title": "Learning Objectives",
+      "id": "learning-objectives"
+    },
+    {
+      "title": "3.1 Why Weather Matters to UAS Operations",
+      "id": "3-1-why-weather-matters-to-uas-operations"
+    },
+    {
+      "title": "3.2 Atmospheric Pressure, Altimeter Settings, and Temperature",
+      "id": "3-2-atmospheric-pressure-altimeter-settings-and-temperature"
+    },
+    {
+      "title": "3.3 Thermals and Convective Currents",
+      "id": "3-3-thermals-and-convective-currents"
+    },
+    {
+      "title": "3.4 Moisture: Evaporation, Condensation, Sublimation, and Dew Point",
+      "id": "3-4-moisture-evaporation-condensation-sublimation-and-dew-point"
+    },
+    {
+      "title": "3.5 Wind and Wind Shear",
+      "id": "3-5-wind-and-wind-shear"
+    },
+    {
+      "title": "3.6 Air Masses, Fronts, Ridges, and Troughs",
+      "id": "3-6-air-masses-fronts-ridges-and-troughs"
+    },
+    {
+      "title": "3.7 Atmospheric Stability",
+      "id": "3-7-atmospheric-stability"
+    },
+    {
+      "title": "3.8 Clouds and What They Tell a Pilot",
+      "id": "3-8-clouds-and-what-they-tell-a-pilot"
+    },
+    {
+      "title": "3.9 Part 107 Visibility and Cloud Clearance",
+      "id": "3-9-part-107-visibility-and-cloud-clearance"
+    },
+    {
+      "title": "3.10 Thunderstorms",
+      "id": "3-10-thunderstorms"
+    },
+    {
+      "title": "3.11 Icing and Frost",
+      "id": "3-11-icing-and-frost"
+    },
+    {
+      "title": "3.12 Fog",
+      "id": "3-12-fog"
+    },
+    {
+      "title": "3.13 Density Altitude and UAS Performance",
+      "id": "3-13-density-altitude-and-uas-performance"
+    },
+    {
+      "title": "3.14 Obtaining a Weather Briefing",
+      "id": "3-14-obtaining-a-weather-briefing"
+    },
+    {
+      "title": "3.15 Surface Weather Observations: ASOS and AWOS",
+      "id": "3-15-surface-weather-observations-asos-and-awos"
+    },
+    {
+      "title": "3.16 METAR: Aviation Routine Weather Report",
+      "id": "3-16-metar-aviation-routine-weather-report"
+    },
+    {
+      "title": "3.17 Decoding a METAR",
+      "id": "3-17-decoding-a-metar"
+    },
+    {
+      "title": "3.18 TAF: Terminal Aerodrome Forecast",
+      "id": "3-18-taf-terminal-aerodrome-forecast"
+    },
+    {
+      "title": "3.19 SIGMETs, Convective SIGMETs, and Graphical Aviation Weather",
+      "id": "3-19-sigmets-convective-sigmets-and-graphical-aviation-weather"
+    },
+    {
+      "title": "3.20 Weather Decision Making for a Remote PIC",
+      "id": "3-20-weather-decision-making-for-a-remote-pic"
+    },
+    {
+      "title": "3.21 Chapter Summary",
+      "id": "3-21-chapter-summary"
+    },
+    {
+      "title": "3.22 Knowledge Check",
+      "id": "3-22-knowledge-check"
+    },
+    {
+      "title": "Sources and Update Notes",
+      "id": "sources-and-update-notes"
+    }
+  ],
+  "permalink": "/part107/textbook/weather/"
+}
+---
+<p><em>Weather Theory • Wind • Stability • Clouds • Thunderstorms • Icing • Fog • Density Altitude • METARs • TAFs</em></p>
+<p><strong>2026 EDITION  </strong>Built from the Weather course presentation and expanded for textbook study. The chapter preserves the presentation&#x27;s instructional sequence while clarifying several older terms and using current FAA/Aviation Weather Center resources where appropriate.</p>
+<h2 id="how-to-use-this-chapter"><strong>How to Use This Chapter</strong></h2>
+<p>Weather questions on the FAA Remote Pilot knowledge test are usually practical. You may be asked to identify a hazardous condition, interpret a METAR or TAF, determine whether visibility and cloud clearance meet Part 107 requirements, or explain how temperature, pressure, wind, and humidity affect aircraft performance. The best way to study weather is to connect each weather concept to a flight decision.</p>
+<h2 id="learning-objectives"><strong>Learning Objectives</strong></h2>
+<ul>
+<li>Explain how unequal heating of Earth&#x27;s surface drives weather and pressure differences.</li>
+<li>Describe thermals, wind, wind shear, air masses, fronts, and atmospheric stability.</li>
+<li>Compare stable and unstable air and identify common cloud and precipitation patterns.</li>
+<li>Apply Part 107 visibility and cloud-clearance requirements.</li>
+<li>Describe thunderstorm development and the hazards associated with thunderstorms, icing, fog, and turbulence.</li>
+<li>Explain density altitude and how high density altitude affects UAS performance.</li>
+<li>Identify common aviation weather sources, including ASOS, AWOS, METARs, TAFs, SIGMETs, and graphical aviation-weather products.</li>
+<li>Decode basic METAR and TAF information used on the FAA knowledge test.</li>
+</ul>
+<h2 id="3-1-why-weather-matters-to-uas-operations"><strong>3.1 Why Weather Matters to UAS Operations</strong></h2>
+<p>Weather affects both the legal limits and the physical performance of a small UAS. Wind can exceed the aircraft&#x27;s ability to return to the launch point, precipitation can damage electronics, low clouds can violate cloud-clearance requirements, high density altitude can reduce lift and thrust, and unstable air can create turbulence that exceeds the capability of a small aircraft.</p>
+<p>The presentation begins with a fundamental idea: most weather processes are driven by unequal heating of Earth&#x27;s surface. Land, water, vegetation, pavement, snow, and terrain absorb and release heat at different rates. Those temperature differences create differences in pressure and density, which in turn drive wind, convection, cloud formation, and many of the weather patterns pilots observe.</p>
+<p><strong>FLIGHT DECISION  </strong>Weather is not only a forecast problem. A remote PIC should compare forecast conditions with the actual conditions at the operating site and be prepared to delay, shorten, or terminate a flight when conditions deteriorate.</p>
+<h2 id="3-2-atmospheric-pressure-altimeter-settings-and-temperature"><strong>3.2 Atmospheric Pressure, Altimeter Settings, and Temperature</strong></h2>
+<p>Atmospheric pressure is the force exerted by the weight of the atmosphere. Pressure decreases with altitude, which is why barometric altimeters can estimate height. Aviation altimeter settings are adjusted to a sea-level reference so aircraft using the same local setting can compare altitudes consistently.</p>
+<p>Standard sea-level pressure is 29.92 inches of mercury, and standard sea-level temperature is 15°C (59°F). These standard values are important because departures from standard pressure and temperature change air density and therefore aircraft performance.</p>
+<p class="textbook-callout"><strong>KEY NUMBERS  </strong>Standard sea-level pressure: 29.92 inHg. Standard sea-level temperature: 15°C (59°F).</p>
+<figure class="textbook-figure"><a href="/assets/part107/textbook/aircraft-altimeter.jpg"><img src="/assets/part107/textbook/aircraft-altimeter.jpg" alt="An analog aircraft altimeter with a numbered dial and multiple hands." loading="lazy"></a><figcaption><p>The presentation uses a conventional aircraft altimeter to introduce pressure-based altitude measurement (source slide 5).</p><p><a href="/assets/part107/textbook/aircraft-altimeter.jpg">Open original figure at full size</a></p>
+<p><strong>Figure description:</strong> This instrument illustrates pressure-based altitude measurement. The surrounding section explains atmospheric pressure, altimeter settings, and the distinction between pressure readings and altitude references.</p></figcaption></figure>
+<h2 id="3-3-thermals-and-convective-currents"><strong>3.3 Thermals and Convective Currents</strong></h2>
+<p>A thermal is a rising column of warmer air produced by uneven surface heating. Dark, dry ground, plowed fields, pavement, and rocky terrain can heat rapidly and become strong thermal sources. Moist areas, marshes, and heavily vegetated surfaces tend to heat more slowly and usually produce weaker thermals.</p>
+<p>For small UAS, thermals can create vertical gusts, turbulence, and unexpected altitude changes. They can be especially noticeable on sunny afternoons over uneven terrain. A temperature inversion, by contrast, suppresses vertical mixing and produces more stable air.</p>
+<figure class="textbook-figure"><a href="/assets/part107/textbook/thermal-convection.jpg"><img src="/assets/part107/textbook/thermal-convection.jpg" alt="Diagram of rising thermals over a plowed field, marsh, and town, drifting with the wind." loading="lazy"></a><figcaption><p>Thermals form over stronger heat sources and drift with the wind; moist terrain is generally a weaker thermal source (source slide 6).</p><p><a href="/assets/part107/textbook/thermal-convection.jpg">Open original figure at full size</a></p>
+<p><strong>Figure description:</strong> Sun-heated ground warms adjacent air, which rises in thermal columns and can form cumulus clouds near the condensation level. The illustration contrasts good thermal sources over a plowed field and town with a moist marsh that produces weaker thermals, and shows the columns drifting downwind.</p></figcaption></figure>
+<h2 id="3-4-moisture-evaporation-condensation-sublimation-and-dew-point"><strong>3.4 Moisture: Evaporation, Condensation, Sublimation, and Dew Point</strong></h2>
+<p>Water continuously changes phase in the atmosphere. Evaporation is the change from liquid water to water vapor. Condensation is the change from vapor to liquid droplets. Sublimation is a direct change between solid ice and water vapor without passing through the liquid phase.</p>
+<p>Clouds, fog, dew, frost, precipitation, and icing all depend on atmospheric moisture. The dew point is the temperature to which air must cool for saturation to occur. When air temperature and dew point move close together, the likelihood of fog or low cloud formation increases.</p>
+<p class="textbook-callout"><strong>EXAM TIP  </strong>A small temperature-dew point spread means the air is close to saturation. Expect an increased possibility of fog, clouds, dew, or frost when sufficient cooling occurs.</p>
+<h2 id="3-5-wind-and-wind-shear"><strong>3.5 Wind and Wind Shear</strong></h2>
+<p>Wind is one of the most important weather factors for small UAS. Terrain, buildings, trees, ridgelines, surface roughness, and local heating can change both wind speed and direction close to the ground. A weather station several miles away may therefore report conditions that differ substantially from conditions at the launch site.</p>
+<p>Strong winds can reduce groundspeed on an upwind leg, increase battery consumption, complicate landing, and make it difficult or impossible to return to the launch point. Gusts can exceed the steady wind value and may be more important than the average wind when evaluating whether a small UAS can safely operate.</p>
+<p>Wind shear is a rapid change in wind speed, wind direction, or both over a relatively small distance. It can occur at any altitude, but wind shear close to the surface is especially hazardous because the aircraft has little altitude or time to recover.</p>
+<figure class="textbook-figure"><a href="/assets/part107/textbook/windsock.jpg"><img src="/assets/part107/textbook/windsock.jpg" alt="A red-and-white windsock extended beside an airfield." loading="lazy"></a><figcaption><p>A windsock provides a quick visual indication of surface wind direction and approximate speed (source slide 8).</p><p><a href="/assets/part107/textbook/windsock.jpg">Open original figure at full size</a></p>
+<p><strong>Figure description:</strong> A windsock gives a visual indication of surface wind direction and approximate strength. The nearby text distinguishes ordinary wind changes from wind shear and its hazards near the surface.</p></figcaption></figure>
+<p><strong>REAL-WORLD UAS TIP  </strong>Plan the first part of the flight into the wind when possible. Returning with a tailwind preserves energy margin if winds increase during the mission.</p>
+<h2 id="3-6-air-masses-fronts-ridges-and-troughs"><strong>3.6 Air Masses, Fronts, Ridges, and Troughs</strong></h2>
+<p>An air mass is a large body of air with relatively uniform temperature and moisture characteristics. A front is the boundary between two different air masses. Temperature change, pressure change, and a shift in wind direction or speed are common signs of frontal passage.</p>
+<p>A ridge is an elongated area of relatively high pressure. A trough is an elongated area of relatively low pressure. Fronts and troughs are important because they often organize clouds, precipitation, wind shifts, and thunderstorms over large areas.</p>
+<p>Cold fronts generally move faster than warm fronts. Cold fronts may be associated with strong showers, thunderstorms, gusty winds, and rapid weather changes. Warm fronts often produce more widespread low ceilings, precipitation, and reduced visibility ahead of the surface boundary.</p>
+<p class="textbook-callout"><strong>EXAM TIP  </strong>A frontal passage is commonly associated with a temperature change, a pressure trend that changes as the front passes, and a shift in wind direction and/or speed.</p>
+<h2 id="3-7-atmospheric-stability"><strong>3.7 Atmospheric Stability</strong></h2>
+<p>Atmospheric stability describes the atmosphere&#x27;s tendency to resist or encourage vertical motion. Stable air resists vertical displacement. Unstable air encourages rising and sinking motion and therefore tends to produce more turbulence and convective cloud development.</p>
+<div class="textbook-table" role="region" aria-label="3.7 Atmospheric Stability — table 1" tabindex="0"><table><caption>3.7 Atmospheric Stability — table 1</caption>
+<thead>
+<tr>
+<th scope="col">Unstable Air</th>
+<th scope="col">Stable Air</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th scope="row">Cumuliform clouds</th>
+<td>Stratiform clouds and fog</td>
+</tr>
+<tr>
+<th scope="row">Showery precipitation</th>
+<td>Steady or continuous precipitation</td>
+</tr>
+<tr>
+<th scope="row">Rough air / turbulence</th>
+<td>Generally smoother air</td>
+</tr>
+<tr>
+<th scope="row">Often good visibility between showers</th>
+<td>Fair to poor visibility in haze, smoke, or fog</td>
+</tr>
+</tbody>
+</table></div>
+<p>The lapse rate is the rate at which air temperature changes with increasing altitude. Adiabatic cooling occurs when rising air expands as pressure decreases and cools without exchanging heat with its surroundings. The relationship between the environmental lapse rate and the cooling rate of a rising parcel helps determine whether the atmosphere is stable or unstable.</p>
+<p>A temperature inversion occurs when temperature increases with altitude rather than decreasing. The warmer air aloft acts like a lid that suppresses vertical mixing. Smoke, haze, fog, and pollutants can become trapped beneath the inversion and reduce visibility.</p>
+<figure class="textbook-figure"><a href="/assets/part107/textbook/valley-inversion.jpg"><img src="/assets/part107/textbook/valley-inversion.jpg" alt="Fog filling a mountain valley beneath clearer air and higher ridges." loading="lazy"></a><figcaption><p>A temperature inversion can trap fog and pollutants in valleys and other low terrain (source slide 21).</p><p><a href="/assets/part107/textbook/valley-inversion.jpg">Open original figure at full size</a></p>
+<p><strong>Figure description:</strong> The photograph illustrates a valley inversion: stable air can limit vertical mixing and trap fog, smoke, haze, or pollutants in low terrain. The temperature-inversion paragraph and stable-versus-unstable-air table provide the textual explanation.</p></figcaption></figure>
+<h2 id="3-8-clouds-and-what-they-tell-a-pilot"><strong>3.8 Clouds and What They Tell a Pilot</strong></h2>
+<p>Cloud shape provides clues about atmospheric stability. Cumuliform clouds are associated with rising unstable air. Stratiform clouds are associated with more stable air and widespread layered cloud cover. Lenticular clouds form in strong airflow over mountains and are a warning of mountain-wave activity and potentially severe turbulence.</p>
+<figure class="textbook-figure"><a href="/assets/part107/textbook/cloud-types.jpg"><img src="/assets/part107/textbook/cloud-types.jpg" alt="National Weather Service cloud chart grouping photographs by cloud-base height and cloud form." loading="lazy"></a><figcaption><p>The NWS cloud chart in the presentation groups high, middle, and low cloud types and shows common cloud forms (source slide 14).</p><p><a href="/assets/part107/textbook/cloud-types.jpg">Open original figure at full size</a></p>
+<p><strong>Figure description:</strong> The chart groups high clouds with bases roughly 16,000–50,000 feet, middle clouds roughly 6,500–23,000 feet, and low clouds from the surface to roughly 6,500 feet. High types include cirrus, cirrostratus, and cirrocumulus; middle types include altostratus and altocumulus; low types include stratus, stratocumulus, cumulus, and cumulonimbus. Photographs compare thin wisps, sheets and layers, rounded cloud elements, and strong vertical development. The surrounding text explains the operational significance of cloud form and stability.</p></figcaption></figure>
+<figure class="textbook-figure"><a href="/assets/part107/textbook/lenticular-clouds.jpg"><img src="/assets/part107/textbook/lenticular-clouds.jpg" alt="Layered, flattened cloud bands above an open landscape." loading="lazy"></a><figcaption><p>Lenticular clouds are commonly associated with strong winds and mountain-wave conditions (source slide 16).</p><p><a href="/assets/part107/textbook/lenticular-clouds.jpg">Open original figure at full size</a></p>
+<p><strong>Figure description:</strong> The textbook uses this photograph as a lenticular-cloud example. Lenticular clouds can be associated with strong winds and mountain-wave conditions; the instructional point is to consider wind and turbulence rather than treating smooth-looking clouds as proof of calm air.</p></figcaption></figure>
+<figure class="textbook-figure"><a href="/assets/part107/textbook/developing-cumulus.jpg"><img src="/assets/part107/textbook/developing-cumulus.jpg" alt="Cumulus clouds with vertically growing towers above a landscape." loading="lazy"></a><figcaption><p>Strong vertical development in a cumuliform cloud is a warning that convective activity is increasing (source slide 18).</p><p><a href="/assets/part107/textbook/developing-cumulus.jpg">Open original figure at full size</a></p>
+<p><strong>Figure description:</strong> The photograph shows rounded cloud towers extending upward. It illustrates the preceding explanation that increasing vertical cloud development can signal strengthening convection.</p></figcaption></figure>
+<h2 id="3-9-part-107-visibility-and-cloud-clearance"><strong>3.9 Part 107 Visibility and Cloud Clearance</strong></h2>
+<p>Part 107 establishes minimum visibility and cloud-separation requirements. Flight visibility must be at least 3 statute miles as observed from the location of the control station. The small UAS must remain at least 500 feet below a cloud and at least 2,000 feet horizontally from a cloud.</p>
+<div class="textbook-table" role="region" aria-label="3.9 Part 107 Visibility and Cloud Clearance — table 2" tabindex="0"><table><caption>3.9 Part 107 Visibility and Cloud Clearance — table 2</caption>
+<thead>
+<tr>
+<th scope="col">Requirement</th>
+<th scope="col">Part 107 Minimum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th scope="row">Flight visibility</th>
+<td>3 statute miles</td>
+</tr>
+<tr>
+<th scope="row">Below clouds</th>
+<td>500 feet</td>
+</tr>
+<tr>
+<th scope="row">Horizontal distance from clouds</th>
+<td>2,000 feet</td>
+</tr>
+</tbody>
+</table></div>
+<p class="textbook-callout"><strong>KEY NUMBERS  </strong>3 SM visibility • 500 ft below clouds • 2,000 ft horizontally from clouds.</p>
+<p>These limits matter even for very low UAS operations. A low cloud deck can make a planned 400-foot flight illegal or unsafe, and reduced visibility can make it difficult to maintain visual line of sight or detect nearby aircraft.</p>
+<h2 id="3-10-thunderstorms"><strong>3.10 Thunderstorms</strong></h2>
+<p>Thunderstorms are among the most hazardous weather phenomena for aviation. They can produce severe turbulence, strong updrafts and downdrafts, lightning, hail, heavy precipitation, gust fronts, microbursts, and wind shear. Small UAS operations in or near thunderstorms should be avoided.</p>
+<p>Three ingredients are needed for thunderstorm development: sufficient moisture, an unstable atmosphere, and a lifting mechanism. The thunderstorm life cycle is commonly described in three stages.</p>
+<div class="textbook-table" role="region" aria-label="3.10 Thunderstorms — table 3" tabindex="0"><table><caption>3.10 Thunderstorms — table 3</caption>
+<thead>
+<tr>
+<th scope="col">Stage</th>
+<th scope="col">Dominant Motion</th>
+<th scope="col">Key Characteristics</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th scope="row">Cumulus</th>
+<td>Updrafts</td>
+<td>Cloud grows vertically; little or no precipitation reaches the ground.</td>
+</tr>
+<tr>
+<th scope="row">Mature</th>
+<td>Updrafts and downdrafts</td>
+<td>Greatest intensity; precipitation, turbulence, lightning, hail, and gust fronts may occur.</td>
+</tr>
+<tr>
+<th scope="row">Dissipating</th>
+<td>Downdrafts</td>
+<td>Updraft weakens; precipitation and downdrafts dominate as the cell decays.</td>
+</tr>
+</tbody>
+</table></div>
+<figure class="textbook-figure"><a href="/assets/part107/textbook/thunderstorm-stages.jpg"><img src="/assets/part107/textbook/thunderstorm-stages.jpg" alt="Diagram of the cumulus, mature, and dissipating stages of a thunderstorm." loading="lazy"></a><figcaption><p>Thunderstorm life cycle: cumulus, mature, and dissipating stages (source slide 23).</p><p><a href="/assets/part107/textbook/thunderstorm-stages.jpg">Open original figure at full size</a></p>
+<p><strong>Figure description:</strong> In the cumulus stage, rising air builds the cloud. The mature stage combines updrafts and downdrafts with precipitation, lightning, and a spreading anvil. The dissipating stage is dominated by descending air. The adjacent three-row table supplies the stage characteristics in text.</p></figcaption></figure>
+<p>Squall lines are particularly dangerous because they can contain long lines of intense thunderstorms with little or no safe path between cells. Wind shear associated with convection may extend well beyond the visible cloud and can occur at any altitude.</p>
+<p class="textbook-callout"><strong>EXAM TIP  </strong>The mature stage is generally the most hazardous stage because strong updrafts and downdrafts coexist. Precipitation beginning to fall from a growing cell signals that downdrafts have developed and the storm is entering the mature stage.</p>
+<h2 id="3-11-icing-and-frost"><strong>3.11 Icing and Frost</strong></h2>
+<p>Ice changes the aerodynamic shape of wings, propellers, and rotors. It increases weight and drag while reducing lift and thrust. On small UAS, even a small amount of ice can be significant because the aircraft has limited excess power and small lifting surfaces.</p>
+<p>The presentation identifies two conditions required for structural icing in flight: visible liquid moisture such as cloud droplets or rain, and a surface temperature at or below freezing. Freezing rain is especially dangerous because supercooled droplets can form clear ice rapidly.</p>
+<ul>
+<li>Lift decreases.</li>
+<li>Drag increases.</li>
+<li>Weight increases.</li>
+<li>Stall speed can increase on fixed-wing aircraft.</li>
+<li>Propeller or rotor efficiency can decrease.</li>
+<li>Available thrust and control margin decrease.</li>
+</ul>
+<p>Frost can form on cool, clear, calm nights when a surface cools below the dew point and below freezing. Frost should be removed before flight; a thin layer can disturb airflow and reduce performance.</p>
+<p><strong>REAL-WORLD UAS TIP  </strong>Do not assume a drone is safe merely because precipitation is light. Cold mist, cloud droplets, freezing fog, or freezing rain can create ice quickly on small propellers and exposed sensors.</p>
+<h2 id="3-12-fog"><strong>3.12 Fog</strong></h2>
+<p>Fog forms when air near the surface becomes saturated. When air temperature and dew point are close, only a small amount of additional cooling may be needed for fog to develop.</p>
+<div class="textbook-table" role="region" aria-label="3.12 Fog — table 4" tabindex="0"><table><caption>3.12 Fog — table 4</caption>
+<thead>
+<tr>
+<th scope="col">Fog Type</th>
+<th scope="col">How It Forms</th>
+<th scope="col">Typical Clue</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th scope="row">Radiation fog</th>
+<td>Ground cools on a clear, calm night and cools adjacent moist air to the dew point.</td>
+<td>Light wind, clear night, low terrain.</td>
+</tr>
+<tr>
+<th scope="row">Advection fog</th>
+<td>Warm moist air moves over a colder surface.</td>
+<td>Wind is required; common near coasts.</td>
+</tr>
+<tr>
+<th scope="row">Upslope fog</th>
+<td>Moist stable air is forced uphill and cools as it rises.</td>
+<td>Wind flowing toward rising terrain.</td>
+</tr>
+<tr>
+<th scope="row">Steam fog</th>
+<td>Cold dry air moves over warmer water.</td>
+<td>Cold-season lakes or rivers.</td>
+</tr>
+<tr>
+<th scope="row">Precipitation-induced fog</th>
+<td>Rain falls into cooler air, increasing moisture and saturation.</td>
+<td>Warm rain falling through cooler air.</td>
+</tr>
+</tbody>
+</table></div>
+<figure class="textbook-figure"><a href="/assets/part107/textbook/fog-over-city.jpg"><img src="/assets/part107/textbook/fog-over-city.jpg" alt="A layer of fog around buildings at dawn or dusk." loading="lazy"></a><figcaption><p>The presentation compares radiation, advection, and upslope fog (source slide 30).</p><p><a href="/assets/part107/textbook/fog-over-city.jpg">Open original figure at full size</a></p>
+<p><strong>Figure description:</strong> This photograph accompanies the textbook’s comparison of radiation, advection, and upslope fog. The nearby table gives each fog type’s formation process and typical clues; the photograph alone does not establish a specific fog type.</p></figcaption></figure>
+<figure class="textbook-figure"><a href="/assets/part107/textbook/low-visibility-road.jpg"><img src="/assets/part107/textbook/low-visibility-road.jpg" alt="Vehicles and roadside trees becoming difficult to see through dense fog." loading="lazy"></a><figcaption><p>Steam fog can form when cold air moves over relatively warm water (source slide 31).</p><p><a href="/assets/part107/textbook/low-visibility-road.jpg">Open original figure at full size</a></p>
+<p><strong>Figure description:</strong> The photograph illustrates how fog reduces visibility. The source caption discusses steam fog, while the surrounding fog table explains different formation mechanisms. The photograph alone is not used to identify the mechanism.</p></figcaption></figure>
+<p class="textbook-callout"><strong>EXAM TIP  </strong>Radiation fog favors clear skies, moist air, and light or calm wind. Advection fog requires wind because moist air must move over a colder surface.</p>
+<h2 id="3-13-density-altitude-and-uas-performance"><strong>3.13 Density Altitude and UAS Performance</strong></h2>
+<p>Density altitude is pressure altitude corrected for nonstandard temperature. In practical terms, it describes how dense the air &#x27;feels&#x27; to the aircraft. High density altitude means thin air and reduced aircraft performance.</p>
+<p>The conditions that increase density altitude include higher elevation, lower atmospheric pressure, higher temperature, and higher humidity. Humidity normally has a smaller effect than pressure and temperature but still reduces air density because water vapor is lighter than dry air.</p>
+<div class="textbook-table" role="region" aria-label="3.13 Density Altitude and UAS Performance — table 5" tabindex="0"><table><caption>3.13 Density Altitude and UAS Performance — table 5</caption>
+<thead>
+<tr>
+<th scope="col">Condition</th>
+<th scope="col">Effect on Density Altitude</th>
+<th scope="col">Effect on Performance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th scope="row">Higher elevation</th>
+<td>Increases</td>
+<td>Decreases</td>
+</tr>
+<tr>
+<th scope="row">Lower pressure</th>
+<td>Increases</td>
+<td>Decreases</td>
+</tr>
+<tr>
+<th scope="row">Higher temperature</th>
+<td>Increases</td>
+<td>Decreases</td>
+</tr>
+<tr>
+<th scope="row">Higher humidity</th>
+<td>Increases slightly</td>
+<td>Decreases slightly</td>
+</tr>
+</tbody>
+</table></div>
+<p>For a fixed-wing UAS, reduced air density means less lift at a given true airspeed and reduced propeller thrust. For a multirotor, the rotors must work harder to produce the required lift. A battery-powered UAS may therefore experience reduced climb performance and shorter useful endurance under hot, high conditions.</p>
+<p><strong>MEMORY AID  </strong>High + Hot + Low Pressure + Humid = High Density Altitude = Lower Performance.</p>
+<h2 id="3-14-obtaining-a-weather-briefing"><strong>3.14 Obtaining a Weather Briefing</strong></h2>
+<p>The presentation directs pilots to obtain a weather briefing before flight and identifies AviationWeather.gov and Flight Service as important sources. Modern aviation weather planning is increasingly graphical, but the fundamental task is unchanged: build a complete picture of current conditions, forecasts, hazards, and trends that could affect the operation.</p>
+<p>For a short UAS mission, useful weather information includes surface wind and gusts, visibility, ceiling, temperature, dew point, precipitation, thunderstorms, nearby fronts, smoke or haze, and any expected change during the planned operating window.</p>
+<p><strong>PRE-FLIGHT WEATHER CHECK  </strong>Current conditions → Forecast trend → Wind/gust margin → Visibility/ceiling → Thunderstorms/precipitation → Temperature/dew point → Density altitude/performance → Local terrain effects.</p>
+<h2 id="3-15-surface-weather-observations-asos-and-awos"><strong>3.15 Surface Weather Observations: ASOS and AWOS</strong></h2>
+<p>ASOS (Automated Surface Observing System) and AWOS (Automated Weather Observing System) provide automated observations at many airports. These systems can report wind, visibility, temperature, dew point, altimeter setting, cloud information, and other weather elements depending on the installation.</p>
+<p>Airport observations are valuable, but the remote PIC must remember that a station describes conditions at the station. Hills, valleys, buildings, vegetation, and distance can produce different conditions at the actual UAS site.</p>
+<figure class="textbook-figure"><a href="/assets/part107/textbook/automated-weather-station.jpg"><img src="/assets/part107/textbook/automated-weather-station.jpg" alt="Automated airport weather instruments mounted on a platform and mast." loading="lazy"></a><figcaption><p>An automated airport weather observation station such as ASOS/AWOS provides measured surface conditions (source slide 35).</p><p><a href="/assets/part107/textbook/automated-weather-station.jpg">Open original figure at full size</a></p>
+<p><strong>Figure description:</strong> The station photograph illustrates ASOS/AWOS surface observations. The nearby text explains that the measurements describe conditions at the station, which may differ from conditions at a UAS operating site.</p></figcaption></figure>
+<h2 id="3-16-metar-aviation-routine-weather-report"><strong>3.16 METAR: Aviation Routine Weather Report</strong></h2>
+<p>A METAR is a coded aviation weather observation. It reports what has been observed at or near an airport weather station. The presentation labels METAR as an international weather-reporting code; importantly, a METAR is an observation, not a forecast.</p>
+<p>A typical METAR contains the station identifier, observation time in UTC (Zulu), wind, visibility, present weather, sky condition, temperature/dew point, altimeter setting, and remarks.</p>
+<figure class="textbook-figure"><a href="/assets/part107/textbook/annotated-metar.jpg"><img src="/assets/part107/textbook/annotated-metar.jpg" alt="Annotated METAR with eleven labeled groups; the complete report and explanation follow in text." loading="lazy"></a><figcaption><p>Annotated METAR example from the presentation showing the order of common report elements (source slide 36).</p><p><a href="/assets/part107/textbook/annotated-metar.jpg">Open original figure at full size</a></p>
+<p><strong>Report text shown in the figure</strong></p><pre>METAR KBNA 281251Z AUTO 12008KT 4SM -RA HZ BKN010 OVC023 21/17 A3005 RMK RAB25</pre>
+<p><strong>Figure description:</strong> The labeled groups are report type, station, observation time, automated-source modifier, wind, visibility, weather, sky condition, temperature/dew point, altimeter setting, and remarks. KBNA identifies Nashville. The observation is for the 28th at 1251 UTC. Wind is from 120 degrees at 8 knots; visibility is 4 statute miles, with light rain and haze. Broken cloud is reported at 1,000 feet and overcast at 2,300 feet. Temperature is 21°C and dew point 17°C. The altimeter setting is 30.05 inches Hg. The rain-began remark indicates 25 minutes past the hour, or 1225 UTC in this example.</p></figcaption></figure>
+<h2 id="3-17-decoding-a-metar"><strong>3.17 Decoding a METAR</strong></h2>
+<p>METAR KBNA 281251Z AUTO 12008KT 4SM -RA HZ BKN010 OVC023 21/17 A3005 RMK RAB25</p>
+<div class="textbook-table" role="region" aria-label="3.17 Decoding a METAR — table 6" tabindex="0"><table><caption>3.17 Decoding a METAR — table 6</caption>
+<thead>
+<tr>
+<th scope="col">Group</th>
+<th scope="col">Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th scope="row">METAR</th>
+<td>Routine aviation weather observation.</td>
+</tr>
+<tr>
+<th scope="row">KBNA</th>
+<td>Station identifier: Nashville International Airport.</td>
+</tr>
+<tr>
+<th scope="row">281251Z</th>
+<td>Observed on the 28th at 1251 UTC.</td>
+</tr>
+<tr>
+<th scope="row">AUTO</th>
+<td>Automated report.</td>
+</tr>
+<tr>
+<th scope="row">12008KT</th>
+<td>Wind from 120° true at 8 knots.</td>
+</tr>
+<tr>
+<th scope="row">4SM</th>
+<td>Visibility 4 statute miles.</td>
+</tr>
+<tr>
+<th scope="row">-RA HZ</th>
+<td>Light rain and haze.</td>
+</tr>
+<tr>
+<th scope="row">BKN010 OVC023</th>
+<td>Broken clouds at 1,000 ft; overcast at 2,300 ft.</td>
+</tr>
+<tr>
+<th scope="row">21/17</th>
+<td>Temperature 21°C; dew point 17°C.</td>
+</tr>
+<tr>
+<th scope="row">A3005</th>
+<td>Altimeter 30.05 inHg.</td>
+</tr>
+<tr>
+<th scope="row">RMK ...</th>
+<td>Remarks follow.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="textbook-callout"><strong>EXAM TIP  </strong>Cloud heights in METARs and TAFs are reported in hundreds of feet AGL. BKN010 means a broken layer at 1,000 feet AGL.</p>
+<h2 id="3-18-taf-terminal-aerodrome-forecast"><strong>3.18 TAF: Terminal Aerodrome Forecast</strong></h2>
+<p>A TAF is a coded forecast for conditions expected in the vicinity of a terminal area during a specified valid period. It uses many of the same abbreviations as a METAR, but it includes forecast-change groups such as FM (from), TEMPO (temporary), and BECMG (becoming).</p>
+<p>TAFs are useful for determining whether conditions are expected to improve or deteriorate during a mission window. As with all airport-based products, the remote PIC must consider whether local terrain and distance make the forecast representative of the actual UAS operating site.</p>
+<figure class="textbook-figure"><a href="/assets/part107/textbook/annotated-taf.jpg"><img src="/assets/part107/textbook/annotated-taf.jpg" alt="Annotated South Bend TAF training example; the report text and interpretation follow." loading="lazy"></a><figcaption><p>TAF example from the presentation, annotated to show issue time, validity, wind, visibility, ceilings, and change groups (source slide 38).</p><p><a href="/assets/part107/textbook/annotated-taf.jpg">Open original figure at full size</a></p>
+<p><strong>Report text shown in the figure</strong></p><pre>TAF KSBN 171145Z 171212 VRB03KT 2 SM SCT030 BKN080 TEMPO 1517 SHRA
+FM2200 13009KT 1SM OVC030 BECMG0210 NSW BKN030</pre>
+<p><strong>Figure description:</strong> The supplied slide identifies South Bend, an issue time on the 17th at 1145 UTC, and a validity period from 1200 to 1200. It describes variable wind at 3 knots, 2 statute miles visibility, scattered clouds at 3,000 feet, and broken clouds at 8,000 feet, with temporary rain showers from 1500 to 1700. From 2200 it gives wind from 130 degrees at 9 knots, 1 statute mile visibility, and overcast at 3,000 feet. Its final explanation gives no significant weather and broken clouds at 3,000 feet between 0200 and 1000. This is the historical training example as supplied, not a current forecast.</p></figcaption></figure>
+<h2 id="3-19-sigmets-convective-sigmets-and-graphical-aviation-weather"><strong>3.19 SIGMETs, Convective SIGMETs, and Graphical Aviation Weather</strong></h2>
+<p>SIGMETs identify significant weather hazards that can affect aircraft. Convective SIGMETs are associated with hazardous convective weather such as severe thunderstorms, embedded thunderstorms, lines of thunderstorms, and other organized convection meeting issuance criteria. A small UAS should not be operated in an area affected by severe convective weather.</p>
+<p>Current Aviation Weather Center products also include Graphical Forecasts for Aviation (GFA), G-AIRMETs, radar, satellite imagery, METAR/TAF displays, SIGMETs, icing, turbulence, wind, ceiling, visibility, and other layers. These graphical products make it easier to see how hazards relate spatially to a planned operating area.</p>
+<p><strong>2026 UPDATE  </strong>The Aviation Weather Center discontinued CONUS text AIRMETs in January 2025; G-AIRMETs are now the primary CONUS AIRMET-format advisory product. Students may still encounter older references in legacy study material.</p>
+<h2 id="3-20-weather-decision-making-for-a-remote-pic"><strong>3.20 Weather Decision Making for a Remote PIC</strong></h2>
+<p>Weather information is useful only if it changes decisions. A remote PIC should establish personal and aircraft-specific limits before arriving at the field. Those limits may be more conservative than the regulatory minimums.</p>
+<ul>
+<li>Know the manufacturer&#x27;s wind and precipitation limitations.</li>
+<li>Consider gusts, not just sustained wind.</li>
+<li>Evaluate whether the aircraft can return upwind with adequate battery reserve.</li>
+<li>Watch temperature-dew point spread for fog and low-cloud potential.</li>
+<li>Avoid thunderstorms and rapidly developing convection.</li>
+<li>Consider density altitude when operating hot, high, or heavily loaded.</li>
+<li>Recheck conditions during the flight; weather can change during even a short mission.</li>
+<li>Land early when conditions approach the limit instead of waiting until the operation becomes an emergency.</li>
+</ul>
+<p class="textbook-callout"><strong>SCENARIO  </strong>A mission begins with wind at 8 knots and gusts to 12. Twenty minutes later gusts reach 20 knots and the aircraft is returning slowly against the wind. The correct decision is not to &#x27;use the remaining battery.&#x27; Terminate the mission and recover while adequate energy and control margin remain.</p>
+<h2 id="3-21-chapter-summary"><strong>3.21 Chapter Summary</strong></h2>
+<ul>
+<li>Unequal heating of Earth&#x27;s surface drives pressure differences, convection, and many weather processes.</li>
+<li>Thermals form over stronger heat sources and can create vertical currents and turbulence.</li>
+<li>Wind and wind shear can reduce UAS control margin and endurance; local terrain may make site conditions differ from airport reports.</li>
+<li>Fronts separate different air masses. Frontal passage commonly brings temperature, pressure, and wind changes.</li>
+<li>Unstable air favors turbulence, cumuliform clouds, and showery precipitation; stable air favors stratiform clouds, fog, haze, and smoother conditions.</li>
+<li>Part 107 requires at least 3 statute miles of flight visibility, 500 feet below clouds, and 2,000 feet horizontally from clouds.</li>
+<li>Thunderstorms require moisture, instability, and lift. The mature stage is usually the most intense.</li>
+<li>Icing increases drag and weight while reducing lift and thrust. Frost should be removed before flight.</li>
+<li>Fog commonly forms when temperature and dew point converge.</li>
+<li>High density altitude means thin air and reduced aircraft performance.</li>
+<li>METARs report observed weather; TAFs forecast terminal weather.</li>
+<li>Use current FAA/Aviation Weather Center tools to evaluate hazards and trends before and during UAS operations.</li>
+</ul>
+<h2 id="3-22-knowledge-check"><strong>3.22 Knowledge Check</strong></h2>
+<ol>
+<li>What fundamental process drives most weather on Earth?</li>
+<li>What is a thermal?</li>
+<li>Which generally produces stronger thermals: dry plowed ground or a moist marsh?</li>
+<li>Define wind shear.</li>
+<li>Name three common indications of frontal passage.</li>
+<li>Which generally moves faster, a cold front or a warm front?</li>
+<li>What type of clouds are commonly associated with unstable air?</li>
+<li>What type of clouds are commonly associated with stable air?</li>
+<li>What is a temperature inversion?</li>
+<li>What is the Part 107 minimum flight visibility?</li>
+<li>What are the Part 107 cloud-clearance requirements?</li>
+<li>What three ingredients are required for thunderstorm development?</li>
+<li>During which thunderstorm stage are updrafts and downdrafts both present?</li>
+<li>What change signals that a growing thunderstorm cell is entering the mature stage?</li>
+<li>What two basic conditions are necessary for structural icing?</li>
+<li>What happens to lift and drag when ice accumulates on an aircraft?</li>
+<li>What weather relationship indicates that fog may soon form?</li>
+<li>What conditions favor radiation fog?</li>
+<li>What is required for advection fog to form?</li>
+<li>What conditions increase density altitude?</li>
+<li>How does high density altitude affect aircraft performance?</li>
+<li>Is a METAR an observation or a forecast?</li>
+<li>What does 12008KT mean in a METAR?</li>
+<li>What does BKN010 mean?</li>
+<li>What does A3005 mean?</li>
+<li>What is a TAF?</li>
+<li>What does TEMPO indicate in a TAF?</li>
+<li>What kind of weather is associated with a Convective SIGMET?</li>
+<li>Why might the weather at an airport differ from the weather at a UAS operating site several miles away?</li>
+<li>Why should a remote PIC establish weather limits more conservative than the legal minimums?</li>
+</ol>
+<h3 id="answer-key"><strong>Answer Key</strong></h3>
+<ol>
+<li>Unequal heating of Earth&#x27;s surface.</li>
+<li>A rising column of warmer air produced by convective heating.</li>
+<li>Dry plowed ground.</li>
+<li>A rapid change in wind speed, direction, or both over a small distance.</li>
+<li>Temperature change, pressure trend change, and a shift in wind direction and/or speed.</li>
+<li>A cold front.</li>
+<li>Cumuliform clouds.</li>
+<li>Stratiform clouds and fog.</li>
+<li>A layer in which temperature increases with altitude; it tends to suppress vertical mixing.</li>
+<li>3 statute miles.</li>
+<li>At least 500 feet below and 2,000 feet horizontally from clouds.</li>
+<li>Moisture, instability, and a lifting mechanism.</li>
+<li>The mature stage.</li>
+<li>Precipitation beginning to fall from the cloud base, indicating downdraft development.</li>
+<li>Visible liquid moisture and a surface temperature at or below freezing.</li>
+<li>Lift decreases and drag increases; weight also increases and thrust/control margin may decrease.</li>
+<li>Air temperature and dew point becoming equal or very close.</li>
+<li>Clear sky, moist air, light/calm wind, and nighttime surface cooling.</li>
+<li>Wind carrying warm moist air over a colder surface.</li>
+<li>High elevation, low pressure, high temperature, and high humidity.</li>
+<li>It reduces lift, thrust, climb performance, and overall performance margin.</li>
+<li>An observation.</li>
+<li>Wind from 120 degrees true at 8 knots.</li>
+<li>Broken cloud layer at 1,000 feet AGL.</li>
+<li>Altimeter setting 30.05 inches of mercury.</li>
+<li>A Terminal Aerodrome Forecast for expected weather in the terminal area during a defined valid period.</li>
+<li>Temporary conditions are forecast during the stated time period.</li>
+<li>Significant convective weather such as severe, embedded, or organized thunderstorms.</li>
+<li>Terrain, surface heating, buildings, vegetation, elevation, and distance can produce local weather differences.</li>
+<li>Legal minimums do not account for the performance limits of every aircraft, mission, pilot, or operating site.</li>
+</ol>
+<h2 id="sources-and-update-notes"><strong>Sources and Update Notes</strong></h2>
+<p>Primary instructional source: Weather-107 course presentation supplied for this textbook project, including its figures and instructional sequence.</p>
+<p>Current-rule and product verification for this draft: Federal Aviation Administration Remote Pilot - Small Unmanned Aircraft Systems Study Guide and current NOAA/NWS Aviation Weather Center resources. The chapter preserves the source presentation&#x27;s core concepts while clarifying that METAR is an observation rather than a forecast and noting the 2025 transition from CONUS text AIRMETs to G-AIRMETs.</p>
+<p>This chapter is instructional material for FAA Remote Pilot knowledge-test preparation. Pilots should use current aviation weather observations, forecasts, advisories, aircraft limitations, and FAA regulations before conducting an actual operation.</p>

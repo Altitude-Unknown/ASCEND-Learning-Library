@@ -4,8 +4,8 @@
       "slug": "regulations",
       "title": "Regulations",
       "bank": "Regulations",
-      "chapter": "1 \u00b7 Aviation Regulatory System",
-      "summary": "Understand the rules, responsibilities, and limits that shape a remote pilot\u2019s decisions.",
+      "chapter": "1 · Aviation Regulatory System",
+      "summary": "Understand the rules, responsibilities, and limits that shape a remote pilot’s decisions.",
       "outcomes": [
         "Identify remote pilot responsibilities and operating limitations.",
         "Apply regulatory requirements to realistic flight scenarios."
@@ -17,13 +17,14 @@
       "activity": "regulations-activity",
       "number": 1,
       "url": "/part107/regulations/",
-      "lessonVideo": "regulations-video"
+      "lessonVideo": "regulations-video",
+      "chapterUrl": "/part107/textbook/regulations/"
     },
     {
       "slug": "airspace",
       "title": "Airspace",
       "bank": "Airspace",
-      "chapter": "2 \u00b7 National Airspace System",
+      "chapter": "2 · National Airspace System",
       "summary": "Read aviation charts and determine where a proposed UAS operation can take place.",
       "outcomes": [
         "Interpret airspace classifications and sectional-chart information.",
@@ -36,13 +37,14 @@
       "activity": "airspace-worksheet",
       "number": 2,
       "url": "/part107/airspace/",
-      "lessonVideo": "airspace-video"
+      "lessonVideo": "airspace-video",
+      "chapterUrl": "/part107/textbook/airspace/"
     },
     {
       "slug": "weather",
       "title": "Weather",
       "bank": "Weather",
-      "chapter": "3 \u00b7 Weather",
+      "chapter": "3 · Weather",
       "summary": "Connect weather information to aircraft performance, flight planning, and safe operating decisions.",
       "outcomes": [
         "Find and interpret aviation weather reports.",
@@ -57,13 +59,14 @@
       "activity": "weather-activity",
       "number": 3,
       "url": "/part107/weather/",
-      "lessonVideo": null
+      "lessonVideo": null,
+      "chapterUrl": "/part107/textbook/weather/"
     },
     {
       "slug": "loading-and-performance",
       "title": "Loading & Performance",
       "bank": "Loading and Performance",
-      "chapter": "5 \u00b7 Loading and Performance",
+      "chapter": "5 · Loading and Performance",
       "summary": "Evaluate how loading, balance, and operating conditions affect aircraft performance.",
       "outcomes": [
         "Explain the effects of weight, balance, and center of gravity.",
@@ -76,13 +79,14 @@
       "activity": "loading-performance-activity",
       "number": 4,
       "url": "/part107/loading-and-performance/",
-      "lessonVideo": "loading-performance-video"
+      "lessonVideo": "loading-performance-video",
+      "chapterUrl": "/part107/textbook/loading-and-performance/"
     },
     {
       "slug": "uas-operations",
       "title": "Operations",
       "bank": "Operations",
-      "chapter": "4 \u00b7 Operations",
+      "chapter": "4 · Operations",
       "summary": "Bring the course concepts together in preflight planning, communication, and operational judgment.",
       "outcomes": [
         "Plan preflight checks, crew communication, and emergency responses.",
@@ -95,7 +99,8 @@
       "activity": "operations-activity",
       "number": 5,
       "url": "/part107/uas-operations/",
-      "lessonVideo": "operations-video"
+      "lessonVideo": "operations-video",
+      "chapterUrl": "/part107/textbook/uas-operations/"
     }
   ]
 }

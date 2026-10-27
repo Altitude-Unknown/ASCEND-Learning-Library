@@ -1,0 +1,363 @@
+---
+{
+  "layout": "layouts/textbook-chapter.njk",
+  "tags": [],
+  "eleventyExcludeFromCollections": true,
+  "topic": "part107",
+  "title": "Chapter 5: Loading and Performance",
+  "description": "Read the complete Loading and Performance textbook chapter online, including its knowledge check and answer key.",
+  "chapterNumber": 5,
+  "courseOrder": 4,
+  "toc": [
+    {
+      "title": "Chapter Objectives",
+      "id": "chapter-objectives"
+    },
+    {
+      "title": "5.1 Loading and Aircraft Control",
+      "id": "5-1-loading-and-aircraft-control"
+    },
+    {
+      "title": "5.2 Determining Speed, Course, and Altitude",
+      "id": "5-2-determining-speed-course-and-altitude"
+    },
+    {
+      "title": "5.3 Aircraft Loading",
+      "id": "5-3-aircraft-loading"
+    },
+    {
+      "title": "5.4 Computing Weight and Balance",
+      "id": "5-4-computing-weight-and-balance"
+    },
+    {
+      "title": "5.5 Load Factor",
+      "id": "5-5-load-factor"
+    },
+    {
+      "title": "5.6 Stalls and Angle of Attack",
+      "id": "5-6-stalls-and-angle-of-attack"
+    },
+    {
+      "title": "5.7 Aircraft Performance",
+      "id": "5-7-aircraft-performance"
+    },
+    {
+      "title": "Chapter 5 Summary",
+      "id": "chapter-5-summary"
+    },
+    {
+      "title": "Chapter 5 Knowledge Check",
+      "id": "chapter-5-knowledge-check"
+    },
+    {
+      "title": "Answer Key",
+      "id": "answer-key"
+    },
+    {
+      "title": "Source Note",
+      "id": "source-note"
+    }
+  ],
+  "permalink": "/part107/textbook/loading-and-performance/"
+}
+---
+<p><strong>FAA Remote Pilot Part 107 Exam Study Guide</strong></p>
+<p>This chapter explains how aircraft loading, center of gravity, aerodynamic load factor, stalls, altitude, wind, and environmental conditions affect small unmanned aircraft system (sUAS) performance and safe operation.</p>
+<h2 id="chapter-objectives"><strong>Chapter Objectives</strong></h2>
+<ul>
+<li>Explain how payloads and loading can affect aircraft controllability and performance.</li>
+<li>Identify the primary fixed-wing flight controls and the aircraft motions and axes they control.</li>
+<li>Distinguish dead reckoning, pilotage, and the wind-triangle concept.</li>
+<li>Distinguish altitude above ground level (AGL) from mean sea level (MSL) altitude and describe practical ways to determine sUAS altitude.</li>
+<li>Define empty weight, useful load, launch weight, and landing weight.</li>
+<li>Calculate moment and center of gravity (CG) using weight-and-balance data.</li>
+<li>Explain how CG location affects aircraft stability and controllability.</li>
+<li>Explain load factor and how bank angle affects aerodynamic loads.</li>
+<li>Explain stalls in terms of critical angle of attack and relate load factor to stall speed.</li>
+<li>Describe how weight, altitude, temperature, wind, and launch-surface slope affect aircraft performance and endurance.</li>
+</ul>
+<h2 id="5-1-loading-and-aircraft-control"><strong>5.1 Loading and Aircraft Control</strong></h2>
+<p>Before each flight, the remote PIC must ensure that objects attached to or carried by the small unmanned aircraft are secure and do not adversely affect the aircraft’s flight characteristics or controllability. A battery, camera, sensor, or other payload can change both total weight and center of gravity.</p>
+<p>A flight should begin with a control check. Flight-control surfaces should move freely and in the correct direction, and added equipment should not obstruct control movement. The pilot should know the correct CG location for the aircraft and understand how to check it before flight.</p>
+<p class="textbook-callout">KEY POINT: Payload placement can matter just as much as payload weight. A secure payload can still make an aircraft unsafe if it moves the CG outside allowable limits.</p>
+<h3 id="primary-fixed-wing-flight-controls"><strong>Primary Fixed-Wing Flight Controls</strong></h3>
+<div class="textbook-table" role="region" aria-label="Primary Fixed-Wing Flight Controls — table 1" tabindex="0"><table><caption>Primary Fixed-Wing Flight Controls — table 1</caption>
+<thead>
+<tr>
+<th scope="col">Control surface</th>
+<th scope="col">Aircraft movement</th>
+<th scope="col">Axis of rotation</th>
+<th scope="col">Type of stability</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th scope="row">Aileron</th>
+<td>Roll</td>
+<td>Longitudinal</td>
+<td>Lateral</td>
+</tr>
+<tr>
+<th scope="row">Elevator/Stabilator</th>
+<td>Pitch</td>
+<td>Lateral</td>
+<td>Longitudinal</td>
+</tr>
+<tr>
+<th scope="row">Rudder</th>
+<td>Yaw</td>
+<td>Vertical</td>
+<td>Directional</td>
+</tr>
+</tbody>
+</table></div>
+<p>Ailerons roll the aircraft around its longitudinal axis. The elevator controls pitch around the lateral axis. The rudder controls yaw around the vertical axis. On a typical Mode 2 RC transmitter, the right stick controls pitch and roll, while the left stick controls throttle and yaw.</p>
+<p>MEMORY AID: Right stick = pitch and roll; left stick = throttle and yaw.</p>
+<h2 id="5-2-determining-speed-course-and-altitude"><strong>5.2 Determining Speed, Course, and Altitude</strong></h2>
+<h3 id="navigation-concepts"><strong>Navigation Concepts</strong></h3>
+<p><strong>Dead reckoning: </strong>Navigation based on computations involving time, airspeed, distance, and direction. Wind direction and speed are used to determine heading and ground speed.</p>
+<p><strong>Pilotage: </strong>Navigation by reference to recognizable landmarks or checkpoints such as roads, rivers, towns, mountains, or towers.</p>
+<p><strong>Wind triangle: </strong>A vector relationship among aircraft heading and true airspeed, wind direction and velocity, and the resulting ground track and ground speed.</p>
+<p>The important wind-triangle idea is that where an aircraft points is not necessarily where it travels over the ground. A crosswind can push the aircraft sideways, requiring the pilot or autopilot to point into the wind to maintain the desired course.</p>
+<h3 id="altitude-agl-versus-msl"><strong>Altitude: AGL versus MSL</strong></h3>
+<p>Part 107 operations generally keep a small UAS at or below 400 feet above ground level (AGL). AGL is the aircraft’s height above the surface below it. Mean sea level (MSL) altitude is referenced to sea level and therefore is not the same measurement.</p>
+<p>If an aircraft reports 5,400 feet MSL and the terrain directly below it is 5,000 feet MSL, its approximate height is 400 feet AGL. Pilots must understand what altitude reference their particular UAS or control station displays.</p>
+<ul>
+<li>Use a calibrated barometric altimeter and convert MSL altitude to AGL using terrain elevation when necessary.</li>
+<li>Use GPS/GNSS altitude while understanding the reference used by the system.</li>
+<li>Use the control station’s displayed altitude or height when its reference is understood.</li>
+<li>Use known terrain, structures, or other objects as supporting visual references.</li>
+<li>A visual observer may use a measured ground distance to develop a rough visual sense of 400 feet, but this is only an approximation.</li>
+</ul>
+<p class="textbook-callout">EXAM TIP: 400 feet above the takeoff point is not necessarily 400 feet AGL. Rising or falling terrain changes the aircraft’s actual height above the ground.</p>
+<h2 id="5-3-aircraft-loading"><strong>5.3 Aircraft Loading</strong></h2>
+<div class="textbook-table" role="region" aria-label="5.3 Aircraft Loading — table 2" tabindex="0"><table><caption>5.3 Aircraft Loading — table 2</caption>
+<thead>
+<tr>
+<th scope="col">Term</th>
+<th scope="col">Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th scope="row">Empty weight</th>
+<td>The aircraft’s basic weight, including the airframe, fixed equipment, and—under the lesson definition—the power source/unusable fuel as applicable.</td>
+</tr>
+<tr>
+<th scope="row">Useful load</th>
+<td>Items added for the mission, such as usable fuel or battery and payload equipment.</td>
+</tr>
+<tr>
+<th scope="row">Launch weight</th>
+<td>Empty weight plus useful load; the aircraft’s weight at the beginning of flight.</td>
+</tr>
+<tr>
+<th scope="row">Landing weight</th>
+<td>Launch weight minus fuel consumed or any load released or jettisoned during the flight.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Increasing launch weight generally increases the lift and power required to fly. It can affect launch distance, climb performance, stall speed, maneuverability, and endurance. A battery-powered aircraft normally returns at nearly the same mass at which it launched, while a fuel-powered aircraft becomes lighter as fuel is consumed.</p>
+<h2 id="5-4-computing-weight-and-balance"><strong>5.4 Computing Weight and Balance</strong></h2>
+<p><strong>Datum line: </strong>A manufacturer-established reference point along the aircraft’s longitudinal axis from which arms are measured.</p>
+<p><strong>Arm: </strong>The horizontal distance from the datum to the location of an item.</p>
+<p><strong>Moment: </strong>The rotational effect of a weight at a distance from the datum.</p>
+<p><strong>Center of gravity (CG): </strong>The aircraft’s balance point, expressed as a distance from the datum.</p>
+<p><strong>Moment = Weight × Arm</strong></p>
+<p><strong>CG = Total Moment ÷ Total Weight</strong></p>
+<p>A CG that is too far forward generally increases longitudinal stability but may make it difficult to pitch the nose up. A CG that is too far aft reduces longitudinal stability and can make the aircraft difficult or unsafe to control. Lateral balance also matters: mounting a heavy battery or sensor off-center can create a left-right imbalance.</p>
+<h3 id="worked-weight-and-balance-example"><strong>Worked Weight-and-Balance Example</strong></h3>
+<div class="textbook-table" role="region" aria-label="Worked Weight-and-Balance Example — table 3" tabindex="0"><table><caption>Worked Weight-and-Balance Example — table 3</caption>
+<thead>
+<tr>
+<th scope="col">Item</th>
+<th scope="col">Weight (lb)</th>
+<th scope="col">Arm (in)</th>
+<th scope="col">Moment ÷ 1000</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th scope="row">Aircraft empty weight</th>
+<td>1,639</td>
+<td>39.29</td>
+<td>64.4</td>
+</tr>
+<tr>
+<th scope="row">Pilot &amp; front passenger</th>
+<td>340</td>
+<td>37</td>
+<td>12.58</td>
+</tr>
+<tr>
+<th scope="row">Fuel: 53 gal</th>
+<td>318</td>
+<td>48</td>
+<td>15.26</td>
+</tr>
+<tr>
+<th scope="row">Rear passenger</th>
+<td>80</td>
+<td>72</td>
+<td>5.76</td>
+</tr>
+<tr>
+<th scope="row">Baggage</th>
+<td>30</td>
+<td>76</td>
+<td>2.28</td>
+</tr>
+<tr>
+<th scope="row">TOTAL</th>
+<td>2,407</td>
+<td> </td>
+<td>100.28</td>
+</tr>
+</tbody>
+</table></div>
+<p>Because the moments in the table are expressed in thousands of pound-inches, multiply the total moment by 1,000 when computing CG:</p>
+<p><strong>CG = (100.28 × 1,000) ÷ 2,407 = 41.66 inches from the datum</strong></p>
+<p>The calculation alone does not establish that the loading is safe. The resulting CG must be compared with the manufacturer’s allowable CG range. The same process applies to a UAS: determine weights and arms, calculate moments, find total weight and total moment, calculate CG, and verify that the CG is within limits.</p>
+<p class="textbook-callout">KEY POINT: The remote PIC should use current weight-and-balance data. Changing a battery, camera, sensor, or payload can change both total weight and CG.</p>
+<h2 id="5-5-load-factor"><strong>5.5 Load Factor</strong></h2>
+<p>In aerodynamics, load is the force or stress the aircraft structure must support in flight. Load factor describes the aerodynamic load on the aircraft compared with its weight and is commonly expressed in G units.</p>
+<p>In straight-and-level, unaccelerated flight, an aircraft experiences approximately 1 G. During maneuvering, the load factor can increase or decrease. In a level turn, part of the lift vector acts horizontally to turn the aircraft. To maintain altitude, the wings must generate additional total lift, increasing load factor.</p>
+<div class="textbook-table" role="region" aria-label="5.5 Load Factor — table 4" tabindex="0"><table><caption>5.5 Load Factor — table 4</caption>
+<thead>
+<tr>
+<th scope="col">Bank angle</th>
+<th scope="col">Approximate load factor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th scope="row">0°</th>
+<td>1.000 G</td>
+</tr>
+<tr>
+<th scope="row">10°</th>
+<td>1.015 G</td>
+</tr>
+<tr>
+<th scope="row">30°</th>
+<td>1.154 G</td>
+</tr>
+<tr>
+<th scope="row">45°</th>
+<td>1.414 G</td>
+</tr>
+<tr>
+<th scope="row">60°</th>
+<td>2.000 G</td>
+</tr>
+<tr>
+<th scope="row">70°</th>
+<td>2.923 G</td>
+</tr>
+<tr>
+<th scope="row">80°</th>
+<td>5.747 G</td>
+</tr>
+<tr>
+<th scope="row">85°</th>
+<td>11.473 G</td>
+</tr>
+<tr>
+<th scope="row">90°</th>
+<td>Approaches infinity for a theoretical level turn</td>
+</tr>
+</tbody>
+</table></div>
+<p>The increase is modest at shallow bank angles but becomes very rapid beyond about 45 degrees. At 60 degrees of bank, a level coordinated turn produces approximately 2 G, meaning the wings must generate roughly twice the aircraft’s weight in lift.</p>
+<p><strong>More bank → more required lift → higher load factor → higher stall speed</strong></p>
+<h2 id="5-6-stalls-and-angle-of-attack"><strong>5.6 Stalls and Angle of Attack</strong></h2>
+<p><strong>Airfoil: </strong>A structure or body shaped to produce a useful aerodynamic reaction to airflow.</p>
+<p><strong>Chord line: </strong>An imaginary straight line from the leading edge to the trailing edge of an airfoil.</p>
+<p><strong>Relative wind: </strong>The airflow experienced by the airfoil, acting opposite the aircraft’s flight path.</p>
+<p><strong>Angle of attack (AOA): </strong>The angle between the airfoil’s chord line and the relative wind.</p>
+<p>As angle of attack increases, lift generally increases until the wing reaches its critical angle of attack. Beyond that point, airflow separates significantly from the upper surface, lift decreases sharply, and the wing stalls.</p>
+<p>The lesson identifies a typical critical angle in the neighborhood of 18–20 degrees for many airfoils, while noting that the actual value depends on the airfoil and aircraft design. The essential concept is not a particular number: a stall occurs when the critical angle of attack is exceeded.</p>
+<p class="textbook-callout">EXAM TIP: An aircraft does not stall merely because it is flying slowly. A wing stalls when it exceeds its critical angle of attack. It can therefore stall at any airspeed, altitude, weight, or attitude if that critical angle is exceeded.</p>
+<p>Load factor and stall speed are connected. In a steep level turn, the wing must generate more lift. The higher load factor causes the aircraft to reach its critical angle of attack at a higher airspeed. Therefore, increasing load factor increases stall speed.</p>
+<h2 id="5-7-aircraft-performance"><strong>5.7 Aircraft Performance</strong></h2>
+<p>The remote PIC is responsible for determining whether the planned flight can be accomplished safely without creating an undue hazard or increasing the likelihood of losing positive control. Aircraft configuration, payload, launch area, and environmental conditions must all be considered before launch.</p>
+<h3 id="factors-affecting-launch-and-flight-performance"><strong>Factors Affecting Launch and Flight Performance</strong></h3>
+<p><strong>Weight: </strong>A heavier aircraft requires more lift and generally more power and launch speed. Increased weight can degrade climb, maneuverability, and endurance.</p>
+<p><strong>Altitude: </strong>Higher altitude contributes to higher density altitude and reduced air density, which can reduce aerodynamic and propeller performance.</p>
+<p><strong>Temperature: </strong>Higher temperature reduces air density and can degrade aircraft performance, especially when combined with high elevation.</p>
+<p><strong>Wind: </strong>A headwind generally improves fixed-wing launch performance by reducing the ground speed needed to obtain the required airspeed. A tailwind increases required ground speed and launch distance.</p>
+<p><strong>Runway or launch-surface slope: </strong>For a rolling fixed-wing takeoff, an upslope adds a retarding component and increases the distance required to accelerate; a downslope assists acceleration.</p>
+<h3 id="endurance-versus-range"><strong>Endurance versus Range</strong></h3>
+<p>Maximum endurance means remaining airborne for the greatest amount of time. For a fixed-wing aircraft, maximum endurance occurs near the condition of minimum power required to maintain flight. For an electric UAS, this corresponds to a flight condition requiring the least battery power necessary to remain airborne.</p>
+<p>Endurance and range are different. Endurance asks, “How long can I stay airborne?” Range asks, “How far can I travel?” The airspeed that maximizes endurance is not necessarily the same airspeed that maximizes range.</p>
+<h2 id="chapter-5-summary"><strong>Chapter 5 Summary</strong></h2>
+<ul>
+<li>The remote PIC must ensure that payloads are secure and do not adversely affect flight characteristics or controllability.</li>
+<li>Ailerons control roll, the elevator controls pitch, and the rudder controls yaw.</li>
+<li>Dead reckoning uses calculations; pilotage uses visual landmarks; the wind triangle relates heading, airspeed, wind, track, and ground speed.</li>
+<li>AGL is height above the ground below the aircraft; MSL is altitude referenced to sea level.</li>
+<li>Aircraft loading affects performance, stability, and controllability.</li>
+<li>Moment equals weight times arm; CG equals total moment divided by total weight.</li>
+<li>A CG outside approved limits can make an aircraft difficult or impossible to control.</li>
+<li>Load factor increases rapidly as bank angle becomes steep; a 60-degree level turn produces about 2 G.</li>
+<li>A stall occurs when the critical angle of attack is exceeded, not simply because the aircraft is slow.</li>
+<li>Higher load factor increases stall speed.</li>
+<li>Weight, altitude, temperature, wind, and launch-surface slope can affect launch and flight performance.</li>
+<li>Maximum endurance occurs near minimum power required, and maximum endurance is not the same as maximum range.</li>
+</ul>
+<h2 id="chapter-5-knowledge-check"><strong>Chapter 5 Knowledge Check</strong></h2>
+<ol>
+<li>What must the remote PIC determine about an attached or carried payload before flight?</li>
+<li>Which control surface controls roll, and around which axis does the aircraft roll?</li>
+<li>Which control surface controls pitch?</li>
+<li>Which control surface controls yaw?</li>
+<li>What is the difference between dead reckoning and pilotage?</li>
+<li>What three vector relationships are represented by a wind triangle?</li>
+<li>What is the difference between AGL and MSL altitude?</li>
+<li>If a UAS is at 5,400 feet MSL over terrain at 5,000 feet MSL, approximately how high is it AGL?</li>
+<li>Define empty weight, useful load, launch weight, and landing weight.</li>
+<li>What is an arm in a weight-and-balance calculation?</li>
+<li>How is moment calculated?</li>
+<li>How is center of gravity calculated?</li>
+<li>Why must a calculated CG be compared with manufacturer limits?</li>
+<li>How can an aft CG affect a fixed-wing aircraft?</li>
+<li>What load factor does an aircraft experience in straight-and-level unaccelerated flight?</li>
+<li>Approximately what load factor occurs in a 60-degree banked level turn?</li>
+<li>What happens to load factor as a level turn approaches 90 degrees of bank?</li>
+<li>Define angle of attack.</li>
+<li>What actually causes an aerodynamic stall?</li>
+<li>How does increasing load factor affect stall speed?</li>
+<li>How does increased aircraft weight generally affect launch and climb performance?</li>
+<li>How do high altitude and high temperature affect aircraft performance?</li>
+<li>How does a headwind generally affect a fixed-wing launch?</li>
+<li>What is the difference between maximum endurance and maximum range?</li>
+</ol>
+<h2 id="answer-key"><strong>Answer Key</strong></h2>
+<ol>
+<li>The payload must be secure and must not adversely affect flight characteristics or controllability.</li>
+<li>The ailerons control roll around the longitudinal axis.</li>
+<li>The elevator or stabilator controls pitch.</li>
+<li>The rudder controls yaw.</li>
+<li>Dead reckoning uses computations based on time, airspeed, distance, direction, and wind; pilotage uses visual landmarks or checkpoints.</li>
+<li>Aircraft heading and true airspeed; wind direction and velocity; and resulting ground track and ground speed.</li>
+<li>AGL is height above the ground below the aircraft; MSL is altitude referenced to mean sea level.</li>
+<li>Approximately 400 feet AGL.</li>
+<li>Empty weight is the basic aircraft weight under the lesson definition; useful load is mission-added battery/fuel and payload; launch weight is empty weight plus useful load; landing weight is launch weight minus fuel used or load released.</li>
+<li>The horizontal distance from the datum to an item.</li>
+<li>Moment = weight × arm.</li>
+<li>CG = total moment ÷ total weight.</li>
+<li>Because the numerical CG is only acceptable if it falls within the aircraft’s approved CG range.</li>
+<li>It reduces longitudinal stability and can make the aircraft difficult or unsafe to control.</li>
+<li>Approximately 1 G.</li>
+<li>Approximately 2 G.</li>
+<li>The required load factor theoretically approaches infinity for a constant-altitude level turn.</li>
+<li>The angle between the airfoil chord line and the relative wind.</li>
+<li>Exceeding the wing’s critical angle of attack.</li>
+<li>It increases stall speed.</li>
+<li>It increases required lift and power and generally degrades launch and climb performance.</li>
+<li>They reduce air density and can reduce aerodynamic and propeller performance.</li>
+<li>It generally improves launch performance by reducing the ground speed required to reach the needed airspeed.</li>
+<li>Endurance is how long the aircraft can remain airborne; range is how far it can travel.</li>
+</ol>
+<h2 id="source-note"><strong>Source Note</strong></h2>
+<p>This chapter was developed from the Loading and Performance FAA Remote Pilot Part 107 Exam Prep presentation supplied for the course, including its slide content, tables, diagrams, and speaker notes. The source presentation cites Marshall, Barnhart, Shappee, and Most (2016), Introduction to Unmanned Aircraft Systems, CRC Press.</p>

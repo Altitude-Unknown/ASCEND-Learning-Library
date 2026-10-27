@@ -23,7 +23,7 @@ controls sidebar sorting. Existing resource and lesson URLs remain stable.
 The five unit pages present materials as numbered study steps: a lesson video
 on the left and its presentation on the right, followed by the textbook, then
 activities, then the existing quiz. On small screens, the lesson video stacks
-above the slides. Supplemental videos remain in an expandable group within
+above the slides. Supplemental videos remain fully visible within
 the video step; additional activities and references remain in the activity
 step. Resource cards are not removed.
 
@@ -48,3 +48,6 @@ Validation: `npm test`; `npx playwright test tests/part107-course.spec.js`.
 The browser checks exercise the full unit sequence, matching full-bank and
 mixed-exam selection, accessibility and overflow at 1440/768/390/320 pixels,
 and navigation without JavaScript.
+
+
+The five complete web chapters live at `/part107/textbook/<unit-slug>/`. Run `python3 scripts/import-part107-textbook.py` to regenerate them from the supplied Word book. The importer verifies source text coverage, all 16 tables, and all 18 chapter figures; curated descriptions and weather-report transcripts are in `editorial/part107-figures.json`. Original PDF and Word downloads remain available. The source wording is retained, rather than updated or independently reviewed for regulatory accuracy.

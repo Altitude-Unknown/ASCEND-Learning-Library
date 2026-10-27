@@ -43,3 +43,14 @@ The supplied book is titled **FAA Remote Pilot Test Prep** and identifies itself
 Use Chapter 2 with the [Airspace module](/part107/airspace/). The download is the **complete study guide**, rather than a separate Airspace chapter. See the [Study Guide page](/part107/study-guide/) for the full learning path.
 
 The book notes that some original slide language differs from the updated text. The materials are presented as supplied; this import does not constitute a regulatory content review.
+
+
+## Read the chapters online
+
+Follow the course sequence below. The original textbook chapter numbers are retained. Each webpage includes the full chapter, knowledge check, answer key, tables, and figures. PDF and Word downloads remain available.
+
+- [Chapter 1 · Aviation Regulatory System](/part107/textbook/regulations/)
+- [Chapter 2 · National Airspace System](/part107/textbook/airspace/)
+- [Chapter 3 · Weather](/part107/textbook/weather/)
+- [Chapter 5 · Loading and Performance](/part107/textbook/loading-and-performance/)
+- [Chapter 4 · Operations](/part107/textbook/uas-operations/)

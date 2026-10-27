@@ -72,3 +72,38 @@ test('All five units present video and slides, then book, activity, and quiz', a
     }
   }
 });
+
+test('Supplemental videos are visible without opening a disclosure', async ({page}) => {
+  for(const slug of ['airspace','weather','uas-operations']) {
+    await page.goto(`/part107/${slug}/`);
+    const videos=page.locator('.unit-supplemental .resource-card');
+    expect(await videos.count()).toBeGreaterThan(0);
+    for(const video of await videos.all()) await expect(video).toBeVisible();
+    await expect(page.locator('details.unit-supplemental')).toHaveCount(0);
+  }
+});
+
+test('Complete web chapters remain readable, accessible, and linked to each unit', async ({page}) => {
+  let figures=0,tables=0;
+  for(const slug of ['regulations','airspace','weather','loading-and-performance','uas-operations']) {
+    await page.goto(`/part107/${slug}/`);
+    await page.locator('#reading').getByRole('link',{name:/Read Chapter .* online/}).click();
+    await expect(page).toHaveURL(new RegExp(`/part107/textbook/${slug}/$`));
+    await expect(page.locator('h1')).toHaveCount(1);
+    await expect(page.locator('.textbook-content')).toContainText('Answer');
+    await expect(page.getByRole('link',{name:'Download the complete textbook (PDF)'})).toHaveAttribute('href','/downloads/imported/part107-study-guide.pdf');
+    figures+=await page.locator('.textbook-figure').count();
+    tables+=await page.locator('.textbook-table').count();
+    for(const width of [1440,390,320]) {
+      await page.setViewportSize({width,height:1000});
+      expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1)).toBeTruthy();
+    }
+    const scan=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa','wcag22aa']).analyze();
+    expect(scan.violations,JSON.stringify(scan.violations)).toEqual([]);
+  }
+  expect(figures).toBe(18);
+  expect(tables).toBe(16);
+  await page.goto('/part107/textbook/weather/');
+  await expect(page.locator('.textbook-content')).toContainText('METAR KBNA 281251Z');
+  await expect(page.locator('.textbook-content')).toContainText('TAF KSBN 171145Z');
+});

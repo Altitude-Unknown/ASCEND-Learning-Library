@@ -1,0 +1,153 @@
+{
+  "source": "public/downloads/imported/books-faa-remote-pilot-study-guide.docx",
+  "sourceSha256": "dd0c8859e8ba49043a5c82fdbd210931c7d44df6fea7a7a951040f970d28e8a1",
+  "chapters": [
+    {
+      "chapter": 1,
+      "slug": "regulations",
+      "tables": 1,
+      "images": [],
+      "verifiedTextBlocks": 159,
+      "headingCount": 21,
+      "sourceStartBlock": 5,
+      "sourceEndBlock": 160,
+      "htmlSha256": "762970f30ce5b6692c06e9a28a32a6f50d54b9e35f317bd8a1f0fbf1d8082e25"
+    },
+    {
+      "chapter": 2,
+      "slug": "airspace",
+      "tables": 1,
+      "images": [
+        {
+          "file": "airspace-classification.jpg",
+          "source": "image5.jpg",
+          "sha256": "80bb08998bd6cfcb4f76c18a3940ca0f39465d16d32f2d90dae0daccd06b6f25"
+        },
+        {
+          "file": "sectional-chart.png",
+          "source": "image19.png",
+          "sha256": "96d7181c6ff5e279046f3cdd9a5051ff203673046ddedb2043a45c347744f042"
+        },
+        {
+          "file": "airport-traffic-pattern.jpg",
+          "source": "image13.jpg",
+          "sha256": "d70ab296cc4b34de0d72dd26e81737454f91df4dbb810efdff496c36fb4c9081"
+        },
+        {
+          "file": "runway-markings.jpg",
+          "source": "image11.jpg",
+          "sha256": "fb936279dfc074b6ba1b7c55d8c44685d3e880184820b3aa56721645a619576f"
+        },
+        {
+          "file": "approaching-aircraft.jpg",
+          "source": "image9.jpg",
+          "sha256": "15f7961814c3a778b6ca12785788d6176913730629e76c7ba6be256ab068a4d1"
+        }
+      ],
+      "verifiedTextBlocks": 203,
+      "headingCount": 25,
+      "sourceStartBlock": 160,
+      "sourceEndBlock": 346,
+      "htmlSha256": "e66614352de2e72cffc2a16bcfc67c3f50970a2d4e29c6d84fb96983aeb85bd0"
+    },
+    {
+      "chapter": 3,
+      "slug": "weather",
+      "tables": 6,
+      "images": [
+        {
+          "file": "aircraft-altimeter.jpg",
+          "source": "image18.jpg",
+          "sha256": "cd5669d59864da82b17dacc6a4e8bddc3dca6f4a0cd087dcf0dcc38524167859"
+        },
+        {
+          "file": "thermal-convection.jpg",
+          "source": "image6.jpg",
+          "sha256": "d65b88d87fe2e1d3930944eda9f4f3117c2990c9756347f36c2acfea649c0ab6"
+        },
+        {
+          "file": "windsock.jpg",
+          "source": "image2.jpg",
+          "sha256": "a8dc5a6cc9c8fef5b88ea252e95a2da147431f0bfd1a30b5febe0d70b5c2891a"
+        },
+        {
+          "file": "valley-inversion.jpg",
+          "source": "image8.jpg",
+          "sha256": "953ad74030f52794d498d83c3124f271fed38a7b879e2f99193c23689e5ac4ec"
+        },
+        {
+          "file": "cloud-types.jpg",
+          "source": "image3.jpg",
+          "sha256": "cc0cb6dfabb31e1acdf6302b4d82b8c142f40cdf4f886272090fa945e057f5d3"
+        },
+        {
+          "file": "lenticular-clouds.jpg",
+          "source": "image12.jpg",
+          "sha256": "58111e26ee723356aa1501ba682ca73b5bd70824e6120d9d0abdbb7c60dc4f04"
+        },
+        {
+          "file": "developing-cumulus.jpg",
+          "source": "image7.jpg",
+          "sha256": "60c326902d8bea506091614369ce584bf72270e4772791e02dd82bc2336a1e65"
+        },
+        {
+          "file": "thunderstorm-stages.jpg",
+          "source": "image4.jpg",
+          "sha256": "3030273ff224dfe2b2f479608e000afced0fe3aab2ff0c8a3c0620fc0646c8f7"
+        },
+        {
+          "file": "fog-over-city.jpg",
+          "source": "image15.jpg",
+          "sha256": "7141d0f8dcbe58db39331585bb1ebea45802964570ebebf97b3b0776b06cb02e"
+        },
+        {
+          "file": "low-visibility-road.jpg",
+          "source": "image17.jpg",
+          "sha256": "df314173c0ff445aa563a86842d4e3ed5e67177c4312e852ced5066c0790204d"
+        },
+        {
+          "file": "automated-weather-station.jpg",
+          "source": "image16.jpg",
+          "sha256": "69301d73fd428b3934edb6a43447eae8cfc3bfd1946e4250636b04f400251a37"
+        },
+        {
+          "file": "annotated-metar.jpg",
+          "source": "image1.jpg",
+          "sha256": "6739fc8f49d1f9c74e32992ef09814ff3b4f615d4acef12d01679e7ee8f2674d"
+        },
+        {
+          "file": "annotated-taf.jpg",
+          "source": "image10.jpg",
+          "sha256": "670cb88d209ec65474fdbeffe1fbb8392573de02acd17caa544933d267a5c06a"
+        }
+      ],
+      "verifiedTextBlocks": 282,
+      "headingCount": 25,
+      "sourceStartBlock": 346,
+      "sourceEndBlock": 564,
+      "htmlSha256": "7f7c58984d1855b8c7dec639d5ddee46cdcd8d6a5815c73fc400f653663a7fe5"
+    },
+    {
+      "chapter": 4,
+      "slug": "uas-operations",
+      "tables": 4,
+      "images": [],
+      "verifiedTextBlocks": 259,
+      "headingCount": 13,
+      "sourceStartBlock": 564,
+      "sourceEndBlock": 728,
+      "htmlSha256": "3410e9d6b7bd19b6106bccdba87fa7ed19d61014aaba4be04f82e11d95e92985"
+    },
+    {
+      "chapter": 5,
+      "slug": "loading-and-performance",
+      "tables": 4,
+      "images": [],
+      "verifiedTextBlocks": 213,
+      "headingCount": 12,
+      "sourceStartBlock": 728,
+      "sourceEndBlock": 879,
+      "htmlSha256": "dd940e57fe6f78cff4815dd1a316714e3ee3449774beb9f4de2cc9b0d509d786"
+    }
+  ]
+}

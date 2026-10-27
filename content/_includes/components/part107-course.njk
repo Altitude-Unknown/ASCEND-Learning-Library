@@ -22,7 +22,7 @@
     <li class="course-unit" id="unit-{{ unit.number }}">
       <div class="course-unit-main"><span class="eyebrow">UNIT 0{{ unit.number }}</span><h3>{{ unit.title }}</h3><p>{{ unit.summary }}</p><ul>{% for outcome in unit.outcomes %}<li>{{ outcome }}</li>{% endfor %}</ul><a class="button outline" href="{{ unit.url }}">Study Unit {{ unit.number }}: {{ unit.title }} →</a></div>
       <div class="course-unit-resources"><h4>Materials & practice</h4>
-        <p class="small"><strong>Textbook:</strong> <a href="/resources/airspace-book/">Chapter {{ unit.chapter }}</a></p>
+        <p class="small"><strong>Textbook:</strong> <a href="{{ unit.chapterUrl }}">Chapter {{ unit.chapter }}</a></p>
         {% if unit.watchNote %}<p class="small muted">{{ unit.watchNote }}</p>{% endif %}
         <ul>{% for resource in collections.resources | related(unit.watch) %}<li><a href="{{ resource.url }}">{{ resource.data.title }}</a></li>{% endfor %}
         {% for resource in collections.resources | related([unit.slides, unit.activity]) %}<li><a href="{{ resource.url }}">{{ resource.data.title }}</a></li>{% endfor %}</ul>

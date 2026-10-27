@@ -1,0 +1,13 @@
+---
+layout: layouts/base.njk
+---
+{% set currentUnit = part107Course.units[courseOrder - 1] %}
+<div class="container textbook-page">
+<nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/part107/">FAA Part 107</a><span>/</span><a href="{{ currentUnit.url }}">{{ currentUnit.title }}</a><span>/</span><span aria-current="page">Chapter {{ chapterNumber }}</span></nav>
+<header class="textbook-header"><span class="eyebrow">FAA REMOTE PILOT TEST PREP · WEB EDITION</span><h1>{{ title }}</h1><p class="lead">{{ description }}</p><p>From the supplied 2026 textbook. Original chapter wording is retained; figure descriptions and text transcripts have been added for web reading.</p><div class="project-links"><a href="#chapter-text">Skip to chapter text ↓</a><a href="/downloads/imported/part107-study-guide.pdf">Download the complete textbook (PDF)</a><a href="/resources/airspace-book/">Textbook files & source information</a></div></header>
+<div class="textbook-layout">
+<aside class="textbook-navigation" data-pagefind-ignore><nav aria-label="Textbook chapters"><h2>Five chapters</h2><ol>{% for unit in part107Course.units %}<li><a href="{{ unit.chapterUrl }}"{% if unit.chapterUrl == page.url %} aria-current="page"{% endif %}>Chapter {{ unit.chapter }}</a></li>{% endfor %}</ol></nav><nav aria-label="Chapter contents"><h2>In this chapter</h2><ul>{% for section in toc %}<li><a href="#{{ section.id }}">{{ section.title }}</a></li>{% endfor %}</ul></nav></aside>
+<article class="textbook-content prose" id="chapter-text" tabindex="-1">{{ content | safe }}</article>
+</div>
+<nav class="module-next" aria-label="Textbook sequence">{% if courseOrder > 1 %}{% set previousUnit = part107Course.units[courseOrder - 2] %}<a href="{{ previousUnit.chapterUrl }}">← Previous reading: {{ previousUnit.title }}</a>{% else %}<a href="/part107/study-guide/">← Textbook overview</a>{% endif %}<a href="{{ currentUnit.url }}#activity">Return to {{ currentUnit.title }} activities →</a>{% if courseOrder < 5 %}{% set nextUnit = part107Course.units[courseOrder] %}<a href="{{ nextUnit.chapterUrl }}">Next reading: {{ nextUnit.title }} →</a>{% endif %}</nav>
+</div>
