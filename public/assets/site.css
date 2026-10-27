@@ -44,6 +44,11 @@
 @media(max-width:620px){.leadership-portrait{float:none;display:block;width:160px;margin:0 0 22px}.leadership-profile-pi{padding:20px}.leadership-biography h2{font-size:1.7rem}}
 
 /* A shared learning sequence for independent study, clubs, and courses. */
+.unit-study-step{padding-block:28px;border-top:1px solid var(--line)}
+.unit-lesson-pair{align-items:stretch}
+.unit-video-placeholder{border-style:dashed;background:var(--mint)}
+.unit-supplemental{margin-top:22px}.unit-supplemental summary{padding:12px 0;min-height:44px;cursor:pointer;color:var(--green);font-weight:650}
+.unit-supplemental[open] summary{margin-bottom:14px}
 .course-intro{max-width:850px}.course-actions{margin-block:28px}
 .course-jump{display:flex;flex-wrap:wrap;gap:8px 24px;border-block:1px solid var(--line);padding:14px 0}
 .course-jump a{display:inline-flex;align-items:center;min-height:44px;font-size:.88rem;font-weight:650}

@@ -42,3 +42,33 @@ test('Course resources and sequence work without JavaScript', async ({browser}) 
   await expect(page.locator('h1')).toHaveText('UAS Operations');
   await context.close();
 });
+
+test('All five units present video and slides, then book, activity, and quiz', async ({page}) => {
+  for (const width of [1440,390]) {
+    await page.setViewportSize({width,height:1000});
+    for (const [slug,video] of [['regulations','regulations-video'],['airspace','airspace-video'],['weather',null],['loading-and-performance','loading-performance-video'],['uas-operations','operations-video']]) {
+      await page.goto(`/part107/${slug}/`);
+      const pair=page.locator('.unit-lesson-pair > article');
+      await expect(pair).toHaveCount(2);
+      if(video) await expect(pair.nth(0).getByRole('link')).toHaveAttribute('href',`/resources/${video}/`);
+      else {
+        await expect(pair.nth(0)).toContainText('Coming soon');
+        await expect(pair.nth(0).getByRole('link')).toHaveCount(0);
+      }
+      await expect(pair.nth(1)).toHaveAttribute('data-kind','Presentation');
+      const videoBox=await pair.nth(0).boundingBox(), slidesBox=await pair.nth(1).boundingBox();
+      if(width===1440) {
+        expect(slidesBox.x).toBeGreaterThan(videoBox.x);
+        expect(Math.abs(slidesBox.y-videoBox.y)).toBeLessThan(2);
+      } else expect(slidesBox.y).toBeGreaterThan(videoBox.y);
+      const order=await page.locator('#lesson, #reading, #activity, .quiz-panel').evaluateAll(nodes=>nodes.map(n=>n.id || 'quiz'));
+      expect(order).toEqual(['lesson','reading','activity','quiz']);
+      await expect(page.locator('#reading [data-kind="Book"]')).toHaveCount(1);
+      await expect(page.getByRole('heading',{name:'Related resources',exact:true})).toHaveCount(0);
+      expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1)).toBeTruthy();
+      const scan=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa','wcag22aa']).analyze();
+      expect(scan.violations,JSON.stringify(scan.violations)).toEqual([]);
+      if(slug==='regulations'||slug==='weather') await page.screenshot({path:`artifacts/part107-${slug}-ordered-${width}.png`,fullPage:true});
+    }
+  }
+});

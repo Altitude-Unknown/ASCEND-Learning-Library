@@ -20,9 +20,18 @@ and readiness guidance live in `content/_includes/components/part107-course.njk`
 Unit `courseOrder` front matter must match the JSON unit number; `order`
 controls sidebar sorting. Existing resource and lesson URLs remain stable.
 
-Weather currently links the existing short weather-report and METAR
-demonstrations. Do not claim a full Weather overview video exists until one
-has been supplied and added to the catalog.
+The five unit pages present materials as numbered study steps: a lesson video
+on the left and its presentation on the right, followed by the textbook, then
+activities, then the existing quiz. On small screens, the lesson video stacks
+above the slides. Supplemental videos remain in an expandable group within
+the video step; additional activities and references remain in the activity
+step. Resource cards are not removed.
+
+`lessonVideo` identifies the primary instructional video independently of
+supplemental videos in `watch` and each page’s `resourceIds`. Weather has
+`lessonVideo: null`: show a coming-soon placeholder next to its slides.
+Its short weather-report and METAR demonstrations remain supplemental. Set
+`lessonVideo` to the new resource ID when the overview lesson is supplied.
 
 Practice deep links accept a bank name (`?bank=Regulations`) and optionally
 `&count=all`. Only known bank names and the supported count are used; visiting

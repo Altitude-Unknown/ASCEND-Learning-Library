@@ -13,10 +13,12 @@ layout: layouts/base.njk
  {% if status == 'Prototype' %}<div class="notice"><strong>Content preview</strong> Materials for this topic are still being prepared.</div>{% endif %}
  <div class="prose">{{ content | safe }}</div>
  {% if objectives.length %}<section class="objectives"><span class="eyebrow">LEARN WITH PURPOSE</span><h2>Learning objectives</h2><p class="small muted">Topics this resource will help you explore.</p><ol>{% for objective in objectives %}<li>{{ objective }}</li>{% endfor %}</ol></section>{% endif %}
+ {% if courseOrder %}{% include "components/unit-materials.njk" %}{% else %}
  <section class="section-block"><div class="section-heading"><div><span class="eyebrow">READ · WATCH · EXPLORE</span><h2>Related resources</h2></div></div>
  {% set linked = collections.resources | related(resourceIds) %}
  {% if linked.length %}<div class="resource-grid two">{% for resource in linked %}{% include "components/card.njk" %}{% endfor %}</div>{% else %}<div class="empty-state"><h3>Materials are being prepared</h3><p>This topic will bring together readings, presentations, videos, and student materials.</p><a href="/library/">Browse resources →</a></div>{% endif %}
  </section>
+ {% endif %}
 
  {% if order == 9 and not practiceApp %}{% include "components/practice.njk" %}{% endif %}
  {% if courseOrder %}

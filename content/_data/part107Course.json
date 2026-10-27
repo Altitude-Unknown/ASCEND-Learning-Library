@@ -16,7 +16,8 @@
       "slides": "regulations-presentation",
       "activity": "regulations-activity",
       "number": 1,
-      "url": "/part107/regulations/"
+      "url": "/part107/regulations/",
+      "lessonVideo": "regulations-video"
     },
     {
       "slug": "airspace",
@@ -34,7 +35,8 @@
       "slides": "airspace-presentation",
       "activity": "airspace-worksheet",
       "number": 2,
-      "url": "/part107/airspace/"
+      "url": "/part107/airspace/",
+      "lessonVideo": "airspace-video"
     },
     {
       "slug": "weather",
@@ -54,7 +56,8 @@
       "slides": "weather-presentation",
       "activity": "weather-activity",
       "number": 3,
-      "url": "/part107/weather/"
+      "url": "/part107/weather/",
+      "lessonVideo": null
     },
     {
       "slug": "loading-and-performance",
@@ -72,7 +75,8 @@
       "slides": "loading-performance-presentation",
       "activity": "loading-performance-activity",
       "number": 4,
-      "url": "/part107/loading-and-performance/"
+      "url": "/part107/loading-and-performance/",
+      "lessonVideo": "loading-performance-video"
     },
     {
       "slug": "uas-operations",
@@ -90,7 +94,8 @@
       "slides": "operations-presentation",
       "activity": "operations-activity",
       "number": 5,
-      "url": "/part107/uas-operations/"
+      "url": "/part107/uas-operations/",
+      "lessonVideo": "operations-video"
     }
   ]
 }

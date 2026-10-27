@@ -17,7 +17,7 @@ status: Materials added
 
 ## Work through this unit
 
-1. **Watch and review the slides.** Use the short aviation-weather and METAR demonstrations, then review the Weather presentation.
+1. **Watch and review the slides.** The full Weather lesson video is coming soon. Review the Weather presentation and use the short aviation-weather and METAR demonstrations below as supplemental material.
 2. **Read and clarify.** Use Chapter 3 · Weather in the companion study guide to review concepts and work through difficult topics.
 3. **Apply your understanding.** Complete the linked activity. Explain your decisions using the rules, charts, or other references that support them.
 4. **Check and revisit.** Take the unit quiz, review missed concepts, and return to the materials before continuing.
