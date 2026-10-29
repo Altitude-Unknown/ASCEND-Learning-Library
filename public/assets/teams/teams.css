@@ -36,8 +36,12 @@
 .teams-directory .team-location{margin:8px 0 0;color:var(--muted)}
 .teams-directory .team-role{display:flex;align-items:center;gap:8px;font-size:.85rem;font-weight:700;margin:0 0 12px}
 .teams-directory .team-person{margin:8px 0}
-.teams-directory .team-profile-link{display:inline-block;padding-block:8px;min-height:44px;margin-right:20px}
+.teams-directory .team-profile-link,.teams-directory .team-additional-link{display:inline-block;padding-block:8px;min-height:44px;margin-right:20px}
+.team-additional-person{border-top:1px solid var(--line);margin-top:12px;padding-top:12px}
+.team-additional-role{font-size:.85rem;font-weight:700;margin:0}
+.team-additional-name{margin:8px 0}
+.teams-map .maplibregl-popup-content .team-additional-link{display:inline-block;margin-top:8px}
 .teams-location-note{margin-top:20px!important;color:var(--muted)}
 .team-map-link{border:0;background:transparent;padding:10px 0;margin-top:8px;color:var(--green);text-decoration:underline;text-underline-offset:4px;min-height:44px;font-weight:600}
-@media(max-width:620px){.teams-map{height:380px}.teams-empty{padding:20px}.teams-map .maplibregl-popup{max-width:230px!important}}
+@media(max-width:620px){.teams-map{height:380px}.teams-empty{padding:20px}.teams-map .maplibregl-popup{max-width:230px!important}.teams-map .maplibregl-popup-content{max-height:240px;overflow-y:auto}}
 @media print{.teams-map,.teams-map-toolbar,.team-map-link,#teams-map-status{display:none}}

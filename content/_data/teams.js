@@ -23,6 +23,16 @@ export default function () {
     if (team.profileId && !leadership.some(person => person.id === team.profileId)) {
       throw new Error(`Team ${team.id} refers to a missing leadership profile.`);
     }
+    team.additionalPeople ??= [];
+    if (!Array.isArray(team.additionalPeople)) throw new Error(`Team ${team.id} additionalPeople must be a list.`);
+    for (const other of team.additionalPeople) {
+      if (typeof other?.role !== 'string' || !other.role.trim() || typeof other.person !== 'string' || !other.person.trim()) {
+        throw new Error(`Team ${team.id} additional people need a nonempty role and person name.`);
+      }
+      if (other.profileId && !leadership.some(person => person.id === other.profileId)) {
+        throw new Error(`Team ${team.id} refers to a missing leadership profile for ${other.person}.`);
+      }
+    }
     for (const field of ['institution', 'city', 'state']) {
       if (typeof team[field] !== 'string' || !team[field].trim()) {
         throw new Error(`Team ${team.id} needs a ${field}.`);

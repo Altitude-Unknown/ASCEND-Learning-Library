@@ -29,6 +29,7 @@ teamsMap: true
 <p class="team-location">{{ team.city }}, {{ team.state }}</p>
 {% if team.person %}<p class="team-person">{{ team.person }}</p>{% endif %}
 {% if team.profileId %}<a class="team-profile-link" href="/leadership/#{{ team.profileId }}">Read biography<span class="visually-hidden">: {{ team.person }}</span></a>{% endif %}
+{% for other in team.additionalPeople %}<div class="team-additional-person"><p class="team-additional-role">{{ other.role }}</p><p class="team-additional-name">{{ other.person }}</p>{% if other.profileId %}<a class="team-additional-link" href="/leadership/#{{ other.profileId }}">Read biography<span class="visually-hidden">: {{ other.person }}</span></a>{% endif %}</div>{% endfor %}
 <button type="button" class="team-map-link" hidden>Show on map<span class="visually-hidden">: {{ team.institution }}</span></button>
 </li>{% endfor %}
 </ul>

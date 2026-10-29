@@ -118,6 +118,13 @@
     "role": "Principal Investigator",
     "person": "Mike Walach, Ph.D.",
     "profileId": "mike-walach",
+    "additionalPeople": [
+      {
+        "role": "Co-Investigator",
+        "person": "Angela Des Jardins, Ph.D.",
+        "profileId": "angela-des-jardins"
+      }
+    ],
     "locationSource": "https://www.montana.edu/about/"
   }
 ]
