@@ -21,13 +21,26 @@ test("Synthetic missions filter, point inspection and altitude profiles work", a
   await expect(page.locator("#explorer-status")).toContainText(
     "90 observations displayed",
   );
-  await page
-    .getByRole("button", { name: "Inspect observation 1", exact: true })
-    .click();
-  await expect(page.locator("#point-detail")).toContainText(
-    "DEMO / SYNTHETIC — Radiosonde profile",
+  // Selecting a mission moves the map, and a reload follows the 300 ms
+  // map-extent debounce and clears the detail. Let it finish, then retry the
+  // inspection until it holds.
+  await page.waitForTimeout(400);
+  await expect(page.locator("#explorer-status")).toContainText(
+    "90 observations displayed",
   );
-  await expect(page.locator("#point-detail")).toContainText("Altitude MSL (m)");
+  await expect(async () => {
+    await page
+      .getByRole("button", { name: "Inspect observation 1", exact: true })
+      .click();
+    await expect(page.locator("#point-detail")).toContainText(
+      "DEMO / SYNTHETIC — Radiosonde profile",
+      { timeout: 1000 },
+    );
+    await expect(page.locator("#point-detail")).toContainText(
+      "Altitude MSL (m)",
+      { timeout: 1000 },
+    );
+  }).toPass();
   await expect(page.locator("#profile-chart svg")).toBeVisible();
   await expect(page.locator("#mission-map canvas")).toBeVisible();
   expect(

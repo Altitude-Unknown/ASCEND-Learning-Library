@@ -16,26 +16,28 @@
 <body>
 <a class="skip-link" href="#main">Skip to main content</a>
 {% include "components/icons.njk" %}
-{% if site.prototype %}<div class="prototype-bar">PREVIEW EDITION <span>Explore books, presentations, and build files. Future resources are marked “Planned.”</span></div>{% endif %}
+{% if site.prototype %}<div class="prototype-bar">PREVIEW <span>ASCEND is being built for teams starting in 2027. Explore what’s here; more is added regularly.</span></div>{% endif %}
+{% set learnActive = section or page.url in (siteNavigation.learn | urls) or page.url.startsWith('/uas/') or page.url.startsWith('/resources/') or page.url.startsWith('/part107/') %}
+{% set dataActive = page.url.startsWith('/data/') %}
+{% set aboutActive = page.url == '/accessibility/' or page.url in (programNavigation | urls) %}
 <header class="site-header" data-pagefind-ignore>
  <div class="header-inner">
- <a class="brand" href="/" aria-label="ASCEND Learning Library home"><img class="brand-logo" src="/assets/ascend-logo.jpg" alt="" width="66" height="66"><span><strong>ASCEND</strong><small>LEARNING LIBRARY</small></span></a>
+ <a class="brand" href="/" aria-label="ASCEND home"><img class="brand-logo" src="/assets/ascend-logo.jpg" alt="" width="66" height="66"><span><strong>ASCEND</strong></span></a>
  <nav aria-label="Primary navigation" class="desktop-nav">
- <a href="/library/"{% if page.url == '/library/' %} aria-current="page"{% endif %}>Resource library</a>
- <a href="/part107/"{% if topic == 'part107' or section.id == 'part107' %} aria-current="page"{% endif %}>FAA Part 107</a>
- <a href="/data/"{% if dataApp and page.url != '/data/team/' and page.url != '/community/' %} aria-current="page"{% endif %}>Data Explorer</a>
- <a href="/data/team/"{% if page.url == '/data/team/' %} aria-current="page"{% endif %}>Member login</a>
- <a href="/teachers/"{% if page.url == '/teachers/' %} aria-current="page"{% endif %}>Faculty & Pods</a>
+ <details class="nav-menu"><summary{% if learnActive %} class="is-current"{% endif %}>Learn <span aria-hidden="true">▾</span></summary><div class="nav-panel">{% for item in siteNavigation.learn %}<a href="{{ item.url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.title }}</a>{% endfor %}</div></details>
+ <details class="nav-menu"><summary{% if dataActive %} class="is-current"{% endif %}>Data <span aria-hidden="true">▾</span></summary><div class="nav-panel">{% for item in siteNavigation.data %}<a href="{{ item.url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.title }}</a>{% endfor %}</div></details>
+ <a href="/community/"{% if page.url == '/community/' %} aria-current="page"{% endif %}>Community</a>
+ <details class="nav-menu"><summary{% if aboutActive %} class="is-current"{% endif %}>About <span aria-hidden="true">▾</span></summary><div class="nav-panel">{% for item in programNavigation %}<a href="{{ item.url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.title }}</a>{% endfor %}<a href="/accessibility/"{% if page.url == '/accessibility/' %} aria-current="page"{% endif %}>Accessibility & privacy</a></div></details>
  </nav>
- <div class="header-actions"><a class="search-link community-header-link" href="/community/"{% if page.url == '/community/' %} aria-current="page"{% endif %}>Community</a><a class="search-link" href="/search/" aria-label="Search"><svg class="icon" aria-hidden="true"><use href="#i-search"/></svg><span>Search</span></a>
- <details class="topic-menu"><summary>Explore <span aria-hidden="true">＋</span></summary><nav aria-label="Explore all topics"><a href="/community/">Community</a><a href="/data/team/">Member login</a>{% for item in programNavigation %}<a href="{{ item.url }}">{{ item.title }}</a>{% endfor %}<a href="/data/">Data Explorer</a><a href="/library/">All resources</a>{% for t in topics %}<a href="/{{ t.id }}/">{{ t.title }}</a>{% endfor %}</nav></details></div>
+ <div class="header-actions"><a class="search-link" href="/search/" aria-label="Search"><svg class="icon" aria-hidden="true"><use href="#i-search"/></svg><span>Search</span></a><a class="search-link member-link" href="/data/team/"{% if page.url == '/data/team/' %} aria-current="page"{% endif %}>Member login</a>
+ <details class="topic-menu"><summary>Menu <span aria-hidden="true">＋</span></summary><nav aria-label="Site menu"><h2>Learn</h2>{% for item in siteNavigation.learn %}<a href="{{ item.url }}">{{ item.title }}</a>{% endfor %}<h2>Data</h2>{% for item in siteNavigation.data %}<a href="{{ item.url }}">{{ item.title }}</a>{% endfor %}<h2>Community</h2><a href="/community/">Community</a><h2>About</h2>{% for item in programNavigation %}<a href="{{ item.url }}">{{ item.title }}</a>{% endfor %}<a href="/accessibility/">Accessibility & privacy</a></nav></details></div>
  </div>
 </header>
 <main id="main" tabindex="-1"{% if page.url != '/search/' and page.url != '/404.html' %} data-pagefind-body{% endif %}>
 {{ content | safe }}
 </main>
 <footer class="site-footer" data-pagefind-ignore>
- <div class="container footer-grid"><div><a class="footer-brand" href="/">ASCEND<span>LEARNING LIBRARY</span></a><p>Ideas for college teams.<br>Tools for the field.<br>Room to explore.</p></div><div><h2>Explore</h2><a href="/part107/">FAA Part 107</a><a href="/uas/">UAS</a><a href="/air-quality/">Air Quality</a><a href="/ballooning/">High-Altitude Ballooning</a></div><div><h2>Find resources</h2><a href="/fabrication/">CAD & Fabrication</a><a href="/teachers/">Faculty & Pod Resources</a><a href="/videos/">Videos</a><a href="/downloads/">Downloads</a></div><div><h2>About ASCEND</h2>{% for item in programNavigation %}<a href="{{ item.url }}">{{ item.title }}</a>{% endfor %}<p>A public educational resource for ASCEND, a NASA-funded STEM project for community college and university teams.</p><p class="footer-fine">This library does not imply NASA endorsement. No NASA insignia is used.</p><a href="/accessibility/">Accessibility & use</a></div></div>
- <div class="container footer-bottom"><span>© {{ '' | year }} ASCEND Learning Library</span><span>Open to explore. No account required.</span><a href="#main">Back to top ↑</a></div>
+ <div class="container footer-grid"><div><a class="footer-brand" href="/">ASCEND</a><p>Ideas for college teams.<br>Tools for the field.<br>Room to explore.</p></div><div><h2>Learn</h2>{% for item in siteNavigation.learn %}<a href="{{ item.url }}">{{ item.title }}</a>{% endfor %}</div><div><h2>Data & community</h2>{% for item in siteNavigation.data %}<a href="{{ item.url }}">{{ item.title }}</a>{% endfor %}<a href="/community/">Community</a><h2 class="footer-subheading">Browse by format</h2><a href="/fabrication/">CAD & Fabrication</a><a href="/videos/">Videos</a><a href="/downloads/">Downloads</a></div><div><h2>About ASCEND</h2>{% for item in programNavigation %}<a href="{{ item.url }}">{{ item.title }}</a>{% endfor %}<p>ASCEND is a NASA-funded STEM project for community college and university teams.</p><p class="footer-fine">This site does not imply NASA endorsement. No NASA insignia is used.</p><a href="/accessibility/">Accessibility & privacy</a></div></div>
+ <div class="container footer-bottom"><span>© {{ '' | year }} ASCEND</span><span>Open to explore. Sign-in is only for member tools.</span><a href="#main">Back to top ↑</a></div>
 </footer>
 </body></html>

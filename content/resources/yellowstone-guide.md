@@ -1,7 +1,7 @@
 ---
 id: yellowstone-guide
 title: YELLOWSTONE PCB Guide
-description: Shared YELLOWSTONE hardware for balloon tracking, flight termination, and data logging, and for UAS data logging and ground-station telemetry.
+description: YELLOWSTONE, the LoRa tracking PCB that high-altitude balloon teams use for flight tracking and flight termination.
 topic: ballooning
 kind: Equipment guide
 format: PDF / DOCX
@@ -37,18 +37,17 @@ related:
 
 Illustrated board guide covering connectors, schematics, initial checks, bootloader installation, and hardware test examples.
 
-<h2 id="platform-roles">Platform roles</h2>
+<h2 id="platform-roles">Role in ASCEND</h2>
 
-YELLOWSTONE will use the same PCB on both high-altitude balloons (HAB) and UAS, with slightly different firmware for each platform.
+YELLOWSTONE is used by **high-altitude balloon teams** for flight tracking and flight termination, with LoRa telemetry to the ASCEND ground station program.
 
-- **HAB YELLOWSTONE:** tracking, flight termination, and data logging.
-- **UAS YELLOWSTONE:** primarily data logging, with telemetry transmitted to a ground station.
+Air-quality and atmospheric data are recorded by a separate board, the **ASCEND Logger**, which every team flies. Earlier plans to use YELLOWSTONE as the UAS data logger have been replaced by the ASCEND Logger.
 
-Use the shared PCB guide, I/O map, parts list, and design files when planning either platform. The mission role determines which firmware variant is appropriate.
+Use this guide with the I/O map, parts list, and design files when building a balloon tracking payload.
 
-## Firmware variants
+## Firmware
 
-The planned variants are **HAB YELLOWSTONE firmware** and **UAS YELLOWSTONE firmware**. Future firmware downloads and setup instructions will identify the intended platform. The documents below describe the shared hardware and include example code; they do not provide a separately identified release for each variant.
+Firmware downloads and setup instructions for balloon tracking and termination will be added here. The documents below describe the hardware and include example code; they are not a separately identified firmware release.
 
 ## Notes for using the supplied material
 

@@ -87,6 +87,6 @@ ASCEND plans to make quality-controlled observational data accessible beyond the
 
 Data cleaning and quality checks are part of that process. A flight measurement becomes more useful when others can understand how it was collected, what it represents, and where its limitations lie.
 
-The data repositories and campaign map are planned services and are not yet connected here. This Learning Library currently provides training and technical resources to help teams prepare.
+The [ASCEND Data Explorer](/data/) is where teams upload their flight data and where anyone can map, filter, and download published missions. Published team missions will appear there once flights begin. The [data standard](/data/standard/) describes the expected file format.
 
 Visit [Faculty & Pod Resources](/teachers/) for course and project planning, lab materials, equipment information, and developing support resources.

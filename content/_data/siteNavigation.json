@@ -1,0 +1,17 @@
+{
+  "learn": [
+    { "title": "Start here", "url": "/learn/" },
+    { "title": "UAS", "url": "/uas/" },
+    { "title": "FAA Part 107 course", "url": "/part107/" },
+    { "title": "High-Altitude Ballooning", "url": "/ballooning/" },
+    { "title": "Air Quality & the ASCEND Logger", "url": "/air-quality/" },
+    { "title": "Faculty & Pod Resources", "url": "/teachers/" },
+    { "title": "Resource library", "url": "/library/" }
+  ],
+  "data": [
+    { "title": "Data Explorer", "url": "/data/" },
+    { "title": "Member workspace", "url": "/data/team/" },
+    { "title": "Check a data file", "url": "/data/upload/" },
+    { "title": "Data standard", "url": "/data/standard/" }
+  ]
+}

@@ -37,7 +37,7 @@ related:
 
 A visual reference for YELLOWSTONE board headers, signal names, power, and ground.
 
-YELLOWSTONE is shared hardware for ASCEND balloon and UAS payloads. Use the related resources together when studying the board or planning a payload. [Compare its balloon and UAS roles and firmware variants](/resources/yellowstone-guide/#platform-roles).
+YELLOWSTONE is the tracking and flight-termination board for ASCEND high-altitude balloon payloads. Use the related resources together when studying the board or planning a payload. [See its role in ASCEND](/resources/yellowstone-guide/#platform-roles).
 
 ## Notes for using the supplied material
 
