@@ -1,4 +1,4 @@
-# ASCEND Learning Library
+# ASCEND website
 
 A public educational resource library for student teams at two-year community
 colleges and four-year universities, their faculty mentors, and university pod

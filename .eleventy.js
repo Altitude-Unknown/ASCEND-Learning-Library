@@ -25,6 +25,7 @@ export default function(eleventy) {
   eleventy.addFilter('related', (items, ids = []) => ids.map(id => items.find(i => i.data.id === id)).filter(Boolean));
   eleventy.addFilter('first', (items, count = 3) => items.slice(0, count));
   eleventy.addFilter('json', value => JSON.stringify(value));
+  eleventy.addFilter('urls', items => items.map(item => item.url));
   eleventy.addFilter('year', () => new Date().getFullYear());
   eleventy.addCollection('resources', api => api.getFilteredByTag('resource').sort((a,b) => a.data.title.localeCompare(b.data.title)));
   eleventy.addCollection('modules', api => api.getFilteredByTag('module').sort((a,b) => a.data.order - b.data.order));

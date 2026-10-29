@@ -2,11 +2,11 @@
 layout: layouts/article.njk
 title: Accessibility & use
 permalink: /accessibility/
-description: Accessibility features, privacy, member accounts, and content-use information for the ASCEND Learning Library.
+description: Accessibility features, privacy, member accounts, and content-use information for the ASCEND website.
 ---
 ## An open library
 
-You do not need an account to read the library, the Part 107 course, or published data in the Data Explorer. Pages, navigation, and resource records work without JavaScript. Search, interactive filters, maps, the Community board, and sign-in need JavaScript.
+You do not need an account to read the learning paths, the resource library, the Part 107 course, or published data in the Data Explorer. Pages, navigation, and resource records work without JavaScript. Search, interactive filters, maps, the Community board, and sign-in need JavaScript.
 
 ## Accessibility
 

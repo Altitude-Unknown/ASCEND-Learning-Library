@@ -1,13 +1,19 @@
 // Progressive enhancement only: pages and resource links work without JS.
-const menu = document.querySelector('.topic-menu');
+const menus = [...document.querySelectorAll('.topic-menu, .nav-menu')];
+for (const menu of menus) {
+  menu.addEventListener('toggle', () => {
+    if (menu.open) menus.forEach(other => { if (other !== menu) other.open = false; });
+  });
+}
 document.addEventListener('keydown', event => {
-  if (event.key === 'Escape' && menu?.open) {
+  const menu = menus.find(item => item.open);
+  if (event.key === 'Escape' && menu) {
     menu.open = false;
     menu.querySelector('summary').focus();
   }
 });
 document.addEventListener('click', event => {
-  if (menu?.open && !menu.contains(event.target)) menu.open = false;
+  for (const menu of menus) if (menu.open && !menu.contains(event.target)) menu.open = false;
 });
 for (const browser of document.querySelectorAll('[data-browser]')) {
   const form = browser.querySelector('[data-filters]');

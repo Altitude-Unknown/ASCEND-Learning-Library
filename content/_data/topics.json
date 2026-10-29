@@ -153,7 +153,7 @@
     "overview": [
       "ASCEND’s UAS work connects aircraft engineering with atmospheric research. Fixed-wing aircraft are intended to measure horizontal variability, while multirotor aircraft support detailed vertical profiles in the lower atmosphere.",
       "Teams will integrate sensors and data systems, test their platforms, and evaluate measurements alongside balloon and surface observations. The aircraft resources below support the engineering skills needed for that work.",
-      "YELLOWSTONE will serve primarily as an onboard data logger on UAS and will also transmit data to a ground station. It shares its PCB with the balloon system, while using a UAS-specific firmware variant.",
+      "Every UAS team will fly the ASCEND Logger, a small PCB that records GPS position, pressure, temperature, and humidity, with an I2C port for a PM2.5 air-quality sensor. Logger setup and mounting guides are in development.",
       "The Flight Training collection brings together simulator practice, aircraft references, and a fixed-wing launch demonstration. Additional learning-to-fly materials will be added here."
     ],
     "contextLinks": [
@@ -276,7 +276,8 @@
     ],
     "overview": [
       "ASCEND’s science plan connects measurements near the surface with observations higher in the atmosphere. Teams will investigate how smoke layers, atmospheric conditions, and terrain relate to air quality downwind.",
-      "The work includes sensor evaluation, comparison of surface and airborne observations, and analysis alongside NASA datasets. The aim is to understand both the atmosphere and the limits of the instruments used to measure it."
+      "The work includes sensor evaluation, comparison of surface and airborne observations, and analysis alongside NASA datasets. The aim is to understand both the atmosphere and the limits of the instruments used to measure it.",
+      "All ASCEND teams will collect air-quality data with the ASCEND Logger: a small PCB with GPS, pressure, temperature, and humidity sensors and an I2C port for a PM2.5 sensor. UAS and balloon teams fly it on their platforms; radiosonde teams may run it as a ground station. Guides for setting up, mounting, and using the Logger are in development."
     ],
     "contextLinks": [
       {
@@ -356,7 +357,7 @@
     "overview": [
       "Small meteorological balloons with radiosondes provide profiles of temperature, pressure, humidity, and wind. Larger high-altitude balloons support student-integrated payloads for particulate measurements and other observations through a deeper atmospheric column.",
       "ASCEND plans to combine these observations with UAS and surface measurements. Shared sensing, data logging, and comparison practices will help teams connect observations across platforms.",
-      "Balloons will use YELLOWSTONE for tracking, flight termination, and data logging. The same PCB will also fly on UAS, with a separate HAB firmware variant for the balloon mission."
+      "Balloon teams will use YELLOWSTONE, ASCEND’s LoRa tracking PCB, with its ground station program for flight tracking and flight termination. Air-quality and atmospheric data are recorded by the ASCEND Logger, the shared PCB every team flies."
     ],
     "contextLinks": [
       {

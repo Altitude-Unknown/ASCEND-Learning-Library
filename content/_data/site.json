@@ -1,6 +1,6 @@
 {
-  "name": "ASCEND Learning Library",
+  "name": "ASCEND",
   "shortName": "ASCEND",
-  "description": "A public ASCEND learning library for community college and university student teams, faculty mentors, and pod leads exploring aviation, atmospheric science, and engineering.",
+  "description": "ASCEND brings community college and university student teams, faculty mentors, and pod leads together to learn, collect atmospheric data, and share results across aviation, atmospheric science, and engineering.",
   "prototype": true
 }

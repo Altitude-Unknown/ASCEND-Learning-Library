@@ -4,7 +4,7 @@ import AxeBuilder from '@axe-core/playwright';
 for (const width of [1440,768,390,320]) {
  test(`Responsive pages and accessibility at ${width}px`, async ({page}) => {
   await page.setViewportSize({width, height:1000});
-  for (const path of ['/','/part107/','/part107/airspace/','/resources/airspace-video/','/library/','/teachers/','/downloads/','/videos/','/uas/trainer-airplane/','/uas/fixed-wing-research/','/resources/remote-aircraft-textbook/','/resources/trainer-tpu-parts/','/resources/flight-lab-rc/','/resources/transmitter-configurator/','/resources/atis-captioned-video/','/resources/fixed-wing-launch-video/','/resources/mission-planner-video/','/resources/spektrum-model-setup-video/','/resources/regulations-video/','/resources/weather-activity/','/resources/yellowstone-guide/','/about/','/science/','/project/']) {
+  for (const path of ['/','/learn/','/part107/','/part107/airspace/','/resources/airspace-video/','/library/','/teachers/','/downloads/','/videos/','/uas/trainer-airplane/','/uas/fixed-wing-research/','/resources/remote-aircraft-textbook/','/resources/trainer-tpu-parts/','/resources/flight-lab-rc/','/resources/transmitter-configurator/','/resources/atis-captioned-video/','/resources/fixed-wing-launch-video/','/resources/mission-planner-video/','/resources/spektrum-model-setup-video/','/resources/regulations-video/','/resources/weather-activity/','/resources/yellowstone-guide/','/about/','/science/','/project/']) {
    await page.goto(path);
    await expect(page.locator('h1')).toHaveCount(1);
    expect(await page.evaluate(()=>document.documentElement.scrollWidth <= innerWidth+1)).toBeTruthy();
@@ -42,9 +42,29 @@ test('Keyboard navigation and mobile menu',async({page})=>{
  await page.keyboard.press('Tab');await expect(page.getByRole('link',{name:'Skip to main content'})).toBeFocused();
  await page.keyboard.press('Enter');await expect(page.locator('#main')).toBeFocused();
  const summary=page.locator('.topic-menu summary');await summary.focus();await page.keyboard.press('Enter');
- await expect(page.getByRole('navigation',{name:'Explore all topics'})).toBeVisible();
+ await expect(page.getByRole('navigation',{name:'Site menu'})).toBeVisible();
+ await expect(page.getByRole('navigation',{name:'Site menu'}).getByRole('link',{name:'Start here'})).toBeVisible();
  await page.keyboard.press('Escape');await expect(summary).toBeFocused();
- await expect(page.getByRole('navigation',{name:'Explore all topics'})).not.toBeVisible();
+ await expect(page.getByRole('navigation',{name:'Site menu'})).not.toBeVisible();
+});
+test('Desktop menus group Learn, Data, Community, and About',async({page})=>{
+ await page.setViewportSize({width:1280,height:900});await page.goto('/');
+ const nav=page.getByRole('navigation',{name:'Primary navigation'});
+ await expect(nav.locator('summary.is-current')).toHaveCount(0);
+ await expect(page.locator('.topic-menu')).toBeHidden();
+ const learn=nav.locator('summary',{hasText:'Learn'});await learn.click();
+ await expect(nav.getByRole('link',{name:'FAA Part 107 course'})).toBeVisible();
+ await nav.locator('summary',{hasText:'Data'}).click();
+ await expect(nav.getByRole('link',{name:'FAA Part 107 course'})).toBeHidden();
+ await expect(nav.getByRole('link',{name:'Data Explorer'})).toBeVisible();
+ await page.keyboard.press('Escape');await expect(nav.getByRole('link',{name:'Data Explorer'})).toBeHidden();
+ await expect(nav.locator('summary',{hasText:'Data'})).toBeFocused();
+ await nav.locator('summary',{hasText:'About'}).click();await nav.getByRole('link',{name:'ASCEND Leadership'}).click();
+ await expect(page).toHaveURL(/\/leadership\/$/);
+ await expect(nav.locator('summary',{hasText:'About'})).toHaveClass(/is-current/);
+ await nav.locator('summary',{hasText:'Learn'}).click();await nav.getByRole('link',{name:'Start here'}).click();
+ await expect(page.locator('h1')).toHaveText('Learn with ASCEND');
+ await expect(page.locator('.module-card.is-planned')).toHaveCount(2);
 });
 test('No fabricated files or unsolicited YouTube embeds', async({page})=>{
  await page.goto('/resources/airspace-video/');

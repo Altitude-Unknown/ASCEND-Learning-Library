@@ -72,4 +72,4 @@ Students will practice:
 - Comparing observations across platforms, institutions, and NASA datasets.
 - Mapping results and communicating findings through reports, posters, and presentations.
 
-Explore the [seven research questions](/science/) or learn [how teams and pods work together](/project/). The Learning Library supports this work with books, presentations, build files, and resources for faculty mentors and pod leads.
+Explore the [seven research questions](/science/) or learn [how teams and pods work together](/project/). The ASCEND website supports this work with books, presentations, build files, and resources for faculty mentors and pod leads.
