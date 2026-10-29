@@ -92,3 +92,5 @@
 @media(min-width:851px){.topic-menu{display:none}}
 @media(max-width:420px){.header-actions .search-link span{display:none}.header-actions{gap:12px}}
 .learn-group{padding-block:28px}.learn-group .module-grid{margin-bottom:0}.module-card.is-planned{background:var(--paper);border-style:dashed}.module-card.is-planned .status{align-self:flex-start}
+.section-courses{padding-block:0 32px}.section-courses .module-grid{grid-template-columns:minmax(0,2fr) minmax(0,1fr);margin-bottom:0}.course-card{border-color:var(--green);border-width:2px;background:#f1f6ee}.course-card h3{font-size:1.2rem}.course-card p{font-size:.9rem}
+@media(max-width:850px){.section-courses .module-grid{grid-template-columns:1fr}}

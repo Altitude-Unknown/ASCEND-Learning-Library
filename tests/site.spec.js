@@ -47,6 +47,12 @@ test('Keyboard navigation and mobile menu',async({page})=>{
  await page.keyboard.press('Escape');await expect(summary).toBeFocused();
  await expect(page.getByRole('navigation',{name:'Site menu'})).not.toBeVisible();
 });
+test('UAS page links to the Part 107 course up front',async({page})=>{
+ await page.goto('/uas/');
+ const course=page.locator('.section-courses').getByRole('link',{name:/FAA Part 107 Remote Pilot course/});
+ await expect(course).toBeVisible();
+ await course.click();await expect(page).toHaveURL(/\/part107\/$/);
+});
 test('Desktop menus group Learn, Data, Community, and About',async({page})=>{
  await page.setViewportSize({width:1280,height:900});await page.goto('/');
  const nav=page.getByRole('navigation',{name:'Primary navigation'});

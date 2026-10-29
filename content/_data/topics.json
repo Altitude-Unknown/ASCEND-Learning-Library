@@ -48,6 +48,13 @@
     "id": "uas",
     "title": "UAS",
     "tagline": "From first principles to first flight.",
+    "courses": [
+      {
+        "title": "FAA Part 107 Remote Pilot course",
+        "url": "/part107/",
+        "description": "Prepare for the FAA Remote Pilot certificate in five units: regulations, airspace, weather, loading and performance, and operations. Each unit pairs videos and slides with a book chapter, an activity, and a practice quiz."
+      }
+    ],
     "description": "Explore aircraft design, electronics, flight systems, and scientific missions.",
     "icon": "aircraft",
     "subsections": [
