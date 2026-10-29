@@ -1,9 +1,10 @@
 # CSP is report-only until browser consoles on the live site show no violations; then rename it Content-Security-Policy.
-# Clerk needs its frontend domain, img.clerk.com and Cloudflare Turnstile; Pagefind needs wasm-unsafe-eval; MapLibre needs blob: workers.
+# Clerk needs its frontend domain, img.clerk.com, bot protection (*.protect.clerk.com on several ports) and Cloudflare Turnstile;
+# Cloudflare Web Analytics injects its beacon script; Pagefind needs wasm-unsafe-eval; MapLibre needs blob: workers.
 /*
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
   X-Frame-Options: DENY
   Permissions-Policy: camera=(), microphone=(), geolocation=()
   Strict-Transport-Security: max-age=31536000
-  Content-Security-Policy-Report-Only: default-src 'self'; script-src 'self' 'wasm-unsafe-eval' https://clerk.ascendflight.org https://challenges.cloudflare.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://img.clerk.com; font-src 'self' data:; connect-src 'self' https://api.ascendflight.org https://clerk.ascendflight.org; frame-src https://www.youtube-nocookie.com https://challenges.cloudflare.com; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'
+  Content-Security-Policy-Report-Only: default-src 'self'; script-src 'self' 'wasm-unsafe-eval' https://clerk.ascendflight.org https://challenges.cloudflare.com https://*.protect.clerk.com https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://img.clerk.com; font-src 'self' data:; connect-src 'self' https://api.ascendflight.org https://clerk.ascendflight.org https://*.protect.clerk.com:* https://cloudflareinsights.com; frame-src https://www.youtube-nocookie.com https://challenges.cloudflare.com; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'

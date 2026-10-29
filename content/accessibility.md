@@ -18,7 +18,7 @@ Video records include space for captions and transcripts. Downloadable documents
 
 ## Privacy
 
-The site has no analytics scripts, advertising trackers, or embedded videos loaded by default. If a published video offers a “Load video” button, choosing it connects to YouTube’s privacy-enhanced embed service. Cloudflare hosts the site and may process ordinary web request logs. External resources have their own privacy practices.
+The site uses Cloudflare Web Analytics to count page visits; it does not use cookies or track individual visitors across sites. There are no advertising trackers, and no embedded videos are loaded by default. If a published video offers a “Load video” button, choosing it connects to YouTube’s privacy-enhanced embed service. Cloudflare hosts the site and may process ordinary web request logs. External resources have their own privacy practices.
 
 ### Member accounts
 
