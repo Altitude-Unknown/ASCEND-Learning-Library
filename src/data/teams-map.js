@@ -15,6 +15,7 @@ const teams = [...document.querySelectorAll('#teams-directory [data-team-id]')].
   role: item.querySelector('.team-role')?.textContent.replace(/[★◆●■]/g, '').trim() || roles[item.dataset.kind || 'team'],
   person: item.querySelector('.team-person')?.textContent,
   profile: item.querySelector('.team-profile-link'),
+  additionalPeople: [...item.querySelectorAll('.team-additional-person')],
   coordinates: [Number(item.dataset.longitude), Number(item.dataset.latitude)],
   button: item.querySelector('.team-map-link'),
 }));
@@ -55,6 +56,7 @@ function institutionContent(team) {
     content.append(person);
   }
   if (team.profile) content.append(team.profile.cloneNode(true));
+  team.additionalPeople.forEach(other => content.append(other.cloneNode(true)));
   return content;
 }
 
@@ -78,7 +80,24 @@ function openPopup(records, coordinates, origin) {
     }
   });
   element.querySelector('.maplibregl-popup-close-button').addEventListener('click', () => origin.focus());
+  keepPopupInView(element);
   activePopup = popup;
+}
+
+// Pan taller popups, such as institutions with additional people, fully into view.
+// Popups reposition on the next frame, and panning can flip their automatic anchor
+// above/below the marker, so measure after each frame and retry a few times.
+function keepPopupInView(element, attempts = 4) {
+  requestAnimationFrame(() => {
+    if (!element.isConnected) return;
+    const box = element.getBoundingClientRect(), frame = container.getBoundingClientRect();
+    const dx = Math.max(0, box.right - frame.right + 12) - Math.max(0, frame.left - box.left + 12);
+    const dy = Math.max(0, box.bottom - frame.bottom + 12) - Math.max(0, frame.top - box.top + 12);
+    if ((dx || dy) && attempts > 1) {
+      map.panBy([dx, dy], {duration: 0});
+      keepPopupInView(element, attempts - 1);
+    }
+  });
 }
 
 // Group markers whose touch targets would overlap at the current zoom. The

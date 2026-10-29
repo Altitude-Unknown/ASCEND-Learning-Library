@@ -80,6 +80,24 @@ test('SME and pod popups show the right institution, role, and person', async ({
   await expect(page.locator('.maplibregl-popup')).toContainText('Montana State University');
   await expect(page.locator('.maplibregl-popup')).toContainText('Principal Investigator');
   await expect(page.locator('.maplibregl-popup')).toContainText('Mike Walach');
+  await expect(page.locator('.maplibregl-popup')).toContainText('Co-Investigator');
+  await expect(page.locator('.maplibregl-popup')).toContainText('Angela Des Jardins, Ph.D.');
+  await expect(page.locator('.maplibregl-popup .team-additional-link')).toHaveAttribute('href', '/leadership/#angela-des-jardins');
+  await expect(page.locator('#team-montana-state .team-additional-name')).toHaveText('Angela Des Jardins, Ph.D.');
+});
+
+test('Institutions with additional people keep their popup inside the map', async ({page}) => {
+ for (const width of [1440, 390, 320]) {
+  await page.setViewportSize({width, height: 844});
+  await page.goto('/teams/');
+  await expect(page.locator('#teams-map')).toHaveAttribute('data-map-ready', 'true');
+  await page.locator('#team-montana-state .team-map-link').click();
+  await expect(page.locator('.maplibregl-popup')).toContainText('Angela Des Jardins, Ph.D.');
+  await expect.poll(async () => {
+   const popup = await page.locator('.maplibregl-popup').boundingBox(), map = await page.locator('#teams-map').boundingBox();
+   return popup.y >= map.y - 1 && popup.y + popup.height <= map.y + map.height + 1;
+  }).toBeTruthy();
+ }
 });
 
 test('Nearby research centers remain available through a grouped marker', async ({page}) => {

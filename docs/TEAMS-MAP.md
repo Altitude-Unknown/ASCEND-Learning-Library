@@ -41,6 +41,12 @@ Keep approximate campus/research center coordinates and source URLs with the
 record. Names and institutions can be published without creating a placeholder
 biography. Only supplied biographies are imported to the leadership page.
 
+To list more people at the same institution without a second, overlapping marker,
+add `additionalPeople`: a list of `{"role", "person", "profileId"}` objects
+(`profileId` optional and checked like the main one). They appear below the main
+person in the directory card and the map popup; the marker keeps the main role.
+Montana State uses this for its co-investigator.
+
 Montana State's principal investigator location uses the approved gold-ring
 ASCEND logo badge at `/assets/teams/ascend-pi-badge.svg`, with a matching legend
 and directory icon. Its map button is 60 pixels wide; nearby-marker grouping
