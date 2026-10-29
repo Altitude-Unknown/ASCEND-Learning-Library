@@ -4,8 +4,15 @@ A public educational resource library for student teams at two-year community
 colleges and four-year universities, their faculty mentors, and university pod
 leads. The library is a working
 prototype built with **Eleventy, Markdown, Nunjucks templates, and Pagefind**.
-The output is ordinary static HTML/CSS/JavaScript: no database, server runtime,
-accounts, tracking, CMS, or client-side application framework.
+The library pages are ordinary static HTML/CSS/JavaScript with no tracking, CMS,
+or client-side application framework.
+
+Signed-in features run separately. Members sign in through Clerk
+(`clerk.ascendflight.org`) to use the Community board and to upload team data.
+Both use the Data API Worker (`api.ascendflight.org`, in `data-api/`), backed by
+PostgreSQL/PostGIS and a private R2 bucket. The library itself needs no account.
+
+Production is live at **https://ascendflight.org** (see [Deployment](docs/DEPLOYMENT.md)).
 
 ## Preview locally
 
@@ -97,10 +104,11 @@ The `permalink` and resource `id` are stable identifiers. Change a file URL in
 **one resource record**, not in every lesson. Lessons refer to resource IDs;
 resource cards link to the permanent landing page.
 
-## Publish when ready
+## Publishing
 
-See [deployment instructions](docs/DEPLOYMENT.md). In a dedicated GitHub repo,
-connect Cloudflare Pages to the repository and use:
+See [deployment instructions](docs/DEPLOYMENT.md). The GitHub repository
+`Altitude-Unknown/ASCEND-Learning-Library` is connected to Cloudflare Pages
+(`ascend-learning-library.pages.dev`, custom domain `ascendflight.org`) with:
 
 | Setting | Value |
 | --- | --- |
@@ -110,9 +118,9 @@ connect Cloudflare Pages to the repository and use:
 | Root directory | Repository root |
 | Node | `22` (also `.node-version`) |
 
-A push triggers the Cloudflare build and deployment. No token belongs in this
-repository. This prototype has not created a GitHub remote, Cloudflare project,
-or public deployment. Hosting/account setup is a separate step.
+A push to `main` triggers the Cloudflare build and production deployment. No
+token belongs in this repository. The Workers deploy separately with Wrangler; see
+[operations](docs/data-explorer/OPERATIONS.md) and [the sign-in proxy](docs/data-explorer/AUTH-PROXY.md).
 
 ## Before public launch
 
