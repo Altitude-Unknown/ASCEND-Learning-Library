@@ -255,4 +255,4 @@
 .data-page .maplibregl-ctrl-attrib a {
   text-decoration: underline;
 }
-.community-layout{display:grid;grid-template-columns:240px minmax(0,1fr);gap:32px}.community-layout nav{display:grid;gap:8px}.community-layout form{display:grid;gap:12px;margin:24px 0}.community-layout label{display:grid;gap:6px}.community-layout textarea{font:inherit;width:100%;padding:12px}.community-post{border:1px solid var(--line);padding:20px;margin:16px 0;background:white}.community-message{white-space:pre-wrap;overflow-wrap:anywhere}.community-layout article{margin:16px 0}.community-layout .data-actions{flex-wrap:wrap}@media(max-width:768px){.community-layout{grid-template-columns:1fr}.community-layout nav{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:400px){.community-layout nav{grid-template-columns:1fr}}
+.membership-review article{border:1px solid var(--line);padding:20px;margin:16px 0;background:white}.membership-review article .button{margin:8px 8px 0 0}

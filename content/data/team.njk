@@ -9,10 +9,12 @@ dataApp: team
  <span class="eyebrow">ASCEND · Team workspace</span>
  <h1>Member workspace</h1>
  <p class="lead">Sign in with your own ASCEND account. Your team and role are assigned by an administrator.</p>
- <div class="data-actions"><a href="/community/">Community discussions</a><a href="/data/">Public Data Explorer</a></div>
+ <div class="data-actions"><a href="/community/">ASCEND on Zulip</a><a href="/data/">Public Data Explorer</a></div>
  <p id="team-status" class="data-status" role="status" aria-live="polite">Loading sign-in…</p>
  <div id="team-sign-in"></div>
  <section id="team-account" hidden><h2 id="team-name">Your account</h2><div id="team-user-button"></div><p id="team-role"></p></section>
+ <form id="enrollment-form" class="data-mapping" hidden><h2>Request ASCEND membership</h2><p>A moderator or administrator must approve your account before you can create missions or upload data.</p><label>Your name<input name="display_name" required maxlength="80"></label><label>School or project affiliation<input name="affiliation" maxlength="200"></label><button class="button" type="submit">Request membership</button></form>
+ <section id="membership-review" class="membership-review" hidden><h2>Membership requests</h2><p>Approving grants ordinary membership. An administrator then assigns a team so the member can upload data.</p><div id="membership-requests"></div></section>
  <section id="team-workspace" hidden>
  <div class="data-actions"><a href="/data/upload/?team=1">Upload a CSV to my team</a></div>
  <h2>Create a mission</h2><p>Validated uploads become publicly available automatically. Use a separate mission for each flight; confirm the data license before uploading.</p>

@@ -6,7 +6,7 @@ description: Accessibility features, privacy, member accounts, and content-use i
 ---
 ## An open library
 
-You do not need an account to read the learning paths, the resource library, the Part 107 course, or published data in the Data Explorer. Pages, navigation, and resource records work without JavaScript. Search, interactive filters, maps, the Community board, and sign-in need JavaScript.
+You do not need an account to read the learning paths, the resource library, the Part 107 course, or published data in the Data Explorer. Pages, navigation, and resource records work without JavaScript. Search, interactive filters, maps, and member sign-in need JavaScript.
 
 ## Accessibility
 
@@ -22,25 +22,21 @@ The site uses Cloudflare Web Analytics to count page visits; it does not use coo
 
 ### Member accounts
 
-ASCEND team members and project staff can sign in to use the Community board and to upload team data. Sign-in is provided by [Clerk](https://clerk.com/privacy), a third-party authentication service. Clerk processes the details you use to sign in; this site receives a Clerk account identifier, not your password.
+ASCEND team members and project staff can sign in to the member workspace to request membership and upload team data. Sign-in is provided by [Clerk](https://clerk.com/privacy), a third-party authentication service. Clerk processes the details you use to sign in; this site receives a Clerk account identifier, not your password.
 
 When you request membership, we store your account identifier, the display name you enter, and any affiliation you provide. ASCEND moderators and administrators review requests. For approved members, we store your display name, role, team assignment, and whether your access is active. Administrator, moderation, membership, and upload actions are recorded in an audit log.
-
-### Community discussions
-
-Discussions are visible only to signed-in, active ASCEND members, across all teams. Each topic and reply shows the author’s display name, team, and institution. Moderators can hide posts and topics; hidden content is removed from view but kept in the project database. Discussions are not included in public site search.
 
 ### Uploaded data
 
 Data files uploaded by teams are archived in private storage. After a successful import, the scientific observations are publicly viewable and downloadable in the Data Explorer, along with mission details such as team and institution. Administrators can withdraw a dataset from public view.
 
-### Zulip pilot
+### Community on Zulip
 
-The ASCEND Zulip community is a separate service operated by Zulip with its own account and privacy policy. Signing in there does not use your account on this site.
+ASCEND’s community discussions take place on Zulip, a separate service with its own accounts and [privacy policy](https://zulip.com/policies/privacy). Signing in there does not use your account on this site, and messages posted there are stored by Zulip, not on this site. Posts from the earlier discussion board on this site, retired in October 2026, are no longer displayed but remain in the project database.
 
 ### Questions or changes
 
-To change your display name, or to ask about deactivating your account or removing content you posted, contact your ASCEND project lead.
+To change your display name or ask about deactivating your member account, contact your ASCEND project lead. Zulip accounts and messages are managed in Zulip.
 
 ## Using materials
 
