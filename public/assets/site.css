@@ -94,3 +94,5 @@
 .learn-group{padding-block:28px}.learn-group .module-grid{margin-bottom:0}.module-card.is-planned{background:var(--paper);border-style:dashed}.module-card.is-planned .status{align-self:flex-start}
 .section-courses{padding-block:0 32px}.section-courses .module-grid{grid-template-columns:minmax(0,2fr) minmax(0,1fr);margin-bottom:0}.course-card{border-color:var(--green);border-width:2px;background:#f1f6ee}.course-card h3{font-size:1.2rem}.course-card p{font-size:.9rem}
 @media(max-width:850px){.section-courses .module-grid{grid-template-columns:1fr}}
+.community-zulip{max-width:760px}.community-zulip h3{margin-top:36px}.community-zulip .project-links{margin:24px 0}
+.sponsor-note{max-width:760px;margin:48px 0 64px;padding:28px 30px;border:1px solid var(--line);border-top:4px solid var(--gold);border-radius:var(--radius);background:var(--white)}.sponsor-note h2{margin:6px 0 12px}.sponsor-note p:last-child{margin-bottom:0}

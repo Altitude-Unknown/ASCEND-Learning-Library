@@ -1,5 +1,15 @@
 # ASCEND community and publication policy
 
+## Discussion board retired — October 30, 2026
+
+ASCEND's community moved to Zulip (https://ascendflight.zulipchat.com/), which
+Zulip sponsors with its full plan at no cost. The /community/ page now links to
+Zulip and acknowledges the sponsorship; it no longer loads sign-in or the board.
+Membership requests and moderator approval moved to the member workspace
+(/data/team/), using the same API routes. The discussion API routes and tables
+are left in place, unused by the website, so existing posts are preserved.
+Removing them later requires a Worker deploy and a database migration.
+
 ## Policy agreed October 13, 2026
 
 Discussions are visible to active, signed-in ASCEND members only. All members can

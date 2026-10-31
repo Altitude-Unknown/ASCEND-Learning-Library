@@ -14,7 +14,9 @@ test('administrator can restore public access and withdraw a dataset',async({pag
     if(request.method()==='OPTIONS') return route.fulfill({status:204,headers:{'Access-Control-Allow-Origin':'*','Access-Control-Allow-Headers':'*','Access-Control-Allow-Methods':'GET,POST'}});
     const path=new URL(request.url()).pathname;
     let body;
-    if(path==='/api/team/me') body={account:{role:'administrator',team_id:null},team:null};
+    if(path==='/api/team/enrollment') body={status:'active'};
+    else if(path==='/api/team/community/membership') body={data:[]};
+    else if(path==='/api/team/me') body={account:{role:'administrator',team_id:null},team:null};
     else if(request.method()==='POST') {const input=request.postDataJSON();operations.push(input);if(input.action==='publish')published=true;if(input.action==='withdraw')published=false;body={};}
     else body={teams:[],files:[],missions:[{id:'91000000-0000-4000-8000-000000000006',name:'Review test mission',mission_date:'2026-10-12',team:'Test Team',data_license:'CC0-1.0',synthetic:true,visibility:published?'public':'private',publication_status:published?'approved':'pending',file_count:1,observation_count:5,qc_count:5}],truncated:false};
     await route.fulfill({json:body,headers:{'Access-Control-Allow-Origin':'*'}});

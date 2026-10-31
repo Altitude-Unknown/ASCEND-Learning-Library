@@ -8,8 +8,8 @@ The library pages are ordinary static HTML/CSS/JavaScript with no tracking, CMS,
 or client-side application framework.
 
 Signed-in features run separately. Members sign in through Clerk
-(`clerk.ascendflight.org`) to use the Community board and to upload team data.
-Both use the Data API Worker (`api.ascendflight.org`, in `data-api/`), backed by
+(`clerk.ascendflight.org`) to request membership and upload team data in the
+member workspace. It uses the Data API Worker (`api.ascendflight.org`, in `data-api/`), backed by
 PostgreSQL/PostGIS and a private R2 bucket. The library itself needs no account.
 
 Production is live at **https://ascendflight.org** (see [Deployment](docs/DEPLOYMENT.md)).

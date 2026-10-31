@@ -1,33 +1,24 @@
 ---
 layout: layouts/base.njk
 title: ASCEND Community
-description: Members-only questions, project updates and shared learning.
+description: ASCEND teams ask questions, share progress, and help each other on Zulip.
 permalink: /community/
-dataApp: community
 ---
-<div class="container data-page" id="community" data-api="{{ dataExplorer.apiBase }}" data-clerk-key="{{ dataExplorer.clerkKey }}" data-clerk-domain="{{ dataExplorer.clerkDomain }}" data-clerk-proxy-path="{{ dataExplorer.clerkProxyPath }}">
- <span class="eyebrow">ASCEND · Collaborate & learn</span><h1>Community</h1>
- <p class="lead">Ask a question, share your progress, and help fellow ASCEND members.</p>
- <section class="data-notice" aria-labelledby="zulip-pilot-heading">
-  <h2 id="zulip-pilot-heading">Try the ASCEND Zulip community</h2>
-  <p>We’re testing Zulip for team conversations and technical help. Open the pilot and sign in with your Zulip account. You can reach it directly without signing in on this page.</p>
-  <p><a class="button" href="https://ascendflight.zulipchat.com/">Open ASCEND on Zulip</a></p>
-  <p>If you don’t have access yet, contact your ASCEND project lead for an invitation. Your member login for data uploads remains separate.</p>
- </section>
- <h2>Existing ASCEND discussion board</h2>
- <p>The current board remains available during the pilot. All groups below are shared with signed-in ASCEND members.</p>
- <p id="community-status" class="data-status" role="status" aria-live="polite">Loading member sign-in…</p>
- <div id="community-sign-in"></div><div id="community-user"></div>
- <form id="enrollment-form" hidden><h2>Request ASCEND membership</h2><p>A moderator or administrator must approve your account before you can access discussions or uploads.</p><label>Your name<input name="display_name" required maxlength="80"></label><label>School or project affiliation<input name="affiliation" maxlength="200"></label><button class="button" type="submit">Request membership</button></form>
- <section id="membership-review" hidden><h2>Membership requests</h2><div id="membership-requests"></div></section>
- <div id="community-board" hidden class="community-layout">
- <aside><h2>Groups</h2><nav id="community-groups" aria-label="Discussion groups"></nav>
- <form id="group-form" hidden><h3>Create a group</h3><label>Group name<input name="name" required maxlength="120"></label><label>Description<textarea name="description" maxlength="1000"></textarea></label><button class="button" type="submit">Create group</button></form></aside>
- <section><h2 id="group-heading">Choose a group</h2><p id="group-description"></p><div id="group-tools"></div>
- <form id="topic-form" hidden><h3>Start a conversation</h3><label>Topic title<input name="title" required maxlength="160"></label><label>Message<textarea name="body" required maxlength="8000" rows="5"></textarea></label><button class="button" type="submit">Post topic</button></form>
- <div id="community-topics"></div><button id="more-topics" type="button" class="button outline" hidden>More topics</button>
- <section id="conversation" hidden><h2 id="topic-heading"></h2><div id="topic-tools" class="data-actions"></div><div id="community-posts"></div><button id="more-posts" type="button" class="button outline" hidden>More replies</button>
- <form id="reply-form"><label>Reply<textarea name="body" required maxlength="8000" rows="4"></textarea></label><button type="submit" class="button">Post reply</button></form></section>
- </section></div>
- <noscript><p>Please enable JavaScript to sign in and participate.</p></noscript>
+<div class="container">
+<nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><span aria-current="page">Community</span></nav>
+<header class="section-hero"><span class="eyebrow">Collaborate & learn</span><div class="section-hero-row"><div><h1>Community</h1><p class="lead">ASCEND teams, faculty mentors, pod leads, and project staff ask questions, share progress, and help each other on Zulip.</p></div><span class="section-symbol" aria-hidden="true"><svg><use href="#i-book"/></svg></span></div></header>
+
+<section class="community-zulip" aria-labelledby="zulip-heading">
+<h2 id="zulip-heading">ASCEND on Zulip</h2>
+<p>Zulip organizes conversations into channels and topics, so questions and answers stay easy to find later. Use it in your browser, or install the desktop and mobile apps.</p>
+<div class="project-links"><a class="button" href="https://ascendflight.zulipchat.com/">Open ASCEND on Zulip →</a><a class="button outline" href="https://zulip.com/apps/">Get the Zulip apps →</a></div>
+<h3>Joining</h3>
+<p>Access is by invitation. If you don’t have an invitation yet, contact your ASCEND project lead. Zulip uses its own account, separate from the <a href="/data/team/">member login</a> used for data uploads.</p>
+</section>
+
+<aside class="sponsor-note" aria-labelledby="sponsor-heading">
+<p class="eyebrow">Thank you</p>
+<h2 id="sponsor-heading">Proudly sponsored by Zulip</h2>
+<p><a href="https://zulip.com/">Zulip</a> has generously provided ASCEND’s community with its full plan at no cost. Thank you for supporting student research and STEM education.</p>
+</aside>
 </div>
