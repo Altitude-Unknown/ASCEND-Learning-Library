@@ -24,8 +24,7 @@
       "platforms": ["Windows x64", "macOS (Apple Silicon)", "Raspberry Pi (64-bit)"],
       "download": "https://github.com/Altitude-Unknown/RC-Airplane/releases/latest",
       "guide": "/resources/transmitter-configurator/",
-      "source": "https://github.com/Altitude-Unknown/RC-Airplane",
-      "note": "If the latest release has no macOS download yet, use the newest release that does."
+      "source": "https://github.com/Altitude-Unknown/RC-Airplane"
     },
     {
       "group": "rc",
