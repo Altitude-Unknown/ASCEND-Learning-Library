@@ -46,7 +46,7 @@ test('Course resources and sequence work without JavaScript', async ({browser}) 
 test('All five units present video and slides, then book, activity, and quiz', async ({page}) => {
   for (const width of [1440,390]) {
     await page.setViewportSize({width,height:1000});
-    for (const [slug,video] of [['regulations','regulations-video'],['airspace','airspace-video'],['weather',null],['loading-and-performance','loading-performance-video'],['uas-operations','operations-video']]) {
+    for (const [slug,video] of [['regulations','regulations-video'],['airspace','airspace-video'],['weather','weather-video'],['loading-and-performance','loading-performance-video'],['uas-operations','operations-video']]) {
       await page.goto(`/part107/${slug}/`);
       const pair=page.locator('.unit-lesson-pair > article');
       await expect(pair).toHaveCount(2);

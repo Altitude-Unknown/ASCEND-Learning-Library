@@ -28,10 +28,10 @@ the video step; additional activities and references remain in the activity
 step. Resource cards are not removed.
 
 `lessonVideo` identifies the primary instructional video independently of
-supplemental videos in `watch` and each page’s `resourceIds`. Weather has
-`lessonVideo: null`: show a coming-soon placeholder next to its slides.
-Its short weather-report and METAR demonstrations remain supplemental. Set
+supplemental videos in `watch` and each page’s `resourceIds`. A unit with
+`lessonVideo: null` shows a coming-soon placeholder next to its slides; set
 `lessonVideo` to the new resource ID when the overview lesson is supplied.
+Weather's short weather-report and METAR demonstrations remain supplemental.
 
 Practice deep links accept a bank name (`?bank=Regulations`) and optionally
 `&count=all`. Only known bank names and the supported count are used; visiting

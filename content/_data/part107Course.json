@@ -51,15 +51,15 @@
         "Explain how weather conditions can affect a UAS operation."
       ],
       "watch": [
+        "weather-video",
         "aviation-weather-video",
         "metar-video"
       ],
-      "watchNote": "Start with the aviation-weather and METAR demonstrations. A full Weather overview video has not yet been added.",
       "slides": "weather-presentation",
       "activity": "weather-activity",
       "number": 3,
       "url": "/part107/weather/",
-      "lessonVideo": null,
+      "lessonVideo": "weather-video",
       "chapterUrl": "/part107/textbook/weather/"
     },
     {
