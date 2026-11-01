@@ -1,0 +1,66 @@
+{
+  "groups": [
+    {
+      "id": "rc",
+      "title": "RC aircraft and the ASCEND flight controller",
+      "intro": "For UAS teams: set up the transmitter, update firmware, and practice before you fly."
+    },
+    {
+      "id": "balloon",
+      "title": "High-altitude ballooning",
+      "intro": "For balloon teams: track flights and prepare FAA submission maps."
+    },
+    {
+      "id": "builders",
+      "title": "Board building and lab tools",
+      "intro": "For staff and teams who assemble or repair Altitude Unknown circuit boards."
+    }
+  ],
+  "apps": [
+    {
+      "group": "rc",
+      "name": "Altitude Unknown RC Configurator",
+      "summary": "Set up transmitter models and instructor/student options, and update firmware on the transmitter, the receiver, and the ASCEND flight controller.",
+      "platforms": ["Windows x64", "macOS (Apple Silicon)", "Raspberry Pi (64-bit)"],
+      "download": "https://github.com/Altitude-Unknown/RC-Airplane/releases/latest",
+      "guide": "/resources/transmitter-configurator/",
+      "source": "https://github.com/Altitude-Unknown/RC-Airplane",
+      "note": "If the latest release has no macOS download yet, use the newest release that does."
+    },
+    {
+      "group": "rc",
+      "name": "Flight Lab RC",
+      "summary": "A free RC flight simulator with flying sites, wind, and thermals. Practice with the Altitude Unknown transmitter or a gamepad before flying the trainer.",
+      "platforms": ["macOS (Apple Silicon and Intel)", "Windows x64", "Raspberry Pi (64-bit)"],
+      "download": "https://github.com/Altitude-Unknown/Flight-Lab-RC/releases/latest",
+      "guide": "/resources/flight-lab-rc/",
+      "source": "https://github.com/Altitude-Unknown/Flight-Lab-RC",
+      "note": "Derived from PicaSim; free for noncommercial use."
+    },
+    {
+      "group": "balloon",
+      "name": "YELLOWSTONE Ground Station",
+      "summary": "The ground station for YELLOWSTONE, the balloon tracking and flight termination board, which balloon teams use to follow their flight.",
+      "platforms": ["macOS", "Windows"],
+      "download": "https://github.com/Altitude-Unknown/YELLOWSTONE/releases/latest",
+      "guide": "/resources/yellowstone-guide/",
+      "source": "https://github.com/Altitude-Unknown/YELLOWSTONE"
+    },
+    {
+      "group": "balloon",
+      "name": "Flight KML Sectional Overlay",
+      "summary": "Draw a balloon flight prediction (KML) on an FAA VFR sectional chart and export the map as PNG or PDF for FAA submissions.",
+      "platforms": ["macOS", "Windows"],
+      "download": "https://github.com/Altitude-Unknown/Flight-KML-Sectional-Overlay/releases/latest",
+      "source": "https://github.com/Altitude-Unknown/Flight-KML-Sectional-Overlay"
+    },
+    {
+      "group": "builders",
+      "name": "SAMD21 Bootloader Flasher",
+      "summary": "Install the Altitude Unknown bootloaders on new SAMD21 boards (transmitter, receiver, YELLOWSTONE, and BOREALIS) with an Atmel-ICE programmer.",
+      "platforms": ["macOS", "Windows"],
+      "status": "Not yet public",
+      "note": "Most teams never need this: boards arrive with their bootloader installed. Contact your ASCEND project lead if you do."
+    }
+  ]
+}

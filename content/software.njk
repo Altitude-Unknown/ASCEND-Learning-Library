@@ -1,0 +1,30 @@
+---
+layout: layouts/base.njk
+title: Software
+description: Desktop apps for ASCEND teams — the RC configurator, the Flight Lab RC simulator, the YELLOWSTONE ground station, and other tools.
+permalink: /software/
+---
+<div class="container">
+<nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><span aria-current="page">Software</span></nav>
+<header class="section-hero"><span class="eyebrow">Download & set up</span><div class="section-hero-row"><div><h1>Software</h1><p class="lead">Desktop apps for setting up your equipment, updating firmware, practicing, and planning flights. Downloads come from each app's latest release on GitHub, so you always get the current version.</p></div><span class="section-symbol" aria-hidden="true"><svg><use href="#i-download"/></svg></span></div></header>
+
+{% for group in software.groups %}
+<section class="section-block software-group" aria-labelledby="software-{{ group.id }}">
+<div class="section-heading"><div><h2 id="software-{{ group.id }}">{{ group.title }}</h2><p>{{ group.intro }}</p></div></div>
+<div class="resource-grid two">
+{% for app in software.apps %}{% if app.group == group.id %}
+<article class="resource-card software-card">
+<div class="card-top"><span class="resource-kind"><svg class="icon" aria-hidden="true"><use href="#i-download"/></svg>Desktop app</span>{% if app.status %}<span class="status">{{ app.status }}</span>{% endif %}</div>
+<h3>{{ app.name }}</h3>
+<p>{{ app.summary }}</p>
+<ul class="software-platforms" aria-label="Platforms">{% for platform in app.platforms %}<li>{{ platform }}</li>{% endfor %}</ul>
+{% if app.note %}<p class="small">{{ app.note }}</p>{% endif %}
+{% if app.download or app.guide or app.source %}<div class="software-actions">{% if app.download %}<a class="button" href="{{ app.download }}">Download latest<span class="visually-hidden"> {{ app.name }}</span></a>{% endif %}{% if app.guide %}<a class="button outline" href="{{ app.guide }}">Setup guide<span class="visually-hidden"> for {{ app.name }}</span></a>{% endif %}{% if app.source %}<a class="text-link" href="{{ app.source }}">Source on GitHub<span class="visually-hidden"> for {{ app.name }}</span></a>{% endif %}</div>{% endif %}
+</article>
+{% endif %}{% endfor %}
+</div>
+</section>
+{% endfor %}
+
+<p class="notice"><strong>Before you update firmware</strong>Remove the propeller and disconnect the flight battery. After any receiver or flight controller update, check every control direction, the throttle safety, and the failsafe before flight.</p>
+</div>
