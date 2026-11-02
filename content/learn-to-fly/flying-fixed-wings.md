@@ -1,9 +1,9 @@
 ---
-title: "Getting Started"
-description: "Choose a trainer, practice in a simulator, and plan calm first flights and gentle glide landings."
+title: "Flying Fixed Wings"
+description: "Start flying airplanes: choose a trainer, practice in a simulator, and plan calm first flights and gentle glide landings."
 order: 1
 courseOrder: 1
-permalink: "/learn-to-fly/getting-started/"
+permalink: "/learn-to-fly/flying-fixed-wings/"
 resourceIds: ["flight-lab-rc"]
 status: "Lesson video coming soon"
 ---
