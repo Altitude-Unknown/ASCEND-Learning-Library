@@ -1,0 +1,13 @@
+---
+layout: layouts/base.njk
+eleventyExcludeFromCollections: true
+title: Learning to Fly a UAS
+description: Learn to fly airplanes and multirotors in six units, from simulator practice to your first solo. Each unit pairs a video lesson with a reading, a lab or practice plan, and review questions.
+permalink: /learn-to-fly/
+---
+{% set course = courses.learnToFly %}
+<div class="container">
+<nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/uas/">UAS</a><span aria-hidden="true">/</span><span aria-current="page">{{ course.title }}</span></nav>
+<header class="section-hero"><span class="eyebrow">LEARN</span><div class="section-hero-row"><div><h1>{{ course.title }}</h1><p class="lead">{{ description }}</p></div><span class="section-symbol" aria-hidden="true"><svg><use href="#i-aircraft"/></svg></span></div></header>
+{% include "components/course-overview.njk" %}
+</div>

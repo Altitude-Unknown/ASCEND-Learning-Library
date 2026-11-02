@@ -1,0 +1,198 @@
+---
+{
+  "layout": "layouts/textbook-chapter.njk",
+  "tags": [],
+  "eleventyExcludeFromCollections": true,
+  "topic": "uas",
+  "courseId": "learnToFly",
+  "title": "Chapter 3: Piloting Remote Aircraft",
+  "description": "Read the Learning to Fly chapter online: getting started, flying multirotors, the airplane Maneuver Description Guide, and flight simulators.",
+  "chapterNumber": 3,
+  "textbookEyebrow": "REMOTE AND AUTONOMOUS AIRCRAFT SYSTEMS · WEB EDITION",
+  "sourceNote": "From Mike Walach’s lab manual, Remote and Autonomous Aircraft Systems. Original chapter wording is retained with small typing corrections; figure descriptions have been added for web reading.",
+  "headerLinks": [
+    {
+      "title": "Lab manual files & source information",
+      "url": "/resources/remote-aircraft-textbook/"
+    }
+  ],
+  "toc": [
+    {
+      "title": "Getting started",
+      "id": "getting-started"
+    },
+    {
+      "title": "— Landings",
+      "id": "landings"
+    },
+    {
+      "title": "Rotary wing aircraft",
+      "id": "rotary-wing-aircraft"
+    },
+    {
+      "title": "Maneuver Description Guide (MDG)",
+      "id": "maneuver-description-guide-mdg"
+    },
+    {
+      "title": "— Airplane",
+      "id": "mdg-airplane"
+    },
+    {
+      "title": "— Take off (hand launch)",
+      "id": "take-off-hand-launch"
+    },
+    {
+      "title": "— Climb out",
+      "id": "climb-out"
+    },
+    {
+      "title": "— Straight and level flight",
+      "id": "straight-and-level-flight"
+    },
+    {
+      "title": "— Flight toward yourself",
+      "id": "flight-toward-yourself"
+    },
+    {
+      "title": "— Circuit of the airfield",
+      "id": "circuit-of-the-airfield"
+    },
+    {
+      "title": "— Slow flight",
+      "id": "slow-flight"
+    },
+    {
+      "title": "— Stall-spin recovery",
+      "id": "stall-spin-recovery"
+    },
+    {
+      "title": "— Left-hand traffic pattern",
+      "id": "left-hand-traffic-pattern"
+    },
+    {
+      "title": "— Rejected landings",
+      "id": "rejected-landings"
+    },
+    {
+      "title": "— Landing",
+      "id": "landing"
+    },
+    {
+      "title": "— Ground effect",
+      "id": "ground-effect"
+    },
+    {
+      "title": "Flight simulators",
+      "id": "flight-simulators"
+    },
+    {
+      "title": "— Flight Lab RC",
+      "id": "flight-lab-rc"
+    },
+    {
+      "title": "— Absolute RC web-based flight simulator",
+      "id": "absolute-rc-web-based-flight-simulator"
+    },
+    {
+      "title": "— RealFlight",
+      "id": "realflight"
+    },
+    {
+      "title": "Lab activities, review questions, and checkrides",
+      "id": "activities-and-assessments"
+    }
+  ],
+  "permalink": "/learn-to-fly/textbook/piloting-remote-aircraft/"
+}
+---
+<p>While building remote aircraft is a lot of fun, most of us are here because we want to fly! This chapter focuses on the skills required to become a master of the air. It is really hard to learn to fly an airplane from a book. The only way to master the skill is to go out and practice it. If you want to earn your pilot wings and fly these amazing aircraft the best thing to do is start flying. There is no better way to learn than by real world flying. However, if you have no prior experience, learning to fly can seem intimidating, maybe even impossible. Crashing and damaging an aircraft can be expensive and can kill morale. The next few sections of the book will set you up for the best chance of success.</p>
+<h2 id="getting-started">Getting started</h2>
+<p>Fixed wing aircraft (airplanes) and rotary wing aircraft (quad-copters, helicopters etc.) each have their own nuances. Your best chance for success is to start with a basic trainer. We will begin with airplanes then we will discuss rotary wings.</p>
+<p>A good training airplane will be slow, not spin easily, and be very stable. If you can train with a pilot that can “buddy box” (they have a separate controller and can take over flying for you) that is the quickest, safest way to learn how to fly. If you don’t have this option then starting out in a simulator is a great way to learn the basics. I have taught many students to fly over the years and I have found those that spent a lot of time in a simulator do far better when they switch to the real thing. A simulator is not perfect, but it works well at these basic skills:</p>
+<ul>
+<li>Understanding which way to move the controls for a desired outcome.</li>
+<li>Learning to fly both away from and toward yourself.</li>
+</ul>
+<p>While these may seem simple, they are really the two most important things you need to figure out before you go flying. I find that most students lose control of the airplane when they make their first 180 degree turn. As soon as the airplane is flying back at them they push the roll control the wrong way.</p>
+<p>Once you have spent some time in the simulator and you can fly without crashing it, it is time to go outside and fly. You ideally want as large of an open area as you can find. The less stuff to crash into the better. In the beginning you will need a lot of space. As you get better you will be able to fly in a tighter and tighter space.</p>
+<p>If you have access to a training module, they are great for helping to keep your plane stable in flight. A small computer and sensors help to level the wings and eliminate some of the effects of wind turbulence which can make learning to fly easier. These are discussed more in the flight controller chapter.</p>
+<figure class="textbook-figure"><a href="/assets/learn-to-fly/training-stabilizer-board.jpg"><img src="/assets/learn-to-fly/training-stabilizer-board.jpg" alt="A small red flight stabilizer circuit board with servo pin headers, a USB port, and a bind button." loading="lazy"></a><figcaption><p>A training stabilizer (flight controller) board. Its sensors help level the wings and reduce the effect of turbulence.</p></figcaption></figure>
+<p>Choose a time of day when the winds are very light. Early morning and evening are often the best times to find calm conditions, although calm periods can occur at any time of day.</p>
+<p>When you are first learning to fly, wind adds another variable that can make it difficult to understand what the airplane is doing. Learn to fly the airplane in calm air first. This will help you become familiar with how the airplane responds to your control inputs and how it behaves naturally in flight.</p>
+<p>Once you are comfortable flying in calm conditions, you can gradually begin flying in stronger winds. At that point, you will be better able to recognize what the airplane is doing, what the wind is doing, and what you are doing with the controls.</p>
+<p>Removing the wind from the equation at first makes learning to fly considerably easier.</p>
+<p>Launch and land into the wind. If you are learning on your own it might be best to launch, fly straight, kill the power and try gliding down to a landing somewhere straight ahead. You will likely break a lot of propellers in the beginning. I like to use “slow fly” propellers. They are designed to make your airplane fly slower, although the difference is very slight. The reason I use them is because they are more flexible and tend to be harder to break. I like a propeller with a 9” length and a 4.7 pitch for a training airplane. This will vary based on motor, esc, airplane size etc. however.</p>
+<p>Once you start to feel comfortable you should try to fly around yourself in a circle. Spin with the airplane so that you are always facing the side of the airplane and the controls are never reversed. You might get dizzy but at least you can keep the airplane in the air long enough to start to get a feel for the controls.</p>
+<p>After you start to master circles, you should try to fly in a circle but keep the airplane in front of you. This will teach you how to handle the reversed controls when the airplane is facing you. Keep the airplane up high so that when you make a mistake you have time to recover it.</p>
+<h3 id="landings">Landings</h3>
+<p>If you are teaching yourself to fly you will have to land every time. Most likely this is where you will damage your airplane, and likely break a propeller. The key to success here is to get up high and kill the throttle. Glide the airplane down to the ground with power at idle. This will make the landing slower and you can focus on control, pitch, and airspeed. Don’t worry about landing right at your feet. Just try to land in the field and not break anything. That is a good landing any day.</p>
+<h2 id="rotary-wing-aircraft">Rotary wing aircraft</h2>
+<p>A great way to learn to fly rotary wing aircraft is to buy an inexpensive toy RC that is designed for children and can be flown in-doors. This will teach you good piloting skills without strong winds. As most of these toys have little or no automation they will help you refine your skills before you move up to an expensive drone. Here are a few tips to help make your flights successful.</p>
+<p>Practice taking off and hovering first. This is an important skill and you will need it to land. The key here is to avoid ground effect. Ground effect is a cushion of air that gets trapped beneath an aircraft. For an airplane it happens when you are a wingspan or less to the ground. On a rotary wing aircraft this happens about a rotor width from the ground. So, if you take off but try to stay too close to the ground it will be very hard to fly the aircraft. It will be similar to trying to stand on top of a ball and balance. To get out of ground effect simply go up higher. On a toy RC quadcopter this is about 2 feet off the ground.</p>
+<p>Next, practice rolling left and right, then practice yawing (rotating) in a circle. Keep the front of the aircraft pointed away from you all the time at first until you get very comfortable with the controls. The most common mistake new pilots make is they use either too much power and hit the ceiling or too little, get stuck in ground effect, and crash. The key is to learn how to balance the throttle first, then start to move around slowly at first, then more aggressively. As with a fixed wing aircraft you should eventually start to fly away from then towards yourself to learn the reversed controls.</p>
+<h2 id="maneuver-description-guide-mdg">Maneuver Description Guide (MDG)</h2>
+<h3 id="mdg-airplane">Airplane</h3>
+<p>This guide is designed to help you progress through the basic maneuvers required for 1st solo in a fixed wing UAS and to develop the proficiency for a fixed wing UAS check ride. This guide is intended for a small, single engine, propeller aircraft with a fixed wing. A trainer similar in design to the one pictured below is recommended as it has gentle flying characteristics and can typically self-recover, or recover very quickly and easily.</p>
+<figure class="textbook-figure"><a href="/assets/learn-to-fly/trainer-airplane.jpg"><img src="/assets/learn-to-fly/trainer-airplane.jpg" alt="A small yellow high-wing foam trainer airplane with a front propeller, resting on a wooden floor." loading="lazy"></a><figcaption><p>A trainer similar to this one is recommended: it has gentle flying characteristics and can usually recover by itself.</p></figcaption></figure>
+<h3 id="take-off-hand-launch">Take off (hand launch)</h3>
+<figure class="textbook-figure"><a href="/assets/learn-to-fly/hand-launch.jpg"><img src="/assets/learn-to-fly/hand-launch.jpg" alt="A young pilot in a field tosses a yellow trainer airplane forward with one hand while holding the transmitter in the other." loading="lazy"></a><figcaption><p>A hand launch: transmitter in the non-dominant hand, a firm yet gentle toss with the dominant hand.</p></figcaption></figure>
+<p>Take off should always be made into the wind. On a tractor style, fixed wing airplane, the pilot should hold the airplane by the fuselage belly and toss the airplane forward with a firm yet gentle toss. The flight controls should be held in the non-dominant hand and the airplane tossed with the dominant hand. Full power should be applied to the aircraft before the toss. Most single engine propeller aircraft will have a left turning tendency and the pilot should be prepared to compensate, but not over compensate for this turn with right rudder. Slight back pressure, and if required, roll correction applied as needed until a proper altitude has been reached. Once at altitude, power can be reduced to about 75%-50% depending on the aircraft, battery, prop, etc. Always be aware of the propeller and any other moving parts of the aircraft. Be extremely cautious when handling an aircraft as the throttle could go to full at any time making a hazardous condition.</p>
+<h3 id="climb-out">Climb out</h3>
+<p>After a gentle hand-toss or ground launch, full power and a max 20 degree climb out angle should be established. Wings should be held level and any cross wind corrected for with aileron and rudder inputs. A safe operating minimum altitude of 30-50’ AGL should be established. Depending on the size of the aircraft a max altitude of 150 feet is typically good for training. A comfortable estimated altitude should be established between the instructor and student pilot.</p>
+<h3 id="straight-and-level-flight">Straight and level flight</h3>
+<p>The first, most basic skill any new pilot will learn is straight and level flight. Aircraft power should be reduced to a manageable level to allow for easier control. Typically 75% power is a good starting point. Downwash from the propeller will push the tail of the airplane down and pull the nose up. Gently adjust the pitch until the aircraft is flying level. Use aileron control to compensate for roll. If you can’t maintain level flight without adding control input, use trim to make the aircraft fly straight and level hands free, or as close to hands free as possible. It is easiest to fly away from yourself when learning straight and level flight.</p>
+<h3 id="flight-toward-yourself">Flight toward yourself</h3>
+<p>Flight toward oneself is one of the most difficult skills to learn aside from landing. The flight controls (for roll control and yaw) are reversed as viewed from the pilot when flying toward oneself. Over time this will make little difference to a pilot but in the beginning it can cause much confusion.  One of the best things to remind yourself of is that when flying toward yourself, pushing the controls toward the low wing will fix the aircraft&#x27;s attitude. In the image below pushing the aileron stick to the right will level this banked aircraft as it flies toward the pilot.</p>
+<figure class="textbook-figure"><a href="/assets/learn-to-fly/airplane-flying-toward-pilot.jpg"><img src="/assets/learn-to-fly/airplane-flying-toward-pilot.jpg" alt="A model airplane flying head-on toward the camera in a banked turn, with its right wing (on the viewer’s left) higher." loading="lazy"></a><figcaption><p>An airplane flying toward the pilot in a bank. Photo © 2012 Marijn Kampf (DIGI.EU).</p></figcaption></figure>
+<h3 id="circuit-of-the-airfield">Circuit of the airfield</h3>
+<p>In order to demonstrate controlled flight, the student should complete several laps around the airfield. A consistent altitude as viewed from the student should be maintained. Appropriate back pressure should be applied on the elevator during turns to maintain altitude. A constant altitude as established by the instructor should be maintained as close as possible during the entire circuit.</p>
+<h3 id="slow-flight">Slow flight</h3>
+<p>Slow flight is an essential skill to practice before landing can be accomplished. Control surfaces become “sluggish” as the amount of airflow over the control surfaces is reduced. Slow flight should be initiated at a safe altitude from which a stall/spin situation can be safely recovered. 100 feet AGL is recommended. To enter slow flight, gradually reduce engine power while maintaining altitude with pitch. Once the airplane can no longer maintain altitude, increase power as required but use pitch to maintain as slow a speed as possible without entering a stall. If the airplane does stall, relax the back pressure on the control stick and apply full power to recover.</p>
+<h3 id="stall-spin-recovery">Stall-spin recovery</h3>
+<p>Stalls and spins should be practiced at a minimum safe altitude to allow for recovery time. 100 feet AGL or higher is generally recommended for spin recovery.</p>
+<p>Stalls will be practiced in both power on and power off configurations.</p>
+<h4 id="power-on-stall">Power on stall</h4>
+<p>At 100 feet AGL, slow the aircraft to approximately half throttle and achieve straight and level flight. Increase power to full takeoff power and execute a steep climb in excess of 20 degrees. Maintain the climb until the stall then relax back pressure on the stick and recover. Apply rudder input if necessary, to prevent a spin. <strong>DO NOT USE AILERONS IN A STALL!</strong> Recovery should be immediate and smooth.</p>
+<h4 id="power-off-stall">Power off stall</h4>
+<p>At 100 feet, reduce power to approximately 50% and achieve straight and level flight. Slowly reduce power while maintaining altitude with pitch control. Once the aircraft is behind the power curve (further reduction in power results in loss of altitude regardless of pitch input), throttle may have to be added back in to maintain altitude while holding minimum airspeed. Once the airplane stalls, smoothly add full power, relax back pressure on the stick and recover the stall. Add rudder input as required to prevent a spin. <strong>DO NOT USE AILERONS IN A STALL!</strong> Recovery should be immediate and smooth.</p>
+<h4 id="spin-recovery">Spin Recovery</h4>
+<p>Spins should only be practiced in an aircraft rated for spins. Special care should be taken to assure that all components are properly attached and secured before a spin as the forces of a spin will exceed the normal operational limits of the aircraft. Spins should be practiced as high as possible to allow for recovery (without breaking the 400-foot AGL limit for sUAS).</p>
+<p>Begin by executing a power-on stall. Hold the climb angle but do not recover the stall. When the aircraft breaks (nose will fall left or right, usually left on a single engine propeller aircraft) allow it to develop into a full rotation. On many training aircraft some rudder input in the direction of the spin may be required to hold the airplane in a spin. To exit the spin, reduce power, relax back pressure, and apply opposite rudder. Once rotation stops, reapply power smoothly and enter straight and level flight.</p>
+<h3 id="left-hand-traffic-pattern">Left-hand traffic pattern</h3>
+<p>When practical a standard left-hand traffic pattern should be followed for landing. A right-hand pattern can be used when obstacles, noise restrictions, or other factors do not allow for a left-hand pattern. A standard left-hand pattern is made up of the following four legs.</p>
+<ul>
+<li>Upwind</li>
+<li>Crosswind</li>
+<li>Downwind</li>
+<li>Base</li>
+<li>Final</li>
+</ul>
+<p>The upwind leg is flown after takeoff and is simply a straight line climbing up and away from the end of the takeoff runway into the wind. Crosswind is entered after climbing out and is a left hand 90 degree turn which will place the wind on the right side of the aircraft and may push the aircraft back toward the runway if not corrected for. Downwind is entered by executing another 90-degree left turn and will place the aircraft parallel to the takeoff runway with the wind now at the rear of the aircraft increasing ground speed by the speed of the present wind. Base will be entered by executing another 90-degree left turn when the aircraft is beyond the landing end of the runway at the point when the airplane intersects an imaginary 45-degree line coming from the end of the runway.  On base, the wind will be at the left side of the aircraft pushing the aircraft away from the runway if not corrected for. Final is achieved by making one last 90 degree turn to the left and lining the aircraft up with the end of the runway. The aircraft should be pointed into the wind when on final.</p>
+<figure class="textbook-figure"><a href="/assets/learn-to-fly/traffic-pattern.jpg"><img src="/assets/learn-to-fly/traffic-pattern.jpg" alt="FAA diagram of standard left-hand and right-hand traffic patterns around a runway, labelling the departure, crosswind, downwind, base, and final legs, the entry, and airport indicators such as the segmented circle and wind cone." loading="lazy"></a><figcaption><p>Standard left-hand and right-hand traffic patterns (FAA).</p></figcaption></figure>
+<h3 id="rejected-landings">Rejected landings</h3>
+<p>Any landing attempt that is unstable on final approach should be rejected. Any aircraft that is making large pitch, power, or alignment inputs on final approach is unstable and the approach should be terminated with a “go-around”. Landings may be rejected for any other reason that the PIC determines presents a hazard to the people or property on the ground, the aircraft, or for any reason the PIC determines is unsafe.</p>
+<p>To execute a rejected landing (go-around) smoothly add full power, retract any retractable landing gear. If full flaps are deployed, retract one notch of flaps, then slowly retract the remaining flaps one notch at a time as altitude and airspeed increase to the settings specified in the aircraft operating handbook or instruction manual. Maintain vigilance of airspeed and pitch to prevent a stall. Climb back to a safe altitude and re-enter the traffic pattern to attempt a second landing.</p>
+<h3 id="landing">Landing</h3>
+<p>When practical, fly a standard left-hand traffic pattern and land into the wind. If landing directly into the wind is not possible, select the approach that will place the airplane into the oncoming wind as much as practical for the final approach.</p>
+<p>Approach the traffic pattern at approximately 100 feet AGL. Enter the downwind in straight and level unaccelerated flight. When abeam the end of the runway (or landing point of grass or gravel field) reduce power and enter a gentle glide slope. Aircraft should descend slowly and smoothly at about a 4-degree slope. Continue the approach by turning left base and further slowing the aircraft but maintaining glide slope. Make a final 90-degree left turn and continue to slow the aircraft while maintaining glide slope. Make small additions or reductions to power to maintain airspeed and glide slope. Continue toward the ground until about 3 feet AGL then reduce power to idle, raise the nose of the aircraft and flare just before touchdown. The airplane should gently touch the ground and slide (or roll) to a smooth stop. If the approach is unstable by the turn to final, execute a “go-around” and repeat the landing pattern described above.</p>
+<h3 id="ground-effect">Ground effect</h3>
+<p>When an aircraft is closer to the ground than the width of its wings, or with a multirotor the width of the rotor blades, it is in ground effect. Ground effect is when air gets trapped between the lifting body (wing) and the ground creating extra lift. An airplane may “float” over the ground when in ground effect until airspeed bleeds off and it settles to the ground. Ground effect can cause an airplane to take longer to land than expected. On takeoff ground effect can make a pilot think an airplane is ready to fly when it does not yet have enough speed. If an airplane in ground effect lifts off too early it may lose lift and come back down to the ground unexpectedly. Flying a rotary wing aircraft in ground effect can feel like trying to balance on a ball. Many new pilots trying to stay close to the ground to avoid a crash will lose control and crash because of ground effect. It is often better to get a rotary wing aircraft a few feet off of the ground to get out of ground effect, therefore making it easier to fly.</p>
+<h2 id="flight-simulators">Flight simulators</h2>
+<h3 id="flight-lab-rc">Flight Lab RC</h3>
+<p>I have made my own free RC Flight simulator software. It works on Mac OS, Windows, and Raspberry Pi computers. It will work with most controllers including Spektrum and my own custom Transmitters. I often make improvements to the code and the latest version can always be found on my github link below.</p>
+<p><a href="/software/">Download the latest Flight Lab RC from the Software page</a> (source: <a href="https://github.com/Altitude-Unknown/Flight-Lab-RC/releases/latest">Flight Lab RC on GitHub</a>)</p>
+<h3 id="absolute-rc-web-based-flight-simulator">Absolute RC web-based flight simulator</h3>
+<p>There are a range of free and paid for flight simulators to practice flying RC with. Absolute RC has both free and paid versions and works within your web browser so can work with both Windows PCs and Macs.</p>
+<p><a href="https://absolutesim.com/ver007/">Absolute RC web simulator</a></p>
+<h3 id="realflight">RealFlight</h3>
+<p>Realflight is a PC only software but is relatively low cost and offers a realistic RC flying experience.</p>
+<p><a href="https://www.horizonhobby.com/product/realflight-evolution-rc-flight-simulator-software-only-steam-digital-download/RFL2001D.html">RealFlight Evolution at Horizon Hobby</a></p>
+<h2 id="activities-and-assessments">Lab activities, review questions, and checkrides</h2>
+<p>In the printed lab manual, the lab activities, review questions, skills checksheet, and airplane checkride rubrics follow the reading. On this website they are part of the course units:</p>
+<ul>
+<li><a href="/resources/fly-simulator-airplane-lab/">Lab activity: Simulator flight, airplane</a> (Unit 1)</li>
+<li><a href="/resources/fly-simulator-quadcopter-lab/">Lab activity: Simulator flight, quadcopter</a> (Unit 2)</li>
+<li><a href="/resources/fly-forces-of-flight-lab/">Lab activity: Forces of flight</a> and <a href="/resources/fly-weight-and-balance-lab/">Weight and balance</a> (Unit 3)</li>
+<li>Review questions: in Step 4 of Units 1 to 5</li>
+<li><a href="/resources/fly-checkride-rubrics/">Airplane checkride rubrics</a> and the skills checksheet (Unit 6)</li>
+</ul>

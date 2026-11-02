@@ -1,0 +1,155 @@
+{
+  "chapterUrl": "/learn-to-fly/textbook/piloting-remote-aircraft/",
+  "chapterTitle": "Chapter 3: Piloting Remote Aircraft",
+  "units": [
+    {
+      "slug": "getting-started",
+      "title": "Getting Started",
+      "number": 1,
+      "url": "/learn-to-fly/getting-started/",
+      "summary": "Choose a trainer, practice in a simulator, and plan calm first flights and gentle glide landings.",
+      "outcomes": [
+        "Identify and describe the function of each of the four flight controls.",
+        "Describe yaw, pitch, roll, and throttle as they pertain to airplane operation.",
+        "Explain why to practice in a simulator, in calm air, and into the wind before flying outdoors."
+      ],
+      "readings": [
+        {"title": "Getting started", "id": "getting-started"},
+        {"title": "Landings", "id": "landings"},
+        {"title": "Flight simulators", "id": "flight-simulators"}
+      ],
+      "activities": ["fly-simulator-airplane-lab"],
+      "lessonVideo": null,
+      "reviewQuestions": [2, 10, 11, 13, 20]
+    },
+    {
+      "slug": "flying-multirotors",
+      "title": "Flying Multirotors",
+      "number": 2,
+      "url": "/learn-to-fly/flying-multirotors/",
+      "summary": "Learn to take off, hover, and fly a quadcopter, and why staying out of ground effect makes it easier.",
+      "outcomes": [
+        "Describe yaw, pitch, roll, and throttle as they pertain to multirotor operation.",
+        "Take off, hover above ground effect, and land a multirotor.",
+        "Fly away from yourself and back toward yourself with the controls reversed."
+      ],
+      "readings": [
+        {"title": "Rotary wing aircraft", "id": "rotary-wing-aircraft"},
+        {"title": "Ground effect", "id": "ground-effect"}
+      ],
+      "activities": ["fly-simulator-quadcopter-lab"],
+      "lessonVideo": null,
+      "reviewQuestions": [1, 4, 12, 14]
+    },
+    {
+      "slug": "forces-of-flight-and-weight-and-balance",
+      "title": "Forces of Flight & Weight and Balance",
+      "number": 3,
+      "url": "/learn-to-fly/forces-of-flight-and-weight-and-balance/",
+      "summary": "Experiment with lift, weight, thrust, and drag, then calculate whether an aircraft is within its CG limits.",
+      "outcomes": [
+        "Describe the four forces acting on an aircraft in flight.",
+        "Find an aircraft's center of gravity and its forward and aft CG limits.",
+        "Calculate weight, moments, and CG, and check them against a weight and balance chart."
+      ],
+      "readings": [],
+      "readingNote": "The background reading for this unit is part of each lab activity.",
+      "activities": ["fly-forces-of-flight-lab", "fly-weight-and-balance-lab"],
+      "lessonVideo": null,
+      "reviewQuestions": [5]
+    },
+    {
+      "slug": "airplane-maneuvers",
+      "title": "Airplane Maneuvers",
+      "number": 4,
+      "url": "/learn-to-fly/airplane-maneuvers/",
+      "summary": "Work through the Maneuver Description Guide from hand launch to slow flight, stalls, and spin recovery.",
+      "outcomes": [
+        "Hand launch, climb out, and fly straight and level, away from and toward yourself.",
+        "Fly a circuit of the airfield at a constant altitude.",
+        "Fly slowly without losing control and recover from power-on and power-off stalls."
+      ],
+      "readings": [
+        {"title": "Maneuver Description Guide (MDG)", "id": "maneuver-description-guide-mdg"},
+        {"title": "Take off (hand launch)", "id": "take-off-hand-launch"},
+        {"title": "Climb out", "id": "climb-out"},
+        {"title": "Straight and level flight", "id": "straight-and-level-flight"},
+        {"title": "Flight toward yourself", "id": "flight-toward-yourself"},
+        {"title": "Circuit of the airfield", "id": "circuit-of-the-airfield"},
+        {"title": "Slow flight", "id": "slow-flight"},
+        {"title": "Stall-spin recovery", "id": "stall-spin-recovery"}
+      ],
+      "activities": ["fly-maneuver-practice"],
+      "lessonVideo": null,
+      "reviewQuestions": [3, 7, 8, 15, 16, 17]
+    },
+    {
+      "slug": "traffic-pattern-and-landing",
+      "title": "Traffic Pattern & Landing",
+      "number": 5,
+      "url": "/learn-to-fly/traffic-pattern-and-landing/",
+      "summary": "Fly a left-hand traffic pattern, decide when to go around, and land smoothly into the wind.",
+      "outcomes": [
+        "Name and fly each leg of a left-hand traffic pattern.",
+        "Recognize an unstable approach and fly a go-around.",
+        "Fly a stabilized approach and land in a designated touchdown zone."
+      ],
+      "readings": [
+        {"title": "Left-hand traffic pattern", "id": "left-hand-traffic-pattern"},
+        {"title": "Rejected landings", "id": "rejected-landings"},
+        {"title": "Landing", "id": "landing"},
+        {"title": "Ground effect", "id": "ground-effect"}
+      ],
+      "activities": ["fly-traffic-pattern-practice"],
+      "lessonVideo": null,
+      "reviewQuestions": [6, 9, 18, 19]
+    },
+    {
+      "slug": "checkrides-and-solo",
+      "title": "Checkrides & Solo",
+      "number": 6,
+      "url": "/learn-to-fly/checkrides-and-solo/",
+      "summary": "Fly the five airplane checkrides with an instructor and reach Mastery in every skill for your first solo.",
+      "outcomes": [
+        "Demonstrate each pre-solo skill to an instructor.",
+        "Reach Mastery on every skill in the checkride rubrics.",
+        "Complete a first solo flight."
+      ],
+      "readings": [],
+      "readingNote": "Review any Chapter 3 section where your checkride shows a weak skill.",
+      "activities": ["fly-checkride-rubrics"],
+      "lessonVideo": null,
+      "reviewQuestions": [],
+      "skills": [
+        "Fly a fixed wing aircraft in a rectangular pattern at a constant altitude while maintaining positive control of the aircraft in all flight directions (headings).",
+        "Perform a hand launch takeoff of a fixed wing aircraft and/or ground take-off in a simulator.",
+        "Perform a power off landing of a fixed wing aircraft.",
+        "Launch, hover, and land a multirotor aircraft.",
+        "Fly a multirotor aircraft to a predetermined location, rotate 180 degrees and return to the same launch location.",
+        "Demonstrate stall recovery."
+      ]
+    }
+  ],
+  "reviewQuestions": {
+    "1": {"question": "What is the difference between a rotary wing and a fixed wing aircraft? Give examples of each.", "answer": "A fixed-wing aircraft uses stationary wings and must move forward through the air to generate lift. Examples include airplanes and gliders. A rotary-wing aircraft uses rotating wings or rotors to generate lift. Examples include helicopters and quadcopters."},
+    "2": {"question": "Why is it important to take off and land into the wind?", "answer": "Taking off and landing into the wind increases airflow over the wings at a lower groundspeed. This helps the aircraft generate lift more effectively and reduces the distance required for takeoff and landing."},
+    "3": {"question": "Describe what to do to recover your airplane if it enters a spin.", "answer": "Reduce the angle of attack by relaxing back pressure, apply appropriate rudder to stop the rotation, and recover smoothly once the aircraft is no longer stalled. The chapter emphasizes avoiding aileron input during a stall and using rudder as necessary to prevent or stop a spin."},
+    "4": {"question": "Sketch out a quadcopter propeller orientation and use arrows to show which direction each motor needs to spin.", "answer": "The two diagonally opposite motors should rotate in the same direction, with the other diagonal pair rotating in the opposite direction. Two motors rotate clockwise and two rotate counterclockwise so that motor torque is balanced."},
+    "5": {"question": "What is CG and why is it important?", "answer": "CG stands for center of gravity and is the balance point of the aircraft. The CG must remain within the aircraft's allowable forward and aft limits. If it is too far forward or too far aft, the aircraft can become difficult or impossible to control."},
+    "6": {"question": "Make a sketch of a left hand traffic pattern and identify each leg.", "answer": "A standard left-hand traffic pattern consists of the upwind/departure leg, crosswind leg, downwind leg, base leg, and final approach. All normal pattern turns are made to the left."},
+    "7": {"question": "What is a stall? Explain the difference between a power off stall and a power on stall.", "answer": "A stall occurs when the wing exceeds its critical angle of attack and can no longer produce sufficient lift. A power-off stall is practiced by reducing power while maintaining altitude until the aircraft stalls. A power-on stall is practiced with high power and a steep climb until the aircraft stalls."},
+    "8": {"question": "When might you be most likely to experience a power on stall or a power off stall in normal flight?", "answer": "A power-on stall is most likely during a steep climb, such as shortly after takeoff. A power-off stall is most likely during an approach or landing when the aircraft is slow and operating at reduced power."},
+    "9": {"question": "What is ground effect and how does it affect an airplane? A multirotor?", "answer": "Ground effect occurs when an aircraft is very close to the ground and air becomes trapped between the lifting surface and the ground, producing additional lift. An airplane may float longer during landing or lift off before it has enough airspeed to safely climb. A multirotor can become more difficult to control close to the ground because of the disturbed airflow beneath the rotors."},
+    "10": {"question": "If your airplane is flying toward you and the wing to your right (airplane left wing) starts to drop, what is the correct stick action to take to fix this undesired aircraft attitude?", "answer": "Move the aileron stick toward the low wing. When an aircraft is flying toward you, left and right appear reversed from the pilot's perspective, so this technique helps prevent confusion."},
+    "11": {"question": "Explain the controls on the transmitter and how they affect pitch, roll and yaw for both an airplane and a quadcopter.", "answer": "On a typical Mode 2 transmitter, the right stick controls pitch and roll, while the left stick controls throttle and yaw. On an airplane, elevator controls pitch, ailerons control roll, and rudder controls yaw. On a quadcopter, the flight controller varies motor speeds to produce pitch, roll, and yaw."},
+    "12": {"question": "Why is a rotary aircraft difficult to control when it is close to the ground?", "answer": "Ground effect changes the airflow beneath the rotors and can make the aircraft feel unstable or difficult to balance. The chapter compares flying a rotary-wing aircraft in ground effect to trying to balance on a ball."},
+    "13": {"question": "Explain how each of the control sticks on a transmitter works for both an airplane and a quadcopter.", "answer": "On a Mode 2 transmitter, moving the left stick up and down controls throttle. Moving it left and right controls yaw. Moving the right stick forward and backward controls pitch, while moving it left and right controls roll. The pilot inputs are similar for airplanes and quadcopters even though the aircraft produce those motions differently."},
+    "14": {"question": "What is the advantage of a quadcopter over a helicopter when it comes to flight control simplicity?", "answer": "A quadcopter controls flight primarily by changing the speeds of its motors. It does not require the complex rotor-pitch, swashplate, and tail-rotor systems found on a traditional helicopter, which makes electronic stabilization and control much simpler."},
+    "15": {"question": "What happens to the effectiveness of an airplane's control surfaces as the aircraft slows down, and why?", "answer": "The controls become more sluggish and less effective because less airflow is moving over the control surfaces."},
+    "16": {"question": "Why should stalls and spins be practiced at a safe altitude?", "answer": "A stall or spin causes the aircraft to lose altitude during recovery. Practicing at a safe altitude provides enough time and distance to recognize the condition and recover before reaching the ground. The chapter recommends about 100 feet AGL or higher for these exercises."},
+    "17": {"question": "During stall recovery, why should the pilot avoid using the ailerons?", "answer": "Using ailerons while the wing is stalled can make the stall more uneven and increase the chance of entering a spin. The chapter specifically states “DO NOT USE AILERONS IN A STALL.” Rudder should be used as necessary while reducing the angle of attack and restoring airflow over the wing."},
+    "18": {"question": "What is a go-around, and when should a pilot perform one?", "answer": "A go-around is an aborted or rejected landing. The pilot adds power, climbs away from the landing area, and returns to the traffic pattern for another attempt. It should be performed when the landing approach becomes unstable or unsafe."},
+    "19": {"question": "Describe the basic steps for flying a normal landing pattern from downwind through touchdown.", "answer": "Fly the downwind leg at a safe altitude, reduce power near the end of the landing area, begin a controlled descent, turn onto base, then turn onto final. Maintain airspeed and glide slope with small pitch and power corrections. Near the ground, reduce power, raise the nose into a flare, and allow the airplane to touch down smoothly."},
+    "20": {"question": "Why can flying an airplane toward yourself be confusing for a beginning RC pilot, and what technique can help you correct a dropped wing?", "answer": "When the aircraft is coming toward the pilot, left and right appear reversed, which can make roll and yaw corrections confusing. A useful technique is to move the control stick toward the low wing to level the aircraft."}
+  }
+}

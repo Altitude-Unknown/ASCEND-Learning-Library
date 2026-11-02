@@ -1,0 +1,27 @@
+{# Course overview for courses built from course data: intro, study method, and the unit sequence. #}
+<div class="course-intro prose">{% for paragraph in course.intro %}<p>{{ paragraph }}</p>{% endfor %}</div>
+<div class="project-links course-actions"><a class="button" href="{{ course.units[0].url }}">Start Unit 1: {{ course.units[0].title }} →</a><a class="button outline" href="#learning-path">Explore the {{ course.units.length }}-unit path</a>{% if course.chapterUrl %}<a class="button outline" href="{{ course.chapterUrl }}">Read {{ course.chapterTitle }}</a>{% endif %}</div>
+{% if course.notice %}<p class="notice"><strong>{{ course.notice.title }}</strong>{{ course.notice.text }}</p>{% endif %}
+
+<section class="section-block" id="study-method" aria-labelledby="study-method-heading">
+  <div class="section-heading"><div><span class="eyebrow">ONE APPROACH FOR EVERY UNIT</span><h2 id="study-method-heading">Watch. Read. Apply. Check.</h2><p>Build understanding before moving on. You can repeat any step at your own pace.</p></div></div>
+  <ol class="course-method">{% for step in course.method %}<li><h3>{{ step.title }}</h3><p>{{ step.text }}</p></li>{% endfor %}</ol>
+</section>
+
+<section class="section-block" id="learning-path" aria-labelledby="learning-path-heading">
+  <div class="section-heading"><div><span class="eyebrow">SCOPE & SEQUENCE</span><h2 id="learning-path-heading">Your {{ course.units.length }}-unit learning path</h2><p>Follow the units in order. Each one builds on the skills from the unit before.</p></div><span class="count-label">0{{ course.units.length }} UNITS · YOUR OWN PACE</span></div>
+  <ol class="course-units">
+    {% for unit in course.units %}
+    <li class="course-unit" id="unit-{{ unit.number }}">
+      <div class="course-unit-main"><span class="eyebrow">UNIT 0{{ unit.number }}</span><h3>{{ unit.title }}</h3><p>{{ unit.summary }}</p><ul>{% for outcome in unit.outcomes %}<li>{{ outcome }}</li>{% endfor %}</ul><a class="button outline" href="{{ unit.url }}">Study Unit {{ unit.number }}: {{ unit.title }} →</a></div>
+      <div class="course-unit-resources"><h4>Materials & practice</h4>
+        {% if unit.readings.length %}<p class="small"><strong>Reading:</strong> {% for section in unit.readings %}<a href="{{ course.chapterUrl }}#{{ section.id }}">{{ section.title }}</a>{% if not loop.last %}, {% endif %}{% endfor %}</p>{% elif unit.readingNote %}<p class="small"><strong>Reading:</strong> {{ unit.readingNote }}</p>{% endif %}
+        <p class="small muted">Lesson video: coming soon</p>
+        <ul>{% for resource in collections.resources | related(unit.activities) %}<li><a href="{{ resource.url }}">{{ resource.data.title }}</a></li>{% endfor %}</ul>
+        {% if unit.reviewQuestions.length %}<p class="small">{{ unit.reviewQuestions.length }} review question{% if unit.reviewQuestions.length != 1 %}s{% endif %} with answers</p>{% endif %}
+        {% if unit.skills.length %}<p class="small">Skills checksheet and solo sign-off</p>{% endif %}
+      </div>
+    </li>
+    {% endfor %}
+  </ol>
+</section>
