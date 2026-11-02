@@ -11,6 +11,11 @@
       "intro": "For balloon teams: track flights and prepare FAA submission maps."
     },
     {
+      "id": "logger",
+      "title": "ASCEND Logger",
+      "intro": "For every team: the firmware and circuit board design for the air-quality and flight data logger."
+    },
+    {
       "id": "builders",
       "title": "Board building and lab tools",
       "intro": "For staff and teams who assemble or repair Altitude Unknown circuit boards."
@@ -52,6 +57,16 @@
       "platforms": ["macOS", "Windows"],
       "download": "https://github.com/Altitude-Unknown/Flight-KML-Sectional-Overlay/releases/latest",
       "source": "https://github.com/Altitude-Unknown/Flight-KML-Sectional-Overlay"
+    },
+    {
+      "group": "logger",
+      "kind": "Firmware & PCB design",
+      "name": "ASCEND Logger",
+      "summary": "Records GPS position and time, pressure, and particulate readings to a microSD card as CSV that follows the ASCEND data standard. The repository holds the logger firmware, bench tools, and the schematic and board files.",
+      "platforms": ["ASCEND Logger board (SAMD21)", "Arduino CLI"],
+      "status": "In development",
+      "source": "https://github.com/Altitude-Unknown/ASCEND-Logger",
+      "note": "Firmware downloads will be added when the logger firmware is released. The source and board design are available now."
     },
     {
       "group": "builders",
