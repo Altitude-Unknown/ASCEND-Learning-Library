@@ -107,3 +107,26 @@ test('Complete web chapters remain readable, accessible, and linked to each unit
   await expect(page.locator('.textbook-content')).toContainText('METAR KBNA 281251Z');
   await expect(page.locator('.textbook-content')).toContainText('TAF KSBN 171145Z');
 });
+
+test('Unit activities are readable web pages that keep their PDF and Word files', async ({page}) => {
+  const activities={'regulations-activity':10,'airspace-worksheet':3,'weather-activity':10,'loading-performance-activity':10,'operations-activity':11};
+  for (const width of [1280,390]) {
+    await page.setViewportSize({width,height:900});
+    for (const [id,questions] of Object.entries(activities)) {
+      await page.goto(`/resources/${id}/`);
+      await expect(page.locator('.prose .activity-questions > li')).toHaveCount(questions);
+      for (const img of await page.locator('.prose img').all()) {
+        expect((await img.getAttribute('alt')).length).toBeGreaterThan(20);
+        expect(await img.evaluate(i=>i.complete && i.naturalWidth>0)).toBeTruthy();
+      }
+      const files=page.locator('#files .file-list li');
+      await expect(files).toHaveCount(2);
+      await expect(files.filter({hasText:'PDF'})).toHaveCount(1);
+      await expect(files.filter({hasText:'DOCX'})).toHaveCount(1);
+      await expect(page.getByText('Read this resource on this page.')).toBeVisible();
+      expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1)).toBeTruthy();
+      const scan=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa','wcag22aa']).analyze();
+      expect(scan.violations,JSON.stringify(scan.violations)).toEqual([]);
+    }
+  }
+});
