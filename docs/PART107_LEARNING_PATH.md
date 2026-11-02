@@ -27,6 +27,13 @@ above the slides. Supplemental videos remain fully visible within
 the video step; additional activities and references remain in the activity
 step. Resource cards are not removed.
 
+Each unit's activity is a web page (`delivery: web`): the questions, charts and
+tables are on the resource page itself, and the original Word file and its PDF
+copy stay listed under "Read & download". Activity images live in
+`public/assets/part107/activities/`, cropped from the supplied screenshots to
+the chart each question needs, with alt text and captions. Tables of chart
+values repeat what the images show as text.
+
 `lessonVideo` identifies the primary instructional video independently of
 supplemental videos in `watch` and each page’s `resourceIds`. A unit with
 `lessonVideo: null` shows a coming-soon placeholder next to its slides; set
