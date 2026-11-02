@@ -15,8 +15,8 @@ test('Course overview lists all six units in order and starts Unit 1', async ({p
   await page.locator('#unit-1 a[href$="#check"]').click();
   await expect(page.locator('#check')).toBeInViewport();
   await page.goto('/learn-to-fly/');
-  await page.getByRole('link', {name: 'Start Unit 1: Getting Started →'}).click();
-  await expect(page.locator('h1')).toHaveText('Getting Started');
+  await page.getByRole('link', {name: 'Start Unit 1: Flying Fixed Wings →'}).click();
+  await expect(page.locator('h1')).toHaveText('Flying Fixed Wings');
 });
 
 test('Every unit follows Watch, Read, Apply, Check and links to the next unit', async ({page}) => {
@@ -46,7 +46,7 @@ test('Every unit follows Watch, Read, Apply, Check and links to the next unit', 
 });
 
 test('Review answers stay hidden until opened', async ({page}) => {
-  await page.goto('/learn-to-fly/getting-started/');
+  await page.goto('/learn-to-fly/flying-fixed-wings/');
   const first = page.locator('.review-questions details').first();
   await expect(first.locator('p')).toBeHidden();
   await first.locator('summary').click();
@@ -80,4 +80,9 @@ test('Activities read as web pages, and the weight and balance key is corrected'
   await expect(page.locator('.answer-key').first()).toContainText('43.04');
   await page.goto('/resources/fly-checkride-rubrics/');
   await expect(page.locator('h2[id^="flight-"]')).toHaveCount(5);
+});
+
+test('The old Unit 1 address redirects to Flying Fixed Wings', () => {
+  const rules = readFileSync(new URL('../public/_redirects', import.meta.url), 'utf8');
+  expect(rules).toContain('/learn-to-fly/getting-started/ /learn-to-fly/flying-fixed-wings/ 301');
 });

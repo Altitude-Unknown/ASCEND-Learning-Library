@@ -3,11 +3,11 @@
   "chapterTitle": "Chapter 3: Piloting Remote Aircraft",
   "units": [
     {
-      "slug": "getting-started",
-      "title": "Getting Started",
+      "slug": "flying-fixed-wings",
+      "title": "Flying Fixed Wings",
       "number": 1,
-      "url": "/learn-to-fly/getting-started/",
-      "summary": "Choose a trainer, practice in a simulator, and plan calm first flights and gentle glide landings.",
+      "url": "/learn-to-fly/flying-fixed-wings/",
+      "summary": "Start flying airplanes: choose a trainer, practice in a simulator, and plan calm first flights and gentle glide landings.",
       "outcomes": [
         "Identify and describe the function of each of the four flight controls.",
         "Describe yaw, pitch, roll, and throttle as they pertain to airplane operation.",

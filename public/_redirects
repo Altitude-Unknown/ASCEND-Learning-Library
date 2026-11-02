@@ -1,0 +1,3 @@
+# Cloudflare Pages redirects: old path, new path, status.
+/learn-to-fly/getting-started/ /learn-to-fly/flying-fixed-wings/ 301
+/learn-to-fly/getting-started /learn-to-fly/flying-fixed-wings/ 301
