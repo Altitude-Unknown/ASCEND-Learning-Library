@@ -1,13 +1,14 @@
 {% set linked = collections.resources | related(resourceIds) %}
+{% set unitActivities = courseUnit.activities or [courseUnit.activity] %}
 <section class="section-block unit-study-step" id="lesson" aria-labelledby="lesson-heading">
-  <div class="section-heading"><div><span class="eyebrow">STEP 1 · WATCH & REVIEW</span><h2 id="lesson-heading">Video lesson & presentation slides</h2><p>Begin with the instructional video and use the matching slides alongside it.</p></div></div>
+  <div class="section-heading"><div><span class="eyebrow">STEP 1 · WATCH & REVIEW</span>{% if courseUnit.slides %}<h2 id="lesson-heading">Video lesson & presentation slides</h2><p>Begin with the instructional video and use the matching slides alongside it.</p>{% else %}<h2 id="lesson-heading">Video lesson</h2><p>Begin with the instructional video for this unit.</p>{% endif %}</div></div>
   <div class="resource-grid two unit-lesson-pair">
     {% if courseUnit.lessonVideo %}
       {% for resource in collections.resources | related([courseUnit.lessonVideo]) %}{% include "components/card.njk" %}{% endfor %}
     {% else %}
-      <article class="resource-card unit-video-placeholder"><div class="card-top"><span class="resource-kind"><svg class="icon" aria-hidden="true"><use href="#i-play"/></svg>Video</span><span class="status">Coming soon</span></div><h3>{{ courseUnit.title }} instructional video</h3><p>The full {{ courseUnit.title }} lesson video will be added here. For now, review the slides and use the supplemental videos below.</p><div class="card-bottom"><span>FAA Part 107 · Lesson video</span></div></article>
+      <article class="resource-card unit-video-placeholder"><div class="card-top"><span class="resource-kind"><svg class="icon" aria-hidden="true"><use href="#i-play"/></svg>Video</span><span class="status">Coming soon</span></div><h3>{{ courseUnit.title }} instructional video</h3><p>The full {{ courseUnit.title }} lesson video will be added here. {% if courseUnit.slides %}For now, review the slides and use the supplemental videos below.{% else %}For now, start with the reading in Step 2.{% endif %}</p><div class="card-bottom"><span>{{ course.title }} · Lesson video</span></div></article>
     {% endif %}
-    {% for resource in collections.resources | related([courseUnit.slides]) %}{% include "components/card.njk" %}{% endfor %}
+    {% if courseUnit.slides %}{% for resource in collections.resources | related([courseUnit.slides]) %}{% include "components/card.njk" %}{% endfor %}{% endif %}
   </div>
   {% set videos = linked | byKind('Video') %}
   {% if videos.length > 1 or (videos.length and not courseUnit.lessonVideo) %}
@@ -16,14 +17,19 @@
 </section>
 
 <section class="section-block unit-study-step" id="reading" aria-labelledby="reading-heading">
+  {% if courseUnit.readings %}
+  <div class="section-heading"><div><span class="eyebrow">STEP 2 · READ & CLARIFY</span><h2 id="reading-heading">Read the companion textbook</h2><p>{% if courseUnit.readings.length %}Read these sections of {{ course.chapterTitle }}. Use the reading to clarify the concepts introduced in the lesson.{% else %}{{ courseUnit.readingNote }}{% endif %}</p></div></div>
+  <div class="resource-grid two"><article class="resource-card"><span class="resource-kind">Textbook · Web chapter</span><h3><a href="{{ course.chapterUrl }}">{{ course.chapterTitle }}</a></h3>{% if courseUnit.readings.length %}<ul class="unit-reading-list">{% for section in courseUnit.readings %}<li><a href="{{ course.chapterUrl }}#{{ section.id }}">{{ section.title }}</a></li>{% endfor %}</ul>{% else %}<p>Read the complete chapter on this website, with section navigation and descriptions of figures.</p>{% endif %}</article>{% for resource in linked | byKind('Book') %}{% include "components/card.njk" %}{% endfor %}</div>
+  {% else %}
   <div class="section-heading"><div><span class="eyebrow">STEP 2 · READ & CLARIFY</span><h2 id="reading-heading">Read the companion textbook</h2><p>Study Chapter {{ courseUnit.chapter }}. Use the reading to clarify the concepts introduced in the lesson.</p></div></div>
   <div class="resource-grid two"><article class="resource-card"><span class="resource-kind">Textbook · Web chapter</span><h3><a href="{{ courseUnit.chapterUrl }}">Read Chapter {{ courseUnit.chapter }} online</a></h3><p>Read the complete chapter on this website, with section navigation, accessible tables, and descriptions of figures.</p></article>{% for resource in linked | byKind('Book') %}{% include "components/card.njk" %}{% endfor %}</div>
+  {% endif %}
 </section>
 
 <section class="section-block unit-study-step" id="activity" aria-labelledby="activity-heading">
   <div class="section-heading"><div><span class="eyebrow">STEP 3 · APPLY & EXPLAIN</span><h2 id="activity-heading">Apply what you have learned</h2><p>Complete the unit activity and explain the reasoning behind your decisions. Use the additional activities and references to extend your practice.</p></div></div>
   <div class="resource-grid two">
-    {% for resource in collections.resources | related([courseUnit.activity]) %}{% include "components/card.njk" %}{% endfor %}
-    {% for resource in linked %}{% if resource.data.id != courseUnit.activity and resource.data.kind != 'Video' and resource.data.kind != 'Book' and resource.data.id != courseUnit.slides %}{% include "components/card.njk" %}{% endif %}{% endfor %}
+    {% for resource in collections.resources | related(unitActivities) %}{% include "components/card.njk" %}{% endfor %}
+    {% for resource in linked %}{% if not (resource.data.id in unitActivities) and resource.data.kind != 'Video' and resource.data.kind != 'Book' and resource.data.id != courseUnit.slides %}{% include "components/card.njk" %}{% endif %}{% endfor %}
   </div>
 </section>

@@ -53,6 +53,11 @@
         "title": "FAA Part 107 Remote Pilot course",
         "url": "/part107/",
         "description": "Prepare for the FAA Remote Pilot certificate in five units: regulations, airspace, weather, loading and performance, and operations. Each unit pairs videos and slides with a book chapter, an activity, and a practice quiz."
+      },
+      {
+        "title": "Learning to Fly a UAS",
+        "url": "/learn-to-fly/",
+        "description": "Learn to fly airplanes and multirotors in six units, from simulator practice to your first solo. Each unit pairs a reading with a lab or practice plan and review questions; video lessons are coming soon."
       }
     ],
     "description": "Explore aircraft design, electronics, flight systems, and scientific missions.",
