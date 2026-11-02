@@ -1,12 +1,12 @@
 ---
 layout: layouts/base.njk
 title: Software
-description: Desktop apps for ASCEND teams — the RC configurator, the Flight Lab RC simulator, the YELLOWSTONE ground station, and other tools.
+description: Desktop apps and firmware for ASCEND teams — the RC configurator, the Flight Lab RC simulator, the YELLOWSTONE ground station, the ASCEND Logger, and other tools.
 permalink: /software/
 ---
 <div class="container">
 <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><span aria-current="page">Software</span></nav>
-<header class="section-hero"><span class="eyebrow">Download & set up</span><div class="section-hero-row"><div><h1>Software</h1><p class="lead">Desktop apps for setting up your equipment, updating firmware, practicing, and planning flights. Downloads come from each app's latest release on GitHub, so you always get the current version.</p></div><span class="section-symbol" aria-hidden="true"><svg><use href="#i-download"/></svg></span></div></header>
+<header class="section-hero"><span class="eyebrow">Download & set up</span><div class="section-hero-row"><div><h1>Software</h1><p class="lead">Desktop apps and firmware for setting up your equipment, updating firmware, logging data, practicing, and planning flights. Downloads come from each app's latest release on GitHub, so you always get the current version.</p></div><span class="section-symbol" aria-hidden="true"><svg><use href="#i-download"/></svg></span></div></header>
 
 {% for group in software.groups %}
 <section class="section-block software-group" aria-labelledby="software-{{ group.id }}">
@@ -14,7 +14,7 @@ permalink: /software/
 <div class="resource-grid two">
 {% for app in software.apps %}{% if app.group == group.id %}
 <article class="resource-card software-card">
-<div class="card-top"><span class="resource-kind"><svg class="icon" aria-hidden="true"><use href="#i-download"/></svg>Desktop app</span>{% if app.status %}<span class="status">{{ app.status }}</span>{% endif %}</div>
+<div class="card-top"><span class="resource-kind"><svg class="icon" aria-hidden="true"><use href="#i-download"/></svg>{{ app.kind or "Desktop app" }}</span>{% if app.status %}<span class="status">{{ app.status }}</span>{% endif %}</div>
 <h3>{{ app.name }}</h3>
 <p>{{ app.summary }}</p>
 <ul class="software-platforms" aria-label="Platforms">{% for platform in app.platforms %}<li>{{ platform }}</li>{% endfor %}</ul>
