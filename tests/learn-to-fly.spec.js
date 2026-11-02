@@ -8,6 +8,13 @@ test('Course overview lists all six units in order and starts Unit 1', async ({p
   await page.goto('/learn-to-fly/');
   await expect(page.locator('h1')).toHaveText('Learning to Fly a UAS');
   await expect(page.locator('.course-unit')).toHaveCount(6);
+  for (const unit of course.units) {
+    const link = page.locator(`#unit-${unit.number} a[href="${unit.url}#check"]`);
+    await expect(link).toHaveCount(1);
+  }
+  await page.locator('#unit-1 a[href$="#check"]').click();
+  await expect(page.locator('#check')).toBeInViewport();
+  await page.goto('/learn-to-fly/');
   await page.getByRole('link', {name: 'Start Unit 1: Getting Started →'}).click();
   await expect(page.locator('h1')).toHaveText('Getting Started');
 });
