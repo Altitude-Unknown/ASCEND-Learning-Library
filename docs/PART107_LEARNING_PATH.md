@@ -32,7 +32,7 @@ tables are on the resource page itself, and the original Word file and its PDF
 copy stay listed under "Read & download". Activity images live in
 `public/assets/part107/activities/`, cropped from the supplied screenshots to
 the chart each question needs, with alt text and captions. Tables of chart
-values or airport details repeat what the images show as text.
+values repeat what the images show as text.
 
 `lessonVideo` identifies the primary instructional video independently of
 supplemental videos in `watch` and each page’s `resourceIds`. A unit with
