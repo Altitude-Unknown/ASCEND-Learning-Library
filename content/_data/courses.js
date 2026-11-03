@@ -5,6 +5,7 @@ import {readFileSync} from 'node:fs';
 const read = file => JSON.parse(readFileSync(new URL(file, import.meta.url), 'utf8'));
 const part107 = read('./part107Course.json');
 const learnToFly = read('./learnToFlyCourse.json');
+const buildFixedWing = read('./buildFixedWingCourse.json');
 
 export default {
   part107: {
@@ -46,5 +47,32 @@ export default {
     chapterTitle: learnToFly.chapterTitle,
     reviewQuestions: learnToFly.reviewQuestions,
     units: learnToFly.units
+    },
+  buildFixedWing: {
+    id: 'buildFixedWing',
+    title: 'Building a Fixed-Wing UAS',
+    shortTitle: 'Building a Fixed-Wing UAS',
+    url: '/build-fixed-wing/',
+    label: 'BUILDING A FIXED-WING UAS',
+    sidebarLabel: 'BROWSE THE COURSE',
+    sidebarCollection: 'buildFixedWingModules',
+    overviewLabel: 'Course overview',
+    check: 'review',
+    final: {url: '/learn-to-fly/', title: 'Learning to Fly a UAS'},
+    intro: [
+      'This course takes you through building the ASCEND Trainer Airplane, a crash-tolerant foamboard, plywood, carbon-fiber, and 3D-printed trainer, from printing the parts to the preflight control check. It follows Chapter 4, Building a Fixed Wing Aircraft, of the Remote and Autonomous Aircraft Systems lab manual.',
+      'Each unit builds one part of the airplane. Read the instructions, build that part, and have your instructor sign off the skills before you move on. When you finish, continue with Learning to Fly a UAS.'
+    ],
+    notice: {title: 'Work safely', text: 'Cut away from yourself with sharp knives, use breathing protection when drilling carbon fiber, and never install the propeller until you are outside and ready to fly.'},
+    method: [
+      {title: 'Watch & review', text: 'Begin with the unit’s video lesson. Videos are being recorded; until they are ready, start with the reading.'},
+      {title: 'Read & clarify', text: 'Read the sections of Chapter 4 listed for the unit. Each unit links straight to its sections, with a description of every photo.'},
+      {title: 'Build & sign off', text: 'Build that part of the airplane, or complete the lab, then demonstrate the unit’s skills to your instructor.'},
+      {title: 'Check & revisit', text: 'Answer the review questions in your own words, then open each answer to compare. The last unit includes the full skills checksheet.'}
+    ],
+    chapterUrl: buildFixedWing.chapterUrl,
+    chapterTitle: buildFixedWing.chapterTitle,
+    reviewQuestions: buildFixedWing.reviewQuestions,
+    units: buildFixedWing.units
   }
 };

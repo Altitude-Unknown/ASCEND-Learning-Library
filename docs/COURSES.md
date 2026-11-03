@@ -55,3 +55,30 @@ reviewed. Changes from the printed chapter:
 - The Weight & Balance lab’s “follow the links below” sentence is omitted; the
   manual has no links there.
 - Units 4 and 5 use practice plans built from the Maneuver Description Guide.
+
+## Building a Fixed-Wing UAS
+
+Built from Chapter 4, Building a Fixed Wing Aircraft, of the lab manual: the
+ASCEND Trainer Airplane build guide. The chapter is newer than the standalone
+*Trainer Build Instructions* resource; it adds the control-direction chart,
+transmitter rates and expo, mixing, and propeller installation.
+
+Units without a lab use a `build` step (a card linking to the instruction
+sections) and `signoff` skills from the chapter’s skills checksheet, shown in
+Step 3. Unit 6 also shows the full checksheet in Step 4.
+
+The web chapter (`content/build-fixed-wing/textbook/building-a-fixed-wing-aircraft.njk`),
+its 152 images (`public/assets/build-fixed-wing/`), and the control surface lab
+were generated from the manual’s Word file. Every image has a written
+description. Changes from the printed chapter:
+
+- STL and tail DXF links point to the site’s trainer files, not Google Drive.
+  The V-tail DXF has no site copy and still links to Google Drive.
+- Terminology: RC transmitters and receivers operate at 2.4 GHz (the manual says 2.8 GHz).
+- Spelling made consistent (empennage, ruddervator, propeller, axle, scrape),
+  and “M3.5 drill bit” reads “3.5 mm drill bit”, matching the photo callout.
+- Headings added for navigation: Leading edge and gluing the wing, Ailerons and
+  hinges, Testing the controls, Transmitter settings, Installing the propeller.
+- The chapter says the rear wing support stays temporary until the center of
+  gravity is found, but it has no CG procedure, although the skills checksheet
+  lists that skill. No procedure was added.

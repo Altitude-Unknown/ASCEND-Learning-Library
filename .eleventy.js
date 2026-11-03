@@ -29,6 +29,7 @@ export default function(eleventy) {
   eleventy.addFilter('year', () => new Date().getFullYear());
   eleventy.addCollection('resources', api => api.getFilteredByTag('resource').sort((a,b) => a.data.title.localeCompare(b.data.title)));
   eleventy.addCollection('modules', api => api.getFilteredByTag('module').sort((a,b) => a.data.order - b.data.order));
+  eleventy.addCollection('buildFixedWingModules', api => api.getFilteredByTag('buildFixedWingModule').sort((a,b) => a.data.order - b.data.order));
   eleventy.addCollection('learnToFlyModules', api => api.getFilteredByTag('learnToFlyModule').sort((a,b) => a.data.order - b.data.order));
   eleventy.addTransform('secure-markup', function(content) {
     if (this.page.outputPath?.endsWith('.html') && /(?:href|src)=["']javascript:/i.test(content)) throw new Error('Unsafe URL in ' + this.page.outputPath);

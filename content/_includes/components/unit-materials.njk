@@ -27,9 +27,11 @@
 </section>
 
 <section class="section-block unit-study-step" id="activity" aria-labelledby="activity-heading">
-  <div class="section-heading"><div><span class="eyebrow">STEP 3 · APPLY & EXPLAIN</span><h2 id="activity-heading">Apply what you have learned</h2><p>Complete the unit activity and explain the reasoning behind your decisions. Use the additional activities and references to extend your practice.</p></div></div>
+  <div class="section-heading"><div>{% if courseUnit.build %}<span class="eyebrow">STEP 3 · BUILD & SIGN OFF</span><h2 id="activity-heading">Build this part of the airplane</h2><p>{% if unitActivities.length %}Complete the lab, then build{% else %}Build{% endif %} this part of the airplane following the instructions. When you finish, show your instructor the skills listed below.</p>{% else %}<span class="eyebrow">STEP 3 · APPLY & EXPLAIN</span><h2 id="activity-heading">Apply what you have learned</h2><p>Complete the unit activity and explain the reasoning behind your decisions. Use the additional activities and references to extend your practice.</p>{% endif %}</div></div>
   <div class="resource-grid two">
+    {% if courseUnit.build %}<article class="resource-card unit-build-card"><span class="resource-kind">Build it</span><h3>{{ courseUnit.build.title }}</h3><p>{{ courseUnit.build.text }}</p><ul class="unit-reading-list">{% for section in courseUnit.build.sections %}<li><a href="{{ course.chapterUrl }}#{{ section.id }}">{{ section.title }}</a></li>{% endfor %}</ul></article>{% endif %}
     {% for resource in collections.resources | related(unitActivities) %}{% include "components/card.njk" %}{% endfor %}
     {% for resource in linked %}{% if not (resource.data.id in unitActivities) and resource.data.kind != 'Video' and resource.data.kind != 'Book' and resource.data.id != courseUnit.slides %}{% include "components/card.njk" %}{% endif %}{% endfor %}
   </div>
+  {% if courseUnit.signoff.length %}<section class="unit-signoff" aria-labelledby="signoff-heading"><h3 id="signoff-heading">Skills to sign off</h3><p class="small">When you finish this step, demonstrate these skills from the Chapter 4 skills checksheet to your instructor.</p><ul class="skills-checklist">{% for skill in courseUnit.signoff %}<li>{{ skill }}</li>{% endfor %}</ul></section>{% endif %}
 </section>

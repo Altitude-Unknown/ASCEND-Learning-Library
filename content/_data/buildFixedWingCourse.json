@@ -1,0 +1,538 @@
+{
+  "chapterUrl": "/build-fixed-wing/textbook/building-a-fixed-wing-aircraft/",
+  "chapterTitle": "Chapter 4: Building a Fixed Wing Aircraft",
+  "units": [
+    {
+      "slug": "getting-ready",
+      "title": "Getting Ready",
+      "number": 1,
+      "url": "/build-fixed-wing/getting-ready/",
+      "summary": "Print the 3D parts, gather materials and tools, choose landing gear or none, and learn the parts of the airplane.",
+      "outcomes": [
+        "Identify the 3D-printed parts and which are printed in 64D TPU or PETG.",
+        "Gather the materials, electronics, and tools for the build.",
+        "Use proper terminology for the parts and controls of a fixed-wing airplane."
+      ],
+      "readings": [
+        {
+          "title": "3D printed parts list",
+          "id": "3d-printed-parts-list"
+        },
+        {
+          "title": "Other materials required",
+          "id": "other-materials-required"
+        },
+        {
+          "title": "Introduction",
+          "id": "introduction"
+        },
+        {
+          "title": "Where to start?",
+          "id": "where-to-start"
+        },
+        {
+          "title": "Landing gear or no landing gear?",
+          "id": "landing-gear-or-no-landing-gear"
+        },
+        {
+          "title": "Terminology",
+          "id": "terminology"
+        }
+      ],
+      "activities": [],
+      "build": {
+        "title": "Print the parts and gather materials",
+        "text": "Start the 3D prints, beginning with the fuselage because it takes longest, then gather the materials, electronics, and tools from the lists.",
+        "sections": [
+          {
+            "title": "3D printed parts list",
+            "id": "3d-printed-parts-list"
+          },
+          {
+            "title": "Other materials required",
+            "id": "other-materials-required"
+          }
+        ]
+      },
+      "signoff": [
+        "Use proper terminology to identify and describe the function of: rudder, elevator, horizontal stabilizer, vertical stabilizer, empennage, ailerons, ruddervator, elevons, flaps, landing gear, throttle, propeller pitch and length, fuselage, battery, electronic speed control, receiver, transmitter."
+      ],
+      "lessonVideo": null,
+      "reviewQuestions": [
+        1,
+        2
+      ]
+    },
+    {
+      "slug": "building-the-wing",
+      "title": "Building the Wing",
+      "number": 2,
+      "url": "/build-fixed-wing/building-the-wing/",
+      "summary": "Lay out, cut, and fold a foamboard wing with a spar, a reinforced leading edge, and hinged ailerons.",
+      "outcomes": [
+        "Lay out and make through cuts, score cuts, creases, and bevels on foamboard.",
+        "Build and install a folded foamboard wing spar.",
+        "Form the airfoil, cut the ailerons, and make hot-glue hinges."
+      ],
+      "readings": [
+        {
+          "title": "Wing construction overview",
+          "id": "wing-construction"
+        },
+        {
+          "title": "Wing step-by-step instructions",
+          "id": "wing-step-by-step-instructions"
+        },
+        {
+          "title": "Building the wing spar",
+          "id": "building-the-wing-spar"
+        },
+        {
+          "title": "Leading edge and gluing the wing",
+          "id": "leading-edge-and-gluing-the-wing"
+        },
+        {
+          "title": "Ailerons and hinges",
+          "id": "ailerons-and-hinges"
+        }
+      ],
+      "activities": [],
+      "build": {
+        "title": "Build the wing",
+        "text": "Build the foamboard wing following the step-by-step instructions, from joining the sheets to the aileron hinges.",
+        "sections": [
+          {
+            "title": "Wing step-by-step instructions",
+            "id": "wing-step-by-step-instructions"
+          }
+        ]
+      },
+      "signoff": [
+        "Construct foamboard aircraft parts from a detailed drawing.",
+        "Make score cuts, bevel cuts, and through cuts on foamboard.",
+        "Construct foamboard hinges using the hot glue hinge and tape hinge methods."
+      ],
+      "lessonVideo": null,
+      "reviewQuestions": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ]
+    },
+    {
+      "slug": "wing-electronics",
+      "title": "Wing Electronics",
+      "number": 3,
+      "url": "/build-fixed-wing/wing-electronics/",
+      "summary": "Install the aileron servos, control horns, and Z-bend pushrods, then fit the wing band clips.",
+      "outcomes": [
+        "Cut servo openings and route servo wires through the wing.",
+        "Measure and make Z-bend pushrods with the controls at neutral.",
+        "Install the control horns and wing band clips."
+      ],
+      "readings": [
+        {
+          "title": "Adding electronics to the wing",
+          "id": "adding-electronics-to-the-wing"
+        },
+        {
+          "title": "Wing band clips",
+          "id": "wing-band-clips"
+        }
+      ],
+      "activities": [],
+      "build": {
+        "title": "Install the aileron servos and pushrods",
+        "text": "Dry fit the servos, pushrods, and control horns, make the Z-bends with each aileron at neutral, then glue everything in place and fit the wing band clips.",
+        "sections": [
+          {
+            "title": "Adding electronics to the wing",
+            "id": "adding-electronics-to-the-wing"
+          },
+          {
+            "title": "Wing band clips",
+            "id": "wing-band-clips"
+          }
+        ]
+      },
+      "signoff": [
+        "Install and/or replace servos, pushrods, control horns, and other flight control mechanical systems.",
+        "Mechanically zero out flight controls for neutral level flight."
+      ],
+      "lessonVideo": null,
+      "reviewQuestions": [
+        14,
+        15,
+        16,
+        17
+      ]
+    },
+    {
+      "slug": "building-the-tail",
+      "title": "Building the Tail",
+      "number": 4,
+      "url": "/build-fixed-wing/building-the-tail/",
+      "summary": "Build the elevator and rudder from foamboard or plywood with stitched hinges, or choose the V-tail option.",
+      "outcomes": [
+        "Build a horizontal and vertical stabilizer from foamboard or 2 mm plywood.",
+        "Make hot-glue, tape, and stitched hinges.",
+        "Compare a traditional tail with a V-tail."
+      ],
+      "readings": [
+        {
+          "title": "Elevator / horizontal stabilizer construction",
+          "id": "elevator-horizontal-stabilizer-construction"
+        },
+        {
+          "title": "Stitching the plywood hinges",
+          "id": "stitching-the-plywood-hinges"
+        },
+        {
+          "title": "Rudder / vertical stabilizer foamboard construction",
+          "id": "rudder-vertical-stabilizer-foamboard-construction"
+        },
+        {
+          "title": "Vertical stabilizer and rudder 2 mm plywood construction",
+          "id": "vertical-stabilizer-and-rudder-2-mm-plywood-construction"
+        },
+        {
+          "title": "V-tail (ruddervator) option",
+          "id": "v-tail-ruddervator-option"
+        },
+        {
+          "title": "Traditional tail vs. V-tail",
+          "id": "traditional-tail-vs-v-tail"
+        }
+      ],
+      "activities": [
+        "fw-control-surface-lab"
+      ],
+      "build": {
+        "title": "Build the tail for your airplane",
+        "text": "After the lab, build the tail surfaces for your airplane in foamboard or plywood.",
+        "sections": [
+          {
+            "title": "Elevator / horizontal stabilizer construction",
+            "id": "elevator-horizontal-stabilizer-construction"
+          },
+          {
+            "title": "V-tail assembly",
+            "id": "v-tail-assembly"
+          }
+        ]
+      },
+      "signoff": [
+        "Construct foamboard aircraft parts from a detailed drawing.",
+        "Construct foamboard hinges using the hot glue hinge and tape hinge methods."
+      ],
+      "lessonVideo": null,
+      "reviewQuestions": [
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25
+      ]
+    },
+    {
+      "slug": "final-assembly",
+      "title": "Final Assembly",
+      "number": 5,
+      "url": "/build-fixed-wing/final-assembly/",
+      "summary": "Assemble the nose and fuselage, glue on the tail, install the tail servos and pushrods, and route the wires.",
+      "outcomes": [
+        "Assemble the 3D-printed fuselage, nose, and motor mount with hex hardware.",
+        "Install the tail servos, control horns, and pushrods at neutral.",
+        "Route and connect the servo wires and attach the wing with rubber bands."
+      ],
+      "readings": [
+        {
+          "title": "Assembling the nose",
+          "id": "assembling-the-nose"
+        },
+        {
+          "title": "Final assembly of the airplane",
+          "id": "final-assembly-of-the-airplane"
+        },
+        {
+          "title": "Installing the servos and pushrods",
+          "id": "installing-the-servos-and-pushrods"
+        },
+        {
+          "title": "Routing wires and testing controls",
+          "id": "routing-wires-and-testing-controls"
+        }
+      ],
+      "activities": [],
+      "build": {
+        "title": "Assemble the airplane",
+        "text": "Assemble the nose and fuselage, glue the tail into its clips, install the tail servos and pushrods, route the wires, and attach the wing.",
+        "sections": [
+          {
+            "title": "Final assembly of the airplane",
+            "id": "final-assembly-of-the-airplane"
+          },
+          {
+            "title": "Installing the servos and pushrods",
+            "id": "installing-the-servos-and-pushrods"
+          }
+        ]
+      },
+      "signoff": [
+        "Assemble 3D printed aircraft parts using hex head hardware, nuts, and basic hand tools.",
+        "Install and/or replace servos, pushrods, control horns, and other flight control mechanical systems.",
+        "Mechanically zero out flight controls for neutral level flight."
+      ],
+      "lessonVideo": null,
+      "reviewQuestions": [
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34
+      ]
+    },
+    {
+      "slug": "testing-and-setup",
+      "title": "Testing & Setup",
+      "number": 6,
+      "url": "/build-fixed-wing/testing-and-setup/",
+      "summary": "Check every control direction, set dual rates, expo, and mixing, and install the propeller for the first flight.",
+      "outcomes": [
+        "Check that every control surface and the motor respond correctly.",
+        "Set dual rates, expo, and aileron–rudder mixing on the transmitter.",
+        "Install the propeller safely, only when ready to fly."
+      ],
+      "readings": [
+        {
+          "title": "Testing the controls",
+          "id": "testing-the-controls"
+        },
+        {
+          "title": "Transmitter settings",
+          "id": "transmitter-settings"
+        },
+        {
+          "title": "Installing the propeller",
+          "id": "installing-the-propeller"
+        }
+      ],
+      "activities": [],
+      "build": {
+        "title": "Preflight control check and setup",
+        "text": "Without the propeller, check every control against the chart, set your transmitter, then install the propeller only when you are outside and ready to fly.",
+        "sections": [
+          {
+            "title": "Testing the controls",
+            "id": "testing-the-controls"
+          },
+          {
+            "title": "Transmitter settings",
+            "id": "transmitter-settings"
+          }
+        ]
+      },
+      "signoff": [
+        "Test all flight controls and motor rotation direction for safe flight on a fixed wing UAS."
+      ],
+      "lessonVideo": null,
+      "reviewQuestions": [
+        35,
+        36,
+        37,
+        38,
+        39,
+        40
+      ],
+      "skills": [
+        "Make score cuts, bevel cuts, and through cuts on foamboard.",
+        "Construct foamboard aircraft parts from a detailed drawing.",
+        "Construct foamboard hinges using the hot glue hinge and tape hinge methods.",
+        "Assemble 3D printed aircraft parts using hex head hardware, nuts, and basic hand tools.",
+        "Locate and test the required center of gravity location for a fixed wing aircraft.",
+        "Install and/or replace servos, pushrods, control horns, and other flight control mechanical systems.",
+        "Mechanically zero out flight controls for neutral level flight.",
+        "Test all flight controls and motor rotation direction for safe flight on a fixed wing UAS.",
+        "Use proper terminology to identify and describe the function of: rudder, elevator, horizontal stabilizer, vertical stabilizer, empennage, ailerons, ruddervator, elevons, flaps, landing gear, throttle, propeller pitch and length, fuselage, battery, electronic speed control, receiver, transmitter."
+      ],
+      "skillsLabel": "Full skills checksheet"
+    }
+  ],
+  "reviewQuestions": {
+    "1": {
+      "question": "Why are both 64D TPU and PETG used for the 3D-printed parts of this airplane? What characteristics make each material useful for different components?",
+      "answer": "64D TPU is flexible and impact resistant, making it useful for parts that need to flex or survive crashes. PETG is more rigid and is better suited for parts that need to hold their shape and provide structural support."
+    },
+    "2": {
+      "question": "Why might a beginner choose to build and fly the airplane without landing gear at first?",
+      "answer": "Hand launching and belly landing are generally easier for a beginning pilot. Landing gear adds weight and drag and can make takeoffs and landings more difficult, particularly when flying from grass."
+    },
+    "3": {
+      "question": "What do the black, red, green, and purple lines represent when laying out the foamboard wing?",
+      "answer": "Black lines are cut completely through the foamboard. Red lines are score cuts. Green lines are score-and-crease lines used to help form the airfoil. Purple lines are reference or alignment lines and should not be cut."
+    },
+    "4": {
+      "question": "What is the difference between a through cut, score cut, crease, and bevel cut when working with foamboard?",
+      "answer": "A through cut passes completely through both paper layers and the foam. A score cut cuts through one paper layer and the foam while leaving the opposite paper intact. A crease allows the foamboard to bend along a controlled line. A bevel removes foam at an angle to provide clearance for folding or control-surface movement."
+    },
+    "5": {
+      "question": "Why is it important to leave the bottom layer of paper intact when making certain score cuts in foamboard?",
+      "answer": "The remaining paper acts as a flexible hinge and keeps the two sections connected while allowing them to fold."
+    },
+    "6": {
+      "question": "Describe how the wing spar is constructed from foamboard. Why does its folded shape make the wing stronger?",
+      "answer": "The spar is cut from a 1000 mm × 65 mm strip of foamboard. Grooves are score cut and the foam is removed while leaving the opposite paper intact. The sides are then folded upward and glued to form a rigid structure. The folded shape resists bending much better than a flat piece of foamboard."
+    },
+    "7": {
+      "question": "What is the purpose of the wing spar, and why must it be positioned correctly inside the wing before the wing is glued closed?",
+      "answer": "The spar provides structural support and helps prevent the wing from bending or folding under flight loads. Correct positioning provides proper support across the wing and ensures the wing can be folded and glued into its intended airfoil shape."
+    },
+    "8": {
+      "question": "Why is a double bevel used at the leading edge of the wing?",
+      "answer": "The double bevel allows the foamboard to fold around the leading edge without binding or tearing, helping form the wing's airfoil shape."
+    },
+    "9": {
+      "question": "What is the purpose of reinforcing the wing's leading edge with tape? What types of damage can this help prevent?",
+      "answer": "Tape strengthens and protects the leading edge from dents, tears, moisture, and damage caused by grass, weeds, belly landings, and minor impacts."
+    },
+    "10": {
+      "question": "Each aileron is 350 mm long and 50 mm wide. Why is it important for the left and right ailerons to be the same size and positioned symmetrically on the wing?",
+      "answer": "Matching ailerons help produce similar control forces on each side of the airplane. Unequal size or placement could cause uneven roll response or unwanted control tendencies."
+    },
+    "11": {
+      "question": "Describe how a foamboard aileron hinge is made using a score cut, bevel, and the remaining paper layer.",
+      "answer": "The foamboard is score cut along the hinge line without cutting through the opposite paper. The aileron is folded back and the foam is beveled to provide movement clearance. The intact paper layer connects the aileron to the wing and acts as the hinge."
+    },
+    "12": {
+      "question": "How is a hot-glue hinge made? Why should almost all of the hot glue be scraped away before it cools?",
+      "answer": "A small bead of hot glue is placed along the hinge seam and immediately scraped away with a scrap of foamboard. Only a very thin film should remain. Too much glue makes the hinge stiff and can restrict movement."
+    },
+    "13": {
+      "question": "Why must an aileron bevel provide enough clearance for the aileron to move freely?",
+      "answer": "Without adequate clearance, the aileron can bind against the wing, limiting its movement and reducing roll control."
+    },
+    "14": {
+      "question": "Describe the purpose of the servo, pushrod, and control horn in an aircraft flight-control system.",
+      "answer": "The servo converts an electrical command from the receiver into mechanical movement. The pushrod transfers that movement to the control surface, and the control horn provides the mechanical connection between the pushrod and control surface."
+    },
+    "15": {
+      "question": "Why should the aileron be held in its centered or neutral position when measuring and installing the pushrod?",
+      "answer": "This establishes the correct pushrod length so the control surface is near its neutral position when the servo is centered."
+    },
+    "16": {
+      "question": "What is a Z-bend, and why is its orientation important when connecting a pushrod to a servo arm or control horn?",
+      "answer": "A Z-bend is a Z-shaped bend formed in the end of a pushrod that mechanically locks the wire into a servo arm or control horn. It must be bent in the correct direction so the pushrod fits properly without twisting or misaligning the linkage."
+    },
+    "17": {
+      "question": "Why are the aileron servo wires routed through the inside of the wing rather than simply running across the outside surface?",
+      "answer": "Routing the wires internally protects them from damage and keeps them from snagging on objects while also producing a cleaner installation."
+    },
+    "18": {
+      "question": "Compare foamboard and 2 mm plywood for constructing the empennage. What are the advantages and disadvantages of each material?",
+      "answer": "Foamboard is inexpensive, lightweight, quick to build, and easy to replace, but it is less durable. Plywood is stronger, more durable, and longer lasting but generally requires more fabrication and is heavier."
+    },
+    "19": {
+      "question": "Describe how a stitched plywood hinge is constructed. Why is the thread doubled back over some of the holes?",
+      "answer": "Matching holes are drilled along the control surface and stabilizer. Strong thread is passed down through the holes and back up through the gap between the surfaces in a repeating pattern. Doubling back over the stitches strengthens and secures the hinge."
+    },
+    "20": {
+      "question": "Why is a small amount of CA glue applied to the stitched hinge holes, and why must you prevent CA from entering the gap between the control surface and stabilizer?",
+      "answer": "CA secures the thread in the holes and helps prevent the stitching from loosening. CA in the hinge gap could glue the two parts together and prevent the control surface from moving."
+    },
+    "21": {
+      "question": "What are the functions of the horizontal stabilizer and elevator, and which aircraft axis does the elevator control?",
+      "answer": "The horizontal stabilizer provides pitch stability. The elevator controls pitch, rotating the airplane around its lateral axis."
+    },
+    "22": {
+      "question": "What are the functions of the vertical stabilizer and rudder, and which aircraft axis does the rudder control?",
+      "answer": "The vertical stabilizer provides directional or yaw stability. The rudder controls yaw, rotating the airplane around its vertical axis."
+    },
+    "23": {
+      "question": "What is a V-tail, and how do ruddervators provide both pitch and yaw control?",
+      "answer": "A V-tail replaces the conventional horizontal and vertical tail surfaces with two angled surfaces called ruddervators. Moving the ruddervators together provides pitch control, while differential movement provides yaw control. Transmitter mixing is required."
+    },
+    "24": {
+      "question": "What advantages does the V-tail configuration offer on this airplane, and what control or stability tradeoffs does it introduce?",
+      "answer": "The V-tail can reduce empennage weight and increase ground clearance. The tradeoffs include reduced pitch and yaw control authority compared with separate control surfaces and the need for transmitter mixing."
+    },
+    "25": {
+      "question": "Why is the traditional tail configuration preferred for this airplane when stability and predictable handling are the primary goals?",
+      "answer": "Flight testing showed that the traditional tail configuration provided the greatest overall stability and predictable handling for this trainer."
+    },
+    "26": {
+      "question": "What advantages does a carbon-fiber tube provide when used as the main structural member of the fuselage?",
+      "answer": "Carbon fiber provides high strength and stiffness for relatively little weight, making it useful for creating a lightweight but rigid fuselage structure."
+    },
+    "27": {
+      "question": "What safety precautions should be taken when drilling carbon fiber, and why are these precautions important?",
+      "answer": "Breathing protection should be used and carbon-fiber dust should be carefully collected and cleaned up. Carbon-fiber dust is hazardous and should not be inhaled."
+    },
+    "28": {
+      "question": "Why is hot glue used to attach the empennage to its mounting clips rather than always using a more rigid adhesive such as epoxy or CA?",
+      "answer": "Hot glue provides some flexibility and may allow the tail to break free during a crash rather than damaging the plywood tail assembly. It also works with foamboard, which must be attached using hot glue in this design."
+    },
+    "29": {
+      "question": "Why should the bolts that attach the empennage assembly remain accessible after the tail has been installed?",
+      "answer": "The bolts must remain accessible so a damaged tail or empennage assembly can be removed and replaced after a crash."
+    },
+    "30": {
+      "question": "Why is it important to leave a small amount of slack in the servo wires when securing them to the carbon-fiber fuselage tube?",
+      "answer": "Slack prevents the wires from being placed under tension and allows connectors to unplug during a crash rather than tearing wires or damaging servos."
+    },
+    "31": {
+      "question": "When connecting servo extension cables, why should you verify that the wire colors are aligned on both sides of each connector?",
+      "answer": "Matching the wire colors helps ensure that power, ground, and signal are connected correctly and prevents an incorrectly oriented servo connection."
+    },
+    "32": {
+      "question": "Why is the wing attached to the fuselage with rubber bands rather than being rigidly bolted or glued in place?",
+      "answer": "Rubber bands securely hold the wing during normal flight but allow it to separate during a hard landing or crash, reducing the likelihood of serious wing or fuselage damage."
+    },
+    "33": {
+      "question": "Why should you avoid using more rubber bands than necessary to secure the wing?",
+      "answer": "Too many rubber bands can prevent the wing from breaking free during a crash, defeating the purpose of the rubber bands as an intentional weak link."
+    },
+    "34": {
+      "question": "Explain the idea of an intentional weak link in aircraft construction. How can allowing one inexpensive component to fail help protect more expensive or difficult-to-repair parts?",
+      "answer": "An intentional weak link is designed to release or fail before a more important structural component is damaged. For example, inexpensive rubber bands can break or release the wing during a crash rather than allowing the impact force to destroy the wing or fuselage."
+    },
+    "35": {
+      "question": "Before the first flight, what should you check to verify that the ailerons, elevator, rudder, throttle, servos, and radio system are connected and operating correctly?",
+      "answer": "Verify that the transmitter and receiver communicate properly, each servo responds to the correct transmitter control, the control surfaces move freely and in the correct direction, the surfaces return to neutral, the linkages are secure, and the throttle responds correctly. The propeller should remain removed during initial control-system testing."
+    },
+    "36": {
+      "question": "During a preflight control check, what should happen to the aircraft's control surfaces when you move the aileron, elevator, and rudder controls on the transmitter?",
+      "answer": "Each control surface should move smoothly in response to the correct transmitter input and in the proper direction. The ailerons should move opposite one another for roll control, while the elevator and rudder should respond correctly to pitch and yaw commands."
+    },
+    "37": {
+      "question": "This airplane was designed so that many components can be repaired or replaced after a crash. Identify three design features that make the airplane easier or less expensive to repair.",
+      "answer": "Answers may vary. Examples include 3D-printed replaceable components, inexpensive foamboard construction, replaceable plywood tail surfaces, removable empennage components, a carbon-fiber tube fuselage structure, and a rubber-band-mounted wing that can separate during a crash."
+    },
+    "38": {
+      "question": "Compare foamboard, plywood, carbon fiber, and 3D-printed plastics as aircraft construction materials. Give at least one advantage and one disadvantage of each.",
+      "answer": "Foamboard: inexpensive, lightweight, and easy to work with; less durable and susceptible to crushing or tearing. Plywood: strong and durable; heavier and requires more effort or equipment to fabricate. Carbon fiber: very strong and stiff for its weight; more expensive and creates hazardous dust when cut or drilled. 3D-printed plastics: allow complex, inexpensive, and easily replaceable custom parts; print time, material properties, and layer adhesion can limit strength."
+    },
+    "39": {
+      "question": "Research another material commonly used to build RC airplanes that is not used extensively in this design. What advantages and disadvantages would it have compared with the materials used in this airplane?",
+      "answer": "Answers will vary. Examples could include balsa wood, EPP/EPO foam, fiberglass, composites, Depron, or other lightweight materials. Students should identify the material and provide reasonable advantages and disadvantages based on their research."
+    },
+    "40": {
+      "question": "Suppose you were redesigning this airplane with minimum weight as your primary goal. Which materials or construction features might you change? Explain your reasoning.",
+      "answer": "Answers will vary. Students should identify reasonable changes that reduce weight and explain the tradeoffs involved. Examples could include reducing the amount of plywood or printed material, using lighter tail surfaces, eliminating the landing gear, reducing unnecessary reinforcement, or substituting lighter materials. Full credit should require recognition that reducing weight may also reduce strength, durability, or crash resistance."
+    }
+  }
+}

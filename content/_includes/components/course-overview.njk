@@ -17,9 +17,10 @@
       <div class="course-unit-resources"><h4>Materials & practice</h4>
         {% if unit.readings.length %}<p class="small"><strong>Reading:</strong> {% for section in unit.readings %}<a href="{{ course.chapterUrl }}#{{ section.id }}">{{ section.title }}</a>{% if not loop.last %}, {% endif %}{% endfor %}</p>{% elif unit.readingNote %}<p class="small"><strong>Reading:</strong> {{ unit.readingNote }}</p>{% endif %}
         <p class="small muted">Lesson video: coming soon</p>
+        {% if unit.build %}<p class="small"><strong>Build:</strong> {{ unit.build.title }}</p>{% endif %}
         <ul>{% for resource in collections.resources | related(unit.activities) %}<li><a href="{{ resource.url }}">{{ resource.data.title }}</a></li>{% endfor %}</ul>
         {% if unit.reviewQuestions.length %}<p class="small"><a href="{{ unit.url }}#check">{{ unit.reviewQuestions.length }} review question{% if unit.reviewQuestions.length != 1 %}s{% endif %} with answers<span class="visually-hidden"> for Unit {{ unit.number }}</span> →</a></p>{% endif %}
-        {% if unit.skills.length %}<p class="small"><a href="{{ unit.url }}#check">Skills checksheet and solo sign-off →</a></p>{% endif %}
+        {% if unit.skills.length %}<p class="small"><a href="{{ unit.url }}#{% if unit.reviewQuestions.length %}skills-heading{% else %}check{% endif %}">{{ unit.skillsLabel or "Skills checksheet and solo sign-off" }} →</a></p>{% endif %}
       </div>
     </li>
     {% endfor %}

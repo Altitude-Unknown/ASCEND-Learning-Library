@@ -1,0 +1,562 @@
+---
+{
+  "layout": "layouts/textbook-chapter.njk",
+  "tags": [],
+  "eleventyExcludeFromCollections": true,
+  "topic": "uas",
+  "courseId": "buildFixedWing",
+  "title": "Chapter 4: Building a Fixed Wing Aircraft",
+  "description": "Build the ASCEND Trainer Airplane: printed parts, a foamboard wing, foamboard or plywood tail surfaces, final assembly, and the preflight control check.",
+  "chapterNumber": 4,
+  "textbookEyebrow": "REMOTE AND AUTONOMOUS AIRCRAFT SYSTEMS · WEB EDITION",
+  "sourceNote": "From Mike Walach’s lab manual, Remote and Autonomous Aircraft Systems. The chapter is the ASCEND Trainer Airplane build guide. Original wording is retained with small corrections; image descriptions have been added for web reading.",
+  "headerLinks": [
+    {
+      "title": "Trainer airplane project & files",
+      "url": "/uas/trainer-airplane/"
+    },
+    {
+      "title": "Lab manual files & source information",
+      "url": "/resources/remote-aircraft-textbook/"
+    }
+  ],
+  "toc": [
+    {
+      "title": "3D printed parts list",
+      "id": "3d-printed-parts-list"
+    },
+    {
+      "title": "— Other materials required",
+      "id": "other-materials-required"
+    },
+    {
+      "title": "Introduction",
+      "id": "introduction"
+    },
+    {
+      "title": "Where to start?",
+      "id": "where-to-start"
+    },
+    {
+      "title": "— Airplane assembled with optional landing gear",
+      "id": "airplane-assembled-with-optional-landing-gear"
+    },
+    {
+      "title": "— Airplane assembled without landing gear",
+      "id": "airplane-assembled-without-landing-gear"
+    },
+    {
+      "title": "Wing construction",
+      "id": "wing-construction-section"
+    },
+    {
+      "title": "— Wing construction overview",
+      "id": "wing-construction"
+    },
+    {
+      "title": "— Wing step-by-step instructions",
+      "id": "wing-step-by-step-instructions"
+    },
+    {
+      "title": "— Procedure",
+      "id": "procedure"
+    },
+    {
+      "title": "— Adding electronics to the wing",
+      "id": "adding-electronics-to-the-wing"
+    },
+    {
+      "title": "— Wing band clips",
+      "id": "wing-band-clips"
+    },
+    {
+      "title": "Elevator / horizontal stabilizer construction",
+      "id": "elevator-horizontal-stabilizer-construction"
+    },
+    {
+      "title": "— Elevator / horizontal stabilizer foamboard construction",
+      "id": "elevator-horizontal-stabilizer-foamboard-construction"
+    },
+    {
+      "title": "— Elevator / horizontal stabilizer 2 mm plywood construction",
+      "id": "elevator-horizontal-stabilizer-2-mm-plywood-construction"
+    },
+    {
+      "title": "— Rudder / Vertical Stabilizer Foamboard Construction",
+      "id": "rudder-vertical-stabilizer-foamboard-construction"
+    },
+    {
+      "title": "— Vertical stabilizer and rudder 2 mm plywood construction",
+      "id": "vertical-stabilizer-and-rudder-2-mm-plywood-construction"
+    },
+    {
+      "title": "— V-tail (ruddervator) option",
+      "id": "v-tail-ruddervator-option"
+    },
+    {
+      "title": "— Traditional tail vs. V-tail",
+      "id": "traditional-tail-vs-v-tail"
+    },
+    {
+      "title": "— V-tail assembly",
+      "id": "v-tail-assembly"
+    },
+    {
+      "title": "Assembling the nose",
+      "id": "assembling-the-nose"
+    },
+    {
+      "title": "Final assembly of the airplane",
+      "id": "final-assembly-of-the-airplane"
+    },
+    {
+      "title": "Installing the servos and pushrods",
+      "id": "installing-the-servos-and-pushrods"
+    },
+    {
+      "title": "Routing wires and testing controls",
+      "id": "routing-wires-and-testing-controls"
+    },
+    {
+      "title": "— Testing the controls",
+      "id": "testing-the-controls"
+    },
+    {
+      "title": "— Transmitter settings",
+      "id": "transmitter-settings"
+    },
+    {
+      "title": "— Installing the propeller",
+      "id": "installing-the-propeller"
+    },
+    {
+      "title": "Terminology",
+      "id": "terminology"
+    },
+    {
+      "title": "Lab activity, review questions, and skills checksheet",
+      "id": "activities-and-assessments"
+    }
+  ],
+  "permalink": "/build-fixed-wing/textbook/building-a-fixed-wing-aircraft/"
+}
+---
+<p class="small muted">Designed by Mike Walach 2026</p>
+<h2 id="3d-printed-parts-list">3D printed parts list</h2>
+<p>Download the STL files from the <a href="/resources/trainer-tpu-parts/">64D TPU parts</a> and <a href="/resources/trainer-petg-parts/">PETG parts</a> pages. The material for each part is listed below.</p>
+<ul class="parts-grid"><li><figure class="part-card"><img src="/assets/build-fixed-wing/build-002.jpg" alt="3D render of the fuselage: a hollow cylindrical body with a square channel for the carbon-fiber tube and a raised cargo bay on top." loading="lazy"><figcaption><strong>Fuselage</strong><span><a href="/resources/trainer-tpu-parts/">64D TPU</a></span></figcaption></figure></li><li><figure class="part-card"><img src="/assets/build-fixed-wing/build-003.jpg" alt="3D render of the nose: a rounded, tapered cylinder with a centre hole for the motor mount." loading="lazy"><figcaption><strong>Nose</strong><span><a href="/resources/trainer-tpu-parts/">64D TPU</a></span></figcaption></figure></li><li><figure class="part-card"><img src="/assets/build-fixed-wing/build-004.jpg" alt="3D render of the T-tail servo bracket: two rectangular servo frames on either side of a square tube sleeve." loading="lazy"><figcaption><strong>Servo Bracket T tail option</strong><span><a href="/resources/trainer-tpu-parts/">64D TPU</a></span></figcaption></figure></li><li><figure class="part-card"><img src="/assets/build-fixed-wing/build-005.jpg" alt="3D render of the foam T-tail empennage clip: a square tube sleeve with slots that hold the horizontal and vertical stabilizers." loading="lazy"><figcaption><strong>Empennage clip for foam T tail</strong><span><a href="/resources/trainer-petg-parts/">PETG</a></span></figcaption></figure></li><li><figure class="part-card"><img src="/assets/build-fixed-wing/build-006.jpg" alt="3D render of the rear wing support: a rectangular saddle with raised edges and a square hole for the carbon-fiber tube." loading="lazy"><figcaption><strong>Rear wing support</strong><span><a href="/resources/trainer-petg-parts/">PETG</a></span></figcaption></figure></li><li><figure class="part-card"><img src="/assets/build-fixed-wing/build-007.jpg" alt="3D render of the motor mount: a round plate with bolt holes and a threaded shaft." loading="lazy"><figcaption><strong>Motor mount</strong><span><a href="/resources/trainer-petg-parts/">PETG</a></span></figcaption></figure></li><li><figure class="part-card"><img src="/assets/build-fixed-wing/build-008.jpg" alt="3D render of the motor mount nut: a large hexagonal nut." loading="lazy"><figcaption><strong>Motor mount nut</strong><span><a href="/resources/trainer-petg-parts/">PETG</a></span></figcaption></figure></li><li><figure class="part-card"><img src="/assets/build-fixed-wing/build-009.jpg" alt="3D render of the rear wing band clip: a long, thin U-shaped channel that slips over the wing&#x27;s trailing edge." loading="lazy"><figcaption><strong>Wing band clip rear</strong><span><a href="/resources/trainer-petg-parts/">PETG</a></span></figcaption></figure></li><li><figure class="part-card"><img src="/assets/build-fixed-wing/build-010.jpg" alt="3D render of a control horn: a slotted base with a rounded upright arm and one pushrod hole." loading="lazy"><figcaption><strong>Control Horn</strong><span><a href="/resources/trainer-petg-parts/">PETG</a></span></figcaption></figure></li><li><figure class="part-card"><img src="/assets/build-fixed-wing/build-011.jpg" alt="3D render of the V-tail empennage clip: a square tube sleeve with two angled slots for the ruddervators." loading="lazy"><figcaption><strong>Empennage Clip V-Tail</strong><span><a href="/resources/trainer-petg-parts/">PETG</a></span></figcaption></figure></li><li><figure class="part-card"><img src="/assets/build-fixed-wing/build-012.jpg" alt="3D render of the front wing band clip: a wide, flat, folded clip that slips over the wing&#x27;s leading edge." loading="lazy"><figcaption><strong>Wing band Clip Front</strong><span><a href="/resources/trainer-petg-parts/">PETG</a></span></figcaption></figure></li><li><figure class="part-card"><img src="/assets/build-fixed-wing/build-013.jpg" alt="3D render of the V-tail servo bracket: two deep servo boxes on either side of a square tube sleeve." loading="lazy"><figcaption><strong>Servo Bracket V-Tail Option</strong><span><a href="/resources/trainer-tpu-parts/">64D TPU</a></span></figcaption></figure></li><li><figure class="part-card"><img src="/assets/build-fixed-wing/build-014.jpg" alt="3D render of the optional landing gear: a ring that fits around the fuselage with two angled legs ending in axle holes." loading="lazy"><figcaption><strong>Landing Gear</strong></figcaption></figure></li><li><figure class="part-card"><img src="/assets/build-fixed-wing/build-015.jpg" alt="3D render of the 2 mm plywood empennage clip: a square tube sleeve with thin slots for plywood tail surfaces." loading="lazy"><figcaption><strong>2mm Plywood Empennage Clip</strong></figcaption></figure></li><li><figure class="part-card"><img src="/assets/build-fixed-wing/build-016.jpg" alt="3D render of the 2 mm plywood empennage clip with a tail skid extending downward." loading="lazy"><figcaption><strong>2mm Plywood Empennage Clip with tail skid</strong></figcaption></figure></li></ul>
+<h3 id="other-materials-required">Other materials required</h3>
+<ul><li>1 - 300x300x2mm (12”x12”x3/32”) Basswood plywood sheet</li><li>1 - M3 x 55mm hex bolt (Fuselage to carbon fiber rod)</li><li>3 - M3 x 20mm hex bolt (Empennage clip, Servo mount, Wing support)</li><li>4 - M3 nuts (Empennage clip, Servo mount, Wing support, fuselage to carbon fiber rod)</li><li>2 - M5 x 14mm hex bolts (3 if using landing gear)</li><li>2- M5 x 30 hex bolts (Wing rubberband supports)</li><li>1 - Tube of CA (Superglue)</li></ul>
+<p class="small">(Flitetest Power Pack C or similar will include all electronics except Tx and Rx Batteries and charger)</p>
+<ul><li>1 - 2218 1180KV Brushless motor</li><li>4 - 9 gram metal gear servos</li><li>1 - 9x4.7 slowfly propeller</li><li>1 - 40 amp Electronic speed control</li><li>1 - 3-cell 1500mAH LiPo Battery or 4-cell 1500mAH Battery</li><li>1 - LiPo Battery Charger</li><li>1 - 4 channel or larger receiver</li><li>1- 4 channel or larger transmitter</li><li>Pushrod wires</li><li>Hot glue sticks</li><li>Hot Glue gun</li><li>10x10x8.5x420mm carbon fiber square tube</li><li>Thread (if using plywood tail)</li><li>Packaging tape or duct tape</li></ul>
+<h4 id="optional-if-using-landing-gear">Optional, if using landing gear</h4>
+<ul><li>2 mm axle</li><li>2 65mm or larger bush tires</li><li>Axle hub locks (can also use hot glue as a cheap alternative)</li></ul>
+<h4 id="tools">Tools</h4>
+<ul><li>X-acto Knife, breakaway knife, or straight razor blade</li><li>Metric tape measure</li><li>150mm metal ruler</li><li>Metal straight edge</li><li>Z-bend pliers</li><li>Small phillips screw driver</li><li>Needle nose pliers</li><li>Heavy duty wire cutters</li><li>Cutting mat (optional)</li><li>Hot glue gun</li><li>Needle (if using plywood tail)</li><li>Needle threader (optional if using plywood tail)</li><li>Metric allen (hex) key set</li></ul>
+<h2 id="introduction">Introduction</h2>
+<p>This airplane has been designed to be easy to build, easy to fly, and as tolerant of crashes as possible. A hard crash is still likely to break something; however, the combination of 3D-printed parts, plywood, and foam construction means that most damaged components are inexpensive, quick, and easy to replace.</p>
+<p>This guide is written with the assumption that you have no previous experience building or flying a fixed-wing UAS. If you prefer a faster build, however, feel free to simply follow the pictures—there are a lot of them! Most of the assembly is fairly intuitive, but some sections, such as wing construction and servo and pushrod installation, will require a little more attention to detail.</p>
+<p>Most importantly, I hope you enjoy building this airplane and learning to fly it. Yes, you will crash, and yes, you will break things. That is all part of learning to fly. This airplane was specifically designed to tolerate many of the mistakes that beginning pilots make, while also making repairs simple when something does break.</p>
+<p>The goal is not to build an airplane that never crashes. The goal is to build an airplane that lets you crash, repair, learn, and try again without becoming discouraged. With each flight, you will gain more confidence in your ability to both build and fly your own aircraft.</p>
+<p>Good luck, and happy flying!</p>
+<h2 id="where-to-start">Where to start?</h2>
+<p>This airplane uses several 3D-printed parts, so getting those started first is a good way to begin the build. All of the printed components are made from either 64D TPU or PETG. Choose whatever colors you like—there is no need to match the colors shown in this guide.</p>
+<p>The airplanes pictured in this guide were printed primarily on Bambu Lab P1S and P2S printers, with some smaller parts printed on an A1 Mini. In fact, every printed component except the landing gear will fit on an A1 Mini.</p>
+<p>When purchasing TPU, make sure you select 64D TPU (64 durometer). The specific brand is not particularly important, but the durometer is. Softer TPU will produce parts that are much more flexible than intended.</p>
+<p>A good place to start is the fuselage, since it has the longest print time. Getting it started first will give you plenty of time to work on the other parts of the airplane while it prints.</p>
+<p>Once you have the parts printing, purchase any materials you might need then get started building your wing. The wing is large and very satisfying to have completed, but first, let’s talk about landing gear.</p>
+<h4 id="landing-gear-or-no-landing-gear">Landing gear or no landing gear?</h4>
+<p>Most people want landing gear on their first airplane. It looks cool, and taking off and landing on wheels sounds like fun. It is cool, and it is fun—but it also makes learning to fly more difficult.</p>
+<p>For a new pilot, hand launching and belly landing a trainer is much easier. Landing gear adds weight and drag, which reduces flight time and efficiency. Small wheels also make taking off and landing on grass difficult, so landing gear generally works best from dirt, asphalt, or other hard surfaces. Unfortunately, hard surfaces are also much less forgiving when a landing does not go as planned. Grass is considerably gentler on a poorly landed airplane.</p>
+<p>Landing gear is included in this design as an option; however, I recommend leaving it off your airplane until you are comfortable consistently landing in grass. Once you have developed good approach and landing skills, adding landing gear provides another fun challenge and allows you to practice conventional takeoffs and landings.</p>
+<h3 id="airplane-assembled-with-optional-landing-gear">Airplane assembled with optional landing gear</h3>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-017.jpg"><img src="/assets/build-fixed-wing/build-017.jpg" alt="3D render of the assembled airplane without its wing, with the optional landing gear: nose with propeller, fuselage, carbon-fiber tail boom, wing supports, tail servos, and T-tail." loading="lazy"></a></figure>
+<h3 id="airplane-assembled-without-landing-gear">Airplane assembled without landing gear</h3>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-018.jpg"><img src="/assets/build-fixed-wing/build-018.jpg" alt="3D render of the assembled airplane without its wing and without landing gear." loading="lazy"></a></figure>
+<h2 id="wing-construction-section">Wing construction</h2>
+<h3 id="wing-construction">Wing construction overview</h3>
+<p>Construct the wing from foam board using the dimensions shown in the wing layout. Because of the size of the wing, carefully lay out all cut, score, and reference lines with a ruler and pen before beginning any cuts. All dimensions are in millimeters.</p>
+<p>Use the color coding shown in the diagram as a guide:</p>
+<ul><li>Black lines – Cut completely through the foamboard.</li><li>Red lines – Score cut only. Cut through the top paper and partially into the foam without cutting through the bottom paper.</li><li>Green lines – Lightly score cut and crease. These allow the airfoil shape to form when the wing is folded over.</li><li>Purple lines – Reference lines showing where the wing spar will be positioned. Do not cut along the blue lines.</li></ul>
+<p>At the airfoil crease, make score cuts along the two green lines. These cuts allow the foamboard to bend and form the upper surface of the airfoil. Do not cut completely through the foamboard.</p>
+<p>At the leading edge, score the red line and form a double bevel. This allows the foamboard to fold cleanly around the leading edge without tearing the outer paper.</p>
+<p>For each aileron, score along the red line and form a single bevel. Leave the paper on the opposite side intact so that it acts as the aileron hinge.</p>
+<p>Construct the wing spar from the left over material bottom of the drawing. Score the red lines and remove the foam between the score cuts where indicated, leaving the opposite paper layer intact. Fold the spar into shape and glue it together. The completed spar will later be installed between the two purple spar-location lines.</p>
+<p>Do not glue the wing closed until the spar, bevels, and all score cuts have been checked.</p>
+<h3 id="wing-step-by-step-instructions">Wing step-by-step instructions</h3>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-019.jpg"><img src="/assets/build-fixed-wing/build-019.jpg" alt="Wing layout drawing: two 500 mm foam sheets joined into a 1000 mm span, with colour-coded lines from front to back for the ailerons (mark only), the score-and-crease lines, the leading-edge score with a double 45-degree bevel, and the wing spar location (mark only). Dimensions are in millimetres." loading="lazy"></a></figure>
+<h3 id="procedure">Procedure</h3>
+<p>Pictured below is just about everything you will need to completely build the wing. There may be a few nuts and bolts missing from this image but this is pretty close to everything.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-020.jpg"><img src="/assets/build-fixed-wing/build-020.jpg" alt="Everything needed to build the wing laid out on a bench: transmitter, printed parts, foamboard, ruler and straightedge, knives, pliers, tape, glue sticks, servos, wires, and a battery." loading="lazy"></a></figure>
+<p>You will need to join two sheets of foamboard together to get the desired wing span of 1000mm (1 meter).</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-021.jpg"><img src="/assets/build-fixed-wing/build-021.jpg" alt="Two white foamboard sheets laid end to end on a cutting mat to make a 1000 mm wing." loading="lazy"></a></figure>
+<p>Start by taping the two sheets together with packaging tape or duct tape.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-022.jpg"><img src="/assets/build-fixed-wing/build-022.jpg" alt="Clear packing tape along the seam joining the two foamboard sheets." loading="lazy"></a></figure>
+<p>Next, flip the two sheets over and fold back along your tape seam and apply a generous bead of hot glue into the seam. Then lay the wing flat and scrape off the excess hot glue with a scrap of foam.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-023.jpg"><img src="/assets/build-fixed-wing/build-023.jpg" alt="A hot glue gun applying glue into the folded-back seam between the two sheets." loading="lazy"></a></figure>
+<p>Next, tape the side of the wing that you just glued and wrap the tape from the other side around to the inside of the wing as shown here.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-024.jpg"><img src="/assets/build-fixed-wing/build-024.jpg" alt="The glued seam covered with tape on the outside of the joined sheets." loading="lazy"></a></figure>
+<p>Start by laying out all of the cut and score lines as shown on the drawing below. Note the following guide:</p>
+<ul><li>Red-score cut. Only cut through the top layer of paper and the foam. Do not cut the bottom paper.</li><li>Black-cut all the way through the foam and both paper layers.</li><li>Green-score cut then make a crease with the tip of a pen or pen cap..</li><li>Purple-Do NOT CUT. These are alignment lines only for the wing spar.</li></ul>
+<p>Using your pen, ruler and straightedge, lay out the entire wing on your sheet of foam board as shown.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-019.jpg"><img src="/assets/build-fixed-wing/build-019.jpg" alt="Wing layout drawing: two 500 mm foam sheets joined into a 1000 mm span, with colour-coded lines from front to back for the ailerons (mark only), the score-and-crease lines, the leading-edge score with a double 45-degree bevel, and the wing spar location (mark only). Dimensions are in millimetres." loading="lazy"></a></figure>
+<p>Here is a wing all laid out and ready to cut:</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-025.jpg"><img src="/assets/build-fixed-wing/build-025.jpg" alt="The joined foamboard sheet with every cut, score, and spar line drawn on in pen, a metal ruler lying across it." loading="lazy"></a></figure>
+<p>Once all of the cut, score, and registration lines have been drawn on the foam board, use a sharp hobby knife and straightedge to cut and score each line as shown. Always cut away from yourself and use caution when working with a sharp knife.</p>
+<h4 id="building-the-wing-spar">Building the wing spar</h4>
+<p>Once the wing has been cut out, you should have some leftover foam board. This material will be used to make the wing spar.</p>
+<p>Cut a piece of foam board 1000 mm long and 65 mm wide. Starting from one edge, mark lines at 10 mm, 15 mm, 50 mm, 55 mm, and 65 mm. When folded and glued, the completed spar will be 35 mm wide.</p>
+<p>Use the wing spar plan below as a guide. The drawing is not to scale.</p>
+<ul><li>Solid blue lines: Cut completely through the foam board.</li><li>Red lines: Score cut these lines. Remove the foam between each pair of red lines, but leave the bottom layer of paper intact.</li></ul>
+<p>Removing the foam while leaving the paper creates a flexible hinge that allows the sides of the spar to fold upward. Once folded and glued, the spar will form a rigid structure that supports the wing.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-026.jpg"><img src="/assets/build-fixed-wing/build-026.jpg" alt="Wing spar plan: a 1000 mm by 65 mm strip divided lengthwise into bands of 10, 5, 35, 5, and 10 mm. Red score lines mark the two 5 mm grooves." loading="lazy"></a></figure>
+<p>Make sure the score cuts are clean and all the way through the foam without cutting the bottom paper. Don’t worry if you cut the bottom paper, just cover any cut throughs with tape. Packing, scotch, or duct tape are all fine to use.</p>
+<p>Fold the score cuts fully back so that you can peel out the foam and top paper layer from the 5mm grooves in the wing spar as shown below.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-027.jpg"><img src="/assets/build-fixed-wing/build-027.jpg" alt="A hand folding the spar strip back along a score cut to open a 5 mm groove." loading="lazy"></a></figure>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-028.jpg"><img src="/assets/build-fixed-wing/build-028.jpg" alt="The spar strip on a cutting mat with both 5 mm grooves cleared of foam." loading="lazy"></a></figure>
+<p>Next, you will glue the wing spar side to the base. Fold the 10mm sides up and on top on the base of the spar as shown below. Apply glue to the surfaces that will mate. Hold in place and try to make a nice 90 degree corner. Do one side at a time and give the glue time to cool before you let go.</p>
+<p>The finished spar should look like this. Notice how the sides are on top of the base not next to it.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-029.jpg"><img src="/assets/build-fixed-wing/build-029.jpg" alt="The finished spar: a long U-shaped channel with its 10 mm sides glued on top of the base." loading="lazy"></a></figure>
+<p>Now, using the wing spar guide lines that you drew on the wing, glue the wing spar into position. Use the alignment lines to align the wing spar.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-030.jpg"><img src="/assets/build-fixed-wing/build-030.jpg" alt="The spar held above the wing next to pencil lines reading &#x27;Glue spar here&#x27;." loading="lazy"></a></figure>
+<p>Place a long zig-zag of hot glue along the spar and press into place. Hold in place for 60 seconds.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-031.jpg"><img src="/assets/build-fixed-wing/build-031.jpg" alt="A hot glue gun drawing a zig-zag of glue along the spar location lines on the wing." loading="lazy"></a></figure>
+<p>If you want extra reinforcement, you can add a wooden dowel or carbon fiber rod to the center of the wing as shown below.</p>
+<p>Wing with spar installed along with a reinforcing wooden dowel at the center seam.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-032.jpg"><img src="/assets/build-fixed-wing/build-032.jpg" alt="The wing laid flat with the spar glued in place and a wooden dowel glued across the centre seam for reinforcement." loading="lazy"></a></figure>
+<h4 id="leading-edge-and-gluing-the-wing">Leading edge and gluing the wing</h4>
+<p>Now it is time to cut a double bevel along the leading edge of the wing so that the foamboard can be folded back forming our airfoil wing shape.</p>
+<p>Start by making a score cut along the leading edge line of your foamboard wing. Use a straight edge and cut away from yourself using caution when working with a sharp blade.</p>
+<p>Double-Bevel for the wing’s leading edge:</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-033.jpg"><img src="/assets/build-fixed-wing/build-033.jpg" alt="Diagram of a 45-degree double bevel: a V-shaped groove cut through the top paper and foam, leaving the bottom paper intact." loading="lazy"></a></figure>
+<p>To make the wing stronger and prevent damage when landing in grass or tall weeds, a reinforced leading edge is helpful. Flip the wing over and place a strip of duct tape (or packing tape if you are worried about weight) across the leading edge as shown.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-034.jpg"><img src="/assets/build-fixed-wing/build-034.jpg" alt="Duct tape applied across the leading edge on the underside of the wing." loading="lazy"></a></figure>
+<p>Cut the tape flush with the sides of the wing.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-035.jpg"><img src="/assets/build-fixed-wing/build-035.jpg" alt="A knife trimming the leading-edge tape flush with the side of the wing." loading="lazy"></a></figure>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-032.jpg"><img src="/assets/build-fixed-wing/build-032.jpg" alt="The wing laid flat with the spar glued in place and a wooden dowel glued across the centre seam for reinforcement." loading="lazy"></a></figure>
+<p>Next you will glue the wing together by folding along the leading edge double bevel. The spar and the bevel will all be on the inside of the wing. It is best to have two hot glue guns ready and extra glue sticks handy for this part.</p>
+<p>First fold the wing over along the leading edge so the foam can take the shape that it will be glued in. Make sure you understand which parts will make contact and need glue. Once you start applying glue you need to move quickly before the glue cools and sets.</p>
+<p>Start gluing the leading edge first. This glue strip just makes the leading edge stronger.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-036.jpg"><img src="/assets/build-fixed-wing/build-036.jpg" alt="Hot glue being applied along the inside of the leading edge." loading="lazy"></a></figure>
+<p>Next glue both tops of the spar.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-037.jpg"><img src="/assets/build-fixed-wing/build-037.jpg" alt="Hot glue being applied along the top of the spar." loading="lazy"></a></figure>
+<p>Finally, run a bead of glue along the trailing edge of the wing.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-038.jpg"><img src="/assets/build-fixed-wing/build-038.jpg" alt="Hot glue being applied along the trailing edge of the wing." loading="lazy"></a></figure>
+<p>Now, quickly, fold the wing over and hold in place for 2 minutes. Don’t let go early or the glue will release. Hold down every surface using either both arms, the help of another person, and/or some heavy object that can hold the foam in place without damaging the wing.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-039.jpg"><img src="/assets/build-fixed-wing/build-039.jpg" alt="The wing folded over and glued closed, lying on a cutting mat next to a tape measure." loading="lazy"></a></figure>
+<h4 id="ailerons-and-hinges">Ailerons and hinges</h4>
+<p>Now that the wing is folded over, you can cut out your ailerons. To do this measure out 350mmx50mm for each aileron. Cut out and remove what is left in the center of the trailing edge of the wing as shown below.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-040.jpg"><img src="/assets/build-fixed-wing/build-040.jpg" alt="The finished wing on a bench with both ailerons marked in red: each 350 mm long and 50 mm wide, with the centre of the trailing edge cut away between them." loading="lazy"></a></figure>
+<p>Next, flip the wing upside down. You will now score cut the ailerons to create the hinges and bevels that allow them to move freely.</p>
+<p>Starting at the trailing edge, measure forward 50 mm and draw a line along the entire 350 mm length of each aileron. Carefully score cut along this line, cutting through the top layer of paper and the foam, but do not cut through the bottom layer of paper. This remaining layer of paper will form the aileron hinge.</p>
+<p>Once the score cut is complete, fold the aileron back on itself to expose the cut edge. Using a sharp knife, carefully remove foam from the edge to create a bevel, as shown below. The bevel provides clearance so the aileron can move freely through its required range of motion while the paper hinge remains intact.</p>
+<p>Repeat this process for both ailerons.</p>
+<p>Single Bevel for the ailerons:</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-041.jpg"><img src="/assets/build-fixed-wing/build-041.jpg" alt="Diagram of a 45-degree single bevel: one angled cut through the top paper and foam, leaving the bottom paper as a hinge." loading="lazy"></a></figure>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-042.jpg"><img src="/assets/build-fixed-wing/build-042.jpg" alt="A knife cutting the single bevel along the folded-back aileron." loading="lazy"></a></figure>
+<p>Finally, finish the ailerons by creating a hot-glue hinge. This reinforces the paper hinge and helps it hold up to repeated movement and use.</p>
+<p>Start by running a small, continuous bead of hot glue along the hinge seam. While the glue is still hot, immediately use a scrap piece of foam board to scrape away the excess glue. You want to leave behind only a very thin film of hot glue along the hinge.</p>
+<p>Do not allow a thick bead of glue to remain, as this can make the hinge stiff and restrict aileron movement. The thin layer of hot glue reinforces the paper while remaining flexible, creating a simple and durable hinge.</p>
+<p>Repeat this process on both ailerons.</p>
+<p>Try to scrape all of the hot glue off. This will leave a very thin film of glue.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-043.jpg"><img src="/assets/build-fixed-wing/build-043.jpg" alt="A finger testing the aileron hinge after the excess hot glue has been scraped off." loading="lazy"></a></figure>
+<h3 id="adding-electronics-to-the-wing">Adding electronics to the wing</h3>
+<p>Now that the wing is constructed, it is time to install the servos, control horns, and pushrods. Start by locating and marking the servo mounting cutouts.</p>
+<p>Beginning at the inside corner of the aileron, measure 70 mm forward toward the leading edge of the wing. From this point, measure 15 mm outward toward the wingtip. This point will mark the bottom corner of the servo mounting cutout.</p>
+<p>From this point, draw a rectangle 12 mm wide × 25 mm tall, as shown below. This rectangle will be cut out to create the opening for the aileron servo.</p>
+<p>Repeat the same measurements on the opposite side of the wing for the second aileron servo.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-044.jpg"><img src="/assets/build-fixed-wing/build-044.jpg" alt="A ruler measuring the servo cutout position on the wing, with the 12 by 25 mm rectangle drawn in red." loading="lazy"></a></figure>
+<p>Next, cut two small openings in the bottom of the wing to provide access for the servo wires. These openings will allow you to route the wires from the servos through the inside of the wing and out the bottom.</p>
+<p>Insert each servo into its mounting cutout from the top of the wing. Feed the servo wire through the wing and pull it out through the access opening on the bottom, as shown below.</p>
+<p>Repeat this process for both aileron servos.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-045.jpg"><img src="/assets/build-fixed-wing/build-045.jpg" alt="Underside of the wing showing the two servo cutouts with servo wires coming out of them on each side of the centre seam." loading="lazy"></a></figure>
+<p>Your next goal is to connect a pushrod from the servo to a control horn on the aileron. Do not glue anything yet. The picture below is the end goal, but you need some room to make adjustments, so, again, no glue yet.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-046.jpg"><img src="/assets/build-fixed-wing/build-046.jpg" alt="The goal of this step: a servo in its cutout connected by a pushrod to a control horn on the aileron, with the measurements drawn on the wing." loading="lazy"></a></figure>
+<p>Now it is time to measure, cut and bend the pushrod wires from the servos to the control horns.</p>
+<p>You will not glue anything yet, we want to dry fit everything to make sure we have everything cut correctly.</p>
+<p>Start by making a Z bend in a length of piano wire that is long enough to reach from the servo motor to the control horn when they are both in their respective mounting locations.</p>
+<p>Then, insert the z bend into the servo control horn.</p>
+<p>Next, with the servo dry fit in place press the control horn into its slot in the aileron. Hold the pushrod next to the control horn hole and make a mark with a sharpie marker on the pushrod next to the hole in the control horn as shown here:</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-047.jpg"><img src="/assets/build-fixed-wing/build-047.jpg" alt="A pushrod held against the control horn hole so it can be marked with a Sharpie." loading="lazy"></a></figure>
+<p>Next, make a Z-bend in the pushrod with the Z-bend tool in the orientation shown here. If you don’t follow this step exactly, your Z-bend will face the wrong direction. (Pro tip: When trying to determine which way to orient the z-bend pliers, imagine that you are trying to “bite” the control horn with the pliers. This will orient the tool in the correct direction).</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-048.jpg"><img src="/assets/build-fixed-wing/build-048.jpg" alt="Z-bend pliers gripping the pushrod at the mark, oriented to bend toward the control horn." loading="lazy"></a></figure>
+<p>Now, you can insert the z-bend into the control horn and glue the control horn in place. Then, once the control horn glue has cooled, glue the servo into place. Make sure that the Aileron is in its centered and neutral position!</p>
+<p>Finished Z-Bend</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-049.jpg"><img src="/assets/build-fixed-wing/build-049.jpg" alt="The finished Z-bend on the pushrod held next to the aileron control horn." loading="lazy"></a></figure>
+<p>Trim the excess wire</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-050.jpg"><img src="/assets/build-fixed-wing/build-050.jpg" alt="Wire cutters trimming the excess pushrod wire beyond the Z-bend." loading="lazy"></a></figure>
+<p>Glue Control Horn in place</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-051.jpg"><img src="/assets/build-fixed-wing/build-051.jpg" alt="The control horn glued into its slot on the aileron with hot glue, the pushrod connected." loading="lazy"></a></figure>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-052.jpg"><img src="/assets/build-fixed-wing/build-052.jpg" alt="Close-up of the control horn glued to the aileron, with the pushrod through its hole." loading="lazy"></a></figure>
+<p>Glue the servo into place.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-053.jpg"><img src="/assets/build-fixed-wing/build-053.jpg" alt="The aileron servo glued into its cutout with hot glue, its arm connected to the pushrod, and the 15 mm and 70 mm layout marks visible." loading="lazy"></a></figure>
+<p>Repeat the servo/pushrod/control-horn installation process for the other servo.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-054.jpg"><img src="/assets/build-fixed-wing/build-054.jpg" alt="The second aileron servo installed and connected by its pushrod to the control horn." loading="lazy"></a></figure>
+<p>The correct orientation for making the z-bend at the servo.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-055.jpg"><img src="/assets/build-fixed-wing/build-055.jpg" alt="Z-bend pliers held at the servo end of the pushrod, showing the correct orientation for the bend." loading="lazy"></a></figure>
+<h3 id="wing-band-clips">Wing band clips</h3>
+<p>To prevent the rubberbands that hold the wing on to the fuselage from damaging the fuselage, install these 3D printed wing band clips onto the leading and training edge of the wing.</p>
+<p>The front clip. The side that angles upwards goes over the top of the wing.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-056.jpg"><img src="/assets/build-fixed-wing/build-056.jpg" alt="The 3D-printed front wing band clip, a folded U shape, lying on a cutting mat." loading="lazy"></a></figure>
+<p>The trailing edge clip. The part that angles up goes over the top of the wing.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-057.jpg"><img src="/assets/build-fixed-wing/build-057.jpg" alt="The 3D-printed rear (trailing edge) wing band clip lying on a cutting mat." loading="lazy"></a></figure>
+<p>Press the clips into position being careful to center them on the wing as best you can.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-058.jpg"><img src="/assets/build-fixed-wing/build-058.jpg" alt="The centre of the wing with the front and rear wing band clips placed beside it, ready to press on." loading="lazy"></a></figure>
+<p>Secure the wing clips in place with packing tape or duct tape. The image below shows the wing band clips protecting the wing from the rubberbands.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-059.jpg"><img src="/assets/build-fixed-wing/build-059.jpg" alt="The wing on the fuselage held by crossed rubber bands, with the clips taped in place protecting the wing." loading="lazy"></a></figure>
+<p>The completed wing</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-060.jpg"><img src="/assets/build-fixed-wing/build-060.jpg" alt="The completed wing on a bench, top side up, with both aileron servos and pushrods installed." loading="lazy"></a></figure>
+<p>Your wing is now complete! Set it aside in a safe place while you complete the fabrication of your tail surfaces and then the main body of your airplane.</p>
+<h2 id="elevator-horizontal-stabilizer-construction">Elevator / horizontal stabilizer construction</h2>
+<p>The empennage (tail sections) are made up of the vertical stabilizer, rudder, horizontal stabilizer, and elevator. These components can be made from foamboard or 2mm plywood. Both methods will be described below. Foamboard is faster and easier, however the plywood is stronger, more durable and longer lasting.</p>
+<h3 id="elevator-horizontal-stabilizer-foamboard-construction">Elevator / horizontal stabilizer foamboard construction</h3>
+<p>To construct the elevator from foam board use a ruler and pen, to carefully lay out the dimensions and cut lines shown in the plans.</p>
+<p>Cut completely through the foamboard along the black lines. Along the red lines, make a score cut only, cutting through the top paper layer and partially into the foam without cutting completely through the foamboard.</p>
+<p>Use a round object, such as a paper cup, to trace the rounded corners. The corner radius does not need to be exact. Rounding the corners helps prevent the elevator from catching on the ground and reduces the chance of damage during landing.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-061.jpg"><img src="/assets/build-fixed-wing/build-061.jpg" alt="Horizontal stabilizer plan: 250 mm wide by 150 mm deep with rounded corners (25 mm radius at the back, 40 mm at the front), a red hinge score line 45 mm from the back edge, and a 20 by 35 mm notch centred in the front edge." loading="lazy"></a></figure>
+<p>You can use any round object to make the radius in the corners. The radius doesn’t need to be exactly as shown, just close. The 20mm x 35mm notch is centered on the front edge of the horizontal stabilizer. The print does not have this dimension, but from the left edge of the stabilizer to the left edge of the notch is 115mm. From the right edge of the notch to the right edge of the stabilizer is also 115mm.</p>
+<p>Note that a plastic cup is used to make the corner radius. The exact radius is not important; this is mostly aesthetic, however the rounded corners hold up better when landing in tall grass.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-062.jpg"><img src="/assets/build-fixed-wing/build-062.jpg" alt="A clear plastic cup used to trace a rounded corner on the foamboard." loading="lazy"></a></figure>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-063.jpg"><img src="/assets/build-fixed-wing/build-063.jpg" alt="The foamboard horizontal stabilizer cut out, with the notch and the 115 mm measurements on each side, and the hinge line being marked." loading="lazy"></a></figure>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-064.jpg"><img src="/assets/build-fixed-wing/build-064.jpg" alt="The elevator folded back along its score line to show the bevel." loading="lazy"></a></figure>
+<p>The elevator will use a hot glue hinge. To make a hot glue hinge apply a small bead of hot glue to the hinge and scrape out the glue. You want to scrape out as much glue as possible. You are trying to leave only a very thin film. Try to scrape all of the hot glue out (which is not possible) which will leave a thin film. Let the glue dry before moving the hinge.</p>
+<p>Apply a very thin bead of hot glue to the bottom of the bevel as shown</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-065.jpg"><img src="/assets/build-fixed-wing/build-065.jpg" alt="A hot glue gun applying a thin bead of glue along the elevator hinge bevel." loading="lazy"></a></figure>
+<p>Try to scrape out as much glue as possible. You only want the thinnest film left behind. Try to scrape out all of the glue.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-043.jpg"><img src="/assets/build-fixed-wing/build-043.jpg" alt="A finger testing the aileron hinge after the excess hot glue has been scraped off." loading="lazy"></a></figure>
+<h3 id="elevator-horizontal-stabilizer-2-mm-plywood-construction">Elevator / horizontal stabilizer 2 mm plywood construction</h3>
+<p>If you are constructing the empennage from 2 mm plywood, the parts can either be CNC laser cut using the <a href="/resources/trainer-dxf-patterns/">provided DXF files</a>, or the dimensions can be laid out directly on the plywood and the parts cut using hand or power tools.</p>
+<p>The image below shows the tail components laid out on a sheet of 2 mm plywood and ready for cutting.</p>
+<p>The plywood empennage uses stitched hinges rather than the hot-glue hinges used on the foamboard version. The holes for the stitched hinges are spaced 10 mm apart and positioned 10 mm from the edge of the plywood along the entire hinge line. Keeping the holes evenly spaced and aligned helps produce a straight, flexible hinge while distributing the load across the length of the control surface.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-066.jpg"><img src="/assets/build-fixed-wing/build-066.jpg" alt="Tail parts drawn on a sheet of 2 mm plywood, with rows of hinge holes marked, next to a ruler and pencil." loading="lazy"></a></figure>
+<h4 id="stitching-the-plywood-hinges">Stitching the plywood hinges</h4>
+<p>Start by collecting your horizontal stabilizer, elevator, thread, needle and optional needle threader.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-067.jpg"><img src="/assets/build-fixed-wing/build-067.jpg" alt="The plywood horizontal stabilizer and elevator side by side with drilled hinge holes, and red thread and a needle." loading="lazy"></a></figure>
+<p>Thread the needle with your thread. A needle threader is helpful here.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-068.jpg"><img src="/assets/build-fixed-wing/build-068.jpg" alt="Hands threading the needle with a needle threader." loading="lazy"></a></figure>
+<p>Insert the needle threader through the small hole (eye) of the needle. Next, pass the thread through the large opening in the needle threader. Finally, pull the needle threader back through the eye of the needle, bringing the thread with it.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-069.jpg"><img src="/assets/build-fixed-wing/build-069.jpg" alt="The needle threader pulling the red thread through the eye of the needle." loading="lazy"></a></figure>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-070.jpg"><img src="/assets/build-fixed-wing/build-070.jpg" alt="Close-up of the thread being drawn through the needle with the threader." loading="lazy"></a></figure>
+<p>Stitching the hinge requires a strong, good-quality thread and a sewing needle. Feed the thread through the needle, double it back, and tie the two ends together with a knot. I am using a simple overhand knot.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-071.jpg"><img src="/assets/build-fixed-wing/build-071.jpg" alt="The threaded needle with the thread doubled back and knotted." loading="lazy"></a></figure>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-072.jpg"><img src="/assets/build-fixed-wing/build-072.jpg" alt="Hands tying an overhand knot in the doubled thread." loading="lazy"></a></figure>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-073.jpg"><img src="/assets/build-fixed-wing/build-073.jpg" alt="The doubled red thread with its overhand knot, lying on the plywood elevator." loading="lazy"></a></figure>
+<p>Trim the excess thread after your knot.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-074.jpg"><img src="/assets/build-fixed-wing/build-074.jpg" alt="Scissors trimming the excess thread beyond the knot." loading="lazy"></a></figure>
+<p>Begin by feeding the threaded needle down through the first hole.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-075.jpg"><img src="/assets/build-fixed-wing/build-075.jpg" alt="The needle being pushed down through the first hinge hole at the end of the stabilizer." loading="lazy"></a></figure>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-076.jpg"><img src="/assets/build-fixed-wing/build-076.jpg" alt="Close-up of the needle passing through the first hole along the edge of the plywood." loading="lazy"></a></figure>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-077.jpg"><img src="/assets/build-fixed-wing/build-077.jpg" alt="The thread pulled through the first hole, leaving a loop." loading="lazy"></a></figure>
+<p>Pass the needle between the two strands of thread and pull it tight to form a knot, as shown in the steps below.</p>
+<p>Pass the needle through the loop formed by the knot you made.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-078.jpg"><img src="/assets/build-fixed-wing/build-078.jpg" alt="The needle passing through the loop formed by the thread." loading="lazy"></a></figure>
+<p>Note the needle going through the loop.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-079.jpg"><img src="/assets/build-fixed-wing/build-079.jpg" alt="The needle and thread going through the loop." loading="lazy"></a></figure>
+<p>Needle and thread are now through the loop and being pulled tight.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-080.jpg"><img src="/assets/build-fixed-wing/build-080.jpg" alt="The needle and thread pulled through the loop and being drawn tight." loading="lazy"></a></figure>
+<p>Pull tight, making a knot around the first hole. This will anchor your thread and keep it from coming undone as you begin to stitch.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-081.jpg"><img src="/assets/build-fixed-wing/build-081.jpg" alt="The thread pulled tight, forming an anchoring knot around the first hole." loading="lazy"></a></figure>
+<p>Next, begin the stitching pattern:</p>
+<ol start="1"><li>Pass the needle down through the hole directly across from the starting hole.</li></ol>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-082.jpg"><img src="/assets/build-fixed-wing/build-082.jpg" alt="The needle going down through the hole directly across the hinge gap on the elevator." loading="lazy"></a></figure>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-083.jpg"><img src="/assets/build-fixed-wing/build-083.jpg" alt="The stabilizer and elevator laid edge to edge with the first stitch across the gap." loading="lazy"></a></figure>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-084.jpg"><img src="/assets/build-fixed-wing/build-084.jpg" alt="The first stitch crossing the hinge gap between the two plywood pieces." loading="lazy"></a></figure>
+<ol start="2"><li>Bring the needle up through the gap between the stabilizer and the control surface.</li></ol>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-085.jpg"><img src="/assets/build-fixed-wing/build-085.jpg" alt="The needle brought back up through the gap between the stabilizer and elevator." loading="lazy"></a></figure>
+<p>Pull the thread tight and remove the slack.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-086.jpg"><img src="/assets/build-fixed-wing/build-086.jpg" alt="A finger holding the stitch while the thread is pulled tight." loading="lazy"></a></figure>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-087.jpg"><img src="/assets/build-fixed-wing/build-087.jpg" alt="Close-up of the first tight stitch across the hinge line." loading="lazy"></a></figure>
+<ol start="3"><li>Pass the needle down through the next hole diagonally above the previous hole.</li></ol>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-088.jpg"><img src="/assets/build-fixed-wing/build-088.jpg" alt="The needle going down through the next hole diagonally from the previous one." loading="lazy"></a></figure>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-089.jpg"><img src="/assets/build-fixed-wing/build-089.jpg" alt="The second stitch formed diagonally across the hinge." loading="lazy"></a></figure>
+<ol start="4"><li>Again, bring the needle up through the gap between the two surfaces.</li></ol>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-090.jpg"><img src="/assets/build-fixed-wing/build-090.jpg" alt="The thread brought up through the gap again after the second stitch." loading="lazy"></a></figure>
+<p>Continue this pattern along the hinge. The needle should always pass down through a drilled hole and come back up through the gap between the stabilizer and control surface. Keep the two surfaces aligned and as close together as possible while pulling each stitch snug.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-091.jpg"><img src="/assets/build-fixed-wing/build-091.jpg" alt="The stitching pattern continuing down the hinge line." loading="lazy"></a></figure>
+<p>The entire hinge does not need to be stitched continuously. Stitch approximately five rows of holes near each end of the elevator and four or five rows near the center, as shown below. Once you reach the end of each stitched section, double back over the same holes using the same stitching pattern. This creates a strong, secure hinge while still allowing the control surface to move freely.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-092.jpg"><img src="/assets/build-fixed-wing/build-092.jpg" alt="About five rows of stitches completed at one end of the hinge." loading="lazy"></a></figure>
+<p>The stitch is being repeated in reverse for a stronger hinge.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-093.jpg"><img src="/assets/build-fixed-wing/build-093.jpg" alt="The stitch being repeated in reverse over the same holes for a stronger hinge." loading="lazy"></a></figure>
+<p>The stitch ends where it started.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-094.jpg"><img src="/assets/build-fixed-wing/build-094.jpg" alt="A completed section of crossed (X-pattern) stitches ending where it started." loading="lazy"></a></figure>
+<p>Finish each stitched section on the bottom side of the stabilizer/elevator assembly, tie the thread securely, and trim off the excess as shown in the steps below:</p>
+<p>Flip the assembly over to tie the stitch.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-095.jpg"><img src="/assets/build-fixed-wing/build-095.jpg" alt="The stabilizer and elevator flipped over to tie off the stitching underneath." loading="lazy"></a></figure>
+<p>Slip the needle under one of your end stitches.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-096.jpg"><img src="/assets/build-fixed-wing/build-096.jpg" alt="The needle slipped under one of the end stitches on the underside." loading="lazy"></a></figure>
+<p>Pull the needle through then pass through the loop to make a simple knot.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-097.jpg"><img src="/assets/build-fixed-wing/build-097.jpg" alt="The needle passing through the loop under an end stitch to tie a knot." loading="lazy"></a></figure>
+<p>Pull the knot tight.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-098.jpg"><img src="/assets/build-fixed-wing/build-098.jpg" alt="A finger holding the knot while the thread is pulled tight." loading="lazy"></a></figure>
+<p>A simple overhand knot is all you need. Make two or three if you like to lock this end in.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-099.jpg"><img src="/assets/build-fixed-wing/build-099.jpg" alt="The finished knot at the end of the stitched section on the underside." loading="lazy"></a></figure>
+<p>Repeat this process on the other end of the elevator/stabilizer.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-100.jpg"><img src="/assets/build-fixed-wing/build-100.jpg" alt="The plywood stabilizer and elevator with stitched sections at both ends of the hinge." loading="lazy"></a></figure>
+<p>Then finish by stitching 4-5 rows in the center of the elevator/stabilizer.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-101.jpg"><img src="/assets/build-fixed-wing/build-101.jpg" alt="The plywood horizontal tail with stitched sections at both ends and in the centre of the hinge." loading="lazy"></a></figure>
+<p>Finally, place a small drop of thin CA (super glue) into each stitched hole to secure the thread. Be careful not to allow CA to wick into the gap between the stabilizer and control surface, as this could glue the hinge together. Allow the CA to cure completely before moving or testing the control surface.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-102.jpg"><img src="/assets/build-fixed-wing/build-102.jpg" alt="A drop of thin super glue (CA) being applied to the stitched holes." loading="lazy"></a></figure>
+<p>The finished hinge.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-103.jpg"><img src="/assets/build-fixed-wing/build-103.jpg" alt="The finished plywood horizontal stabilizer and elevator joined by three stitched hinge sections." loading="lazy"></a></figure>
+<h3 id="rudder-vertical-stabilizer-foamboard-construction">Rudder / Vertical Stabilizer Foamboard Construction</h3>
+<p>If using a conventional tail design follow these steps. If using a ruddervator (v-tail) design skip to the V-Tail construction section)</p>
+<p>Construct the rudder from foam board using the same process as the elevator. Use a ruler and pen to lay out the dimensions and cut lines shown in the plans.</p>
+<p>Cut completely through the foamboard along the black lines. Along the red line, make a score cut only, cutting through the top paper layer and partially into the foam without cutting completely through the foamboard.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-104.jpg"><img src="/assets/build-fixed-wing/build-104.jpg" alt="Vertical stabilizer and rudder plan: a sloped fin 150 mm tall and 150 mm long at the base, with a 45 mm wide rudder behind a red hinge line and a 20 mm dimension at the top." loading="lazy"></a></figure>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-105.jpg"><img src="/assets/build-fixed-wing/build-105.jpg" alt="The fin and rudder outline drawn on foamboard with a ruler and pen, labelled 150 mm." loading="lazy"></a></figure>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-106.jpg"><img src="/assets/build-fixed-wing/build-106.jpg" alt="Hot glue being applied to the rudder hinge on the foamboard fin." loading="lazy"></a></figure>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-043.jpg"><img src="/assets/build-fixed-wing/build-043.jpg" alt="A finger testing the aileron hinge after the excess hot glue has been scraped off." loading="lazy"></a></figure>
+<h3 id="vertical-stabilizer-and-rudder-2-mm-plywood-construction">Vertical stabilizer and rudder 2 mm plywood construction</h3>
+<p>If constructing the vertical stabilizer and rudder from 2 mm plywood, lay out the parts on the plywood as shown below, or CNC laser cut them using the <a href="/resources/trainer-dxf-patterns/">provided DXF files</a>.</p>
+<p>As with the horizontal stabilizer and elevator, holes must be drilled for the stitched hinge. The stitching holes are spaced 10 mm apart and positioned 10 mm from the hinge line. Keep the holes evenly spaced and aligned along both the vertical stabilizer and rudder so that the corresponding holes line up when the hinge is stitched.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-066.jpg"><img src="/assets/build-fixed-wing/build-066.jpg" alt="Tail parts drawn on a sheet of 2 mm plywood, with rows of hinge holes marked, next to a ruler and pencil." loading="lazy"></a></figure>
+<h4 id="stitching-the-rudder-hinge">Stitching the rudder hinge</h4>
+<p>Stitch the rudder hinge using the same procedure described above for the elevator. It is not necessary to stitch along the entire length of the hinge. Approximately five rows of stitching are generally sufficient to create a strong hinge, although there is no harm in stitching the entire hinge if additional reinforcement is desired.</p>
+<p>A completed vertical stabilizer/rudder assembly with a stitched hinge.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-107.jpg"><img src="/assets/build-fixed-wing/build-107.jpg" alt="The plywood vertical stabilizer and rudder joined by stitched hinge sections." loading="lazy"></a></figure>
+<p>Once the rudder and elevator hinges are complete, the plywood empennage is ready for installation. The completed 2 mm plywood empennage weighs approximately 55 grams, providing a durable yet lightweight solution for the aircraft&#x27;s tail surfaces.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-108.jpg"><img src="/assets/build-fixed-wing/build-108.jpg" alt="The completed plywood tail surfaces on a kitchen scale, which reads about 55 grams." loading="lazy"></a></figure>
+<h3 id="v-tail-ruddervator-option">V-tail (ruddervator) option</h3>
+<p><a href="https://drive.google.com/file/d/1f6oephJ1WmICY01foou-rccTr5BEzUht/view?usp=drive_link">Ruddervator DXF file for CNC cutting</a></p>
+<h3 id="traditional-tail-vs-v-tail">Traditional tail vs. V-tail</h3>
+<p>Testing showed that the traditional tail configuration provided the greatest overall stability for this airplane. However, a V-tail configuration was also successfully flight tested and offers several potential advantages. A V-tail can reduce the overall weight of the empennage and positions the tail surfaces farther from the ground, helping protect them from damage during takeoff and landing.</p>
+<p>The V-tail does involve some tradeoffs. Because the two ruddervators must provide both pitch and yaw control, the available control authority in each axis is reduced compared with separate elevators and a conventional rudder of similar size. Proper transmitter mixing is also required so that the ruddervators move together for pitch commands and differentially for yaw commands.</p>
+<p>For a trainer where stability and predictable handling are the primary goals, the traditional tail configuration is preferred. The V-tail remains a viable alternative when reduced weight and increased ground clearance are priorities.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-109.jpg"><img src="/assets/build-fixed-wing/build-109.jpg" alt="Outline of the V-tail parts: two ruddervators and their two control surfaces, each with a servo-horn slot." loading="lazy"></a></figure>
+<h3 id="v-tail-assembly">V-tail assembly</h3>
+<p>The V-tail assembly should be constructed from 2 mm (⅛ in.) hobby-grade plywood or a similar lightweight material. If you have access to a CNC router or CNC laser, the parts can be cut using the <a href="https://drive.google.com/file/d/1f6oephJ1WmICY01foou-rccTr5BEzUht/view?usp=drive_link">DXF files found here</a>. The V-tail can also be made from foam board using the same construction techniques described in the traditional T-tail configuration.</p>
+<p>If CNC equipment is not available, the parts can also be cut by hand using common hand tools or power tools such as a bandsaw or scroll saw. After cutting, lightly sand the edges to remove any rough areas and ensure that the mating surfaces fit together properly before assembly.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-110.jpg"><img src="/assets/build-fixed-wing/build-110.jpg" alt="Dimensioned V-tail plan: two 150 by 150 mm surfaces with 30 mm rounded corners, and two 150 mm wide control surfaces with 20 mm rounded corners and 2 by 20 mm horn slots." loading="lazy"></a></figure>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-111.jpg"><img src="/assets/build-fixed-wing/build-111.jpg" alt="Exploded 3D render of the V-tail assembly: two ruddervators, their servo bracket with two servos, pushrods, control horns, and the V-tail clip." loading="lazy"></a></figure>
+<h2 id="assembling-the-nose">Assembling the nose</h2>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-112.jpg"><img src="/assets/build-fixed-wing/build-112.jpg" alt="Exploded 3D render of the nose: propeller, propeller adapter, motor, X-plate, motor mount, mount nut, and nose." loading="lazy"></a></figure>
+<p>The nose of the airplane is assembled by first fastening the motor to the motor mount. The FliteTest motor comes with a metal X plate. Using the screws provided, connect the motor to the X bracket as shown below.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-113.jpg"><img src="/assets/build-fixed-wing/build-113.jpg" alt="A brushless motor beside its metal X-plate and screws." loading="lazy"></a></figure>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-114.jpg"><img src="/assets/build-fixed-wing/build-114.jpg" alt="Nose parts and tools laid out: motor, X-plate, screws, printed motor mount and nut, pliers, and a screwdriver." loading="lazy"></a></figure>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-115.jpg"><img src="/assets/build-fixed-wing/build-115.jpg" alt="The motor wires passed through the printed motor mount." loading="lazy"></a></figure>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-116.jpg"><img src="/assets/build-fixed-wing/build-116.jpg" alt="The motor bolted to the X-plate." loading="lazy"></a></figure>
+<h2 id="final-assembly-of-the-airplane">Final assembly of the airplane</h2>
+<p>Now that all of the sub assemblies are built, it is time to assemble the rest of the aircraft and connect all of the electronics. We will start by assembling the main body of the airplane, then, we will install the servos, pushrods and control horns.</p>
+<p>Gather together the 3D printed parts including the motor assembly (completed in the last step), the nose, motor mount nut, fuselage, rear wing support, servo mount, empennage clip, carbon fiber rod and your M3 and M5 hardware.</p>
+<p>This image shows the airplane main components before and after assembly.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-117.jpg"><img src="/assets/build-fixed-wing/build-117.jpg" alt="The airplane&#x27;s main printed components laid out before assembly, and the assembled fuselage below them." loading="lazy"></a></figure>
+<p>Slide the carbon fiber rod into the main fuselage section until it can’t go any further.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-118.jpg"><img src="/assets/build-fixed-wing/build-118.jpg" alt="The fuselage with the carbon-fiber rod inserted and a callout: &#x27;Drill through the carbon fiber rod with a 3.5mm drill bit.&#x27;" loading="lazy"></a></figure>
+<p>Secure in place with an M3 x 55mm bolt and nut. Then insert an M5 x30mm Hex bolt as a wing-rubber-band mounting point into the fore most hole as shown below. Add another M5 x 30mm hex bolt to the opposite side of the fuselage. The M5 bolts should self tap into the 3D print.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-119.jpg"><img src="/assets/build-fixed-wing/build-119.jpg" alt="An M5 bolt being screwed into the side of the fuselage as a rubber-band mounting point." loading="lazy"></a></figure>
+<p>Slide the rear wing support into position on the carbon fiber tube. Its position is temporary for now until we determine the center of gravity and final location of the wing.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-120.jpg"><img src="/assets/build-fixed-wing/build-120.jpg" alt="The rear wing support slid onto the carbon-fiber tube behind the fuselage." loading="lazy"></a></figure>
+<p>Next, slide the servo mount bracket and empennage tail clip onto the end of the carbon fiber rod. The end of the empennage clip should be even with the end of the carbon fiber rod.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-121.jpg"><img src="/assets/build-fixed-wing/build-121.jpg" alt="The servo mount bracket and empennage tail clip slid onto the end of the carbon-fiber rod." loading="lazy"></a></figure>
+<p>Next, drill out the bolt holes for the empennage tail clip with an 3.5 mm drill bit. (Caution, carbon fiber dust is very toxic! Use breathing protection and properly clean up your carbon fiber dust!) Secure in place with an M3x20mm hex bolt and M3 nut.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-122.jpg"><img src="/assets/build-fixed-wing/build-122.jpg" alt="A cordless drill drilling the bolt hole through the empennage tail clip and carbon-fiber rod." loading="lazy"></a></figure>
+<p>Next, drill out the bolt hole for your servo bracket with an 3.5 mm drill bit. Again, use protection from the carbon fiber dust! Secure in place with an M3x20mm hex bolt and M3 nut.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-123.jpg"><img src="/assets/build-fixed-wing/build-123.jpg" alt="The drill making the bolt hole through the servo bracket and carbon-fiber rod." loading="lazy"></a></figure>
+<p>Insert an M3 x 20mm hex bolt and secure with an M3 nut.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-124.jpg"><img src="/assets/build-fixed-wing/build-124.jpg" alt="An M3 bolt being inserted through the servo bracket." loading="lazy"></a></figure>
+<p>Install the motor mount into the nose of the airplane and secure it with the motor mount nut. Note, the motor mount nut is a reverse thread. This prevents the nut from loosening during flight due to the motor’s rotation.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-125.jpg"><img src="/assets/build-fixed-wing/build-125.jpg" alt="The motor and motor mount fitted into the translucent printed nose." loading="lazy"></a></figure>
+<p>Install the nose into the fuselage. The pieces are tightly keyed and only fit one way. It takes a little care and manipulation but they will slide together.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-126.jpg"><img src="/assets/build-fixed-wing/build-126.jpg" alt="The airplane&#x27;s printed parts on a cutting mat with the fuselage, carbon-fiber rod, and tail clips assembled beside a tape measure." loading="lazy"></a></figure>
+<p>The nose installed into the fuselage.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-127.jpg"><img src="/assets/build-fixed-wing/build-127.jpg" alt="The nose installed into the front of the fuselage." loading="lazy"></a></figure>
+<p>Secure the nose with M5x14mm Hex bolts. These should self-tap into the 3D print.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-128.jpg"><img src="/assets/build-fixed-wing/build-128.jpg" alt="A hex key tightening an M5 bolt that secures the nose to the fuselage." loading="lazy"></a></figure>
+<p>The airplane is now roughly assembled.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-126.jpg"><img src="/assets/build-fixed-wing/build-126.jpg" alt="The airplane&#x27;s printed parts on a cutting mat with the fuselage, carbon-fiber rod, and tail clips assembled beside a tape measure." loading="lazy"></a></figure>
+<p>The empennage will now be glued into the empennage tail clips. I prefer to use hot glue for this step because it has a little flexibility during a crash and is more likely to break free without damaging the wooden tail assembly. You can use super glue or epoxy if you prefer; however, these adhesives create a more rigid joint and may result in more damage to the tail during a crash. If you are using the foamboard tail, you must use hot glue.</p>
+<p>Place a bead of hot glue along the seam in the tail clip, then press the horizontal stabilizer firmly into position. You can also run a small bead of glue around the outside of the joint for a little additional strength.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-129.jpg"><img src="/assets/build-fixed-wing/build-129.jpg" alt="A hot glue gun running glue along the seam in the tail clip on the plywood horizontal stabilizer." loading="lazy"></a></figure>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-130.jpg"><img src="/assets/build-fixed-wing/build-130.jpg" alt="The horizontal stabilizer pressed into the tail clip." loading="lazy"></a></figure>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-131.jpg"><img src="/assets/build-fixed-wing/build-131.jpg" alt="Hot glue run around the outside of the tail clip joint." loading="lazy"></a></figure>
+<p>Next, place a bead of glue along the top surface of the vertical stabilizer and glue the vertical stabilizer into position. Position the vertical stabilizer as far forward as possible without blocking access to the M3 bolt that secures the empennage clip.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-132.jpg"><img src="/assets/build-fixed-wing/build-132.jpg" alt="Hot glue applied along the top of the horizontal stabilizer where the vertical stabilizer will sit." loading="lazy"></a></figure>
+<p>Be sure to leave this bolt and nut accessible. If the empennage is damaged in a crash, you will need access to them so the damaged tail section can be removed and replaced.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-133.jpg"><img src="/assets/build-fixed-wing/build-133.jpg" alt="The vertical stabilizer glued in place, with a red arrow pointing to the M3 bolt that must stay accessible." loading="lazy"></a></figure>
+<h2 id="installing-the-servos-and-pushrods">Installing the servos and pushrods</h2>
+<p>The assembly of the tail servos and pushrods shown here uses the plywood tail option; however, the installation method is the same for a foamboard tail. The only difference is that you will need to print the correct empennage tail clip for your specific tail configuration: foamboard or plywood, and V-tail or T-tail. The plywood T-tail configuration is shown here.</p>
+<p>Start by mounting two 9-gram metal-gear servos into the servo mounting bracket. Secure each servo using two of the mounting screws that came with the servos.</p>
+<p>Install a servo arm on each servo. Position one servo arm at approximately the 3 o’clock position and the other at the 9 o’clock position, as shown below. You can leave the set screws that secure the servo control arm out for now as you will need to remove the arm later. In the pictures below I have already installed the set screws.</p>
+<p>Next, take a length of pushrod wire and make a z-bend on one end if it doesn’t already have one. Insert the z-bend into the servo control arm as shown.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-134.jpg"><img src="/assets/build-fixed-wing/build-134.jpg" alt="The tail servos in their bracket with a servo arm and a Z-bend pushrod installed." loading="lazy"></a></figure>
+<p>Install the two control horns on the rudder and elevator using hot glue. Make sure the side of the control horn with the hole is closest to the hinge of the rudder and elevator.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-135.jpg"><img src="/assets/build-fixed-wing/build-135.jpg" alt="A control horn being given a dab of hot glue before installation." loading="lazy"></a></figure>
+<p>Make sure to place the control horn hole closest to the hinge.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-136.jpg"><img src="/assets/build-fixed-wing/build-136.jpg" alt="A control horn being pressed onto the elevator with its hole closest to the hinge." loading="lazy"></a></figure>
+<p>Make sure that the rudder control horn is not on the same side as the elevator control horn.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-137.jpg"><img src="/assets/build-fixed-wing/build-137.jpg" alt="The rudder and elevator control horns installed on opposite sides of the tail." loading="lazy"></a></figure>
+<p>Both control horns successfully installed.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-138.jpg"><img src="/assets/build-fixed-wing/build-138.jpg" alt="Both tail control horns installed on the plywood tail." loading="lazy"></a></figure>
+<p>Next, lay the pushrod alongside the elevator control horn and use a Sharpie to mark the pushrod directly above the hole in the control horn. Make sure the elevator is in its neutral position when making this mark. This will ensure the pushrod is the correct length when it is connected to the servo.</p>
+<p>Using your z-bend pliers, make your z-bend at the mark you just made. Position the mark over the “V” notch in the pliers.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-139.jpg"><img src="/assets/build-fixed-wing/build-139.jpg" alt="Z-bend pliers gripping the pushrod, with a red arrow showing the mark lined up with the V notch." loading="lazy"></a></figure>
+<p>Make sure you orient the pliers as shown below so that your z-bend comes out in the correct orientation.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-140.jpg"><img src="/assets/build-fixed-wing/build-140.jpg" alt="Z-bend pliers bending the elevator pushrod next to the control horn." loading="lazy"></a></figure>
+<p>Remove the control arm from the servo so that you can install the pushrod into the control arm on the elevator as shown.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-141.jpg"><img src="/assets/build-fixed-wing/build-141.jpg" alt="The elevator pushrod connected to its control horn with the elevator at neutral." loading="lazy"></a></figure>
+<p>Finally, reinstall the control arm onto the servo making sure to position it so the elevator is as close as possible to its neutral position. Now you can secure the servo control arm with the set screw provided with your servo.</p>
+<p>Repeat the process for the rudder. Start by installing the pushrod into the servo, then mark and bend the opposite end of the pushrod for the rudder control horn. Make sure to line your mark up with the notch in the z-bend pliers and make sure the pliers are in the orientation shown below to make the z-bend for the rudder.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-142.jpg"><img src="/assets/build-fixed-wing/build-142.jpg" alt="Z-bend pliers making the bend for the rudder pushrod." loading="lazy"></a></figure>
+<p>The rudder control horn and pushrod successfully installed.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-143.jpg"><img src="/assets/build-fixed-wing/build-143.jpg" alt="The rudder pushrod connected to the rudder control horn." loading="lazy"></a></figure>
+<h2 id="routing-wires-and-testing-controls">Routing wires and testing controls</h2>
+<p>Route the servo wires from the tail forward along the fuselage and secure them to the carbon-fiber rod with zip ties. Leave a small amount of slack in the wires so they are not under tension. You want the connectors to be able to unplug during a crash rather than pulling apart or damaging the servo wires.</p>
+<p>From the cargo bay, route servo extension cables through the fuselage to the rear of the airplane and secure them to the carbon-fiber rod with zip ties. Also route a Y-harness from the cargo bay to the rear of the fuselage for the aileron servos.</p>
+<p>Bring the throttle lead from the ESC (Electronic Speed Controller) forward into the cargo bay. Route the XT60 battery connector from the ESC under the battery bay and into the rear of the airplane where it can be accessed for connecting the battery.</p>
+<p>Connect the throttle, aileron, elevator, and rudder leads to their appropriate channels on the receiver. At the rear of the airplane, connect the aileron, elevator, and rudder servos to the extension cables you previously installed.</p>
+<p>When connecting the servo leads, make sure the connectors are oriented correctly and that the wire colors align on both sides of each connection. Do not force a connector if it does not slide together easily.</p>
+<p>Install the wing onto the fuselage using rubber bands, crisscrossing them over the top of the wing as shown. Typically, three to four rubber bands per side are enough to hold the wing securely in place.</p>
+<p>The wing should be firmly attached, but still able to break free from the fuselage during a hard landing or crash. The rubber bands are an intentional weak link in the airplane. It is much better to snap a few inexpensive rubber bands than to damage the wing and have to build a new one.</p>
+<p>Do not use more rubber bands than necessary. The goal is to hold the wing securely during normal flight while still allowing it to separate when subjected to a significant impact.</p>
+<p>Crisscross your rubber bands as shown below. A total of 6 (3 per side) is usually good enough depending on the thickness of your rubberbands.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-059.jpg"><img src="/assets/build-fixed-wing/build-059.jpg" alt="The wing on the fuselage held by crossed rubber bands, with the clips taped in place protecting the wing." loading="lazy"></a></figure>
+<h3 id="testing-the-controls">Testing the controls</h3>
+<p>Your airplane is now ready for a flight control test, installation of the propeller, and its first flight!</p>
+<p class="notice"><strong>Propeller safety</strong>Do not install the propeller until you are outside and ready to fly. A spinning propeller can cause serious injury. Once the propeller is installed, always treat the airplane as if the motor could start unexpectedly. Keep your hands, clothing, tools, and other people clear of the propeller at all times.</p>
+<p>Before installing the propeller, complete your flight control checks and make sure all control surfaces move in the correct direction. Once everything has been checked and you are ready to fly, install the propeller and use extreme caution whenever the aircraft is powered.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-144.jpg"><img src="/assets/build-fixed-wing/build-144.jpg" alt="The finished trainer airplane on grass beside a Spektrum transmitter, with the propeller lying next to it." loading="lazy"></a></figure>
+<p>Connect all of your servo wires to your receiver. Make sure to connect them in the right order and with the signal wire facing up. Moving left to right it should be throttle, aileron, elevator, rudder.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-145.jpg"><img src="/assets/build-fixed-wing/build-145.jpg" alt="Servo leads being plugged into the receiver inside the fuselage&#x27;s cargo bay." loading="lazy"></a></figure>
+<p>If you have not already done so, <a href="/resources/spektrum-binding-video/">bind</a> your transmitter to your receiver.</p>
+<p>Check the direction of each control surface and reverse directions if any control surfaces move in the wrong direction.</p>
+<p>Here is a chart to help you check your control directions.</p>
+<figure class="textbook-figure"><a href="/assets/build-fixed-wing/build-146.jpg"><img src="/assets/build-fixed-wing/build-146.jpg" alt="A Spektrum DX8e transmitter with green arrows showing the left stick for throttle (up and down) and yaw (side to side), and the right stick for pitch (up and down) and roll (side to side)." loading="lazy"></a></figure>
+<p>All control movements are as viewed from the back of the aircraft.</p>
+<p class="notice"><strong>Safety</strong>DO NOT INSTALL A PROPELLER YET!</p>
+<div class="textbook-table activity-table" role="region" aria-label="Control direction check (viewed from the back of the airplane)" tabindex="0"><table><caption>Control direction check (viewed from the back of the airplane)</caption><thead><tr><th scope="col">Transmitter Control Stick</th><th scope="col">Control Surface</th><th scope="col">Expected Movement</th><th scope="col">Axis of Control</th></tr></thead><tbody><tr><th scope="row">Move right stick right</th><td>Ailerons</td><td>Right Aileron up left aileron down</td><td>Roll</td></tr><tr><th scope="row">Move right stick left</th><td>Ailerons</td><td>Left aileron up right aileron down</td><td>Roll</td></tr><tr><th scope="row">Move right stick forward (up)</th><td>elevator</td><td>Elevator down</td><td>Pitch</td></tr><tr><th scope="row">Move right stick back (down)</th><td>elevator</td><td>Elevator up</td><td>Pitch</td></tr><tr><th scope="row">Move left stick right</th><td>rudder</td><td>Rudder moves right</td><td>Yaw</td></tr><tr><th scope="row">Move left stick left</th><td>rudder</td><td>Rudder moves left</td><td>Yaw</td></tr><tr><th scope="row">Move left stick forward</th><td>motor</td><td>Motor spins (clockwise)</td><td>Thrust</td></tr></tbody></table></div>
+<h3 id="transmitter-settings">Transmitter settings</h3>
+<p>Once you have all of the control surfaces working properly I recommend the following setting on the transmitter.</p>
+<p>Assign <a href="/resources/spektrum-model-setup-video/">dual rates</a> and exponential to a switch (on the Spektrum Dx6e I use switch D)</p>
+<div class="textbook-table activity-table" role="region" aria-label="Recommended dual rates and expo" tabindex="0"><table><caption>Recommended dual rates and expo</caption><thead><tr><th scope="col">Control Surface</th><th scope="col">Switch Position</th><th scope="col">Rate</th><th scope="col">Expo</th></tr></thead><tbody><tr><th scope="row">Aileron</th><td>down</td><td>50%</td><td>40%</td></tr><tr><th scope="row">Aileron</th><td>middle</td><td>75%</td><td>40%</td></tr><tr><th scope="row">Aileron</th><td>up</td><td>100%</td><td>40%</td></tr><tr><th scope="row">Elevator</th><td>down</td><td>50%</td><td>40%</td></tr><tr><th scope="row">Elevator</th><td>middle</td><td>75%</td><td>40%</td></tr><tr><th scope="row">Elevator</th><td>up</td><td>100%</td><td>40%</td></tr><tr><th scope="row">Rudder</th><td>down</td><td>50%</td><td>40%</td></tr><tr><th scope="row">Rudder</th><td>middle</td><td>75%</td><td>40%</td></tr><tr><th scope="row">Rudder</th><td>up</td><td>100%</td><td>40%</td></tr></tbody></table></div>
+<p>I also suggest adding mixing to a switch. On the Spektrum DX6e I use switch C. Down is off and up is on. I mix 50% aileron and rudder.</p>
+<h3 id="installing-the-propeller">Installing the propeller</h3>
+<p>Finally, install a propeller. A 9” x 4.7 pitch slow fly prop works very well. Only install the propeller when you are ready to go outside and fly. Propellers are dangerous and can cause serious injury so exercise great care around the airplane once the propeller has been bolted on. Make sure the propeller nut is secure.</p>
+<p>Your trainer airplane should now be ready to fly! If flying for the first time without a trained pilot to help you I suggest you refer to the <a href="/learn-to-fly/">piloting remote aircraft</a> section in this book to help you get started. Good luck!</p>
+<h2 id="terminology">Terminology</h2>
+<dl class="key-terms">
+<dt>Ailerons</dt><dd>The movable control surfaces at the outer rear edge of the wing that control roll. Ailerons move opposite one another; when one goes up the other goes down.</dd>
+<dt>Control Horn</dt><dd>A device that changes the direction of motion, usually from a pushrod to a control surface such as an elevator, rudder or aileron.</dd>
+<dt>Durometer</dt><dd>A measurement of the hardness or softness of a material. The higher the number the harder the material.</dd>
+<dt>Elevator</dt><dd>The movable horizontal control surface attached to the horizontal stabilizer. The elevator controls the pitch of an aircraft.</dd>
+<dt>Electronic Speed Control (ESC)</dt><dd>A device that takes PWM (Pulse width Modulation) inputs from a receiver and generates direction and speed outputs for a motor. ESCs also use PWM, but to control speed. An ESC essentially turns a motor on and off to control speed.</dd>
+<dt>Empennage</dt><dd>The rear part of an airplane or airship, usually comprising the stabilizer, elevator, vertical fin, and rudder.</dd>
+<dt>Horizontal stabilizer</dt><dd>The fixed horizontal control surface that keeps an aircraft stable in the pitch axis.</dd>
+<dt>Motor</dt><dd>May be brushed or brushless but are typically brushless on modern RC aircraft. Brushless motors have 3 wires and need an ESC to generate the control pulses required to rotate the motor shaft.</dd>
+<dt>Pitch</dt><dd>The rotational movement of the aircraft around its lateral axis (an imaginary line extending from wingtip to wingtip). It essentially controls the upward or downward movement of the aircraft&#x27;s nose.</dd>
+<dt>Propeller</dt><dd>an airfoil with twist propellers is essentially a spinning wing that generates thrust. The angle of attack changes from the propeller root to propeller tip.</dd>
+<dt>Pushrod</dt><dd>A metal device used to transfer energy from a servo to a control horn for the purpose of moving a control surface.</dd>
+<dt>Receiver</dt><dd>A device that takes wireless input from a transmitter and generates PWM (Pulse Width modulation) outputs to drive servos or Electronic Speed Controllers (ESCs). Most modern receivers operate in the 2.4 GHz range.</dd>
+<dt>Roll</dt><dd>The rotation of an airplane around its longitudinal axis, which runs from the nose to the tail. It&#x27;s the side-to-side tilting motion of the wings, where one wing goes up while the other goes down. This movement is primarily controlled by the ailerons, located on the trailing edge of the wings.</dd>
+<dt>Rudder</dt><dd>The movable vertical control surface attached to the vertical stabilizer. The rudder controls the yaw of an aircraft.</dd>
+<dt>Servo</dt><dd>An electro-mechanical device that uses a small DC motor, gears, and an electronic control circuit to move control surfaces on an aircraft or other radio controlled device.</dd>
+<dt>Transmitter</dt><dd>A device that takes input from the user, usually in the form of joysticks, buttons, and/or switches, to send wireless controls to a receiver. Most Modern RC transmitters transmit in the 2.4 GHz range.</dd>
+<dt>Vertical stabilizer</dt><dd>The fixed vertical surface that keeps an aircraft stable in the yaw axis.</dd>
+<dt>Yaw</dt><dd>The rotation of the aircraft around its vertical axis, causing the nose of the plane to move left or right. It&#x27;s one of the three primary axes of rotation, along with pitch and roll. Yaw is primarily controlled by the rudder on the vertical tail fin.</dd>
+</dl>
+<h2 id="activities-and-assessments">Lab activity, review questions, and skills checksheet</h2>
+<p>In the printed lab manual, the lab activity, review questions, and skills checksheet follow the build instructions. On this website they are part of the course units:</p>
+<ul>
+<li><a href="/resources/fw-control-surface-lab/">Lab activity: Aircraft control surface construction</a> (Unit 4)</li>
+<li>Review questions: in Step 4 of every unit</li>
+<li>Skills checksheet: in Unit 6, with each unit’s skills listed for sign-off in Step 3</li>
+</ul>
