@@ -1,0 +1,13 @@
+---
+layout: layouts/base.njk
+eleventyExcludeFromCollections: true
+title: Building a Fixed-Wing UAS
+description: Build the ASCEND Trainer Airplane in six units, from printing the parts to the preflight control check. Each unit pairs a video lesson with the build instructions, a build step or lab with instructor sign-off, and review questions.
+permalink: /build-fixed-wing/
+---
+{% set course = courses.buildFixedWing %}
+<div class="container">
+<nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/uas/">UAS</a><span aria-hidden="true">/</span><span aria-current="page">{{ course.title }}</span></nav>
+<header class="section-hero"><span class="eyebrow">LEARN</span><div class="section-hero-row"><div><h1>{{ course.title }}</h1><p class="lead">{{ description }}</p></div><span class="section-symbol" aria-hidden="true"><svg><use href="#i-aircraft"/></svg></span></div></header>
+{% include "components/course-overview.njk" %}
+</div>

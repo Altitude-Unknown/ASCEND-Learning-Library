@@ -20,6 +20,8 @@ resourceIds:
 
 ## Start with the build guide
 
+To build it step by step with lessons, review questions, and instructor sign-off, take the [Building a Fixed-Wing UAS course](/build-fixed-wing/).
+
 Mike Walach’s illustrated instructions cover the parts list, foamboard wing, conventional and V-tail options, optional landing gear, and final assembly. The project combines printed parts with foamboard, plywood, and a carbon-fiber tube.
 
 ## Find the right files

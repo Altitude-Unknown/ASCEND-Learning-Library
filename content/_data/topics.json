@@ -58,6 +58,11 @@
         "title": "Learning to Fly a UAS",
         "url": "/learn-to-fly/",
         "description": "Learn to fly airplanes and multirotors in six units, from simulator practice to your first solo. Each unit pairs a reading with a lab or practice plan and review questions; video lessons are coming soon."
+      },
+      {
+        "title": "Building a Fixed-Wing UAS",
+        "url": "/build-fixed-wing/",
+        "description": "Build the ASCEND Trainer Airplane in six units, from printing the parts to the preflight control check. Each unit pairs the build instructions with a build step or lab, instructor sign-off, and review questions; video lessons are coming soon."
       }
     ],
     "description": "Explore aircraft design, electronics, flight systems, and scientific missions.",
