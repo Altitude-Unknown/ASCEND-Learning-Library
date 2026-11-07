@@ -47,6 +47,7 @@ run `python3 -m http.server 8080 --directory _site` after building.
   a trainer build guide, grouped aircraft design files, and future placeholders.
 - Eight browser-readable PDF copies plus original DOCX/PPTX files.
 - Trainer and fixed-wing research UAS project pages with STL, DXF, and Fusion files.
+- An Electronic Designs section with complete PCB kits (Fusion, schematic, board, BOM, Gerbers).
 - Web-first resource pages with optional contributor, source, and review metadata.
 - Resource browsing by collection, subject, platform, activity, type, and audience.
 - Site-wide static full-text search, including metadata filters.

@@ -28,7 +28,7 @@
 .provenance{margin:30px 0;padding:22px;border:1px solid var(--line);border-radius:var(--radius);background:var(--mint)}.provenance h2{font-size:1.6rem}.provenance dl{margin-bottom:0}.provenance dt{font-weight:650;margin-top:12px}.provenance dd{margin:3px 0 0;overflow-wrap:anywhere}.provenance ul{list-style:none;padding:0;margin:0}
 
 /* Keep setup commands readable on narrow resource pages. */
-.prose pre{white-space:pre-wrap;overflow-wrap:anywhere}
+.prose pre{white-space:pre-wrap;overflow-wrap:anywhere}.prose code{overflow-wrap:anywhere}
 
 .community-header-link{white-space:nowrap}.community-header-link[aria-current]{border-bottom:2px solid var(--green)}
 @media(max-width:620px){.header-inner{flex-wrap:wrap}.header-actions{width:100%;justify-content:flex-end}.community-header-link{margin-right:auto}}
