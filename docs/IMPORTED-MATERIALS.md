@@ -4,6 +4,18 @@ The intake folder is `ASCEND-Materials/` inside this repository. It is preserved
 unchanged and ignored by Git. Back it up independently. The provided
 `ASCEND_Logo_v2.jpg` is copied unchanged to `public/assets/ascend-logo.jpg`.
 
+## Electronic Designs section — November 7
+
+Added the **Electronic Designs** section (`/electronics/`) for ASCEND circuit boards. The first board is RC Transmitter V4 (`/resources/transmitter-v4-pcb/`). `scripts/import-materials.py` now also accepts `.zip` files and checks that they open.
+
+To add another board:
+
+1. Put its five originals in `ASCEND-Materials/ECAD/<Board-Name>/`: the Fusion design (`.f3z`), schematic (`.sch`), board (`.brd`), BOM (`.xlsx`), and the manufacturing/Gerber ZIP.
+2. Run `python3 scripts/import-materials.py`. Files over 25 MiB are not copied into `public/`; they need an R2 upload and a `publicUrl` in `materials.json`.
+3. Copy `content/resources/transmitter-v4-pcb.md` as the board's resource page (`kind: PCB design`, `topic: electronics`) and list the new asset IDs.
+4. In `content/_data/topics.json`, replace that board's "coming soon" topic under `electronics` with `resourceIds`.
+5. Run `npm test` and `npm run test:browser`. The library resource counts in `tests/site.spec.js` go up by one for each new resource.
+
 ## Trainer Fusion part designs — November 7
 
 Added 19 editable Fusion originals for the trainer (18 `.f3d` and `Nose.f3z`) under `ASCEND-Materials/RC-Airplanes/Trainer-Airplane/Fusion_Parts/`. All are under the Pages limit and hosted directly. They are listed on the new [Trainer Airplane — Fusion Part Designs](/resources/trainer-fusion-parts/) resource and linked from the trainer project page. The existing `AU-Assembly.f3z` archive is unchanged. The library now has 97 material records.

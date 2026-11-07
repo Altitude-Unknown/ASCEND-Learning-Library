@@ -111,7 +111,8 @@
           "motor-esc-connection-video",
           "esc-receiver-connection-video",
           "venom-battery-charger-video",
-          "spektrum-binding-video"
+          "spektrum-binding-video",
+          "transmitter-v4-pcb"
         ]
       },
       {
@@ -181,6 +182,42 @@
       {
         "title": "Explore the team workflow",
         "url": "/project/#workflow"
+      }
+    ]
+  },
+  {
+    "id": "electronics",
+    "title": "Electronic Designs",
+    "tagline": "Open hardware for every ASCEND board.",
+    "description": "Download the circuit boards behind ASCEND hardware: Fusion designs, schematics, board layouts, parts lists, and Gerbers for ordering your own boards.",
+    "icon": "circuit",
+    "overview": [
+      "Each ASCEND circuit board is published as a complete design kit, so your team can study how it works, change it, or have your own boards made.",
+      "Every kit has the same five files: the Autodesk Fusion electronics design (.f3z); the schematic (.sch) and board layout (.brd) in EAGLE format, which Fusion opens and KiCad can import; a bill of materials (BOM) spreadsheet with every part and its part number; and a ZIP of the Gerber and drill files a PCB manufacturer needs.",
+      "To have boards made, upload the Gerber ZIP to a PCB manufacturer's website and order the parts on the BOM. Then solder the parts yourself, or use the manufacturer's assembly service; the ZIP also includes pick-and-place files for that."
+    ],
+    "subsections": [
+      {
+        "title": "RC Transmitter",
+        "slug": "rc-transmitter",
+        "resourceIds": [
+          "transmitter-v4-pcb"
+        ]
+      },
+      {
+        "title": "Flight Controller",
+        "slug": "flight-controller",
+        "description": "Design files for the ASCEND flight controller are coming soon."
+      },
+      {
+        "title": "YELLOWSTONE",
+        "slug": "yellowstone",
+        "description": "Design files for the YELLOWSTONE high-altitude balloon payload board are coming soon."
+      },
+      {
+        "title": "ASCEND Logger",
+        "slug": "ascend-logger",
+        "description": "Design files for the ASCEND Logger air-quality board are coming soon."
       }
     ]
   },

@@ -22,6 +22,61 @@
     "publicUrl": "https://pub-c44fad737a904733b8cd98e5e7e81ea9.r2.dev/r2-upload/books-remote-aircraft-textbook.docx"
   },
   {
+    "id": "ecad-transmitter-v4-transmitter-v4-bom",
+    "source": "ECAD/Transmitter-V4/Transmitter V4 BOM.xlsx",
+    "filename": "Transmitter V4 BOM.xlsx",
+    "format": "XLSX",
+    "bytes": 51952,
+    "sha256": "20a99dbef924e3b3753fd115d5c9a6cfd3a7d5a77705dafca7ad6a1959bdca1b",
+    "localPath": "downloads/imported/ecad-transmitter-v4-transmitter-v4-bom.xlsx",
+    "hostedLocally": true,
+    "publicUrl": ""
+  },
+  {
+    "id": "ecad-transmitter-v4-transmitter-v4-brd",
+    "source": "ECAD/Transmitter-V4/Transmitter_V4.brd",
+    "filename": "Transmitter_V4.brd",
+    "format": "BRD",
+    "bytes": 348065,
+    "sha256": "e81f67170a8c4efaa3375cba5717dfd2a72d3385c9caef5ce6dd25d64b65b0ae",
+    "localPath": "downloads/imported/ecad-transmitter-v4-transmitter-v4-brd.brd",
+    "hostedLocally": true,
+    "publicUrl": ""
+  },
+  {
+    "id": "ecad-transmitter-v4-transmitter-v4-f3z",
+    "source": "ECAD/Transmitter-V4/Transmitter_V4.f3z",
+    "filename": "Transmitter_V4.f3z",
+    "format": "F3Z",
+    "bytes": 20807126,
+    "sha256": "ffa4bebf078c0dd3ce088ffccfe9e4e927691bfbe257399ea10e5e711a680c71",
+    "localPath": "downloads/imported/ecad-transmitter-v4-transmitter-v4-f3z.f3z",
+    "hostedLocally": true,
+    "publicUrl": ""
+  },
+  {
+    "id": "ecad-transmitter-v4-transmitter-v4-sch",
+    "source": "ECAD/Transmitter-V4/Transmitter_V4.sch",
+    "filename": "Transmitter_V4.sch",
+    "format": "SCH",
+    "bytes": 793803,
+    "sha256": "7fc574db264e42049457979cb1821a8713641eafe97ef392ece2146b99a31f1a",
+    "localPath": "downloads/imported/ecad-transmitter-v4-transmitter-v4-sch.sch",
+    "hostedLocally": true,
+    "publicUrl": ""
+  },
+  {
+    "id": "ecad-transmitter-v4-transmitter-v4-manufacturing-output",
+    "source": "ECAD/Transmitter-V4/Transmitter_V4_Manufacturing_Output.zip",
+    "filename": "Transmitter_V4_Manufacturing_Output.zip",
+    "format": "ZIP",
+    "bytes": 324062,
+    "sha256": "c33cc7e09edb0e8dc7c5cdafed8546f1a3b79d77e3759a42ed9166978dd6df11",
+    "localPath": "downloads/imported/ecad-transmitter-v4-transmitter-v4-manufacturing-output.zip",
+    "hostedLocally": true,
+    "publicUrl": ""
+  },
+  {
     "id": "part107-activities-dfw-airspace-full",
     "source": "Part107 Activities/DFW-Airspace-full.docx",
     "filename": "DFW-Airspace-full.docx",

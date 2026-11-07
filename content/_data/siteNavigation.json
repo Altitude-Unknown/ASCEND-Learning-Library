@@ -2,6 +2,7 @@
   "learn": [
     { "title": "Start here", "url": "/learn/" },
     { "title": "UAS", "url": "/uas/" },
+    { "title": "Electronic Designs", "url": "/electronics/" },
     { "title": "FAA Part 107 course", "url": "/part107/" },
     { "title": "High-Altitude Ballooning", "url": "/ballooning/" },
     { "title": "Air Quality & the ASCEND Logger", "url": "/air-quality/" },
