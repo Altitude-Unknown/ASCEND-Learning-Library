@@ -1,3 +1,8 @@
 # Cloudflare Pages redirects: old path, new path, status.
 /learn-to-fly/getting-started/ /learn-to-fly/flying-fixed-wings/ 301
 /learn-to-fly/getting-started /learn-to-fly/flying-fixed-wings/ 301
+/downloads/imported/rc-airplanes-trainer-airplane-fusion-parts-au-assembly.f3d /downloads/imported/rc-airplanes-trainer-airplane-fusion-parts-fuselage.f3d 301
+/downloads/imported/rc-airplanes-trainer-airplane-fusion-parts-canapyv2.f3d /downloads/imported/rc-airplanes-trainer-airplane-fusion-parts-canapy.f3d 301
+/downloads/imported/rc-airplanes-trainer-airplane-fusion-parts-canapyv-for-stretch.f3d /downloads/imported/rc-airplanes-trainer-airplane-fusion-parts-canapy-for-stretch.f3d 301
+/downloads/imported/rc-airplanes-trainer-airplane-fusion-parts-unibody-nose.f3z /downloads/imported/rc-airplanes-trainer-airplane-fusion-parts-nose.f3z 301
+/downloads/imported/rc-airplanes-trainer-airplane-fusion-parts-wind-support-v2.f3d /downloads/imported/rc-airplanes-trainer-airplane-fusion-parts-wind-support.f3d 301
