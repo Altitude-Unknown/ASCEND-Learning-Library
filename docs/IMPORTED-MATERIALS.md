@@ -4,6 +4,10 @@ The intake folder is `ASCEND-Materials/` inside this repository. It is preserved
 unchanged and ignored by Git. Back it up independently. The provided
 `ASCEND_Logo_v2.jpg` is copied unchanged to `public/assets/ascend-logo.jpg`.
 
+## Trainer Fusion part designs — November 7
+
+Added 19 editable Fusion originals for the trainer (18 `.f3d` and `unibody-Nose.f3z`) under `ASCEND-Materials/RC-Airplanes/Trainer-Airplane/Fusion_Parts/`. All are under the Pages limit and hosted directly. They are listed on the new [Trainer Airplane — Fusion Part Designs](/resources/trainer-fusion-parts/) resource and linked from the trainer project page. The existing `AU-Assembly.f3z` archive is unchanged. The library now has 97 material records.
+
 ## Trainer DXF replacement — October 4
 
 The six original trainer tail drawings have been replaced with
