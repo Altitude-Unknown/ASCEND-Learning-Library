@@ -17,6 +17,7 @@ resourceIds:
 - trainer-dxf-patterns
 - trainer-fusion-assembly
 - trainer-fusion-parts
+- trainer-bench-test-cradle
 ---
 
 ## Start with the build guide
@@ -31,6 +32,8 @@ Mike Walach’s illustrated instructions cover the parts list, foamboard wing, c
 - **PETG:** motor mounting, wing supports and clips, a control horn, and tail clips (including 45° V-tail clips).
 - **DXF:** two patterns for the horizontal and vertical tailfeathers.
 - **Fusion:** editable designs for most printed parts, plus the original `AU-Assembly.f3z` archive.
+
+- **Bench test cradle:** holds the airplane on a table for motor and flight-controller tests with the propeller on.
 
 Follow the guide’s material assignments. Original filenames are retained in every download list.
 

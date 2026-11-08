@@ -53,7 +53,8 @@ platforms:
 These are the editable Autodesk Fusion designs behind the trainer's printed parts. Open them in Fusion to change a part, then export a new STL for printing. If you only want to print the parts as designed, use the ready-made [64D TPU](/resources/trainer-tpu-parts/) and [PETG](/resources/trainer-petg-parts/) STL files instead.
 
 - **Fuselage, nose, and canopy:** the fuselage and a stretched fuselage, the nose (`.f3z` archive), and two canopies, one sized for the stretched fuselage.
-- **Motor and servos:** the motor mount and nut, a test mount, a servo model, and the control horn.
+- **Motor and servos:** the motor mount and nut, a servo model, and the control horn.
+- **Bench test cradle:** `Test-Mount.f3d`, which holds the airplane for motor tests. See the [bench test cradle](/resources/trainer-bench-test-cradle/) page.
 - **Wing:** the wing support and the front and rear wing-band clips.
 - **Tail:** empennage clips for the foam tail, 2 mm plywood (with and without a tail skid), and V-tails at 30° and 45° (including a 45° foam version).
 

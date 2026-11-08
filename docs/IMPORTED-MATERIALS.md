@@ -13,9 +13,9 @@ The contributor exported every trainer part from the current Fusion designs (`AS
 - **Removed as outdated:** `64D_TPU_Parts/empanage-clip-2mm-ply-tail-skid.stl`, the older short-skid clip. Its URL redirects (301) to `empanage-clip-2mm-ply-w-skid.stl`.
 - **Unchanged:** the other exports had the same geometry as the published STLs.
 - **Kept:** `landinggear.stl` and the servo brackets. They are not in the new set but are used by the build guide.
-- **Not published:** `Test-Mount.stl`, pending its purpose and material.
+- **Bench test cradle:** `Test-Mount.stl` holds the airplane on a table for motor tests with the propeller on (one printed part). It is in `Trainer-Airplane/Bench_Test/` and has its own resource, `/resources/trainer-bench-test-cradle/`, with the existing `Test-Mount.f3d`.
 
-The textbook's Landing Gear and both 2 mm plywood clip cards now link to the 64D TPU parts. The library now has 115 material records.
+The textbook's Landing Gear and both 2 mm plywood clip cards now link to the 64D TPU parts. The library now has 116 material records.
 
 ## RC transmitter case — November 8
 
