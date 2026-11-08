@@ -61,6 +61,192 @@
         ]
       ]
     },
+    "2": {
+      "sourceHeading": "Chapter Two: Hardware and Electronics for Unmanned Aircraft",
+      "answerKeyHeading": "Chapter 2: Hardware and Electronics for Unmanned Aircraft — Answer Key",
+      "title": "Chapter 2: Hardware and Electronics for Unmanned Aircraft",
+      "description": "The hardware every remote aircraft shares: transmitters, receivers, servos, motors, ESCs, propellers, batteries and chargers, linkages, and soldering.",
+      "courseId": "uasHardware",
+      "courseData": "content/_data/uasHardwareCourse.json",
+      "topic": "uas",
+      "url": "/uas-hardware/textbook/hardware-and-electronics/",
+      "output": "content/uas-hardware/textbook/hardware-and-electronics.njk",
+      "assets": "uas-hardware",
+      "sourceNote": "From Mike Walach’s lab manual, Remote and Autonomous Aircraft Systems. Original wording is retained with small corrections; image descriptions have been added for web reading.",
+      "headerLinks": [
+        {
+          "title": "About the lab manual",
+          "url": "/resources/remote-aircraft-textbook/"
+        }
+      ],
+      "omitSections": [
+        "^Lab Activity",
+        "^Review Questions$",
+        "^Skills Checksheet$"
+      ],
+      "extracts": {
+        "^Motor Thrust Lab Guide$": "content/_includes/lab-manual/motor-thrust-guide.html"
+      },
+      "skipParagraphs": [
+        "^Name:?_+$",
+        "^Charge Current Samples$",
+        "^Discharge Current Samples$"
+      ],
+      "closing": "",
+      "tableLabels": {
+        "1": "Charge current samples",
+        "2": "Discharge current samples",
+        "3": "LiPo voltages by cell count"
+      },
+      "replace": [
+        [
+          "<p>Photo: Spektrum inc. &amp; Horizon <a href=\"http://hobbies.com\">Hobbies.com</a></p>",
+          "<p class=\"small muted\">Photo: Spektrum Inc. and Horizon Hobby.</p>"
+        ],
+        [
+          "2.4Ghz with 2.4 Ghz being",
+          "2.4 GHz, with 2.4 GHz being"
+        ],
+        [
+          "something liek this",
+          "something like this"
+        ],
+        [
+          "As you process from beginner",
+          "As you progress from beginner"
+        ],
+        [
+          "“0” “1” area at the button",
+          "“0” “1” area at the bottom"
+        ],
+        [
+          "You screen should now",
+          "Your screen should now"
+        ],
+        [
+          "applied to am motor’ speed",
+          "applied to a motor’s speed"
+        ],
+        [
+          "when powered up for a magnetic field",
+          "when powered up form a magnetic field"
+        ],
+        [
+          "less efficient then their",
+          "less efficient than their"
+        ],
+        [
+          "equated to have far forward",
+          "equates to how far forward"
+        ],
+        [
+          "max. current.C-rating",
+          "max. current. C-rating"
+        ],
+        [
+          "similar to the ones you will use on Juggy the RC airplane project at the end of this book",
+          "similar to the ones you will use on the ASCEND Trainer Airplane in Chapter 4"
+        ],
+        [
+          "(1.5 x 100 = 100amps)",
+          "(1.5 x 100 = 150 amps)"
+        ],
+        [
+          "This can lean to",
+          "This can lead to"
+        ],
+        [
+          "AN LED lights up",
+          "An LED lights up"
+        ],
+        [
+          "all the control are for",
+          "all the controls are for"
+        ],
+        [
+          "When the charge seems",
+          "When the charger seems"
+        ],
+        [
+          "shows the lipo setting as shown in the bottom right image",
+          "shows the LiPo setting as shown in the second photo"
+        ],
+        [
+          "you dive the battery capacity",
+          "you divide the battery capacity"
+        ],
+        [
+          "When you have the current voltage and current selected",
+          "When you have the correct voltage and current selected"
+        ],
+        [
+          "makes the job much easier.Z-Bend Pliers</p>",
+          "makes the job much easier.</p>"
+        ],
+        [
+          "(in seconds0",
+          "(in seconds)"
+        ],
+        [
+          "A good soldering solder joint",
+          "A good solder joint"
+        ],
+        [
+          "black specs in it",
+          "black specks in it"
+        ],
+        [
+          "tweezers or need nose pliers",
+          "tweezers or needle nose pliers"
+        ]
+      ],
+      "extractReplace": [
+        [
+          "3D print files for the motor mount are located in the google share drive.",
+          "Ask your instructor for the motor mount’s 3D print files."
+        ],
+        [
+          "mounting screws.Note",
+          "mounting screws. Note"
+        ],
+        [
+          "Attachinging",
+          "Attaching"
+        ],
+        [
+          "fixture,clamp(s)",
+          "fixture, clamp(s)"
+        ],
+        [
+          "Propellor(s)",
+          "Propeller(s)"
+        ]
+      ],
+      "headings": {
+        "Setting up a new aircraft, name, aircraft type, and non-standard wing configurations.": "Setting up a new aircraft",
+        "Capacity -  mAH (Milli-amp-hours)": "Capacity (mAh)",
+        "Battery, propeller, motor, ESC, combination": "Matching the battery, propeller, motor, and ESC",
+        "How to bind a Transmitter to a receiver step by step": "How to bind a transmitter to a receiver, step by step"
+      },
+      "dataReplace": [
+        [
+          "Setup mixing on a transmitter",
+          "Setup mixing on a transmitter."
+        ],
+        [
+          "Recalibrate an ESC",
+          "Recalibrate an ESC."
+        ],
+        [
+          "Select a propellor",
+          "Select a propeller"
+        ],
+        [
+          "..",
+          "."
+        ]
+      ]
+    },
     "9": {
       "sourceHeading": "Chapter 9 PID Controllers",
       "answerKeyHeading": "Chapter 9: PID Controllers — Answer Key",
@@ -170,6 +356,398 @@
     },
     "image223.png": {
       "inline": "<math><msub><mi>K</mi><mi>d</mi></msub><mfrac><mrow><mi>d</mi><mi>e</mi><mo>(</mo><mi>t</mi><mo>)</mo></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac></math>"
+    },
+    "image178.jpg": {
+      "file": "spektrum-dx6e-transmitter.jpg",
+      "alt": "A Spektrum DX6e transmitter: a black handheld radio with an antenna on top, two control gimbals, switches along the top edge, and an LCD screen below the sticks.",
+      "caption": "The Spektrum DX6e transmitter."
+    },
+    "image180.jpg": {
+      "file": "dx6e-clear-back-buttons.jpg",
+      "alt": "A finger and thumb pressing the Clear and Back buttons beside the transmitter's screen at the same time."
+    },
+    "image255.jpg": {
+      "file": "dx6e-model-select.jpg",
+      "alt": "The transmitter screen showing the Model Select list: Back, 1: 3D Blk, 2: Fokker DR1, 3: Dusty Cropduster, 4: Quad, with Add New Model highlighted at the bottom."
+    },
+    "image14.jpg": {
+      "file": "dx6e-roller.jpg",
+      "alt": "A finger pointing to the ridged selection roller on the right side of the transmitter, beside the screen."
+    },
+    "image35.jpg": {
+      "file": "dx6e-create-new-model.jpg",
+      "alt": "The Create New Model screen asking “Do you want to create a new model?” with Cancel and Create options; Create is highlighted."
+    },
+    "image75.jpg": {
+      "file": "dx6e-system-setup-model-type.jpg",
+      "alt": "The System Setup menu with Model Type highlighted, between Model Select and Model Name."
+    },
+    "image349.jpg": {
+      "file": "dx6e-model-type.jpg",
+      "alt": "The Model Type screen showing four aircraft icons to choose from: an airplane, a helicopter, a glider, and a quadcopter."
+    },
+    "image181.jpg": {
+      "file": "dx6e-confirm-model-type.jpg",
+      "alt": "The Confirm Model Type screen with an airplane icon and the warning “Data will be reset”, with No and Yes options; Yes is highlighted."
+    },
+    "image424.jpg": {
+      "file": "dx6e-system-setup-model-name.jpg",
+      "alt": "The System Setup menu with Model Name highlighted."
+    },
+    "image382.jpg": {
+      "file": "dx6e-model-name.jpg",
+      "alt": "The Model Name screen showing the default name “5: Acro” with a cursor under the first letter."
+    },
+    "image298.jpg": {
+      "file": "dx6e-model-name-entered.jpg",
+      "alt": "The Model Name screen showing the new name “3: Dusty Crophopper”."
+    },
+    "image149.jpg": {
+      "file": "dx6e-system-setup-aircraft-type.jpg",
+      "alt": "The System Setup menu with Aircraft Type highlighted."
+    },
+    "image185.jpg": {
+      "file": "dx6e-aircraft-type.jpg",
+      "alt": "The Aircraft Type screen showing an outline of a wing and tail, labeled Wing: Normal and Tail: Normal, with List and Next options."
+    },
+    "image29.jpg": {
+      "file": "dx6e-aircraft-image-jet.jpg",
+      "alt": "The Aircraft Image screen showing a jet fighter icon."
+    },
+    "image355.jpg": {
+      "file": "dx6e-aircraft-image-biplane.jpg",
+      "alt": "The Aircraft Image screen showing a biplane icon."
+    },
+    "image122.jpg": {
+      "file": "dx6e-aircraft-image-sport-plane.jpg",
+      "alt": "The Aircraft Image screen showing a low-wing sport airplane icon."
+    },
+    "image243.jpg": {
+      "file": "dx6e-main-screen.jpg",
+      "alt": "The transmitter's main screen showing the model “3: Dusty Crophopper” with its airplane image, a 5:00 timer, the battery voltage, trim bars, and the owner name Mike Walach."
+    },
+    "image169.jpg": {
+      "file": "dx6e-function-list-dr-expo.jpg",
+      "alt": "The Function List with D/R and Expo highlighted, below Servo Setup."
+    },
+    "image198.jpg": {
+      "file": "dx6e-dr-expo.jpg",
+      "alt": "The D/R and Expo screen for the aileron channel: dual rate 100%, expo 0%, switch On, with a straight-line graph of stick input against output."
+    },
+    "image212.jpg": {
+      "file": "dx6e-switch-d.jpg",
+      "alt": "A hand on the transmitter pointing to switch D, a three-position switch on the top left of the radio."
+    },
+    "image153.jpg": {
+      "file": "dx6e-dr-expo-switch-d.jpg",
+      "alt": "The D/R and Expo screen with Switch D assigned. Positions 0, 1, and 2 appear below, with 0 highlighted; dual rate is 100% and expo 0%, and the graph is a straight line."
+    },
+    "image356.jpg": {
+      "file": "dx6e-dr-expo-50-percent.jpg",
+      "alt": "The D/R and Expo screen with dual rate 50% and expo 40% in switch position 0. The graph is now a gentle S-shaped curve, flatter around center stick."
+    },
+    "image140.jpg": {
+      "file": "dx6e-function-list-mixing.jpg",
+      "alt": "The Function List with Mixing highlighted, between Digital Switch Setup and Range Test."
+    },
+    "image311.jpg": {
+      "file": "dx6e-mixing-menu.jpg",
+      "alt": "The Mixing menu listing RUD > AIL/ELE, AIL > RUD, and programmable mixes P-Mix 1 to 4, all inhibited; AIL > RUD is highlighted."
+    },
+    "image299.jpg": {
+      "file": "dx6e-ail-rud-mix.jpg",
+      "alt": "The AIL > RUD mixing screen: channel bars for THR, AIL, ELE, RUD, GER, and AX1 on the left, and Right 0%, Left 0%, Switch: Inhibit on the right."
+    },
+    "image342.jpg": {
+      "file": "dx6e-ail-rud-switch-c.jpg",
+      "alt": "The AIL > RUD mixing screen with Switch C assigned and the switch positions 0 and 1 shown below it."
+    },
+    "image68.jpg": {
+      "file": "dx6e-ail-rud-switch-position.jpg",
+      "alt": "The AIL > RUD mixing screen with Switch C assigned and position 0 selected to turn the mix on."
+    },
+    "image368.jpg": {
+      "file": "dx6e-ail-rud-50-percent.jpg",
+      "alt": "The AIL > RUD mixing screen with Right 50% and Left 50%, on Switch C."
+    },
+    "image341.jpg": {
+      "file": "dx6e-function-list-servo-setup.jpg",
+      "alt": "The Function List with Servo Setup highlighted at the top."
+    },
+    "image127.jpg": {
+      "file": "dx6e-servo-travel.jpg",
+      "alt": "The Servo Setup screen on Travel, showing 100% travel in both directions for THR, AIL, ELE, RUD, GER, and AX1."
+    },
+    "image351.jpg": {
+      "file": "dx6e-servo-reverse.jpg",
+      "alt": "The Servo Setup screen on Reverse, with a small switch icon for each channel: THR, AIL, ELE, RUD, GER, and AX1."
+    },
+    "image162.jpg": {
+      "file": "dx6e-sub-trim.jpg",
+      "alt": "The Servo Setup screen on Sub Trim, showing 0 for each channel: THR, AIL, ELE, RUD, GER, and AX1."
+    },
+    "image233.png": {
+      "file": "receiver-pin-rows.png",
+      "alt": "A Spektrum AR620 receiver with labels: the bind button on top, and three rows of pins on the end, marked signal (top row), power (middle row), and ground (bottom row). Each channel, BATT and 1 to 6, has one pin in each row.",
+      "caption": "Receiver pins: each channel has a signal, power, and ground pin. Some receivers have a bind button."
+    },
+    "image429.jpg": {
+      "file": "receiver-micro.jpg",
+      "alt": "A tiny receiver circuit board with two thin wire antennas and a small connector, the kind used in small multirotors."
+    },
+    "image327.jpg": {
+      "file": "receiver-spektrum-ar20400t.jpg",
+      "alt": "A large Spektrum AR20400T 20-channel telemetry receiver with rows of servo pins, two battery inputs, and telemetry ports."
+    },
+    "image250.jpg": {
+      "file": "receiver-with-satellite.jpg",
+      "alt": "A Spektrum AR6210 receiver connected by a twisted cable to a small remote satellite receiver; each has two wire antennas."
+    },
+    "image82.jpg": {
+      "file": "receiver-orangerx.jpg",
+      "alt": "An orange OrangeRx 2.4 GHz receiver with two red antenna wires and channel labels on its end."
+    },
+    "image256.jpg": {
+      "file": "receiver-spektrum-sr515.jpg",
+      "alt": "A Spektrum SR515 surface receiver with pins for steering, throttle, and auxiliary channels and one antenna wire."
+    },
+    "image91.jpg": {
+      "file": "receiver-hobbyking-gt2.jpg",
+      "alt": "A HobbyKing HK-GT2 3-channel 2.4 GHz waterproof receiver with a pin block for CH1, CH2, and BIND/CH3."
+    },
+    "image107.jpg": {
+      "file": "binding-plug.jpg",
+      "alt": "A binding plug: a three-pin servo-style connector with a short wire loop joining two of its pins."
+    },
+    "image260.jpg": {
+      "file": "binding-plug-in-receiver.jpg",
+      "alt": "An orange-tagged binding plug pushed into the bind port of a Spektrum AR6210 receiver on a cutting mat."
+    },
+    "image32.jpg": {
+      "file": "receiver-bind-button.jpg",
+      "alt": "A Spektrum AR620 receiver mounted in an airframe, with servo leads plugged into it. The bind button is on its top face."
+    },
+    "image421.jpg": {
+      "file": "receiver-bind-button-pressed.jpg",
+      "alt": "A thumb pressing the bind button on top of the AR620 receiver."
+    },
+    "image236.jpg": {
+      "file": "esc-in-throttle-port.jpg",
+      "alt": "An ESC lead plugged into the throttle port of a receiver that has a binding plug installed. The ESC's yellow XT-60 battery connector is at the top."
+    },
+    "image297.jpg": {
+      "file": "receiver-bind-light.jpg",
+      "alt": "A LiPo battery connected to the ESC, which powers the receiver. The receiver's orange light is on, showing it is in bind mode."
+    },
+    "image194.jpg": {
+      "file": "transmitter-bind-button.jpg",
+      "alt": "A finger pointing to the bind button on the top left of a Spektrum transmitter, next to switch B."
+    },
+    "image247.jpg": {
+      "file": "transmitter-holding-bind.jpg",
+      "alt": "A hand holding the bind button on the top left of a Spektrum DX8 transmitter."
+    },
+    "image376.jpg": {
+      "file": "transmitter-binding-message.jpg",
+      "alt": "The transmitter screen showing BIND, model 3: Blue, and the word Binding."
+    },
+    "image346.jpg": {
+      "file": "transmitter-bind-success.jpg",
+      "alt": "The transmitter screen showing BIND, model 3: Blue, Binding, and DSMX 22ms, which means the bind has started successfully."
+    },
+    "image310.jpg": {
+      "file": "transmitter-bind-failed.jpg",
+      "alt": "The transmitter screen showing BIND, model 3: Blue, and BIND FAILED."
+    },
+    "image347.jpg": {
+      "file": "servo-9g.jpg",
+      "alt": "A blue 9 gram micro servo with a white servo arm on top, a three-wire lead with a black connector, and small mounting screws.",
+      "caption": "A typical 9 gram plastic-gear servo."
+    },
+    "image74.gif": {
+      "file": "pwm-led.png",
+      "alt": "An animated graph of a square-wave voltage over time next to an LED. As the duty cycle changes, the on-time of each pulse grows or shrinks and the LED glows brighter or dimmer. This frame shows a duty cycle of 5.",
+      "caption": "Pulse width modulation: the longer each pulse is on, the brighter the LED."
+    },
+    "image412.jpg": {
+      "file": "brushless-motor.jpg",
+      "alt": "A black and silver outrunner brushless motor with a threaded prop shaft and three wires ending in gold bullet connectors.",
+      "caption": "A typical brushless motor for RC aircraft."
+    },
+    "image257.gif": {
+      "file": "brushless-motor-diagram.png",
+      "alt": "An animated diagram of a brushless motor: a two-pole permanent magnet rotor, half red N and half blue S, inside three stator coils. The coils switch on in turn, and the rotor turns to follow them.",
+      "caption": "Brushless motor: the ESC switches the stator coils on in turn to pull the magnet rotor around."
+    },
+    "image88.gif": {
+      "file": "brushed-motor-diagram.png",
+      "alt": "A cutaway drawing of a brushed motor with labels for the shaft, commutator, brushes, rotor coils, and stator magnets.",
+      "caption": "Brushed motor: brushes rub on the commutator to switch current through the rotor coils."
+    },
+    "image433.png": {
+      "file": "esc.jpg",
+      "alt": "A small electronic speed controller with an XT-60 battery connector and a red JST connector on one end, three black motor wires with bullet connectors on the other, and a servo-style signal lead."
+    },
+    "image337.png": {
+      "file": "propellers.jpg",
+      "alt": "Three grey two-blade airplane propellers of increasing size, with a set of plastic adapter rings."
+    },
+    "image116.jpg": {
+      "file": "lipo-battery.jpg",
+      "alt": "A Turnigy nano-tech 1500 mAh 3-cell 11.1 V LiPo battery with a blue EC3 main connector and a white balance lead."
+    },
+    "image271.jpg": {
+      "file": "xt-connectors.jpg",
+      "alt": "Yellow XT30, XT60, and XT90 battery connectors, male and female, from smallest to largest."
+    },
+    "image314.jpg": {
+      "file": "venom-charger.jpg",
+      "alt": "A Venom Pro Duo dual-channel battery charger with a blue LCD screen, five buttons, and two sets of output jacks, next to a column of charge leads with different battery connectors."
+    },
+    "image195.png": {
+      "file": "battery-bunker.jpg",
+      "alt": "A battery bunker made from concrete blocks set on a concrete board, with a concrete cap; a charging cable runs into it."
+    },
+    "image165.png": {
+      "file": "lipo-safe-box.jpg",
+      "alt": "Two silver fire-resistant LiPo storage boxes with zipper lids; one is open, showing batteries inside."
+    },
+    "image308.png": {
+      "file": "lipo-safe-bag.jpg",
+      "alt": "A silver fire-resistant LiPo charging bag with a Lipo-Safe warning label."
+    },
+    "image300.png": {
+      "file": "battery-checker.jpg",
+      "alt": "A digital battery capacity checker with an LCD, Type, Cell, and Mode buttons, and a row of balance-lead pins."
+    },
+    "image193.png": {
+      "file": "lipo-label.jpg",
+      "alt": "A 4-cell LiPo battery with labels pointing to the main lead (an XT-60 connector), the balance lead, the capacity (1500 mAh), the cell count and voltage (4S, 14.8 V), and the C-rating (50–100C).",
+      "caption": "Reading a LiPo battery label."
+    },
+    "image312.jpg": {
+      "file": "venom-charger-front.jpg",
+      "alt": "The front of the Venom charger with its blue screen lit, a red power light, and five buttons below the screen."
+    },
+    "image325.jpg": {
+      "file": "venom-charger-buttons.jpg",
+      "alt": "The Venom charger's screen reading LiPo BALANCE 2.2A 22.2V(6S), above the Select/Stop, DEC, INC, and Start/Enter buttons and the Channel button below them."
+    },
+    "image269.jpg": {
+      "file": "lipo-xt60-balance-lead.jpg",
+      "alt": "A LiPo battery with its leads standing up; arrows label the yellow XT-60 power connector and the white balance lead."
+    },
+    "image239.jpg": {
+      "file": "balance-board-connection.jpg",
+      "alt": "A hand plugging the battery's balance lead into a balance board connected to the charger; the battery's XT-60 lead connects to the charger's red and black leads."
+    },
+    "image290.jpg": {
+      "file": "venom-program-select.jpg",
+      "alt": "A finger pressing the Select button on the charger while the screen reads PROGRAM SELECT SAVE DATA."
+    },
+    "image115.jpg": {
+      "file": "venom-program-select-lipo.jpg",
+      "alt": "A finger pressing the Select button on the charger while the screen reads PROGRAM SELECT LiPo BATT."
+    },
+    "image141.jpg": {
+      "file": "venom-lipo-charge.jpg",
+      "alt": "A finger pressing the INC button on the charger while the screen shows a LiPo CHARGE setting."
+    },
+    "image38.jpg": {
+      "file": "venom-lipo-balance.jpg",
+      "alt": "A finger pressing the INC button on the charger while the screen shows the LiPo BALANCE menu with its current and voltage settings."
+    },
+    "image93.jpg": {
+      "file": "venom-start-charge.jpg",
+      "alt": "A finger pressing the Start/Enter button on the charger while the screen shows the confirmation to start charging."
+    },
+    "image254.jpg": {
+      "file": "venom-cell-voltages.jpg",
+      "alt": "A finger pressing INC on the charger while the screen shows the voltage of each cell, each about 3.7 to 3.8 volts."
+    },
+    "image34.png": {
+      "file": "control-horn-cad.png",
+      "alt": "A CAD rendering of a control horn: a curved, tapered fin with a pushrod hole near its tip, standing on a T-shaped base that slots into the control surface."
+    },
+    "image201.jpg": {
+      "file": "control-horns-printed.jpg",
+      "alt": "Two white 3D-printed control horns lying on a blue print bed."
+    },
+    "image377.png": {
+      "file": "pushrod-z-bend.png",
+      "alt": "A CAD rendering of a straight wire pushrod with a Z-shaped bend at one end."
+    },
+    "image80.png": {
+      "file": "z-bend-pliers.jpg",
+      "alt": "Red-handled Z-bend pliers with stepped jaws, and an inset showing the jaws from another angle."
+    },
+    "image158.jpg": {
+      "file": "linkage-stoppers.jpg",
+      "alt": "Ten nickel-plated linkage stoppers: small cylinders with a cross hole for the pushrod, a set screw, and a threaded post with a nut."
+    },
+    "image94.png": {
+      "file": "pushrods-with-clevises.jpg",
+      "alt": "Wire pushrods with Z-bends at one end and threaded metal clevises at the other, with white plastic pushrod tubes."
+    },
+    "image210.jpg": {
+      "file": "solder-station.jpg",
+      "alt": "A Weller soldering station: a red base with a temperature dial, a coiled iron holder, a yellow cleaning sponge, and a soldering iron on a cord."
+    },
+    "image294.jpg": {
+      "file": "solder-wool.jpg",
+      "alt": "A round black holder filled with brass solder wool for cleaning the soldering iron tip."
+    },
+    "image200.jpg": {
+      "file": "solder-spool.jpg",
+      "alt": "A spool of 0.6 mm lead-free RoHS solder wire, 99.3% tin and 0.7% bismuth, with a 2.5% flux core."
+    },
+    "image170.jpg": {
+      "file": "solder-wick.jpg",
+      "alt": "A spool of braided copper desoldering wick, 10 feet long and 0.1 inch wide."
+    },
+    "image31.jpg": {
+      "file": "lab-fish-scale.jpg",
+      "alt": "A handheld digital fish scale with an LCD and a hook."
+    },
+    "image326.jpg": {
+      "file": "lab-lipo-battery.jpg",
+      "alt": "A black CNHL LiPo flight battery with its power and balance leads."
+    },
+    "image117.jpg": {
+      "file": "lab-clamp-meter.jpg",
+      "alt": "A red and black Mayilon clamp-on AC/DC current meter with a rotary dial and LCD."
+    },
+    "image99.jpg": {
+      "file": "lab-receiver.jpg",
+      "alt": "A small yellow 2.4 GHz receiver with two antenna wires."
+    },
+    "image52.jpg": {
+      "file": "lab-esc.jpg",
+      "alt": "An ESC with an XT-60 battery connector, a servo lead, and three motor wires."
+    },
+    "image315.jpg": {
+      "file": "lab-mount-base.jpg",
+      "alt": "The black 3D-printed motor test mount base screwed to a wooden board. It has two rails that the sliding motor mount fits between."
+    },
+    "image280.jpg": {
+      "file": "lab-motor-mount-prop.jpg",
+      "alt": "A brushless motor with a green propeller fitted to the black 3D-printed sliding motor mount."
+    },
+    "image135.jpg": {
+      "file": "lab-motor-mount-screws.jpg",
+      "alt": "The back of the 3D-printed motor mount, showing four screws holding the motor in place and the motor wires exiting to the side."
+    },
+    "image79.jpg": {
+      "file": "lab-test-rig.jpg",
+      "alt": "The motor test rig: the mount base on a wooden board clamped to a table edge, the motor and green propeller hanging past the edge, with the ESC, receiver, and clamp meter on the table."
+    },
+    "image345.jpg": {
+      "file": "lab-clamp-meter-on-lead.jpg",
+      "alt": "The clamp meter's jaws closed around only the red power wire from the battery."
+    },
+    "image41.jpg": {
+      "file": "lab-reading-thrust.jpg",
+      "alt": "A hand holding the fish scale hooked to the back of the sliding motor mount, measuring the propeller's thrust."
     }
   }
 }

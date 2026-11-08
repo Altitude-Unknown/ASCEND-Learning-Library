@@ -6,6 +6,7 @@ import {readFileSync, existsSync} from 'node:fs';
 // Add each new chapter's course here.
 const COURSES = [
   {data: 'electricalBasicsCourse.json', url: '/electrical-basics/', title: 'Electrical Basics', images: 3},
+  {data: 'uasHardwareCourse.json', url: '/uas-hardware/', title: 'UAS Hardware and Electronics', images: 88},
   {data: 'pidControllersCourse.json', url: '/pid-controllers/', title: 'PID Controllers', images: 0, equations: 6}
 ];
 const axe = page => new AxeBuilder({page}).withTags(['wcag2a', 'wcag2aa', 'wcag21aa', 'wcag22aa']).analyze();

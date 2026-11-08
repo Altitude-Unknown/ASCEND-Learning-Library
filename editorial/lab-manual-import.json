@@ -26,6 +26,517 @@
       "skills": 4,
       "htmlSha256": "4884456130e709750a3c8f36bcd16c877763f07f7d7f4915ac75c37ffa294d36"
     },
+    "2": {
+      "chapter": 2,
+      "output": "content/uas-hardware/textbook/hardware-and-electronics.njk",
+      "tables": 3,
+      "images": [
+        {
+          "file": "spektrum-dx6e-transmitter.jpg",
+          "source": "image178.jpg",
+          "sha256": "47b2cd12fdb04635ac5b1e9f08b04e8f3c11e4a3fe81cba2f54b4d820d43d11a"
+        },
+        {
+          "file": "dx6e-clear-back-buttons.jpg",
+          "source": "image180.jpg",
+          "sha256": "2119fcb45cdaa4be6308ed66049ddc44281374ea469d886ccf572cd100499fbc"
+        },
+        {
+          "file": "dx6e-model-select.jpg",
+          "source": "image255.jpg",
+          "sha256": "e8125121324ab6b96b267f4039f24b88b40f48f11f033ed716aafe32377c5aaa"
+        },
+        {
+          "file": "dx6e-roller.jpg",
+          "source": "image14.jpg",
+          "sha256": "7529e5f9d0bdbaad9972cf6a840c99cd136f52219527e69e40be9ca76423aaeb"
+        },
+        {
+          "file": "dx6e-create-new-model.jpg",
+          "source": "image35.jpg",
+          "sha256": "707c52684c524ad3d7a6fe10f90b96a4cffed7b8aab4fe5109cf0c998ef9d004"
+        },
+        {
+          "file": "dx6e-system-setup-model-type.jpg",
+          "source": "image75.jpg",
+          "sha256": "f58dc29aea2c87dedee115578eaea4a636157aab8cd61d68eeff74ab784bcc0e"
+        },
+        {
+          "file": "dx6e-model-type.jpg",
+          "source": "image349.jpg",
+          "sha256": "3f9c3ece1fd5e1c2159345ee83d7bcbca92d1ca280ed2b5526baaee1b52f7bb2"
+        },
+        {
+          "file": "dx6e-confirm-model-type.jpg",
+          "source": "image181.jpg",
+          "sha256": "7b307b9852333c6fc008bd40e983408cd46092c52f4406b50fa2e59618415f59"
+        },
+        {
+          "file": "dx6e-system-setup-model-name.jpg",
+          "source": "image424.jpg",
+          "sha256": "a93eef3399e17f469200a83cc3377b6b89969eefc4d72a81a9c3360e5a132d2c"
+        },
+        {
+          "file": "dx6e-model-name.jpg",
+          "source": "image382.jpg",
+          "sha256": "3747de4619e30940aab61f064ee9cba1d87ac5f3bddc7807726d7a3d60a61604"
+        },
+        {
+          "file": "dx6e-model-name-entered.jpg",
+          "source": "image298.jpg",
+          "sha256": "25132963debeed967969facf36dbfa1e3f38ec2c1d7d563a7b010739802c95b0"
+        },
+        {
+          "file": "dx6e-system-setup-aircraft-type.jpg",
+          "source": "image149.jpg",
+          "sha256": "714735c2696af5c2655031bf6f57a35c43ad9f237bffc6eabc456df6b74743f8"
+        },
+        {
+          "file": "dx6e-aircraft-type.jpg",
+          "source": "image185.jpg",
+          "sha256": "b56effaeea81677bce112fe8cb8500cc0485c5965d5be6e510c204b54ab1fdcc"
+        },
+        {
+          "file": "dx6e-aircraft-image-jet.jpg",
+          "source": "image29.jpg",
+          "sha256": "6a990d03c3bf15ecaf12011f1ffe376914f62cb5df4e30cb1227056dd960dd00"
+        },
+        {
+          "file": "dx6e-aircraft-image-biplane.jpg",
+          "source": "image355.jpg",
+          "sha256": "545b6af7c49fbed1e1da7429731c906be8f75f5a8f77e201ca847fb04e35a247"
+        },
+        {
+          "file": "dx6e-aircraft-image-sport-plane.jpg",
+          "source": "image122.jpg",
+          "sha256": "9b880958958166c998af0262d1071a017da11e10556cf2c2dcf6aa37da9542ae"
+        },
+        {
+          "file": "dx6e-main-screen.jpg",
+          "source": "image243.jpg",
+          "sha256": "76aad120057028af9c1d27260e7f0e673e902dd7f6214c51ae2aff40b8bf76c1"
+        },
+        {
+          "file": "dx6e-roller.jpg",
+          "source": "image14.jpg",
+          "sha256": "7529e5f9d0bdbaad9972cf6a840c99cd136f52219527e69e40be9ca76423aaeb"
+        },
+        {
+          "file": "dx6e-function-list-dr-expo.jpg",
+          "source": "image169.jpg",
+          "sha256": "6eaf3bccdbf8e0fcb22e8a105a0e507aee0e7e94c0e758efcb0f3dbd4d96a99a"
+        },
+        {
+          "file": "dx6e-dr-expo.jpg",
+          "source": "image198.jpg",
+          "sha256": "81444c8a65828c2d805f22cb021dd1fcac2c1420efb75846b6b518c94fb815c0"
+        },
+        {
+          "file": "dx6e-switch-d.jpg",
+          "source": "image212.jpg",
+          "sha256": "dd866a3d16a22d613e608d667e4cd4e5e342243ce84579cf435b4c50cca665a5"
+        },
+        {
+          "file": "dx6e-dr-expo-switch-d.jpg",
+          "source": "image153.jpg",
+          "sha256": "82377a4a2c9accdef2f42ce7aa4826181b11353476d09e603008e37c199b6269"
+        },
+        {
+          "file": "dx6e-dr-expo-50-percent.jpg",
+          "source": "image356.jpg",
+          "sha256": "8a43f73933b80314b1bb9aa1dc6f5c07bd77198cb0c9879c6d54dd6338c95284"
+        },
+        {
+          "file": "dx6e-function-list-mixing.jpg",
+          "source": "image140.jpg",
+          "sha256": "3b48c762e4d479cd10d39e37aac83e4d047881805120c3a931a38e9509696103"
+        },
+        {
+          "file": "dx6e-mixing-menu.jpg",
+          "source": "image311.jpg",
+          "sha256": "b30c9cd8199b380f44d0b4e02110d539a332e9ff26fb9ce047531accb85bfdae"
+        },
+        {
+          "file": "dx6e-ail-rud-mix.jpg",
+          "source": "image299.jpg",
+          "sha256": "972125ade1819f2112931ab0a8ab065cc1d61de3880661eb92b3a10bf59c9985"
+        },
+        {
+          "file": "dx6e-ail-rud-switch-c.jpg",
+          "source": "image342.jpg",
+          "sha256": "e32b74b207220c3b48ead65880846115e6e20325a4f8754a35ba54ddb0f64ee0"
+        },
+        {
+          "file": "dx6e-ail-rud-switch-position.jpg",
+          "source": "image68.jpg",
+          "sha256": "9a9ef3fd606c1019a763baa380b7544dd0fa36d1e7a2fa8533500e4edb29d29f"
+        },
+        {
+          "file": "dx6e-ail-rud-50-percent.jpg",
+          "source": "image368.jpg",
+          "sha256": "184dd835e6a5739e2acb2b12f88778e23167ef16e8d217afb52466e38394c3f6"
+        },
+        {
+          "file": "dx6e-function-list-servo-setup.jpg",
+          "source": "image341.jpg",
+          "sha256": "cd18a5ca4bd1411c5b6e4ec6d31c5d61153c744073ff940bee365dff57a30060"
+        },
+        {
+          "file": "dx6e-servo-travel.jpg",
+          "source": "image127.jpg",
+          "sha256": "9ba56ac563819318fd01d18f99ce0c4742bd2d5bc00ee006ef04409e49f3df7a"
+        },
+        {
+          "file": "dx6e-servo-reverse.jpg",
+          "source": "image351.jpg",
+          "sha256": "5691daf30e04809f2cd377322afb241e6661ead5c83281e427079c737cbe2904"
+        },
+        {
+          "file": "dx6e-servo-travel.jpg",
+          "source": "image127.jpg",
+          "sha256": "9ba56ac563819318fd01d18f99ce0c4742bd2d5bc00ee006ef04409e49f3df7a"
+        },
+        {
+          "file": "dx6e-sub-trim.jpg",
+          "source": "image162.jpg",
+          "sha256": "0c9f94c2b0714ead8357bd173b1983255c2f9aec9a9ff907b50bd066d6693829"
+        },
+        {
+          "file": "receiver-pin-rows.png",
+          "source": "image233.png",
+          "sha256": "e587f849f982a9771a774be430f147ea8ae355ded08b4d0a9a6b71000dd706e6"
+        },
+        {
+          "file": "receiver-micro.jpg",
+          "source": "image429.jpg",
+          "sha256": "c6d7ca817d6a8f08ecf33a3baffef4bf2271518edc104850e11f344e9887e3b1"
+        },
+        {
+          "file": "receiver-spektrum-ar20400t.jpg",
+          "source": "image327.jpg",
+          "sha256": "c52f4178984e8ae26d99dda42ed3e684660e52eec4bcd5d95434f94499796b11"
+        },
+        {
+          "file": "receiver-with-satellite.jpg",
+          "source": "image250.jpg",
+          "sha256": "35d5f7ad7e5fb29f22619d0e29ec36662f0d865f8d262bd3b30b5aee4a5de439"
+        },
+        {
+          "file": "receiver-orangerx.jpg",
+          "source": "image82.jpg",
+          "sha256": "e1a4e8350a1f4e53eb09c82225a2cd403dcfdd624c75ebb1de05f811f8702062"
+        },
+        {
+          "file": "receiver-spektrum-sr515.jpg",
+          "source": "image256.jpg",
+          "sha256": "f1b0b15f7b0c51c15d85f03519219ab0c14607d7632cc7973d53ec34fa883ca3"
+        },
+        {
+          "file": "receiver-hobbyking-gt2.jpg",
+          "source": "image91.jpg",
+          "sha256": "0c24512ecb9bd9da4fcde70ae068f4f8dc7b5c81437f19eab98e8b002f1eff44"
+        },
+        {
+          "file": "binding-plug.jpg",
+          "source": "image107.jpg",
+          "sha256": "df41d3031f3d1a1b4470b6f508ccaa8dc76ccdd6a04cd7f56abf05e323eabb11"
+        },
+        {
+          "file": "binding-plug-in-receiver.jpg",
+          "source": "image260.jpg",
+          "sha256": "0ab0af5c58aa0427a6f15535d9d3e3d6aeb0eb88efeb66aa2c1e9ec7e919b00a"
+        },
+        {
+          "file": "receiver-bind-button.jpg",
+          "source": "image32.jpg",
+          "sha256": "499d2a8fd33396bcb878b90b2ff093bc6e4a899c4fb073881860686e9cf45c83"
+        },
+        {
+          "file": "receiver-bind-button-pressed.jpg",
+          "source": "image421.jpg",
+          "sha256": "18b33a489a6d0714b9c593398933e0c0cb82c905b781cff11ff906211235de35"
+        },
+        {
+          "file": "esc-in-throttle-port.jpg",
+          "source": "image236.jpg",
+          "sha256": "545b55f9bd3ce97a79a60bb2c3db4aa4cd84742a85cc8e46c6ce0d15ae723fca"
+        },
+        {
+          "file": "receiver-bind-light.jpg",
+          "source": "image297.jpg",
+          "sha256": "db06a614452d804ad99588f03c492af1559538a4182d18ab02e4b251555ad06c"
+        },
+        {
+          "file": "transmitter-bind-button.jpg",
+          "source": "image194.jpg",
+          "sha256": "f75c1791c16e8c59de4e453bbadda49e672c057db4d461e5c89d707eabb0b13a"
+        },
+        {
+          "file": "transmitter-holding-bind.jpg",
+          "source": "image247.jpg",
+          "sha256": "f189ade78d103a637a888cb78d27df08ecacd8434aae4b98c0d49fc7dbbb19fa"
+        },
+        {
+          "file": "transmitter-binding-message.jpg",
+          "source": "image376.jpg",
+          "sha256": "eff5ff319d5e25f335d60e5a79e7f84ca8f6da8cb2975adf3f2dbea0657abdf7"
+        },
+        {
+          "file": "transmitter-bind-success.jpg",
+          "source": "image346.jpg",
+          "sha256": "8cac5ed61d7699ed91d17478c4783d7cdfe2de922df80b56f64ed169e37ef5ba"
+        },
+        {
+          "file": "transmitter-bind-failed.jpg",
+          "source": "image310.jpg",
+          "sha256": "2aafb53cec73b8d7145e45180d2b994168a7deee26a4464e20835c4f20a48930"
+        },
+        {
+          "file": "servo-9g.jpg",
+          "source": "image347.jpg",
+          "sha256": "992ef1adda839343fb754a856c7315537e75aa315ffaab86726f8fe98d216536"
+        },
+        {
+          "file": "pwm-led.png",
+          "source": "image74.gif",
+          "sha256": "f5bf12a8d1314c8f6fa403b36a73d268e61315eb2b1c3bf3f8b7b897ede432da"
+        },
+        {
+          "file": "brushless-motor.jpg",
+          "source": "image412.jpg",
+          "sha256": "c93e17203a82edcfda6203ff2ed4dd4fa419c65b50a6a0f7885df68e830ca9be"
+        },
+        {
+          "file": "brushless-motor-diagram.png",
+          "source": "image257.gif",
+          "sha256": "c7794b5da01d3a3f4c0b8e718c055dafdf9c3abd169ae7f9e5ddca50070e75bf"
+        },
+        {
+          "file": "brushed-motor-diagram.png",
+          "source": "image88.gif",
+          "sha256": "3ef97159dee40e32160d06415730c469e4f3d86405ad0e90b66e4dadd86d237c"
+        },
+        {
+          "file": "esc.jpg",
+          "source": "image433.png",
+          "sha256": "50006614b9e47f4e5de8fe0e5fa5e5ece0b89d6bd32ca0b452e47cf2cdcb3cb5"
+        },
+        {
+          "file": "propellers.jpg",
+          "source": "image337.png",
+          "sha256": "c59d3cd20f391c65e65228bfca3a5eec527773e06ddc0014808835f569fc3dd1"
+        },
+        {
+          "file": "lipo-battery.jpg",
+          "source": "image116.jpg",
+          "sha256": "3080528dbbf7ce9740955b2f031821647c6a6e20061a07d08d642e12fdf246ee"
+        },
+        {
+          "file": "xt-connectors.jpg",
+          "source": "image271.jpg",
+          "sha256": "ed9fd0811ccb4647c3f1b17ae3adb93e164fc7683043308cc5acfc34b62c43ab"
+        },
+        {
+          "file": "venom-charger.jpg",
+          "source": "image314.jpg",
+          "sha256": "81a39b6d872f961cbe25398fefb4acad97d83119489e2bb5c59604ab5ccc29a1"
+        },
+        {
+          "file": "battery-bunker.jpg",
+          "source": "image195.png",
+          "sha256": "ed45f83c2c5de9a919c85cb7e4bb4ff14c833b64cceacf823e6b113f7baf8963"
+        },
+        {
+          "file": "lipo-safe-box.jpg",
+          "source": "image165.png",
+          "sha256": "95ad34b5432de6395f97ebe84154e58b138bab1a0b9b5ada53b478ead30fba1d"
+        },
+        {
+          "file": "lipo-safe-bag.jpg",
+          "source": "image308.png",
+          "sha256": "11974a6b6e517504d152fd0cb80dd9ced7b3508fcdc609db6f0514902dc728ef"
+        },
+        {
+          "file": "battery-checker.jpg",
+          "source": "image300.png",
+          "sha256": "7c6178b2fc737ae59a0e46d3948d04377f5d47d038a2cfc5f24df40ddd4af144"
+        },
+        {
+          "file": "lipo-label.jpg",
+          "source": "image193.png",
+          "sha256": "8abc874aa30ce362ab356047081c127e346a2400495afb39b6f8719e95742193"
+        },
+        {
+          "file": "venom-charger-front.jpg",
+          "source": "image312.jpg",
+          "sha256": "70f3438c7038c13974f5ceac6b60d37694f1fd5de0aa4f6a3659b3ee4ac3d03f"
+        },
+        {
+          "file": "venom-charger-buttons.jpg",
+          "source": "image325.jpg",
+          "sha256": "4f4443805b00d2b4a40fd75772635dc0a074936b696cdd0750f598707e7bd4cc"
+        },
+        {
+          "file": "lipo-xt60-balance-lead.jpg",
+          "source": "image269.jpg",
+          "sha256": "f109630372f97cbda5d6cbb4e525040121ca9b6005ec55cd805faad64f3eeab6"
+        },
+        {
+          "file": "balance-board-connection.jpg",
+          "source": "image239.jpg",
+          "sha256": "67840338e6d6038eb70f5c9a141e83ac6efcd7d73d317371e9a02ff1cc25a11d"
+        },
+        {
+          "file": "venom-program-select.jpg",
+          "source": "image290.jpg",
+          "sha256": "70675cfd05e72f26a0628c690bafb43b0d0f85506518605d77183df4f29382f6"
+        },
+        {
+          "file": "venom-program-select-lipo.jpg",
+          "source": "image115.jpg",
+          "sha256": "173b169d735bdb664431365d058067f16a9e4c87df76232931b119add9089e19"
+        },
+        {
+          "file": "venom-lipo-charge.jpg",
+          "source": "image141.jpg",
+          "sha256": "39634164c204e23b81eb1c37914dfbc6fedd6a55cb4fd018b5da135856453aad"
+        },
+        {
+          "file": "venom-lipo-balance.jpg",
+          "source": "image38.jpg",
+          "sha256": "25dcda4fe7934e1b8c9c992b73f8ccaab1791cc4af9239a79ccfad31d1886816"
+        },
+        {
+          "file": "venom-start-charge.jpg",
+          "source": "image93.jpg",
+          "sha256": "c71cf843fdd5f34c30028439beb2d141386834d60c4b15161e78346f5048f373"
+        },
+        {
+          "file": "venom-cell-voltages.jpg",
+          "source": "image254.jpg",
+          "sha256": "175179d0b7922bc43c461bc13f6f6a21bbf114a19b3056168322ce26f07ee0cd"
+        },
+        {
+          "file": "control-horn-cad.png",
+          "source": "image34.png",
+          "sha256": "96e12d90f303a8dcc20bd235c8c7237120626679a3bac36421aeee9341c3f545"
+        },
+        {
+          "file": "control-horns-printed.jpg",
+          "source": "image201.jpg",
+          "sha256": "2e14abbe09ead609921f55fefe9ddcca3e4e43a1ea9a4622782f84b250aa1fda"
+        },
+        {
+          "file": "pushrod-z-bend.png",
+          "source": "image377.png",
+          "sha256": "4ba30df49fe8e3055ab7c514da2c6dcf635f3cc3335db7c43048b921627c7d3b"
+        },
+        {
+          "file": "z-bend-pliers.jpg",
+          "source": "image80.png",
+          "sha256": "0404a49d6d9651ea8063cc2fd213d62d3fa98608e3609cc07365d10ce5f2767a"
+        },
+        {
+          "file": "linkage-stoppers.jpg",
+          "source": "image158.jpg",
+          "sha256": "12900820bc4b0aba0d71d64de9a8e24b79daf7125ce1ff8001432de3179991f9"
+        },
+        {
+          "file": "pushrods-with-clevises.jpg",
+          "source": "image94.png",
+          "sha256": "5a162c29c88310f2a70610bfe8809723f53fc6dc556561b4b030b2dd7c62889a"
+        },
+        {
+          "file": "z-bend-pliers.jpg",
+          "source": "image80.png",
+          "sha256": "0404a49d6d9651ea8063cc2fd213d62d3fa98608e3609cc07365d10ce5f2767a"
+        },
+        {
+          "file": "solder-station.jpg",
+          "source": "image210.jpg",
+          "sha256": "ead9d57023e50d7afd257ecfbd5267e70f383759f174a62f92fd7c11ae4db46e"
+        },
+        {
+          "file": "solder-wool.jpg",
+          "source": "image294.jpg",
+          "sha256": "6622f299687629613c46738fcbe65123e0c67b17681bd61f839161996cef00fa"
+        },
+        {
+          "file": "solder-spool.jpg",
+          "source": "image200.jpg",
+          "sha256": "661377b618d913f61b42dc1de07571d84f9326f2a3052615cdc952e27b9d555f"
+        },
+        {
+          "file": "solder-wick.jpg",
+          "source": "image170.jpg",
+          "sha256": "499d21cb36a24891cd44d2cff82a6ab90c02d4feec67962edb6bf90f424c9a2b"
+        },
+        {
+          "file": "lab-fish-scale.jpg",
+          "source": "image31.jpg",
+          "sha256": "3be3e30430426ed74075fb4eb7a4e6c9efba4a509c8cbbda94a92063bb73a64c"
+        },
+        {
+          "file": "lab-lipo-battery.jpg",
+          "source": "image326.jpg",
+          "sha256": "18d2fa5eec136e281a8fa07c5c61973a4aaf5d8b6b5a48b631599aa997186239"
+        },
+        {
+          "file": "lab-clamp-meter.jpg",
+          "source": "image117.jpg",
+          "sha256": "3f1fae212c80a1f57b9804eec324e969a61aaff2c79838913cc4f03b028258eb"
+        },
+        {
+          "file": "lab-receiver.jpg",
+          "source": "image99.jpg",
+          "sha256": "087716f1caf5263be7f773d513893c896077907601e4528aaea2213e01bde1d6"
+        },
+        {
+          "file": "lab-esc.jpg",
+          "source": "image52.jpg",
+          "sha256": "f6f4fd75e742b085c3db63bf9e9bec87647543b37c2517da7b1cb0f4d471e661"
+        },
+        {
+          "file": "lab-mount-base.jpg",
+          "source": "image315.jpg",
+          "sha256": "b8b0f8a5d10ecbf43eb4088caefe8a6020de4d809e8638d8018ae458c7dc74e3"
+        },
+        {
+          "file": "lab-motor-mount-prop.jpg",
+          "source": "image280.jpg",
+          "sha256": "35d9e6eadb128c17b6df3a39d72e1a1a7c6b36ba06db4719242b97b4e26a122b"
+        },
+        {
+          "file": "spektrum-dx6e-transmitter.jpg",
+          "source": "image178.jpg",
+          "sha256": "47b2cd12fdb04635ac5b1e9f08b04e8f3c11e4a3fe81cba2f54b4d820d43d11a"
+        },
+        {
+          "file": "lab-motor-mount-screws.jpg",
+          "source": "image135.jpg",
+          "sha256": "16446fce88e5edb6934dff334999cdfb95c7479dd827ac7b8b7d77cb4f9e7f2f"
+        },
+        {
+          "file": "lab-test-rig.jpg",
+          "source": "image79.jpg",
+          "sha256": "7da023a102d4ee13f5ff4c659a8bfd8863084f09e5f3e32580c090becbc7d091"
+        },
+        {
+          "file": "lab-clamp-meter-on-lead.jpg",
+          "source": "image345.jpg",
+          "sha256": "3a6023aeb3155528d8c7ab1226ac800503ddc517e12b86906dd137b72f7a18b7"
+        },
+        {
+          "file": "lab-reading-thrust.jpg",
+          "source": "image41.jpg",
+          "sha256": "c2a19db520ab1e550048459c09ab138bd1ad90f5f28a917103aadc5759c0dceb"
+        }
+      ],
+      "verifiedTextBlocks": 248,
+      "reviewQuestions": 27,
+      "skills": 15,
+      "htmlSha256": "24e1bd038a6709ee8bde315d46ab823bf6a94cb85d13a596de20accf0cd9a396"
+    },
     "9": {
       "chapter": 9,
       "output": "content/pid-controllers/textbook/pid-controllers.njk",
