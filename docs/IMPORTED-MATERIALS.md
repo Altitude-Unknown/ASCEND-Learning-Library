@@ -4,6 +4,16 @@ The intake folder is `ASCEND-Materials/` inside this repository. It is preserved
 unchanged and ignored by Git. Back it up independently. The provided
 `ASCEND_Logo_v2.jpg` is copied unchanged to `public/assets/ascend-logo.jpg`.
 
+## Textbooks are web chapters only — November 8
+
+The contributor keeps revising the textbooks, and the web chapters are now the current versions, so the PDF and Word downloads were removed:
+
+- **FAA Remote Pilot Study Guide** (`airspace-book`): Word original and PDF reading copy. All five chapters are web pages under `/part107/textbook/`.
+- **Remote and Autonomous Aircraft Systems** lab manual (`remote-aircraft-textbook`): Word original (R2) and PDF reading copy (R2). Chapters 3 and 4 are web pages. The electronics and PID chapters are planned next; the rest will follow as needed.
+- **ASCEND Trainer Airplane Build Instructions** (`trainer-build-instructions`): Word original (R2) and PDF reading copy. The content is the Chapter 4 web page.
+
+The three resource pages remain at their URLs as web-only pages that link to the chapters. The Word originals moved to `editorial/intake/books/` (git-ignored), so `import-materials.py` no longer publishes them. `scripts/import-part107-textbook.py` now reads the study guide from there. `scripts/check-part107-textbook.mjs` checks the source hash only when that file is present (not in CI). `scripts/export-pdfs.py` no longer exports book PDFs. The library has 110 material records. The three R2 objects (`r2-upload/books-remote-aircraft-textbook.docx`, `r2-upload/AltitudeUnknown_Trainer_Build_Instructions.docx`, `r2-upload/remote-aircraft-textbook.pdf`) are deleted after the change is live.
+
 ## Trainer STLs updated to the latest designs — November 8
 
 The contributor exported every trainer part from the current Fusion designs (`ASCEND-Airplane/STL/`, not tracked). Only parts whose shape changed, or that were new, were brought in:
@@ -115,14 +125,11 @@ Do not invent URLs or use expiring signed links for public educational files.
 
 | File | Size | Asset ID |
 | --- | ---: | --- |
-| Remote Aircraft Textbook.docx | 255.9 MiB | `books-remote-aircraft-textbook` |
 | National Airspace System-107.pptx | 56.7 MiB | `powerpoints-national-airspace-system-107` |
 | Plane v3.f3z | 142.2 MiB | `rc-airplanes-fixed-wing-research-uas-plane-v3` |
 | AU-Assembly.f3z | 64.2 MiB | `rc-airplanes-trainer-airplane-au-assembly` |
-| AltitudeUnknown_Trainer_Build_Instructions.docx | 194.1 MiB | `rc-airplanes-trainer-airplane-altitudeunknown-trainer-build-instructions` |
 | airspace.pdf | 29.6 MiB | `airspace-pdf` |
 | regulations.pdf | 27.1 MiB | `regulations-pdf` |
-| remote-aircraft-textbook.pdf | 36.9 MiB | `remote-aircraft-textbook-pdf` |
 | v4 Trasmitter Case.f3z | 135.5 MiB | `tx-3d-print-v4-trasmitter-case` |
 
 ## Adding or replacing supplied files

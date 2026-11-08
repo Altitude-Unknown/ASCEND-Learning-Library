@@ -15,7 +15,8 @@ import xml.etree.ElementTree as ET
 import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
-SOURCE = ROOT / 'public/downloads/imported/books-faa-remote-pilot-study-guide.docx'
+# Curator-only source (git-ignored); the book is no longer offered as a download.
+SOURCE = ROOT / 'editorial/intake/books/FAA Remote Pilot Study Guide.docx'
 OUTPUT = ROOT / 'content/part107/textbook'
 ASSETS = ROOT / 'public/assets/part107/textbook'
 NS = {'w': 'http://schemas.openxmlformats.org/wordprocessingml/2006/main',

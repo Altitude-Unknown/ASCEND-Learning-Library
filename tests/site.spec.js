@@ -87,7 +87,7 @@ test('Pages and resource links remain usable without JavaScript',async({browser}
 });
 
 test('Imported books, slides, and project parts link to actual files',async({page,request})=>{
- for(const route of ['/resources/airspace-book/','/resources/weather-presentation/','/resources/operations-presentation/','/resources/trainer-build-instructions/']) {
+ for(const route of ['/resources/weather-presentation/','/resources/operations-presentation/']) {
   await page.goto(route);
   const pdf=page.getByRole('link',{name:/^View PDF/});
   await expect(pdf).toBeVisible();
@@ -99,7 +99,8 @@ test('Imported books, slides, and project parts link to actual files',async({pag
  await expect(page.getByRole('link',{name:/^Download STL/})).toHaveCount(11);
  await page.goto('/uas/trainer-airplane/');
  await page.getByRole('link',{name:'ASCEND Trainer Airplane Build Instructions',exact:true}).click();
- await expect(page.locator('#files')).toBeVisible();
+ await expect(page.locator('#files')).toHaveCount(0);
+ await expect(page.getByRole('link',{name:'Chapter 4: Building a Fixed Wing Aircraft',exact:true})).toHaveAttribute('href','/build-fixed-wing/textbook/building-a-fixed-wing-aircraft/');
 });
 
 test('Web resources are discoverable by subject, platform, and activity without duplicating pages',async({page})=>{

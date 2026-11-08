@@ -11,17 +11,14 @@ audience:
 - Students
 - Faculty Mentors
 - Pod Leads
-assetIds:
-- remote-aircraft-textbook-pdf
-- books-remote-aircraft-textbook
-updated: '2026-09-23'
-format: PDF / DOCX
+updated: '2026-11-08'
+format: Web
 author: Mike Walach, Ph.D.
 related:
 - trainer-build-instructions
 - trainer-tpu-parts
 - trainer-petg-parts
-delivery: download
+delivery: web
 origin: contributed
 subjects:
 - UAS
@@ -29,22 +26,18 @@ activities:
 - Building & Integration
 ---
 
-## Inside the lab manual
+## Read it online
 
-This book combines explanations, hands-on labs, review questions, skills checksheets, and answer keys.
+Mike Walach’s lab manual is being published chapter by chapter as web pages, which are kept current as the book is revised. The PDF and Word downloads are no longer offered.
 
-1. Electrical Basics
-2. Hardware and Electronics for Unmanned Aircraft
-3. Piloting Remote Aircraft
-4. Building a Fixed Wing Aircraft
-5. Building a Multirotor Aircraft
-6. Flight Controllers
-7. Camera and Video Systems
-8. Advanced Sensors
-9. PID Controllers
+**Available now**
 
-The appendix includes metric-to-imperial conversions. The fixed-wing construction chapter connects to the [ASCEND Trainer Airplane project](/uas/trainer-airplane/).
+- [Chapter 3: Piloting Remote Aircraft](/learn-to-fly/textbook/piloting-remote-aircraft/), the reading for the [Learning to Fly a UAS](/learn-to-fly/) course.
+- [Chapter 4: Building a Fixed Wing Aircraft](/build-fixed-wing/textbook/building-a-fixed-wing-aircraft/), the reading for the [Building a Fixed-Wing UAS](/build-fixed-wing/) course and the [ASCEND Trainer Airplane](/uas/trainer-airplane/).
 
-## Choose a format
+**Coming as web chapters**
 
-The PDF is intended for reading. The Word file retains the supplied editable source document.
+- Electronics.
+- Chapter 9: PID Controllers.
+
+The other chapters, on multirotor construction, flight controllers, camera and video systems, and advanced sensors, will be added as web chapters when they are needed.

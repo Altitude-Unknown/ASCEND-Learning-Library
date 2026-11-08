@@ -11,46 +11,30 @@ audience:
 - Students
 - Faculty Mentors
 - Pod Leads
-assetIds:
-- part107-study-guide-pdf
-- books-faa-remote-pilot-study-guide
-updated: '2026-09-23'
-format: PDF / DOCX
+updated: '2026-11-08'
+format: Web
 version: 2026 edition
 related:
 - airspace-presentation
 - regulations-presentation
 - weather-presentation
-delivery: download
+delivery: web
 origin: contributed
 subjects:
 - UAS
 - Field Operations & Safety
 ---
 
-## Inside the guide
+## Read it online
 
-The supplied book is titled **FAA Remote Pilot Test Prep** and identifies itself as the 2026 edition. It brings together five chapters, learning objectives, knowledge checks, answer keys, and source notes.
-
-1. Aviation Regulatory System
-2. National Airspace System
-3. Weather
-4. Operations
-5. Loading and Performance
-
-## Read alongside the modules
-
-Use Chapter 2 with the [Airspace module](/part107/airspace/). The download is the **complete study guide**, rather than a separate Airspace chapter. See the [Study Guide page](/part107/study-guide/) for the full learning path.
-
-The book notes that some original slide language differs from the updated text. The materials are presented as supplied; this import does not constitute a regulatory content review.
-
-
-## Read the chapters online
-
-Follow the course sequence below. The original textbook chapter numbers are retained. Each webpage includes the full chapter, knowledge check, answer key, tables, and figures. PDF and Word downloads remain available.
+The study guide is published as web chapters. Each chapter includes the full text, knowledge check, answer key, tables, and figures. Read them in the Part 107 course order:
 
 - [Chapter 1 · Aviation Regulatory System](/part107/textbook/regulations/)
 - [Chapter 2 · National Airspace System](/part107/textbook/airspace/)
 - [Chapter 3 · Weather](/part107/textbook/weather/)
 - [Chapter 5 · Loading and Performance](/part107/textbook/loading-and-performance/)
 - [Chapter 4 · Operations](/part107/textbook/uas-operations/)
+
+The original chapter numbers are kept. The web chapters are kept current as the book is revised, so the PDF and Word downloads are no longer offered.
+
+See the [Part 107 course](/part107/) for the presentations, activities, and practice tests that go with each chapter.

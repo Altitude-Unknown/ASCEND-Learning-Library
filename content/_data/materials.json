@@ -1,27 +1,5 @@
 [
   {
-    "id": "books-faa-remote-pilot-study-guide",
-    "source": "Books/FAA Remote Pilot Study Guide.docx",
-    "filename": "FAA Remote Pilot Study Guide.docx",
-    "format": "DOCX",
-    "bytes": 3801797,
-    "sha256": "dd0c8859e8ba49043a5c82fdbd210931c7d44df6fea7a7a951040f970d28e8a1",
-    "localPath": "downloads/imported/books-faa-remote-pilot-study-guide.docx",
-    "hostedLocally": true,
-    "publicUrl": ""
-  },
-  {
-    "id": "books-remote-aircraft-textbook",
-    "source": "Books/Remote Aircraft Textbook.docx",
-    "filename": "Remote Aircraft Textbook.docx",
-    "format": "DOCX",
-    "bytes": 268344277,
-    "sha256": "5561d1da9eb4acd8d80bc834d7a2966f427a160407bbe47b58f8933c63b1f57d",
-    "localPath": "local-materials/books-remote-aircraft-textbook.docx",
-    "hostedLocally": false,
-    "publicUrl": "https://pub-c44fad737a904733b8cd98e5e7e81ea9.r2.dev/r2-upload/books-remote-aircraft-textbook.docx"
-  },
-  {
     "id": "ecad-transmitter-v4-transmitter-v4-bom",
     "source": "ECAD/Transmitter-V4/Transmitter V4 BOM.xlsx",
     "filename": "Transmitter V4 BOM.xlsx",
@@ -537,17 +515,6 @@
     "localPath": "local-materials/rc-airplanes-trainer-airplane-au-assembly.f3z",
     "hostedLocally": false,
     "publicUrl": "https://pub-c44fad737a904733b8cd98e5e7e81ea9.r2.dev/r2-upload/rc-airplanes-trainer-airplane-au-assembly.f3z"
-  },
-  {
-    "id": "rc-airplanes-trainer-airplane-altitudeunknown-trainer-build-instructions",
-    "source": "RC-Airplanes/Trainer-Airplane/AltitudeUnknown_Trainer_Build_Instructions.docx",
-    "filename": "AltitudeUnknown_Trainer_Build_Instructions.docx",
-    "format": "DOCX",
-    "bytes": 222002709,
-    "sha256": "8e532c74e74ef2a5146b2b98878534410735e50aea1c70bf65c79457bae3d8a9",
-    "localPath": "local-materials/rc-airplanes-trainer-airplane-altitudeunknown-trainer-build-instructions.docx",
-    "hostedLocally": false,
-    "publicUrl": "https://pub-c44fad737a904733b8cd98e5e7e81ea9.r2.dev/r2-upload/AltitudeUnknown_Trainer_Build_Instructions.docx"
   },
   {
     "id": "rc-airplanes-trainer-airplane-bench-test-test-mount",
@@ -1117,19 +1084,6 @@
     "pages": 18
   },
   {
-    "id": "part107-study-guide-pdf",
-    "source": "part107-study-guide.pdf",
-    "filename": "part107-study-guide.pdf",
-    "format": "PDF",
-    "bytes": 1344667,
-    "sha256": "641ca72c5cca000473bdb7272f3cf3fb8637855a7445297a73e15c0610f9d063",
-    "localPath": "downloads/imported/part107-study-guide.pdf",
-    "hostedLocally": true,
-    "publicUrl": "",
-    "derived": true,
-    "pages": 68
-  },
-  {
     "id": "regulations-pdf",
     "source": "regulations.pdf",
     "filename": "regulations.pdf",
@@ -1141,19 +1095,6 @@
     "publicUrl": "https://pub-c44fad737a904733b8cd98e5e7e81ea9.r2.dev/r2-upload/regulations.pdf",
     "derived": true,
     "pages": 49
-  },
-  {
-    "id": "remote-aircraft-textbook-pdf",
-    "source": "remote-aircraft-textbook.pdf",
-    "filename": "remote-aircraft-textbook.pdf",
-    "format": "PDF",
-    "bytes": 38698270,
-    "sha256": "bb367e00ba2e6a0526db0278f1ce18a86b57c858ef7cb06a4a6b42dbbbcbfc1a",
-    "localPath": "local-materials/remote-aircraft-textbook.pdf",
-    "hostedLocally": false,
-    "publicUrl": "https://pub-c44fad737a904733b8cd98e5e7e81ea9.r2.dev/r2-upload/remote-aircraft-textbook.pdf",
-    "derived": true,
-    "pages": 330
   },
   {
     "id": "weather-pdf",
@@ -1297,18 +1238,5 @@
     "publicUrl": "",
     "derived": true,
     "pages": 1
-  },
-  {
-    "id": "trainer-build-instructions-pdf",
-    "source": "trainer-build-instructions.pdf",
-    "filename": "trainer-build-instructions.pdf",
-    "format": "PDF",
-    "bytes": 23277068,
-    "sha256": "75b1106b71e40e2954a26306ba92ce576a58f79303b4e79185249109ac3d82fc",
-    "localPath": "downloads/imported/trainer-build-instructions.pdf",
-    "hostedLocally": true,
-    "publicUrl": "",
-    "derived": true,
-    "pages": 113
   }
 ]

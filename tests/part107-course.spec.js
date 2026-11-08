@@ -91,7 +91,7 @@ test('Complete web chapters remain readable, accessible, and linked to each unit
     await expect(page).toHaveURL(new RegExp(`/part107/textbook/${slug}/$`));
     await expect(page.locator('h1')).toHaveCount(1);
     await expect(page.locator('.textbook-content')).toContainText('Answer');
-    await expect(page.getByRole('link',{name:'Download the complete textbook (PDF)'})).toHaveAttribute('href','/downloads/imported/part107-study-guide.pdf');
+    await expect(page.getByRole('link',{name:'All five chapters'})).toHaveAttribute('href','/part107/study-guide/');
     figures+=await page.locator('.textbook-figure').count();
     tables+=await page.locator('.textbook-table').count();
     for(const width of [1440,390,320]) {

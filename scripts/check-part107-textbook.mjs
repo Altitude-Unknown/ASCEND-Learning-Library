@@ -1,9 +1,11 @@
-import {readFileSync} from 'node:fs';
+import {readFileSync,existsSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import assert from 'node:assert/strict';
 const hash=value=>createHash('sha256').update(value).digest('hex');
 const audit=JSON.parse(readFileSync('editorial/part107-textbook-import.json','utf8'));
-assert.equal(hash(readFileSync(audit.source)),audit.sourceSha256,'Textbook source changed: regenerate chapters');
+// The Word source is curator-only and git-ignored, so CI checks the published chapters and figures only.
+if(existsSync(audit.source)) assert.equal(hash(readFileSync(audit.source)),audit.sourceSha256,'Textbook source changed: regenerate chapters');
+else console.log(`Textbook source not present (${audit.source}); checking published chapters and figures only.`);
 assert.equal(audit.chapters.length,5);
 for(const chapter of audit.chapters){
   const source=readFileSync(`content/part107/textbook/${chapter.slug}.njk`,'utf8');

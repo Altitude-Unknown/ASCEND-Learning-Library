@@ -45,7 +45,7 @@ run `python3 -m http.server 8080 --directory _site` after building.
 - All nine FAA Part 107 reference-topic pages, with Airspace fully prototyped.
 - 24 resource records, including two supplied books, five Part 107 slide decks,
   a trainer build guide, grouped aircraft design files, and future placeholders.
-- Eight browser-readable PDF copies plus original DOCX/PPTX files.
+- Browser-readable PDF copies plus original DOCX/PPTX files for presentations and activities. Textbooks are web chapters only.
 - Trainer and fixed-wing research UAS project pages with STL, DXF, and Fusion files.
 - An Electronic Designs section with complete PCB kits (Fusion, schematic, board, BOM, Gerbers).
 - Web-first resource pages with optional contributor, source, and review metadata.
