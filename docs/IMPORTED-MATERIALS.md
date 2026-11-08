@@ -4,6 +4,19 @@ The intake folder is `ASCEND-Materials/` inside this repository. It is preserved
 unchanged and ignored by Git. Back it up independently. The provided
 `ASCEND_Logo_v2.jpg` is copied unchanged to `public/assets/ascend-logo.jpg`.
 
+## Trainer STLs updated to the latest designs — November 8
+
+The contributor exported every trainer part from the current Fusion designs (`ASCEND-Airplane/STL/`, not tracked). Only parts whose shape changed, or that were new, were brought in:
+
+- **Replaced** (same filename and URL): `64D_TPU_Parts/Fuselage.stl`, `Nose.stl`, and `empanage-clip-2mm-ply.stl`. The plain plywood clip on the site had been a copy of the clip with a tail skid.
+- **Added:** `64D_TPU_Parts/Fuselag-Stretch.stl` and `Canapy for stretch.stl`; `PETG_Parts/Empannage-clip-v-tail-45.stl` and `Empannage-clip-v-tail-45-foam.stl`. Materials follow the matching parts (fuselage and canopy in TPU, V-tail clips in PETG).
+- **Removed as outdated:** `64D_TPU_Parts/empanage-clip-2mm-ply-tail-skid.stl`, the older short-skid clip. Its URL redirects (301) to `empanage-clip-2mm-ply-w-skid.stl`.
+- **Unchanged:** the other exports had the same geometry as the published STLs.
+- **Kept:** `landinggear.stl` and the servo brackets. They are not in the new set but are used by the build guide.
+- **Not published:** `Test-Mount.stl`, pending its purpose and material.
+
+The textbook's Landing Gear and both 2 mm plywood clip cards now link to the 64D TPU parts. The library now has 115 material records.
+
 ## RC transmitter case — November 8
 
 Added the transmitter's 3D-printed case from `ASCEND-Materials/Tx-3D-Print/`: 9 STL files hosted on Pages, plus `v4 Trasmitter Case.f3z` (135.5 MiB). The Fusion file was uploaded to `ascend-files` at `r2-upload/tx-3d-print-v4-trasmitter-case.f3z`; its downloaded size and SHA-256 match the original. Resource: `/resources/transmitter-case/`, listed under CAD & Fabrication > Electronics Enclosures and Electronic Designs > RC Transmitter. The case fits transmitter boards V3 and V4.

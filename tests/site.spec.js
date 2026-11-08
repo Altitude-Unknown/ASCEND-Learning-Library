@@ -96,7 +96,7 @@ test('Imported books, slides, and project parts link to actual files',async({pag
   expect((await response.body()).subarray(0,5).toString()).toBe('%PDF-');
  }
  await page.goto('/resources/trainer-tpu-parts/');
- await expect(page.getByRole('link',{name:/^Download STL/})).toHaveCount(10);
+ await expect(page.getByRole('link',{name:/^Download STL/})).toHaveCount(11);
  await page.goto('/uas/trainer-airplane/');
  await page.getByRole('link',{name:'ASCEND Trainer Airplane Build Instructions',exact:true}).click();
  await expect(page.locator('#files')).toBeVisible();
