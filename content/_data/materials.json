@@ -550,6 +550,17 @@
     "publicUrl": "https://pub-c44fad737a904733b8cd98e5e7e81ea9.r2.dev/r2-upload/AltitudeUnknown_Trainer_Build_Instructions.docx"
   },
   {
+    "id": "rc-airplanes-trainer-airplane-bench-test-test-mount",
+    "source": "RC-Airplanes/Trainer-Airplane/Bench_Test/Test-Mount.stl",
+    "filename": "Test-Mount.stl",
+    "format": "STL",
+    "bytes": 49084,
+    "sha256": "7a7a3c47f95646e12db198b48f6994eb4612fdd6e71d3b198bd71740319e5893",
+    "localPath": "downloads/imported/rc-airplanes-trainer-airplane-bench-test-test-mount.stl",
+    "hostedLocally": true,
+    "publicUrl": ""
+  },
+  {
     "id": "rc-airplanes-trainer-airplane-dxfs-horizontal-feathers",
     "source": "RC-Airplanes/Trainer-Airplane/DXFs/horizontal-feathers.dxf",
     "filename": "horizontal-feathers.dxf",
