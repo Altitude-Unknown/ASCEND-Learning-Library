@@ -70,6 +70,11 @@
         "description": "Learn voltage, current, resistance, and power, Ohm’s law, wire gauge, multimeters, and waveforms in two units. Each unit pairs a reading with practice or a lab, instructor sign-off, and review questions; video lessons are coming soon."
       },
       {
+        "title": "UAS Hardware and Electronics",
+        "url": "/uas-hardware/",
+        "description": "Learn the hardware every remote aircraft shares in five units: transmitters, receivers and servos, motors and ESCs, batteries and chargers, and linkages and soldering. Each unit pairs a reading with a lab or practice, instructor sign-off, and review questions; video lessons are coming soon."
+      },
+      {
         "title": "PID Controllers",
         "url": "/pid-controllers/",
         "description": "Learn how a flight controller holds an aircraft on target in two units: what the proportional, integral, and derivative terms do, and how to tune each gain. Each unit pairs a reading with practice or a lab and review questions; video lessons are coming soon."
@@ -204,6 +209,11 @@
         "title": "Electrical Basics",
         "url": "/electrical-basics/",
         "description": "Learn voltage, current, resistance, and power, Ohm’s law, wire gauge, multimeters, and waveforms in two units. Each unit pairs a reading with practice or a lab, instructor sign-off, and review questions; video lessons are coming soon."
+      },
+      {
+        "title": "UAS Hardware and Electronics",
+        "url": "/uas-hardware/",
+        "description": "Learn the hardware every remote aircraft shares in five units: transmitters, receivers and servos, motors and ESCs, batteries and chargers, and linkages and soldering. Each unit pairs a reading with a lab or practice, instructor sign-off, and review questions; video lessons are coming soon."
       }
     ],
     "description": "Download the circuit boards behind ASCEND hardware: Fusion designs, schematics, board layouts, parts lists, and Gerbers for ordering your own boards.",

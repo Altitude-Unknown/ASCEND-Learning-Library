@@ -166,10 +166,14 @@ class Converter:
     def block_images(self, block):
         """Figures and equations in a paragraph (not inline symbols)."""
         items = []
-        for blip in block.iter('{' + NS['a'] + '}blip'):
-            name, figure = self.image(blip)
-            if 'inline' not in figure:
-                items.append((name, figure))
+        for drawing in block.iter(DRAWING):
+            # Word may rotate a picture on the page (60000ths of a degree, clockwise).
+            xfrm = drawing.find('.//a:xfrm', NS)
+            rotation = round(int(xfrm.get('rot', '0')) / 60000) % 360 if xfrm is not None else 0
+            for blip in drawing.iter('{' + NS['a'] + '}blip'):
+                name, figure = self.image(blip)
+                if 'inline' not in figure:
+                    items.append((name, dict(figure, rotation=rotation)))
         return items
 
     def figure_html(self, name, figure):
@@ -181,6 +185,18 @@ class Converter:
         data = self.doc.zip.read('word/' + target)
         image = Image.open(io.BytesIO(data))
         image.load()
+        destination = self.assets / figure['file']
+        destination.parent.mkdir(parents=True, exist_ok=True)
+        url = f'/assets/{self.chapter["assets"]}/{figure["file"]}'
+        caption = f'<figcaption><p>{figure["caption"]}</p></figcaption>' if figure.get('caption') else ''
+        if name.endswith('.gif'):
+            # Show the first frame; link the animation so it never plays by itself (WCAG 2.2.2).
+            animation = destination.with_suffix('.gif')
+            animation.write_bytes(data)
+            caption = (f'<figcaption>{"<p>" + figure["caption"] + "</p>" if figure.get("caption") else ""}'
+                       f'<p><a href="{url[:-4]}.gif">Open the animation</a></p></figcaption>')
+        if figure.get('rotation'):
+            image = image.rotate(-figure['rotation'], expand=True)
         if image.mode in ('RGBA', 'LA', 'P'):
             image = image.convert('RGBA')
             flat = Image.new('RGB', image.size, 'white')
@@ -189,16 +205,12 @@ class Converter:
         else:
             image = image.convert('RGB')
         image.thumbnail((1600, 1600))
-        destination = self.assets / figure['file']
-        destination.parent.mkdir(parents=True, exist_ok=True)
         if destination.suffix == '.png':
             image.save(destination, optimize=True)
         else:
             image.save(destination, quality=82, optimize=True, progressive=True)
         self.used_figures.append({'file': figure['file'], 'source': name,
                                   'sha256': hashlib.sha256(data).hexdigest()})
-        url = f'/assets/{self.chapter["assets"]}/{figure["file"]}'
-        caption = f'<figcaption><p>{figure["caption"]}</p></figcaption>' if figure.get('caption') else ''
         return (f'<figure class="textbook-figure"><a href="{url}"><img src="{url}" '
                 f'alt="{html.escape(figure["alt"], quote=True)}" width="{image.width}" height="{image.height}" '
                 f'loading="lazy"></a>{caption}</figure>')
@@ -288,29 +300,48 @@ def section_items(doc, blocks, heading):
     return items
 
 
+def block_lines(block):
+    """Paragraph text split at Word line breaks."""
+    value = ''.join('\n' if n.tag == W + 'br' else (n.text or '') if n.tag == W + 't' else '' for n in block.iter())
+    return [normalized(v) for v in value.split('\n') if normalized(v)]
+
+
 def review_and_answers(doc, chapter, blocks):
-    questions = [normalized(text(b)) for b in section_items(doc, blocks, 'Review Questions') if doc.list_info(b)]
+    """Questions from the chapter list (sub-items join their question) paired
+    with the answer key. The key's wording is used: it is the corrected copy."""
+    questions = []
+    for block in section_items(doc, blocks, 'Review Questions'):
+        info = doc.list_info(block)
+        if not info:
+            continue
+        if info[1] > 0 and questions:
+            questions[-1].append(normalized(text(block)))
+        else:
+            questions.append([normalized(text(block))])
     key_start = next(i for i, b in enumerate(doc.blocks) if text(b).strip() == chapter['answerKeyHeading'])
     answers = []
     for block in doc.blocks[key_start + 1:]:
         value = text(block).strip()
         if doc.heading_level(block) in (1, 2) or re.match(r'^Chapter \d.*Answer Key$', value):
             break
-        if value and 'Answer:' in value:
-            answers.append(block)
+        if not value:
+            continue
+        if 'Answer:' in value:
+            answers.append([block])
+        elif answers:
+            answers[-1].append(block)  # worked steps or a list under the answer
     assert len(questions) == len(answers), f'{len(questions)} questions, {len(answers)} answers'
     result = {}
-    for number, (question, block) in enumerate(zip(questions, answers), 1):
-        # Line breaks inside the answer separate worked steps.
-        lines = []
-        for run_text in re.split(r'\n', ''.join('\n' if n.tag == W + 'br' else (n.text or '') if n.tag == W + 't' else ''
-                                               for n in block.iter())):
-            lines.append(run_text)
+    for number, (question, blocks_) in enumerate(zip(questions, answers), 1):
+        lines = [line for b in blocks_ for line in block_lines(b)]
         joined = '\n'.join(lines)
-        source_question, answer = joined.split('Answer:', 1)
-        assert normalized(source_question).rstrip(' ?') .startswith(question.rstrip(' ?')[:40]), (number, question, source_question)
-        steps = [normalized(s) for s in answer.split('\n') if normalized(s)]
-        result[str(number)] = {'question': question, 'answer': ' '.join(steps) if len(steps) == 1 else steps}
+        key_question, first = joined.split('Answer:', 1)
+        key_question = normalized(key_question)
+        assert key_question[:12].lower() == question[0][:12].lower(), (number, question[0], key_question)
+        if len(question) > 1:
+            key_question += ' ' + ', '.join(question[1:]) + '.'
+        steps = [normalized(s) for s in first.split('\n') if normalized(s)]
+        result[str(number)] = {'question': key_question, 'answer': steps[0] if len(steps) == 1 else steps}
     return result
 
 
@@ -332,6 +363,12 @@ def convert(doc, number, chapter, figures):
     tables = 0
     definitions = False
     in_dl = False
+    # Sections written to their own HTML fragment (labs with figures),
+    # included by a hand-written resource page.
+    extracts = {re.compile(k): v for k, v in chapter.get('extracts', {}).items()}
+    fragments = {}
+    chapter_out, chapter_expected = out, expected
+    extracting = False
 
     def close_lists(to_level=-1):
         nonlocal in_dl
@@ -346,11 +383,33 @@ def convert(doc, number, chapter, figures):
         level = doc.heading_level(block) if block.tag == W + 'p' else 0
         level = chapter.get('headingLevels', {}).get(value, level) if (level or value in chapter.get('headingLevels', {})) else 0
         if level == 2:
-            skipping = any(p.search(value) for p in omit)
+            close_lists()
+            target = next((v for k, v in extracts.items() if k.search(value)), None)
+            extracting = target is not None
+            out = fragments.setdefault(target, []) if extracting else chapter_out
+            expected = [] if extracting else chapter_expected
+            skipping = not extracting and any(p.search(value) for p in omit)
+            if extracting:
+                continue
         if skipping:
             continue
         if block.tag == W + 'tbl':
             close_lists()
+            cells = list(block.iter(W + 'tc'))
+            if all(cell.findall('.//a:blip', NS) or not text(cell).strip() for cell in cells) and any(cell.findall('.//a:blip', NS) for cell in cells):
+                # A layout table of pictures (with optional labels): a figure grid.
+                out.append('<ul class="parts-grid">')
+                for cell in cells:
+                    label = normalized(text(cell))
+                    for p in cell.findall('w:p', NS):
+                        for name, figure in converter.block_images(p):
+                            if label:
+                                figure = dict(figure, caption=html.escape(label))
+                            item = converter.figure_html(name, figure).replace('class="textbook-figure"', 'class="part-card"', 1)
+                            out.append(f'<li>{item}</li>')
+                out.append('</ul>')
+                expected.extend(normalized(text(c)) for c in cells if text(c).strip())
+                continue
             tables += 1
             label = chapter.get('tableLabels', {}).get(str(tables), f'{last_heading}')
             out.append(converter.table_html(block, label))
@@ -369,7 +428,8 @@ def convert(doc, number, chapter, figures):
                 continue
             anchor = make_id(title)
             out.append(f'<{tag} id="{anchor}">{html.escape(title)}</{tag}>')
-            toc.append({'title': ('— ' if tag == 'h3' else '') + title, 'id': anchor})
+            if not extracting:
+                toc.append({'title': ('— ' if tag == 'h3' else '') + title, 'id': anchor})
             last_heading = title
             definitions = value in chapter.get('definitionSections', [])
             expected.append(normalized(title))
@@ -402,6 +462,14 @@ def convert(doc, number, chapter, figures):
             close_lists()
             out.append(converter.figure_html(name, figure))
     close_lists()
+    out, expected = chapter_out, chapter_expected
+    for path, parts in fragments.items():
+        fragment = '\n'.join(parts)
+        for old, new in chapter.get('extractReplace', []):
+            assert old in fragment, f'Chapter {number}: extract correction not found: {old}'
+            fragment = fragment.replace(old, new)
+        (ROOT / path).parent.mkdir(parents=True, exist_ok=True)
+        (ROOT / path).write_text(fragment + '\n')
     if converter.missing:
         raise SystemExit(f'Chapter {number}: no figure entry for {sorted(set(converter.missing))}')
     if chapter.get('closing'):

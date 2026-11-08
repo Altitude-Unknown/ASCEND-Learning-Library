@@ -122,3 +122,23 @@ affect the Plant”), the two “Summary Table” headings are replaced by table
 captions, and the Kp tuning list's run-together “Back off slightly” step is its
 own item. The manual's lab gives only a goal and materials; the web lab's
 procedure follows the chapter's tuning steps.
+
+### UAS Hardware and Electronics (Chapter 2)
+
+Five units. Word rotates many transmitter photos on the page; the importer
+applies that rotation. The three animated GIFs (PWM, brushless and brushed
+motors) show a still frame with an “Open the animation” link, so nothing
+plays by itself (WCAG 2.2.2). Picture-only layout tables become photo grids.
+The Motor Thrust Lab Guide is imported to
+`content/_includes/lab-manual/motor-thrust-guide.html` and included by the
+motor thrust lab page with its question sheet. Review questions use the
+answer key's wording, which corrects the chapter list (“max change voltage”,
+“ROHS”).
+
+Corrections: discharge example “1.5 x 100 = 100amps” reads 150 amps; the
+servo section's “Juggy the RC airplane project at the end of this book” reads
+“the ASCEND Trainer Airplane in Chapter 4”; “bottom right image” reads “second
+photo”; the motor mount's “google share drive” reads “ask your instructor”;
+the Spektrum photo credit's broken hobbies.com link is removed; and typing
+fixes (like, progress, bottom, form, than, divide, lead, controls, charger,
+correct, specks, needle nose, and others listed in `editorial/lab-manual.json`).

@@ -1,0 +1,441 @@
+{
+  "units": [
+    {
+      "slug": "transmitters",
+      "title": "Transmitters",
+      "number": 1,
+      "url": "/uas-hardware/transmitters/",
+      "summary": "Set up a new aircraft in a transmitter, then set dual rates and expo, aileron-rudder mixing, servo reversing, travel, and sub trim.",
+      "outcomes": [
+        "Explain what a transmitter protocol is and why the transmitter and receiver must match.",
+        "Set up a new aircraft in a transmitter: model type, name, aircraft type, and image.",
+        "Set dual rates and expo on a switch, add aileron-rudder mixing, and reverse a servo."
+      ],
+      "readings": [
+        {
+          "title": "Transmitters",
+          "id": "transmitters"
+        },
+        {
+          "title": "Setting up a new aircraft",
+          "id": "setting-up-a-new-aircraft"
+        },
+        {
+          "title": "Set dual rates and expo",
+          "id": "set-dual-rates-and-expo"
+        },
+        {
+          "title": "Mixing",
+          "id": "mixing"
+        },
+        {
+          "title": "Reverse a servo travel, sub trim, or direction",
+          "id": "reverse-a-servo-travel-sub-trim-or-direction"
+        },
+        {
+          "title": "Travel",
+          "id": "travel"
+        },
+        {
+          "title": "Sub Trim",
+          "id": "sub-trim"
+        }
+      ],
+      "activities": [
+        "uas-transmitter-lab"
+      ],
+      "signoff": [
+        "Setup a new aircraft on a transmitter.",
+        "Setup dual rates and expo on a transmitter.",
+        "Setup mixing on a transmitter.",
+        "Set sub trims and control stick trims on a transmitter.",
+        "Reverse a servo direction on a transmitter."
+      ],
+      "lessonVideo": null,
+      "reviewQuestions": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "slug": "receivers-binding-and-servos",
+      "title": "Receivers, Binding, and Servos",
+      "number": 2,
+      "url": "/uas-hardware/receivers-binding-and-servos/",
+      "summary": "Learn how a receiver drives servos and ESCs, bind a transmitter to a receiver step by step, and see how pulse width modulation positions a servo.",
+      "outcomes": [
+        "Identify a receiver’s signal, power, and ground pins and explain where its power comes from.",
+        "Bind a transmitter to a receiver.",
+        "Explain how a servo uses pulse width modulation to set its arm position."
+      ],
+      "readings": [
+        {
+          "title": "Receivers",
+          "id": "receivers"
+        },
+        {
+          "title": "Binding",
+          "id": "binding"
+        },
+        {
+          "title": "How to bind a transmitter to a receiver, step by step",
+          "id": "how-to-bind-a-transmitter-to-a-receiver-step-by-step"
+        },
+        {
+          "title": "Servos",
+          "id": "servos"
+        },
+        {
+          "title": "Pulse Width Modulation",
+          "id": "pulse-width-modulation"
+        }
+      ],
+      "activities": [],
+      "practice": {
+        "title": "Bind a transmitter to a receiver",
+        "text": "With a receiver, ESC with a BEC, battery, and transmitter, follow the binding steps until the transmitter shows the bind has succeeded. Then move a servo with the sticks to check the link.",
+        "sections": [
+          {
+            "title": "How to bind a transmitter to a receiver, step by step",
+            "id": "how-to-bind-a-transmitter-to-a-receiver-step-by-step"
+          }
+        ]
+      },
+      "signoff": [
+        "Bind a transmitter to a receiver."
+      ],
+      "lessonVideo": null,
+      "reviewQuestions": [
+        1,
+        7,
+        8
+      ]
+    },
+    {
+      "slug": "motors-escs-and-propellers",
+      "title": "Motors, ESCs, and Propellers",
+      "number": 3,
+      "url": "/uas-hardware/motors-escs-and-propellers/",
+      "summary": "Compare brushless and brushed motors, see what an ESC does, read propeller sizes, and measure how battery and propeller choices change thrust and current.",
+      "outcomes": [
+        "Explain the difference between brushless and brushed motors and how to reverse each.",
+        "Describe the two jobs an ESC does for a brushless motor.",
+        "Measure thrust and current, and match a battery, propeller, motor, and ESC within their current limits."
+      ],
+      "readings": [
+        {
+          "title": "Motors",
+          "id": "motors"
+        },
+        {
+          "title": "Brushless Motors",
+          "id": "brushless-motors"
+        },
+        {
+          "title": "Brushed Motor",
+          "id": "brushed-motor"
+        },
+        {
+          "title": "Electronic Speed Controls",
+          "id": "electronic-speed-controls"
+        },
+        {
+          "title": "Propellers",
+          "id": "propellers"
+        },
+        {
+          "title": "Matching the battery, propeller, motor, and ESC",
+          "id": "matching-the-battery-propeller-motor-and-esc"
+        }
+      ],
+      "activities": [
+        "uas-motor-thrust-lab"
+      ],
+      "signoff": [
+        "Connect an ESC, motor, and receiver correctly.",
+        "Select a propeller based on motor orientation (tractor or pusher) and shaft rotation."
+      ],
+      "lessonVideo": null,
+      "reviewQuestions": [
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "slug": "batteries-and-chargers",
+      "title": "Batteries and Chargers",
+      "number": 4,
+      "url": "/uas-hardware/batteries-and-chargers/",
+      "summary": "Choose a battery by chemistry, cell count, capacity, and C-rating, then balance charge a LiPo safely at the right current.",
+      "outcomes": [
+        "Read a LiPo label: cell count, voltage, capacity, and C-rating.",
+        "Calculate safe charge and discharge currents from capacity and C-rating.",
+        "Balance charge a LiPo battery with the correct chemistry, current, and voltage, and store it safely."
+      ],
+      "readings": [
+        {
+          "title": "Batteries",
+          "id": "batteries"
+        },
+        {
+          "title": "Chemistry",
+          "id": "chemistry"
+        },
+        {
+          "title": "Cells (Voltage)",
+          "id": "cells-voltage"
+        },
+        {
+          "title": "Capacity (mAh)",
+          "id": "capacity-mah"
+        },
+        {
+          "title": "C-Rating",
+          "id": "c-rating"
+        },
+        {
+          "title": "Battery Connectors",
+          "id": "battery-connectors"
+        },
+        {
+          "title": "Battery Chargers",
+          "id": "battery-chargers"
+        },
+        {
+          "title": "Safe Charging Current",
+          "id": "safe-charging-current"
+        },
+        {
+          "title": "Battery Labeling",
+          "id": "battery-labeling"
+        },
+        {
+          "title": "Charging a battery",
+          "id": "charging-a-battery"
+        }
+      ],
+      "activities": [
+        "uas-battery-charger-lab"
+      ],
+      "signoff": [
+        "Charge a battery using a battery charger with the correct chemistry, current and voltage settings."
+      ],
+      "lessonVideo": null,
+      "reviewQuestions": [
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ]
+    },
+    {
+      "slug": "linkages-and-soldering",
+      "title": "Linkages and Soldering",
+      "number": 5,
+      "url": "/uas-hardware/linkages-and-soldering/",
+      "summary": "Connect servos to control surfaces with control horns, pushrods, and linkage stoppers, then solder, desolder, and splice wires.",
+      "outcomes": [
+        "Connect a servo to a control surface with a pushrod and control horn, and explain the trade-offs of linkage stoppers.",
+        "Make clean solder joints and keep the iron tip clean.",
+        "Remove a soldered component with solder wick."
+      ],
+      "readings": [
+        {
+          "title": "Control Horns",
+          "id": "control-horns"
+        },
+        {
+          "title": "Pushrods",
+          "id": "pushrods"
+        },
+        {
+          "title": "Linkage Stopper",
+          "id": "linkage-stopper"
+        },
+        {
+          "title": "Tools",
+          "id": "tools"
+        },
+        {
+          "title": "Soldering and Crimping",
+          "id": "soldering-and-crimping"
+        },
+        {
+          "title": "How to Solder",
+          "id": "how-to-solder"
+        },
+        {
+          "title": "Desoldering a connection",
+          "id": "desoldering-a-connection"
+        }
+      ],
+      "activities": [
+        "uas-soldering-lab"
+      ],
+      "signoff": [
+        "Install a servo and connect to a control surface using control horns and pushrod wire.",
+        "Solder an in-line splice.",
+        "Solder a wire to a surface mount pad on a PCB (printed Circuit Board).",
+        "Remove a soldered component using solder wick.",
+        "Describe the process for cleaning a newly soldered PCB."
+      ],
+      "lessonVideo": null,
+      "reviewQuestions": [
+        9,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27
+      ],
+      "skills": [
+        "Setup a new aircraft on a transmitter.",
+        "Bind a transmitter to a receiver.",
+        "Setup dual rates and expo on a transmitter.",
+        "Setup mixing on a transmitter.",
+        "Set sub trims and control stick trims on a transmitter.",
+        "Reverse a servo direction on a transmitter.",
+        "Connect an ESC, motor, and receiver correctly.",
+        "Recalibrate an ESC.",
+        "Select a propeller based on motor orientation (tractor or pusher) and shaft rotation.",
+        "Solder an in-line splice.",
+        "Solder a wire to a surface mount pad on a PCB (printed Circuit Board).",
+        "Charge a battery using a battery charger with the correct chemistry, current and voltage settings.",
+        "Install a servo and connect to a control surface using control horns and pushrod wire.",
+        "Remove a soldered component using solder wick.",
+        "Describe the process for cleaning a newly soldered PCB."
+      ]
+    }
+  ],
+  "chapterUrl": "/uas-hardware/textbook/hardware-and-electronics/",
+  "chapterTitle": "Chapter 2: Hardware and Electronics for Unmanned Aircraft",
+  "reviewQuestions": {
+    "1": {
+      "question": "What do you call the process of pairing a transmitter to a receiver?",
+      "answer": "Binding. Binding connects a specific transmitter and receiver so they can communicate with each other."
+    },
+    "2": {
+      "question": "What frequency do most modern transmitters broadcast at in the United States?",
+      "answer": "2.4 GHz."
+    },
+    "3": {
+      "question": "What is the purpose of setting dual rates and expo?",
+      "answer": "Dual rates and expo make the aircraft easier and smoother to control. Rates can limit maximum control-surface movement, while expo reduces sensitivity near the center of the control sticks."
+    },
+    "4": {
+      "question": "Explain the difference between dual rates and expo.",
+      "answer": "Dual rates limit the maximum amount a control surface can move. Expo reduces control sensitivity near the center of the stick while still allowing full control-surface movement at the ends of stick travel. The chapter recommends approximately 30–40% expo as a useful starting point."
+    },
+    "5": {
+      "question": "Demonstrate the process for setting up dual rates and expo to a switch on your transmitter.",
+      "answer": "Open the D/R and Expo menu, select the desired channel, assign the settings to a switch, and program the desired rate and expo for each switch position. The chapter example uses 50%, 75%, and 100% rates with 40% expo on all three positions. Repeat the process for aileron, elevator, and rudder."
+    },
+    "6": {
+      "question": "What are sub trims?",
+      "answer": "Sub trims are electronic adjustments used to slightly change a servo's neutral position. The aircraft should be mechanically trimmed first, with sub trim used only for small corrections."
+    },
+    "7": {
+      "question": "What is pulse width modulation?",
+      "answer": "PWM, or Pulse Width Modulation, controls a device by changing the amount of time an electrical signal is on during each cycle. For a servo, changing the pulse width tells the servo what position to move to."
+    },
+    "8": {
+      "question": "What is the function of a servo?",
+      "answer": "A servo converts an electrical control signal into mechanical movement. In an aircraft, servos move control surfaces such as the elevator, rudder, and ailerons."
+    },
+    "9": {
+      "question": "What do pushrods and control horns do?",
+      "answer": "Pushrods mechanically connect the servo to the aircraft's control surface. The control horn transfers the linear motion of the pushrod into movement of the control surface."
+    },
+    "10": {
+      "question": "What is the difference between a brushed motor and a brushless motor?",
+      "answer": "A brushed motor uses physical brushes to mechanically switch current through its coils. A brushless motor uses an electronic speed controller to electronically switch the coils. Brushless motors are generally lighter, more efficient, and have fewer parts that wear out."
+    },
+    "11": {
+      "question": "How do you reverse the direction of a brushed motor?",
+      "answer": "Reverse the positive and negative power connections to the motor."
+    },
+    "12": {
+      "question": "How do you reverse the direction of a brushless motor?",
+      "answer": "Swap any two of the three wires connecting the brushless motor to the ESC."
+    },
+    "13": {
+      "question": "Name three different battery chemistries.",
+      "answer": "Any three of the following: NiCad, NiMH, LiPo, or LiFePO₄."
+    },
+    "14": {
+      "question": "What is the typical voltage of a single-cell LiPo battery?",
+      "answer": "3.7 volts."
+    },
+    "15": {
+      "question": "What is the maximum charge voltage on a single-cell LiPo battery?",
+      "answer": "4.2 volts."
+    },
+    "16": {
+      "question": "What is the minimum safe discharge voltage on a single-cell LiPo battery?",
+      "answer": "Approximately 3.2 volts. The chapter warns that dropping below this level can permanently damage the cell."
+    },
+    "17": {
+      "question": "What is the C-rating on a battery?",
+      "answer": "The C-rating indicates how much continuous current a battery can safely supply relative to its capacity. For example, a 1,100 mAh battery rated at 25C can provide approximately 27.5 amps."
+    },
+    "18": {
+      "question": "Which battery connector is larger, an XT-30 or XT-90?",
+      "answer": "XT-90. Larger connectors are generally used for batteries and systems that carry higher current."
+    },
+    "19": {
+      "question": "What is the safe charging current for the following LiPo batteries? 500mAh, 800mAh, 1300mAh, 1500mAh, 2200mAh, 7000mAh.",
+      "answer": [
+        "Using the chapter's recommended 1C charge rate:",
+        "500 mAh = 0.5 A",
+        "800 mAh = 0.8 A",
+        "1300 mAh = 1.3 A",
+        "1500 mAh = 1.5 A",
+        "2200 mAh = 2.2 A",
+        "7000 mAh = 7.0 A",
+        "To find a 1C charge rate, divide the battery's mAh capacity by 1000."
+      ]
+    },
+    "20": {
+      "question": "What does the “S” in 6S mean on a LiPo battery label?",
+      "answer": "The S means series. A 6S battery contains six cells connected in series. Since each LiPo cell has a nominal voltage of 3.7 V, a 6S battery has a nominal voltage of 22.2 V."
+    },
+    "21": {
+      "question": "Explain some ways to safely store and charge LiPo batteries.",
+      "answer": "LiPo batteries should be balance charged, charged at an appropriate current, monitored during charging, and stored and charged in a fire-resistant location. The chapter mentions battery bunkers and Kevlar fire bags as options. Batteries should also be inspected for damage, swelling, or unbalanced cells."
+    },
+    "22": {
+      "question": "What two metals are solder typically made from?",
+      "answer": "Tin and lead. The chapter gives 60/40 solder—60% tin and 40% lead—as a common example."
+    },
+    "23": {
+      "question": "Which metal is missing in RoHS-compliant solder?",
+      "answer": "Lead. RoHS-compliant solder is lead-free and typically uses tin combined with metals such as copper or silver."
+    },
+    "24": {
+      "question": "What is the purpose of solder wick?",
+      "answer": "Solder wick is used to remove molten solder from a connection. When heated with a soldering iron, the braided wick absorbs the melted solder."
+    },
+    "25": {
+      "question": "What is the purpose of solder wool?",
+      "answer": "Brass solder wool is used to clean oxidation and excess solder from the tip of a soldering iron. The iron tip should be kept clean and shiny for good soldering results."
+    },
+    "26": {
+      "question": "What are the pros and cons of using linkage stoppers?",
+      "answer": "Linkage stoppers are easy to install and allow fine adjustment of the pushrod. Their disadvantage is that the set screw and retaining nut create additional potential points of failure that could loosen and cause loss of control."
+    },
+    "27": {
+      "question": "When do you need to use Z-bend pliers? What is their purpose?",
+      "answer": "Z-bend pliers are used when making Z-shaped bends in piano-wire pushrods. The Z-bend allows the pushrod to connect securely to a servo arm or control horn. Z-bend pliers make the bend easier, faster, and more consistent than ordinary pliers."
+    }
+  }
+}

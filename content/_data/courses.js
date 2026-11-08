@@ -8,6 +8,7 @@ const learnToFly = read('./learnToFlyCourse.json');
 const buildFixedWing = read('./buildFixedWingCourse.json');
 const electricalBasics = read('./electricalBasicsCourse.json');
 const pidControllers = read('./pidControllersCourse.json');
+const uasHardware = read('./uasHardwareCourse.json');
 
 // Lab manual courses share one study method; only the chapter differs.
 const labManualMethod = chapter => [
@@ -95,7 +96,7 @@ export default {
     sidebarCollection: 'electricalBasicsModules',
     overviewLabel: 'Course overview',
     check: 'review',
-    final: {url: '/pid-controllers/', title: 'PID Controllers'},
+    final: {url: '/uas-hardware/', title: 'UAS Hardware and Electronics'},
     intro: [
       'This course teaches the electrical basics behind every unmanned aircraft: voltage, current, resistance, and power; Ohm’s law; wire; using a multimeter; and reading waveforms. It follows Chapter 1, Electrical Basics, of the Remote and Autonomous Aircraft Systems lab manual.',
       'These ideas come up again whenever you choose a battery, motor, or speed controller, wire up a flight controller, or troubleshoot a circuit that is not working.'
@@ -106,6 +107,28 @@ export default {
     chapterTitle: electricalBasics.chapterTitle,
     reviewQuestions: electricalBasics.reviewQuestions,
     units: electricalBasics.units
+  },
+  uasHardware: {
+    id: 'uasHardware',
+    title: 'UAS Hardware and Electronics',
+    shortTitle: 'UAS Hardware',
+    url: '/uas-hardware/',
+    label: 'UAS HARDWARE AND ELECTRONICS',
+    sidebarLabel: 'BROWSE THE COURSE',
+    sidebarCollection: 'uasHardwareModules',
+    overviewLabel: 'Course overview',
+    check: 'review',
+    final: {url: '/build-fixed-wing/', title: 'Building a Fixed-Wing UAS'},
+    intro: [
+      'This course covers the hardware that airplanes and multirotors share: transmitters, receivers, servos, motors, ESCs, propellers, batteries and chargers, control linkages, and soldering. It follows Chapter 2, Hardware and Electronics for Unmanned Aircraft, of the Remote and Autonomous Aircraft Systems lab manual.',
+      'The examples use common off-the-shelf equipment, such as a Spektrum transmitter and a Venom charger, so the course also suits teams using hardware they already have. Start with Electrical Basics if voltage, current, and Ohm’s law are new to you.'
+    ],
+    notice: {title: 'Work safely', text: 'Wear safety glasses, keep clear of spinning propellers, never leave a charging LiPo battery unattended, and charge and store LiPo batteries in a fire-resistant place.'},
+    method: labManualMethod('Chapter 2'),
+    chapterUrl: uasHardware.chapterUrl,
+    chapterTitle: uasHardware.chapterTitle,
+    reviewQuestions: uasHardware.reviewQuestions,
+    units: uasHardware.units
   },
   pidControllers: {
     id: 'pidControllers',

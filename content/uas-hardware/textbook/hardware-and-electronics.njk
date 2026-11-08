@@ -1,0 +1,492 @@
+---
+{
+  "layout": "layouts/textbook-chapter.njk",
+  "tags": [],
+  "eleventyExcludeFromCollections": true,
+  "topic": "uas",
+  "courseId": "uasHardware",
+  "title": "Chapter 2: Hardware and Electronics for Unmanned Aircraft",
+  "description": "The hardware every remote aircraft shares: transmitters, receivers, servos, motors, ESCs, propellers, batteries and chargers, linkages, and soldering.",
+  "chapterNumber": 2,
+  "textbookEyebrow": "REMOTE AND AUTONOMOUS AIRCRAFT SYSTEMS · WEB EDITION",
+  "sourceNote": "From Mike Walach’s lab manual, Remote and Autonomous Aircraft Systems. Original wording is retained with small corrections; image descriptions have been added for web reading.",
+  "headerLinks": [
+    {
+      "title": "About the lab manual",
+      "url": "/resources/remote-aircraft-textbook/"
+    }
+  ],
+  "toc": [
+    {
+      "title": "Transmitters",
+      "id": "transmitters"
+    },
+    {
+      "title": "Setting up a new aircraft",
+      "id": "setting-up-a-new-aircraft"
+    },
+    {
+      "title": "Set dual rates and expo",
+      "id": "set-dual-rates-and-expo"
+    },
+    {
+      "title": "Mixing",
+      "id": "mixing"
+    },
+    {
+      "title": "Reverse a servo travel, sub trim, or direction",
+      "id": "reverse-a-servo-travel-sub-trim-or-direction"
+    },
+    {
+      "title": "Travel",
+      "id": "travel"
+    },
+    {
+      "title": "Sub Trim",
+      "id": "sub-trim"
+    },
+    {
+      "title": "Receivers",
+      "id": "receivers"
+    },
+    {
+      "title": "Binding",
+      "id": "binding"
+    },
+    {
+      "title": "— How to bind a transmitter to a receiver, step by step",
+      "id": "how-to-bind-a-transmitter-to-a-receiver-step-by-step"
+    },
+    {
+      "title": "Servos",
+      "id": "servos"
+    },
+    {
+      "title": "— Pulse Width Modulation",
+      "id": "pulse-width-modulation"
+    },
+    {
+      "title": "Motors",
+      "id": "motors"
+    },
+    {
+      "title": "— Brushless Motors",
+      "id": "brushless-motors"
+    },
+    {
+      "title": "— Brushed Motor",
+      "id": "brushed-motor"
+    },
+    {
+      "title": "Electronic Speed Controls",
+      "id": "electronic-speed-controls"
+    },
+    {
+      "title": "Propellers",
+      "id": "propellers"
+    },
+    {
+      "title": "Batteries",
+      "id": "batteries"
+    },
+    {
+      "title": "— Chemistry",
+      "id": "chemistry"
+    },
+    {
+      "title": "— Cells (Voltage)",
+      "id": "cells-voltage"
+    },
+    {
+      "title": "— Capacity (mAh)",
+      "id": "capacity-mah"
+    },
+    {
+      "title": "— C-Rating",
+      "id": "c-rating"
+    },
+    {
+      "title": "— Battery Connectors",
+      "id": "battery-connectors"
+    },
+    {
+      "title": "Battery Chargers",
+      "id": "battery-chargers"
+    },
+    {
+      "title": "— Understanding the risks",
+      "id": "understanding-the-risks"
+    },
+    {
+      "title": "— Safe Charging Current",
+      "id": "safe-charging-current"
+    },
+    {
+      "title": "— Discharge Current (C Rating)",
+      "id": "discharge-current-c-rating"
+    },
+    {
+      "title": "— Battery Labeling",
+      "id": "battery-labeling"
+    },
+    {
+      "title": "— Charging a battery",
+      "id": "charging-a-battery"
+    },
+    {
+      "title": "Matching the battery, propeller, motor, and ESC",
+      "id": "matching-the-battery-propeller-motor-and-esc"
+    },
+    {
+      "title": "Control Horns",
+      "id": "control-horns"
+    },
+    {
+      "title": "Pushrods",
+      "id": "pushrods"
+    },
+    {
+      "title": "Linkage Stopper",
+      "id": "linkage-stopper"
+    },
+    {
+      "title": "Tools",
+      "id": "tools"
+    },
+    {
+      "title": "— Z-Bend Pliers",
+      "id": "z-bend-pliers"
+    },
+    {
+      "title": "Soldering and Crimping",
+      "id": "soldering-and-crimping"
+    },
+    {
+      "title": "— Solder Station",
+      "id": "solder-station"
+    },
+    {
+      "title": "— Solder wool",
+      "id": "solder-wool"
+    },
+    {
+      "title": "— Solder",
+      "id": "solder"
+    },
+    {
+      "title": "— Solder Wick",
+      "id": "solder-wick"
+    },
+    {
+      "title": "How to Solder",
+      "id": "how-to-solder"
+    },
+    {
+      "title": "— Desoldering a connection",
+      "id": "desoldering-a-connection"
+    }
+  ],
+  "permalink": "/uas-hardware/textbook/hardware-and-electronics/"
+}
+---
+<p>Fixed wing and multirotor aircraft have a lot of the same hardware in common. Motors, transmitters, receivers, electronic speed controllers etc. are all common between the two. This chapter will cover the basic hardware and tools in most unmanned systems. More advanced and specialized hardware will be covered in later chapters.</p>
+<h2 id="transmitters">Transmitters</h2>
+<p>A transmitter is an RF (Radio Frequency) device used to control a remote aircraft. Transmitters can operate in many different frequencies such as 90 MHZ, 900MHZ, and 2.4 GHz, with 2.4 GHz being the most common today. Different brands of transmitters use different protocols (the “language the transmitter speaks”) to send and receive data from the aircraft. DSM2/DSMX (Spektrum), ACCST (FrSky), FASST/S-FHSS (Futaba), and AFHDS (FlySky) are the most commonly used protocols. When purchasing a transmitter and receiver, you want to make sure they use the same protocol (speak the same language). The transmitter may be the most expensive part of your remote aircraft system, however most transmitters can work with multiple aircraft. The transmitter shown here can hold 250 different aircraft at a time so your transmitter should last you a long time.</p>
+<p>These are some of the things that you will likely do for most aircraft that you wish to set up in your transmitter.</p>
+<ul><li>
+Select the type of aircraft (airplane, quadcopter, helicopter, glider, etc.)
+</li><li>
+Name the aircraft (optional, but if you don’t you will have a list of generic default names like “acro”).
+</li><li>
+Set up any non standard wing configurations such as elevons, ruddervaders, flapperons, etc.
+</li><li>
+Set dual rates and expo
+</li><li>
+Add mixing (aileron-rudder is the most common for an airplane)
+</li><li>
+Reverse a servo travel, sub trim, or direction
+</li></ul>
+<figure class="textbook-figure"><a href="/assets/uas-hardware/spektrum-dx6e-transmitter.jpg"><img src="/assets/uas-hardware/spektrum-dx6e-transmitter.jpg" alt="A Spektrum DX6e transmitter: a black handheld radio with an antenna on top, two control gimbals, switches along the top edge, and an LCD screen below the sticks." width="800" height="800" loading="lazy"></a><figcaption><p>The Spektrum DX6e transmitter.</p></figcaption></figure>
+<p class="small muted">Photo: Spektrum Inc. and Horizon Hobby.</p>
+<p>The guide will help you navigate the menus on the Spektrum transmitter to set up most basic aircraft functions.</p>
+<h2 id="setting-up-a-new-aircraft">Setting up a new aircraft</h2>
+<p>To create a new aircraft model in the transmitter, you start by pressing the “clear” and “back” buttons at the same time.</p>
+<figure class="textbook-figure"><a href="/assets/uas-hardware/dx6e-clear-back-buttons.jpg"><img src="/assets/uas-hardware/dx6e-clear-back-buttons.jpg" alt="A finger and thumb pressing the Clear and Back buttons beside the transmitter&#x27;s screen at the same time." width="480" height="640" loading="lazy"></a></figure>
+<p>This will bring up this menu.</p>
+<figure class="textbook-figure"><a href="/assets/uas-hardware/dx6e-model-select.jpg"><img src="/assets/uas-hardware/dx6e-model-select.jpg" alt="The transmitter screen showing the Model Select list: Back, 1: 3D Blk, 2: Fokker DR1, 3: Dusty Cropduster, 4: Quad, with Add New Model highlighted at the bottom." width="640" height="480" loading="lazy"></a></figure>
+<p>You will now use the selection roller/button located here:</p>
+<figure class="textbook-figure"><a href="/assets/uas-hardware/dx6e-roller.jpg"><img src="/assets/uas-hardware/dx6e-roller.jpg" alt="A finger pointing to the ridged selection roller on the right side of the transmitter, beside the screen." width="480" height="640" loading="lazy"></a></figure>
+<p>You can roll this button to change menu selections and press the roller to click on and select menu options. You will use this feature often so practice and get proficient with it.</p>
+<p>Click on “add new model”</p>
+<p>You will now see this screen select and click on “create”</p>
+<figure class="textbook-figure"><a href="/assets/uas-hardware/dx6e-create-new-model.jpg"><img src="/assets/uas-hardware/dx6e-create-new-model.jpg" alt="The Create New Model screen asking “Do you want to create a new model?” with Cancel and Create options; Create is highlighted." width="480" height="640" loading="lazy"></a></figure>
+<p>You will now be in the “system setup” menu area.</p>
+<p>Scroll down and select “model type”</p>
+<figure class="textbook-figure"><a href="/assets/uas-hardware/dx6e-system-setup-model-type.jpg"><img src="/assets/uas-hardware/dx6e-system-setup-model-type.jpg" alt="The System Setup menu with Model Type highlighted, between Model Select and Model Name." width="480" height="640" loading="lazy"></a></figure>
+<p>You should now see this menu.</p>
+<figure class="textbook-figure"><a href="/assets/uas-hardware/dx6e-model-type.jpg"><img src="/assets/uas-hardware/dx6e-model-type.jpg" alt="The Model Type screen showing four aircraft icons to choose from: an airplane, a helicopter, a glider, and a quadcopter." width="640" height="480" loading="lazy"></a></figure>
+<p>Scroll to and select the image that represents the type of aircraft that you are trying to setup.</p>
+<p>You will get this warning. Clicking yes will erase any data associated with this model such as aircraft name, trim settings, binding, etc. Click “yes”</p>
+<figure class="textbook-figure"><a href="/assets/uas-hardware/dx6e-confirm-model-type.jpg"><img src="/assets/uas-hardware/dx6e-confirm-model-type.jpg" alt="The Confirm Model Type screen with an airplane icon and the warning “Data will be reset”, with No and Yes options; Yes is highlighted." width="480" height="640" loading="lazy"></a></figure>
+<p>Now, you should be back at the “System setup” menu. Scroll and select “model name”</p>
+<figure class="textbook-figure"><a href="/assets/uas-hardware/dx6e-system-setup-model-name.jpg"><img src="/assets/uas-hardware/dx6e-system-setup-model-name.jpg" alt="The System Setup menu with Model Name highlighted." width="640" height="480" loading="lazy"></a></figure>
+<p>You will now be at this menu:</p>
+<figure class="textbook-figure"><a href="/assets/uas-hardware/dx6e-model-name.jpg"><img src="/assets/uas-hardware/dx6e-model-name.jpg" alt="The Model Name screen showing the default name “5: Acro” with a cursor under the first letter." width="480" height="640" loading="lazy"></a></figure>
+<p>Scroll to each letter, click, then roll to select a new letter. Click to set the new letter, then roll to the next position, click and repeat. It may take a few tries but you will figure the interface out pretty quickly.</p>
+<p>Once complete you should have something like this with whatever name you chose:</p>
+<figure class="textbook-figure"><a href="/assets/uas-hardware/dx6e-model-name-entered.jpg"><img src="/assets/uas-hardware/dx6e-model-name-entered.jpg" alt="The Model Name screen showing the new name “3: Dusty Crophopper”." width="640" height="480" loading="lazy"></a></figure>
+<p>Now, select and click the “back” button on the screen or press the “back” button to the left of the display window. You should be back in the “system setup” menu. Select  “aircraft type”.</p>
+<figure class="textbook-figure"><a href="/assets/uas-hardware/dx6e-system-setup-aircraft-type.jpg"><img src="/assets/uas-hardware/dx6e-system-setup-aircraft-type.jpg" alt="The System Setup menu with Aircraft Type highlighted." width="640" height="480" loading="lazy"></a></figure>
+<p>You should now be in this menu:</p>
+<figure class="textbook-figure"><a href="/assets/uas-hardware/dx6e-aircraft-type.jpg"><img src="/assets/uas-hardware/dx6e-aircraft-type.jpg" alt="The Aircraft Type screen showing an outline of a wing and tail, labeled Wing: Normal and Tail: Normal, with List and Next options." width="640" height="480" loading="lazy"></a></figure>
+<p>This is where you can select non-standard wing configurations such as elevons, flaperons, etc. Feel free to explore the different aircraft types.</p>
+<p>When done click “next”. Here you can set the aircraft image. Scroll once then click, then roll to change the image. Here are a few options you can pick from:</p>
+<ul class="parts-grid">
+<li><figure class="part-card"><a href="/assets/uas-hardware/dx6e-aircraft-image-jet.jpg"><img src="/assets/uas-hardware/dx6e-aircraft-image-jet.jpg" alt="The Aircraft Image screen showing a jet fighter icon." width="480" height="640" loading="lazy"></a></figure></li>
+<li><figure class="part-card"><a href="/assets/uas-hardware/dx6e-aircraft-image-biplane.jpg"><img src="/assets/uas-hardware/dx6e-aircraft-image-biplane.jpg" alt="The Aircraft Image screen showing a biplane icon." width="480" height="640" loading="lazy"></a></figure></li>
+<li><figure class="part-card"><a href="/assets/uas-hardware/dx6e-aircraft-image-sport-plane.jpg"><img src="/assets/uas-hardware/dx6e-aircraft-image-sport-plane.jpg" alt="The Aircraft Image screen showing a low-wing sport airplane icon." width="480" height="640" loading="lazy"></a></figure></li>
+</ul>
+<p>Once you have selected the image that you want, click the “back” button 2x to get back to the main screen. Your new aircraft image should now be displayed.</p>
+<figure class="textbook-figure"><a href="/assets/uas-hardware/dx6e-main-screen.jpg"><img src="/assets/uas-hardware/dx6e-main-screen.jpg" alt="The transmitter&#x27;s main screen showing the model “3: Dusty Crophopper” with its airplane image, a 5:00 timer, the battery voltage, trim bars, and the owner name Mike Walach." width="640" height="480" loading="lazy"></a></figure>
+<p>If you followed along correctly you have now set up a new aircraft in the transmitter! If at any point you make a mistake and end up in a menu you did not intend to enter, you can press the “back” button repeatedly and get back to the main menu. You can get back into the “ System Setup” menu by pressing the roller button then scrolling to the bottom on the menu list and selecting “system setup”.</p>
+<h2 id="set-dual-rates-and-expo">Set dual rates and expo</h2>
+<p>Attempting to fly an aircraft that does not have <strong>expo</strong> (exponential) or <strong>rates </strong>set up can be very difficult to fly.</p>
+<p><strong>Rates</strong> limit how much the movement of the control sticks on the transmitter affect the control surfaces on the aircraft. As a beginner you may want rates turned down as low as 50% so that you don’t over control the airplane. You can assign rates to a switch so that you can increase the sensitivity of the sticks as your flying skills improve. As you become a more proficient pilot, you may choose to have fixed rates for your airplanes. I fly most of my aircraft at 100% rates, but I will sometimes dial them back when I fly a new aircraft for the first time.</p>
+<p><strong>Exponential</strong>, or “expo”, reduces the sensitivity of the control sticks in a different way. <em><strong>Expo</strong></em> adjusts the sensitivity of the control sticks around the center (neutral) position, allowing for smoother and more precise control for small inputs, while still allowing full control authority at the ends of stick travel. While rates restrict how much movement a control surface will move, expo maintains full motion of the control surface, but “softens” the center of the control stick. As expo is increased, the amount of movement a control surface moves is limited in the center area of motion but if you push a control stick to its limits, you will still have full motion of the respective control surface. Expo makes an aircraft feel less “twitchy” in flight and a lot more comfortable to control. 30-40% expo is a good amount. Even as an expert pilot, you will likely still use some amount of expo.</p>
+<p>To setup expo start by clicking the roller button</p>
+<figure class="textbook-figure"><a href="/assets/uas-hardware/dx6e-roller.jpg"><img src="/assets/uas-hardware/dx6e-roller.jpg" alt="A finger pointing to the ridged selection roller on the right side of the transmitter, beside the screen." width="480" height="640" loading="lazy"></a></figure>
+<p>Scroll down and select D/R and Expo</p>
+<figure class="textbook-figure"><a href="/assets/uas-hardware/dx6e-function-list-dr-expo.jpg"><img src="/assets/uas-hardware/dx6e-function-list-dr-expo.jpg" alt="The Function List with D/R and Expo highlighted, below Servo Setup." width="640" height="480" loading="lazy"></a></figure>
+<p>You should now see this screen:</p>
+<figure class="textbook-figure"><a href="/assets/uas-hardware/dx6e-dr-expo.jpg"><img src="/assets/uas-hardware/dx6e-dr-expo.jpg" alt="The D/R and Expo screen for the aileron channel: dual rate 100%, expo 0%, switch On, with a straight-line graph of stick input against output." width="640" height="480" loading="lazy"></a></figure>
+<p>You can select the channel that you wish to set such as aileron, rudder, or elevator. You will typically set up expo for each of the three main control surfaces.</p>
+<p>If you scroll to <strong>“Dual Rate”</strong> you can reduce the amount of rate for a control surface. 50% is about as low as you will typically go for a good beginner setting.</p>
+<p>If you scroll to <strong>“expo”</strong> you can set your expo rate to 30-40%.</p>
+<p>At the bottom you will see “switch”. By selecting “switch” you can apply your dual rates and expo settings to a switch. This way you can go from 50% rates to 100% rates in flight simply by flipping a switch. In this example we will set ailerons to a switch and make the bottom switch position 50% rate, the middle position 75% rate, and the top position 100% rate. We will use 40% expo on each setting.</p>
+<p>To assign rates to a switch start by scrolling down to where it says “on” to the right of “switch” and click the roller button once.</p>
+<p>You could roll the roller button until it displays the name of the switch you want but a quicker and more reliable way is to simply toggle the switch you would like to use. For this example we will use switch “D” located here:</p>
+<figure class="textbook-figure"><a href="/assets/uas-hardware/dx6e-switch-d.jpg"><img src="/assets/uas-hardware/dx6e-switch-d.jpg" alt="A hand on the transmitter pointing to switch D, a three-position switch on the top left of the radio." width="640" height="480" loading="lazy"></a></figure>
+<p>Toggle switch “D” then click your roller button once to confirm the selection. Be careful not to roll the roller button or it will change the switch select. If this happens, simply re-toggle the correct switch then click the roller button.</p>
+<p>Your screen should now look like this:</p>
+<figure class="textbook-figure"><a href="/assets/uas-hardware/dx6e-dr-expo-switch-d.jpg"><img src="/assets/uas-hardware/dx6e-dr-expo-switch-d.jpg" alt="The D/R and Expo screen with Switch D assigned. Positions 0, 1, and 2 appear below, with 0 highlighted; dual rate is 100% and expo 0%, and the graph is a straight line." width="480" height="640" loading="lazy"></a></figure>
+<p>With switch “D” in its lowest position, “0” should be highlighted. If you move switch “D” to its middle position “1” will be highlighted and in the top position “2” will be highlighted. Move switch “D” back to its lowest position and then scroll with the scroll button to “Expo” and click, then roll, to change the expo value to 40%. Then click to set the expo value, then roll to “Dual rates” and click then scroll to set your rates to 50%. Then click to set your rates. Your screen should now look like this:</p>
+<figure class="textbook-figure"><a href="/assets/uas-hardware/dx6e-dr-expo-50-percent.jpg"><img src="/assets/uas-hardware/dx6e-dr-expo-50-percent.jpg" alt="The D/R and Expo screen with dual rate 50% and expo 40% in switch position 0. The graph is now a gentle S-shaped curve, flatter around center stick." width="480" height="640" loading="lazy"></a></figure>
+<p>Flip switch “D” to the middle position and repeat the process except set “Dual Rate” to 75%. Expo will be 40% as it was before.</p>
+<p>Then flip switch “D” to its top position and set “Dual rate” to 100%. Expo will again be set to 40%.</p>
+<p>Now, as you move switch “D” your rates should change from 50%, to 75%, to 100%.</p>
+<p>Now, you will repeat this entire process  again for the elevator and then again for the rudder. To start, scroll up to “Channel” and change “aileron” to “elevator” then repeat all of the above steps including assigning switch “D”. Then, repeat for rudder.</p>
+<h2 id="mixing">Mixing</h2>
+<p>As you progress from beginner pilot to novice and professional, your ability to deal with more things at once will improve. However, in the beginning it is best to reduce your workload when flying. One of the ways to do this is to eliminate the need for you to control the rudder. When you turn an airplane you move both the ailerons and the rudder in unison. This involves using your right and left hands at the same time. This can be overwhelming for a new pilot. Mixing allows the rudder to move with the ailerons without the pilot having to touch the rudder control.</p>
+<p>To begin click the roller button and scroll down to and select “mixing”.</p>
+<figure class="textbook-figure"><a href="/assets/uas-hardware/dx6e-function-list-mixing.jpg"><img src="/assets/uas-hardware/dx6e-function-list-mixing.jpg" alt="The Function List with Mixing highlighted, between Digital Switch Setup and Range Test." width="480" height="640" loading="lazy"></a></figure>
+<p>You should now be at this menu. Scroll down to “AIL &gt; RUD” select and click.</p>
+<figure class="textbook-figure"><a href="/assets/uas-hardware/dx6e-mixing-menu.jpg"><img src="/assets/uas-hardware/dx6e-mixing-menu.jpg" alt="The Mixing menu listing RUD &gt; AIL/ELE, AIL &gt; RUD, and programmable mixes P-Mix 1 to 4, all inhibited; AIL &gt; RUD is highlighted." width="480" height="640" loading="lazy"></a></figure>
+<p>You should now be at this menu:</p>
+<figure class="textbook-figure"><a href="/assets/uas-hardware/dx6e-ail-rud-mix.jpg"><img src="/assets/uas-hardware/dx6e-ail-rud-mix.jpg" alt="The AIL &gt; RUD mixing screen: channel bars for THR, AIL, ELE, RUD, GER, and AX1 on the left, and Right 0%, Left 0%, Switch: Inhibit on the right." width="480" height="640" loading="lazy"></a></figure>
+<p>Scroll down to “Switch: Inhibit” and click. This will allow you to set the switch that we want to add mixing to. Toggle switch “C”. then click the roller button to confirm the selection. Assigning mixing to a switch allows you to turn mixing on and off during flight to practice flying with and without mixing.</p>
+<p>Your screen should now look like this:</p>
+<figure class="textbook-figure"><a href="/assets/uas-hardware/dx6e-ail-rud-switch-c.jpg"><img src="/assets/uas-hardware/dx6e-ail-rud-switch-c.jpg" alt="The AIL &gt; RUD mixing screen with Switch C assigned and the switch positions 0 and 1 shown below it." width="480" height="640" loading="lazy"></a></figure>
+<p>Now you will set which switch position turn the mixing on and which position turns the mixing off. Scroll down to the “0” “1” area at the bottom and highlight then click on the “0”. This will turn mixing on when switch “C” is up and off when switch “C” is down. Your screen should now look like this:</p>
+<figure class="textbook-figure"><a href="/assets/uas-hardware/dx6e-ail-rud-switch-position.jpg"><img src="/assets/uas-hardware/dx6e-ail-rud-switch-position.jpg" alt="The AIL &gt; RUD mixing screen with Switch C assigned and position 0 selected to turn the mix on." width="480" height="640" loading="lazy"></a></figure>
+<p>Next, scroll up to “Right: Left:” and click, then roll to set the mixing value to 50% then click to enter this setting. Your screen should now look like this:</p>
+<figure class="textbook-figure"><a href="/assets/uas-hardware/dx6e-ail-rud-50-percent.jpg"><img src="/assets/uas-hardware/dx6e-ail-rud-50-percent.jpg" alt="The AIL &gt; RUD mixing screen with Right 50% and Left 50%, on Switch C." width="480" height="640" loading="lazy"></a></figure>
+<p>Mixing is now set up! Click the back button 3x to get back to the main screen.</p>
+<h2 id="reverse-a-servo-travel-sub-trim-or-direction">Reverse a servo travel, sub trim, or direction</h2>
+<p>When you build a new aircraft you may run into an issue where one of your control surfaces moves in the wrong direction. You can reverse the direction that any servo moves by using the servo reverse feature in the radio.</p>
+<p>To reverse a servo start by clicking the scroll wheel to get into the function menu. Scroll to and click on “Servo Setup”.</p>
+<figure class="textbook-figure"><a href="/assets/uas-hardware/dx6e-function-list-servo-setup.jpg"><img src="/assets/uas-hardware/dx6e-function-list-servo-setup.jpg" alt="The Function List with Servo Setup highlighted at the top." width="480" height="640" loading="lazy"></a></figure>
+<p>You should now be at this menu which gives you the options to adjust travel,sub-trim, and reverse. Scroll down to “travel” and click once, then scroll to change. Scroll 2x to get to the “Reverse” menu then click to select the reverse menu. (Travel and Sub trims will be discussed later as reverse is more often used so we are starting with it).</p>
+<figure class="textbook-figure"><a href="/assets/uas-hardware/dx6e-servo-travel.jpg"><img src="/assets/uas-hardware/dx6e-servo-travel.jpg" alt="The Servo Setup screen on Travel, showing 100% travel in both directions for THR, AIL, ELE, RUD, GER, and AX1." width="480" height="640" loading="lazy"></a></figure>
+<p>Your screen should now look like this:</p>
+<figure class="textbook-figure"><a href="/assets/uas-hardware/dx6e-servo-reverse.jpg"><img src="/assets/uas-hardware/dx6e-servo-reverse.jpg" alt="The Servo Setup screen on Reverse, with a small switch icon for each channel: THR, AIL, ELE, RUD, GER, and AX1." width="480" height="640" loading="lazy"></a></figure>
+<p>To reverse the direction of any servo, scroll to the servo you wish to reverse and click on it. Your options are “THR” throttle, “AIL” aileron, “ELE” elevator, “RUD” rudder, “GER” landing gear, “AX1” auxiliary 1 (you can assign this channel to any function you want such as flaps, or a glider release cable, etc. ). Once you have reversed the servo(s) you want, click the “back” button until you are back at the main screen.</p>
+<h2 id="travel">Travel</h2>
+<p>When you enter the “Servo” menu the first item you see is travel. You can limit or increase the amount any servo moves. This is not used often, but you should know it is here and where to find it. Navigation of this menu is the same as it was for the “reverse” menu.</p>
+<figure class="textbook-figure"><a href="/assets/uas-hardware/dx6e-servo-travel.jpg"><img src="/assets/uas-hardware/dx6e-servo-travel.jpg" alt="The Servo Setup screen on Travel, showing 100% travel in both directions for THR, AIL, ELE, RUD, GER, and AX1." width="480" height="640" loading="lazy"></a></figure>
+<h2 id="sub-trim">Sub Trim</h2>
+<p>Sub trim is the menu after travel in the servo setup menu. Sub trims allow you to trim out any servo that is not in the neutral position that you want. While electronic trims are good it is always better to get an aircraft trimmed mechanically first, then only use trims for fine adjustments in flight to get the aircraft to fly straight and level with hands off of the control sticks. Navigation of this menu is the same as it was for the “reverse” menu.</p>
+<figure class="textbook-figure"><a href="/assets/uas-hardware/dx6e-sub-trim.jpg"><img src="/assets/uas-hardware/dx6e-sub-trim.jpg" alt="The Servo Setup screen on Sub Trim, showing 0 for each channel: THR, AIL, ELE, RUD, GER, and AX1." width="480" height="640" loading="lazy"></a></figure>
+<h2 id="receivers">Receivers</h2>
+<p>Receivers receive the signal from the transmitter and generate PWM (Pulse Width Modulation) control signals to send to the servos and/or ESCs. The Receiver must use the same protocol (speak the same “language”) as the transmitter or communication will not work. Most receivers get their power from the ESC (Electronic Speed Control) if the ESC has a BEC (Battery Elimination Circuit). A BEC will step the battery voltage down to 5V to power the servo rail on the ESC. The servo power/ground rails are the middle (power) and bottom (ground) row of pins in the receiver. The top row of pins are the control pins that have the PWM signal for servo position or motor speed. Receivers come in lots of shapes and sizes depending on the aircraft they need to control and the communication technology that they employ.</p>
+<figure class="textbook-figure"><a href="/assets/uas-hardware/receiver-pin-rows.png"><img src="/assets/uas-hardware/receiver-pin-rows.png" alt="A Spektrum AR620 receiver with labels: the bind button on top, and three rows of pins on the end, marked signal (top row), power (middle row), and ground (bottom row). Each channel, BATT and 1 to 6, has one pin in each row." width="644" height="563" loading="lazy"></a><figcaption><p>Receiver pins: each channel has a signal, power, and ground pin. Some receivers have a bind button.</p></figcaption></figure>
+<ul class="parts-grid">
+<li><figure class="part-card"><a href="/assets/uas-hardware/receiver-micro.jpg"><img src="/assets/uas-hardware/receiver-micro.jpg" alt="A tiny receiver circuit board with two thin wire antennas and a small connector, the kind used in small multirotors." width="800" height="600" loading="lazy"></a></figure></li>
+<li><figure class="part-card"><a href="/assets/uas-hardware/receiver-spektrum-ar20400t.jpg"><img src="/assets/uas-hardware/receiver-spektrum-ar20400t.jpg" alt="A large Spektrum AR20400T 20-channel telemetry receiver with rows of servo pins, two battery inputs, and telemetry ports." width="800" height="800" loading="lazy"></a></figure></li>
+<li><figure class="part-card"><a href="/assets/uas-hardware/receiver-with-satellite.jpg"><img src="/assets/uas-hardware/receiver-with-satellite.jpg" alt="A Spektrum AR6210 receiver connected by a twisted cable to a small remote satellite receiver; each has two wire antennas." width="1280" height="1280" loading="lazy"></a></figure></li>
+<li><figure class="part-card"><a href="/assets/uas-hardware/receiver-orangerx.jpg"><img src="/assets/uas-hardware/receiver-orangerx.jpg" alt="An orange OrangeRx 2.4 GHz receiver with two red antenna wires and channel labels on its end." width="398" height="359" loading="lazy"></a></figure></li>
+<li><figure class="part-card"><a href="/assets/uas-hardware/receiver-spektrum-sr515.jpg"><img src="/assets/uas-hardware/receiver-spektrum-sr515.jpg" alt="A Spektrum SR515 surface receiver with pins for steering, throttle, and auxiliary channels and one antenna wire." width="800" height="800" loading="lazy"></a></figure></li>
+<li><figure class="part-card"><a href="/assets/uas-hardware/receiver-hobbyking-gt2.jpg"><img src="/assets/uas-hardware/receiver-hobbyking-gt2.jpg" alt="A HobbyKing HK-GT2 3-channel 2.4 GHz waterproof receiver with a pin block for CH1, CH2, and BIND/CH3." width="566" height="415" loading="lazy"></a></figure></li>
+</ul>
+<h2 id="binding">Binding</h2>
+<p>Binding is the process of connecting (pairing) a transmitter to a receiver. Once bound, only that transmitter and that receiver will listen to one another. Most receivers have either a binding plug that needs to be installed or a button that needs to be held at power up to place it into “binding mode”. On the transmitter there is usually either a menu option to put the transmitter into bind mode, or, a button that can be held at power up to put it into binding mode. It is important to make sure that no one else in the area is trying to bind to their receiver while you are trying to bind to your or you may accidentally bind to one another&#x27;s aircraft. A binding plug is not anything very special. All a binding plug does is short the signal pin on the receiver&#x27;s bind terminal to the ground pin. You can make your own binding plug using a simple piece of wire to short these two pins.</p>
+<p><strong>A typical binding plug</strong></p>
+<figure class="textbook-figure"><a href="/assets/uas-hardware/binding-plug.jpg"><img src="/assets/uas-hardware/binding-plug.jpg" alt="A binding plug: a three-pin servo-style connector with a short wire loop joining two of its pins." width="500" height="500" loading="lazy"></a></figure>
+<h3 id="how-to-bind-a-transmitter-to-a-receiver-step-by-step">How to bind a transmitter to a receiver, step by step</h3>
+<p>Start by collecting a receiver, transmitter, ESC (electronics speed control) with a BEC (battery elimination circuit), and a battery. The BEC is a circuit in the ESC that converts the voltage of your battery to 5V DC regardless of the battery voltage. Receivers and servos all run off of 5V so they need this regulated power that the BEC provides.</p>
+<p>Step 1. Plug the binding plug into the binding port of your receiver.</p>
+<figure class="textbook-figure"><a href="/assets/uas-hardware/binding-plug-in-receiver.jpg"><img src="/assets/uas-hardware/binding-plug-in-receiver.jpg" alt="An orange-tagged binding plug pushed into the bind port of a Spektrum AR6210 receiver on a cutting mat." width="1200" height="1600" loading="lazy"></a></figure>
+<p>Some receivers such as this one, have a bind button that you press instead of a binding plug:</p>
+<figure class="textbook-figure"><a href="/assets/uas-hardware/receiver-bind-button.jpg"><img src="/assets/uas-hardware/receiver-bind-button.jpg" alt="A Spektrum AR620 receiver mounted in an airframe, with servo leads plugged into it. The bind button is on its top face." width="1600" height="1200" loading="lazy"></a></figure>
+<figure class="textbook-figure"><a href="/assets/uas-hardware/receiver-bind-button-pressed.jpg"><img src="/assets/uas-hardware/receiver-bind-button-pressed.jpg" alt="A thumb pressing the bind button on top of the AR620 receiver." width="1600" height="1200" loading="lazy"></a></figure>
+<p>Step 2. Plug in your ESC to the Throttle Port on the receiver. This is how you will get 5V regulated power from the battery to the receiver.</p>
+<figure class="textbook-figure"><a href="/assets/uas-hardware/esc-in-throttle-port.jpg"><img src="/assets/uas-hardware/esc-in-throttle-port.jpg" alt="An ESC lead plugged into the throttle port of a receiver that has a binding plug installed. The ESC&#x27;s yellow XT-60 battery connector is at the top." width="1200" height="1600" loading="lazy"></a></figure>
+<p>Step 3: Plug a battery into the ESC XT-60 or XT-30 connector. Once you plug in the battery the receiver should have a blinking light that comes on and blinks repeatedly.</p>
+<figure class="textbook-figure"><a href="/assets/uas-hardware/receiver-bind-light.jpg"><img src="/assets/uas-hardware/receiver-bind-light.jpg" alt="A LiPo battery connected to the ESC, which powers the receiver. The receiver&#x27;s orange light is on, showing it is in bind mode." width="1600" height="1200" loading="lazy"></a></figure>
+<p>Step 4: Make sure your transmitter is set to the aircraft that you wish to bind to. Go to the transmitter section of the text if you don’t know how to setup and select aircraft in the transmitter.</p>
+<p>Step 5:  With the transmitter powered off, find and hold the bind button.</p>
+<figure class="textbook-figure"><a href="/assets/uas-hardware/transmitter-bind-button.jpg"><img src="/assets/uas-hardware/transmitter-bind-button.jpg" alt="A finger pointing to the bind button on the top left of a Spektrum transmitter, next to switch B." width="1200" height="1600" loading="lazy"></a></figure>
+<figure class="textbook-figure"><a href="/assets/uas-hardware/transmitter-holding-bind.jpg"><img src="/assets/uas-hardware/transmitter-holding-bind.jpg" alt="A hand holding the bind button on the top left of a Spektrum DX8 transmitter." width="1200" height="1600" loading="lazy"></a></figure>
+<p>Step 6: While still holding the bind button, turn on the transmitter. You do not need to hold the power button however you do need to keep holding the bind button.  You will not release the bind button until the transmitter fully starts up and the bind is complete.</p>
+<p>You should see a series of messages like this:</p>
+<figure class="textbook-figure"><a href="/assets/uas-hardware/transmitter-binding-message.jpg"><img src="/assets/uas-hardware/transmitter-binding-message.jpg" alt="The transmitter screen showing BIND, model 3: Blue, and the word Binding." width="1200" height="1600" loading="lazy"></a></figure>
+<figure class="textbook-figure"><a href="/assets/uas-hardware/transmitter-bind-success.jpg"><img src="/assets/uas-hardware/transmitter-bind-success.jpg" alt="The transmitter screen showing BIND, model 3: Blue, Binding, and DSMX 22ms, which means the bind has started successfully." width="1200" height="1600" loading="lazy"></a></figure>
+<p>Once you see “DSMX 22ms” the transmitter and receiver have successfully started the bind process. If you see “Bind failed” then you need to start over by turning off the transmitter and unplugging the receiver.</p>
+<figure class="textbook-figure"><a href="/assets/uas-hardware/transmitter-bind-failed.jpg"><img src="/assets/uas-hardware/transmitter-bind-failed.jpg" alt="The transmitter screen showing BIND, model 3: Blue, and BIND FAILED." width="1200" height="1600" loading="lazy"></a></figure>
+<p>Usually, if a bind fails it is because the transmitter is too close to the receiver. A distance of 3-5 feet usually works well. If you are unable to bind after repeated attempts you may have a faulty receiver or transmitter.</p>
+<p>If your transmitter boots up fully and you saw the “DSMX 22ms” message, then you should now have successfully bound your transmitter to your receiver!</p>
+<h2 id="servos">Servos</h2>
+<figure class="textbook-figure"><a href="/assets/uas-hardware/servo-9g.jpg"><img src="/assets/uas-hardware/servo-9g.jpg" alt="A blue 9 gram micro servo with a white servo arm on top, a three-wire lead with a black connector, and small mounting screws." width="300" height="300" loading="lazy"></a><figcaption><p>A typical 9 gram plastic-gear servo.</p></figcaption></figure>
+<p>Pictured above is a common 9 gram servo similar to the ones you will use on the ASCEND Trainer Airplane in Chapter 4. While the color and style may change slightly between manufacturers, they all function in the same basic way. The servo will have three wires coming from it. One wire is for 5V power, one is for ground, and the last one is signal. The 5V power is always the middle wire in the connector and is usually red. The ground wire is usually black or brown and the signal wire is orange or white although other colors may be used. When a control input is sent to the servo from a transmitter, a receiver receives the transmitter’s command then sends a signal to the servo using Pulse Width Modulation (PWM). The width of the pulses in the signal will determine which direction and how far in a direction the servo arm will rotate. The width of the pulse can be changed (modulated) to tell the servo to move to a different position or in a different direction. The servo has a small arm that is attached to a gear and held in place with a screw. This “arm” can be removed and repositioned on the gear. Always remember to place the screw back in place after removing and replacing a servo arm as the friction from the gear is not enough to keep the arm in place.</p>
+<h3 id="pulse-width-modulation">Pulse Width Modulation</h3>
+<p>This animation demonstrates how the on time of a pulse can control the brightness of a light. The same principle can be applied to a motor’s speed or in the case of a servo, the position of its arm. <strong>Duty cycle</strong> is the proportion of time the signal is on during its period of operation. In Pulse Width Modulation (PWM), duty cycle refers to the proportion of time a signal is &quot;on&quot; within a complete cycle. It&#x27;s essentially the ratio of the pulse width (on-time) to the total period of the waveform, expressed as a percentage. A higher duty cycle means the signal is on for a larger portion of the cycle, and vice versa.</p>
+<figure class="textbook-figure"><a href="/assets/uas-hardware/pwm-led.png"><img src="/assets/uas-hardware/pwm-led.png" alt="An animated graph of a square-wave voltage over time next to an LED. As the duty cycle changes, the on-time of each pulse grows or shrinks and the LED glows brighter or dimmer. This frame shows a duty cycle of 5." width="822" height="474" loading="lazy"></a><figcaption><p>Pulse width modulation: the longer each pulse is on, the brighter the LED.</p><p><a href="/assets/uas-hardware/pwm-led.gif">Open the animation</a></p></figcaption></figure>
+<h2 id="motors">Motors</h2>
+<figure class="textbook-figure"><a href="/assets/uas-hardware/brushless-motor.jpg"><img src="/assets/uas-hardware/brushless-motor.jpg" alt="A black and silver outrunner brushless motor with a threaded prop shaft and three wires ending in gold bullet connectors." width="900" height="720" loading="lazy"></a><figcaption><p>A typical brushless motor for RC aircraft.</p></figcaption></figure>
+<p>Motors used in RC aircraft come in two main varieties, brushed and brushless. While brushless are the most common, both types will be discussed here.</p>
+<h3 id="brushless-motors">Brushless Motors</h3>
+<p>Most modern RC aircraft use brushless rather than brushed motors. Brushless motors have less moving parts that can wear out (such as the brushes on a brushed motor), are lighter, and use less power to operate. These are all desirable qualities in an RC aircraft motor. A brushless motor has multiple coils inside of it that when powered up form a magnetic field. These coils then try to line up with permanent earth magnets inside the motor housing. As the coils line up the ESC (electronic speed controller) switches a different set of coils on and then those coils try to line up with the permanent magnets and the cycle continues over and over resulting in constant rotary motion. A brushless motor has three wires. When you hook these three wires up to the ESC and apply throttle the motor will spin either clockwise or counter clockwise.<em><strong> If the motor is spinning in the wrong direction, swap any two wires and the direction will reverse. </strong></em></p>
+<p><strong>Brushless Motor</strong></p>
+<figure class="textbook-figure"><a href="/assets/uas-hardware/brushless-motor-diagram.png"><img src="/assets/uas-hardware/brushless-motor-diagram.png" alt="An animated diagram of a brushless motor: a two-pole permanent magnet rotor, half red N and half blue S, inside three stator coils. The coils switch on in turn, and the rotor turns to follow them." width="420" height="420" loading="lazy"></a><figcaption><p>Brushless motor: the ESC switches the stator coils on in turn to pull the magnet rotor around.</p><p><a href="/assets/uas-hardware/brushless-motor-diagram.gif">Open the animation</a></p></figcaption></figure>
+<h3 id="brushed-motor">Brushed Motor</h3>
+<p>A brushed motor has coils of wire and permanent earth magnets just like a brushless motor. The key difference however is that a brushed motor has metal (usually copper) brushes that mechanically switch the coils in the motor on and off keeping the motor in a constant motion as each coil attempts to align itself with its permanent earth magnet. The design is simple yet brilliant. The animation below demonstrates how the brushed motor works. The downside to brushed motors is that the brushes wear out over time. Also, the mechanical design makes them less efficient than their brushless counterparts. A pro for brushed motors however is that they do not need an ESC in order to operate. Simply connecting power and ground to the power terminals will start the motor in motion.</p>
+<p><strong>Brushed Motor</strong></p>
+<figure class="textbook-figure"><a href="/assets/uas-hardware/brushed-motor-diagram.png"><img src="/assets/uas-hardware/brushed-motor-diagram.png" alt="A cutaway drawing of a brushed motor with labels for the shaft, commutator, brushes, rotor coils, and stator magnets." width="320" height="240" loading="lazy"></a><figcaption><p>Brushed motor: brushes rub on the commutator to switch current through the rotor coils.</p><p><a href="/assets/uas-hardware/brushed-motor-diagram.gif">Open the animation</a></p></figcaption></figure>
+<h2 id="electronic-speed-controls">Electronic Speed Controls</h2>
+<figure class="textbook-figure"><a href="/assets/uas-hardware/esc.jpg"><img src="/assets/uas-hardware/esc.jpg" alt="A small electronic speed controller with an XT-60 battery connector and a red JST connector on one end, three black motor wires with bullet connectors on the other, and a servo-style signal lead." width="1280" height="849" loading="lazy"></a></figure>
+<p>ESCs (Electronic Speed Controllers) are used to control the speed of an RC (remote control) motor. Airplane and multirotor aircraft all use ESCs. ESCs perform two main functions with brushless motors. First, they supply power in the correct sequence to make the motor move. Brushless motors have multiple sets of coils and they need to be powered in the correct order to spin. Secondly, an ESC controls the speed of the motor through PWM (Pulse Width Modulation). PWM is similar to switching a light on and off. If you could flip a light switch fast enough, the light would appear to stay on, it would just appear dimmer the longer you held the switch in the off position compared to the on position. An ESC essentially does the same thing with the motor. It switches the motor on and off. The motor never stops as it will coast through the off cycles, however, the longer the off cycles, the slower the motor will spin. The shorter the off cycles the faster the motor will spin. When handling an ESC or brushless motor, take care to never short the ESC output wires while the ESC is powered on as this can destroy the ESC. <em><strong>Remember, if a motor is spinning in the wrong direction, swap any two wires between the ESC and motor and the direction will reverse.</strong></em></p>
+<h2 id="propellers">Propellers</h2>
+<figure class="textbook-figure"><a href="/assets/uas-hardware/propellers.jpg"><img src="/assets/uas-hardware/propellers.jpg" alt="Three grey two-blade airplane propellers of increasing size, with a set of plastic adapter rings." width="640" height="462" loading="lazy"></a></figure>
+<p>While motors provide the rotation required for generating thrust, the actual movement of air comes from the propeller. Airplanes and multirotor aircraft in the RC world all use propellers. While called rotors on a helicopter, on an RC model they are generally referred to as propellers as they are often the same exact item. Propellers are sold by length, pitch, number of blades, direction of pitch (forward or reverse) and construction material. Plastic is the most common but you can buy wooden or carbon fiber props as well. While it is possible to 3D print propellers, this is not recommended as the danger of a prop breaking at high speed is a serious problem. Also, the cost of 3D printing a propeller is likely not worth it.</p>
+<p>Propeller length is measured from tip to tip and can be in inches or metric units.</p>
+<p>Propeller pitch is the angle of twist on the propeller and equates to how far forward the propeller (a screw) would move forward under ideal conditions. For example a 9x4.5 propeller would be 9 inches long and move forward 4.5 inches for each rotation.</p>
+<h2 id="batteries">Batteries</h2>
+<figure class="textbook-figure"><a href="/assets/uas-hardware/lipo-battery.jpg"><img src="/assets/uas-hardware/lipo-battery.jpg" alt="A Turnigy nano-tech 1500 mAh 3-cell 11.1 V LiPo battery with a blue EC3 main connector and a white balance lead." width="500" height="366" loading="lazy"></a></figure>
+<p>Batteries are the most common power source for RC aircraft although gas engines have been used for years. While gas often offers longer range than batteries as battery technology improves so have the flight times. Gas is messy and often leaves the aircraft covered in sticky oil residue. Electrical systems offer the ability to easily control through digital means rather than the mechanical systems required for gas operations. While you will find a mix of gas and electric systems, electric is now the most common.</p>
+<p>When shopping for batteries there are a few things to consider. First, which <strong>chemistry</strong> do you want? Second, how many <strong>cells </strong>(which equates to voltage) do you need/want? Third, what kind of <strong>capacity</strong> do you want (how long do you want the battery to last?) Finally, how much <strong>current </strong>do you need to be able to safely pull from the battery.</p>
+<h3 id="chemistry">Chemistry</h3>
+<p>Batteries work by a chemical reaction based on dissimilar materials that make up the positive and negative side of a battery. Some chemistries can be recharged while others can only be used once. Most RC aircraft use a rechargeable type. RC batteries come in several different chemistries. LiPo is currently the most common in fixed wing and drones but others are also used.</p>
+<ul><li>
+Nickel Cadmium batteries (NiCad)
+</li><li>
+Nickel Metal Hydride batteries (NiMH)
+</li><li>
+Lithium Polymer batteries (LiPo)
+</li><li>
+Lithium Iron Phosphate and A123 (LiFePO4)
+</li></ul>
+<p>NiCAD batteries were a standard in RC toys for years. They could be recharged multiple times and had good power density for their time, however they were too heavy to be practical in aircraft and were seldom used. Most aircraft at this point in history used gas for this reason. Gas has a high energy density and offers long flight times. NiMH was also used and had similar advantages and disadvantages as NiCAD batteries. LiPo batteries have a very high energy density and work well in aircraft. Their downside is that they have a tendency to catch fire if overcharged, go out of balance or are shorted. LifePO4 batteries are better than LiPo in some ways such as safety (they don’t tend to catch fire), more eco-friendly as they don’t contain toxic metals. The downside is that they often cost more, take longer to charge and don’t have the same energy density of LiPo.</p>
+<h3 id="cells-voltage">Cells (Voltage)</h3>
+<p>Lipo batteries, since they are the most common, will be discussed here. LiPos are sold by the number of cells they contain such as 1,2,3,4,5,6. Each cell has an average voltage of 3.7 volts. This voltage is about 4.2 volts when fully charged and should not be allowed to drop below 3.2v or the cell will likely never hold a charge again. Therefore, the number of cells equals how many volts a battery will apply. Voltage is potential energy, think of it as pressure. The higher the voltage the more pressure. The more voltage (pressure) the faster you can make a motor spin. Too much voltage and your motor will overheat and burn up inside and break. You must not use a higher voltage than your motor is rated for.</p>
+<h3 id="capacity-mah">Capacity (mAh)</h3>
+<p>Capacity of a battery is measured in milliamp hours. This means at a given current draw how long can that battery last before it runs out of power. The larger the mAH rating the longer the battery will last, but, the larger the battery will be in physical size and weight. Capacity is a fine game of balance. You generally want the longest flight time, but weight is always the limiting factor.</p>
+<p><em>Example:</em> A 3-4 cell battery on a motor that draws around 20 amps will last (safely without destroying the battery) about 7 minutes.</p>
+<h3 id="c-rating">C-Rating</h3>
+<p>The C rating of a battery (or cell) is used to indicate the continuous current draw (amps) the cell will support. Multiply the C rating by the cell capacity (mAh) of the battery to determine max. current. C-rating is often overlooked by consumers however it is an important consideration when selecting a battery. It is important to know how much current your aircraft will draw. While an airplane might only draw 20 amps at max power the same motors on a quad copter will draw 4 times that much as each motor will be drawing 20 amps. Therefore a battery that lasts 7 minutes on an airplane may only last a little over 2 minutes!</p>
+<p><em><strong>Example: </strong></em></p>
+<p>1,100 mAh Battery with a 25 C rating</p>
+<p>1,100mAh x 25C = 27,500 mA or 27.5 amps</p>
+<p>You can safely draw 27.5 amps from this battery</p>
+<p>Trying to pull more amps from the battery will shorten the life of the battery.</p>
+<p>When selecting your battery you need to know the motor that you plan to use and the propellor that will be on it. This combination will change how many amps your battery will be required to provide.</p>
+<h3 id="battery-connectors">Battery Connectors</h3>
+<figure class="textbook-figure"><a href="/assets/uas-hardware/xt-connectors.jpg"><img src="/assets/uas-hardware/xt-connectors.jpg" alt="Yellow XT30, XT60, and XT90 battery connectors, male and female, from smallest to largest." width="684" height="615" loading="lazy"></a></figure>
+<p>The physical plug on a battery can come in a lot of different shapes and sizes. In the RC aircraft world XT-30 and XT-60 are very common with XT-90 used on larger UAS systems. The larger the battery and the larger the current that the battery can handle, the larger the connector is likely to be.</p>
+<h2 id="battery-chargers">Battery Chargers</h2>
+<figure class="textbook-figure"><a href="/assets/uas-hardware/venom-charger.jpg"><img src="/assets/uas-hardware/venom-charger.jpg" alt="A Venom Pro Duo dual-channel battery charger with a blue LCD screen, five buttons, and two sets of output jacks, next to a column of charge leads with different battery connectors." width="1470" height="1500" loading="lazy"></a></figure>
+<p>Battery chargers are required to safely recharge rechargeable batteries. LiPo batteries should always be balance charged. A balance charge will apply current to all cells of a multi cell battery, but will also monitor each cell and make sure that all cells are charged equally. If a LiPo battery is not balanced charged it is possible that some cells will be overcharged while other cells are under charged.</p>
+<h3 id="understanding-the-risks">Understanding the risks</h3>
+<p>If a multicell LiPo battery is charged without balancing, the charger only “sees” the total voltage of the entire battery. This could cause a charger to over charge some cells while undercharging others. Overcharging a cell can lead to damage to cell, bulging of the battery, or even fire. When a battery is being used in an aircraft, even if the aircraft measures the battery voltage in flight and will cut off power if the battery gets too low, an unbalanced battery may look like it has a full charge when really one or more cells is overcharged and other may be undercharged. This can lead to one or more cells being run down too low which will damage the cell(s) making the entire battery useless. Therefore, it is important to keep a close eye on LiPo batteries before and after use. Having a small battery tester such as the one pictured below handy, is very useful to maintain your flight batteries.</p>
+<p>LiPo batteries should be stored and charged in a safe place. Some people build “battery bunkers” to store and charge their batteries. Kevlar fire bags are another option.</p>
+<figure class="textbook-figure"><a href="/assets/uas-hardware/battery-bunker.jpg"><img src="/assets/uas-hardware/battery-bunker.jpg" alt="A battery bunker made from concrete blocks set on a concrete board, with a concrete cap; a charging cable runs into it." width="1024" height="768" loading="lazy"></a></figure>
+<figure class="textbook-figure"><a href="/assets/uas-hardware/lipo-safe-box.jpg"><img src="/assets/uas-hardware/lipo-safe-box.jpg" alt="Two silver fire-resistant LiPo storage boxes with zipper lids; one is open, showing batteries inside." width="1600" height="1600" loading="lazy"></a></figure>
+<figure class="textbook-figure"><a href="/assets/uas-hardware/lipo-safe-bag.jpg"><img src="/assets/uas-hardware/lipo-safe-bag.jpg" alt="A silver fire-resistant LiPo charging bag with a Lipo-Safe warning label." width="1280" height="1280" loading="lazy"></a></figure>
+<figure class="textbook-figure"><a href="/assets/uas-hardware/battery-checker.jpg"><img src="/assets/uas-hardware/battery-checker.jpg" alt="A digital battery capacity checker with an LCD, Type, Cell, and Mode buttons, and a row of balance-lead pins." width="600" height="600" loading="lazy"></a></figure>
+<p>The image below shows the main lead of a battery, in this case an XT-60 style connector (the large yellow connector) and a small white balance lead. When connecting this battery to a charger the yellow XT-60 connector is where the current will enter the battery and the white balance lead is how the charger will monitor each individual cell and control which cells are charged in order to keep all cells balanced.</p>
+<figure class="textbook-figure"><a href="/assets/uas-hardware/lipo-label.jpg"><img src="/assets/uas-hardware/lipo-label.jpg" alt="A 4-cell LiPo battery with labels pointing to the main lead (an XT-60 connector), the balance lead, the capacity (1500 mAh), the cell count and voltage (4S, 14.8 V), and the C-rating (50–100C)." width="1070" height="739" loading="lazy"></a><figcaption><p>Reading a LiPo battery label.</p></figcaption></figure>
+<h3 id="safe-charging-current">Safe Charging Current</h3>
+<p>Charging a battery at a safe current is very important! Too much current can destroy the battery and/or cause a fire! 1C is considered the safe charge rate for a battery. To determine the safe 1C current for a battery, look at the battery capacity in mAh and divide by 1000. For example, a 1500mAh battery would have a 1C charge current of 1.5 amps (1500mAh/1000=1.5amps). You can charge this 1500mAh battery at less than 1.5 amps (safer and gentler to the battery) but you should use caution if charging at greater than 1.5 amps. Some batteries will specify a safe 2C or higher charge rate meaning you could double the 1C charge current. If we use the same 1500 mAH battery in the previous example, then we could technically charge this battery at 3 amps. While some batteries may be safe to charge at higher than 1C it will often still shorten the life of the battery. Remember, less than 1C is ok and better for the life of the battery! Do not confuse the 1C charge rating with the discharge rating that is often found on a battery’s label such as 50C or 100C. Those larger C ratings represent how much current can be pulled from the battery (discharge current) without significant voltage drop.</p>
+<h3 id="discharge-current-c-rating">Discharge Current (C Rating)</h3>
+<p>Discharge rating can be calculated the same way as charge rating. To calculate discharge current start with the capacity rating in mAh and divide mAh by 1000. Then multiply that number by the battery’s C rating. For example a 1500mAh battery with a 100C rating can safely handle 150 amps  (1.5 x 100 = 150 amps).</p>
+<div class="textbook-table" role="region" aria-label="Charge current samples" tabindex="0"><table><caption>Charge current samples</caption><thead><tr><th scope="col">Capacity</th><th scope="col">1C current</th><th scope="col">2C current</th></tr></thead><tbody><tr><th scope="row">800 mAh</th><td>0.8 amps</td><td>1.6 amps</td></tr><tr><th scope="row">1500 mAh</th><td>1.5 amps</td><td>3 amps</td></tr><tr><th scope="row">2200 mAh</th><td>2.2 amps</td><td>4.4 amps</td></tr><tr><th scope="row">5000 mAh</th><td>5.0 amps</td><td>10 amps</td></tr></tbody></table></div>
+<div class="textbook-table" role="region" aria-label="Discharge current samples" tabindex="0"><table><caption>Discharge current samples</caption><thead><tr><th scope="col">Capacity</th><th scope="col">50C current</th><th scope="col">100C current</th></tr></thead><tbody><tr><th scope="row">800 mAh</th><td>40 amps</td><td>80 amps</td></tr><tr><th scope="row">1500 mAh</th><td>75 amps</td><td>150 amps</td></tr><tr><th scope="row">2200 mAh</th><td>110 amps</td><td>220 amps</td></tr><tr><th scope="row">5000 mAh</th><td>250 amps</td><td>500 amps</td></tr></tbody></table></div>
+<h3 id="battery-labeling">Battery Labeling</h3>
+<p>Batteries usually have a label on them denoting how many cells such as 1S, 2S, 3S, 4S etc. So, why “S” and not “C” for “cells”? The “S” stands for “series” and it means that there are 2<strong>S</strong> or two cells in <strong>s</strong>eries. Cells in series add voltage while cells in parallel add capacity (mAh). The typical resting voltage for a LiPo cell is 3.7volts. Therefore a 2 cell battery in series, or, 2S, would have a voltage of 7.4 volts (3.7V x 2 = 7.4V). Here is a chart that shows cell count in series, resting voltage and charged voltage for common LiPo batteries. It is not advised to drain a battery below the “safe” voltage listed below as it will likely destroy the battery cell(s) and ruin the entire battery.</p>
+<div class="textbook-table" role="region" aria-label="LiPo voltages by cell count" tabindex="0"><table><caption>LiPo voltages by cell count</caption><thead><tr><th scope="col">Number of Cells</th><th scope="col">Safe “Dead” Voltage</th><th scope="col">Resting Voltage</th><th scope="col">Charged Voltage</th></tr></thead><tbody><tr><th scope="row">1S</th><td>3.2 V</td><td>3.7 V</td><td>4.2 V</td></tr><tr><th scope="row">2S</th><td>6.4 V</td><td>7.4 V</td><td>8.4 V</td></tr><tr><th scope="row">3S</th><td>9.6 V</td><td>11.1 V</td><td>12.6 V</td></tr><tr><th scope="row">4S</th><td>12.8 V</td><td>14.8 V</td><td>16.8 V</td></tr><tr><th scope="row">5S</th><td>16 V</td><td>18.5 V</td><td>21 V</td></tr><tr><th scope="row">6S</th><td>19.2 V</td><td>22.2 V</td><td>25.2 V</td></tr></tbody></table></div>
+<h3 id="charging-a-battery">Charging a battery</h3>
+<p>The Venom dual battery charger looks like this when you first power it on.</p>
+<figure class="textbook-figure"><a href="/assets/uas-hardware/venom-charger-front.jpg"><img src="/assets/uas-hardware/venom-charger-front.jpg" alt="The front of the Venom charger with its blue screen lit, a red power light, and five buttons below the screen." width="480" height="640" loading="lazy"></a></figure>
+<figure class="textbook-figure"><a href="/assets/uas-hardware/venom-charger-buttons.jpg"><img src="/assets/uas-hardware/venom-charger-buttons.jpg" alt="The Venom charger&#x27;s screen reading LiPo BALANCE 2.2A 22.2V(6S), above the Select/Stop, DEC, INC, and Start/Enter buttons and the Channel button below them." width="480" height="640" loading="lazy"></a></figure>
+<p>When you look at the front of the charger you will see a row of four buttons and a single &quot;channel&quot; button below. The “channel” button will switch between the two chargers that are built into this charger. An LED lights up to show you which side of the charger you are currently working with. This is the biggest area of confusion for people. When the charger seems to be acting strangely, it is usually because the wrong channel is selected. When the LED on the left side is lit up, all the controls are for the charging cable and balance cable on the left. When the right LED is on all of the controls are for the charging cable and balance cable on the right.</p>
+<p>The top row of buttons, working left to right, consists of the following buttons (note, some buttons serve two roles)  Select/Stop, DEC (decrement) INC (increment) and a start/enter button.</p>
+<p>You will need to connect your battery’s XT-60 (or other) power connector to the charger and the battery’s balance lead as shown below.</p>
+<ul class="parts-grid">
+<li><figure class="part-card"><a href="/assets/uas-hardware/lipo-xt60-balance-lead.jpg"><img src="/assets/uas-hardware/lipo-xt60-balance-lead.jpg" alt="A LiPo battery with its leads standing up; arrows label the yellow XT-60 power connector and the white balance lead." width="480" height="640" loading="lazy"></a></figure></li>
+<li><figure class="part-card"><a href="/assets/uas-hardware/balance-board-connection.jpg"><img src="/assets/uas-hardware/balance-board-connection.jpg" alt="A hand plugging the battery&#x27;s balance lead into a balance board connected to the charger; the battery&#x27;s XT-60 lead connects to the charger&#x27;s red and black leads." width="480" height="640" loading="lazy"></a></figure></li>
+</ul>
+<p>Next, you will need to select the correct chemistry for the battery you are trying to charge. In this case, you have a LiPo battery. You will need to push the “select” button as shown below until the screen shows the LiPo setting as shown in the second photo.</p>
+<ul class="parts-grid">
+<li><figure class="part-card"><a href="/assets/uas-hardware/venom-program-select.jpg"><img src="/assets/uas-hardware/venom-program-select.jpg" alt="A finger pressing the Select button on the charger while the screen reads PROGRAM SELECT SAVE DATA." width="480" height="640" loading="lazy"></a></figure></li>
+<li><figure class="part-card"><a href="/assets/uas-hardware/venom-program-select-lipo.jpg"><img src="/assets/uas-hardware/venom-program-select-lipo.jpg" alt="A finger pressing the Select button on the charger while the screen reads PROGRAM SELECT LiPo BATT." width="480" height="640" loading="lazy"></a></figure></li>
+</ul>
+<p>Then, press the “start/enter” button as shown below which will bring you into the sub menu shown below.</p>
+<figure class="textbook-figure"><a href="/assets/uas-hardware/venom-lipo-charge.jpg"><img src="/assets/uas-hardware/venom-lipo-charge.jpg" alt="A finger pressing the INC button on the charger while the screen shows a LiPo CHARGE setting." width="480" height="640" loading="lazy"></a></figure>
+<p>Now, press the “INC” button until you see the “LiPo BALANCE” menu as shown below.</p>
+<figure class="textbook-figure"><a href="/assets/uas-hardware/venom-lipo-balance.jpg"><img src="/assets/uas-hardware/venom-lipo-balance.jpg" alt="A finger pressing the INC button on the charger while the screen shows the LiPo BALANCE menu with its current and voltage settings." width="480" height="640" loading="lazy"></a></figure>
+<p>Next, press the start/enter button once and the current setting will begin to flash. You will need to set this to the appropriate current for the battery that you are trying to charge. While the current setting is flashing, you can press the “INC” button to increase the current and the “DEC” button to decrease the current. Remember, you divide the battery capacity by 1000 to determine the charge current. Therefore a 1500mAh battery should be charged at 1.5 amps or less.</p>
+<p>Once you have the proper current selected press the “start/enter” button once and now the voltage should be flashing. Again, use the “INC” or “DEC” buttons to increase or decrease the voltage to match the voltage and cell count of the battery that you are trying to charge.</p>
+<p>When you have the correct voltage and current selected press and hold the “start/enter” button until the confirmation screen appears, similar to the one below (although the text might be different depending on the size and type of battery you are trying to charge).</p>
+<p>Then, release the “start/enter” button then press one more time to start the charging process.</p>
+<figure class="textbook-figure"><a href="/assets/uas-hardware/venom-start-charge.jpg"><img src="/assets/uas-hardware/venom-start-charge.jpg" alt="A finger pressing the Start/Enter button on the charger while the screen shows the confirmation to start charging." width="480" height="640" loading="lazy"></a></figure>
+<p>If you did everything correctly your battery should now be charging. You can press the “INC” button to see the individual cells as the battery charges.</p>
+<figure class="textbook-figure"><a href="/assets/uas-hardware/venom-cell-voltages.jpg"><img src="/assets/uas-hardware/venom-cell-voltages.jpg" alt="A finger pressing INC on the charger while the screen shows the voltage of each cell, each about 3.7 to 3.8 volts." width="480" height="640" loading="lazy"></a></figure>
+<p>The charger will stop automatically when charging is complete.</p>
+<h2 id="matching-the-battery-propeller-motor-and-esc">Matching the battery, propeller, motor, and ESC</h2>
+<p>Now that you have learned about how batteries, motors, esc, and propellers work, we will combine them into a power system to generate thrust. It is important to correctly match these components so as not to exceed the safe working limits of any of the individual components.</p>
+<p>Exceeding a safe operating current can cause damage to motors, ESCs, and batteries. For example, changing the voltage of the battery that powers a motor from a 3 cell to a 4 cell will increase the amount of current in the circuit. It would be important in this example, to make sure that the ESC can handle this extra current and that the discharge C rating of the battery won’t be exceeded. Similarly, changing the propeller on the motor from a 9 inch to a 10 inch propeller will cause the motor to draw more current. Again, it is important that this increased current will not exceed the ESC, motor, or battery current limits. It is important to understand that changing an ESC from a 15 amp ESC to a 30 amp ESC will NOT change the current draw in the circuit. The current rating on an ESC only states how much current the ESC can safely handle. A larger ESC does NOT “make” more current. Current is a product of voltage and resistance in a circuit. Current can also increase by increasing physical load on a motor. Load can be increased by changing to a longer propeller or changing the pitch of a propeller.</p>
+<h2 id="control-horns">Control Horns</h2>
+<p>A control horn is designed to change the direction of motion in a mechanical system. Control horns are used at the end of push rods to change the linear motion of the pushrod into rotational motion on the control surface. At the servo end of the push rod servo arms change the rotational motion of the servo into linear motion. The control horn pictured below is designed to be glued into the foamboard to secure it in place. A piece of stiff piano wire with a Z bend will form the push rod.</p>
+<figure class="textbook-figure"><a href="/assets/uas-hardware/control-horn-cad.png"><img src="/assets/uas-hardware/control-horn-cad.png" alt="A CAD rendering of a control horn: a curved, tapered fin with a pushrod hole near its tip, standing on a T-shaped base that slots into the control surface." width="1320" height="796" loading="lazy"></a></figure>
+<figure class="textbook-figure"><a href="/assets/uas-hardware/control-horns-printed.jpg"><img src="/assets/uas-hardware/control-horns-printed.jpg" alt="Two white 3D-printed control horns lying on a blue print bed." width="1600" height="1200" loading="lazy"></a></figure>
+<h2 id="pushrods">Pushrods</h2>
+<p>Pushrods are used to provide a mechanical linkage between servos and control horns. Pictured below is a pushrod with a Z bend at one end.</p>
+<figure class="textbook-figure"><a href="/assets/uas-hardware/pushrod-z-bend.png"><img src="/assets/uas-hardware/pushrod-z-bend.png" alt="A CAD rendering of a straight wire pushrod with a Z-shaped bend at one end." width="1320" height="796" loading="lazy"></a></figure>
+<p>This Z bend can be pushed into the hole on a servo arm or a control horn. The best way to connect servo arms to control horns is with a Z bend at each end. While there are linkage stoppers and other devices that make connecting servos and control horns easier, this method has the least points of failure and uses the least resources. While the Z bend in these piano wire pushrods can be made with pliers, a Z bend tool makes the job much easier.</p>
+<figure class="textbook-figure"><a href="/assets/uas-hardware/z-bend-pliers.jpg"><img src="/assets/uas-hardware/z-bend-pliers.jpg" alt="Red-handled Z-bend pliers with stepped jaws, and an inset showing the jaws from another angle." width="769" height="772" loading="lazy"></a></figure>
+<h2 id="linkage-stopper">Linkage Stopper</h2>
+<p>Pictured below is a linkage stopper. A linkage stopper bolts to either a control horn or servo arm. The pushrod passes through the large hole in the stopper and is secured in place with a set screw. The primary advantage of a linkage stopper is easy pushrod adjustment. By loosening the set screw, the pushrod can be moved in or out to mechanically center and trim the flight control surface. This allows the control surface to be properly aligned without relying on electronic trim adjustments in the transmitter. Although linkage stoppers are convenient and allow for very fine adjustments, they also introduce additional potential failure points. The set screw securing the pushrod can loosen, and the retaining nut on the threaded post can also work loose during operation. Either failure could disconnect or allow movement of the control linkage and potentially result in a loss of control in flight. For this reason, all linkage stopper hardware should be securely tightened and inspected before flight. A suitable thread-locking compound may also be used on the retaining nut where appropriate.</p>
+<figure class="textbook-figure"><a href="/assets/uas-hardware/linkage-stoppers.jpg"><img src="/assets/uas-hardware/linkage-stoppers.jpg" alt="Ten nickel-plated linkage stoppers: small cylinders with a cross hole for the pushrod, a set screw, and a threaded post with a nut." width="679" height="560" loading="lazy"></a></figure>
+<p>A slightly better option than a linkage stopper is a pushrod with a Z-bend on one end and a threaded clip on the other. The Z-bend provides a simple and secure connection to the servo arm, while the threaded clip connects to the control horn. These pushrods tend to be very reliable and still provide some mechanical adjustment. The threaded end can be turned in or out to make small changes to the pushrod length, allowing the control surface to be mechanically centered without relying heavily on transmitter trims. These pushrods cost a little more than using basic piano wire, but they provide a strong, reliable, and easily adjustable control linkage and are a good choice for most RC aircraft.</p>
+<figure class="textbook-figure"><a href="/assets/uas-hardware/pushrods-with-clevises.jpg"><img src="/assets/uas-hardware/pushrods-with-clevises.jpg" alt="Wire pushrods with Z-bends at one end and threaded metal clevises at the other, with white plastic pushrod tubes." width="595" height="304" loading="lazy"></a></figure>
+<p>When installing servos, pushrods and control horns, you want to make sure that the control surface is in its neutral position and that the servo is in its neutral position. You will not know if the servo is in its centered neutral position unless you power on the servo using the receiver, ESC, and a battery.</p>
+<h2 id="tools">Tools</h2>
+<h3 id="z-bend-pliers">Z-Bend Pliers</h3>
+<p>These <strong>“Z” bend pliers</strong> are great for making “Z” bends in piano wire for pushrods. While you can make Z bends with regular pliers, this tool makes the process much easier with better quality.</p>
+<figure class="textbook-figure"><a href="/assets/uas-hardware/z-bend-pliers.jpg"><img src="/assets/uas-hardware/z-bend-pliers.jpg" alt="Red-handled Z-bend pliers with stepped jaws, and an inset showing the jaws from another angle." width="769" height="772" loading="lazy"></a></figure>
+<h2 id="soldering-and-crimping">Soldering and Crimping</h2>
+<p>Soldering is a basic skill that is very important in the remote aircraft world. Knowing how to solder correctly and how to solder well will pay dividends as you progress in the unmanned aircraft world. There are a variety of tools that you can use to solder however the most basic setup requires only a soldering iron, sponge, flux, and solder. Brass wool, a rework tool, microscope and other tools are nice to have but are not required. Soldering involves melting a filler material to join two pieces of metal (usually copper) together to form a mechanical as well as an electrical connection.</p>
+<p>Solder is a metal made up of lead and tin. Lead free options are available that contain tin, with added elements like copper, silver, bismuth, zinc, antimony, and nickel. Solder melts at a range of temperatures, typically between 180°C (360°F) and 220°C (430°F), depending on the specific alloy composition. Leaded solder, like 60/40 (60% tin, 40% lead), melts around 183°C (361°F), while lead-free solder alloys tend to have a slightly higher melting point, often around 217°C (423°F) for common lead-free solder.</p>
+<h3 id="solder-station">Solder Station</h3>
+<figure class="textbook-figure"><a href="/assets/uas-hardware/solder-station.jpg"><img src="/assets/uas-hardware/solder-station.jpg" alt="A Weller soldering station: a red base with a temperature dial, a coiled iron holder, a yellow cleaning sponge, and a soldering iron on a cord." width="658" height="651" loading="lazy"></a></figure>
+<h3 id="solder-wool">Solder wool</h3>
+<figure class="textbook-figure"><a href="/assets/uas-hardware/solder-wool.jpg"><img src="/assets/uas-hardware/solder-wool.jpg" alt="A round black holder filled with brass solder wool for cleaning the soldering iron tip." width="894" height="894" loading="lazy"></a></figure>
+<h3 id="solder">Solder</h3>
+<figure class="textbook-figure"><a href="/assets/uas-hardware/solder-spool.jpg"><img src="/assets/uas-hardware/solder-spool.jpg" alt="A spool of 0.6 mm lead-free RoHS solder wire, 99.3% tin and 0.7% bismuth, with a 2.5% flux core." width="952" height="822" loading="lazy"></a></figure>
+<h3 id="solder-wick">Solder Wick</h3>
+<figure class="textbook-figure"><a href="/assets/uas-hardware/solder-wick.jpg"><img src="/assets/uas-hardware/solder-wick.jpg" alt="A spool of braided copper desoldering wick, 10 feet long and 0.1 inch wide." width="1500" height="1426" loading="lazy"></a></figure>
+<h2 id="how-to-solder">How to Solder</h2>
+<p>Knowing how to solder is a valuable skill. When working with remote aircraft the ability to solder will allow you to build and repair a multitude of electrical systems. You do not need a fancy expensive soldering station, but at a minimum a soldering iron with a heat control, brass wool, wet sponge, flux, and solder will do most of what you need. A better, more expensive setup will make your work easier, but, for most day to day soldering, a simple setup will be just fine.</p>
+<p>You want to make sure that your soldering iron is clean. Keep it clean by dipping it in and out of the brass wool and wiping the tip on a damp sponge. Don’t try to use any solvents other than flux and never sand or file the tip. Clean the tip often while working. The tip of the iron should always be clean and shiny. The tip will oxidize quickly (in seconds) so frequent cleaning will be a must for success.</p>
+<p>The iron works best with a small amount of fresh solder on the tip before attempting to make a connection. A few drops of liquid flux make a night and day difference in your ability to solder good clean joints. Make sure that you know the type of flux you are using and how it will be cleaned off after you are done. Water soluble flux is recommended as you can easily wash the flux off with soap and water. Make sure that parts that have been washed have adequate time to dry before powering on. Letting freshly washed parts dry overnight is a good safe practice.</p>
+<p>The contacts that you are trying to join need to melt the solder not the tip of your iron. The iron provides the heat to heat the connections but the connections themselves should melt the solder. A good solder joint will be shiny and silver, not dull and gray. A good solder joint should not have any black specks in it either. Any discoloration represents impurities which mean a poor connection and a possible failure point. Clean and re-solder any bad joints.</p>
+<h3 id="desoldering-a-connection">Desoldering a connection</h3>
+<p>If you need to undo a solder connection there are a few options depending on how the connection was made and how difficult it is to heat and remove the component without causing damage to other parts of the circuit board or electric connection. The main tools required are solder wick, solder pump (solder sucker), flux, solder iron and/or a rework tool. Regardless of the tools used, the goal is to melt the solder and remove it in order to free the component or wire that you are trying to unsolder. Flux is your friend when trying to desolder something. Flux will help the solder to melt and flow better. Add a few drops of flux to a piece of solder wick then lay the solder wick over the connection you want to remove. Then press the iron onto the wick and allow it to melt and absorb the solder. The solder wick should suck up the melted solder like a sponge. Typically this will remove most but not all of the solder. You may find that you may need to apply a little additional heat then remove the component with tweezers or needle nose pliers applying gentle force.</p>
