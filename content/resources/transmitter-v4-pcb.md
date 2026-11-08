@@ -21,6 +21,7 @@ updated: '2026-11-07'
 format: F3Z, SCH, BRD, XLSX, ZIP
 related:
 - transmitter-configurator
+- transmitter-case
 delivery: download
 origin: contributed
 subjects:
@@ -49,7 +50,7 @@ Version 4 of the Altitude Unknown RC transmitter, the radio used to fly ASCEND a
 - A **LiPo charge controller**, with micro-USB connectors.
 - **Two control gimbals** (aileron/elevator and throttle/rudder), trim and menu buttons, a speaker, status LEDs, and a header for an LCD.
 
-Configure the finished transmitter with the [Altitude Unknown RC Transmitter Configurator](/resources/transmitter-configurator/).
+Print its case from the [RC Transmitter 3D-printed case](/resources/transmitter-case/) files, then configure the finished transmitter with the [Altitude Unknown RC Transmitter Configurator](/resources/transmitter-configurator/).
 
 ## The files
 

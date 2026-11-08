@@ -858,6 +858,116 @@
     "publicUrl": ""
   },
   {
+    "id": "tx-3d-print-bind-button",
+    "source": "Tx-3D-Print/BIND Button.stl",
+    "filename": "BIND Button.stl",
+    "format": "STL",
+    "bytes": 105984,
+    "sha256": "e73e46a439544d1d46a1b1374bee3df93e4170e78b23a1ddb2daa6d142665cd1",
+    "localPath": "downloads/imported/tx-3d-print-bind-button.stl",
+    "hostedLocally": true,
+    "publicUrl": ""
+  },
+  {
+    "id": "tx-3d-print-back-buttons",
+    "source": "Tx-3D-Print/Back Buttons.stl",
+    "filename": "Back Buttons.stl",
+    "format": "STL",
+    "bytes": 615584,
+    "sha256": "37012611a37c80fd31f616eb4509bc55c6093c9ab9e2d6b91313170e36a5b47c",
+    "localPath": "downloads/imported/tx-3d-print-back-buttons.stl",
+    "hostedLocally": true,
+    "publicUrl": ""
+  },
+  {
+    "id": "tx-3d-print-controller-bottom",
+    "source": "Tx-3D-Print/Controller Bottom.stl",
+    "filename": "Controller Bottom.stl",
+    "format": "STL",
+    "bytes": 1402684,
+    "sha256": "f0a851745ccd14d30bd6034ba1bec411fb9243b49de53fce4fe3d539aeb10166",
+    "localPath": "downloads/imported/tx-3d-print-controller-bottom.stl",
+    "hostedLocally": true,
+    "publicUrl": ""
+  },
+  {
+    "id": "tx-3d-print-controller-top",
+    "source": "Tx-3D-Print/Controller Top.stl",
+    "filename": "Controller Top.stl",
+    "format": "STL",
+    "bytes": 10515484,
+    "sha256": "5c754764ac4ca482e02a415440f36b07e5be4152e8445d39f2ba0864e6720b54",
+    "localPath": "downloads/imported/tx-3d-print-controller-top.stl",
+    "hostedLocally": true,
+    "publicUrl": ""
+  },
+  {
+    "id": "tx-3d-print-handle",
+    "source": "Tx-3D-Print/Handle.stl",
+    "filename": "Handle.stl",
+    "format": "STL",
+    "bytes": 99084,
+    "sha256": "51e8ca3091031ddc70ec1508e9ec1ae5a74b63c28bd993c23f23fc57f1b44fa9",
+    "localPath": "downloads/imported/tx-3d-print-handle.stl",
+    "hostedLocally": true,
+    "publicUrl": ""
+  },
+  {
+    "id": "tx-3d-print-left-stick1",
+    "source": "Tx-3D-Print/Left Stick1.stl",
+    "filename": "Left Stick1.stl",
+    "format": "STL",
+    "bytes": 1056884,
+    "sha256": "1869aae28cc331a0c4e5a86610032c21912a8e87201ea909f29b8f8a85dbf107",
+    "localPath": "downloads/imported/tx-3d-print-left-stick1.stl",
+    "hostedLocally": true,
+    "publicUrl": ""
+  },
+  {
+    "id": "tx-3d-print-rl-trim-button",
+    "source": "Tx-3D-Print/RL-TRIM Button.stl",
+    "filename": "RL-TRIM Button.stl",
+    "format": "STL",
+    "bytes": 109984,
+    "sha256": "bb56b4caf1b25710c8f600124348a106436dbabc9f42e12125f41fd55b27df23",
+    "localPath": "downloads/imported/tx-3d-print-rl-trim-button.stl",
+    "hostedLocally": true,
+    "publicUrl": ""
+  },
+  {
+    "id": "tx-3d-print-rr-trim-button",
+    "source": "Tx-3D-Print/RR-TRIM Button.stl",
+    "filename": "RR-TRIM Button.stl",
+    "format": "STL",
+    "bytes": 109984,
+    "sha256": "728d2a7451158bedba1ca9b368c8dd56f46c9277f293d35fb8c50c41d4f8dc82",
+    "localPath": "downloads/imported/tx-3d-print-rr-trim-button.stl",
+    "hostedLocally": true,
+    "publicUrl": ""
+  },
+  {
+    "id": "tx-3d-print-right-stick",
+    "source": "Tx-3D-Print/Right Stick.stl",
+    "filename": "Right Stick.stl",
+    "format": "STL",
+    "bytes": 1047984,
+    "sha256": "f2cc76527ccba930a6cff6b27506e833eb1a9fc50050eea5c326fe9a75f82e7c",
+    "localPath": "downloads/imported/tx-3d-print-right-stick.stl",
+    "hostedLocally": true,
+    "publicUrl": ""
+  },
+  {
+    "id": "tx-3d-print-v4-trasmitter-case",
+    "source": "Tx-3D-Print/v4 Trasmitter Case.f3z",
+    "filename": "v4 Trasmitter Case.f3z",
+    "format": "F3Z",
+    "bytes": 142102920,
+    "sha256": "1df6f32552aa6aabdb69e4dbfcbe2220c048ee26434a23176d282e1edd3cc497",
+    "localPath": "local-materials/tx-3d-print-v4-trasmitter-case.f3z",
+    "hostedLocally": false,
+    "publicUrl": "https://pub-c44fad737a904733b8cd98e5e7e81ea9.r2.dev/r2-upload/tx-3d-print-v4-trasmitter-case.f3z"
+  },
+  {
     "id": "yellowstone-walach-aerospace-cubesat-brd",
     "source": "YELLOWSTONE/Walach_Aerospace_CubeSat.brd",
     "filename": "Walach_Aerospace_CubeSat.brd",

@@ -4,6 +4,10 @@ The intake folder is `ASCEND-Materials/` inside this repository. It is preserved
 unchanged and ignored by Git. Back it up independently. The provided
 `ASCEND_Logo_v2.jpg` is copied unchanged to `public/assets/ascend-logo.jpg`.
 
+## RC transmitter case — November 8
+
+Added the transmitter's 3D-printed case from `ASCEND-Materials/Tx-3D-Print/`: 9 STL files hosted on Pages, plus `v4 Trasmitter Case.f3z` (135.5 MiB). The Fusion file was uploaded to `ascend-files` at `r2-upload/tx-3d-print-v4-trasmitter-case.f3z`; its downloaded size and SHA-256 match the original. Resource: `/resources/transmitter-case/`, listed under CAD & Fabrication > Electronics Enclosures and Electronic Designs > RC Transmitter. The case fits transmitter boards V3 and V4.
+
 ## Electronic Designs section — November 7
 
 Added the **Electronic Designs** section (`/electronics/`) for ASCEND circuit boards. The first board is RC Transmitter V4 (`/resources/transmitter-v4-pcb/`). `scripts/import-materials.py` now also accepts `.zip` files and checks that they open.
@@ -106,6 +110,7 @@ Do not invent URLs or use expiring signed links for public educational files.
 | airspace.pdf | 29.6 MiB | `airspace-pdf` |
 | regulations.pdf | 27.1 MiB | `regulations-pdf` |
 | remote-aircraft-textbook.pdf | 36.9 MiB | `remote-aircraft-textbook-pdf` |
+| v4 Trasmitter Case.f3z | 135.5 MiB | `tx-3d-print-v4-trasmitter-case` |
 
 ## Adding or replacing supplied files
 

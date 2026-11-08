@@ -201,7 +201,8 @@
         "title": "RC Transmitter",
         "slug": "rc-transmitter",
         "resourceIds": [
-          "transmitter-v4-pcb"
+          "transmitter-v4-pcb",
+          "transmitter-case"
         ]
       },
       {
@@ -477,7 +478,9 @@
       {
         "title": "Electronics Enclosures",
         "slug": "electronics-enclosures",
-        "resourceIds": []
+        "resourceIds": [
+          "transmitter-case"
+        ]
       },
       {
         "title": "Aircraft Parts",

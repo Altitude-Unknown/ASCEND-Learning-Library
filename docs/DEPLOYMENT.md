@@ -78,7 +78,7 @@ path prefix, update URL generation and Pagefind paths and rerun browser checks.
 ## Imported materials: deployment check
 
 Deploy `_site/`, never `_preview/`. The latter includes large local originals
-for private evaluation. Eight large assets use public R2 HTTPS URLs;
+for private evaluation. Nine large assets use public R2 HTTPS URLs;
 see [the import inventory](IMPORTED-MATERIALS.md). The bucket is `ascend-files`, with objects under `r2-upload/`.
 The current endpoint is
 `https://pub-c44fad737a904733b8cd98e5e7e81ea9.r2.dev`.
