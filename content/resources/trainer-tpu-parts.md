@@ -1,8 +1,8 @@
 ---
 id: trainer-tpu-parts
 title: Trainer Airplane — 64D TPU Parts
-description: Ten supplied files for the trainer fuselage, nose, canopy, servo brackets,
-  empennage clips, and landing gear.
+description: Eleven supplied files for the trainer fuselage (standard and stretched),
+  nose, canopy, servo brackets, empennage clips, and landing gear.
 topic: fabrication
 kind: CAD model
 status: Available
@@ -15,14 +15,15 @@ assetIds:
 - rc-airplanes-trainer-airplane-64d-tpu-parts-canapy
 - rc-airplanes-trainer-airplane-64d-tpu-parts-fuselage
 - rc-airplanes-trainer-airplane-64d-tpu-parts-nose
+- rc-airplanes-trainer-airplane-64d-tpu-parts-fuselag-stretch
+- rc-airplanes-trainer-airplane-64d-tpu-parts-canapy-for-stretch
 - rc-airplanes-trainer-airplane-64d-tpu-parts-servo-bracket-v-tail
 - rc-airplanes-trainer-airplane-64d-tpu-parts-servo-v-tail
-- rc-airplanes-trainer-airplane-64d-tpu-parts-empanage-clip-2mm-ply-tail-skid
 - rc-airplanes-trainer-airplane-64d-tpu-parts-empanage-clip-2mm-ply-w-skid
 - rc-airplanes-trainer-airplane-64d-tpu-parts-empanage-clip-2mm-ply
 - rc-airplanes-trainer-airplane-64d-tpu-parts-landinggear
 - rc-airplanes-trainer-airplane-64d-tpu-parts-servo-bracket-t-tail
-updated: '2026-09-23'
+updated: '2026-11-08'
 format: STL
 related:
 - trainer-build-instructions
@@ -38,7 +39,12 @@ platforms:
 
 ## About these files
 
-Ten supplied files for the trainer fuselage, nose, canopy, servo brackets, empennage clips, and landing gear.
+Eleven supplied files for the trainer fuselage, nose, canopy, servo brackets, empennage clips, and landing gear.
+
+- **Stretched fuselage option:** `Fuselag-Stretch.stl` with its matching `Canapy for stretch.stl`.
+- **2 mm plywood tail clips:** `empanage-clip-2mm-ply.stl` (plain) and `empanage-clip-2mm-ply-w-skid.stl` (with a tail skid).
+
+The fuselage, nose, and plain plywood clip were updated to the latest designs on November 8, 2026. Their editable versions are in the [Fusion part designs](/resources/trainer-fusion-parts/).
 
 These downloads preserve the original file contents and filenames. Visit the [aircraft project page](/uas/trainer-airplane/) for the related components.
 

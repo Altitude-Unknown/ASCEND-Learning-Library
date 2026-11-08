@@ -407,6 +407,17 @@
     "publicUrl": ""
   },
   {
+    "id": "rc-airplanes-trainer-airplane-64d-tpu-parts-canapy-for-stretch",
+    "source": "RC-Airplanes/Trainer-Airplane/64D_TPU_Parts/Canapy for stretch.stl",
+    "filename": "Canapy for stretch.stl",
+    "format": "STL",
+    "bytes": 39184,
+    "sha256": "03e5c8ca4b1d18184677f38443978c4160e11c89858f6ebe599e6e09e48d1b4b",
+    "localPath": "downloads/imported/rc-airplanes-trainer-airplane-64d-tpu-parts-canapy-for-stretch.stl",
+    "hostedLocally": true,
+    "publicUrl": ""
+  },
+  {
     "id": "rc-airplanes-trainer-airplane-64d-tpu-parts-canapy",
     "source": "RC-Airplanes/Trainer-Airplane/64D_TPU_Parts/Canapy.stl",
     "filename": "Canapy.stl",
@@ -418,12 +429,23 @@
     "publicUrl": ""
   },
   {
+    "id": "rc-airplanes-trainer-airplane-64d-tpu-parts-fuselag-stretch",
+    "source": "RC-Airplanes/Trainer-Airplane/64D_TPU_Parts/Fuselag-Stretch.stl",
+    "filename": "Fuselag-Stretch.stl",
+    "format": "STL",
+    "bytes": 216284,
+    "sha256": "787bc63ee872f658d808d841c6243fb957ab8a137b0c3c43554dad8470c41d69",
+    "localPath": "downloads/imported/rc-airplanes-trainer-airplane-64d-tpu-parts-fuselag-stretch.stl",
+    "hostedLocally": true,
+    "publicUrl": ""
+  },
+  {
     "id": "rc-airplanes-trainer-airplane-64d-tpu-parts-fuselage",
     "source": "RC-Airplanes/Trainer-Airplane/64D_TPU_Parts/Fuselage.stl",
     "filename": "Fuselage.stl",
     "format": "STL",
-    "bytes": 179484,
-    "sha256": "67b6b9455a822f854ee09c3b2a32471af7e0fe31b30242288a2d4bce7740120e",
+    "bytes": 185084,
+    "sha256": "f9ef5f1ebe2a13bf4b2627ba749c5c100fd17a43f3722807ed76b5e329e06c4e",
     "localPath": "downloads/imported/rc-airplanes-trainer-airplane-64d-tpu-parts-fuselage.stl",
     "hostedLocally": true,
     "publicUrl": ""
@@ -433,8 +455,8 @@
     "source": "RC-Airplanes/Trainer-Airplane/64D_TPU_Parts/Nose.stl",
     "filename": "Nose.stl",
     "format": "STL",
-    "bytes": 253684,
-    "sha256": "ac74c31b6b59f2371642b5baace5daaf488369e6fdebf1e802a9188942f4092c",
+    "bytes": 213284,
+    "sha256": "3204a3e55584d0145dba4707c56adef613b0f02072203ec9cc86ac4cb32c7564",
     "localPath": "downloads/imported/rc-airplanes-trainer-airplane-64d-tpu-parts-nose.stl",
     "hostedLocally": true,
     "publicUrl": ""
@@ -462,17 +484,6 @@
     "publicUrl": ""
   },
   {
-    "id": "rc-airplanes-trainer-airplane-64d-tpu-parts-empanage-clip-2mm-ply-tail-skid",
-    "source": "RC-Airplanes/Trainer-Airplane/64D_TPU_Parts/empanage-clip-2mm-ply-tail-skid.stl",
-    "filename": "empanage-clip-2mm-ply-tail-skid.stl",
-    "format": "STL",
-    "bytes": 46784,
-    "sha256": "a605c5235456fa02f703b10cb316eca4c3e551a2deee1bcce12591c26d0729f6",
-    "localPath": "downloads/imported/rc-airplanes-trainer-airplane-64d-tpu-parts-empanage-clip-2mm-ply-tail-skid.stl",
-    "hostedLocally": true,
-    "publicUrl": ""
-  },
-  {
     "id": "rc-airplanes-trainer-airplane-64d-tpu-parts-empanage-clip-2mm-ply-w-skid",
     "source": "RC-Airplanes/Trainer-Airplane/64D_TPU_Parts/empanage-clip-2mm-ply-w-skid.stl",
     "filename": "empanage-clip-2mm-ply-w-skid.stl",
@@ -488,8 +499,8 @@
     "source": "RC-Airplanes/Trainer-Airplane/64D_TPU_Parts/empanage-clip-2mm-ply.stl",
     "filename": "empanage-clip-2mm-ply.stl",
     "format": "STL",
-    "bytes": 39384,
-    "sha256": "4dab3aa845d1c225dc3bb885a01beeb5e1cda584f0aed65fad6eeef872fe3d8a",
+    "bytes": 30884,
+    "sha256": "5b984973d72b9230f46da357754475b0dfada2a8df9bc7aefbcf862e1c3f9a40",
     "localPath": "downloads/imported/rc-airplanes-trainer-airplane-64d-tpu-parts-empanage-clip-2mm-ply.stl",
     "hostedLocally": true,
     "publicUrl": ""
@@ -777,6 +788,28 @@
     "bytes": 19684,
     "sha256": "17b533f5c64a0d0dfb7fde0bb438b94f218d0306bfc02bc2db67b4a66df007cf",
     "localPath": "downloads/imported/rc-airplanes-trainer-airplane-petg-parts-control-horn.stl",
+    "hostedLocally": true,
+    "publicUrl": ""
+  },
+  {
+    "id": "rc-airplanes-trainer-airplane-petg-parts-empannage-clip-v-tail-45-foam",
+    "source": "RC-Airplanes/Trainer-Airplane/PETG_Parts/Empannage-clip-v-tail-45-foam.stl",
+    "filename": "Empannage-clip-v-tail-45-foam.stl",
+    "format": "STL",
+    "bytes": 31184,
+    "sha256": "2428159aac69da4b6246de88f2b8e05526ab4c4eddab22107dace3553e457bd6",
+    "localPath": "downloads/imported/rc-airplanes-trainer-airplane-petg-parts-empannage-clip-v-tail-45-foam.stl",
+    "hostedLocally": true,
+    "publicUrl": ""
+  },
+  {
+    "id": "rc-airplanes-trainer-airplane-petg-parts-empannage-clip-v-tail-45",
+    "source": "RC-Airplanes/Trainer-Airplane/PETG_Parts/Empannage-clip-v-tail-45.stl",
+    "filename": "Empannage-clip-v-tail-45.stl",
+    "format": "STL",
+    "bytes": 31584,
+    "sha256": "2be56c75fc5c17eac2f7bc0ce06737b574320939a82a02cfc41db2a314dc4d6e",
+    "localPath": "downloads/imported/rc-airplanes-trainer-airplane-petg-parts-empannage-clip-v-tail-45.stl",
     "hostedLocally": true,
     "publicUrl": ""
   },
