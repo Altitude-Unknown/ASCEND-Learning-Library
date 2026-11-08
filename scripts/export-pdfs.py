@@ -1,13 +1,11 @@
 """Optional macOS authoring step using installed Microsoft Word/PowerPoint.
 Exports temporary copies, never saves or edits intake originals. Not part of CI.
+Textbooks are published as web chapters only (November 2026), so no book PDFs are exported.
 """
 from pathlib import Path
 import subprocess, shutil, hashlib, json, sys
 ROOT=Path(__file__).resolve().parents[1]
 JOBS=[
- ('Books/FAA Remote Pilot Study Guide.docx','part107-study-guide'),
- ('Books/Remote Aircraft Textbook.docx','remote-aircraft-textbook'),
- ('RC-Airplanes/Trainer-Airplane/AltitudeUnknown_Trainer_Build_Instructions.docx','trainer-build-instructions'),
  ('PowerPoints/Aviation Regulatory System-107.pptx','regulations'),
  ('PowerPoints/National Airspace System-107.pptx','airspace'),
  ('PowerPoints/Weather-107.pptx','weather'),

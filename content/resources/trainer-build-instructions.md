@@ -11,18 +11,15 @@ audience:
 - Students
 - Faculty Mentors
 - Pod Leads
-assetIds:
-- trainer-build-instructions-pdf
-- rc-airplanes-trainer-airplane-altitudeunknown-trainer-build-instructions
-updated: '2026-09-26'
-format: PDF / DOCX
+updated: '2026-11-08'
+format: Web
 author: Mike Walach
 related:
 - trainer-tpu-parts
 - trainer-petg-parts
 - trainer-dxf-patterns
 - trainer-fusion-assembly
-delivery: download
+delivery: web
 origin: contributed
 subjects:
 - UAS
@@ -32,16 +29,8 @@ platforms:
 - Fixed-Wing UAS
 ---
 
-## Build the ASCEND trainer
+## Read it online
 
-The supplied guide is headed **ASCEND Trainer Airplane**, designed by Mike Walach, 2026. It includes a parts list, tools and materials, wing construction, foamboard and plywood tail options, optional landing gear, and final assembly.
+The trainer build instructions are now published as a web chapter, [Chapter 4: Building a Fixed Wing Aircraft](/build-fixed-wing/textbook/building-a-fixed-wing-aircraft/). It covers the parts list, printed parts, the foamboard wing, foamboard and plywood tail options, final assembly, and the preflight control check. The web chapter is kept current as the instructions are revised, so the PDF and Word downloads are no longer offered.
 
-Start at the [Trainer Airplane project page](/uas/trainer-airplane/) for the matching printed parts, DXF outlines, and Fusion assembly.
-
-## Updated guide
-
-The September 26 reading copy has **113 pages**, including revised tail assembly and control-horn details, receiver connections, and final flight-control checks. The updated PDF and editable Word document are both available below.
-
-## Printing materials
-
-The source guide specifies **64D TPU** and **PETG** for different parts. The downloads retain those groups and the original filenames so you can match them to the instructions. The guide explicitly distinguishes 64D TPU from softer TPU.
+To build the airplane step by step with lessons, review questions, and instructor sign-off, take the [Building a Fixed-Wing UAS course](/build-fixed-wing/). The printed parts, patterns, and Fusion designs are on the [ASCEND Trainer Airplane](/uas/trainer-airplane/) project page.
