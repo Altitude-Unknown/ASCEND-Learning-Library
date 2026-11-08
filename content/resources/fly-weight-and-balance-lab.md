@@ -27,7 +27,7 @@ related:
 
 **Goal:** in this activity, you will determine if your airplane is within its CG (center of gravity) envelope. Using some basic calculations and simple physics, you will determine if your aircraft is safe for flight.
 
-Work through this activity on your own or with your team, then show your results to your instructor. Write your answers on paper or in your own notes; the printable version is in the lab manual.
+Work through this activity on your own or with your team, then show your results to your instructor. Write your answers on paper or in your own notes.
 
 <figure class="textbook-figure"><a href="/assets/learn-to-fly/wb-airplane-outline.jpg"><img src="/assets/learn-to-fly/wb-airplane-outline.jpg" alt="Side-view line drawing of a single-engine high-wing airplane." loading="lazy"></a><figcaption><p>Weight and balance applies to every aircraft, crewed or uncrewed.</p></figcaption></figure>
 
@@ -127,4 +127,4 @@ Try every problem before you open its answer.
 <dt>Arm</dt><dd>The distance of cargo, passengers, and fuel from the datum plane, measured in inches.</dd>
 </dl>
 
-<p class="small muted">From Chapter 3 of the <a href="/resources/remote-aircraft-textbook/">Remote and Autonomous Aircraft Systems lab manual</a>, where you can also download it as part of the complete book.</p>
+<p class="small muted">From Chapter 3 of the <a href="/resources/remote-aircraft-textbook/">Remote and Autonomous Aircraft Systems lab manual</a>. Read the chapter online: <a href="/learn-to-fly/textbook/piloting-remote-aircraft/">Chapter 3: Piloting Remote Aircraft</a>.</p>

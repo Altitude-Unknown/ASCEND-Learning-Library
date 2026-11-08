@@ -6,6 +6,16 @@ const read = file => JSON.parse(readFileSync(new URL(file, import.meta.url), 'ut
 const part107 = read('./part107Course.json');
 const learnToFly = read('./learnToFlyCourse.json');
 const buildFixedWing = read('./buildFixedWingCourse.json');
+const electricalBasics = read('./electricalBasicsCourse.json');
+const pidControllers = read('./pidControllersCourse.json');
+
+// Lab manual courses share one study method; only the chapter differs.
+const labManualMethod = chapter => [
+  {title: 'Watch & review', text: 'Begin with the unit’s video lesson. Videos are being recorded; until they are ready, start with the reading.'},
+  {title: 'Read & clarify', text: `Read the sections of ${chapter} listed for the unit. Each unit links straight to its sections.`},
+  {title: 'Apply & sign off', text: 'Work the practice problems or complete the lab, then demonstrate the unit’s skills to your instructor.'},
+  {title: 'Check & revisit', text: 'Answer the review questions in your own words, then open each answer to compare.'}
+];
 
 export default {
   part107: {
@@ -74,5 +84,48 @@ export default {
     chapterTitle: buildFixedWing.chapterTitle,
     reviewQuestions: buildFixedWing.reviewQuestions,
     units: buildFixedWing.units
+  },
+  electricalBasics: {
+    id: 'electricalBasics',
+    title: 'Electrical Basics',
+    shortTitle: 'Electrical Basics',
+    url: '/electrical-basics/',
+    label: 'ELECTRICAL BASICS',
+    sidebarLabel: 'BROWSE THE COURSE',
+    sidebarCollection: 'electricalBasicsModules',
+    overviewLabel: 'Course overview',
+    check: 'review',
+    final: {url: '/pid-controllers/', title: 'PID Controllers'},
+    intro: [
+      'This course teaches the electrical basics behind every unmanned aircraft: voltage, current, resistance, and power; Ohm’s law; wire; using a multimeter; and reading waveforms. It follows Chapter 1, Electrical Basics, of the Remote and Autonomous Aircraft Systems lab manual.',
+      'These ideas come up again whenever you choose a battery, motor, or speed controller, wire up a flight controller, or troubleshoot a circuit that is not working.'
+    ],
+    notice: {title: 'Work safely', text: 'Never measure resistance with power connected to a circuit, and handle LiPo flight batteries with care: a short circuit can start a fire.'},
+    method: labManualMethod('Chapter 1'),
+    chapterUrl: electricalBasics.chapterUrl,
+    chapterTitle: electricalBasics.chapterTitle,
+    reviewQuestions: electricalBasics.reviewQuestions,
+    units: electricalBasics.units
+  },
+  pidControllers: {
+    id: 'pidControllers',
+    title: 'PID Controllers',
+    shortTitle: 'PID Controllers',
+    url: '/pid-controllers/',
+    label: 'PID CONTROLLERS',
+    sidebarLabel: 'BROWSE THE COURSE',
+    sidebarCollection: 'pidControllersModules',
+    overviewLabel: 'Course overview',
+    check: 'review',
+    final: {url: '/uas/', title: 'UAS section'},
+    intro: [
+      'This course explains how a flight controller holds an aircraft on target. It follows a quadcopter climbing to 100 feet to show what the proportional, integral, and derivative terms each do, then how to tune each gain. It follows Chapter 9, PID Controllers, of the Remote and Autonomous Aircraft Systems lab manual.',
+      'The same ideas apply to any flight controller, from Betaflight on a quadcopter to ArduPilot on an airplane, and to the custom ASCEND boards.'
+    ],
+    method: labManualMethod('Chapter 9'),
+    chapterUrl: pidControllers.chapterUrl,
+    chapterTitle: pidControllers.chapterTitle,
+    reviewQuestions: pidControllers.reviewQuestions,
+    units: pidControllers.units
   }
 };

@@ -27,7 +27,7 @@ related:
 
 **Goal:** this activity introduces you to the four forces acting on an aircraft in flight. You will experiment with flight control as well as weight and balance.
 
-Work through this activity on your own or with your team, then show your results to your instructor. Write your answers on paper or in your own notes; the printable version is in the lab manual.
+Work through this activity on your own or with your team, then show your results to your instructor. Write your answers on paper or in your own notes.
 
 You need paper, a few coins (pennies work well), a paper clip, a ruler, a pencil, and somewhere to measure flight distance.
 
@@ -144,4 +144,4 @@ The **aft CG limit** is the distance from the nose of the plane (maximum rearwar
 <dt>Weight</dt><dd>The force that gravity exerts on the mass of an airplane. Weight is countered by lift.</dd>
 </dl>
 
-<p class="small muted">From Chapter 3 of the <a href="/resources/remote-aircraft-textbook/">Remote and Autonomous Aircraft Systems lab manual</a>, where you can also download it as part of the complete book.</p>
+<p class="small muted">From Chapter 3 of the <a href="/resources/remote-aircraft-textbook/">Remote and Autonomous Aircraft Systems lab manual</a>. Read the chapter online: <a href="/learn-to-fly/textbook/piloting-remote-aircraft/">Chapter 3: Piloting Remote Aircraft</a>.</p>

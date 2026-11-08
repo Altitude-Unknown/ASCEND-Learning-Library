@@ -1,0 +1,291 @@
+---
+{
+  "layout": "layouts/textbook-chapter.njk",
+  "tags": [],
+  "eleventyExcludeFromCollections": true,
+  "topic": "uas",
+  "courseId": "pidControllers",
+  "title": "Chapter 9: PID Controllers",
+  "description": "How a PID controller holds an aircraft on target: the proportional, integral, and derivative terms, and how each gain changes the response.",
+  "chapterNumber": 9,
+  "textbookEyebrow": "REMOTE AND AUTONOMOUS AIRCRAFT SYSTEMS · WEB EDITION",
+  "sourceNote": "From Mike Walach’s lab manual, Remote and Autonomous Aircraft Systems. Original wording is retained with small corrections; equations are written out as text for web reading.",
+  "headerLinks": [
+    {
+      "title": "About the lab manual",
+      "url": "/resources/remote-aircraft-textbook/"
+    }
+  ],
+  "toc": [
+    {
+      "title": "Overview",
+      "id": "overview"
+    },
+    {
+      "title": "Example: Proportional Control Using a Quadcopter",
+      "id": "example-proportional-control-using-a-quadcopter"
+    },
+    {
+      "title": "— How Proportional Control Works",
+      "id": "how-proportional-control-works"
+    },
+    {
+      "title": "— Adding Integral Control",
+      "id": "adding-integral-control"
+    },
+    {
+      "title": "— Visualizing the Difference",
+      "id": "visualizing-the-difference"
+    },
+    {
+      "title": "— Adding Derivative Control",
+      "id": "adding-derivative-control"
+    },
+    {
+      "title": "— Putting It All Together: The PID Controller",
+      "id": "putting-it-all-together-the-pid-controller"
+    },
+    {
+      "title": "— Intuitive Analogy",
+      "id": "intuitive-analogy"
+    },
+    {
+      "title": "How PID Gain Values affect the Plant",
+      "id": "how-pid-gain-values-affect-the-plant"
+    },
+    {
+      "title": "— Proportion gain (Kp) set too low",
+      "id": "proportion-gain-kp-set-too-low"
+    },
+    {
+      "title": "— Proportion gain (Kp) set too High",
+      "id": "proportion-gain-kp-set-too-high"
+    },
+    {
+      "title": "— How to Tune Kp",
+      "id": "how-to-tune-kp"
+    },
+    {
+      "title": "— When Ki is Too Low",
+      "id": "when-ki-is-too-low"
+    },
+    {
+      "title": "— When Ki is Too High",
+      "id": "when-ki-is-too-high"
+    },
+    {
+      "title": "— How to Tune Ki",
+      "id": "how-to-tune-ki"
+    },
+    {
+      "title": "— When Kd is Too Low",
+      "id": "when-kd-is-too-low"
+    },
+    {
+      "title": "— When Kd is Too High",
+      "id": "when-kd-is-too-high"
+    },
+    {
+      "title": "— How to Tune Kd",
+      "id": "how-to-tune-kd"
+    }
+  ],
+  "permalink": "/pid-controllers/textbook/pid-controllers/"
+}
+---
+<h2 id="overview">Overview</h2>
+<p>Have you ever thought about how a drone can control itself autonomously? You might think it is as simple as a computer telling the motors to spin at a certain speed until a set altitude is obtained, or a GPS position is reached. The problem of control is actually a bit more complicated than this however. Tuning a control system so that a device reaches its desired setpoint smoothly and correctly requires some tuning with a control algorithm. Most microcontrollers for drones use a control algorithm called PID, short for Proportion, Integral and Derivative. In this section we will explore how this algorithm functions to control UAVs in flight.</p>
+<p>A PID controller (Proportional–Integral–Derivative) is one of the most common types of controllers used to manage an automated system, such as a drone. Let&#x27;s take a look at the key terms and how PID works. We will start with the <strong>plant, controller, setpoint, and error</strong>.</p>
+<p>The <strong>plant</strong> is the physical system you are trying to control — for example, the drone’s motors, propellers, and body dynamics. The <strong>controller</strong> is the microcontroller or computer that calculates and sends the control signals to the plant. The <strong>setpoint</strong> is the desired condition or target, such as “hover at 150 feet,” “fly to these GPS coordinates,” or “keep the aircraft level in pitch and roll.” The <strong>error</strong> is the difference between the setpoint (where you want to be) and the current state (where you are). Next we will examine the three main parts of a PID controller, the <strong>proportion, integral and derivative</strong>.</p>
+<p>Each of the three terms — Proportional (<strong>P</strong>), Integral (<strong>I</strong>), and Derivative (<strong>D</strong>) — contributes to how the controller reacts to that error. Each term has its own gain (Kp, Ki, Kd), which you can adjust to control how aggressively the system responds.</p>
+<p>To mathematically calculate each part of the PID equation:</p>
+<ul><li>
+<strong>Proportional term (P):</strong><br> P = Kp × error
+</li><li>
+<strong>Integral term (I):</strong><br> I = Ki × (sum of (error × Δt))<br> In words: add up (error × time step) every cycle, then multiply that running sum by Ki.
+</li><li>
+<strong>Derivative term (D):</strong><br> D = Kd × (change in error / change in time)<br> or in symbols: D = Kd × (Δerror / Δt)
+</li></ul>
+<p>Each gain (Kp, Ki, and Kd) affects the system differently:</p>
+<ul><li>
+Kp makes the controller react to the current error
+</li><li>
+Ki corrects any steady-state error that persists over time
+</li><li>
+Kd responds to how quickly the error is changing, which helps reduce overshoot and smooth the response.
+</li></ul>
+<p>Together, these three terms produce a balanced, stable control signal that guides the <strong>plant</strong> to its <strong>setpoint</strong>.</p>
+<h2 id="example-proportional-control-using-a-quadcopter">Example: Proportional Control Using a Quadcopter</h2>
+<p>If you want to automate a system, such as a drone, you need a <strong>controller</strong> to manage the automation portion of that system. Let’s start with a simple example and gradually improve it.</p>
+<p>Imagine we have a <strong>quadcopter</strong> with four motors and propellers that can lift the vehicle upward. Our goal is to make the quadcopter rise to an altitude of <strong>100 feet</strong>.</p>
+<p>When the quadcopter is sitting on the ground, the <strong>setpoint</strong> (desired altitude) is 100 feet, and the <strong>measured altitude</strong> is 0 feet above ground level (AGL). The <strong>error</strong> between where we are and where we want to be is therefore:</p>
+<p class="textbook-equation">Error = Setpoint − Measured Value = 100 − 0 = 100 feet</p>
+<p>One simple control idea might be to power all motors to full throttle until we reach 100 feet, then shut them off. But that creates two major problems:</p>
+<ol><li>
+We would <strong>overshoot</strong> the target altitude because of the momentum gained while accelerating upward.
+</li><li>
+Once the motors are turned off, the drone would immediately <strong>fall back down</strong>, oscillating around the setpoint (or crashing) instead of maintaining altitude.
+</li></ol>
+<p>To address the first issue—overshoot—we can use <strong>proportional control</strong>, represented by the “P” in <strong>PID</strong>.</p>
+<h3 id="how-proportional-control-works">How Proportional Control Works</h3>
+<p>Proportional control applies an output (motor power) that is <strong>proportional to the current error</strong>. We use a constant called the <strong>gain</strong>, <math><msub><mi>K</mi><mi>p</mi></msub></math>, to determine how strongly the system reacts to that error.</p>
+<p>For example, let’s choose a gain of <math><msub><mi>K</mi><mi>p</mi></msub><mo>=</mo><mn>0.1</mn></math>.<br> If the error is 100 feet, the controller output might be:</p>
+<p class="textbook-equation">Output = <math><msub><mi>K</mi><mi>p</mi></msub></math> × Error = 0.1 × 100 = 10</p>
+<p>This “10” could represent, for instance, a motor command that produces <strong>10 ft/s of climb rate</strong>.</p>
+<p>As the drone rises and the altitude error decreases, the controller output decreases proportionally. For example, when the drone reaches 30 feet:</p>
+<p class="textbook-equation">Error = 100 − 30 = 70<br>Output = 0.1 × 70 = 7</p>
+<p>Now the drone climbs more slowly—7 ft/s instead of 10 ft/s. As it continues approaching the setpoint, the error gets smaller, the controller output gets smaller, and the drone slows down smoothly as it nears 100 feet. Ideally, this prevents overshoot and gives a stable, gentle approach to the target altitude. Proportion output will look like a curve, getting less and less steep as the setpoint is approached. While this works well, it does create a problem. Mathematically, P will never reach the setpoint, it will only get close. The error will get smaller and smaller, but never all the way to the setpoint. We need a way to fix this, and we do it with integral control.</p>
+<h3 id="adding-integral-control">Adding Integral Control</h3>
+<p>While proportional control helps the quadcopter approach the target altitude smoothly, it often leaves a <strong>small steady-state error</strong> — meaning the drone might level off just below 100 feet instead of reaching it exactly.</p>
+<p>Why does that happen? Because as the drone gets close to the target, the error becomes very small. Since the proportional controller’s output depends directly on the size of the error, the motors never get quite enough extra power to fully close that last little gap.</p>
+<p>This is where the <strong>integral term</strong> (the “I” in PID) comes in.</p>
+<p>The integral control looks not just at the <em>current</em> error, but at the <strong>history of the error over time</strong>. In other words, it keeps a running total of how long and how far the system has been away from the setpoint. The longer the drone stays below the target altitude, the more the integral term grows.</p>
+<p>Mathematically, this is written as:</p>
+<p class="textbook-equation"><math display="block"><msub><mi>u</mi><mi>I</mi></msub><mo>(</mo><mi>t</mi><mo>)</mo><mo>=</mo><msub><mi>K</mi><mi>i</mi></msub><msubsup><mo>∫</mo><mn>0</mn><mi>t</mi></msubsup><mi>e</mi><mo>(</mo><mi>τ</mi><mo>)</mo><mi>d</mi><mi>τ</mi></math></p>
+<p>Here, Ki is the <strong>integral gain</strong>, and the integral sign (∫) means <em>sum up all the past error values</em>.</p>
+<p>In plain language:</p>
+<ul><li>
+If the drone has been hovering a few feet below 100 ft for several seconds, that small error keeps adding up.
+</li><li>
+The controller gradually increases motor power to make up for that accumulated difference.
+</li><li>
+Once the drone finally reaches 100 ft and the error becomes zero, the integral term stops growing.
+</li></ul>
+<p>This integral action effectively <strong>eliminates steady-state error</strong>, ensuring the drone holds its altitude precisely rather than hovering just below it.</p>
+<h3 id="visualizing-the-difference">Visualizing the Difference</h3>
+<ul><li>
+<strong>Proportional control</strong> reacts to <em>how big</em> the error is <strong>right now</strong>.
+</li><li>
+<strong>Integral control</strong> reacts to <em>how long</em> the error has persisted over time.
+</li></ul>
+<p>Together, they form a smarter controller: the proportional part gets you close quickly, and the integral part fine-tunes the output until you’re exactly on target. While integral makes proportion better, integral can cause the plant (the thing we are controlling) to shoot past its setpoint. We need a third control to make sure this doesn’t happen. Now let&#x27;s introduce Derivative, the thing that will bring balance to our system.</p>
+<h3 id="adding-derivative-control">Adding Derivative Control</h3>
+<p>Now that we’ve seen how proportional and integral control work together to get the quadcopter to the correct altitude, there’s still one more piece — the <strong>derivative control</strong>, or the “D” in PID.</p>
+<p>Even with proportional and integral control, the drone can still <strong>overshoot</strong> the target altitude. Here’s why:<br>As the integral term keeps adding up the past error, it might give the motors a little too much extra power just as the drone reaches 100 feet. By the time the error reaches zero, the motors are still pushing hard, and the drone keeps climbing past the setpoint (this is called overshoot).</p>
+<p>To fix this, the <strong>derivative term</strong> acts like a form of <strong>damping</strong> or <strong>anticipation</strong>. It looks at how fast the error is changing (the <strong>rate of change</strong> of the error) and applies a correction that resists rapid movements.</p>
+<p>Mathematically:</p>
+<p class="textbook-equation"><math display="block"><msub><mi>u</mi><mi>D</mi></msub><mo>(</mo><mi>t</mi><mo>)</mo><mo>=</mo><msub><mi>K</mi><mi>d</mi></msub><mfrac><mrow><mi>d</mi><mi>e</mi><mo>(</mo><mi>t</mi><mo>)</mo></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac></math></p>
+<p>Where <math><msub><mi>K</mi><mi>d</mi></msub></math> is the <strong>derivative gain</strong>, and <math><mfrac><mrow><mi>d</mi><mi>e</mi><mo>(</mo><mi>t</mi><mo>)</mo></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac></math> means “the rate of change of error over time.”</p>
+<p>In plain terms:</p>
+<ul><li>
+If the drone is rising quickly toward the target, the derivative term predicts that it might overshoot.
+</li><li>
+It reduces motor power <strong>before</strong> the error actually reaches zero, slowing the climb just in time.
+</li><li>
+If the drone is falling too quickly, it boosts power preemptively to cushion the descent.
+</li></ul>
+<p>This makes the system more stable and responsive, like giving the controller a sense of momentum and foresight.</p>
+<h3 id="putting-it-all-together-the-pid-controller">Putting It All Together: The PID Controller</h3>
+<p>Each term in a PID controller plays a distinct role:</p>
+<div class="textbook-table" role="region" aria-label="The three PID terms" tabindex="0"><table><caption>The three PID terms</caption><thead><tr><th scope="col">Term</th><th scope="col">Formula</th><th scope="col">What It Does</th><th scope="col">Effect</th></tr></thead><tbody><tr><th scope="row">Proportional (P)</th><td><math><msub><mi>K</mi><mi>p</mi></msub><mi>e</mi><mo>(</mo><mi>t</mi><mo>)</mo></math></td><td>Reacts to the <strong>current</strong> error</td><td>Gets the drone moving toward the target</td></tr><tr><th scope="row">Integral (I)</th><td><math><msub><mi>K</mi><mi>i</mi></msub><mo>∫</mo><mi>e</mi><mo>(</mo><mi>t</mi><mo>)</mo><mi>d</mi><mi>t</mi></math></td><td>Reacts to the <strong>accumulated</strong> error</td><td>Eliminates steady-state error.</td></tr><tr><th scope="row">Derivative (D)</th><td><math><msub><mi>K</mi><mi>d</mi></msub><mfrac><mrow><mi>d</mi><mi>e</mi><mo>(</mo><mi>t</mi><mo>)</mo></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac></math></td><td>Reacts to the <strong>rate of change</strong> of error</td><td>Prevents overshoot, smooths response</td></tr></tbody></table></div>
+<p>When combined, the PID controller continuously adjusts motor power using all three terms:</p>
+<p class="textbook-equation"><math display="block"><mi>u</mi><mo>(</mo><mi>t</mi><mo>)</mo><mo>=</mo><msub><mi>K</mi><mi>p</mi></msub><mi>e</mi><mo>(</mo><mi>t</mi><mo>)</mo><mo>+</mo><msub><mi>K</mi><mi>i</mi></msub><msubsup><mo>∫</mo><mn>0</mn><mi>t</mi></msubsup><mi>e</mi><mo>(</mo><mi>τ</mi><mo>)</mo><mi>d</mi><mi>τ</mi><mo>+</mo><msub><mi>K</mi><mi>d</mi></msub><mfrac><mrow><mi>d</mi><mi>e</mi><mo>(</mo><mi>t</mi><mo>)</mo></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac></math></p>
+<p>This equation produces smooth, stable, and accurate control, exactly what’s needed to keep the quadcopter hovering precisely at 100 feet.</p>
+<h3 id="intuitive-analogy">Intuitive Analogy</h3>
+<p>You can think of the PID controller like a skilled pilot:</p>
+<ul><li>
+The <strong>P</strong> term reacts instantly to how far off you are from target altitude.
+</li><li>
+The <strong>I</strong> term notices if you’ve been below or above target for too long and compensates.
+</li><li>
+The <strong>D</strong> term anticipates motion and applies the brakes (or eases off throttle) just before you overshoot.
+</li></ul>
+<p>Together, they make a balanced, stable flight, fast to respond, accurate to the target, and resistant to oscillations.</p>
+<h2 id="how-pid-gain-values-affect-the-plant">How PID Gain Values affect the Plant</h2>
+<h3 id="proportion-gain-kp-set-too-low">Proportion gain (Kp) set too low</h3>
+<p><strong>Behavior:</strong> The system feels “lazy” or “sluggish.”</p>
+<ul><li>
+The output responds <strong>slowly</strong> to error.
+</li><li>
+It takes a long time to reach the setpoint.
+</li><li>
+The system might <strong>never quite get there</strong> (a steady-state offset remains).
+</li><li>
+For a drone example, it might slowly drift up or down and fail to hold altitude precisely.
+</li></ul>
+<p><strong>Reason:</strong><br> A small Kp means the controller isn’t reacting strongly enough to the error, it’s not pushing hard enough to close the gap.</p>
+<h3 id="proportion-gain-kp-set-too-high">Proportion gain (Kp) set too High</h3>
+<p><strong>Behavior:</strong> The system becomes <strong>aggressive and unstable.</strong></p>
+<ul><li>
+The output overshoots the setpoint.
+</li><li>
+You’ll see <strong>oscillations</strong> (back-and-forth swinging around the target).
+</li><li>
+If it’s way too high, the system can <strong>vibrate</strong> or even <strong>run away</strong>.
+</li><li>
+In a drone, it might rapidly bounce up and down or feel “twitchy.”
+</li></ul>
+<p><strong>Reason:</strong><br> A large Kp makes the controller react too strongly to even small errors, it’s constantly over-correcting. Instead of smoothly approaching the setpoint, it “slams” back and forth across it.</p>
+<h3 id="how-to-tune-kp">How to Tune Kp</h3>
+<ol><li>
+<strong>Start small.</strong><br> Begin with a low Kp and slowly increase it until the system responds briskly without oscillating.
+</li><li>
+<strong>Look for the “critical” point.</strong><br> When you first see small, sustained oscillations, that’s about the maximum useful Kp.</li><li><strong>Back off slightly.</strong><br> Reduce Kp by 10–20% from that point for a stable, responsive loop.
+</li></ol>
+<div class="textbook-table" role="region" aria-label="Kp settings" tabindex="0"><table><caption>Kp settings</caption><thead><tr><th scope="col">Kp Setting</th><th scope="col">System Response</th><th scope="col">Typical Symptoms</th></tr></thead><tbody><tr><th scope="row">Too Low</th><td>Slow, unresponsive</td><td>Laggy, steady-state error</td></tr><tr><th scope="row">Just Right</th><td>Fast, stable</td><td>Smoothly reaches target</td></tr><tr><th scope="row">Too High</th><td>Overshoots, oscillates</td><td>Vibrations, instability</td></tr></tbody></table></div>
+<h3 id="when-ki-is-too-low">When Ki is Too Low</h3>
+<p><strong>Behavior:</strong><br>The system reaches close to the target but never quite gets there, it tends to settle just short of the setpoint.</p>
+<ul><li>
+Small steady-state errors remain.
+</li><li>
+It may hover slightly below or above the desired point indefinitely.
+</li><li>
+For a drone, it might hold at 148 ft when you want 150 ft, or drift slowly due to wind bias.
+</li></ul>
+<p><strong>Reason:</strong><br>The integral term is too weak, so it doesn’t accumulate enough correction from past errors to push the system all the way to the setpoint. Without sufficient “memory,” the controller can’t eliminate long-term offset.</p>
+<h3 id="when-ki-is-too-high">When Ki is Too High</h3>
+<p><strong>Behavior:</strong><br> The system becomes <strong>sluggish, oscillatory, or wobbly</strong> over time.</p>
+<ul><li>
+You’ll see large, slow oscillations.
+</li><li>
+It may overshoot, then slowly swing back and forth around the setpoint.
+</li><li>
+The effect gets worse the longer it runs, sometimes called <em>integral windup</em>.
+</li><li>
+In a drone, you might see it climb above target altitude, drift back down, then climb again.
+</li></ul>
+<p><strong>Reason:</strong><br>The integral term builds up error too quickly and keeps adding corrections even after the system has passed the setpoint. This stored energy takes time to unwind, leading to overshoot and instability.</p>
+<h3 id="how-to-tune-ki">How to Tune Ki</h3>
+<ol><li>
+<strong>Start with Ki = 0.</strong><br> Get Kp stable first.
+</li><li>
+<strong>Increase Ki slowly</strong> until the system eliminates steady-state error.
+</li><li>
+<strong>Stop increasing when oscillations begin</strong> or response becomes slow.
+</li><li>
+<strong>Use anti-windup logic</strong> if your actuator can saturate (for example, motor at max throttle).
+</li></ol>
+<div class="textbook-table" role="region" aria-label="Ki settings" tabindex="0"><table><caption>Ki settings</caption><thead><tr><th scope="col">Ki Setting</th><th scope="col">System Response</th><th scope="col">Typical Symptoms</th></tr></thead><tbody><tr><th scope="row">Too Low</th><td>Leaves steady-state error</td><td>Stops short of target</td></tr><tr><th scope="row">Just Right</th><td>Smoothly reaches target and holds</td><td>Accurate, steady control</td></tr><tr><th scope="row">Too High</th><td>Slow oscillations, overshoot</td><td>“Hunting” or wavy response</td></tr></tbody></table></div>
+<h3 id="when-kd-is-too-low">When Kd is Too Low</h3>
+<p><strong>Behavior:</strong><br> The system responds quickly but tends to <strong>overshoot and oscillate</strong> before stabilizing.</p>
+<ul><li>
+Feels springy or underdamped.
+</li><li>
+The output overshoots the target, then corrects back.
+</li><li>
+In a drone, you might see altitude “bounce” or wobbly stabilization.
+</li></ul>
+<p><strong>Reason:</strong><br> The derivative term provides damping, it resists rapid change.<br> When Kd is too low, there isn’t enough damping, so the system can’t anticipate motion and overshoots easily.</p>
+<h3 id="when-kd-is-too-high">When Kd is Too High</h3>
+<p><strong>Behavior:</strong><br> The system becomes <strong>noisy, jittery, and slow to react.</strong></p>
+<ul><li>
+Small sensor noise causes large, erratic corrections.
+</li><li>
+The controller feels hesitant or sticky.
+</li><li>
+It might “buzz” or make micro-adjustments constantly.
+</li><li>
+For a drone, it could look like vibration or twitching at hover.
+</li></ul>
+<p><strong>Reason:</strong><br>Too much derivative gain amplifies high-frequency noise in the feedback signal.<br>Instead of damping smooth motion, it reacts to every tiny measurement blip, making the system seem nervous and unstable.</p>
+<h3 id="how-to-tune-kd">How to Tune Kd</h3>
+<ol><li>
+<strong>Start at zero.</strong><br> Tune Kp and Ki first.
+</li><li>
+<strong>Increase Kd slowly</strong> until oscillations settle and the system feels smooth.
+</li><li>
+<strong>Stop increasing</strong> if response becomes sluggish or noisy.
+</li><li>
+If needed, use a <strong>low-pass filter</strong> on your sensor readings to reduce noise before applying Kd.
+</li></ol>
+<div class="textbook-table" role="region" aria-label="Kd settings" tabindex="0"><table><caption>Kd settings</caption><thead><tr><th scope="col">Kd Setting</th><th scope="col">System Response</th><th scope="col">Typical Symptoms</th></tr></thead><tbody><tr><th scope="row">Too Low</th><td>Overshoot, oscillation</td><td>Wobbly, underdamped motion</td></tr><tr><th scope="row">Just Right</th><td>Smooth and stable</td><td>Quick but steady approach</td></tr><tr><th scope="row">Too High</th><td>Noisy, jittery, sluggish</td><td>Vibration, hesitation</td></tr></tbody></table></div>

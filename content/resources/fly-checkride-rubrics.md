@@ -77,4 +77,4 @@ Instructors can print this page or the lab manual to record scores and signature
 <p><strong>Instructor signature:</strong> ________ <strong>Date:</strong> ________</p>
 <p><strong>Student made a successful solo?</strong> Yes / No. <strong>Date:</strong> ________ <strong>Instructor signature:</strong> ________</p>
 
-<p class="small muted">From Chapter 3 of the <a href="/resources/remote-aircraft-textbook/">Remote and Autonomous Aircraft Systems lab manual</a>, where you can also download it as part of the complete book.</p>
+<p class="small muted">From Chapter 3 of the <a href="/resources/remote-aircraft-textbook/">Remote and Autonomous Aircraft Systems lab manual</a>. Read the chapter online: <a href="/learn-to-fly/textbook/piloting-remote-aircraft/">Chapter 3: Piloting Remote Aircraft</a>.</p>

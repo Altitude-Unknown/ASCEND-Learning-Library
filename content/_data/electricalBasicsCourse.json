@@ -1,0 +1,217 @@
+{
+  "units": [
+    {
+      "slug": "voltage-current-resistance-and-power",
+      "title": "Voltage, Current, Resistance, and Power",
+      "number": 1,
+      "url": "/electrical-basics/voltage-current-resistance-and-power/",
+      "summary": "Learn the four basic electrical quantities, use Ohm’s law and the power formula, and follow electron flow through a circuit.",
+      "outcomes": [
+        "Define voltage, current, resistance, and power, and name the unit of each.",
+        "Use Ohm’s law (V = IR) and the power formula (P = IV) to find an unknown value.",
+        "Describe electron flow in a DC circuit and the difference between a conductor, an insulator, and a semiconductor."
+      ],
+      "readings": [
+        {
+          "title": "Ohm’s Law",
+          "id": "ohms-law"
+        },
+        {
+          "title": "Electron Flow Theory",
+          "id": "electron-flow-theory"
+        },
+        {
+          "title": "Summary",
+          "id": "summary"
+        }
+      ],
+      "activities": [],
+      "practice": {
+        "title": "Solve Ohm’s law and power problems",
+        "text": "Rearrange V = IR and P = IV to solve for each value. Then work review questions 6, 7, and 9 on paper, showing each step, before you open the answers.",
+        "sections": [
+          {
+            "title": "Ohm’s Law",
+            "id": "ohms-law"
+          }
+        ]
+      },
+      "signoff": [
+        "Given voltage and resistance calculate current flow."
+      ],
+      "lessonVideo": null,
+      "reviewQuestions": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "slug": "wire-meters-and-waveforms",
+      "title": "Wire, Meters, and Waveforms",
+      "number": 2,
+      "url": "/electrical-basics/wire-meters-and-waveforms/",
+      "summary": "Choose wire by gauge, measure voltage and continuity with a multimeter, and read digital waveforms: pulse width, frequency, and period.",
+      "outcomes": [
+        "Explain how American Wire Gauge numbers relate to wire diameter.",
+        "Use a multimeter to measure voltage and test for continuity, shorts, and opens.",
+        "Describe a waveform’s amplitude, pulse width, frequency, and period, and convert between frequency and period."
+      ],
+      "readings": [
+        {
+          "title": "Wire",
+          "id": "wire"
+        },
+        {
+          "title": "Multi-Meter",
+          "id": "multi-meter"
+        },
+        {
+          "title": "Waveforms",
+          "id": "waveforms"
+        }
+      ],
+      "activities": [
+        "electrical-multimeter-lab"
+      ],
+      "signoff": [
+        "Use a digital multimeter to measure voltage of a DC or AC power source.",
+        "Use a digital multimeter to check continuity of a conductor using the resistance or continuity setting.",
+        "Use a battery tester to inspect multi-cell LiPo batteries."
+      ],
+      "lessonVideo": null,
+      "reviewQuestions": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "skills": [
+        "Use a digital multimeter to measure voltage of a DC or AC power source.",
+        "Use a digital multimeter to check continuity of a conductor using the resistance or continuity setting.",
+        "Given voltage and resistance calculate current flow.",
+        "Use a battery tester to inspect multi-cell LiPo batteries."
+      ]
+    }
+  ],
+  "chapterUrl": "/electrical-basics/textbook/electrical-basics/",
+  "chapterTitle": "Chapter 1: Electrical Basics",
+  "reviewQuestions": {
+    "1": {
+      "question": "What is voltage, and what unit is used to measure it?",
+      "answer": "Voltage is electrical pressure, or the force that causes electrons to move. It is measured in volts (V)."
+    },
+    "2": {
+      "question": "What is current, and what unit is used to measure it?",
+      "answer": "Current is the flow or movement of electrons. It is measured in amperes, or amps (A)."
+    },
+    "3": {
+      "question": "What is resistance, and what unit is used to measure it?",
+      "answer": "Resistance is opposition to the flow of electrical current. It is measured in ohms (Ω)."
+    },
+    "4": {
+      "question": "What is electrical power, and what unit is used to measure it?",
+      "answer": "Power describes electrical consumption or the rate at which electrical energy is used. It is measured in watts (W)."
+    },
+    "5": {
+      "question": "Write Ohm's Law and explain what each variable represents.",
+      "answer": [
+        "V = I × R",
+        "V = voltage, I = current, and R = resistance.",
+        "It can also be rearranged as I = V/R and R = V/I."
+      ]
+    },
+    "6": {
+      "question": "If a circuit has 12 volts applied across a resistance of 6 ohms, how much current will flow?",
+      "answer": [
+        "I = V/R",
+        "I = 12/6",
+        "I = 2 amps"
+      ]
+    },
+    "7": {
+      "question": "If 3 amps of current flow through a resistance of 4 ohms, what is the voltage across the resistance?",
+      "answer": [
+        "V = I × R",
+        "V = 3 × 4",
+        "V = 12 volts"
+      ]
+    },
+    "8": {
+      "question": "Write the formula used to calculate electrical power.",
+      "answer": "P = V × I"
+    },
+    "9": {
+      "question": "A motor operates at 12 volts and draws 10 amps. How much electrical power does it consume?",
+      "answer": [
+        "P = V × I",
+        "P = 12 × 10",
+        "P = 120 watts"
+      ]
+    },
+    "10": {
+      "question": "In which direction do electrons flow in a DC circuit?",
+      "answer": "Electrons flow from negative to positive."
+    },
+    "11": {
+      "question": "What is the difference between a conductor, an insulator, and a semiconductor?",
+      "answer": "A conductor allows electrons to move easily, an insulator strongly resists electron movement, and a semiconductor has electrical characteristics between those of a conductor and an insulator. The chapter relates these properties to the number of electrons in the atom's outer valence band."
+    },
+    "12": {
+      "question": "What is the relationship between American Wire Gauge (AWG) number and the physical diameter of a wire?",
+      "answer": "As the AWG number gets smaller, the wire gets larger in diameter. As the AWG number gets larger, the wire gets smaller."
+    },
+    "13": {
+      "question": "Which has a larger diameter: 4 AWG wire or 22 AWG wire? Explain your answer.",
+      "answer": "4 AWG is larger because lower AWG numbers indicate larger-diameter wire."
+    },
+    "14": {
+      "question": "What instrument is commonly used to measure voltage, resistance, and continuity when troubleshooting an electrical system?",
+      "answer": "A digital multimeter."
+    },
+    "15": {
+      "question": "What is continuity, and how can a multimeter be used to test a wire for continuity?",
+      "answer": "Continuity means there is an unbroken electrical path between two points. Set the multimeter to the continuity or resistance setting and place one probe on each end of the wire. A very low resistance or continuity indication means the wire is electrically connected."
+    },
+    "16": {
+      "question": "Explain the difference between an open circuit and a short circuit.",
+      "answer": "An open circuit has no complete path for current to flow. A short circuit has little or no resistance between power and ground, allowing excessive current to flow."
+    },
+    "17": {
+      "question": "What is the amplitude of an electrical waveform?",
+      "answer": "Amplitude is the height of the waveform, representing the magnitude of the signal, such as its voltage."
+    },
+    "18": {
+      "question": "What is pulse width?",
+      "answer": "Pulse width is the amount of time that an electrical pulse remains on, or high."
+    },
+    "19": {
+      "question": "Explain the difference between frequency and period, and state the relationship between them.",
+      "answer": [
+        "Frequency is the number of waveform cycles that occur each second. Period is the amount of time required for one complete cycle. They are inversely related:",
+        "f = 1/p and p = 1/f."
+      ]
+    },
+    "20": {
+      "question": "A waveform has a frequency of 10 Hz. What is its period in seconds?",
+      "answer": [
+        "p = 1/f",
+        "p = 1/10",
+        "p = 0.1 seconds, or 100 milliseconds."
+      ]
+    }
+  }
+}

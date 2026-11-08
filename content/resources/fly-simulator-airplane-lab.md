@@ -27,7 +27,7 @@ related:
 
 **Goal:** complete first flights with an airplane in the simulator. Become familiar with all flight controls and attempt take-offs, landings, and flights around the flying area.
 
-Work through this activity on your own or with your team, then show your results to your instructor. Write your answers on paper or in your own notes; the printable version is in the lab manual.
+Work through this activity on your own or with your team, then show your results to your instructor. Write your answers on paper or in your own notes.
 
 You need a flight simulator, such as [Flight Lab RC](/software/), and a transmitter or gamepad.
 
@@ -61,4 +61,4 @@ You need a flight simulator, such as [Flight Lab RC](/software/), and a transmit
 
 <p class="small muted">Question 6 in the lab manual refers to a picture of a radio that is not included in the book, so this version asks you to draw your own transmitter.</p>
 
-<p class="small muted">From Chapter 3 of the <a href="/resources/remote-aircraft-textbook/">Remote and Autonomous Aircraft Systems lab manual</a>, where you can also download it as part of the complete book.</p>
+<p class="small muted">From Chapter 3 of the <a href="/resources/remote-aircraft-textbook/">Remote and Autonomous Aircraft Systems lab manual</a>. Read the chapter online: <a href="/learn-to-fly/textbook/piloting-remote-aircraft/">Chapter 3: Piloting Remote Aircraft</a>.</p>

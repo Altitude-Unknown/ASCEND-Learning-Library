@@ -1,0 +1,42 @@
+{
+  "chapters": {
+    "1": {
+      "chapter": 1,
+      "output": "content/electrical-basics/textbook/electrical-basics.njk",
+      "tables": 0,
+      "images": [
+        {
+          "file": "digital-multimeter.jpg",
+          "source": "image396.jpg",
+          "sha256": "7374087af886ab4b367f51df2feb30cd1e79802378c07428d76e5289e776fbca"
+        },
+        {
+          "file": "digital-waveform.png",
+          "source": "image418.png",
+          "sha256": "96ff7bdb80dbea30063d84cacbf500170c5b9471ef4d288ed8f2de8c0b79dd50"
+        },
+        {
+          "file": "real-waveform.png",
+          "source": "image159.png",
+          "sha256": "410dc6913a4b3e7c7cabe2777b86de84c80d190bd8acd3de6e0524123ee91acc"
+        }
+      ],
+      "verifiedTextBlocks": 36,
+      "reviewQuestions": 20,
+      "skills": 4,
+      "htmlSha256": "4884456130e709750a3c8f36bcd16c877763f07f7d7f4915ac75c37ffa294d36"
+    },
+    "9": {
+      "chapter": 9,
+      "output": "content/pid-controllers/textbook/pid-controllers.njk",
+      "tables": 4,
+      "images": [],
+      "verifiedTextBlocks": 165,
+      "reviewQuestions": 20,
+      "skills": 0,
+      "htmlSha256": "1ec5bb8d7de543fc66cd6af8e7a13b9c04ce24cf6f6b3a84e7bb46b04499ed53"
+    }
+  },
+  "source": "editorial/intake/books/Remote Aircraft Textbook.docx",
+  "sourceSha256": "5561d1da9eb4acd8d80bc834d7a2966f427a160407bbe47b58f8933c63b1f57d"
+}

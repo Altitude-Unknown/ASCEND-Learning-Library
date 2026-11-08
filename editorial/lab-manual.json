@@ -1,0 +1,175 @@
+{
+  "source": "editorial/intake/books/Remote Aircraft Textbook.docx",
+  "chapters": {
+    "1": {
+      "sourceHeading": "Chapter One: Electrical Basics",
+      "answerKeyHeading": "Chapter 1: Electrical Basics — Answer Key",
+      "title": "Chapter 1: Electrical Basics",
+      "description": "Voltage, current, resistance, and power; Ohm’s law; electron flow; wire gauge; using a multimeter; and reading waveforms.",
+      "courseId": "electricalBasics",
+      "courseData": "content/_data/electricalBasicsCourse.json",
+      "topic": "electronics",
+      "url": "/electrical-basics/textbook/electrical-basics/",
+      "output": "content/electrical-basics/textbook/electrical-basics.njk",
+      "assets": "electrical-basics",
+      "sourceNote": "From Mike Walach’s lab manual, Remote and Autonomous Aircraft Systems. Original wording is retained with small corrections; image descriptions have been added for web reading.",
+      "headerLinks": [
+        {
+          "title": "About the lab manual",
+          "url": "/resources/remote-aircraft-textbook/"
+        }
+      ],
+      "omitSections": [
+        "^Lab Activity",
+        "^Review Questions$",
+        "^Skills Checksheet$"
+      ],
+      "skipParagraphs": [
+        "^Name:_+$",
+        "^\\.$"
+      ],
+      "closing": "",
+      "definitionSections": [
+        "Summary"
+      ],
+      "replace": [
+        [
+          "We call this push,</p>",
+          "We call this push voltage.</p>"
+        ],
+        [
+          "If an electron has 4 electrons",
+          "If an atom has 4 electrons"
+        ],
+        [
+          "Can but caused to move by Applying",
+          "Can be caused to move by applying"
+        ],
+        [
+          "in the valance band",
+          "in the valence band"
+        ]
+      ],
+      "dataReplace": [
+        [
+          "to measure check continuity",
+          "to check continuity"
+        ],
+        [
+          "multi-cell LiPo batteries",
+          "multi-cell LiPo batteries."
+        ]
+      ]
+    },
+    "9": {
+      "sourceHeading": "Chapter 9 PID Controllers",
+      "answerKeyHeading": "Chapter 9: PID Controllers — Answer Key",
+      "title": "Chapter 9: PID Controllers",
+      "description": "How a PID controller holds an aircraft on target: the proportional, integral, and derivative terms, and how each gain changes the response.",
+      "courseId": "pidControllers",
+      "courseData": "content/_data/pidControllersCourse.json",
+      "topic": "uas",
+      "url": "/pid-controllers/textbook/pid-controllers/",
+      "output": "content/pid-controllers/textbook/pid-controllers.njk",
+      "assets": "pid-controllers",
+      "sourceNote": "From Mike Walach’s lab manual, Remote and Autonomous Aircraft Systems. Original wording is retained with small corrections; equations are written out as text for web reading.",
+      "headerLinks": [
+        {
+          "title": "About the lab manual",
+          "url": "/resources/remote-aircraft-textbook/"
+        }
+      ],
+      "omitSections": [
+        "^Lab Activity",
+        "^Review Questions$",
+        "^Skills Checksheet$"
+      ],
+      "closing": "",
+      "headingLevels": {
+        "How Proportional Control Works": 3,
+        "When Ki is Too Low": 3,
+        "When Ki is Too High": 3,
+        "When Kd is Too Low": 3
+      },
+      "tableLabels": {
+        "1": "The three PID terms",
+        "2": "Kp settings",
+        "3": "Ki settings",
+        "4": "Kd settings"
+      },
+      "replace": [
+        [
+          "that’s about the maximum useful Kp.<br><strong>Back off slightly.</strong>",
+          "that’s about the maximum useful Kp.</li><li><strong>Back off slightly.</strong>"
+        ],
+        [
+          "to the setpoint.Without",
+          "to the setpoint. Without"
+        ],
+        [
+          "Here, Ki​ is",
+          "Here, Ki is"
+        ]
+      ],
+      "headings": {
+        "Summary Table": ""
+      }
+    }
+  },
+  "figures": {
+    "image396.jpg": {
+      "file": "digital-multimeter.jpg",
+      "alt": "An Elenco M-1000C digital multimeter with a rotary selector dial, a display reading 00.0, and red and black test leads plugged into its jacks.",
+      "caption": "A digital multimeter (DMM) with its red and black test leads."
+    },
+    "image418.png": {
+      "file": "digital-waveform.png",
+      "alt": "A square wave that switches between a low level and a high level. Labels mark the low and high levels, the rising (leading) edge, and the falling (trailing) edge of a pulse.",
+      "caption": "A digital waveform. Each pulse rises at its leading edge and falls at its trailing edge."
+    },
+    "image159.png": {
+      "file": "real-waveform.png",
+      "alt": "A single pulse with rounded corners. Marks at 10%, 50%, and 90% of the height show the rise time and fall time between the 10% and 90% levels, the pulse width between the 50% points, and the amplitude from the low level to the high level.",
+      "caption": "A real-world pulse. Rise and fall times are measured between 10% and 90% of the amplitude, and pulse width at the 50% level."
+    },
+    "image64.png": {
+      "equation": "Error = Setpoint − Measured Value = 100 − 0 = 100 feet"
+    },
+    "image258.png": {
+      "inline": "<math><msub><mi>K</mi><mi>p</mi></msub></math>,"
+    },
+    "image24.png": {
+      "inline": "<math><msub><mi>K</mi><mi>p</mi></msub><mo>=</mo><mn>0.1</mn></math>."
+    },
+    "image7.png": {
+      "equation": "Output = <math><msub><mi>K</mi><mi>p</mi></msub></math> × Error = 0.1 × 100 = 10"
+    },
+    "image37.png": {
+      "equation": "Error = 100 − 30 = 70<br>Output = 0.1 × 70 = 7"
+    },
+    "image55.png": {
+      "equation": "<math display=\"block\"><msub><mi>u</mi><mi>I</mi></msub><mo>(</mo><mi>t</mi><mo>)</mo><mo>=</mo><msub><mi>K</mi><mi>i</mi></msub><msubsup><mo>∫</mo><mn>0</mn><mi>t</mi></msubsup><mi>e</mi><mo>(</mo><mi>τ</mi><mo>)</mo><mi>d</mi><mi>τ</mi></math>"
+    },
+    "image234.png": {
+      "equation": "<math display=\"block\"><msub><mi>u</mi><mi>D</mi></msub><mo>(</mo><mi>t</mi><mo>)</mo><mo>=</mo><msub><mi>K</mi><mi>d</mi></msub><mfrac><mrow><mi>d</mi><mi>e</mi><mo>(</mo><mi>t</mi><mo>)</mo></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac></math>"
+    },
+    "image65.png": {
+      "inline": "<math><msub><mi>K</mi><mi>d</mi></msub></math>"
+    },
+    "image49.png": {
+      "inline": "<math><mfrac><mrow><mi>d</mi><mi>e</mi><mo>(</mo><mi>t</mi><mo>)</mo></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac></math>"
+    },
+    "image5.png": {
+      "equation": "<math display=\"block\"><mi>u</mi><mo>(</mo><mi>t</mi><mo>)</mo><mo>=</mo><msub><mi>K</mi><mi>p</mi></msub><mi>e</mi><mo>(</mo><mi>t</mi><mo>)</mo><mo>+</mo><msub><mi>K</mi><mi>i</mi></msub><msubsup><mo>∫</mo><mn>0</mn><mi>t</mi></msubsup><mi>e</mi><mo>(</mo><mi>τ</mi><mo>)</mo><mi>d</mi><mi>τ</mi><mo>+</mo><msub><mi>K</mi><mi>d</mi></msub><mfrac><mrow><mi>d</mi><mi>e</mi><mo>(</mo><mi>t</mi><mo>)</mo></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac></math>"
+    },
+    "image353.png": {
+      "inline": "<math><msub><mi>K</mi><mi>p</mi></msub><mi>e</mi><mo>(</mo><mi>t</mi><mo>)</mo></math>"
+    },
+    "image133.png": {
+      "inline": "<math><msub><mi>K</mi><mi>i</mi></msub><mo>∫</mo><mi>e</mi><mo>(</mo><mi>t</mi><mo>)</mo><mi>d</mi><mi>t</mi></math>"
+    },
+    "image223.png": {
+      "inline": "<math><msub><mi>K</mi><mi>d</mi></msub><mfrac><mrow><mi>d</mi><mi>e</mi><mo>(</mo><mi>t</mi><mo>)</mo></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac></math>"
+    }
+  }
+}
