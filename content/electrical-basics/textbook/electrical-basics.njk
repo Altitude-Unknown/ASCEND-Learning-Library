@@ -1,0 +1,88 @@
+---
+{
+  "layout": "layouts/textbook-chapter.njk",
+  "tags": [],
+  "eleventyExcludeFromCollections": true,
+  "topic": "electronics",
+  "courseId": "electricalBasics",
+  "title": "Chapter 1: Electrical Basics",
+  "description": "Voltage, current, resistance, and power; Ohm’s law; electron flow; wire gauge; using a multimeter; and reading waveforms.",
+  "chapterNumber": 1,
+  "textbookEyebrow": "REMOTE AND AUTONOMOUS AIRCRAFT SYSTEMS · WEB EDITION",
+  "sourceNote": "From Mike Walach’s lab manual, Remote and Autonomous Aircraft Systems. Original wording is retained with small corrections; image descriptions have been added for web reading.",
+  "headerLinks": [
+    {
+      "title": "About the lab manual",
+      "url": "/resources/remote-aircraft-textbook/"
+    }
+  ],
+  "toc": [
+    {
+      "title": "Ohm’s Law",
+      "id": "ohms-law"
+    },
+    {
+      "title": "Electron Flow Theory",
+      "id": "electron-flow-theory"
+    },
+    {
+      "title": "Wire",
+      "id": "wire"
+    },
+    {
+      "title": "Multi-Meter",
+      "id": "multi-meter"
+    },
+    {
+      "title": "Waveforms",
+      "id": "waveforms"
+    },
+    {
+      "title": "Summary",
+      "id": "summary"
+    }
+  ],
+  "permalink": "/electrical-basics/textbook/electrical-basics/"
+}
+---
+<p>While there are plenty of gas powered RC (remote control)  aircraft, many automated aircraft systems use electricity. It is important to have a solid understanding of the basic forces of electricity to begin working with unmanned aerial vehicles. To begin to understand and work with electronics and electricity, it is important to understand the basic forces involved. The most common, and also the most misunderstood, are <strong>Voltage, Current, Resistance</strong> and <strong>Power.</strong> Electricity is simply the movement of electrons from one point to another. If we were to look at an atom, the basic building blocks of all matter, we would find a nucleus made up of positively charged protons and neutrally charged neutrons. Orbiting the nucleus are  electrons. Electrons are what we are mainly interested in. If an atom has 1 electron in its outermost band, it is considered a <strong>conductor</strong>. If an atom has 8 electrons in its outermost band (it can only have 8 in a single band) then it is an <strong>insulator</strong>. If an atom has 4 electrons in its outermost band it is a <strong>semiconductor</strong>, which we will talk more about in a later chapter. Electrons have a negative charge, and can be convinced to move from atom to atom with a little push. We call this push voltage.</p>
+<h2 id="ohms-law">Ohm’s Law</h2>
+<p><strong>Voltage</strong>. Voltage is simply the force that makes the electrons move. Voltage is electrical pressure. The more voltage, the easier it is to make the electrons move, and the faster they can be made to move. The amount of movement, or flow of electrons is called <strong>current</strong>. Current is measured in amps. Any opposition to the flow of current is called <strong>resistance</strong> and is measured in Ohms. So, the basic three values you need to know are Voltage, Current, and resistance, or Push (pressure), flow and opposition. Don’t forget Power. Think of power as consumption. In your home you have light bulbs. A 60 Watt bulb burns brighter than a 45 watt bulb but uses more power. Power is measured in watts, and is found by multiplying voltage by current. This brings us to our first few formulas. Don’t worry, these are easy ones, and they will do most of what you need.</p>
+<p>The first formula is used to find voltage current or resistance. It is called Ohm&#x27;s Law. The formula is simply <strong>Voltage=Current x Resistance</strong> or <strong>V=IR</strong>. You can rearrange the formula to solve for any of the other two values as well;</p>
+<p><strong>V=IR</strong></p>
+<p><strong>I=V/R</strong></p>
+<p><strong>R=V/I</strong></p>
+<p>The next formula is used to find Power.</p>
+<p><strong>Power=Voltage x Current</strong> or P=IV. We can also rearrange this formula to find all other values.</p>
+<p><strong>P=IV</strong></p>
+<p><strong>I=P/V</strong></p>
+<p><strong>V=P/I</strong></p>
+<h2 id="electron-flow-theory">Electron Flow Theory</h2>
+<p>This text will deal with what is called “Electron Flow Theory”. Simply stated, electrons flow from the most negative point to the most positive point. For example, if you hooked a light bulb up to a battery, the electrons would flow from the negative terminal of the battery, through the light to the positive terminal of the battery. It is important to keep this in mind as we progress through this course.</p>
+<h2 id="wire">Wire</h2>
+<p>Now that you know some of the basics about electrical terminology, let’s take a look at some of the parts and components you will need to work with. We will start off with wire. Wire is simply made of copper. Copper is a good conductor and is the most common conductor used in electrical systems. Most wire has some type of insulation coating made of plastic or rubber, or a chemical coating to insulate the copper from the rest of the world. Wire is sold by thickness or gauge. The larger the number the smaller the gauge. So 24 gauge wire is smaller than 8 gauge wire. The wire in the walls of your home is likely 12 or 14 gauge and maybe larger in some areas.</p>
+<h2 id="multi-meter">Multi-Meter</h2>
+<p>Electricity can not be seen, so you will need a way to detect it. One of your most useful tools will be the voltage/current/ohm meter, or more commonly called a multimeter. You will need to read the instruction book that comes with your meter to learn the intricacy of each different meter, but we will discuss the basics here. Every meter will have different settings for measuring different values. Usually there is a dial that you turn to select AC or DC, as well as voltage current or resistance. The meter will also have a red and black lead for actually taking a measurement. The black lead always plugs into the common connection on the meter and the red connects to one of the other open connections. Some meters only have one place for the red lead, other meters will have more than one. Consult your instructions to find out how to properly insert the leads. Generally, the two connections for the red lead are for measuring either low or high current. Measuring current is difficult as it involves breaking a circuit open, and can damage your meter if done improperly. Voltage is easier to measure as is resistance. Never measure resistance with power supplied to a circuit. Always disconnect power before making a resistance measurement.</p>
+<figure class="textbook-figure"><a href="/assets/electrical-basics/digital-multimeter.jpg"><img src="/assets/electrical-basics/digital-multimeter.jpg" alt="An Elenco M-1000C digital multimeter with a rotary selector dial, a display reading 00.0, and red and black test leads plugged into its jacks." width="1600" height="1200" loading="lazy"></a><figcaption><p>A digital multimeter (DMM) with its red and black test leads.</p></figcaption></figure>
+<h2 id="waveforms">Waveforms</h2>
+<p>Digital signals are signals with clearly defined discrete changes. Analog signals are signals that have smooth changes over time. A digital waveform will look like the picture below. The signal will change state from high (on) to low (off) very quickly. A digital waveform is either on or off, also referred to as high or low. The highs are represented by voltage, usually 5 volts or 3.3 volts DC and the lows are represented by zero volts or ground. A digital high is represented with the number “1” and a low is represented with a “0”.</p>
+<figure class="textbook-figure"><a href="/assets/electrical-basics/digital-waveform.png"><img src="/assets/electrical-basics/digital-waveform.png" alt="A square wave that switches between a low level and a high level. Labels mark the low and high levels, the rising (leading) edge, and the falling (trailing) edge of a pulse." width="1581" height="632" loading="lazy"></a><figcaption><p>A digital waveform. Each pulse rises at its leading edge and falls at its trailing edge.</p></figcaption></figure>
+<p>In the “real world” waveforms are not perfect squares as shown above. They look more like the waveform shown below. They rise over time (although time may be milliseconds or less) and fall over time. The pulse width is the width of the pulse at its 50% point. The amplitude is the height of the pulse. The rise time and fall time is the amount of time it takes the waveform to rise to full voltage or return to ground. Rise and fall time are measured at 10% and 90% points. This will eliminate error in the measurement caused by interference in the signal, often found at the edges of waveforms.</p>
+<figure class="textbook-figure"><a href="/assets/electrical-basics/real-waveform.png"><img src="/assets/electrical-basics/real-waveform.png" alt="A single pulse with rounded corners. Marks at 10%, 50%, and 90% of the height show the rise time and fall time between the 10% and 90% levels, the pulse width between the 50% points, and the amplitude from the low level to the high level." width="1170" height="854" loading="lazy"></a><figcaption><p>A real-world pulse. Rise and fall times are measured between 10% and 90% of the amplitude, and pulse width at the 50% level.</p></figcaption></figure>
+<p>Pulse width is the amount of time a pulse is on (high). Frequency is how many times the waveform repeats every second. Period is how long it takes a waveform to complete one full cycle. If you know the period of a pulse you can divide 1/period to find frequency. If you know frequency you can divide 1/frequency to find the period. Pulse width becomes important when we study how servos and electronic speed controllers work as they both use PWM (pulse width modulation), adjusting the width of an electronic pulse, to control either rotation position and direction (servo) or speed (motors).</p>
+<p>1/period=frequency</p>
+<p>1/frequency=period</p>
+<h2 id="summary">Summary</h2>
+<dl class="key-terms">
+<dt>Voltage</dt><dd>Electrical pressure, potential energy.</dd>
+<dt>Current</dt><dd>Movement of electrons.</dd>
+<dt>Resistance</dt><dd>Opposition to the flow of electrons.</dd>
+<dt>Nucleus</dt><dd>Core of an atom. Made of protons and neutrons. Protons have positive charge, neutrons of no charge.</dd>
+<dt>Electrons</dt><dd>Orbit the nucleus of an atom. Can be caused to move by applying electrical pressure (voltage).</dd>
+<dt>Valence band</dt><dd>Outermost band of an atom.</dd>
+<dt>Conductor</dt><dd>An atom with 1 electron in the valence band.</dd>
+<dt>Insulator</dt><dd>An atom with 8 electrons in the valence band.</dd>
+<dt>Open</dt><dd>No path between power and ground (positive and negative).</dd>
+<dt>Short</dt><dd>No resistance between power and ground.</dd>
+<dt>Pulse Width</dt><dd>How long an electrical pulse is on (high).</dd>
+</dl>

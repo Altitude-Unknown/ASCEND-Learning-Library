@@ -1,0 +1,216 @@
+{
+  "units": [
+    {
+      "slug": "how-pid-control-works",
+      "title": "How PID Control Works",
+      "number": 1,
+      "url": "/pid-controllers/how-pid-control-works/",
+      "summary": "Follow a quadcopter climbing to 100 feet to see what the proportional, integral, and derivative terms each add to a controller.",
+      "outcomes": [
+        "Define plant, controller, setpoint, and error, and calculate the error.",
+        "Calculate the proportional output for a given gain and error, and explain why proportional control alone leaves a steady-state error.",
+        "Explain how the integral term removes steady-state error and how the derivative term reduces overshoot."
+      ],
+      "readings": [
+        {
+          "title": "Overview",
+          "id": "overview"
+        },
+        {
+          "title": "Example: Proportional Control Using a Quadcopter",
+          "id": "example-proportional-control-using-a-quadcopter"
+        },
+        {
+          "title": "How Proportional Control Works",
+          "id": "how-proportional-control-works"
+        },
+        {
+          "title": "Adding Integral Control",
+          "id": "adding-integral-control"
+        },
+        {
+          "title": "Adding Derivative Control",
+          "id": "adding-derivative-control"
+        },
+        {
+          "title": "Putting It All Together: The PID Controller",
+          "id": "putting-it-all-together-the-pid-controller"
+        },
+        {
+          "title": "Intuitive Analogy",
+          "id": "intuitive-analogy"
+        }
+      ],
+      "activities": [],
+      "practice": {
+        "title": "Work the altitude example",
+        "text": "The quadcopter’s setpoint is 100 feet and its gain is Kp = 0.1. Find the error and the proportional output when it is at 0, 30, 60, and 90 feet. Then explain in your own words why the output never quite closes the gap, and which term fixes that.",
+        "sections": [
+          {
+            "title": "How Proportional Control Works",
+            "id": "how-proportional-control-works"
+          }
+        ]
+      },
+      "lessonVideo": null,
+      "reviewQuestions": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ]
+    },
+    {
+      "slug": "tuning-the-gains",
+      "title": "Tuning the Gains",
+      "number": 2,
+      "url": "/pid-controllers/tuning-the-gains/",
+      "summary": "Recognize the symptoms of each gain set too low or too high, and tune Kp, then Ki, then Kd.",
+      "outcomes": [
+        "Describe how an aircraft behaves when Kp, Ki, or Kd is too low or too high.",
+        "Tune a controller in order: Kp first, then Ki, then Kd.",
+        "Explain integral windup and why a low-pass filter helps when Kd is high."
+      ],
+      "readings": [
+        {
+          "title": "How PID Gain Values affect the Plant",
+          "id": "how-pid-gain-values-affect-the-plant"
+        },
+        {
+          "title": "How to Tune Kp",
+          "id": "how-to-tune-kp"
+        },
+        {
+          "title": "When Ki is Too Low",
+          "id": "when-ki-is-too-low"
+        },
+        {
+          "title": "When Ki is Too High",
+          "id": "when-ki-is-too-high"
+        },
+        {
+          "title": "How to Tune Ki",
+          "id": "how-to-tune-ki"
+        },
+        {
+          "title": "When Kd is Too Low",
+          "id": "when-kd-is-too-low"
+        },
+        {
+          "title": "When Kd is Too High",
+          "id": "when-kd-is-too-high"
+        },
+        {
+          "title": "How to Tune Kd",
+          "id": "how-to-tune-kd"
+        }
+      ],
+      "activities": [
+        "pid-controller-lab"
+      ],
+      "lessonVideo": null,
+      "reviewQuestions": [
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ]
+    }
+  ],
+  "chapterUrl": "/pid-controllers/textbook/pid-controllers/",
+  "chapterTitle": "Chapter 9: PID Controllers",
+  "reviewQuestions": {
+    "1": {
+      "question": "What does PID stand for, and what is the overall purpose of a PID controller in a UAV?",
+      "answer": "PID stands for Proportional, Integral, and Derivative. A PID controller continuously adjusts the control output to move the UAV toward a desired setpoint while maintaining smooth and stable control."
+    },
+    "2": {
+      "question": "Define the terms plant, controller, setpoint, and error.",
+      "answer": "The plant is the physical system being controlled. The controller calculates and sends commands to the plant. The setpoint is the desired condition or target. The error is the difference between the setpoint and the current measured state."
+    },
+    "3": {
+      "question": "How is the error in a control system calculated?",
+      "answer": "Error = Setpoint − Current State"
+    },
+    "4": {
+      "question": "What are the three components of a PID controller, and what gain is associated with each component?",
+      "answer": "Proportional uses Kp, Integral uses Ki, and Derivative uses Kd."
+    },
+    "5": {
+      "question": "Write the equation used to calculate the proportional (P) term.",
+      "answer": "P = Kp × error"
+    },
+    "6": {
+      "question": "How does increasing or decreasing Kp affect how strongly a controller responds to an error?",
+      "answer": "Increasing Kp makes the controller respond more aggressively to an error. Decreasing Kp makes the response weaker and more sluggish."
+    },
+    "7": {
+      "question": "Why can proportional control alone leave a steady-state error?",
+      "answer": "As the system approaches the setpoint, the error becomes smaller. Because proportional output is directly related to error, the controller output also becomes smaller and may not provide enough correction to completely eliminate the remaining error."
+    },
+    "8": {
+      "question": "What information does the integral (I) term use that the proportional term does not?",
+      "answer": "The integral term considers the history of the error over time, rather than only the current error."
+    },
+    "9": {
+      "question": "Explain how integral control can eliminate steady-state error.",
+      "answer": "Small errors that persist over time accumulate in the integral term. This gradually increases the controller's correction until the system reaches the setpoint."
+    },
+    "10": {
+      "question": "What is integral windup, and what effect can it have on a UAV?",
+      "answer": "Integral windup occurs when accumulated error causes the integral term to become excessively large. The stored correction can cause overshoot and slow oscillations around the setpoint."
+    },
+    "11": {
+      "question": "What does the derivative (D) term measure?",
+      "answer": "The derivative term measures the rate of change of the error over time."
+    },
+    "12": {
+      "question": "How does derivative control help prevent overshoot?",
+      "answer": "Derivative control detects how quickly the system is approaching the setpoint and provides damping. It can reduce the control output before the system reaches the setpoint, helping prevent overshoot."
+    },
+    "13": {
+      "question": "In the quadcopter altitude example, why would simply running the motors at full power until reaching 100 feet and then shutting them off result in poor altitude control?",
+      "answer": "The quadcopter would have upward momentum and would continue climbing past 100 feet. After the motors shut off, it would begin falling again, resulting in oscillation around the desired altitude rather than maintaining it."
+    },
+    "14": {
+      "question": "Describe what you would expect a UAV to do if Kp is set too low.",
+      "answer": "The UAV would respond slowly or sluggishly, take a long time to reach the setpoint, and could have a persistent steady-state error."
+    },
+    "15": {
+      "question": "What symptoms might indicate that Kp is set too high?",
+      "answer": "The UAV may overshoot, oscillate, vibrate, or appear twitchy because the controller is reacting too strongly and continually overcorrecting."
+    },
+    "16": {
+      "question": "Describe a basic procedure for tuning Kp.",
+      "answer": "Start with a low Kp and gradually increase it until small sustained oscillations begin. Then reduce Kp approximately 10–20% to obtain a stable and responsive system."
+    },
+    "17": {
+      "question": "What flight behavior might indicate that Ki is too high, and why does this occur?",
+      "answer": "The UAV may show large, slow oscillations or repeatedly overshoot the target. This occurs because the integral term accumulates too much correction and continues influencing the system even after it has passed the setpoint."
+    },
+    "18": {
+      "question": "What flight behavior might indicate that Kd is too low?",
+      "answer": "The UAV may overshoot and oscillate before settling. Its response may appear springy, wobbly, or underdamped."
+    },
+    "19": {
+      "question": "Why can setting Kd too high cause a UAV to become noisy or jittery, and how can filtering sensor measurements help?",
+      "answer": "A high Kd amplifies small, rapid changes in the measured error, including sensor noise. This can cause constant small corrections, vibration, or twitching. A low-pass filter can reduce high-frequency sensor noise before it reaches the derivative calculation."
+    },
+    "20": {
+      "question": "A UAV approaches its commanded altitude quickly but repeatedly overshoots and oscillates around the setpoint. Based on PID behavior, which gain or gains would you investigate first, and why?",
+      "answer": "Investigate Kp and Kd first. Kp may be too high, causing aggressive corrections and oscillation, or Kd may be too low to provide sufficient damping. If the oscillations are large and slow and worsen over time, Ki may also be too high."
+    }
+  }
+}

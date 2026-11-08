@@ -3,7 +3,7 @@
   <div class="section-heading"><div><span class="eyebrow">STEP 4 · CHECK & REVISIT</span><h2 id="check-heading">Check your understanding</h2><p>Answer each review question in your own words first, then open the answer to compare. Return to the reading for any question you missed.</p></div></div>
   <ol class="review-questions">
     {% for number in courseUnit.reviewQuestions %}{% set item = course.reviewQuestions[number] %}
-    <li><p>{{ item.question }}</p><details><summary>Show the answer<span class="visually-hidden"> to review question {{ number }}</span></summary><p>{{ item.answer }}</p></details></li>
+    <li><p>{{ item.question }}</p><details><summary>Show the answer<span class="visually-hidden"> to review question {{ number }}</span></summary>{% if item.answer is string %}<p>{{ item.answer }}</p>{% else %}{% for line in item.answer %}<p>{{ line }}</p>{% endfor %}{% endif %}</details></li>
     {% endfor %}
   </ol>
   <p class="small muted">Review questions and answers are from {{ course.chapterTitle }} of the lab manual, where they are numbered {% for number in courseUnit.reviewQuestions %}{{ number }}{% if not loop.last %}, {% endif %}{% endfor %}.</p>

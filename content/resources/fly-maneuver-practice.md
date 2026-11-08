@@ -38,4 +38,4 @@ Practice each maneuver in a simulator such as [Flight Lab RC](/software/) until 
 
 <p>After each session, note which maneuvers you can fly without help and which need more practice. When you are ready, your instructor will use the <a href="/resources/fly-checkride-rubrics/">airplane checkride rubrics</a> to assess them.</p>
 
-<p class="small muted">From Chapter 3 of the <a href="/resources/remote-aircraft-textbook/">Remote and Autonomous Aircraft Systems lab manual</a>, where you can also download it as part of the complete book.</p>
+<p class="small muted">From Chapter 3 of the <a href="/resources/remote-aircraft-textbook/">Remote and Autonomous Aircraft Systems lab manual</a>. Read the chapter online: <a href="/learn-to-fly/textbook/piloting-remote-aircraft/">Chapter 3: Piloting Remote Aircraft</a>.</p>

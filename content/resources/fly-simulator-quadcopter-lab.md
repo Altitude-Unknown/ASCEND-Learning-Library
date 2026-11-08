@@ -25,7 +25,7 @@ courseUnit: 2
 
 **Goal:** complete first flights with a quadcopter (multirotor) in the simulator. Become familiar with all flight controls and attempt take-offs, landings, and flights around the flying area.
 
-Work through this activity on your own or with your team, then show your results to your instructor. Write your answers on paper or in your own notes; the printable version is in the lab manual.
+Work through this activity on your own or with your team, then show your results to your instructor. Write your answers on paper or in your own notes.
 
 ## By the end of this session you should be able to
 
@@ -48,4 +48,4 @@ For each movement below, sketch the quadcopter from above and label each propell
 
 <div class="textbook-table activity-table" role="region" aria-label="Propeller speed changes for each quadcopter movement" tabindex="0"><table><caption>Movements to work out</caption><thead><tr><th scope="col">Desired motion</th><th scope="col">Front left</th><th scope="col">Front right</th><th scope="col">Rear left</th><th scope="col">Rear right</th></tr></thead><tbody><tr><th scope="row">Move forward</th><td></td><td></td><td></td><td></td></tr><tr><th scope="row">Move backwards</th><td></td><td></td><td></td><td></td></tr><tr><th scope="row">Roll right</th><td></td><td></td><td></td><td></td></tr><tr><th scope="row">Roll left</th><td></td><td></td><td></td><td></td></tr><tr><th scope="row">Yaw right</th><td></td><td></td><td></td><td></td></tr><tr><th scope="row">Yaw left</th><td></td><td></td><td></td><td></td></tr><tr><th scope="row">Go up</th><td></td><td></td><td></td><td></td></tr><tr><th scope="row">Go down</th><td></td><td></td><td></td><td></td></tr></tbody></table></div>
 
-<p class="small muted">From Chapter 3 of the <a href="/resources/remote-aircraft-textbook/">Remote and Autonomous Aircraft Systems lab manual</a>, where you can also download it as part of the complete book.</p>
+<p class="small muted">From Chapter 3 of the <a href="/resources/remote-aircraft-textbook/">Remote and Autonomous Aircraft Systems lab manual</a>. Read the chapter online: <a href="/learn-to-fly/textbook/piloting-remote-aircraft/">Chapter 3: Piloting Remote Aircraft</a>.</p>

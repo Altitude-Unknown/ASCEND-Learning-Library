@@ -1,0 +1,13 @@
+---
+layout: layouts/base.njk
+eleventyExcludeFromCollections: true
+title: Electrical Basics
+description: "Learn the electrical basics behind every unmanned aircraft in two units: voltage, current, resistance, and power, then wire, multimeters, and waveforms. Each unit pairs a reading with practice or a lab, instructor sign-off, and review questions."
+permalink: /electrical-basics/
+---
+{% set course = courses.electricalBasics %}
+<div class="container">
+<nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/electronics/">Electronic Designs</a><span aria-hidden="true">/</span><span aria-current="page">{{ course.title }}</span></nav>
+<header class="section-hero"><span class="eyebrow">LEARN</span><div class="section-hero-row"><div><h1>{{ course.title }}</h1><p class="lead">{{ description }}</p></div><span class="section-symbol" aria-hidden="true"><svg><use href="#i-circuit"/></svg></span></div></header>
+{% include "components/course-overview.njk" %}
+</div>

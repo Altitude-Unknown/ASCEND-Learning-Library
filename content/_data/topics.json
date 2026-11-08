@@ -63,6 +63,16 @@
         "title": "Building a Fixed-Wing UAS",
         "url": "/build-fixed-wing/",
         "description": "Build the ASCEND Trainer Airplane in six units, from printing the parts to the preflight control check. Each unit pairs the build instructions with a build step or lab, instructor sign-off, and review questions; video lessons are coming soon."
+      },
+      {
+        "title": "Electrical Basics",
+        "url": "/electrical-basics/",
+        "description": "Learn voltage, current, resistance, and power, Ohm’s law, wire gauge, multimeters, and waveforms in two units. Each unit pairs a reading with practice or a lab, instructor sign-off, and review questions; video lessons are coming soon."
+      },
+      {
+        "title": "PID Controllers",
+        "url": "/pid-controllers/",
+        "description": "Learn how a flight controller holds an aircraft on target in two units: what the proportional, integral, and derivative terms do, and how to tune each gain. Each unit pairs a reading with practice or a lab and review questions; video lessons are coming soon."
       }
     ],
     "description": "Explore aircraft design, electronics, flight systems, and scientific missions.",
@@ -189,6 +199,13 @@
     "id": "electronics",
     "title": "Electronic Designs",
     "tagline": "Open hardware for every ASCEND board.",
+    "courses": [
+      {
+        "title": "Electrical Basics",
+        "url": "/electrical-basics/",
+        "description": "Learn voltage, current, resistance, and power, Ohm’s law, wire gauge, multimeters, and waveforms in two units. Each unit pairs a reading with practice or a lab, instructor sign-off, and review questions; video lessons are coming soon."
+      }
+    ],
     "description": "Download the circuit boards behind ASCEND hardware: Fusion designs, schematics, board layouts, parts lists, and Gerbers for ordering your own boards.",
     "icon": "circuit",
     "overview": [

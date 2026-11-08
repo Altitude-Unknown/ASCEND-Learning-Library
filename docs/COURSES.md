@@ -82,3 +82,43 @@ description. Changes from the printed chapter:
 - The chapter says the rear wing support stays temporary until the center of
   gravity is found, but it has no CG procedure, although the skills checksheet
   lists that skill. No procedure was added.
+
+## Lab manual courses
+
+Every chapter of the Remote and Autonomous Aircraft Systems lab manual becomes
+its own course. Chapters 3 and 4 were converted by hand; later chapters are
+imported with `scripts/import-lab-manual.py`, which reads the curator-only Word
+file in `editorial/intake/books/` and the settings in `editorial/lab-manual.json`:
+
+- **chapters:** where each chapter goes, sections left out of the reading (labs,
+  review questions, and checksheets live on course pages), heading and table
+  label overrides, and text corrections (`replace` for the chapter,
+  `dataReplace` for review questions and skills).
+- **figures:** one entry per source image: a described figure
+  (`file`, `alt`, `caption`), an equation shown on its own line (`equation`,
+  MathML or text), or a symbol inside a sentence (`inline`).
+
+Run `python3 scripts/import-lab-manual.py 1 9` after the Word file changes. It
+rewrites the web chapter, its images, and the course data file's
+`reviewQuestions` and last-unit `skills`, keeps the hand-written units, and
+fails if any source paragraph is missing or an image has no entry.
+`editorial/lab-manual-import.json` records what was imported. Units without a
+lab use a `practice` card in Step 3. Add each new course to
+`tests/lab-manual-courses.spec.js`.
+
+### Electrical Basics (Chapter 1)
+
+Corrections: the introduction's unfinished sentence “We call this push,” ends
+“voltage.”; “If an electron has 4 electrons” reads “If an atom”; “Can but caused”
+reads “Can be caused”; “valance” reads “valence”; the checksheet's “measure
+check continuity” reads “check continuity”. The waveform diagrams' transparent
+backgrounds are flattened to white so they show in dark mode.
+
+### PID Controllers (Chapter 9)
+
+All 13 images in the chapter are equations; they are written as MathML. Heading
+levels are evened out (the Ki and Kd sections sit under “How PID Gain Values
+affect the Plant”), the two “Summary Table” headings are replaced by table
+captions, and the Kp tuning list's run-together “Back off slightly” step is its
+own item. The manual's lab gives only a goal and materials; the web lab's
+procedure follows the chapter's tuning steps.

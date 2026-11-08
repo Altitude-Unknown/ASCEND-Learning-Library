@@ -33,3 +33,8 @@ Hosted-Website-Files/
 /data-api/wrangler.local.jsonc
 **/.dev.vars
 **/.dev.vars.*
+
+# Curator intake drops (originals are imported via ASCEND-Materials)
+/ASCEND-Airplane/
+/ASCEND-Leadership/
+/ECAD/
