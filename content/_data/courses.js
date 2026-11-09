@@ -9,6 +9,7 @@ const buildFixedWing = read('./buildFixedWingCourse.json');
 const electricalBasics = read('./electricalBasicsCourse.json');
 const pidControllers = read('./pidControllersCourse.json');
 const uasHardware = read('./uasHardwareCourse.json');
+const buildMultirotor = read('./buildMultirotorCourse.json');
 
 // Lab manual courses share one study method; only the chapter differs.
 const labManualMethod = chapter => [
@@ -85,6 +86,28 @@ export default {
     chapterTitle: buildFixedWing.chapterTitle,
     reviewQuestions: buildFixedWing.reviewQuestions,
     units: buildFixedWing.units
+  },
+  buildMultirotor: {
+    id: 'buildMultirotor',
+    title: 'Building a Multirotor UAS',
+    shortTitle: 'Building a Multirotor UAS',
+    url: '/build-multirotor/',
+    label: 'BUILDING A MULTIROTOR UAS',
+    sidebarLabel: 'BROWSE THE COURSE',
+    sidebarCollection: 'buildMultirotorModules',
+    overviewLabel: 'Course overview',
+    check: 'review',
+    final: {url: '/learn-to-fly/', title: 'Learning to Fly a UAS'},
+    intro: [
+      'This course takes you from how a quadcopter flies to a quadcopter that is assembled, set up in Betaflight, and ready for its first test flight. It follows Chapter 5, Building a Multirotor Aircraft, of the Remote and Autonomous Aircraft Systems lab manual.',
+      'The examples use a SpeedyBee flight controller stack, a Spektrum DX6e transmitter, and a Spektrum serial receiver, but the steps apply to most Betaflight quadcopters. UAS Hardware and Electronics covers the motors, ESCs, batteries, and soldering this course builds on.'
+    ],
+    notice: {title: 'Work safely', text: 'Keep the propellers off while you work on a multirotor, connect the battery only when a step calls for it, and install the propellers only when you are outside and ready to fly.'},
+    method: labManualMethod('Chapter 5'),
+    chapterUrl: buildMultirotor.chapterUrl,
+    chapterTitle: buildMultirotor.chapterTitle,
+    reviewQuestions: buildMultirotor.reviewQuestions,
+    units: buildMultirotor.units
   },
   electricalBasics: {
     id: 'electricalBasics',

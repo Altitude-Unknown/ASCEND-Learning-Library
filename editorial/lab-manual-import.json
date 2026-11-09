@@ -537,6 +537,372 @@
       "skills": 15,
       "htmlSha256": "24e1bd038a6709ee8bde315d46ab823bf6a94cb85d13a596de20accf0cd9a396"
     },
+    "5": {
+      "chapter": 5,
+      "output": "content/build-multirotor/textbook/building-a-multirotor-aircraft.njk",
+      "tables": 0,
+      "images": [
+        {
+          "file": "fpv-quadcopter.jpg",
+          "source": "image318.jpg",
+          "sha256": "1427fa7d0b4c4ce60ae915c257d23edc8ccc93f7b180373f6162a3a99b097c63"
+        },
+        {
+          "file": "single-rotor-helicopter.jpg",
+          "source": "image278.jpg",
+          "sha256": "5c3ce35930b06a796a783e4f3c1b51a643e6a2cd594aae1a5c8319ca256ff3ea"
+        },
+        {
+          "file": "coaxial-helicopter.jpg",
+          "source": "image48.jpg",
+          "sha256": "92599253a00135143eb877aeaa9862fb2a1b7434937761a2e904ef9c630a5bb7"
+        },
+        {
+          "file": "tandem-rotor-helicopter.jpg",
+          "source": "image358.jpg",
+          "sha256": "8d0ce8f912351e8f7ba3139b7f6d24ac49e3ef8839b636f3ee807b0352dc6863"
+        },
+        {
+          "file": "micro-quadcopter.jpg",
+          "source": "image9.jpg",
+          "sha256": "40d0973382c37f105a138ab32915fca485d9720937b6cf56eb9504995084ade6"
+        },
+        {
+          "file": "quad-x-motors-reversed.png",
+          "source": "image119.png",
+          "sha256": "3435872eb0e6fd5aa33f454f8facf8661bcbce405195900bd3fc7eae6b200dab"
+        },
+        {
+          "file": "flight-controller.jpg",
+          "source": "image251.jpg",
+          "sha256": "870e053ffa16f064567c3815633d66a381e155d8700fa14f9d4dd488ee981744"
+        },
+        {
+          "file": "flight-controller-stack.jpg",
+          "source": "image231.jpg",
+          "sha256": "51a77a0adbf19d9b7261e8a8733725bb9b65d8c5d303f486c3f6cc23f7b80c22"
+        },
+        {
+          "file": "forward-and-reverse-motors.jpg",
+          "source": "image100.png",
+          "sha256": "54190fa68fc0564bbff1581a562988311811777bca509d13d483a43611cabdc0"
+        },
+        {
+          "file": "serial-receiver.jpg",
+          "source": "image142.png",
+          "sha256": "c25f6852577626f938f06cc5f5c377526902c52a4683fad61191b667c4f2baf9"
+        },
+        {
+          "file": "betaflight-welcome.jpg",
+          "source": "image320.jpg",
+          "sha256": "ea27ff0977e4d0e927f3d5fd1d2fe4d7f4680816d0e8887f1673757b0967b688"
+        },
+        {
+          "file": "betaflight-downloads-page.png",
+          "source": "image77.png",
+          "sha256": "2a277c6189db7db1bbba0af019314c17e9f232dab350193ee63b95e2f5446aa5"
+        },
+        {
+          "file": "betaflight-latest-release-link.png",
+          "source": "image58.png",
+          "sha256": "10296e2de9c291232a3cadc979fcc4d6a3c0aab0867517a0c170b9b86aac1fc2"
+        },
+        {
+          "file": "betaflight-github-release.png",
+          "source": "image374.png",
+          "sha256": "6926e06f217463ba9ca98f732836e491f765a9338e23f6d64e3f65c581086c65"
+        },
+        {
+          "file": "betaflight-release-assets.png",
+          "source": "image293.png",
+          "sha256": "ff5e844aa2374482508c5b574c3d5fa9e520f336d3ef8c827a1519f4fe90966c"
+        },
+        {
+          "file": "betaflight-installer-download.png",
+          "source": "image40.png",
+          "sha256": "ee037477eee069ab9ca664f100b8b19889f538e2ec415054bae1d6ad705d3f9d"
+        },
+        {
+          "file": "betaflight-installed.png",
+          "source": "image426.png",
+          "sha256": "535f00ee30b9a759331c9c1d408d6af424979e94865d13f951557714333295e8"
+        },
+        {
+          "file": "setup-materials.jpg",
+          "source": "image350.jpg",
+          "sha256": "c6cf0bf3ef4fded036ccf137416172bf826b94ff529ecbfceb96d13b6f09bf3c"
+        },
+        {
+          "file": "flight-controller-usb-port.jpg",
+          "source": "image432.jpg",
+          "sha256": "ff3de6584455ca8035a75f6f8be9ed88065d4d2396fc172f16f5de7217eda9be"
+        },
+        {
+          "file": "usb-cable-connected.jpg",
+          "source": "image283.jpg",
+          "sha256": "ee99e45b7f0a82b8cee0f7c4d62d9f42c64a58579c57b1a2856c2e6ab008d64f"
+        },
+        {
+          "file": "betaflight-connect-button.png",
+          "source": "image47.png",
+          "sha256": "9300ce18aee4804de3a5cec823fc0a314b3136c711dfe817b5a70c1521bde926"
+        },
+        {
+          "file": "betaflight-setup-tab.png",
+          "source": "image134.png",
+          "sha256": "ee754a26758129642165be0e1e727ed45fbcfc2945cfc7b5676d00c3157839a3"
+        },
+        {
+          "file": "betaflight-3d-model.png",
+          "source": "image217.png",
+          "sha256": "c86da9327dac5bd58320b809f4e120bb9fbb42ce9ebff9db77e6af9e08172c8c"
+        },
+        {
+          "file": "calibrate-accelerometer.png",
+          "source": "image123.png",
+          "sha256": "d2a6bf5e2a48391bebb96e9c48a0e47a9d450842f504f65f1212590700af7dfa"
+        },
+        {
+          "file": "transmitter-quad-model.jpg",
+          "source": "image70.jpg",
+          "sha256": "49343f2f72a4f08af251944d4374e2a3239bccc16e5af2a7fad1bed404be2113"
+        },
+        {
+          "file": "receiver-bind-button.jpg",
+          "source": "image156.jpg",
+          "sha256": "97ca018cc0ace26461d87fcad864fb2be1bb64e1a1686867e133503b4ed3af0a"
+        },
+        {
+          "file": "receiver-bind-press.jpg",
+          "source": "image139.jpg",
+          "sha256": "e5d0cd24046920b6d923e9a39506909243ce7cf1a534771e86ed97806929ffa6"
+        },
+        {
+          "file": "receiver-bind-light.png",
+          "source": "image275.gif",
+          "sha256": "97ea8270ff7f1e8f8d07f0f89cdab98578411aa9688bfb0e84806081de81a2c5"
+        },
+        {
+          "file": "transmitter-bind-switch.jpg",
+          "source": "image25.jpg",
+          "sha256": "b576302d3f8a7de7d342e81410c564a36b0af3a47c92f0322fe5f3973975c0da"
+        },
+        {
+          "file": "transmitter-bind-power-on.jpg",
+          "source": "image344.jpg",
+          "sha256": "ac2da9ca2b18fb64c77c3f929f7ad2118aff6edcb646aa82a104ee2e7fc557b7"
+        },
+        {
+          "file": "transmitter-binding-screen.jpg",
+          "source": "image120.jpg",
+          "sha256": "cbf3fb2046bde5758758522c7b5a43a41161c598533ce4f8aabced38cb499882"
+        },
+        {
+          "file": "betaflight-receiver-tab.png",
+          "source": "image309.png",
+          "sha256": "30529ae8f384183aa6c0e114879f1e7a1a27ea9c403b704f58f6e76db2e4249a"
+        },
+        {
+          "file": "betaflight-receiver-settings.png",
+          "source": "image329.png",
+          "sha256": "2a24104af15b40140d1c0bb7562ac9ef88ab035e9cf336cef219bbf3b1ff04f0"
+        },
+        {
+          "file": "channel-map-spektrum.png",
+          "source": "image348.png",
+          "sha256": "903a501d3d5fe8e0cd38651c4e600f622f893d907ec0271235fc99278e01eada"
+        },
+        {
+          "file": "receiver-mode-serial.png",
+          "source": "image151.png",
+          "sha256": "4bf40c52367718afe4b8764ec9cb529cbe56f837290d371f575224dee9a6a951"
+        },
+        {
+          "file": "receiver-settings-all.png",
+          "source": "image339.png",
+          "sha256": "63064fb3a5096089352c86a6ab64fd18b30ca0c24500ffa83ec407d6c74ef09d"
+        },
+        {
+          "file": "receiver-throttle.png",
+          "source": "image383.png",
+          "sha256": "7a7cfb60930ed3fd696259b25f0a0956ed6da3bda0e9d31605d7266214df98e0"
+        },
+        {
+          "file": "receiver-yaw.png",
+          "source": "image414.png",
+          "sha256": "84bc57694f5f8a968c51a1d80524884f0361b0ce5c54695f36238ae9101ca22d"
+        },
+        {
+          "file": "receiver-pitch.png",
+          "source": "image253.png",
+          "sha256": "1ae8b45e1b5ab4c845456aeb66526617fcacf4b2764be518a8a879abe9c5a51f"
+        },
+        {
+          "file": "receiver-roll.png",
+          "source": "image336.png",
+          "sha256": "9ba8952b60e6d1373df2f9ae1aff183a40a608f069e33e96cc329f53152d8457"
+        },
+        {
+          "file": "transmitter-switch-a.jpg",
+          "source": "image61.jpg",
+          "sha256": "d59f5f1e545e51c645f0c111527e8640405b928be52cce0af2465254f6d3fed2"
+        },
+        {
+          "file": "transmitter-switch-d.jpg",
+          "source": "image291.jpg",
+          "sha256": "31c1c812ba85305463cabceb3b5e535c88fb48edbfc39a205836ec5311df8c1c"
+        },
+        {
+          "file": "aux-channels.png",
+          "source": "image109.png",
+          "sha256": "3f98691983d00b57f0efd1a6227c5491ad4c412c6090273f3889029d7613f516"
+        },
+        {
+          "file": "transmitter-function-list.jpg",
+          "source": "image333.jpg",
+          "sha256": "12f98453c2c5904bbdf3106cb45332b70aaae278d2ac975ed09807d8398e3f75"
+        },
+        {
+          "file": "transmitter-quad-channels.jpg",
+          "source": "image187.jpg",
+          "sha256": "11aa8cd74433c10a3208ed91cdbb994913b82f442cca93c853cca7a9efd8f4af"
+        },
+        {
+          "file": "betaflight-modes-tab.png",
+          "source": "image431.png",
+          "sha256": "a727e7fce68ff3d3507a72d7422b9eda9973c687cd293d568ccb62252099156b"
+        },
+        {
+          "file": "arm-add-range.png",
+          "source": "image4.png",
+          "sha256": "6db4e84bc29f83d9bd29c4021502a37ffbd95d7c6f5c6c41a7ccb43b68d943ca"
+        },
+        {
+          "file": "arm-range-added.png",
+          "source": "image266.png",
+          "sha256": "0d433361357f81e91e46bc9bd279fdf3e1e24100651ee7b25a58ba2ee84e3a81"
+        },
+        {
+          "file": "arm-channel-aux1.png",
+          "source": "image367.png",
+          "sha256": "f5199126288cfb9b598b4c45ce0ac520cf75bffa1690144851bcc12572bc9394"
+        },
+        {
+          "file": "arm-switch-marker.png",
+          "source": "image324.png",
+          "sha256": "1c63f6002e700701e65e23ea37c9c09d51f7a0e96391cec4468bbab61367c03b"
+        },
+        {
+          "file": "arm-range-switch-down.png",
+          "source": "image226.png",
+          "sha256": "a1d0201d42c3cd2ceb8005fb239fd79221595a04cbdcb83b7d333f813f4f2489"
+        },
+        {
+          "file": "arm-range-switch-up.png",
+          "source": "image69.png",
+          "sha256": "73e1eda2d4905c6f1210b827adb417ab0a8622e6183759a49d0948b644489dc5"
+        },
+        {
+          "file": "arm-save.png",
+          "source": "image392.png",
+          "sha256": "c3faf29d13fd88ad221d2f9e3ed1d5b06ec1e7fdf97d4652167d38a5e471eee9"
+        },
+        {
+          "file": "angle-add-range.png",
+          "source": "image103.png",
+          "sha256": "11fe9ddf11f7e5a6d5264039ee59697c3bbd33225a4e2171fd2c918fab8a00a1"
+        },
+        {
+          "file": "angle-range-added.png",
+          "source": "image105.png",
+          "sha256": "e9ac7b540ede58f762b6b991c486f2eb938290f8274856f83e1d5f343455ecf3"
+        },
+        {
+          "file": "angle-channel-aux2.png",
+          "source": "image322.png",
+          "sha256": "c9040d043ed6e5cd62257d7633e32ff8ad09465c20f54531994f479ffbbec55c"
+        },
+        {
+          "file": "angle-full-range.png",
+          "source": "image237.png",
+          "sha256": "4b2ea5eeabaaf9d09ed4f93072293797174483a8ff3a1d97470bc39c675e6f1b"
+        },
+        {
+          "file": "angle-save.png",
+          "source": "image192.png",
+          "sha256": "6d3700706c648db260ab391854d5fd02eab7a9f4c66afcb01b4e745fdfb36b57"
+        },
+        {
+          "file": "betaflight-motors-tab.png",
+          "source": "image364.png",
+          "sha256": "27a0e301d64c499bed37f4d904916c72517b4bf3c2fd20e1cbd78b19ba5cfbc4"
+        },
+        {
+          "file": "motor-test-warning.png",
+          "source": "image354.png",
+          "sha256": "a3432562333a6fbb69bea767e17039d722e5d454f5cdf233862c7d30d2c72599"
+        },
+        {
+          "file": "battery-connected.jpg",
+          "source": "image242.jpg",
+          "sha256": "b29f153a6d1f8e7daac9bdfccbcdb464242bc44bf1494f90cd71ba0cc32e2b97"
+        },
+        {
+          "file": "motor-test-sliders.png",
+          "source": "image89.png",
+          "sha256": "9681afde35fda930b672f841d36b90934a4e86c881a4fcd6bc1c114b036cee39"
+        },
+        {
+          "file": "motor-1-test.png",
+          "source": "image245.png",
+          "sha256": "4a2e67859af5d5302a6f4cad893e301d4e42bf3aadb7ba2135f19bdebffd0c2e"
+        },
+        {
+          "file": "quad-x-motor-directions.png",
+          "source": "image11.png",
+          "sha256": "39b58ccbc713248a45562e437ba3d5c12ce385e25f083826c7e285d0b08e5532"
+        },
+        {
+          "file": "motor-2-test.png",
+          "source": "image218.png",
+          "sha256": "8a83ac915d632d369aa271e75a250c68b70c170503b7ec68f62f805ecdfc712e"
+        },
+        {
+          "file": "quad-x-motor-directions.png",
+          "source": "image11.png",
+          "sha256": "39b58ccbc713248a45562e437ba3d5c12ce385e25f083826c7e285d0b08e5532"
+        },
+        {
+          "file": "motor-3-test.png",
+          "source": "image408.png",
+          "sha256": "56da357d3998ceceaa6e2131464780d97a0f75e97a2ff52db0c07add54ca950b"
+        },
+        {
+          "file": "quad-x-motor-directions.png",
+          "source": "image11.png",
+          "sha256": "39b58ccbc713248a45562e437ba3d5c12ce385e25f083826c7e285d0b08e5532"
+        },
+        {
+          "file": "motor-4-test.png",
+          "source": "image321.png",
+          "sha256": "b3eb1e7d66a523c001cfb7f2ec25b0466d3abb871d4335ea1b09b3095607bcdc"
+        },
+        {
+          "file": "quad-x-motor-directions.png",
+          "source": "image11.png",
+          "sha256": "39b58ccbc713248a45562e437ba3d5c12ce385e25f083826c7e285d0b08e5532"
+        },
+        {
+          "file": "propeller-directions.jpg",
+          "source": "image101.png",
+          "sha256": "10c4ac093e52ce41943100f6c5faf02d4d16341df16535bf0609e3e6462cc712"
+        }
+      ],
+      "verifiedTextBlocks": 105,
+      "reviewQuestions": 20,
+      "skills": 7,
+      "htmlSha256": "f4bf8130b01890d119920317ebfdaf3a9b324bde74d7141f518e99ddb5f859de"
+    },
     "9": {
       "chapter": 9,
       "output": "content/pid-controllers/textbook/pid-controllers.njk",

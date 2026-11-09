@@ -98,7 +98,7 @@ file in `editorial/intake/books/` and the settings in `editorial/lab-manual.json
   (`file`, `alt`, `caption`), an equation shown on its own line (`equation`,
   MathML or text), or a symbol inside a sentence (`inline`).
 
-Run `python3 scripts/import-lab-manual.py 1 9` after the Word file changes. It
+Run `python3 scripts/import-lab-manual.py 1 2 5 9` after the Word file changes. It
 rewrites the web chapter, its images, and the course data file's
 `reviewQuestions` and last-unit `skills`, keeps the hand-written units, and
 fails if any source paragraph is missing or an image has no entry.
@@ -142,3 +142,34 @@ photo”; the motor mount's “google share drive” reads “ask your instructo
 the Spektrum photo credit's broken hobbies.com link is removed; and typing
 fixes (like, progress, bottom, form, than, divide, lead, controls, charger,
 correct, specks, needle nose, and others listed in `editorial/lab-manual.json`).
+
+### Building a Multirotor UAS (Chapter 5)
+
+Three units: How Multirotors Fly (practice), The Flight Controller Stack
+(quadcopter assembly lab), and Setting Up Betaflight (Betaflight lab and the
+full skills checksheet). The web chapter has 71 described images (68 distinct;
+the motor-direction diagram repeats for each motor) and two lab pages.
+
+- **Motor direction.** The chapter's procedure, and its answer key, use
+  Betaflight's default directions (motors 1 and 4 clockwise, 2 and 3
+  counterclockwise). The airframe diagram (labeled “reversed”) and the
+  propeller photo both show the reversed, “props out” directions. Both images
+  are kept and their captions say so. The propeller paragraph described “two
+  different propeller blades, clockwise on the left”, which does not match the
+  photo; it now says the propellers marked 5042R are the clockwise ones.
+- **Cross-references.** Word's internal links become links to Chapter 2
+  (setting up a new aircraft; reversing a servo) and to the ARM switch section.
+- The two “!!!Safety Check!!!” paragraphs are notice boxes. The materials
+  list's first item (“A computer with Betaflight Configurator installed”) is
+  a list item; Word had it outside the list. “Setting up Modes” is a heading.
+- Corrections: “BetaFlight” and “betaflight” read “Betaflight”; “toque” reads
+  torque; “gimbles, not pitch changes” reads “gimbals, no pitch changes”;
+  “flightcontroller”, “Chanel Map”, “SPektrum”, “is call”, “is is”, “Do
+  calibrate”, “accelerometer help”, “want and easy”, “spot for”, “numbers
+  starting”, and other typing fixes listed in `editorial/lab-manual.json`. The
+  checksheet's “assure” reads “ensure”.
+- The checksheet lists “assure that center of gravity is within limits”, but
+  the chapter has no CG procedure (the same gap as Chapter 4). None was added.
+- The download steps show Betaflight Configurator 10.10.0; the chapter already
+  says version numbers will differ.
+
