@@ -247,6 +247,239 @@
         ]
       ]
     },
+    "5": {
+      "sourceHeading": "Chapter 5: Building a multirotor Aircraft",
+      "answerKeyHeading": "Chapter 5: Building a Multirotor Aircraft — Answer Key",
+      "title": "Chapter 5: Building a Multirotor Aircraft",
+      "description": "How multirotors fly, the flight controller stack (flight controller, ESC, motors, and receiver), and setting up a quadcopter in Betaflight: receiver, arming, Angle mode, motor direction, and propellers.",
+      "courseId": "buildMultirotor",
+      "courseData": "content/_data/buildMultirotorCourse.json",
+      "topic": "uas",
+      "url": "/build-multirotor/textbook/building-a-multirotor-aircraft/",
+      "output": "content/build-multirotor/textbook/building-a-multirotor-aircraft.njk",
+      "assets": "build-multirotor",
+      "sourceNote": "From Mike Walach’s lab manual, Remote and Autonomous Aircraft Systems. Original wording is retained with small corrections; image descriptions have been added for web reading.",
+      "headerLinks": [
+        {
+          "title": "About the lab manual",
+          "url": "/resources/remote-aircraft-textbook/"
+        }
+      ],
+      "omitSections": [
+        "^Lab Activity",
+        "^Review Questions$",
+        "^Skills Checksheet$"
+      ],
+      "skipParagraphs": [
+        "^Name:?_+$"
+      ],
+      "closing": "",
+      "headingLevels": {
+        "Setting up “Modes” in BetaFlight": 3
+      },
+      "headings": {
+        "Basic setup in BetaFlight": "Basic setup in Betaflight",
+        "Download and install BetaFlight": "Download and install Betaflight",
+        "Connect your aircraft to BetaFlight": "Connect your aircraft to Betaflight",
+        "Calibrate the accelerometer in BetaFlight": "Calibrate the accelerometer in Betaflight",
+        "Binding your Transmitter to your Receiver": "Binding your transmitter to your receiver",
+        "Setting Up a Receiver in BetaFlight": "Setting up a receiver in Betaflight",
+        "Setting up “Modes” in BetaFlight": "Setting up modes in Betaflight",
+        "Adding an ARM command switch in BetaFlight": "Adding an ARM switch in Betaflight",
+        "Setting “Angle Mode” in BetaFlight (Stabilized Flight)": "Setting Angle mode in Betaflight (stabilized flight)",
+        "Checking the motor direction in BetaFlight": "Checking the motor direction in Betaflight",
+        "Attaching propellers (rotors) to your quadcopter": "Attaching propellers (rotors) to your quadcopter",
+        "Receivers for Multirotors": "Receivers for multirotors"
+      },
+      "replace": [
+        [
+          "<p><strong>!!!Safety Check!!!</strong></p>\n<p><strong>Make sure that you do NOT have any propellers or a battery connected to your quadcopter at this time! If you do you could cause extreme injury to yourself or others!</strong></p>",
+          "<p class=\"notice\"><strong>Safety check</strong>Make sure that you do NOT have any propellers or a battery connected to your quadcopter at this time! If you do, you could cause extreme injury to yourself or others!</p>"
+        ],
+        [
+          "<p><strong>!!!Safety Check!!!</strong></p>\n<p><strong>Make sure that you do NOT have any propellers connected to your quadcopter at this time! If you do you could cause extreme injury to yourself or others!</strong></p>",
+          "<p class=\"notice\"><strong>Safety check</strong>Make sure that you do NOT have any propellers connected to your quadcopter at this time! If you do, you could cause extreme injury to yourself or others!</p>"
+        ],
+        [
+          "<p>A computer with “BetaFlight Configurator” installed</p>\n<ul><li>\n",
+          "<ul><li>\nA computer with “Betaflight Configurator” installed\n</li><li>\n"
+        ],
+        [
+          "If you don’t know how to do this go read this section on “setting up a new aircraft”, then return here.",
+          "If you don’t know how to do this, read “<a href=\"/uas-hardware/textbook/hardware-and-electronics/#setting-up-a-new-aircraft\">Setting up a new aircraft</a>” in Chapter 2, then return here."
+        ],
+        [
+          "If you do not know how to reverse control directions in your transmitter review this section then return here.",
+          "If you do not know how to reverse control directions in your transmitter, review “<a href=\"/uas-hardware/textbook/hardware-and-electronics/#reverse-a-servo-travel-sub-trim-or-direction\">Reverse a servo travel, sub trim, or direction</a>” in Chapter 2, then return here."
+        ],
+        [
+          "If you are unsure which switch or position in the “ARM” position go back here and reread this section.",
+          "If you are unsure which switch or position is “ARM,” reread <a href=\"#adding-an-arm-switch-in-betaflight\">Adding an ARM switch in Betaflight</a>."
+        ],
+        [
+          "Pictured below are two different propeller blades. The one on the left has a pitch for a clockwise spinning motor while the one on the right has a pitch for a counterclockwise spinning motor.",
+          "Pictured below is a quadcopter with its propellers installed. The propellers marked 5042R are pitched for the clockwise motors, and the unmarked ones for the counterclockwise motors."
+        ],
+        [
+          "On the BetaFlight website click on &quot;Downloads&quot; then “ Download “Latest release” from the  “Betaflight Configurator” section:",
+          "On the Betaflight website, click on “Downloads,” then download the “latest release” from the “Betaflight Configurator” section:"
+        ],
+        [
+          "“servo setup”  is call “control setup”  and",
+          "“Servo Setup” is called “Control Setup” and"
+        ],
+        [
+          "this far though the book",
+          "this far through the book"
+        ],
+        [
+          "1500mAh 3 cell battery",
+          "1500 mAh 3-cell battery"
+        ],
+        [
+          "like an airplane would have..",
+          "like an airplane would have."
+        ],
+        [
+          "cancel out the toque",
+          "cancel out the torque"
+        ],
+        [
+          "two motors that spin counter clockwise",
+          "two motors that spin counterclockwise"
+        ],
+        [
+          "No gimbles, not pitch changes",
+          "No gimbals, no pitch changes"
+        ],
+        [
+          "FPV (first person View)",
+          "FPV (first-person view)"
+        ],
+        [
+          "flightcontroller",
+          "flight controller"
+        ],
+        [
+          "the most common is betaflight. If automation is your end goal then  Mission Planner",
+          "the most common is Betaflight. If automation is your end goal, then Mission Planner"
+        ],
+        [
+          "and mission planner will be discussed",
+          "and Mission Planner will be discussed"
+        ],
+        [
+          "Github is a repository",
+          "GitHub is a repository"
+        ],
+        [
+          "on a windows machine",
+          "on a Windows machine"
+        ],
+        [
+          "USB C cable",
+          "USB-C cable"
+        ],
+        [
+          "flight control/ESC stack",
+          "flight controller/ESC stack"
+        ],
+        [
+          "8mm socket",
+          "8 mm socket"
+        ],
+        [
+          "3-Cell LiPo battery",
+          "3-cell LiPo battery"
+        ],
+        [
+          "The accelerometer help the",
+          "The accelerometer helps the"
+        ],
+        [
+          "Do calibrate the accelerometer",
+          "To calibrate the accelerometer"
+        ],
+        [
+          "the “Calibrate Accelerometer button",
+          "the “Calibrate Accelerometer” button"
+        ],
+        [
+          "a SPektrum Transmitter and Receiver",
+          "a Spektrum transmitter and receiver"
+        ],
+        [
+          "On your transmitter setup a new aircraft",
+          "On your transmitter, set up a new aircraft"
+        ],
+        [
+          "a “Bind Failed message”",
+          "a “Bind Failed” message"
+        ],
+        [
+          "make sure the control all move",
+          "make sure the controls all move"
+        ],
+        [
+          "“Chanel Map”",
+          "“Channel Map”"
+        ],
+        [
+          "Some Switches are",
+          "Some switches are"
+        ],
+        [
+          "Modes are setting that",
+          "Modes are settings that"
+        ],
+        [
+          "want and easy self stabilizing",
+          "want an easy self-stabilizing"
+        ],
+        [
+          "is is very likely any  flight attempt",
+          "it is very likely any flight attempt"
+        ],
+        [
+          "There are spot for up to",
+          "There are spots for up to"
+        ],
+        [
+          "The motors are numbers starting",
+          "The motors are numbered starting"
+        ],
+        [
+          "in the image below and  right.",
+          "in the images below and to the right."
+        ],
+        [
+          "counterclockwise.Refer",
+          "counterclockwise. Refer"
+        ],
+        [
+          "BetaFlight",
+          "Betaflight"
+        ]
+      ],
+      "dataReplace": [
+        [
+          "adjust if incorrect by changing settings in betaflight",
+          "adjust it if incorrect by changing settings in Betaflight"
+        ],
+        [
+          "Setup flight modes in Betaflight",
+          "Set up flight modes in Betaflight."
+        ],
+        [
+          "Check IMU directions in betaflight and adjust if incorrect.",
+          "Check IMU directions in Betaflight and adjust them if incorrect."
+        ],
+        [
+          "assure that center of gravity is within limits",
+          "ensure that its center of gravity is within limits"
+        ]
+      ]
+    },
     "9": {
       "sourceHeading": "Chapter 9 PID Controllers",
       "answerKeyHeading": "Chapter 9: PID Controllers — Answer Key",
@@ -748,6 +981,289 @@
     "image41.jpg": {
       "file": "lab-reading-thrust.jpg",
       "alt": "A hand holding the fish scale hooked to the back of the sliding motor mount, measuring the propeller's thrust."
+    },
+    "image318.jpg": {
+      "file": "fpv-quadcopter.jpg",
+      "alt": "A five-inch FPV quadcopter with a carbon-fiber X frame, purple and yellow 3D-printed parts, a camera at the front, an antenna pointing up at the back, and gray three-blade propellers on four brushless motors.",
+      "caption": "A quadcopter, the most common multirotor aircraft."
+    },
+    "image278.jpg": {
+      "file": "single-rotor-helicopter.jpg",
+      "alt": "A scale RC model of a U.S. Army Black Hawk helicopter in olive green, with a four-blade main rotor on top and a small tail rotor at the end of the tail boom.",
+      "caption": "A traditional helicopter: a main rotor for lift and a tail rotor to counter its torque."
+    },
+    "image48.jpg": {
+      "file": "coaxial-helicopter.jpg",
+      "alt": "A red and silver toy RC helicopter with two stacked main rotors on one shaft and a small horizontal propeller at the end of its tail.",
+      "caption": "Stacked counter-rotating rotors, with a horizontal tail rotor for pitch."
+    },
+    "image358.jpg": {
+      "file": "tandem-rotor-helicopter.jpg",
+      "alt": "An olive-green toy RC model of a Chinook-style cargo helicopter with two stacked pairs of rotors, one pair at the front and one at the back.",
+      "caption": "Two stacked pairs of counter-rotating rotors, front and rear."
+    },
+    "image9.jpg": {
+      "file": "micro-quadcopter.jpg",
+      "alt": "A small quadcopter with a flat carbon-fiber frame, a tiny camera on a red mount at the front, and four small motors with white two-blade propellers.",
+      "caption": "A quadcopter controls pitch, roll, yaw, and throttle with motor speed alone."
+    },
+    "image119.png": {
+      "file": "quad-x-motors-reversed.png",
+      "alt": "Betaflight’s top-view diagram of a quad X frame, with a red arrow pointing forward. Motors are numbered 1 at the rear right, 2 at the front right, 3 at the rear left, and 4 at the front left. Orange arrows show motors 1 and 4 spinning counterclockwise and motors 2 and 3 spinning clockwise. A red label reads “reversed.”",
+      "caption": "Motor numbers and spin directions on a quad X with the motor direction reversed (“props out”). The setup later in this chapter uses Betaflight’s default directions instead: motors 1 and 4 clockwise, motors 2 and 3 counterclockwise."
+    },
+    "image251.jpg": {
+      "file": "flight-controller.jpg",
+      "alt": "Top view of a SpeedyBee F405 V4 flight controller: a square black circuit board with a mounting hole in each corner, a processor chip in the middle, a USB-C port on the right, and rows of labeled solder pads along the top and bottom edges.",
+      "caption": "A flight controller (SpeedyBee F405 V4)."
+    },
+    "image231.jpg": {
+      "file": "flight-controller-stack.jpg",
+      "alt": "A SpeedyBee F405 V4 flight controller stacked on a four-in-one ESC board. Yellow rubber grommets fill the corner mounting holes, large motor solder pads line the ESC board’s edges, the battery pads are at the front, and a multicolored ribbon cable joins the two boards.",
+      "caption": "A flight controller and ESC stack."
+    },
+    "image100.png": {
+      "file": "forward-and-reverse-motors.jpg",
+      "alt": "Four EMAX RS2205 2300 KV brushless motors with red bases. Two have black prop nuts and two have silver prop nuts.",
+      "caption": "Two forward and two reverse motors, told apart by the color of their prop nuts."
+    },
+    "image142.png": {
+      "file": "serial-receiver.jpg",
+      "alt": "A small green Spektrum receiver board with two thin wire antennas and a bind button, beside its connector cable with orange, black, and gray wires.",
+      "caption": "A Spektrum serial receiver and its cable."
+    },
+    "image320.jpg": {
+      "file": "betaflight-welcome.jpg",
+      "alt": "The Betaflight Configurator welcome screen: the Betaflight logo, sponsor logos, and panels about hardware, contributing, and open source. The port menu and the Update Firmware and Connect buttons are at the top right."
+    },
+    "image77.png": {
+      "file": "betaflight-downloads-page.png",
+      "alt": "The Downloads page of the Betaflight website. The Betaflight Configurator section is circled. It links to the latest release and to the latest version that runs in a web browser."
+    },
+    "image58.png": {
+      "file": "betaflight-latest-release-link.png",
+      "alt": "A close-up of the Betaflight Configurator section of the Downloads page, with the “latest release” link circled."
+    },
+    "image374.png": {
+      "file": "betaflight-github-release.png",
+      "alt": "The GitHub release page for Betaflight Configurator 10.10.0. Its notes list which file to download for each version of Windows, macOS, and Linux."
+    },
+    "image293.png": {
+      "file": "betaflight-release-assets.png",
+      "alt": "The Assets list at the bottom of the GitHub release page: download links for Linux (.rpm, .deb, and portable .zip), Android (.apk), macOS (.dmg), Windows (installer .exe and portable .zip), and the source code."
+    },
+    "image40.png": {
+      "file": "betaflight-installer-download.png",
+      "alt": "The Windows File Explorer Downloads folder, with the file betaflight-configurator_10.10.0_win64-installer.exe circled."
+    },
+    "image426.png": {
+      "file": "betaflight-installed.png",
+      "alt": "The Betaflight Configurator window open on Windows, showing the welcome screen."
+    },
+    "image350.jpg": {
+      "file": "setup-materials.jpg",
+      "alt": "Materials laid out on a cutting mat: a carbon-fiber quadcopter in a foam-lined case, a nut driver, a Spektrum DX6e transmitter, four black three-blade propellers, a USB-C cable, and a 1500 mAh LiPo battery."
+    },
+    "image432.jpg": {
+      "file": "flight-controller-usb-port.jpg",
+      "alt": "Close-up of the flight controller stack inside the quadcopter frame, between red standoffs, with its USB-C port facing out."
+    },
+    "image283.jpg": {
+      "file": "usb-cable-connected.jpg",
+      "alt": "A USB-C cable plugged into the flight controller’s USB port inside the frame."
+    },
+    "image47.png": {
+      "file": "betaflight-connect-button.png",
+      "alt": "The top right of Betaflight Configurator. The port menu shows COM14 – SpeedyBeeF405V3, and the Connect button is circled."
+    },
+    "image134.png": {
+      "file": "betaflight-setup-tab.png",
+      "alt": "Betaflight’s Setup tab after connecting: buttons to calibrate the accelerometer and reset settings at the top, a 3D model of the quadcopter in the middle, and instrument, GPS, system, and sensor panels on the right."
+    },
+    "image217.png": {
+      "file": "betaflight-3d-model.png",
+      "alt": "Betaflight’s 3D model of the quadcopter seen from above at an angle, with red propellers on one end, green propellers on the other, and a green arrow on the frame."
+    },
+    "image123.png": {
+      "file": "calibrate-accelerometer.png",
+      "alt": "The Setup tab with the Calibrate Accelerometer button circled. The note beside it reads “Place board or frame on leveled surface, proceed with calibration, ensure platform is not moving during calibration period.” Yaw, pitch, and roll readings are shown below."
+    },
+    "image70.jpg": {
+      "file": "transmitter-quad-model.jpg",
+      "alt": "A Spektrum DX6e transmitter whose screen shows model 4, “Quad,” in Flight Mode 1, with a quadcopter icon."
+    },
+    "image156.jpg": {
+      "file": "receiver-bind-button.jpg",
+      "alt": "A wooden stick presses the small bind button on the Spektrum receiver."
+    },
+    "image139.jpg": {
+      "file": "receiver-bind-press.jpg",
+      "alt": "A finger presses the bind button on the receiver."
+    },
+    "image275.gif": {
+      "file": "receiver-bind-light.png",
+      "alt": "The Spektrum receiver after its bind button is pressed. Its orange light flashes."
+    },
+    "image25.jpg": {
+      "file": "transmitter-bind-switch.jpg",
+      "alt": "A thumb holds the Bind switch on the top left of the Spektrum DX6e transmitter."
+    },
+    "image344.jpg": {
+      "file": "transmitter-bind-power-on.jpg",
+      "alt": "The Bind switch held down from another angle while the transmitter is switched on."
+    },
+    "image120.jpg": {
+      "file": "transmitter-binding-screen.jpg",
+      "alt": "The DX6e screen during binding: “BIND, 4: Quad, Binding DSMX 22ms.”"
+    },
+    "image309.png": {
+      "file": "betaflight-receiver-tab.png",
+      "alt": "Betaflight’s menu with the Receiver tab highlighted, below Setup, Ports, Configuration, Power & Battery, Presets, and PID Tuning."
+    },
+    "image329.png": {
+      "file": "betaflight-receiver-settings.png",
+      "alt": "The Receiver tab: channel bars for roll, pitch, yaw, throttle, and the AUX channels on the left, and the receiver settings on the right, with the Channel Map setting circled."
+    },
+    "image348.png": {
+      "file": "channel-map-spektrum.png",
+      "alt": "The Channel Map menu open, with “Spektrum / Graupner / JR (TAER1234)” selected. The other choices are Default and FrSky / Futaba / Hitec (AETR1234)."
+    },
+    "image151.png": {
+      "file": "receiver-mode-serial.png",
+      "alt": "Receiver settings: Receiver Mode is Serial (via UART) and Serial Receiver Provider is SPEKTRUM SRXL2. A note says the receiver’s UART must be set to Serial Rx in the Ports tab."
+    },
+    "image339.png": {
+      "file": "receiver-settings-all.png",
+      "alt": "All of the receiver settings: Serial (via UART); SPEKTRUM SRXL2; telemetry on; RSSI_ADC off; channel map TAER1234; RSSI channel disabled; stick low threshold 1160, center 1500, and high threshold 1830; deadbands 0, 0, and 50; and RC smoothing on, with automatic cutoffs and an auto factor of 30."
+    },
+    "image383.png": {
+      "file": "receiver-throttle.png",
+      "alt": "Receiver channel bars with Throttle circled. Throttle reads 1778 while roll, pitch, and yaw sit near 1500."
+    },
+    "image414.png": {
+      "file": "receiver-yaw.png",
+      "alt": "Receiver channel bars with Yaw circled. Yaw reads 1161 with the left stick pushed to one side."
+    },
+    "image253.png": {
+      "file": "receiver-pitch.png",
+      "alt": "Receiver channel bars with Pitch circled."
+    },
+    "image336.png": {
+      "file": "receiver-roll.png",
+      "alt": "Receiver channel bars with Roll circled."
+    },
+    "image61.jpg": {
+      "file": "transmitter-switch-a.jpg",
+      "alt": "A wooden pointer shows switch A on the top left of the DX6e transmitter."
+    },
+    "image291.jpg": {
+      "file": "transmitter-switch-d.jpg",
+      "alt": "A wooden pointer shows switch D on the top right of the DX6e transmitter, above the right stick."
+    },
+    "image109.png": {
+      "file": "aux-channels.png",
+      "alt": "Betaflight’s AUX 1 bar reads 1159 and its AUX 2 bar reads 1841."
+    },
+    "image333.jpg": {
+      "file": "transmitter-function-list.jpg",
+      "alt": "The DX6e Function List with Control Setup highlighted, above D/R and Expo, Motor Cut, Motor Curve, Analog Switch Setup, and Digital Switch Setup."
+    },
+    "image187.jpg": {
+      "file": "transmitter-quad-channels.jpg",
+      "alt": "The DX6e Sub Trim screen for a quadcopter, with channels named ALT, ROL, PIT, YAW, GER, and AX1."
+    },
+    "image431.png": {
+      "file": "betaflight-modes-tab.png",
+      "alt": "Betaflight’s Modes tab: a list of modes (ARM, ANGLE, HORIZON, HEADFREE, FAILSAFE, and HEADADJ), each with an Add Range button."
+    },
+    "image4.png": {
+      "file": "arm-add-range.png",
+      "alt": "The ARM mode box with its Add Range button circled."
+    },
+    "image266.png": {
+      "file": "arm-range-added.png",
+      "alt": "The ARM mode with a new range. The channel menu reads AUTO, and a yellow range from 1300 to 1700 sits on a slider marked from 900 to 2100."
+    },
+    "image367.png": {
+      "file": "arm-channel-aux1.png",
+      "alt": "The ARM range’s channel menu open, with AUX 1 selected from AUTO and AUX 1 through AUX 19."
+    },
+    "image324.png": {
+      "file": "arm-switch-marker.png",
+      "alt": "The Modes tab with the ARM box shown in red as “ARM (DISABLED).” The small yellow channel marker, circled, sits near 1850, outside the yellow range from 1300 to 1700."
+    },
+    "image226.png": {
+      "file": "arm-range-switch-down.png",
+      "alt": "The ARM range moved to 1100–1225. With switch A down, the yellow marker, circled, sits inside the range."
+    },
+    "image69.png": {
+      "file": "arm-range-switch-up.png",
+      "alt": "With switch A up, the ARM box is red and the yellow marker, circled, sits near 1850, outside the 1100–1225 range."
+    },
+    "image392.png": {
+      "file": "arm-save.png",
+      "alt": "The yellow Save button at the bottom right of the Modes tab."
+    },
+    "image103.png": {
+      "file": "angle-add-range.png",
+      "alt": "The ANGLE mode box with its Add Link and Add Range buttons."
+    },
+    "image105.png": {
+      "file": "angle-range-added.png",
+      "alt": "The Modes tab with two ranges: ARM on AUX 1 from 1100 to 1225, and a new ANGLE range on AUTO from 1300 to 1700."
+    },
+    "image322.png": {
+      "file": "angle-channel-aux2.png",
+      "alt": "The ANGLE range’s channel menu open, with AUX 2 selected."
+    },
+    "image237.png": {
+      "file": "angle-full-range.png",
+      "alt": "The ANGLE range on AUX 2 stretched across the whole slider, from 900 to 2100, so Angle mode is always on."
+    },
+    "image192.png": {
+      "file": "angle-save.png",
+      "alt": "The yellow Save button at the bottom right of the Modes tab."
+    },
+    "image364.png": {
+      "file": "betaflight-motors-tab.png",
+      "alt": "Betaflight’s Motors tab: the mixer set to QUAD X with a motor diagram, ESC and motor settings, a motor graph, sliders for motors 1 to 8 and a master slider, and a yellow motor test warning."
+    },
+    "image354.png": {
+      "file": "motor-test-warning.png",
+      "alt": "The Motor Test Mode / Arming Notice: “WARNING: Serious risk of injury! Remove all propellers!” It warns that motors spin up when armed or when the sliders are raised, that test mode stays active in other tabs, that pressing a key stops the motors only in the Motors tab, and that unplugging the USB cable may not stop them. A switch reads “I understand the risks, the propellers are removed.”"
+    },
+    "image242.jpg": {
+      "file": "battery-connected.jpg",
+      "alt": "Top view of the quadcopter on a cutting mat, without propellers, with a LiPo battery strapped to the frame and plugged in."
+    },
+    "image89.png": {
+      "file": "motor-test-sliders.png",
+      "alt": "Motor sliders 1 to 8 and a master slider, all at 1000, above the motor test notice with the “I understand the risks” switch turned on."
+    },
+    "image245.png": {
+      "file": "motor-1-test.png",
+      "alt": "Motor test sliders: motor 1 raised to 1404 while motors 2, 3, and 4 stay at 1000."
+    },
+    "image11.png": {
+      "file": "quad-x-motor-directions.png",
+      "alt": "Betaflight’s top-view diagram of a quad X frame, with a red arrow pointing forward. Motor 1 at the rear right and motor 4 at the front left spin clockwise. Motor 2 at the front right and motor 3 at the rear left spin counterclockwise."
+    },
+    "image218.png": {
+      "file": "motor-2-test.png",
+      "alt": "Motor test sliders: motor 2 raised to 1404 while motors 1, 3, and 4 stay at 1000."
+    },
+    "image408.png": {
+      "file": "motor-3-test.png",
+      "alt": "Motor test sliders: motor 3 raised to 1421 while motors 1, 2, and 4 stay at 1000."
+    },
+    "image321.png": {
+      "file": "motor-4-test.png",
+      "alt": "Motor test sliders: motor 4 raised to 1421 while motors 1, 2, and 3 stay at 1000."
+    },
+    "image101.png": {
+      "file": "propeller-directions.jpg",
+      "alt": "Top view of a quadcopter with yellow three-blade propellers, front at the top. Arrows show the front-left and rear-right motors spinning counterclockwise and the front-right and rear-left motors spinning clockwise. The clockwise propellers are marked 5042R. Close-ups in the corners show each blade’s angle of attack, and a note reads “Must check all props rotation direction before take off!”",
+      "caption": "Each propeller’s pitch must match its motor’s direction. This quadcopter uses reversed (“props out”) directions, the mirror image of the Betaflight default used in this chapter. On your quadcopter, match each propeller to the direction you checked in the Motors tab."
     }
   }
 }

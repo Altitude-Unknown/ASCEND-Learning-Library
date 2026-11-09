@@ -1,0 +1,285 @@
+---
+{
+  "layout": "layouts/textbook-chapter.njk",
+  "tags": [],
+  "eleventyExcludeFromCollections": true,
+  "topic": "uas",
+  "courseId": "buildMultirotor",
+  "title": "Chapter 5: Building a Multirotor Aircraft",
+  "description": "How multirotors fly, the flight controller stack (flight controller, ESC, motors, and receiver), and setting up a quadcopter in Betaflight: receiver, arming, Angle mode, motor direction, and propellers.",
+  "chapterNumber": 5,
+  "textbookEyebrow": "REMOTE AND AUTONOMOUS AIRCRAFT SYSTEMS · WEB EDITION",
+  "sourceNote": "From Mike Walach’s lab manual, Remote and Autonomous Aircraft Systems. Original wording is retained with small corrections; image descriptions have been added for web reading.",
+  "headerLinks": [
+    {
+      "title": "About the lab manual",
+      "url": "/resources/remote-aircraft-textbook/"
+    }
+  ],
+  "toc": [
+    {
+      "title": "Airframe types",
+      "id": "airframe-types"
+    },
+    {
+      "title": "Flight controller stacks and selection",
+      "id": "flight-controller-stacks-and-selection"
+    },
+    {
+      "title": "— ESCs for multirotors",
+      "id": "escs-for-multirotors"
+    },
+    {
+      "title": "— Motors for multirotors",
+      "id": "motors-for-multirotors"
+    },
+    {
+      "title": "— Receivers for multirotors",
+      "id": "receivers-for-multirotors"
+    },
+    {
+      "title": "Basic setup in Betaflight",
+      "id": "basic-setup-in-betaflight"
+    },
+    {
+      "title": "— Download and install Betaflight",
+      "id": "download-and-install-betaflight"
+    },
+    {
+      "title": "— Connect your aircraft to Betaflight",
+      "id": "connect-your-aircraft-to-betaflight"
+    },
+    {
+      "title": "— Calibrate the accelerometer in Betaflight",
+      "id": "calibrate-the-accelerometer-in-betaflight"
+    },
+    {
+      "title": "— Binding your transmitter to your receiver",
+      "id": "binding-your-transmitter-to-your-receiver"
+    },
+    {
+      "title": "— Setting up a receiver in Betaflight",
+      "id": "setting-up-a-receiver-in-betaflight"
+    },
+    {
+      "title": "— Setting up modes in Betaflight",
+      "id": "setting-up-modes-in-betaflight"
+    },
+    {
+      "title": "— Adding an ARM switch in Betaflight",
+      "id": "adding-an-arm-switch-in-betaflight"
+    },
+    {
+      "title": "— Setting Angle mode in Betaflight (stabilized flight)",
+      "id": "setting-angle-mode-in-betaflight-stabilized-flight"
+    },
+    {
+      "title": "— Checking the motor direction in Betaflight",
+      "id": "checking-the-motor-direction-in-betaflight"
+    },
+    {
+      "title": "— Attaching propellers (rotors) to your quadcopter",
+      "id": "attaching-propellers-rotors-to-your-quadcopter"
+    }
+  ],
+  "permalink": "/build-multirotor/textbook/building-a-multirotor-aircraft/"
+}
+---
+<figure class="textbook-figure"><a href="/assets/build-multirotor/fpv-quadcopter.jpg"><img src="/assets/build-multirotor/fpv-quadcopter.jpg" alt="A five-inch FPV quadcopter with a carbon-fiber X frame, purple and yellow 3D-printed parts, a camera at the front, an antenna pointing up at the back, and gray three-blade propellers on four brushless motors." width="1292" height="763" loading="lazy"></a><figcaption><p>A quadcopter, the most common multirotor aircraft.</p></figcaption></figure>
+<h2 id="airframe-types">Airframe types</h2>
+<p>When most people hear the word “drone” they think of quadcopters. As you know if you made it this far through the book, drones can mean any number of remote and/or autonomous aircraft. This section will focus mainly on quadcopters as they are the most common, however other configurations will be touched on lightly as well.</p>
+<p>Rotary wing aircraft have many advantages. They are called rotary-wing because the wing on these aircraft is powered and rotates to create lift. Therefore, the propeller or rotor on rotary-wing aircraft is really just a rotating wing. They can take off and land in a small space, they don’t need runways, and they can stop and hover in one spot. They are great for inspecting things that need a lot of different camera angles, or have tight spaces that an aircraft needs to maneuver into. With the help of automation they are much easier to fly than fixed wing aircraft. The downside of multirotor aircraft, such as quadcopters, is that they drain batteries 4 times as fast. The trainer airplane from chapter 4 can fly for 7 minutes on a 1500 mAh 3-cell battery. A quadcopter running the same motors will drain that same battery in 1 minute and 45 seconds! Quadcopters inherently have less endurance than airplanes as they have 4 motors generating thrust and lift rather than a single motor and a long efficient wing like an airplane would have.</p>
+<p>The quadcopter is arguably the aircraft that started the “drone revolution”. The magic in the quadcopter is that there are no moving parts other than the 4 motors. Before quadcopters, we had helicopters. Therefore, let’s take a look at how a helicopter works so that we can appreciate why a quadcopter is so special.</p>
+<figure class="textbook-figure"><a href="/assets/build-multirotor/single-rotor-helicopter.jpg"><img src="/assets/build-multirotor/single-rotor-helicopter.jpg" alt="A scale RC model of a U.S. Army Black Hawk helicopter in olive green, with a four-blade main rotor on top and a small tail rotor at the end of the tail boom." width="1600" height="877" loading="lazy"></a><figcaption><p>A traditional helicopter: a main rotor for lift and a tail rotor to counter its torque.</p></figcaption></figure>
+<p>A helicopter has a main rotor blade that rotates to provide lift. Adjusting the pitch of the main rotor blades causes them to grab a larger bite of air and the helicopter goes up (On some RC helicopters they achieve lift by increasing the main rotor speed rather than the pitch). The main rotor blades are also on a gimbal that allows them to tilt side to side and front to back. This tilt allows for roll and pitch movement of the aircraft. Already, you can see that there are a lot of mechanical systems that need to work together with a lot of potential points of failure! Next, there is the problem of torque. As the main rotor blade rotates in one direction, a reverse force is applied to the helicopter (Newton’s 3rd law of motion; for every action, there is an equal and opposite reaction). What this means is that once a helicopter lifts off the ground, the helicopter would start to spin around in the direction opposite to the rotation of the main rotor blades, unless there was some opposing force to prevent this. To solve this problem, another propeller is added to the tail of the helicopter. It too can have its pitch adjusted to increase or decrease the amount of pushing force to counter the main rotor torque (on many RC helicopters this is done by increasing or decreasing tail rotor speed rather than pitch). Again, you can see that we have added even more complexity. If you have ever tried to fly a remote control helicopter, even if only in a simulator, you probably noticed how hard they are to fly. A true helicopter that functions as described above takes control movements from both hands all the time to maintain controlled flight. In the RC world however, there have been some innovations to make helicopters easier to fly.</p>
+<p>Counter rotating blades are an ingenious way to solve the torque problem. The main single rotor and gimbal system are replaced by two rotors that rotate opposite each other. Below are two different examples of counter rotating blades.</p>
+<figure class="textbook-figure"><a href="/assets/build-multirotor/coaxial-helicopter.jpg"><img src="/assets/build-multirotor/coaxial-helicopter.jpg" alt="A red and silver toy RC helicopter with two stacked main rotors on one shaft and a small horizontal propeller at the end of its tail." width="1376" height="736" loading="lazy"></a><figcaption><p>Stacked counter-rotating rotors, with a horizontal tail rotor for pitch.</p></figcaption></figure>
+<figure class="textbook-figure"><a href="/assets/build-multirotor/tandem-rotor-helicopter.jpg"><img src="/assets/build-multirotor/tandem-rotor-helicopter.jpg" alt="An olive-green toy RC model of a Chinook-style cargo helicopter with two stacked pairs of rotors, one pair at the front and one at the back." width="1600" height="834" loading="lazy"></a><figcaption><p>Two stacked pairs of counter-rotating rotors, front and rear.</p></figcaption></figure>
+<p>The red and black helicopter on the left uses stacked counter rotating blades to cancel out the torque. Yaw control is achieved by speeding up and/or slowing down just one rotor creating a yaw motion either left or right. Pitch control is achieved by the tail rotor being mounted horizontally. It spins one direction to pitch forward and the other to pitch backwards. There is no roll control on this helicopter so it is a 3 channel helicopter (throttle, pitch, yaw). The green helicopter on the right also uses two rotor blades to cancel out torque. This one however has four rotor blades. Two stacked in the front and two stacked in the rear. As with the red helicopter speeding up or slowing down only one rotor will cause a yaw motion left or right. In this case however it would need to be both top rotors or both bottom rotors. If just the front rotors or just the rear rotors are sped up or slowed down the helicopter will pitch forward or backwards. This helicopter is also a 3 channel helicopter with throttle, pitch, yaw and no roll control. These are both relatively easy to fly and are good for beginners that want to learn to fly helicopters. They do teach some bad habits however as they don’t have roll control so the transition to a standard 4 channel helicopter might still be a bit of a learning curve. If the yaw and throttle are on the left stick and only pitch is on the right it will build good habits. However, yaw is often put on the right stick which is the incorrect location for a 4 channel helicopter that will have roll control on the right stick and yaw on the left. The quadcopter solves the mechanical complexity of the traditional helicopter in a very clever way. Using only motor speed.</p>
+<figure class="textbook-figure"><a href="/assets/build-multirotor/micro-quadcopter.jpg"><img src="/assets/build-multirotor/micro-quadcopter.jpg" alt="A small quadcopter with a flat carbon-fiber frame, a tiny camera on a red mount at the front, and four small motors with white two-blade propellers." width="628" height="472" loading="lazy"></a><figcaption><p>A quadcopter controls pitch, roll, yaw, and throttle with motor speed alone.</p></figcaption></figure>
+<p>The quadcopter is a big improvement on the simplicity of design. As it only has 4 motors to control pitch, yaw, roll, and throttle, automation is much easier. A quadcopter has two motors that spin clockwise and two motors that spin counterclockwise. The propellers on these motors are pitched differently so that they all generate thrust downward regardless of motor rotation direction. Speed up all four motors and the quadcopter goes up. Slow all four down and the quadcopter goes down. Speed up the rear two and/or slow down the front two motors and the quadcopter pitches forward. Speed up the front two motors and/or slow down the rear two motors and the quadcopter pitches backwards. Speed up the left two motors and/or slow down the right two motors and the quadcopter rolls right. Speed up the right two motors and/or slow down the left two motors and the quadcopter rolls left. Speed up two diagonal motors and/or slow down the opposite diagonal motors and the quadcopter yaws one way, reverse and the quadcopter yaws the other direction. Everything is simply controlled by motor speed. No gimbals, no pitch changes, just simple speed control. Adding automation to a system like this is much easier than trying to automate a heavily mechanical system such as the helicopters discussed earlier. Now let&#x27;s take a look at the hardware required to build a quadcopter.</p>
+<figure class="textbook-figure"><a href="/assets/build-multirotor/quad-x-motors-reversed.png"><img src="/assets/build-multirotor/quad-x-motors-reversed.png" alt="Betaflight’s top-view diagram of a quad X frame, with a red arrow pointing forward. Motors are numbered 1 at the rear right, 2 at the front right, 3 at the rear left, and 4 at the front left. Orange arrows show motors 1 and 4 spinning counterclockwise and motors 2 and 3 spinning clockwise. A red label reads “reversed.”" width="320" height="320" loading="lazy"></a><figcaption><p>Motor numbers and spin directions on a quad X with the motor direction reversed (“props out”). The setup later in this chapter uses Betaflight’s default directions instead: motors 1 and 4 clockwise, motors 2 and 3 counterclockwise.</p></figcaption></figure>
+<h2 id="flight-controller-stacks-and-selection">Flight controller stacks and selection</h2>
+<p>A quadcopter will need a flight controller to help with the control of the quadcopter. While it is possible to fly a quadcopter without any automation (and many expert fliers do), it is far easier to have some assistance. A flight controller is a small single chip computer and IMU (Inertial Measurement Unit) sensors to detect what the aircraft is doing in space. Most IMU sensors can detect pitch, roll, and yaw, and generate the correct control inputs to keep the aircraft level and stable. The flight controller pictured below can be used to control a quadcopter but can also help connect and power an FPV (first-person view) camera and other accessories. The USB connector allows connection to a computer to change settings in a configurator software such as Betaflight.</p>
+<figure class="textbook-figure"><a href="/assets/build-multirotor/flight-controller.jpg"><img src="/assets/build-multirotor/flight-controller.jpg" alt="Top view of a SpeedyBee F405 V4 flight controller: a square black circuit board with a mounting hole in each corner, a processor chip in the middle, a USB-C port on the right, and rows of labeled solder pads along the top and bottom edges." width="1280" height="1280" loading="lazy"></a><figcaption><p>A flight controller (SpeedyBee F405 V4).</p></figcaption></figure>
+<h3 id="escs-for-multirotors">ESCs for multirotors</h3>
+<p>The same ESCs that are used on airplanes can be used on quadcopters, however there are much cleaner purpose-built ESCs designed specifically for quadcopters, some that even plug directly into the flight controller and form a “stack” as shown below.</p>
+<figure class="textbook-figure"><a href="/assets/build-multirotor/flight-controller-stack.jpg"><img src="/assets/build-multirotor/flight-controller-stack.jpg" alt="A SpeedyBee F405 V4 flight controller stacked on a four-in-one ESC board. Yellow rubber grommets fill the corner mounting holes, large motor solder pads line the ESC board’s edges, the battery pads are at the front, and a multicolored ribbon cable joins the two boards." width="1302" height="1151" loading="lazy"></a><figcaption><p>A flight controller and ESC stack.</p></figcaption></figure>
+<p>The ESC board pictured under the flight controller above has solder connections for 4 motors (two motors on each side) and a power connector for an XT-60 or other connector of your choice. A ribbon cable (pictured on the top of the image) connects the flight controller board to the ESC board. Four mounting holes with soft vibration reducing inserts are provided to mount to a frame.</p>
+<h3 id="motors-for-multirotors">Motors for multirotors</h3>
+<p>The same motors that are used on airplanes can be used on quadcopters. So, if you like to fly both, there is a chance you can share parts between the two depending on the size of each aircraft. Quadcopters mostly use brushless outrunner motors. As with the motors used on airplanes they have three wires per motor. The difference is that most quadcopters will have two forward and two reverse motors. This is not required but does make for a more solid build. The only difference is that the prop nut and bolt on the reverse motors have a reverse thread. This keeps the nut tight during rotation rather than loosening. In the image below the reverse motors have a different color than the forward motors. On most motors black prop nuts are reverse thread and red or silver are forward, but every manufacturer can color them however they want so this may not be consistent.</p>
+<figure class="textbook-figure"><a href="/assets/build-multirotor/forward-and-reverse-motors.jpg"><img src="/assets/build-multirotor/forward-and-reverse-motors.jpg" alt="Four EMAX RS2205 2300 KV brushless motors with red bases. Two have black prop nuts and two have silver prop nuts." width="1000" height="1000" loading="lazy"></a><figcaption><p>Two forward and two reverse motors, told apart by the color of their prop nuts.</p></figcaption></figure>
+<h3 id="receivers-for-multirotors">Receivers for multirotors</h3>
+<figure class="textbook-figure"><a href="/assets/build-multirotor/serial-receiver.jpg"><img src="/assets/build-multirotor/serial-receiver.jpg" alt="A small green Spektrum receiver board with two thin wire antennas and a bind button, beside its connector cable with orange, black, and gray wires." width="1600" height="1600" loading="lazy"></a><figcaption><p>A Spektrum serial receiver and its cable.</p></figcaption></figure>
+<p>The receiver for a multirotor aircraft needs to be able to communicate with a flight controller. This is different from how an aircraft receiver functions in that a multirotor receiver typically does not have connections for servos as an airplane receiver would. A multirotor receiver will receive control signals from the transmitter but it will send those signals to a flight controller using one of the following methods:</p>
+<ul><li>
+SBUS (Futaba/FrSky)
+</li><li>
+iBUS (FlySky)
+</li><li>
+CRSF/ELRS (TBS Crossfire &amp; ExpressLRS)
+</li><li>
+Spektrum SRXL/SRXL2
+</li><li>
+CAN/DroneCAN
+</li></ul>
+<p>Make sure that the receiver that you choose is compatible with the transmitter that you have. Also, make sure that the flight controller that you select is compatible with the receiver you plan to use.</p>
+<h2 id="basic-setup-in-betaflight">Basic setup in Betaflight</h2>
+<figure class="textbook-figure"><a href="/assets/build-multirotor/betaflight-welcome.jpg"><img src="/assets/build-multirotor/betaflight-welcome.jpg" alt="The Betaflight Configurator welcome screen: the Betaflight logo, sponsor logos, and panels about hardware, contributing, and open source. The port menu and the Update Firmware and Connect buttons are at the top right." width="1600" height="1000" loading="lazy"></a></figure>
+<p>Building a quadcopter is mostly about mechanical assembly of the frame and motors, and a little bit of soldering. The part where most people struggle is the setup of their quadcopter’s flight controller. While there are many pieces of software that you could use, the most common is Betaflight. If automation is your end goal, then Mission Planner may be a better option. Betaflight will be discussed here and Mission Planner will be discussed in a later chapter.</p>
+<h3 id="download-and-install-betaflight">Download and install Betaflight</h3>
+<p>In order to work with Betaflight the first step is to download the newest version <a href="https://betaflight.com/">https://betaflight.com/</a>. As software changes often this guide is meant as a basic overview of how it works, however there are well established tutorials and user videos to help with the specifics. Here is a basic walk through of downloading Betaflight:</p>
+<p>On the Betaflight website, click on “Downloads,” then download the “latest release” from the “Betaflight Configurator” section:</p>
+<figure class="textbook-figure"><a href="/assets/build-multirotor/betaflight-downloads-page.png"><img src="/assets/build-multirotor/betaflight-downloads-page.png" alt="The Downloads page of the Betaflight website. The Betaflight Configurator section is circled. It links to the latest release and to the latest version that runs in a web browser." width="1600" height="487" loading="lazy"></a></figure>
+<figure class="textbook-figure"><a href="/assets/build-multirotor/betaflight-latest-release-link.png"><img src="/assets/build-multirotor/betaflight-latest-release-link.png" alt="A close-up of the Betaflight Configurator section of the Downloads page, with the “latest release” link circled." width="895" height="127" loading="lazy"></a></figure>
+<p>If you are unable to install Betaflight on your device you could run it in a web browser as well.</p>
+<p>Once you click on the download link you will be brought to a “GitHub” page. GitHub is a repository for digital files. It allows for version control and a clean and organized way to handle multiple revisions of software files. It can seem confusing at first as there will be lots of notes and version update news. You simply need to scroll down to the bottom of the page and find the download link for your operating system.</p>
+<figure class="textbook-figure"><a href="/assets/build-multirotor/betaflight-github-release.png"><img src="/assets/build-multirotor/betaflight-github-release.png" alt="The GitHub release page for Betaflight Configurator 10.10.0. Its notes list which file to download for each version of Windows, macOS, and Linux." width="1600" height="788" loading="lazy"></a></figure>
+<p>If you scroll all the way to the bottom of the page you will find the “assets” section. This is where all of the download links are. Select the correct link for your operating system. In this example I will be using the “betaflight-configurator_10.10.0_win64-installer.exe”. This version will change often as the software is updated so the version number you see today will likely be different from when I wrote this tutorial.</p>
+<figure class="textbook-figure"><a href="/assets/build-multirotor/betaflight-release-assets.png"><img src="/assets/build-multirotor/betaflight-release-assets.png" alt="The Assets list at the bottom of the GitHub release page: download links for Linux (.rpm, .deb, and portable .zip), Android (.apk), macOS (.dmg), Windows (installer .exe and portable .zip), and the source code." width="605" height="549" loading="lazy"></a></figure>
+<p>Click on the correct link and download the installer software. In most cases if you are on a Windows machine you will use the “betaflight-configurator_10.10.0_win64-installer.exe” link. If you are on a Mac you will use the “betaflight-configurator_10.10.0_macOS.dmg” link.</p>
+<p>Once Betaflight is downloaded, locate the download file in your downloads folder:</p>
+<figure class="textbook-figure"><a href="/assets/build-multirotor/betaflight-installer-download.png"><img src="/assets/build-multirotor/betaflight-installer-download.png" alt="The Windows File Explorer Downloads folder, with the file betaflight-configurator_10.10.0_win64-installer.exe circled." width="930" height="336" loading="lazy"></a></figure>
+<p>Double click on the downloaded file and follow the on-screen prompts to install. Once the installation is complete, open Betaflight. You should see a screen that looks similar to this:</p>
+<figure class="textbook-figure"><a href="/assets/build-multirotor/betaflight-installed.png"><img src="/assets/build-multirotor/betaflight-installed.png" alt="The Betaflight Configurator window open on Windows, showing the welcome screen." width="1042" height="631" loading="lazy"></a></figure>
+<p>If you made it this far, you have successfully installed Betaflight!</p>
+<p>Next, we will connect to our quadcopter. You will need the following materials:</p>
+<ul><li>
+A computer with “Betaflight Configurator” installed
+</li><li>
+USB-C cable
+</li><li>
+Quadcopter with flight controller/ESC stack installed
+</li><li>
+8 mm socket, wrench or nut driver
+</li><li>
+3-cell LiPo battery 1500 mAh or higher
+</li><li>
+Transmitter
+</li><li>
+Receiver installed on Quadcopter
+</li></ul>
+<figure class="textbook-figure"><a href="/assets/build-multirotor/setup-materials.jpg"><img src="/assets/build-multirotor/setup-materials.jpg" alt="Materials laid out on a cutting mat: a carbon-fiber quadcopter in a foam-lined case, a nut driver, a Spektrum DX6e transmitter, four black three-blade propellers, a USB-C cable, and a 1500 mAh LiPo battery." width="1600" height="1200" loading="lazy"></a></figure>
+<h3 id="connect-your-aircraft-to-betaflight">Connect your aircraft to Betaflight</h3>
+<p>Connect a USB-C cable from your computer to your Quadcopter as shown here:</p>
+<ul class="parts-grid">
+<li><figure class="part-card"><a href="/assets/build-multirotor/flight-controller-usb-port.jpg"><img src="/assets/build-multirotor/flight-controller-usb-port.jpg" alt="Close-up of the flight controller stack inside the quadcopter frame, between red standoffs, with its USB-C port facing out." width="1600" height="1200" loading="lazy"></a></figure></li>
+<li><figure class="part-card"><a href="/assets/build-multirotor/usb-cable-connected.jpg"><img src="/assets/build-multirotor/usb-cable-connected.jpg" alt="A USB-C cable plugged into the flight controller’s USB port inside the frame." width="1600" height="1200" loading="lazy"></a></figure></li>
+</ul>
+<p>Once you have connected your USB-C cable, click the connect button in Betaflight.</p>
+<figure class="textbook-figure"><a href="/assets/build-multirotor/betaflight-connect-button.png"><img src="/assets/build-multirotor/betaflight-connect-button.png" alt="The top right of Betaflight Configurator. The port menu shows COM14 – SpeedyBeeF405V3, and the Connect button is circled." width="703" height="196" loading="lazy"></a></figure>
+<p>You should now see a screen that looks something like this:</p>
+<figure class="textbook-figure"><a href="/assets/build-multirotor/betaflight-setup-tab.png"><img src="/assets/build-multirotor/betaflight-setup-tab.png" alt="Betaflight’s Setup tab after connecting: buttons to calibrate the accelerometer and reset settings at the top, a 3D model of the quadcopter in the middle, and instrument, GPS, system, and sensor panels on the right." width="1600" height="838" loading="lazy"></a></figure>
+<p>As you move your quadcopter around you should see the animation of your quadcopter move on the screen. The directions that the animation moves might not match the actual directions you are moving the real world quad. This will be fixed in the next section as you begin to calibrate and adjust your aircraft.</p>
+<figure class="textbook-figure"><a href="/assets/build-multirotor/betaflight-3d-model.png"><img src="/assets/build-multirotor/betaflight-3d-model.png" alt="Betaflight’s 3D model of the quadcopter seen from above at an angle, with red propellers on one end, green propellers on the other, and a green arrow on the frame." width="845" height="603" loading="lazy"></a></figure>
+<h3 id="calibrate-the-accelerometer-in-betaflight">Calibrate the accelerometer in Betaflight</h3>
+<p>Next, you will calibrate your accelerometer. The accelerometer helps the quadcopter “feel” its orientation in space as it is moved about. To calibrate the accelerometer, place the quadcopter on a flat level surface and don’t move it. Then click the “Calibrate Accelerometer” button as shown below:</p>
+<figure class="textbook-figure"><a href="/assets/build-multirotor/calibrate-accelerometer.png"><img src="/assets/build-multirotor/calibrate-accelerometer.png" alt="The Setup tab with the Calibrate Accelerometer button circled. The note beside it reads “Place board or frame on leveled surface, proceed with calibration, ensure platform is not moving during calibration period.” Yaw, pitch, and roll readings are shown below." width="943" height="379" loading="lazy"></a></figure>
+<p>The calibration should only take a few seconds. Once this is complete you will move on to connecting the quadcopter to a transmitter. For this part you will need a transmitter and a receiver that are both using the same protocol. In this example we will be using a Spektrum transmitter and receiver using DSMX protocol. The protocol is the “language” that the transmitter and receiver speak. If you have a mismatch in transmitter receiver protocol, you will not be able to get the two to connect.</p>
+<h3 id="binding-your-transmitter-to-your-receiver">Binding your transmitter to your receiver</h3>
+<p>On your transmitter, set up a new aircraft and make it a “Quadcopter”. If you don’t know how to do this, read “<a href="/uas-hardware/textbook/hardware-and-electronics/#setting-up-a-new-aircraft">Setting up a new aircraft</a>” in Chapter 2, then return here. Make sure you have the correct aircraft selected on your transmitter, then power off the transmitter.</p>
+<figure class="textbook-figure"><a href="/assets/build-multirotor/transmitter-quad-model.jpg"><img src="/assets/build-multirotor/transmitter-quad-model.jpg" alt="A Spektrum DX6e transmitter whose screen shows model 4, “Quad,” in Flight Mode 1, with a quadcopter icon." width="1600" height="1200" loading="lazy"></a></figure>
+<p>On your quadcopter, locate the receiver. On the receiver locate the “bind” button. Press the bind button and it should begin to flash.</p>
+<ul class="parts-grid">
+<li><figure class="part-card"><a href="/assets/build-multirotor/receiver-bind-button.jpg"><img src="/assets/build-multirotor/receiver-bind-button.jpg" alt="A wooden stick presses the small bind button on the Spektrum receiver." width="480" height="640" loading="lazy"></a></figure></li>
+<li><figure class="part-card"><a href="/assets/build-multirotor/receiver-bind-press.jpg"><img src="/assets/build-multirotor/receiver-bind-press.jpg" alt="A finger presses the bind button on the receiver." width="480" height="640" loading="lazy"></a></figure></li>
+<li><figure class="part-card"><a href="/assets/build-multirotor/receiver-bind-light.png"><img src="/assets/build-multirotor/receiver-bind-light.png" alt="The Spektrum receiver after its bind button is pressed. Its orange light flashes." width="640" height="480" loading="lazy"></a><figcaption><p><a href="/assets/build-multirotor/receiver-bind-light.gif">Open the animation</a></p></figcaption></figure></li>
+</ul>
+<p>While holding the “bind” button on your transmitter turn the transmitter on.</p>
+<ul class="parts-grid">
+<li><figure class="part-card"><a href="/assets/build-multirotor/transmitter-bind-switch.jpg"><img src="/assets/build-multirotor/transmitter-bind-switch.jpg" alt="A thumb holds the Bind switch on the top left of the Spektrum DX6e transmitter." width="480" height="640" loading="lazy"></a></figure></li>
+<li><figure class="part-card"><a href="/assets/build-multirotor/transmitter-bind-power-on.jpg"><img src="/assets/build-multirotor/transmitter-bind-power-on.jpg" alt="The Bind switch held down from another angle while the transmitter is switched on." width="480" height="640" loading="lazy"></a></figure></li>
+</ul>
+<p>If you see the message “Binding DSMX 22ms” then you have successfully bound your transmitter to your receiver. If you get a “Bind Failed” message unplug and replug the USB cable into your quadcopter to reset its power, then turn off your Transmitter and try to bind again. If the transmitter and receiver are too close together the bind will fail so you may need to move about 1 meter (3 feet) away from the quad to properly bind to it.</p>
+<figure class="textbook-figure"><a href="/assets/build-multirotor/transmitter-binding-screen.jpg"><img src="/assets/build-multirotor/transmitter-binding-screen.jpg" alt="The DX6e screen during binding: “BIND, 4: Quad, Binding DSMX 22ms.”" width="480" height="640" loading="lazy"></a></figure>
+<p>Once your quadcopter is connected to your transmitter you need to make sure the controls all move in the correct direction. Start by clicking on the &quot;Receiver&quot; tab on the left hand side of your screen in the Betaflight software.</p>
+<figure class="textbook-figure"><a href="/assets/build-multirotor/betaflight-receiver-tab.png"><img src="/assets/build-multirotor/betaflight-receiver-tab.png" alt="Betaflight’s menu with the Receiver tab highlighted, below Setup, Ports, Configuration, Power &amp; Battery, Presets, and PID Tuning." width="346" height="338" loading="lazy"></a></figure>
+<p class="notice"><strong>Safety check</strong>Make sure that you do NOT have any propellers or a battery connected to your quadcopter at this time! If you do, you could cause extreme injury to yourself or others!</p>
+<h3 id="setting-up-a-receiver-in-betaflight">Setting up a receiver in Betaflight</h3>
+<p>First, check that the “Channel Map” is set correctly for your transmitter.</p>
+<figure class="textbook-figure"><a href="/assets/build-multirotor/betaflight-receiver-settings.png"><img src="/assets/build-multirotor/betaflight-receiver-settings.png" alt="The Receiver tab: channel bars for roll, pitch, yaw, throttle, and the AUX channels on the left, and the receiver settings on the right, with the Channel Map setting circled." width="1600" height="860" loading="lazy"></a></figure>
+<p>If you are using a Spektrum transmitter you should have the following option selected:</p>
+<figure class="textbook-figure"><a href="/assets/build-multirotor/channel-map-spektrum.png"><img src="/assets/build-multirotor/channel-map-spektrum.png" alt="The Channel Map menu open, with “Spektrum / Graupner / JR (TAER1234)” selected. The other choices are Default and FrSky / Futaba / Hitec (AETR1234)." width="581" height="117" loading="lazy"></a></figure>
+<p>Next, make sure your receiver is set correctly. A Spektrum Receiver should have these settings:</p>
+<figure class="textbook-figure"><a href="/assets/build-multirotor/receiver-mode-serial.png"><img src="/assets/build-multirotor/receiver-mode-serial.png" alt="Receiver settings: Receiver Mode is Serial (via UART) and Serial Receiver Provider is SPEKTRUM SRXL2. A note says the receiver’s UART must be set to Serial Rx in the Ports tab." width="834" height="182" loading="lazy"></a></figure>
+<p>Here is a snapshot of all of the settings I have on my quadcopter in Betaflight under the Receiver section:</p>
+<figure class="textbook-figure"><a href="/assets/build-multirotor/receiver-settings-all.png"><img src="/assets/build-multirotor/receiver-settings-all.png" alt="All of the receiver settings: Serial (via UART); SPEKTRUM SRXL2; telemetry on; RSSI_ADC off; channel map TAER1234; RSSI channel disabled; stick low threshold 1160, center 1500, and high threshold 1830; deadbands 0, 0, and 50; and RC smoothing on, with automatic cutoffs and an auto factor of 30." width="857" height="784" loading="lazy"></a></figure>
+<p>Next, start by checking that the “throttle” control moves correctly. On your transmitter push the left stick all the way forward then all the way back and make sure that the colored slider labeled “Throttle” moves.</p>
+<figure class="textbook-figure"><a href="/assets/build-multirotor/receiver-throttle.png"><img src="/assets/build-multirotor/receiver-throttle.png" alt="Receiver channel bars with Throttle circled. Throttle reads 1778 while roll, pitch, and yaw sit near 1500." width="840" height="105" loading="lazy"></a></figure>
+<p>Next, move the left stick all the way left then all the way right. You should see the “yaw” colored slider move. The animation in Betaflight should show the quadcopter moving along its yaw (left right) axis.</p>
+<figure class="textbook-figure"><a href="/assets/build-multirotor/receiver-yaw.png"><img src="/assets/build-multirotor/receiver-yaw.png" alt="Receiver channel bars with Yaw circled. Yaw reads 1161 with the left stick pushed to one side." width="840" height="95" loading="lazy"></a></figure>
+<p>Now, move the right control stick all the way forward, then all the way back. You should see the “pitch” colored slider move. The animation in Betaflight should show the quadcopter moving along its pitch (nose up/down) axis.</p>
+<figure class="textbook-figure"><a href="/assets/build-multirotor/receiver-pitch.png"><img src="/assets/build-multirotor/receiver-pitch.png" alt="Receiver channel bars with Pitch circled." width="840" height="95" loading="lazy"></a></figure>
+<p>Finally, move the right control stick all the way left then all the way right. You should see the “Roll” colored slider move. The animation in Betaflight should show the quadcopter moving along its roll axis.</p>
+<figure class="textbook-figure"><a href="/assets/build-multirotor/receiver-roll.png"><img src="/assets/build-multirotor/receiver-roll.png" alt="Receiver channel bars with Roll circled." width="840" height="100" loading="lazy"></a></figure>
+<p>You will also need to make sure that you have switches on your transmitter that can transmit. Not all of the switches on your transmitter necessarily transmit. Some switches are only used internally to the transmitter. On the Spektrum DX6e switches “A” and “D” both transmit. They are located here:</p>
+<ul class="parts-grid">
+<li><figure class="part-card"><a href="/assets/build-multirotor/transmitter-switch-a.jpg"><img src="/assets/build-multirotor/transmitter-switch-a.jpg" alt="A wooden pointer shows switch A on the top left of the DX6e transmitter." width="480" height="640" loading="lazy"></a></figure></li>
+<li><figure class="part-card"><a href="/assets/build-multirotor/transmitter-switch-d.jpg"><img src="/assets/build-multirotor/transmitter-switch-d.jpg" alt="A wooden pointer shows switch D on the top right of the DX6e transmitter, above the right stick." width="480" height="640" loading="lazy"></a></figure></li>
+</ul>
+<p>Switch “A” controls “AUX 1” and Switch “D” controls “AUX 2”.</p>
+<figure class="textbook-figure"><a href="/assets/build-multirotor/aux-channels.png"><img src="/assets/build-multirotor/aux-channels.png" alt="Betaflight’s AUX 1 bar reads 1159 and its AUX 2 bar reads 1841." width="821" height="43" loading="lazy"></a></figure>
+<p>Once you have a working transmitter receiver, you need to make sure that the control directions are correct. When you push your left stick left, the quadcopter in the animation should turn left. When you push the left stick right the animation should yaw right. If this is backwards, then you need to reverse the “Yaw” channel on your transmitter. If you do not know how to reverse control directions in your transmitter, review “<a href="/uas-hardware/textbook/hardware-and-electronics/#reverse-a-servo-travel-sub-trim-or-direction">Reverse a servo travel, sub trim, or direction</a>” in Chapter 2, then return here. Note that the only differences in the menus are that “Servo Setup” is called “Control Setup” and “THR, AIL, ELE, RUD” (Throttle, Aileron, Elevator, Rudder) are called “ALT, ROL, PIT, YAW” (Altitude, Roll, Pitch, Yaw) as shown below.</p>
+<ul class="parts-grid">
+<li><figure class="part-card"><a href="/assets/build-multirotor/transmitter-function-list.jpg"><img src="/assets/build-multirotor/transmitter-function-list.jpg" alt="The DX6e Function List with Control Setup highlighted, above D/R and Expo, Motor Cut, Motor Curve, Analog Switch Setup, and Digital Switch Setup." width="640" height="480" loading="lazy"></a></figure></li>
+<li><figure class="part-card"><a href="/assets/build-multirotor/transmitter-quad-channels.jpg"><img src="/assets/build-multirotor/transmitter-quad-channels.jpg" alt="The DX6e Sub Trim screen for a quadcopter, with channels named ALT, ROL, PIT, YAW, GER, and AX1." width="640" height="480" loading="lazy"></a></figure></li>
+</ul>
+<p>Now push the right stick left and right. The animation in Betaflight should show the quadcopter rolling left and right. If the left and right roll are reversed, repeat the steps above for the “Roll” axis. Finally check the pitch axis by pressing the right control stick forward and back. The nose should pitch forward (down) as the right stick is pushed forward and the nose should come up as the right stick is pulled back. Again, if this is backwards you need to go into the control settings and reverse this axis.</p>
+<h3 id="setting-up-modes-in-betaflight">Setting up modes in Betaflight</h3>
+<p>Modes are settings that affect the behavior of your aircraft. At a bare minimum you will want to be able to “ARM” your aircraft and change its flight mode. In the beginning of your flying progression you will want an easy self-stabilizing flight mode so this section will show you how to set up arming and a stable flight mode.</p>
+<p>Navigate to the “Modes” tab in Betaflight:</p>
+<figure class="textbook-figure"><a href="/assets/build-multirotor/betaflight-modes-tab.png"><img src="/assets/build-multirotor/betaflight-modes-tab.png" alt="Betaflight’s Modes tab: a list of modes (ARM, ANGLE, HORIZON, HEADFREE, FAILSAFE, and HEADADJ), each with an Add Range button." width="1600" height="845" loading="lazy"></a></figure>
+<h3 id="adding-an-arm-switch-in-betaflight">Adding an ARM switch in Betaflight</h3>
+<p>Start by clicking the “add range” button next to “Arm” as shown below:</p>
+<figure class="textbook-figure"><a href="/assets/build-multirotor/arm-add-range.png"><img src="/assets/build-multirotor/arm-add-range.png" alt="The ARM mode box with its Add Range button circled." width="227" height="151" loading="lazy"></a></figure>
+<p>Your screen should now look like this:</p>
+<figure class="textbook-figure"><a href="/assets/build-multirotor/arm-range-added.png"><img src="/assets/build-multirotor/arm-range-added.png" alt="The ARM mode with a new range. The channel menu reads AUTO, and a yellow range from 1300 to 1700 sits on a slider marked from 900 to 2100." width="1600" height="100" loading="lazy"></a></figure>
+<p>Now, click on the drop down menu and change “auto” to “AUX 1” as shown:</p>
+<figure class="textbook-figure"><a href="/assets/build-multirotor/arm-channel-aux1.png"><img src="/assets/build-multirotor/arm-channel-aux1.png" alt="The ARM range’s channel menu open, with AUX 1 selected from AUTO and AUX 1 through AUX 19." width="1126" height="405" loading="lazy"></a></figure>
+<p>Now, as you toggle switch “A” on your transmitter you should see a yellow tick mark move back and forth across the slider in Betaflight and the “Arm” block should turn red.</p>
+<figure class="textbook-figure"><a href="/assets/build-multirotor/arm-switch-marker.png"><img src="/assets/build-multirotor/arm-switch-marker.png" alt="The Modes tab with the ARM box shown in red as “ARM (DISABLED).” The small yellow channel marker, circled, sits near 1850, outside the yellow range from 1300 to 1700." width="1600" height="315" loading="lazy"></a></figure>
+<p>The problem however is that right now this switch is not really doing anything because the yellow tick mark is not landing in the yellow shaded area on the slider. To fix this slide the yellow slider tabs (circled below) so that when switch “A” is in the down position your screen looks like this:</p>
+<figure class="textbook-figure"><a href="/assets/build-multirotor/arm-range-switch-down.png"><img src="/assets/build-multirotor/arm-range-switch-down.png" alt="The ARM range moved to 1100–1225. With switch A down, the yellow marker, circled, sits inside the range." width="1600" height="127" loading="lazy"></a></figure>
+<p>And when switch “A” is in the up position your screen looks like this (Note the position of the small yellow tick mark circled below):</p>
+<figure class="textbook-figure"><a href="/assets/build-multirotor/arm-range-switch-up.png"><img src="/assets/build-multirotor/arm-range-switch-up.png" alt="With switch A up, the ARM box is red and the yellow marker, circled, sits near 1850, outside the 1100–1225 range." width="1600" height="94" loading="lazy"></a></figure>
+<p>Finally, click the “Save” button in Betaflight to save these settings to the flight controller on the aircraft.</p>
+<figure class="textbook-figure"><a href="/assets/build-multirotor/arm-save.png"><img src="/assets/build-multirotor/arm-save.png" alt="The yellow Save button at the bottom right of the Modes tab." width="114" height="91" loading="lazy"></a></figure>
+<h3 id="setting-angle-mode-in-betaflight-stabilized-flight">Setting Angle mode in Betaflight (stabilized flight)</h3>
+<p>In order to make your drones easy to fly you will now set a stabilized flight mode. In Betaflight, this is called “Angle” mode. Start by clicking “Add Range” under the “Angle Mode” area.</p>
+<figure class="textbook-figure"><a href="/assets/build-multirotor/angle-add-range.png"><img src="/assets/build-multirotor/angle-add-range.png" alt="The ANGLE mode box with its Add Link and Add Range buttons." width="193" height="100" loading="lazy"></a></figure>
+<p>Your screen should now look like this:</p>
+<figure class="textbook-figure"><a href="/assets/build-multirotor/angle-range-added.png"><img src="/assets/build-multirotor/angle-range-added.png" alt="The Modes tab with two ranges: ARM on AUX 1 from 1100 to 1225, and a new ANGLE range on AUTO from 1300 to 1700." width="1600" height="214" loading="lazy"></a></figure>
+<p>Next, click on the dropdown menu and change “Auto” to “Aux 2” (switch D) as shown below:</p>
+<figure class="textbook-figure"><a href="/assets/build-multirotor/angle-channel-aux2.png"><img src="/assets/build-multirotor/angle-channel-aux2.png" alt="The ANGLE range’s channel menu open, with AUX 2 selected." width="280" height="377" loading="lazy"></a></figure>
+<p>Now as you toggle switch “D”, the yellow tick mark should move. As a new pilot you will want stable mode on, all of the time. You can change this setting later to give yourself more advanced control of your quadcopter but for now we will set this so stable mode is the only mode you will have. To do this, drag the yellow slider handles so the entire bar is yellow as shown below:</p>
+<figure class="textbook-figure"><a href="/assets/build-multirotor/angle-full-range.png"><img src="/assets/build-multirotor/angle-full-range.png" alt="The ANGLE range on AUX 2 stretched across the whole slider, from 900 to 2100, so Angle mode is always on." width="1600" height="96" loading="lazy"></a></figure>
+<p>Click Save to save these settings to your aircraft.</p>
+<figure class="textbook-figure"><a href="/assets/build-multirotor/angle-save.png"><img src="/assets/build-multirotor/angle-save.png" alt="The yellow Save button at the bottom right of the Modes tab." width="88" height="68" loading="lazy"></a></figure>
+<p class="notice"><strong>Safety check</strong>Make sure that you do NOT have any propellers connected to your quadcopter at this time! If you do, you could cause extreme injury to yourself or others!</p>
+<h3 id="checking-the-motor-direction-in-betaflight">Checking the motor direction in Betaflight</h3>
+<p>Making sure that the motors on your aircraft are spinning in the correct direction is very important! If the motors are not spinning correctly it is very likely any flight attempt will end in a bad crash. With your aircraft still connected to your computer and Betaflight opened, click on the “Motors” tab.</p>
+<figure class="textbook-figure"><a href="/assets/build-multirotor/betaflight-motors-tab.png"><img src="/assets/build-multirotor/betaflight-motors-tab.png" alt="Betaflight’s Motors tab: the mixer set to QUAD X with a motor diagram, ESC and motor settings, a motor graph, sliders for motors 1 to 8 and a master slider, and a yellow motor test warning." width="1600" height="848" loading="lazy"></a></figure>
+<p>You will need to have a battery connected to your aircraft at this point however, make sure you <strong>DO NOT HAVE ANY PROPELLERS ATTACHED</strong> at this point!</p>
+<p>You will need to agree to this dialog box. This again is a check to make sure you DO NOT have any propellers connected to the aircraft. When you have removed the propellers, click the “I understand the risks” slider.</p>
+<figure class="textbook-figure"><a href="/assets/build-multirotor/motor-test-warning.png"><img src="/assets/build-multirotor/motor-test-warning.png" alt="The Motor Test Mode / Arming Notice: “WARNING: Serious risk of injury! Remove all propellers!” It warns that motors spin up when armed or when the sliders are raised, that test mode stays active in other tabs, that pressing a key stops the motors only in the Motors tab, and that unplugging the USB cable may not stop them. A switch reads “I understand the risks, the propellers are removed.”" width="727" height="180" loading="lazy"></a></figure>
+<p>If you have not already done so, plug in a battery to your quadcopter.</p>
+<figure class="textbook-figure"><a href="/assets/build-multirotor/battery-connected.jpg"><img src="/assets/build-multirotor/battery-connected.jpg" alt="Top view of the quadcopter on a cutting mat, without propellers, with a LiPo battery strapped to the frame and plugged in." width="640" height="480" loading="lazy"></a></figure>
+<p>Now that you have a battery plugged in you should be able to move the sliders pictured below one at a time to test each motor. The motors are numbered 1,2,3,4. There are spots for up to eight motors for larger multirotor aircraft, but today we are only using 4 motors.</p>
+<figure class="textbook-figure"><a href="/assets/build-multirotor/motor-test-sliders.png"><img src="/assets/build-multirotor/motor-test-sliders.png" alt="Motor sliders 1 to 8 and a master slider, all at 1000, above the motor test notice with the “I understand the risks” switch turned on." width="800" height="413" loading="lazy"></a></figure>
+<p>You will need to make sure that the front of your quadcopter is facing forward as shown below. The motors are numbered starting with motor 1 in the bottom right. Slide the slider in Betaflight under the “1” column as shown below. Motor 1 on your quadcopter should spin. Also, motor 1 should spin clockwise as viewed from above as shown in the images below and to the right.</p>
+<figure class="textbook-figure"><a href="/assets/build-multirotor/motor-1-test.png"><img src="/assets/build-multirotor/motor-1-test.png" alt="Motor test sliders: motor 1 raised to 1404 while motors 2, 3, and 4 stay at 1000." width="359" height="234" loading="lazy"></a></figure>
+<figure class="textbook-figure"><a href="/assets/build-multirotor/quad-x-motor-directions.png"><img src="/assets/build-multirotor/quad-x-motor-directions.png" alt="Betaflight’s top-view diagram of a quad X frame, with a red arrow pointing forward. Motor 1 at the rear right and motor 4 at the front left spin clockwise. Motor 2 at the front right and motor 3 at the rear left spin counterclockwise." width="167" height="151" loading="lazy"></a></figure>
+<p>Next, move the slider for motor 2 and motor 2, top right should spin counterclockwise. Refer to the images below.</p>
+<figure class="textbook-figure"><a href="/assets/build-multirotor/motor-2-test.png"><img src="/assets/build-multirotor/motor-2-test.png" alt="Motor test sliders: motor 2 raised to 1404 while motors 1, 3, and 4 stay at 1000." width="348" height="233" loading="lazy"></a></figure>
+<figure class="textbook-figure"><a href="/assets/build-multirotor/quad-x-motor-directions.png"><img src="/assets/build-multirotor/quad-x-motor-directions.png" alt="Betaflight’s top-view diagram of a quad X frame, with a red arrow pointing forward. Motor 1 at the rear right and motor 4 at the front left spin clockwise. Motor 2 at the front right and motor 3 at the rear left spin counterclockwise." width="167" height="151" loading="lazy"></a></figure>
+<p>Next, move the slider for motor 3 and motor 3, bottom left should spin counterclockwise. Refer to the images below.</p>
+<figure class="textbook-figure"><a href="/assets/build-multirotor/motor-3-test.png"><img src="/assets/build-multirotor/motor-3-test.png" alt="Motor test sliders: motor 3 raised to 1421 while motors 1, 2, and 4 stay at 1000." width="354" height="236" loading="lazy"></a></figure>
+<figure class="textbook-figure"><a href="/assets/build-multirotor/quad-x-motor-directions.png"><img src="/assets/build-multirotor/quad-x-motor-directions.png" alt="Betaflight’s top-view diagram of a quad X frame, with a red arrow pointing forward. Motor 1 at the rear right and motor 4 at the front left spin clockwise. Motor 2 at the front right and motor 3 at the rear left spin counterclockwise." width="167" height="151" loading="lazy"></a></figure>
+<p>Finally, slide the motor 4 slider and motor 4 top left should spin clockwise.</p>
+<figure class="textbook-figure"><a href="/assets/build-multirotor/motor-4-test.png"><img src="/assets/build-multirotor/motor-4-test.png" alt="Motor test sliders: motor 4 raised to 1421 while motors 1, 2, and 3 stay at 1000." width="359" height="233" loading="lazy"></a></figure>
+<figure class="textbook-figure"><a href="/assets/build-multirotor/quad-x-motor-directions.png"><img src="/assets/build-multirotor/quad-x-motor-directions.png" alt="Betaflight’s top-view diagram of a quad X frame, with a red arrow pointing forward. Motor 1 at the rear right and motor 4 at the front left spin clockwise. Motor 2 at the front right and motor 3 at the rear left spin counterclockwise." width="167" height="151" loading="lazy"></a></figure>
+<p>If any of the motors spin in the wrong direction you can reverse the direction in Betaflight. You could also change the direction by swapping the position of any two wires between the motor and the ESC. Changing the direction in Betaflight however is much simpler so there really is no need to remake solder connections.</p>
+<p>As a final test, turn on your transmitter and ARM the quadcopter by flipping the ARM switch to the “ARM” position. If you are unsure which switch or position is “ARM,” reread <a href="#adding-an-arm-switch-in-betaflight">Adding an ARM switch in Betaflight</a>. Next, advance the throttle and make sure all four motors spin and that they spin in the correct directions. Refer back to the pictures in this section for the correct direction for each motor.</p>
+<h3 id="attaching-propellers-rotors-to-your-quadcopter">Attaching propellers (rotors) to your quadcopter</h3>
+<p>Attaching the propellers to your quadcopter is the final step before making the first test flights. The pitch and placement of each propeller is very important and your quadcopter will not fly if the propellers are placed incorrectly. If you look back to the section where you tested the motor direction, you will notice that the motors diagonally apart spin the same direction while motors across from each other vertically or horizontally spin opposite directions. Therefore, the propeller blades diagonally apart will be the same and those next to each other will be different. Pictured below is a quadcopter with its propellers installed. The propellers marked 5042R are pitched for the clockwise motors, and the unmarked ones for the counterclockwise motors.</p>
+<figure class="textbook-figure"><a href="/assets/build-multirotor/propeller-directions.jpg"><img src="/assets/build-multirotor/propeller-directions.jpg" alt="Top view of a quadcopter with yellow three-blade propellers, front at the top. Arrows show the front-left and rear-right motors spinning counterclockwise and the front-right and rear-left motors spinning clockwise. The clockwise propellers are marked 5042R. Close-ups in the corners show each blade’s angle of attack, and a note reads “Must check all props rotation direction before take off!”" width="801" height="793" loading="lazy"></a><figcaption><p>Each propeller’s pitch must match its motor’s direction. This quadcopter uses reversed (“props out”) directions, the mirror image of the Betaflight default used in this chapter. On your quadcopter, match each propeller to the direction you checked in the Motors tab.</p></figcaption></figure>

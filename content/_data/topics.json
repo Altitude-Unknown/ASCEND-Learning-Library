@@ -65,6 +65,11 @@
         "description": "Build the ASCEND Trainer Airplane in six units, from printing the parts to the preflight control check. Each unit pairs the build instructions with a build step or lab, instructor sign-off, and review questions; video lessons are coming soon."
       },
       {
+        "title": "Building a Multirotor UAS",
+        "url": "/build-multirotor/",
+        "description": "Build and set up a quadcopter in three units: how multirotors fly, the flight controller stack, and setting up Betaflight. Each unit pairs a reading with a lab or practice, instructor sign-off, and review questions; video lessons are coming soon."
+      },
+      {
         "title": "Electrical Basics",
         "url": "/electrical-basics/",
         "description": "Learn voltage, current, resistance, and power, Ohm’s law, wire gauge, multimeters, and waveforms in two units. Each unit pairs a reading with practice or a lab, instructor sign-off, and review questions; video lessons are coming soon."

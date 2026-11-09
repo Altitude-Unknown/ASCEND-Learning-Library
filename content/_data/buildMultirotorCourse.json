@@ -1,0 +1,260 @@
+{
+  "units": [
+    {
+      "slug": "how-multirotors-fly",
+      "title": "How Multirotors Fly",
+      "number": 1,
+      "url": "/build-multirotor/how-multirotors-fly/",
+      "summary": "Compare helicopters and quadcopters, and see how a quadcopter controls pitch, roll, yaw, and altitude with motor speed alone.",
+      "outcomes": [
+        "Describe the advantages and limits of multirotor aircraft compared with fixed-wing aircraft, including endurance.",
+        "Explain how a helicopter’s tail rotor or counter-rotating rotors cancel torque.",
+        "Explain how a quadcopter controls pitch, roll, yaw, and altitude by changing motor speeds."
+      ],
+      "readings": [
+        {
+          "title": "Airframe types",
+          "id": "airframe-types"
+        }
+      ],
+      "activities": [],
+      "practice": {
+        "title": "Fly it with motor speed",
+        "text": "Sketch a quadcopter from above and number its motors 1 to 4 as in the motor diagram. For each move (climb, descend, pitch forward, roll right, and yaw), mark which motors speed up and which slow down. Then compare your sketch with the reading and with your answers to review questions 12 and 13.",
+        "sections": [
+          {
+            "title": "Airframe types",
+            "id": "airframe-types"
+          }
+        ]
+      },
+      "lessonVideo": null,
+      "reviewQuestions": [
+        2,
+        9,
+        11,
+        12,
+        13
+      ]
+    },
+    {
+      "slug": "flight-controller-stack",
+      "title": "The Flight Controller Stack",
+      "number": 2,
+      "url": "/build-multirotor/flight-controller-stack/",
+      "summary": "Choose a flight controller, ESC, motors, receiver, and propellers that work together, then assemble and solder the stack.",
+      "outcomes": [
+        "Explain what a flight controller does and how an ESC board joins it to form a stack.",
+        "Tell forward and reverse motors apart, and match each propeller to its motor’s direction.",
+        "Choose a receiver whose protocol matches both the transmitter and the flight controller."
+      ],
+      "readings": [
+        {
+          "title": "Flight controller stacks and selection",
+          "id": "flight-controller-stacks-and-selection"
+        },
+        {
+          "title": "ESCs for multirotors",
+          "id": "escs-for-multirotors"
+        },
+        {
+          "title": "Motors for multirotors",
+          "id": "motors-for-multirotors"
+        },
+        {
+          "title": "Receivers for multirotors",
+          "id": "receivers-for-multirotors"
+        },
+        {
+          "title": "Attaching propellers (rotors) to your quadcopter",
+          "id": "attaching-propellers-rotors-to-your-quadcopter"
+        }
+      ],
+      "activities": [
+        "multirotor-assembly-lab"
+      ],
+      "signoff": [
+        "Correctly solder motors to an ESC PCB.",
+        "Correctly attach all peripherals to a flight controller using quick connects or soldered connections.",
+        "Identify the correct propeller for each motor on a multirotor aircraft.",
+        "Assemble a multirotor frame and ensure that its center of gravity is within limits."
+      ],
+      "lessonVideo": null,
+      "reviewQuestions": [
+        3,
+        10,
+        14,
+        15,
+        20
+      ]
+    },
+    {
+      "slug": "setting-up-betaflight",
+      "title": "Setting Up Betaflight",
+      "number": 3,
+      "url": "/build-multirotor/setting-up-betaflight/",
+      "summary": "Install Betaflight, connect and calibrate the quadcopter, bind and check the receiver, set up arming and Angle mode, and check each motor’s direction.",
+      "outcomes": [
+        "Install Betaflight Configurator, connect a quadcopter, and calibrate its accelerometer.",
+        "Bind a transmitter to a receiver and check that throttle, yaw, pitch, and roll move the right way.",
+        "Put arming and Angle mode on transmitter switches, then check and correct each motor’s direction."
+      ],
+      "readings": [
+        {
+          "title": "Basic setup in Betaflight",
+          "id": "basic-setup-in-betaflight"
+        },
+        {
+          "title": "Download and install Betaflight",
+          "id": "download-and-install-betaflight"
+        },
+        {
+          "title": "Connect your aircraft to Betaflight",
+          "id": "connect-your-aircraft-to-betaflight"
+        },
+        {
+          "title": "Calibrate the accelerometer in Betaflight",
+          "id": "calibrate-the-accelerometer-in-betaflight"
+        },
+        {
+          "title": "Binding your transmitter to your receiver",
+          "id": "binding-your-transmitter-to-your-receiver"
+        },
+        {
+          "title": "Setting up a receiver in Betaflight",
+          "id": "setting-up-a-receiver-in-betaflight"
+        },
+        {
+          "title": "Setting up modes in Betaflight",
+          "id": "setting-up-modes-in-betaflight"
+        },
+        {
+          "title": "Adding an ARM switch in Betaflight",
+          "id": "adding-an-arm-switch-in-betaflight"
+        },
+        {
+          "title": "Setting Angle mode in Betaflight (stabilized flight)",
+          "id": "setting-angle-mode-in-betaflight-stabilized-flight"
+        },
+        {
+          "title": "Checking the motor direction in Betaflight",
+          "id": "checking-the-motor-direction-in-betaflight"
+        }
+      ],
+      "activities": [
+        "multirotor-betaflight-lab"
+      ],
+      "signoff": [
+        "Set up flight modes in Betaflight.",
+        "Check IMU directions in Betaflight and adjust them if incorrect.",
+        "Identify motor rotation direction and adjust it if incorrect by changing settings in Betaflight or by changing wire connections."
+      ],
+      "lessonVideo": null,
+      "reviewQuestions": [
+        1,
+        4,
+        5,
+        6,
+        7,
+        8,
+        16,
+        17,
+        18,
+        19
+      ],
+      "skills": [
+        "Correctly solder motors to an ESC PCB.",
+        "Identify motor rotation direction and adjust it if incorrect by changing settings in Betaflight or by changing wire connections.",
+        "Identify the correct propeller for each motor on a multirotor aircraft.",
+        "Set up flight modes in Betaflight.",
+        "Check IMU directions in Betaflight and adjust them if incorrect.",
+        "Assemble a multirotor frame and ensure that its center of gravity is within limits.",
+        "Correctly attach all peripherals to a flight controller using quick connects or soldered connections."
+      ]
+    }
+  ],
+  "chapterUrl": "/build-multirotor/textbook/building-a-multirotor-aircraft/",
+  "chapterTitle": "Chapter 5: Building a Multirotor Aircraft",
+  "reviewQuestions": {
+    "1": {
+      "question": "On a 4-motor multirotor aircraft, identify the correct rotation of each motor.",
+      "answer": "As viewed from above and with the front of the quadcopter facing forward, the chapter's Betaflight configuration uses: Motor 1 (bottom right) clockwise, Motor 2 (top right) counterclockwise, Motor 3 (bottom left) counterclockwise, and Motor 4 (top left) clockwise. Motors diagonally opposite each other rotate in the same direction."
+    },
+    "2": {
+      "question": "Why are multirotor aircraft better suited for automated flight than traditional helicopters?",
+      "answer": "A quadcopter controls pitch, roll, yaw, and throttle simply by changing the speeds of its four motors. A traditional helicopter requires more complicated mechanical systems such as rotor-pitch controls, gimbals, and a tail rotor. The mechanical simplicity of the quadcopter makes it easier to automate."
+    },
+    "3": {
+      "question": "List at least three functions of a flight controller.",
+      "answer": "A flight controller can detect the aircraft's orientation using IMU sensors, stabilize the aircraft, generate control inputs to keep it level, and interface with accessories such as an FPV camera. It also provides a connection to configuration software such as Betaflight."
+    },
+    "4": {
+      "question": "What is the purpose of a program such as Betaflight?",
+      "answer": "Betaflight is used to configure and adjust a multirotor's flight controller. It can be used to calibrate sensors, configure the receiver and transmitter controls, assign flight modes, configure arming, and check motor operation and direction."
+    },
+    "5": {
+      "question": "What are flight modes? What do they do? Give a few examples.",
+      "answer": "Flight modes are settings that change how the aircraft behaves. For example, Angle Mode provides stabilized flight to make the quadcopter easier to fly. The chapter also discusses ARM, which enables the aircraft's motors, although ARM is a control function rather than a flight mode."
+    },
+    "6": {
+      "question": "Why do quadcopters have an arming feature yet most airplanes do not?",
+      "answer": "Arming prevents the quadcopter's motors from operating until the pilot intentionally enables them. This is an important safety feature because a quadcopter has multiple exposed propellers that can begin spinning when throttle is applied. The chapter emphasizes the danger posed by spinning multirotor propellers."
+    },
+    "7": {
+      "question": "What are some of the dangers involved when working with multirotor aircraft?",
+      "answer": "The primary danger discussed in the chapter is the rapidly spinning propellers. Unexpected motor operation can cause serious injury. Batteries and motors should therefore be handled carefully, and propellers should be removed during setup and testing."
+    },
+    "8": {
+      "question": "Why do you leave the propellers off while working on a multirotor aircraft?",
+      "answer": "Propellers are removed so an accidentally activated motor cannot cause a propeller to spin and injure someone. The chapter specifically instructs students to remove the propellers during Betaflight setup and motor testing."
+    },
+    "9": {
+      "question": "What are some of the advantages of a multirotor aircraft over a fixed-wing aircraft?",
+      "answer": "Multirotors can take off and land in small spaces, operate without a runway, hover in one location, and maneuver in tight spaces. Their ability to hover also makes them useful for inspections and applications requiring multiple camera angles."
+    },
+    "10": {
+      "question": "Why do multirotor aircraft need a flight controller while fixed-wing aircraft do not?",
+      "answer": "A multirotor must continuously adjust the speeds of several motors to maintain stable flight and control pitch, roll, yaw, and altitude. A flight controller uses its sensors to detect the aircraft's movement and automatically make these corrections."
+    },
+    "11": {
+      "question": "What are some limitations of multirotor aircraft?",
+      "answer": "Their major limitation is poor endurance compared with fixed-wing aircraft. The chapter's example shows a trainer airplane flying for 7 minutes on a 1500 mAh 3-cell battery while a quadcopter using the same motors would drain the battery in only 1 minute 45 seconds."
+    },
+    "12": {
+      "question": "How does a quadcopter control pitch, roll, yaw, and altitude using only changes in motor speed?",
+      "answer": "Increasing or decreasing all four motors changes altitude. Changing the relative speeds of the front and rear motors controls pitch. Changing the relative speeds of the left and right motors controls roll. Changing the speeds of opposite diagonal motor pairs controls yaw."
+    },
+    "13": {
+      "question": "Why do two motors on a quadcopter rotate clockwise while the other two rotate counterclockwise?",
+      "answer": "The opposing motor rotations balance the torque produced by the motors and propellers. This prevents the aircraft from continuously rotating in one direction and also allows yaw to be controlled by changing the relative speeds of the clockwise and counterclockwise motor pairs."
+    },
+    "14": {
+      "question": "What is the function of an ESC in a multirotor aircraft, and what advantage does a 4-in-1 ESC board provide?",
+      "answer": "ESCs control the speeds of the brushless motors. A purpose-built multirotor ESC board can provide connections for all four motors on a single board and connect directly to the flight controller with a ribbon cable, creating a compact and clean flight-controller stack."
+    },
+    "15": {
+      "question": "Why must the receiver, transmitter, and flight controller use compatible communication protocols? Give two examples of receiver protocols discussed in the chapter.",
+      "answer": "The devices must use compatible protocols so they can communicate with one another. Examples in the chapter include SBUS, iBUS, CRSF/ELRS, Spektrum SRXL/SRXL2, and CAN/DroneCAN."
+    },
+    "16": {
+      "question": "What does the accelerometer in a flight controller detect, and why should the aircraft be placed on a flat, level surface when calibrating it?",
+      "answer": "The accelerometer helps the quadcopter detect its orientation in space. Placing the aircraft on a flat, level, motionless surface during calibration gives the flight controller a correct reference for level flight."
+    },
+    "17": {
+      "question": "What should you check in Betaflight to verify that the transmitter controls are correctly configured for throttle, yaw, pitch, and roll?",
+      "answer": "In the Receiver tab, move each transmitter stick and verify that the corresponding throttle, yaw, pitch, and roll indicators move correctly. The aircraft animation should also move in the correct direction. Any reversed control axes should be corrected before flight."
+    },
+    "18": {
+      "question": "What is Angle Mode in Betaflight, and why is it useful for a beginning multirotor pilot?",
+      "answer": "Angle Mode is a stabilized flight mode. It makes the quadcopter easier for a beginner to fly by providing stabilization rather than requiring the pilot to control the aircraft completely without assistance."
+    },
+    "19": {
+      "question": "What are two ways to reverse the direction of a brushless motor if it is spinning in the wrong direction?",
+      "answer": "The motor direction can be reversed in Betaflight or by swapping any two of the three wires between the motor and ESC. The chapter recommends using Betaflight because it avoids having to redo solder connections."
+    },
+    "20": {
+      "question": "Why must the correct propeller be installed on each motor, and what could happen if the propeller pitch or motor position is incorrect?",
+      "answer": "Clockwise and counterclockwise motors require propellers with the appropriate pitch so that all four motors produce thrust in the correct direction. The chapter states that the quadcopter will not fly if the propellers are installed incorrectly."
+    }
+  }
+}

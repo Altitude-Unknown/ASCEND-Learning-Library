@@ -1,0 +1,13 @@
+---
+layout: layouts/base.njk
+eleventyExcludeFromCollections: true
+title: Building a Multirotor UAS
+description: "Build and set up a quadcopter in three units: how multirotors fly, the flight controller stack, and setting up Betaflight. Each unit pairs a reading with a lab or practice, instructor sign-off, and review questions."
+permalink: /build-multirotor/
+---
+{% set course = courses.buildMultirotor %}
+<div class="container">
+<nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/uas/">UAS</a><span aria-hidden="true">/</span><span aria-current="page">{{ course.title }}</span></nav>
+<header class="section-hero"><span class="eyebrow">LEARN</span><div class="section-hero-row"><div><h1>{{ course.title }}</h1><p class="lead">{{ description }}</p></div><span class="section-symbol" aria-hidden="true"><svg><use href="#i-aircraft"/></svg></span></div></header>
+{% include "components/course-overview.njk" %}
+</div>
