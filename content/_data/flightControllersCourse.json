@@ -1,0 +1,347 @@
+{
+  "units": [
+    {
+      "slug": "what-flight-controllers-do",
+      "title": "What Flight Controllers Do",
+      "number": 1,
+      "url": "/flight-controllers/what-flight-controllers-do/",
+      "summary": "See how a flight controller senses and steadies an aircraft, from a simple training stabilizer to a Pixhawk autopilot, and tell flight-control firmware apart from ground-control-station software.",
+      "outcomes": [
+        "Explain what a flight controller does with the information from its IMU and other sensors.",
+        "Describe how a training stabilizer helps a new pilot, and what a Pixhawk-compatible autopilot adds.",
+        "Tell firmware (Betaflight, ArduPilot, PX4) apart from ground-control-station software (Mission Planner, QGroundControl), and say what each is used for."
+      ],
+      "readings": [
+        {
+          "title": "Training controllers: simple IMU stabilization",
+          "id": "training-controllers-simple-imu-stabilization"
+        },
+        {
+          "title": "Pixhawk and other open-source flight controllers",
+          "id": "pixhawk-and-other-open-source-flight-controllers"
+        },
+        {
+          "title": "Flight-control software",
+          "id": "flight-control-software"
+        },
+        {
+          "title": "Betaflight",
+          "id": "betaflight"
+        },
+        {
+          "title": "ArduPilot and Mission Planner",
+          "id": "ardupilot-and-mission-planner"
+        },
+        {
+          "title": "QGroundControl",
+          "id": "qgroundcontrol"
+        }
+      ],
+      "activities": [],
+      "practice": {
+        "title": "Firmware or ground station?",
+        "text": "Make two columns: firmware that runs on the flight controller, and ground-control-station software that runs on a computer. Sort Betaflight, ArduPilot, PX4, Mission Planner, and QGroundControl into them, and write one job each is used for. Then list the sensors on a flight controller you have used and what each one measures. Compare your work with the reading and your answers to review questions 2, 3, 7, and 8.",
+        "sections": [
+          {
+            "title": "Pixhawk and other open-source flight controllers",
+            "id": "pixhawk-and-other-open-source-flight-controllers"
+          },
+          {
+            "title": "Flight-control software",
+            "id": "flight-control-software"
+          }
+        ]
+      },
+      "lessonVideo": null,
+      "reviewQuestions": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "slug": "automation-safety-and-failsafes",
+      "title": "Automation, Safety, and Failsafes",
+      "number": 2,
+      "url": "/flight-controllers/automation-safety-and-failsafes/",
+      "summary": "Learn what an autonomous aircraft can do and what it needs, the risks automation adds, and how failsafes decide what an aircraft does when something goes wrong.",
+      "outcomes": [
+        "List the equipment and software an autonomous flight needs, and tasks an autonomous aircraft can perform.",
+        "Explain the safety practices for flight-controlled aircraft, including removing propellers for indoor work and being ready to fly manually.",
+        "Describe common lost-link failsafe actions, how GPS makes Return-to-Launch possible, and why a fixed-wing airplane is harder to land automatically than a multirotor."
+      ],
+      "readings": [
+        {
+          "title": "Automating a mission",
+          "id": "automating-a-mission"
+        },
+        {
+          "title": "Safety around flight-controlled aircraft",
+          "id": "safety-around-flight-controlled-aircraft"
+        },
+        {
+          "title": "Failsafes",
+          "id": "failsafes"
+        }
+      ],
+      "activities": [],
+      "practice": {
+        "title": "Brief your aircraft’s failsafes",
+        "text": "Pick an aircraft with a flight controller that you fly or will fly. Answer each question in the safety section’s list for it: how to arm and disarm it, stop the motors, change flight modes, and regain manual control, and what it does when the radio link is lost. Where you don’t know an answer, find it in the aircraft’s setup before you fly. Compare with your answers to review questions 11 to 15.",
+        "sections": [
+          {
+            "title": "Safety around flight-controlled aircraft",
+            "id": "safety-around-flight-controlled-aircraft"
+          },
+          {
+            "title": "Failsafes",
+            "id": "failsafes"
+          }
+        ]
+      },
+      "lessonVideo": null,
+      "reviewQuestions": [
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        21,
+        25
+      ]
+    },
+    {
+      "slug": "flight-modes-and-missions",
+      "title": "Flight Modes and Mission Planning",
+      "number": 3,
+      "url": "/flight-controllers/flight-modes-and-missions/",
+      "summary": "Compare Manual, FBWA, FBWB, and Auto modes, plan an autonomous mission with waypoints in Mission Planner, and fly it.",
+      "outcomes": [
+        "Explain how much control the pilot and the flight controller each have in Manual, FBWA, FBWB, and Auto modes.",
+        "Plan a mission with takeoff, waypoints, return-to-launch, and landing, and review it before flight.",
+        "Fly an autonomous mission while monitoring the aircraft, ready to take manual control."
+      ],
+      "readings": [
+        {
+          "title": "Planning a mission",
+          "id": "planning-a-mission"
+        },
+        {
+          "title": "Flight modes",
+          "id": "flight-modes"
+        },
+        {
+          "title": "Manual",
+          "id": "manual"
+        },
+        {
+          "title": "FBWA (Fly By Wire A)",
+          "id": "fbwa-fly-by-wire-a"
+        },
+        {
+          "title": "FBWB (Fly By Wire B)",
+          "id": "fbwb-fly-by-wire-b"
+        },
+        {
+          "title": "Auto",
+          "id": "auto"
+        },
+        {
+          "title": "Using Mission Planner to fly an autonomous mission",
+          "id": "using-mission-planner-to-fly-an-autonomous-mission"
+        }
+      ],
+      "activities": [
+        "mission-planning-lab"
+      ],
+      "signoff": [
+        "Plan and upload an autonomous mission to a flight controller.",
+        "Execute an autonomous mission.",
+        "Plan an autonomous mission with automatic takeoff and automatic landing."
+      ],
+      "lessonVideo": null,
+      "reviewQuestions": [
+        17,
+        18,
+        19,
+        20,
+        22,
+        23,
+        24
+      ],
+      "skills": [
+        "Plan and upload an autonomous mission to a flight controller.",
+        "Execute an autonomous mission.",
+        "Plan an autonomous mission that takes pictures at predefined waypoints.",
+        "Plan an autonomous mission with automatic takeoff and automatic landing."
+      ]
+    }
+  ],
+  "chapterUrl": "/flight-controllers/textbook/flight-controllers/",
+  "chapterTitle": "Chapter 6: Flight Controllers",
+  "reviewQuestions": {
+    "1": {
+      "question": "What is the primary function of a flight controller?",
+      "answer": "A flight controller uses information from sensors and pilot or autonomous commands to help control and stabilize an aircraft. It processes this information and sends commands to the aircraft's servos, ESCs, motors, and other systems."
+    },
+    "2": {
+      "question": "What is an IMU, and what types of aircraft motion can it detect?",
+      "answer": "An IMU (Inertial Measurement Unit) is a sensor system that typically contains accelerometers and gyroscopes. It can detect acceleration and rotation, allowing the flight controller to determine how the aircraft is moving and rotating about its roll, pitch, and yaw axes."
+    },
+    "3": {
+      "question": "What do you call the software that runs directly on a flight controller's microcontroller?",
+      "answer": "The software that runs on the flight controller is called firmware."
+    },
+    "4": {
+      "question": "How can a basic stabilization system help a beginning RC pilot learn to fly?",
+      "answer": "A stabilization system can compensate for disturbances, limit pitch and roll, and help return the aircraft toward level flight when the pilot releases the controls. This can make the aircraft easier for a beginning pilot to control."
+    },
+    "5": {
+      "question": "What is Pixhawk, and how is it related to autopilot software such as ArduPilot or PX4?",
+      "answer": "Pixhawk is an open flight-controller hardware ecosystem and set of hardware standards. Pixhawk-compatible flight controllers can run autopilot firmware such as ArduPilot or PX4."
+    },
+    "6": {
+      "question": "Name at least four types of vehicles that can use Pixhawk-compatible flight controllers.",
+      "answer": [
+        "Answers may include:",
+        "Fixed-wing airplanes",
+        "Multirotors",
+        "Helicopters",
+        "VTOL aircraft",
+        "Ground vehicles",
+        "Boats",
+        "Submersibles",
+        "Any four are acceptable."
+      ]
+    },
+    "7": {
+      "question": "What is the difference between flight-control firmware and ground-control-station software?",
+      "answer": "Flight-control firmware runs directly on the flight controller and controls the aircraft. Ground-control-station software runs on a computer or other device and is used to configure the flight controller, monitor the aircraft, change parameters, and plan missions."
+    },
+    "8": {
+      "question": "What is Mission Planner, and what can it be used to do?",
+      "answer": "Mission Planner is ground-control-station software commonly used with ArduPilot. It can be used to configure an aircraft, calibrate sensors, change parameters, monitor telemetry, and create autonomous missions."
+    },
+    "9": {
+      "question": "What equipment and software are generally needed to conduct an autonomous flight?",
+      "answer": "A basic autonomous system generally requires an aircraft, flight controller, appropriate sensors, control link, and software for configuring and programming the flight controller. GPS is also required for most position-based autonomous operations."
+    },
+    "10": {
+      "question": "Give four examples of tasks an autonomous aircraft can be programmed to perform.",
+      "answer": [
+        "Answers may include:",
+        "Automatic takeoff",
+        "Automatic landing",
+        "Flying GPS waypoints",
+        "Returning to launch",
+        "Loitering at a location",
+        "Surveying or mapping an area",
+        "Taking photographs",
+        "Releasing a payload",
+        "Any four reasonable examples are acceptable."
+      ]
+    },
+    "11": {
+      "question": "What is a failsafe, and why is it important?",
+      "answer": "A failsafe is a predetermined response that occurs when the flight-control system detects a problem or specific condition, such as loss of the radio-control link. It provides the aircraft with a known response to a failure rather than leaving its behavior unpredictable."
+    },
+    "12": {
+      "question": "Give three possible actions a flight controller could be programmed to perform following a loss of the radio-control link.",
+      "answer": [
+        "Possible answers include:",
+        "Reduce or stop the motor",
+        "Stabilize the aircraft",
+        "Loiter or circle",
+        "Return to the launch location",
+        "Automatically land",
+        "Perform another predetermined failsafe action",
+        "Any three are acceptable."
+      ]
+    },
+    "13": {
+      "question": "How can GPS improve the failsafe capabilities of an aircraft?",
+      "answer": "GPS allows the flight controller to determine the aircraft's position relative to a known home location. This can allow the aircraft to return to launch, loiter at a specified location, or perform other position-based failsafe actions."
+    },
+    "14": {
+      "question": "Why should propellers normally be removed when programming, configuring, or testing an aircraft indoors?",
+      "answer": "A motor could start unexpectedly because of a configuration error, accidental command, failsafe condition, or other unexpected behavior. Removing the propeller greatly reduces the risk of injury or property damage."
+    },
+    "15": {
+      "question": "What should a pilot be prepared to do if an aircraft's automation or stabilization system fails during flight?",
+      "answer": "The pilot should be prepared to take manual control and safely fly the aircraft. The pilot should understand how to change flight modes and how to regain control if the automated system does not behave as expected."
+    },
+    "16": {
+      "question": "Why is automatically landing a conventional fixed-wing airplane generally more complicated than automatically landing a multirotor?",
+      "answer": "A multirotor can descend nearly vertically into a relatively small landing area. A fixed-wing airplane must maintain forward airspeed and fly an approach to the landing area. Wind direction, groundspeed, obstacles, approach path, and available landing distance can therefore affect the landing."
+    },
+    "17": {
+      "question": "What types of information and commands can be included in an autonomous mission?",
+      "answer": [
+        "Examples include:",
+        "GPS waypoint locations",
+        "Flight altitudes",
+        "Takeoff commands",
+        "Landing commands",
+        "Return-to-launch commands",
+        "Loiter commands",
+        "Camera operations",
+        "Survey or mapping patterns",
+        "Payload operations"
+      ]
+    },
+    "18": {
+      "question": "What is a flight mode?",
+      "answer": "A flight mode determines how the aircraft responds to pilot commands and how much control or assistance is provided by the flight controller."
+    },
+    "19": {
+      "question": "Explain the differences between Manual, FBWA, FBWB, and Auto modes on a fixed-wing aircraft.",
+      "answer": [
+        "Manual: The pilot directly controls the aircraft without attitude stabilization from the autopilot.",
+        "FBWA (Fly By Wire A): The pilot flies the airplane while the flight controller provides stabilization and limits aircraft attitude. Releasing the controls commands the aircraft back toward level roll.",
+        "FBWB (Fly By Wire B): Similar to FBWA but provides additional assistance, including management of aircraft behavior such as altitude and speed-related targets according to its configuration.",
+        "Auto: The flight controller follows a programmed autonomous mission and controls the aircraft according to the mission commands."
+      ]
+    },
+    "20": {
+      "question": "What generally happens when the pilot releases the roll control while flying in FBWA?",
+      "answer": "The flight controller commands the airplane to return toward level roll rather than continuing to hold the commanded bank angle."
+    },
+    "21": {
+      "question": "Why should a pilot understand the aircraft's programmed failsafe behavior before flight?",
+      "answer": "The pilot needs to know how the aircraft will respond to failures such as loss of the radio link. Understanding the programmed response allows the pilot to anticipate the aircraft's behavior and determine whether intervention is necessary."
+    },
+    "22": {
+      "question": "Why is it important to review waypoint locations and altitudes before beginning an autonomous mission?",
+      "answer": "Incorrect waypoint locations or altitudes could send the aircraft somewhere unintended or create conflicts with terrain, obstacles, or other hazards. Reviewing the mission helps verify that the planned route can be flown safely."
+    },
+    "23": {
+      "question": "Describe a basic autonomous airplane mission that includes takeoff, GPS waypoints, return-to-launch, and landing.",
+      "answer": [
+        "Answers may vary. A typical mission could include:",
+        "Launch or automatically take off.",
+        "Climb to a predetermined safe altitude.",
+        "Fly to at least four programmed GPS waypoints.",
+        "Return to the launch area.",
+        "Circle or loiter near the launch location at a safe altitude.",
+        "The pilot takes manual control and lands the airplane.",
+        "Other correctly planned autonomous sequences are acceptable."
+      ]
+    },
+    "24": {
+      "question": "Why should a pilot still monitor an aircraft closely when it is flying a fully autonomous mission?",
+      "answer": "Automation can fail because of mechanical, electrical, software, sensor, communication, or user errors. The pilot must monitor the aircraft so that they can recognize a problem and intervene when necessary."
+    },
+    "25": {
+      "question": "Explain why learning to manually fly an aircraft is still valuable even when the aircraft is equipped with stabilization and autonomous flight capabilities.",
+      "answer": "A pilot may need to take manual control if automation, stabilization, sensors, or other systems fail or behave unexpectedly. Manual flying skills provide an important backup and allow the pilot to safely control the aircraft when automated systems cannot."
+    }
+  }
+}

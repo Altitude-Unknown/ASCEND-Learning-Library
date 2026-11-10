@@ -70,6 +70,11 @@
         "description": "Build and set up a quadcopter in three units: how multirotors fly, the flight controller stack, and setting up Betaflight. Each unit pairs a reading with a lab or practice, instructor sign-off, and review questions; video lessons are coming soon."
       },
       {
+        "title": "Flight Controllers",
+        "url": "/flight-controllers/",
+        "description": "Learn how flight controllers stabilize and automate aircraft in three units: what flight controllers do; automation, safety, and failsafes; and flight modes and mission planning. Each unit pairs a reading with practice or a lab and review questions; video lessons are coming soon."
+      },
+      {
         "title": "Electrical Basics",
         "url": "/electrical-basics/",
         "description": "Learn voltage, current, resistance, and power, Ohm’s law, wire gauge, multimeters, and waveforms in two units. Each unit pairs a reading with practice or a lab, instructor sign-off, and review questions; video lessons are coming soon."

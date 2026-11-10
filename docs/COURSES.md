@@ -98,10 +98,12 @@ file in `editorial/intake/books/` and the settings in `editorial/lab-manual.json
   (`file`, `alt`, `caption`), an equation shown on its own line (`equation`,
   MathML or text), or a symbol inside a sentence (`inline`).
 
-Run `python3 scripts/import-lab-manual.py 1 2 5 9` after the Word file changes. It
+Run `python3 scripts/import-lab-manual.py 1 2 5 6 9` after the Word file changes. It
 rewrites the web chapter, its images, and the course data file's
 `reviewQuestions` and last-unit `skills`, keeps the hand-written units, and
-fails if any source paragraph is missing or an image has no entry.
+fails if any source paragraph is missing or an image has no entry. Most answer
+keys mark answers with “Answer:”; Chapter 6's key starts each answer with its
+numbered question instead (`"answerStyle": "numbered"`).
 `editorial/lab-manual-import.json` records what was imported. Units without a
 lab use a `practice` card in Step 3. Add each new course to
 `tests/lab-manual-courses.spec.js`.
@@ -172,4 +174,23 @@ the motor-direction diagram repeats for each motor) and two lab pages.
   the chapter has no CG procedure (the same gap as Chapter 4). None was added.
 - The download steps show Betaflight Configurator 10.10.0; the chapter already
   says version numbers will differ.
+
+### Flight Controllers (Chapter 6)
+
+Three units: What Flight Controllers Do (practice), Automation, Safety, and
+Failsafes (practice), and Flight Modes and Mission Planning (mission planning
+lab and the full skills checksheet). The web chapter has 6 described images;
+the SpeedyBee F405 V4 photo is shared with Chapter 5 and keeps its entry there.
+The final link goes to PID Controllers.
+
+- The propeller-removal paragraph is a notice box. “The following activity”
+  in the Mission Planner section links to the lab page.
+- Headings are in sentence case; “FBWA — Fly By Wire A” reads “FBWA (Fly By
+  Wire A)”. The checksheet's “way points” reads “waypoints”, and “auto take off
+  and auto landings” reads “automatic takeoff and automatic landing”.
+- The checksheet lists a mission that takes pictures at predefined waypoints,
+  but the lab says no photographs are needed. That skill is on the checksheet
+  only, not in the unit's sign-off.
+- The Mission Planner screenshot is an old 1.3 build (2017); the chapter says
+  the software changes often.
 
