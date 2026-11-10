@@ -39,7 +39,7 @@ The Mac package is for Apple Silicon; this release does not include an Intel Mac
 
 ## Connect your transmitter
 
-Extract the ZIP and open the application. Follow the [RC system manual](https://github.com/Altitude-Unknown/RC-Airplane/blob/transmitter-gui-v2026.11.09/MANUAL.md#desktop-transmitter-configurator) to put your supported transmitter into USB configuration mode, connect it using a USB data cable, and select its serial port in the configurator.
+Extract the ZIP and open the application. Follow the [RC system manual](https://github.com/Altitude-Unknown/RC-Airplane/blob/main/MANUAL.md#desktop-transmitter-configurator) to put your supported transmitter into USB configuration mode, connect it using a USB data cable, and select its serial port in the configurator.
 
 The configurator manages transmitter model settings and instructor/student setup. Its Firmware Update tab supports the project's hardware update workflow. Follow the release notes and manual when selecting firmware for a particular board.
 
@@ -52,7 +52,7 @@ Recent releases added:
 
 ## Documentation and source
 
-- [Read the RC system manual](https://github.com/Altitude-Unknown/RC-Airplane/blob/transmitter-gui-v2026.11.09/MANUAL.md). Its opening still names the September 14 release, but later sections cover the speaker test and flight controller updates; the release notes list each change.
+- [Read the RC system manual](https://github.com/Altitude-Unknown/RC-Airplane/blob/main/MANUAL.md). It describes release 2026.11.09 and also covers flying through the BOREALIS V2 and ASCEND flight controllers.
 - [Read this release's notes and firmware information](https://github.com/Altitude-Unknown/RC-Airplane/releases/tag/transmitter-gui-v2026.11.09).
 - [Browse the source code and hardware project](https://github.com/Altitude-Unknown/RC-Airplane).
 - [Download Flight Lab RC for simulator practice](/resources/flight-lab-rc/).
