@@ -9,8 +9,10 @@ resourceIds:
 - spektrum-model-setup-video
 - motor-esc-connection-video
 - esc-receiver-connection-video
-- venom-battery-charger-video
+- spektrum-new-model-video
 - spektrum-binding-video
+- servo-receiver-connection-video
+- motor-direction-video
 - trainer-build-instructions
 - trainer-tpu-parts
 - trainer-petg-parts

@@ -4,6 +4,7 @@ description: "Learn how a receiver drives servos and ESCs, bind a transmitter to
 order: 2
 courseOrder: 2
 permalink: "/uas-hardware/receivers-binding-and-servos/"
+resourceIds: ["spektrum-binding-video", "servo-receiver-connection-video", "esc-receiver-connection-video"]
 status: "Lesson video coming soon"
 ---
 

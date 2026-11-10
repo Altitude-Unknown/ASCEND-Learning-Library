@@ -4,7 +4,7 @@ description: "Assemble the nose and fuselage, glue on the tail, install the tail
 order: 5
 courseOrder: 5
 permalink: "/build-fixed-wing/final-assembly/"
-resourceIds: ["motor-esc-connection-video", "esc-receiver-connection-video", "esc-programming-video"]
+resourceIds: ["motor-esc-connection-video", "esc-receiver-connection-video", "servo-receiver-connection-video", "esc-programming-video"]
 status: "Lesson video coming soon"
 ---
 

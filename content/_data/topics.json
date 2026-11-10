@@ -127,8 +127,10 @@
           "spektrum-model-setup-video",
           "motor-esc-connection-video",
           "esc-receiver-connection-video",
-          "venom-battery-charger-video",
-          "spektrum-binding-video"
+          "spektrum-new-model-video",
+          "spektrum-binding-video",
+          "servo-receiver-connection-video",
+          "motor-direction-video"
         ]
       },
       {
@@ -145,16 +147,19 @@
           "spektrum-model-setup-video",
           "motor-esc-connection-video",
           "esc-receiver-connection-video",
-          "venom-battery-charger-video",
+          "spektrum-new-model-video",
           "spektrum-binding-video",
-          "transmitter-v4-pcb"
+          "transmitter-v4-pcb",
+          "servo-receiver-connection-video",
+          "motor-direction-video"
         ]
       },
       {
         "title": "Flight Controllers",
         "slug": "flight-controllers",
         "resourceIds": [
-          "remote-aircraft-textbook"
+          "remote-aircraft-textbook",
+          "mission-planner-video"
         ]
       },
       {
