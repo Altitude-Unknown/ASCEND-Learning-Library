@@ -1,0 +1,13 @@
+---
+layout: layouts/base.njk
+eleventyExcludeFromCollections: true
+title: Advanced Sensors
+description: "Learn the sensors behind automated flight in two units: GPS, airspeed, LIDAR, and pressure sensors, then IMUs, gyroscopes, accelerometers, and magnetometers. Each unit pairs a reading with practice or a lab and review questions."
+permalink: /advanced-sensors/
+---
+{% set course = courses.advancedSensors %}
+<div class="container">
+<nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/uas/">UAS</a><span aria-hidden="true">/</span><span aria-current="page">{{ course.title }}</span></nav>
+<header class="section-hero"><span class="eyebrow">LEARN</span><div class="section-hero-row"><div><h1>{{ course.title }}</h1><p class="lead">{{ description }}</p></div><span class="section-symbol" aria-hidden="true"><svg><use href="#i-sensor"/></svg></span></div></header>
+{% include "components/course-overview.njk" %}
+</div>

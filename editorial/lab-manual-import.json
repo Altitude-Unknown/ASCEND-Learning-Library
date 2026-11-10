@@ -944,6 +944,103 @@
       "skills": 4,
       "htmlSha256": "ea3d245497e180fdc294c20944266956c9e59fd6496d7aaaf345320880126f4c"
     },
+    "7": {
+      "chapter": 7,
+      "output": "content/camera-video-systems/textbook/camera-and-video-systems.njk",
+      "tables": 0,
+      "images": [
+        {
+          "file": "action-camera.jpg",
+          "source": "image63.jpg",
+          "sha256": "dbca31397755edc59217892a674e624e43521ad494017d4885a63bf346906811"
+        },
+        {
+          "file": "360-camera.jpg",
+          "source": "image81.jpg",
+          "sha256": "43b9ddfbc82437d17709279d115e2d3643506bdac7e585f338a5d191592efdd9"
+        },
+        {
+          "file": "multispectral-camera.png",
+          "source": "image249.png",
+          "sha256": "6c7be6104adbc5a7321dd306d60045d30c5138cbe57105ef0ca5c1154f3015f1"
+        },
+        {
+          "file": "fpv-camera.jpg",
+          "source": "image108.jpg",
+          "sha256": "141d1e357f9b6ed90e0fe8b2ab149a885f3ba3f506427c3a26c2805f6f495a60"
+        },
+        {
+          "file": "video-transmitter.jpg",
+          "source": "image203.jpg",
+          "sha256": "2fb694e4d9f592220ad5e1e39fcb0de01b6f1c41b8d39d1553893dbb184b6a1e"
+        },
+        {
+          "file": "fpv-goggles.jpg",
+          "source": "image155.jpg",
+          "sha256": "962ba2f046c85c31dae79eca29bdf9f292298ca4710c147262ceea64f818fcf8"
+        },
+        {
+          "file": "hd-fpv-goggles.jpg",
+          "source": "image313.jpg",
+          "sha256": "2790d5b366c73451481535b91bf0c92ae0941b432a92fc203e79fe5e05294aa0"
+        },
+        {
+          "file": "raspberry-pi-zero-2-w.jpg",
+          "source": "image209.jpg",
+          "sha256": "9ab1845221a5e2344a47e9b2e20c96e135d5d4ad017cb2ac8d045405d89149dd"
+        },
+        {
+          "file": "raspberry-pi-ai-camera.jpg",
+          "source": "image53.jpg",
+          "sha256": "c490d8b35029cfe1462c675a45b58b526b6a45809fc4e17cae2c806772ab177f"
+        }
+      ],
+      "verifiedTextBlocks": 13,
+      "reviewQuestions": 20,
+      "skills": 3,
+      "htmlSha256": "bd027350853d1ce635cfe599d349f078a39a293d9d400a24b65127c8c8892a7f"
+    },
+    "8": {
+      "chapter": 8,
+      "output": "content/advanced-sensors/textbook/advanced-sensors.njk",
+      "tables": 0,
+      "images": [
+        {
+          "file": "gps-module.png",
+          "source": "image51.png",
+          "sha256": "a5402f49e1cae773add33a342452fec2a11a1eba7a38abb04eda42493fbef138"
+        },
+        {
+          "file": "airspeed-sensor.png",
+          "source": "image27.png",
+          "sha256": "1e5868e74675ef24a7cbfc7e25adbd6f35e3466e7f16b3bf31c5aaa75db0986a"
+        },
+        {
+          "file": "lidar-sensor.jpg",
+          "source": "image176.jpg",
+          "sha256": "a659b4658c8a459c2ba56d1e434febed6733cc05bc2ffb439bc5e3904910230a"
+        },
+        {
+          "file": "imu-axes.png",
+          "source": "image303.png",
+          "sha256": "b8056b879a7bf48a4541cb91fe3c8785524789de741e5810f74b3fdefdee2f32"
+        },
+        {
+          "file": "gyroscope-gimbals.png",
+          "source": "image152.png",
+          "sha256": "88c2658a01207b8589b6f05aaccc3c744763e4a02f9eaeff7636b7b7b965cf63"
+        },
+        {
+          "file": "toy-gyroscope.jpg",
+          "source": "image62.jpg",
+          "sha256": "8d23841433e12ca950e5fe9a4feef415ce8c5637d964ec1fd15563d188d9ac38"
+        }
+      ],
+      "verifiedTextBlocks": 25,
+      "reviewQuestions": 20,
+      "skills": 3,
+      "htmlSha256": "9c034e893803c88c49edbe816fc3c38ff5363fe81b5112e637d523d74e4e6f08"
+    },
     "9": {
       "chapter": 9,
       "output": "content/pid-controllers/textbook/pid-controllers.njk",

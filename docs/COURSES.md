@@ -98,12 +98,13 @@ file in `editorial/intake/books/` and the settings in `editorial/lab-manual.json
   (`file`, `alt`, `caption`), an equation shown on its own line (`equation`,
   MathML or text), or a symbol inside a sentence (`inline`).
 
-Run `python3 scripts/import-lab-manual.py 1 2 5 6 9` after the Word file changes. It
+Run `python3 scripts/import-lab-manual.py 1 2 5 6 7 8 9` after the Word file changes. It
 rewrites the web chapter, its images, and the course data file's
 `reviewQuestions` and last-unit `skills`, keeps the hand-written units, and
 fails if any source paragraph is missing or an image has no entry. Most answer
 keys mark answers with “Answer:”; Chapter 6's key starts each answer with its
-numbered question instead (`"answerStyle": "numbered"`).
+numbered question instead (`"answerStyle": "numbered"`). Chapter 8's
+question list is under its own heading (`reviewQuestionsHeading`).
 `editorial/lab-manual-import.json` records what was imported. Units without a
 lab use a `practice` card in Step 3. Add each new course to
 `tests/lab-manual-courses.spec.js`.
@@ -193,4 +194,46 @@ The final link goes to PID Controllers.
   only, not in the unit's sign-off.
 - The Mission Planner screenshot is an old 1.3 build (2017); the chapter says
   the software changes often.
+
+The lab manual's courses link in chapter order: Flight Controllers → Camera
+and Video Systems → Advanced Sensors → PID Controllers.
+
+### Camera and Video Systems (Chapter 7)
+
+Two units: Cameras for Aerial Imaging (practice) and First Person View (FPV
+setup lab and the full skills checksheet). 9 described images and one lab page.
+
+- The labels above the three analog FPV photos (“FPV Camera”, “FPV Video
+  Transmitter (VTx)”, “FPV Video Display Goggles with built in video Receiver
+  (VRx)”) are the photos' captions instead.
+- High-definition FPV and Artificial intelligence cameras are a heading and a
+  photo with no text in the source; their captions carry the explanation.
+- Corrections: missing commas, “a multispectral may be” reads “a multispectral
+  camera may be”, “pilots request” reads “pilot's request”, “(first Person
+  View)”, and “Vtx” reads “VTx” in the checksheet.
+
+### Advanced Sensors (Chapter 8)
+
+Two units: Position, Speed, and Altitude Sensors (practice: reading a METAR
+altimeter setting) and Motion and Heading Sensors (sensor installation lab and
+the full skills checksheet). 6 described images and one lab page.
+
+- The review questions are under a second heading, “Chapter 8: Advanced
+  Sensors — Review Questions”, below an empty “Review Questions”.
+- **Answer key, question 3** (“How much error is there in a GPS altitude
+  measurement?”) read “The chapter's retrieved text does not give a specific
+  numerical GPS altitude error”, wording left from a drafting tool. It now
+  says the chapter gives no figure and that LIDAR is more accurate. The
+  chapter never gives one; the author should add a figure or drop the question.
+- The METAR is shown as code with the altimeter group (A3007) marked, and the
+  sentence names A3007, since the Word highlight doesn't carry over.
+- Corrections: “Light Detecting and Ranging” reads “Light Detection and
+  Ranging” (chapter and answer key); “gyroscopic progression” reads
+  “precession”; “magnetic poles” reads “magnetic field” (as in the answer
+  key); “Swam drones” reads “Swarm drones”; and other typing fixes listed in
+  `editorial/lab-manual.json`.
+- Left as written, for the author: the IMU section says it determines
+  “position in space” (an IMU senses orientation and motion); “about 11
+  satellites” for a very good fix; altimeter corrections “about every 20
+  minutes” (METARs are usually issued hourly).
 

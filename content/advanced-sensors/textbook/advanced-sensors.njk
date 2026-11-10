@@ -1,0 +1,95 @@
+---
+{
+  "layout": "layouts/textbook-chapter.njk",
+  "tags": [],
+  "eleventyExcludeFromCollections": true,
+  "topic": "uas",
+  "courseId": "advancedSensors",
+  "title": "Chapter 8: Advanced Sensors",
+  "description": "The sensors behind automated flight: GPS, airspeed sensors, LIDAR, IMUs, gyroscopes, accelerometers, magnetometers, and pressure sensors, plus where artificial intelligence is taking drones.",
+  "chapterNumber": 8,
+  "textbookEyebrow": "REMOTE AND AUTONOMOUS AIRCRAFT SYSTEMS · WEB EDITION",
+  "sourceNote": "From Mike Walach’s lab manual, Remote and Autonomous Aircraft Systems. Original wording is retained with small corrections; image descriptions have been added for web reading.",
+  "headerLinks": [
+    {
+      "title": "About the lab manual",
+      "url": "/resources/remote-aircraft-textbook/"
+    }
+  ],
+  "toc": [
+    {
+      "title": "GPS (Global Positioning System)",
+      "id": "gps-global-positioning-system"
+    },
+    {
+      "title": "Airspeed indicators",
+      "id": "airspeed-indicators"
+    },
+    {
+      "title": "LIDAR (light detection and ranging)",
+      "id": "lidar-light-detection-and-ranging"
+    },
+    {
+      "title": "IMUs (inertial measurement units)",
+      "id": "imus-inertial-measurement-units"
+    },
+    {
+      "title": "Gyroscopes",
+      "id": "gyroscopes"
+    },
+    {
+      "title": "Accelerometers",
+      "id": "accelerometers"
+    },
+    {
+      "title": "Magnetometers",
+      "id": "magnetometers"
+    },
+    {
+      "title": "Pressure sensors",
+      "id": "pressure-sensors"
+    },
+    {
+      "title": "Artificial intelligence",
+      "id": "artificial-intelligence"
+    }
+  ],
+  "permalink": "/advanced-sensors/textbook/advanced-sensors/"
+}
+---
+<h2 id="gps-global-positioning-system">GPS (Global Positioning System)</h2>
+<figure class="textbook-figure"><a href="/assets/advanced-sensors/gps-module.png"><img src="/assets/advanced-sensors/gps-module.png" alt="Top view of a round black Here4 GPS module with a triangle on top pointing forward." width="1000" height="1000" loading="lazy"></a><figcaption><p>A GPS module (Here4). Mounted on top of an aircraft, it receives signals from GPS satellites; the triangle points toward the front of the aircraft.</p></figcaption></figure>
+<p>GPS uses a constellation of satellites in earth orbit to determine the precise location of a receiver on the ground. Radio frequency waves are transmitted from the satellite to the receiver and the time it takes for a signal to travel between the two is measured and a distance calculation is derived. It takes at least 4 satellites to determine position on the surface of the earth however, in practice it takes about 11 satellites to get a very good fix on a location. Atomic clocks aboard the orbiting satellites help to make very accurate measurements of signal travel time.</p>
+<h2 id="airspeed-indicators">Airspeed indicators</h2>
+<figure class="textbook-figure"><a href="/assets/advanced-sensors/airspeed-sensor.png"><img src="/assets/advanced-sensors/airspeed-sensor.png" alt="An airspeed sensor: a long metal pitot-static tube with two tubing connectors at its back end, beside a small circuit board carrying a pressure sensor." width="486" height="328" loading="lazy"></a><figcaption><p>An airspeed sensor: a pitot-static tube and the pressure sensor board it connects to.</p></figcaption></figure>
+<p>Airspeed indicators compare ram air (air forced into a tube from forward aircraft motion) with static air (ambient air pressure outside of the aircraft in a relatively smooth area of airflow) to determine speed. An airspeed sensor is made up of a pitot tube and a static port.</p>
+<h2 id="lidar-light-detection-and-ranging">LIDAR (light detection and ranging)</h2>
+<p>LIDAR works by measuring the time it takes light to travel from the sensor to an object and return. LIDAR, if properly calibrated, can provide very accurate distance measurements. On an autonomous aircraft system LIDAR can be used to assist in autoland to detect distance from the ground far more accurately than GPS or a pressure sensor. LIDAR can also be used to map surfaces that a UAS flies over creating very detailed maps and 3D models.</p>
+<figure class="textbook-figure"><a href="/assets/advanced-sensors/lidar-sensor.jpg"><img src="/assets/advanced-sensors/lidar-sensor.jpg" alt="A Garmin LIDAR rangefinder: a black housing with two round lenses side by side, one to send light and one to receive it, and a bundle of colored wires." width="1052" height="1147" loading="lazy"></a><figcaption><p>A LIDAR rangefinder (Garmin). One lens sends a pulse of light and the other receives its reflection.</p></figcaption></figure>
+<h2 id="imus-inertial-measurement-units">IMUs (inertial measurement units)</h2>
+<figure class="textbook-figure"><a href="/assets/advanced-sensors/imu-axes.png"><img src="/assets/advanced-sensors/imu-axes.png" alt="Diagram titled “UAV Inertial Measurement Units” showing a box with three axes through it and a curved arrow around each, labeled yaw, pitch, and roll." width="1536" height="864" loading="lazy"></a><figcaption><p>An IMU senses rotation about the yaw, pitch, and roll axes.</p></figcaption></figure>
+<p>An IMU (Inertial Measurement Unit) uses a combination of gyroscope and accelerometer to determine its position in space. This device is arguably the most important in an automated system. If the IMU fails in flight a crash is very likely.</p>
+<h2 id="gyroscopes">Gyroscopes</h2>
+<figure class="textbook-figure"><a href="/assets/advanced-sensors/gyroscope-gimbals.png"><img src="/assets/advanced-sensors/gyroscope-gimbals.png" alt="Drawing of a gyroscope: a gold spinning disk on an axle, held inside two rings (gimbals) on a stand, against a black background." width="1280" height="960" loading="lazy"></a><figcaption><p>A gyroscope. The gimbal rings let the spinning disk keep its orientation as the frame around it moves.</p></figcaption></figure>
+<p>A gyroscope uses the principle of gyroscopic precession. If you ever played with a toy top as a child you were learning about gyroscopic precession even if you didn’t realize it at the time. When spinning, a gyroscope wants to resist force at a 90 degree angle to its rotation. This is why a top stays upright while spinning but wants to fall over as it slows down. In manned aircraft a mechanical gyroscope spins in the instrument panel keeping instruments such as the attitude indicator level even when the aircraft is banking in a turn. This provides horizon information to the pilot even when he/she can’t see out the window.</p>
+<p>A digital gyroscope works in a similar manner except instead of a mechanical device that rotates it vibrates a small piece of crystal. The crystal will resist movement in the same way a mechanical gyroscope resists movement. This resistance can be measured and calibrated and it is what we use in a UAS system for gyroscopic control.</p>
+<figure class="textbook-figure"><a href="/assets/advanced-sensors/toy-gyroscope.jpg"><img src="/assets/advanced-sensors/toy-gyroscope.jpg" alt="A spinning toy gyroscope balanced on the tip of its axle, its yellow-rimmed wheel blurred with motion inside a metal frame." width="889" height="1000" loading="lazy"></a><figcaption><p>A mechanical toy gyroscope.</p></figcaption></figure>
+<h2 id="accelerometers">Accelerometers</h2>
+<p>Accelerometers measure the force of gravity, known as G-force. This force is measured in the X, Y, and Z axis and is reported as a value that can be interpreted by a flight computer. An accelerometer is useful for knowing which direction you are moving and how fast you are accelerating in that direction. Combined, a gyroscope and accelerometer make up the core of an IMU (inertial measurement unit).</p>
+<h2 id="magnetometers">Magnetometers</h2>
+<p>A magnetometer is a digital compass. A magnetometer measures the earth&#x27;s magnetic field to generate a heading using cardinal coordinates north, south, east, west or a numbered heading 0-360 degrees. Magnetometers are negatively affected by large metal objects and need to be calibrated often, sometimes before every flight. GPS often provides for a more accurate heading, however an aircraft needs to be moving for a GPS to provide a heading. A magnetometer however, can provide a heading even when not moving. Most remote aircraft use both magnetometers and GPS to provide heading information.</p>
+<h2 id="pressure-sensors">Pressure sensors</h2>
+<p>Manned aircraft have used the weight of the atmosphere to determine altitude from almost the very beginning of aviation. As you go higher above sea level the weight of the air above you gets less at a known rate. A pressure sensor is the primary tool for determining altitude. The easiest way to measure your altitude is to zero out your pressure sensor on the ground, then as you climb into the air the pressure sensor can determine how high your aircraft is above the launch location. If you want to know your altitude above sea level however, you will have to calibrate your pressure sensor to account for the current atmospheric conditions at your location. Air pressure changes all the time and temperature impacts air density as well. Airport weather stations report the altimeter correction about every 20 minutes. If your pressure sensor allows for this correction it can give a very accurate altitude.</p>
+<p>The highlighted part of this METAR weather report, A3007, shows the altimeter calibration value of 30.07 inches of mercury. This value can be used to calibrate a pressure sensor to sea level.</p>
+<p><code>KBZN 080356Z 16009KT 10SM CLR 21/11 <mark>A3007</mark> RMK AO2 SLP146 T02060111</code></p>
+<h2 id="artificial-intelligence">Artificial intelligence</h2>
+<p>Trying to keep pace with the changes in (AI) Artificial Intelligence is very difficult with the speed at which it is progressing. We already use AI in many facets of our lives to save time, innovate, and solve problems. The integration with AI and robotics, particularly drones will likely improve the safety and reliability of automated systems and streamline the processing of data to near real time. One of the biggest limitations of drones has been the ability to amass large amounts of data but a lack of resources to process and make meaning from that data. AI will likely decrease data processing time and allow automated systems to operate in ways we have yet to imagine. As with any new and emerging technology there will be failures and setbacks as systems are refined and problems are solved. This course will likely not touch on AI other than to look at new and emerging AI solutions as they relate to drones. Here are a few things to look for:</p>
+<ul><li>
+AI can be used for real-time image processing, which could allow drones to operate in areas without GPS such as indoor environments or areas where GPS has been jammed or denied in some way.
+</li><li>
+Swarm drones, such as those seen in drone light demonstrations. AI can help to coordinate and generate much more complex movements of large groups of drones.
+</li><li>
+Remote sensing platforms for wildfire detection, crop inspection, search and rescue and other applications could allow for rapid detection of desired targets (lost hikers, wildfire, crop damage) without the need for humans to manually examine images.
+</li><li>
+Drone warfare is already happening between Russia and Ukraine. As each side develops new and deadlier drones integrating AI, the dark side of AI development is becoming rapidly apparent.
+</li></ul>

@@ -11,6 +11,8 @@ const pidControllers = read('./pidControllersCourse.json');
 const uasHardware = read('./uasHardwareCourse.json');
 const buildMultirotor = read('./buildMultirotorCourse.json');
 const flightControllers = read('./flightControllersCourse.json');
+const cameraVideo = read('./cameraVideoCourse.json');
+const advancedSensors = read('./advancedSensorsCourse.json');
 
 // Lab manual courses share one study method; only the chapter differs.
 const labManualMethod = chapter => [
@@ -120,7 +122,7 @@ export default {
     sidebarCollection: 'flightControllersModules',
     overviewLabel: 'Course overview',
     check: 'review',
-    final: {url: '/pid-controllers/', title: 'PID Controllers'},
+    final: {url: '/camera-video-systems/', title: 'Camera and Video Systems'},
     intro: [
       'This course takes you from what a flight controller does to flying an autonomous mission. It follows Chapter 6, Flight Controllers, of the Remote and Autonomous Aircraft Systems lab manual.',
       'The examples use Betaflight, ArduPilot with Mission Planner, and QGroundControl, but the ideas apply to most flight controllers. Building a Multirotor UAS covers setting up Betaflight step by step, and PID Controllers explains how a flight controller holds an aircraft on target.'
@@ -131,6 +133,50 @@ export default {
     chapterTitle: flightControllers.chapterTitle,
     reviewQuestions: flightControllers.reviewQuestions,
     units: flightControllers.units
+  },
+  cameraVideo: {
+    id: 'cameraVideo',
+    title: 'Camera and Video Systems',
+    shortTitle: 'Camera and Video Systems',
+    url: '/camera-video-systems/',
+    label: 'CAMERA AND VIDEO SYSTEMS',
+    sidebarLabel: 'BROWSE THE COURSE',
+    sidebarCollection: 'cameraVideoModules',
+    overviewLabel: 'Course overview',
+    check: 'review',
+    final: {url: '/advanced-sensors/', title: 'Advanced Sensors'},
+    intro: [
+      'This course covers the cameras remote aircraft carry, from action cameras to first person view (FPV) systems you fly through. It follows Chapter 7, Camera and Video Systems, of the Remote and Autonomous Aircraft Systems lab manual.',
+      'The FPV lab ends with an FPV flight with a safety pilot, so complete Learning to Fly a UAS first. UAS Hardware and Electronics covers the soldering the lab uses.'
+    ],
+    notice: {title: 'Work safely', text: 'Check the voltage your camera and video transmitter need before you connect power. Fly FPV only with a safety pilot or visual observer who keeps the aircraft in sight.'},
+    method: labManualMethod('Chapter 7'),
+    chapterUrl: cameraVideo.chapterUrl,
+    chapterTitle: cameraVideo.chapterTitle,
+    reviewQuestions: cameraVideo.reviewQuestions,
+    units: cameraVideo.units
+  },
+  advancedSensors: {
+    id: 'advancedSensors',
+    title: 'Advanced Sensors',
+    shortTitle: 'Advanced Sensors',
+    url: '/advanced-sensors/',
+    label: 'ADVANCED SENSORS',
+    sidebarLabel: 'BROWSE THE COURSE',
+    sidebarCollection: 'advancedSensorsModules',
+    overviewLabel: 'Course overview',
+    check: 'review',
+    final: {url: '/pid-controllers/', title: 'PID Controllers'},
+    intro: [
+      'This course explains the sensors a flight controller relies on: GPS, airspeed, LIDAR, pressure, and the gyroscopes, accelerometers, and magnetometers of the IMU. It follows Chapter 8, Advanced Sensors, of the Remote and Autonomous Aircraft Systems lab manual.',
+      'The lab installs a sensor on a Pixhawk-style flight controller; Flight Controllers covers ArduPilot and Mission Planner. PID Controllers explains how a flight controller uses these measurements to hold an aircraft on target.'
+    ],
+    notice: {title: 'Work safely', text: 'Remove the propeller before you connect a battery to install, calibrate, or test a sensor.'},
+    method: labManualMethod('Chapter 8'),
+    chapterUrl: advancedSensors.chapterUrl,
+    chapterTitle: advancedSensors.chapterTitle,
+    reviewQuestions: advancedSensors.reviewQuestions,
+    units: advancedSensors.units
   },
   electricalBasics: {
     id: 'electricalBasics',

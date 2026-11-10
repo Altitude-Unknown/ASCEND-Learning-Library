@@ -1,0 +1,206 @@
+{
+  "units": [
+    {
+      "slug": "cameras-for-aerial-imaging",
+      "title": "Cameras for Aerial Imaging",
+      "number": 1,
+      "url": "/camera-video-systems/cameras-for-aerial-imaging/",
+      "summary": "Compare action, 360°, and multispectral cameras, and see how a Raspberry Pi can trigger a camera and geotag its photos.",
+      "outcomes": [
+        "Explain why action cameras suit remote aircraft, and how a 360° camera differs from one.",
+        "Describe what a multispectral camera records and its agricultural uses.",
+        "Explain how a Raspberry Pi can trigger a camera and how geotagged photos become a photo mosaic."
+      ],
+      "readings": [
+        {
+          "title": "Action cameras",
+          "id": "action-cameras"
+        },
+        {
+          "title": "360° cameras",
+          "id": "360-cameras"
+        },
+        {
+          "title": "Multispectral cameras",
+          "id": "multispectral-cameras"
+        },
+        {
+          "title": "Automating cameras with a Raspberry Pi computer",
+          "id": "automating-cameras-with-a-raspberry-pi-computer"
+        },
+        {
+          "title": "Artificial intelligence cameras",
+          "id": "artificial-intelligence-cameras"
+        }
+      ],
+      "activities": [],
+      "practice": {
+        "title": "Choose a camera for the mission",
+        "text": "For each mission, choose a camera from the reading and explain why: filming a classmate’s first flight, checking a field of crops for stress, and photographing a field to stitch into a map. Then sketch where you would mount each camera on your aircraft so it gets a clear view without moving the center of gravity out of limits. Compare with your answers to review questions 6, 8, 11, and 20.",
+        "sections": [
+          {
+            "title": "Action cameras",
+            "id": "action-cameras"
+          },
+          {
+            "title": "360° cameras",
+            "id": "360-cameras"
+          },
+          {
+            "title": "Multispectral cameras",
+            "id": "multispectral-cameras"
+          }
+        ]
+      },
+      "lessonVideo": null,
+      "reviewQuestions": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        19,
+        20
+      ]
+    },
+    {
+      "slug": "first-person-view",
+      "title": "First Person View (FPV)",
+      "number": 2,
+      "url": "/camera-video-systems/first-person-view/",
+      "summary": "Learn the parts of an FPV system, compare analog and high-definition digital FPV, then build a working system and fly it with a safety pilot.",
+      "outcomes": [
+        "Name the four main parts of an FPV system and what the video transmitter and receiver each do.",
+        "Compare analog and high-definition digital FPV systems.",
+        "Connect a camera and video transmitter at safe voltages, get live video on a display, and mount the system on an aircraft."
+      ],
+      "readings": [
+        {
+          "title": "First person view (FPV) cameras",
+          "id": "first-person-view-fpv-cameras"
+        },
+        {
+          "title": "Analog FPV",
+          "id": "analog-fpv"
+        },
+        {
+          "title": "High-definition FPV",
+          "id": "high-definition-fpv"
+        }
+      ],
+      "activities": [
+        "fpv-setup-lab"
+      ],
+      "signoff": [
+        "Connect an FPV camera to a video transmitter.",
+        "Connect a video feed from a VTx to an FPV receiver.",
+        "Determine the best mounting location for an action camera or 360 camera that will provide good quality video without negatively impacting center of gravity."
+      ],
+      "lessonVideo": null,
+      "reviewQuestions": [
+        4,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "skills": [
+        "Connect an FPV camera to a video transmitter.",
+        "Connect a video feed from a VTx to an FPV receiver.",
+        "Determine the best mounting location for an action camera or 360 camera that will provide good quality video without negatively impacting center of gravity."
+      ]
+    }
+  ],
+  "chapterUrl": "/camera-video-systems/textbook/camera-and-video-systems/",
+  "chapterTitle": "Chapter 7: Camera and Video Systems",
+  "reviewQuestions": {
+    "1": {
+      "question": "What is an action camera and what are the benefits of one for use on a remote aircraft?",
+      "answer": "An action camera is a small, rugged camera designed to capture still images and video. They are useful on remote aircraft because they are generally durable, often waterproof, and capable of surviving rough handling and even some crashes."
+    },
+    "2": {
+      "question": "What is a 360 camera and how does it work?",
+      "answer": "A 360° camera captures video in every direction and can automatically stabilize the image. The desired camera view can then be selected during post-production."
+    },
+    "3": {
+      "question": "What does a multispectral camera do? What applications is it suited for?",
+      "answer": "A multispectral camera captures wavelengths of light outside the normal visible range. It can be used for applications such as analyzing crop health and stress and detecting pests or crop damage."
+    },
+    "4": {
+      "question": "What is FPV and what benefits does it provide for remote aircraft?",
+      "answer": "FPV stands for First Person View. It transmits near-real-time video from the aircraft to a display or headset on the ground, allowing the pilot to fly from the aircraft's point of view."
+    },
+    "5": {
+      "question": "What advantage does an action camera provide when capturing aerial photographs and video?",
+      "answer": "An action camera allows still photographs and video to be captured from the aircraft, providing a unique aerial perspective."
+    },
+    "6": {
+      "question": "Why are action cameras generally well suited for installation on remote aircraft?",
+      "answer": "They are generally small, rugged, waterproof, and capable of handling rough conditions and even some crashes."
+    },
+    "7": {
+      "question": "How does a 360° camera differ from a conventional action camera?",
+      "answer": "A conventional action camera records primarily in the direction it is pointed, while a 360° camera captures video in every direction."
+    },
+    "8": {
+      "question": "What advantage does a 360° camera provide when determining where the camera should be pointed during flight?",
+      "answer": "Because it captures everything around it, the operator does not need to precisely aim the camera during the flight."
+    },
+    "9": {
+      "question": "How can the desired viewing direction from a 360° camera be selected after the flight?",
+      "answer": "The desired camera views can be selected during post-production after the video has been recorded."
+    },
+    "10": {
+      "question": "What types of light can a multispectral camera detect that a conventional visible-light camera cannot?",
+      "answer": "A multispectral camera can capture wavelengths of light outside the visible range."
+    },
+    "11": {
+      "question": "Give three examples of agricultural applications for multispectral imagery.",
+      "answer": "Examples given in the chapter include analyzing crop health and stress, detecting pests, and identifying crop damage."
+    },
+    "12": {
+      "question": "What does FPV stand for?",
+      "answer": "First Person View."
+    },
+    "13": {
+      "question": "What are the four main components of an FPV system?",
+      "answer": "An FPV camera, video transmitter (VTx), video receiver (VRx), and video display, which is commonly a set of goggles."
+    },
+    "14": {
+      "question": "What is the function of the video transmitter (VTx) in an FPV system?",
+      "answer": "The video transmitter sends the video signal from the camera on the aircraft to the video receiver on the ground."
+    },
+    "15": {
+      "question": "What is the function of the video receiver (VRx) in an FPV system?",
+      "answer": "The video receiver receives the transmitted video signal so that it can be displayed on a monitor or FPV goggles."
+    },
+    "16": {
+      "question": "What are the primary differences between analog and high-definition digital FPV systems?",
+      "answer": "Analog FPV systems are generally simpler and lower cost, while high-definition digital FPV systems provide much higher-quality video."
+    },
+    "17": {
+      "question": "Why is it important to verify the operating voltage of an FPV camera and video transmitter before connecting them?",
+      "answer": "Applying too much voltage can damage the equipment. Some cameras operate at only 5 V and may require a voltage-regulation circuit."
+    },
+    "18": {
+      "question": "What aircraft characteristics should be considered when installing an FPV camera and transmitter on an aircraft?",
+      "answer": "The equipment must be securely attached and should not interfere with aircraft control, weight and balance, or safe operation."
+    },
+    "19": {
+      "question": "How can a Raspberry Pi be used to automate a camera carried by an aircraft?",
+      "answer": "A Raspberry Pi can control or trigger a camera. It can be interfaced with an RC receiver so the pilot can trigger photographs, or combined with GPS or a flight computer to automate image capture and produce geotagged photographs."
+    },
+    "20": {
+      "question": "What are geotagged photographs, and how can they be used to create a photo mosaic?",
+      "answer": "In the context of the chapter, geotagged photographs are photographs associated with GPS location information. Multiple geotagged photographs can then be stitched together to form a photo mosaic."
+    }
+  }
+}

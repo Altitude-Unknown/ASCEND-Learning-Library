@@ -541,6 +541,215 @@
         ]
       ]
     },
+    "7": {
+      "sourceHeading": "Chapter 7: Camera and video systems",
+      "answerKeyHeading": "Chapter 7: Camera and Video Systems — Answer Key",
+      "title": "Chapter 7: Camera and Video Systems",
+      "description": "Cameras for remote aircraft: action, 360°, and multispectral cameras; first person view (FPV) systems, analog and digital; and automating a camera with a Raspberry Pi.",
+      "courseId": "cameraVideo",
+      "courseData": "content/_data/cameraVideoCourse.json",
+      "url": "/camera-video-systems/textbook/camera-and-video-systems/",
+      "output": "content/camera-video-systems/textbook/camera-and-video-systems.njk",
+      "assets": "camera-video-systems",
+      "topic": "uas",
+      "sourceNote": "From Mike Walach’s lab manual, Remote and Autonomous Aircraft Systems. Original wording is retained with small corrections; image descriptions have been added for web reading.",
+      "headerLinks": [
+        {
+          "title": "About the lab manual",
+          "url": "/resources/remote-aircraft-textbook/"
+        }
+      ],
+      "skipParagraphs": [
+        "^Name:?_+$",
+        "^FPV Camera$",
+        "^FPV Video Transmitter \\(VTx\\)$",
+        "^FPV Video Display Goggles with built in video Receiver \\(VRx\\)$"
+      ],
+      "closing": "",
+      "omitSections": [
+        "^Lab Activity",
+        "^Review Questions$",
+        "^Skills Checksheet$"
+      ],
+      "headings": {
+        "Action cameras": "Action cameras",
+        "360 degree cameras": "360° cameras",
+        "First Person View Cameras": "First person view (FPV) cameras",
+        "High Definition FPV": "High-definition FPV",
+        "Automating Cameras with a Raspberry Pi Computer": "Automating cameras with a Raspberry Pi computer",
+        "Artificial Intelligence Camera": "Artificial intelligence cameras"
+      },
+      "replace": [
+        [
+          "While an action camera can capture great video a 360 camera",
+          "While an action camera can capture great video, a 360 camera"
+        ],
+        [
+          "In post production",
+          "In post-production"
+        ],
+        [
+          "than a basic video camera can capture then a multispectral may be what you need",
+          "than a basic video camera can capture, then a multispectral camera may be what you need"
+        ],
+        [
+          "(first Person View)",
+          "(First Person View)"
+        ],
+        [
+          "near real time video",
+          "near-real-time video"
+        ],
+        [
+          "video transmitter (VTx) , a video receiver",
+          "video transmitter (VTx), a video receiver"
+        ],
+        [
+          "Raspberry Pi pictured above, can be used",
+          "Raspberry Pi pictured above can be used"
+        ],
+        [
+          "at the pilots request",
+          "at the pilot’s request"
+        ]
+      ],
+      "dataReplace": [
+        [
+          "Vtx",
+          "VTx"
+        ],
+        [
+          "Connect an FPV camera to a video transmitter",
+          "Connect an FPV camera to a video transmitter."
+        ]
+      ]
+    },
+    "8": {
+      "sourceHeading": "Chapter 8: Advanced Sensors",
+      "answerKeyHeading": "Chapter 8: Advanced Sensors — Answer Key",
+      "reviewQuestionsHeading": "Chapter 8: Advanced Sensors — Review Questions",
+      "title": "Chapter 8: Advanced Sensors",
+      "description": "The sensors behind automated flight: GPS, airspeed sensors, LIDAR, IMUs, gyroscopes, accelerometers, magnetometers, and pressure sensors, plus where artificial intelligence is taking drones.",
+      "courseId": "advancedSensors",
+      "courseData": "content/_data/advancedSensorsCourse.json",
+      "url": "/advanced-sensors/textbook/advanced-sensors/",
+      "output": "content/advanced-sensors/textbook/advanced-sensors.njk",
+      "assets": "advanced-sensors",
+      "topic": "uas",
+      "sourceNote": "From Mike Walach’s lab manual, Remote and Autonomous Aircraft Systems. Original wording is retained with small corrections; image descriptions have been added for web reading.",
+      "headerLinks": [
+        {
+          "title": "About the lab manual",
+          "url": "/resources/remote-aircraft-textbook/"
+        }
+      ],
+      "skipParagraphs": [
+        "^Name:?_+$",
+        "^A mechanical toy gyroscope$"
+      ],
+      "closing": "",
+      "omitSections": [
+        "^Lab Activity",
+        "Review Questions$",
+        "^Skills Checksheet$"
+      ],
+      "headings": {
+        "GPS (Global Positioning Systems)": "GPS (Global Positioning System)",
+        "Air Speed Indicators": "Airspeed indicators",
+        "LIDAR (Light Detecting and Ranging)": "LIDAR (light detection and ranging)",
+        "IMU Inertial Measurement Units": "IMUs (inertial measurement units)",
+        "Magnetometer": "Magnetometers",
+        "Artificial Intelligence": "Artificial intelligence"
+      },
+      "replace": [
+        [
+          "It take at least 4 satellites",
+          "It takes at least 4 satellites"
+        ],
+        [
+          "Air speed indicators compare",
+          "Airspeed indicators compare"
+        ],
+        [
+          "LIDAR, if properly calibrated and provide very accurate",
+          "LIDAR, if properly calibrated, can provide very accurate"
+        ],
+        [
+          "distance form the ground",
+          "distance from the ground"
+        ],
+        [
+          "gyroscopic progression",
+          "gyroscopic precession"
+        ],
+        [
+          "When spinning a gyroscope wants",
+          "When spinning, a gyroscope wants"
+        ],
+        [
+          "it vibrated a small piece of crystal",
+          "it vibrates a small piece of crystal"
+        ],
+        [
+          "useful for know which",
+          "useful for knowing which"
+        ],
+        [
+          "Combined with a gyroscope and accelerometer makes up the core",
+          "Combined, a gyroscope and accelerometer make up the core"
+        ],
+        [
+          "magnetic poles to generate",
+          "magnetic field to generate"
+        ],
+        [
+          "gets less as a known rate",
+          "gets less at a known rate"
+        ],
+        [
+          "know you altitude",
+          "know your altitude"
+        ],
+        [
+          "If your pressure sensor allow for",
+          "If your pressure sensor allows for"
+        ],
+        [
+          "Artificial Intelligence ios very",
+          "Artificial Intelligence is very"
+        ],
+        [
+          "realtime image processing data which",
+          "real-time image processing, which"
+        ],
+        [
+          "Swam drones",
+          "Swarm drones"
+        ],
+        [
+          "develops news and deadlier",
+          "develops new and deadlier"
+        ],
+        [
+          "The highlighted part of this METAR weather report shows",
+          "The highlighted part of this METAR weather report, A3007, shows"
+        ],
+        [
+          "<p>KBZN 080356Z 16009KT 10SM CLR 21/11 <strong>A3007 </strong>RMK AO2 SLP146 T02060111</p>",
+          "<p><code>KBZN 080356Z 16009KT 10SM CLR 21/11 <mark>A3007</mark> RMK AO2 SLP146 T02060111</code></p>"
+        ]
+      ],
+      "dataReplace": [
+        [
+          "The chapter's retrieved text does not give a specific numerical GPS altitude error. It does state that LIDAR can determine distance from the ground much more accurately than GPS or a pressure sensor.",
+          "The chapter does not give a figure for GPS altitude error. It notes that LIDAR measures distance from the ground far more accurately than GPS or a pressure sensor."
+        ],
+        [
+          "Light Detecting and Ranging",
+          "Light Detection and Ranging"
+        ]
+      ]
+    },
     "9": {
       "sourceHeading": "Chapter 9 PID Controllers",
       "answerKeyHeading": "Chapter 9: PID Controllers — Answer Key",
@@ -1350,6 +1559,81 @@
       "file": "qgroundcontrol.png",
       "alt": "QGroundControl over a satellite map of a park. A takeoff point and six numbered waypoints are joined by an orange route, a prompt reads “Takeoff from ground and start the current mission,” and instruments, a compass, and a video window surround the map.",
       "caption": "QGroundControl with a planned mission: a takeoff point and six waypoints, ready to start."
+    },
+    "image63.jpg": {
+      "file": "action-camera.jpg",
+      "alt": "Front of a GoPro action camera: a small black box with a square lens on the right and a color screen on the left showing an underwater scene.",
+      "caption": "An action camera (GoPro). Small, rugged, and often waterproof, it is easy to mount on an aircraft."
+    },
+    "image81.jpg": {
+      "file": "360-camera.jpg",
+      "alt": "An Insta360 camera standing upright: a tall, narrow black body with a round fisheye lens at the top and a screen below it showing a wide-angle selfie of two hikers.",
+      "caption": "A 360° camera (Insta360). It has a lens on each side, so together they record every direction at once."
+    },
+    "image249.png": {
+      "file": "multispectral-camera.png",
+      "alt": "A multispectral camera with a red and silver body and six lenses in a black faceplate on its front, with connectors on the side.",
+      "caption": "A multispectral camera. Each lens records a different band of light, including wavelengths outside the visible range."
+    },
+    "image108.jpg": {
+      "file": "fpv-camera.jpg",
+      "alt": "A small black RunCam Phoenix 2 FPV camera with a round lens on the front, a mounting hole on the side, and a white connector on top.",
+      "caption": "FPV camera (RunCam Phoenix 2). A small, light camera that sends live video to the video transmitter."
+    },
+    "image203.jpg": {
+      "file": "video-transmitter.jpg",
+      "alt": "A small video transmitter circuit board with a short cable running to a gold antenna connector.",
+      "caption": "FPV video transmitter (VTx). It sends the camera’s video from the aircraft to the ground; the antenna screws onto the gold connector."
+    },
+    "image155.jpg": {
+      "file": "fpv-goggles.jpg",
+      "alt": "White and blue Fat Shark FPV goggles with a padded face opening, a blue head strap, and channel and volume buttons on the side.",
+      "caption": "FPV video display goggles with a built-in video receiver (VRx). The pilot sees the aircraft’s live video inside the goggles."
+    },
+    "image313.jpg": {
+      "file": "hd-fpv-goggles.jpg",
+      "alt": "Front view of gray DJI digital FPV goggles fitted with two Lumenier AXII HD antennas on their front face and two more antennas at the top corners.",
+      "caption": "High-definition digital FPV goggles (DJI). Digital systems give much higher-quality video than analog."
+    },
+    "image209.jpg": {
+      "file": "raspberry-pi-zero-2-w.jpg",
+      "alt": "A Raspberry Pi Zero 2 W board with labels pointing to its 40-pin GPIO header, micro SD card slot, processor, Wi-Fi and Bluetooth chip, camera interface, mini HDMI port, micro USB data port, and micro USB power port.",
+      "caption": "A Raspberry Pi Zero 2 W. Its camera interface connects a camera, and its GPIO pins can connect to an RC receiver or GPS."
+    },
+    "image53.jpg": {
+      "file": "raspberry-pi-ai-camera.jpg",
+      "alt": "A Raspberry Pi AI Camera: a small green circuit board with a black camera module in the middle and an orange ribbon cable running down from it.",
+      "caption": "A Raspberry Pi AI Camera. It connects to a Raspberry Pi by a ribbon cable and can run image-recognition models on the camera itself."
+    },
+    "image51.png": {
+      "file": "gps-module.png",
+      "alt": "Top view of a round black Here4 GPS module with a triangle on top pointing forward.",
+      "caption": "A GPS module (Here4). Mounted on top of an aircraft, it receives signals from GPS satellites; the triangle points toward the front of the aircraft."
+    },
+    "image27.png": {
+      "file": "airspeed-sensor.png",
+      "alt": "An airspeed sensor: a long metal pitot-static tube with two tubing connectors at its back end, beside a small circuit board carrying a pressure sensor.",
+      "caption": "An airspeed sensor: a pitot-static tube and the pressure sensor board it connects to."
+    },
+    "image176.jpg": {
+      "file": "lidar-sensor.jpg",
+      "alt": "A Garmin LIDAR rangefinder: a black housing with two round lenses side by side, one to send light and one to receive it, and a bundle of colored wires.",
+      "caption": "A LIDAR rangefinder (Garmin). One lens sends a pulse of light and the other receives its reflection."
+    },
+    "image303.png": {
+      "file": "imu-axes.png",
+      "alt": "Diagram titled “UAV Inertial Measurement Units” showing a box with three axes through it and a curved arrow around each, labeled yaw, pitch, and roll.",
+      "caption": "An IMU senses rotation about the yaw, pitch, and roll axes."
+    },
+    "image152.png": {
+      "file": "gyroscope-gimbals.png",
+      "alt": "Drawing of a gyroscope: a gold spinning disk on an axle, held inside two rings (gimbals) on a stand, against a black background.",
+      "caption": "A gyroscope. The gimbal rings let the spinning disk keep its orientation as the frame around it moves."
+    },
+    "image62.jpg": {
+      "file": "toy-gyroscope.jpg",
+      "alt": "A spinning toy gyroscope balanced on the tip of its axle, its yellow-rimmed wheel blurred with motion inside a metal frame.",
+      "caption": "A mechanical toy gyroscope."
     }
   }
 }
