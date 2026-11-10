@@ -4,6 +4,7 @@ description: "Compare brushless and brushed motors, see what an ESC does, read p
 order: 3
 courseOrder: 3
 permalink: "/uas-hardware/motors-escs-and-propellers/"
+resourceIds: ["motor-esc-connection-video", "motor-direction-video", "esc-programming-video"]
 status: "Lesson video coming soon"
 ---
 

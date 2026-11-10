@@ -4,7 +4,7 @@ description: "Fly the Maneuver Description Guide, from hand launch and straight 
 order: 4
 courseOrder: 4
 permalink: "/learn-to-fly/airplane-maneuvers/"
-resourceIds: ["flight-lab-rc"]
+resourceIds: ["flight-lab-rc", "fixed-wing-launch-video"]
 status: "Lesson video coming soon"
 ---
 

@@ -4,7 +4,7 @@ description: "Install the aileron servos, control horns, and Z-bend pushrods, th
 order: 3
 courseOrder: 3
 permalink: "/build-fixed-wing/wing-electronics/"
-resourceIds: ["esc-receiver-connection-video"]
+resourceIds: ["servo-receiver-connection-video", "esc-receiver-connection-video"]
 status: "Lesson video coming soon"
 ---
 

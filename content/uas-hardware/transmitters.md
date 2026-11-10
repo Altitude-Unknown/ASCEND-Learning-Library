@@ -4,6 +4,7 @@ description: "Set up a new aircraft in a transmitter, then set dual rates and ex
 order: 1
 courseOrder: 1
 permalink: "/uas-hardware/transmitters/"
+resourceIds: ["spektrum-new-model-video", "spektrum-model-setup-video"]
 status: "Lesson video coming soon"
 ---
 
