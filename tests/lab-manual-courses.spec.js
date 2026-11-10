@@ -8,6 +8,7 @@ const COURSES = [
   {data: 'electricalBasicsCourse.json', url: '/electrical-basics/', title: 'Electrical Basics', images: 3},
   {data: 'uasHardwareCourse.json', url: '/uas-hardware/', title: 'UAS Hardware and Electronics', images: 88},
   {data: 'buildMultirotorCourse.json', url: '/build-multirotor/', title: 'Building a Multirotor UAS', images: 71},
+  {data: 'flightControllersCourse.json', url: '/flight-controllers/', title: 'Flight Controllers', images: 6},
   {data: 'pidControllersCourse.json', url: '/pid-controllers/', title: 'PID Controllers', images: 0, equations: 6}
 ];
 const axe = page => new AxeBuilder({page}).withTags(['wcag2a', 'wcag2aa', 'wcag21aa', 'wcag22aa']).analyze();

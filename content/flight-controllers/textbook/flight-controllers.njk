@@ -1,0 +1,233 @@
+---
+{
+  "layout": "layouts/textbook-chapter.njk",
+  "tags": [],
+  "eleventyExcludeFromCollections": true,
+  "topic": "uas",
+  "courseId": "flightControllers",
+  "title": "Chapter 6: Flight Controllers",
+  "description": "What flight controllers do, from simple training stabilizers to Pixhawk autopilots; Betaflight, ArduPilot, Mission Planner, and QGroundControl; automation, safety, and failsafes; flight modes; and planning an autonomous mission.",
+  "chapterNumber": 6,
+  "textbookEyebrow": "REMOTE AND AUTONOMOUS AIRCRAFT SYSTEMS · WEB EDITION",
+  "sourceNote": "From Mike Walach’s lab manual, Remote and Autonomous Aircraft Systems. Original wording is retained with small corrections; image descriptions have been added for web reading.",
+  "headerLinks": [
+    {
+      "title": "About the lab manual",
+      "url": "/resources/remote-aircraft-textbook/"
+    }
+  ],
+  "toc": [
+    {
+      "title": "Training controllers: simple IMU stabilization",
+      "id": "training-controllers-simple-imu-stabilization"
+    },
+    {
+      "title": "Pixhawk and other open-source flight controllers",
+      "id": "pixhawk-and-other-open-source-flight-controllers"
+    },
+    {
+      "title": "Flight-control software",
+      "id": "flight-control-software"
+    },
+    {
+      "title": "— Betaflight",
+      "id": "betaflight"
+    },
+    {
+      "title": "— ArduPilot and Mission Planner",
+      "id": "ardupilot-and-mission-planner"
+    },
+    {
+      "title": "— QGroundControl",
+      "id": "qgroundcontrol"
+    },
+    {
+      "title": "Automating a mission",
+      "id": "automating-a-mission"
+    },
+    {
+      "title": "Safety around flight-controlled aircraft",
+      "id": "safety-around-flight-controlled-aircraft"
+    },
+    {
+      "title": "Failsafes",
+      "id": "failsafes"
+    },
+    {
+      "title": "Planning a mission",
+      "id": "planning-a-mission"
+    },
+    {
+      "title": "Flight modes",
+      "id": "flight-modes"
+    },
+    {
+      "title": "— Manual",
+      "id": "manual"
+    },
+    {
+      "title": "— FBWA (Fly By Wire A)",
+      "id": "fbwa-fly-by-wire-a"
+    },
+    {
+      "title": "— FBWB (Fly By Wire B)",
+      "id": "fbwb-fly-by-wire-b"
+    },
+    {
+      "title": "— Auto",
+      "id": "auto"
+    },
+    {
+      "title": "Using Mission Planner to fly an autonomous mission",
+      "id": "using-mission-planner-to-fly-an-autonomous-mission"
+    }
+  ],
+  "permalink": "/flight-controllers/textbook/flight-controllers/"
+}
+---
+<h2 id="training-controllers-simple-imu-stabilization">Training controllers: simple IMU stabilization</h2>
+<p>Flight controllers are small, single-board computers that assist with controlling an aircraft. They typically use an <strong>IMU (Inertial Measurement Unit)</strong> containing sensors such as accelerometers and gyroscopes to measure the aircraft&#x27;s motion and orientation. More advanced systems may also use a barometer, magnetometer, GPS receiver, airspeed sensor, and other sensors to determine altitude, heading, position, speed, and other flight information.</p>
+<p>One of the simplest uses of a flight controller is to help a new pilot learn to fly. A basic stabilization system can automatically compensate for disturbances, limit the amount of pitch and roll commanded by the pilot, and, in some modes, return the aircraft toward level flight when the pilot releases the controls. Some systems can also limit the aircraft&#x27;s attitude to help prevent a beginning pilot from accidentally rolling the airplane inverted.</p>
+<p>These controllers vary considerably in features and cost, but stabilization can be a useful training aid, particularly for someone learning to fly without an experienced RC pilot providing instruction.</p>
+<figure class="textbook-figure"><a href="/assets/flight-controllers/training-stabilizer.jpg"><img src="/assets/flight-controllers/training-stabilizer.jpg" alt="A small red circuit board labeled Aura Lite, with a square microcontroller chip, two blue buttons labeled BIND, rows of three-pin servo headers, a micro-USB port, and two white connectors." width="1130" height="1073" loading="lazy"></a><figcaption><p>A small training stabilizer: a microcontroller and motion sensors on one board, connected between the receiver and the servos.</p></figcaption></figure>
+<h2 id="pixhawk-and-other-open-source-flight-controllers">Pixhawk and other open-source flight controllers</h2>
+<p>More advanced flight controllers can provide stabilization as well as <strong>autonomous flight</strong>.</p>
+<p><strong>Pixhawk</strong> refers to an open flight-controller hardware ecosystem and associated hardware standards. Pixhawk-compatible controllers are commonly used with open-source autopilot software such as <strong>ArduPilot</strong> or <strong>PX4</strong>. These projects are extensively documented and supported, so this section will focus on the basic concepts rather than every configuration option.</p>
+<p>A Pixhawk-compatible flight controller is a small computer built around one or more microcontrollers and a collection of sensors. Depending on the software installed, these controllers can operate many different types of vehicles, including:</p>
+<ul><li>
+Fixed-wing airplanes
+</li><li>
+Multirotors
+</li><li>
+Helicopters
+</li><li>
+VTOL aircraft
+</li><li>
+Ground vehicles
+</li><li>
+Boats
+</li><li>
+Submersibles
+</li></ul>
+<p>The flight controller receives information from its sensors, the pilot&#x27;s receiver, and other connected devices. It processes this information and sends commands to servos, electronic speed controllers, motors, and other aircraft systems.</p>
+<figure class="textbook-figure"><a href="/assets/flight-controllers/pixhawk-2-4-8.jpg"><img src="/assets/flight-controllers/pixhawk-2-4-8.jpg" alt="A black Pixhawk 2.4.8 flight controller case. Labeled ports include GPS, two telemetry ports, I2C, CAN, power, USB, SPI, and a switch, and an arrow on top points toward the front of the aircraft." width="700" height="409" loading="lazy"></a><figcaption><p>A Pixhawk-compatible flight controller (Pixhawk 2.4.8). The labeled ports connect GPS, telemetry radios, power, and other devices; the arrow points toward the front of the aircraft.</p></figcaption></figure>
+<p><strong>SpeedyBee</strong> manufactures compact flight controllers commonly used in multirotor aircraft. Some models can be stacked directly with an ESC board, creating a compact and clean installation.</p>
+<figure class="textbook-figure"><a href="/assets/flight-controllers/flight-controller.jpg"><img src="/assets/flight-controllers/flight-controller.jpg" alt="Top view of a SpeedyBee F405 V4 flight controller: a square black circuit board with a mounting hole in each corner, a processor chip in the middle, a USB-C port on the right, and rows of labeled solder pads along the top and bottom edges." width="1280" height="1280" loading="lazy"></a><figcaption><p>A flight controller (SpeedyBee F405 V4).</p></figcaption></figure>
+<h2 id="flight-control-software">Flight-control software</h2>
+<p>A flight controller requires software to operate. The software stored and executed by the flight controller&#x27;s microcontroller is called <strong>firmware</strong>.</p>
+<p>Several open-source projects are commonly encountered in unmanned aircraft.</p>
+<h3 id="betaflight">Betaflight</h3>
+<p>Betaflight is open-source flight-control firmware commonly associated with multirotors, particularly FPV aircraft. It provides stabilization, configuration, flight modes, and extensive tuning capabilities.</p>
+<figure class="textbook-figure"><a href="/assets/flight-controllers/betaflight-configurator.jpg"><img src="/assets/flight-controllers/betaflight-configurator.jpg" alt="The Betaflight Configurator 10.10.0 welcome screen, with Update Firmware and Connect buttons at the top right and a menu on the left: Welcome, Privacy Policy, Documentation &amp; Support, Options, and Firmware Flasher." width="1600" height="1000" loading="lazy"></a><figcaption><p>Betaflight Configurator, the computer program used to set up a flight controller running Betaflight.</p></figcaption></figure>
+<h3 id="ardupilot-and-mission-planner">ArduPilot and Mission Planner</h3>
+<p><strong>ArduPilot</strong> is open-source autopilot firmware capable of controlling airplanes, multirotors, helicopters, rovers, boats, and other vehicles.</p>
+<p><strong>Mission Planner</strong> is ground-control-station software commonly used with ArduPilot. It allows the user to configure the aircraft, view telemetry, calibrate sensors, select parameters, and create autonomous missions.</p>
+<figure class="textbook-figure"><a href="/assets/flight-controllers/mission-planner.png"><img src="/assets/flight-controllers/mission-planner.png" alt="Mission Planner’s Flight Data screen. On the left, an artificial horizon reads DISARMED with a pre-arm warning, above readouts for altitude, ground speed, distance to waypoint, yaw, vertical speed, and distance to the ground station. On the right is a satellite map. Tabs across the top include Flight Data, Flight Plan, Initial Setup, Config/Tuning, and Simulation." width="1105" height="671" loading="lazy"></a><figcaption><p>Mission Planner’s Flight Data screen shows the aircraft’s attitude, telemetry, and position on a map. Missions are built on the Flight Plan tab.</p></figcaption></figure>
+<h3 id="qgroundcontrol">QGroundControl</h3>
+<p><strong>QGroundControl</strong> is another ground-control-station application used to configure supported autopilot systems, monitor aircraft, and plan autonomous missions.</p>
+<figure class="textbook-figure"><a href="/assets/flight-controllers/qgroundcontrol.png"><img src="/assets/flight-controllers/qgroundcontrol.png" alt="QGroundControl over a satellite map of a park. A takeoff point and six numbered waypoints are joined by an orange route, a prompt reads “Takeoff from ground and start the current mission,” and instruments, a compass, and a video window surround the map." width="1005" height="600" loading="lazy"></a><figcaption><p>QGroundControl with a planned mission: a takeoff point and six waypoints, ready to start.</p></figcaption></figure>
+<h2 id="automating-a-mission">Automating a mission</h2>
+<p>One of the capabilities that distinguishes many UAS from traditional manually controlled RC aircraft is the ability to perform <strong>autonomous or automated flight</strong>.</p>
+<p>Airplanes, helicopters, multirotors, VTOL aircraft, and other vehicles can all use automation. Depending on the aircraft and flight-control system, automation can include:</p>
+<ul><li>
+Automatic takeoff
+</li><li>
+Automatic landing
+</li><li>
+Flying a preprogrammed route using GPS waypoints
+</li><li>
+Taking photographs at predetermined locations, times, or distances
+</li><li>
+Loitering or holding near a GPS location
+</li><li>
+Surveying or mapping an area
+</li><li>
+Releasing a payload
+</li><li>
+Returning automatically to a launch or home location
+</li></ul>
+<p>A basic autonomous system generally requires an <strong>aircraft, flight controller, appropriate sensors, a control link, and software for configuring and programming the flight controller</strong>. GPS is required for most position-based autonomous operations.</p>
+<p>Adding automation also introduces additional risks. Understanding those risks and knowing how to respond when automation does not behave as expected are important parts of operating an autonomous aircraft.</p>
+<h2 id="safety-around-flight-controlled-aircraft">Safety around flight-controlled aircraft</h2>
+<p>An aircraft equipped with a flight controller may start its motors unexpectedly if it is armed or improperly configured. Changes in flight mode, failsafe conditions, programming errors, or unexpected system behavior can also cause motors or servos to activate.</p>
+<p>Automation can fail because of <strong>mechanical, electrical, software, sensor, communication, or user errors</strong>. Flyaways, crashes, and injuries or damage to people and property are possible whenever an aircraft is operated.</p>
+<p>Before operating an automated aircraft, you should understand:</p>
+<ul><li>
+How to arm and disarm the aircraft
+</li><li>
+How to stop the motors
+</li><li>
+How to switch between flight modes
+</li><li>
+How to regain manual control
+</li><li>
+What the aircraft will do if communication is lost
+</li><li>
+What its programmed failsafes will do
+</li><li>
+How to manually fly the aircraft if stabilization or automation becomes unavailable
+</li></ul>
+<p class="notice"><strong>Remove the propeller</strong>As a general safety practice, remove the propeller whenever you are configuring, programming, troubleshooting, or testing an electric aircraft indoors unless the propeller is specifically required for a controlled test and appropriate safety precautions are in place.</p>
+<p>Maintain a safe operating area during flight and make sure everyone involved understands where they may safely stand. The pilot in command is responsible for conducting the flight safely.</p>
+<h2 id="failsafes">Failsafes</h2>
+<p>A <strong>failsafe</strong> is a predetermined response that occurs when the flight-control system detects a problem or specific condition. One common example is loss of the radio-control link between the aircraft and transmitter.</p>
+<p>On a simple RC aircraft, a receiver failsafe might command the throttle to zero and place other channels into predetermined positions. Exactly what happens depends on how the receiver and aircraft have been configured.</p>
+<p>A flight controller can provide much more sophisticated failsafe behavior. Depending on the aircraft, sensors, and configuration, a lost-link failsafe might cause the aircraft to:</p>
+<ul><li>
+Reduce or stop the motor
+</li><li>
+Maintain or stabilize its attitude
+</li><li>
+Loiter or circle while waiting for the radio link to return
+</li><li>
+Return to a programmed home location
+</li><li>
+Land automatically
+</li><li>
+Perform another predetermined action
+</li></ul>
+<p>If the aircraft has GPS and a valid home position, <strong>Return-to-Launch (RTL)</strong> may allow it to navigate back toward its launch location.</p>
+<p>Automatically landing a multirotor is generally simpler than automatically landing a conventional fixed-wing airplane. A multirotor can descend nearly vertically into a relatively small area. A fixed-wing airplane must maintain forward airspeed and fly an approach to a suitable landing area. Wind direction, groundspeed, approach path, obstacles, and available landing distance can therefore become important considerations.</p>
+<p>Failsafes must be properly configured and tested before relying on them.</p>
+<h2 id="planning-a-mission">Planning a mission</h2>
+<p>An autonomous mission can be created using ground-control-station software such as <strong>Mission Planner</strong>.</p>
+<p>The operator can place GPS waypoints on a map and assign commands or parameters to different portions of the mission. Depending on the aircraft and software, these can include:</p>
+<ul><li>
+Waypoint locations
+</li><li>
+Flight altitude
+</li><li>
+Takeoff commands
+</li><li>
+Landing commands
+</li><li>
+Return-to-launch commands
+</li><li>
+Loiter commands
+</li><li>
+Camera operations
+</li><li>
+Survey or mapping patterns
+</li><li>
+Payload operations
+</li><li>
+Other automated actions
+</li></ul>
+<p>Before flying, the operator should carefully review the mission, verify appropriate altitudes and locations, check failsafe settings, and make sure the planned route can be flown safely.</p>
+<h2 id="flight-modes">Flight modes</h2>
+<p><strong>Flight modes</strong> determine how much control is provided by the pilot and how much assistance is provided by the flight controller.</p>
+<h3 id="manual">Manual</h3>
+<p>In <strong>Manual</strong> mode on a fixed-wing aircraft, pilot commands are generally passed directly to the aircraft&#x27;s control surfaces without attitude stabilization from the autopilot. The pilot is responsible for controlling the aircraft.</p>
+<h3 id="fbwa-fly-by-wire-a">FBWA (Fly By Wire A)</h3>
+<p>In <strong>FBWA</strong>, the pilot still flies the airplane, but the flight controller stabilizes it. Instead of directly commanding a control-surface position, the pilot commands a desired aircraft attitude within configured limits.</p>
+<p>For example, moving the aileron stick commands the airplane to bank. When the pilot releases the stick, the controller commands the aircraft back toward level roll. Pitch is similarly constrained by configured limits.</p>
+<p>FBWA therefore provides a useful combination of <strong>pilot control and automatic stabilization</strong>.</p>
+<h3 id="fbwb-fly-by-wire-b">FBWB (Fly By Wire B)</h3>
+<p><strong>FBWB</strong> adds additional assistance to FBWA. The flight controller manages aircraft behavior such as altitude and speed-related targets according to its configuration while the pilot continues to command the aircraft.</p>
+<p>This provides more assistance than FBWA while still allowing the pilot to direct the airplane.</p>
+<h3 id="auto">Auto</h3>
+<p>In <strong>Auto</strong> mode, the flight controller follows a programmed mission. Depending on the aircraft and mission, the autopilot may control takeoff, navigation between waypoints, altitude, loitering, return-to-launch, and landing.</p>
+<p>Even during an autonomous mission, the pilot must continue monitoring the aircraft and be prepared to intervene if necessary.</p>
+<h2 id="using-mission-planner-to-fly-an-autonomous-mission">Using Mission Planner to fly an autonomous mission</h2>
+<p>Because flight-control software changes frequently, the <a href="/resources/mission-planning-lab/">mission planning lab</a> is intended to provide a <strong>general introduction to autonomous mission planning</strong> rather than step-by-step instructions for a particular software version.</p>
+<p>For this activity, an aircraft will be programmed to take off, climb to a predetermined altitude, fly through several GPS waypoints, and return to the launch area. A fixed-wing airplane can then circle the launch location at a safe altitude until the pilot takes control and lands.</p>

@@ -18,7 +18,7 @@ test('Filter combinations, empty state, clear, and shareable query', async({page
  await expect(page.locator('[data-resource]:visible')).toHaveCount(13);
  await expect(page.locator('[data-resource]:visible').filter({hasText:'Sensor Mount'})).toHaveCount(1);
  await page.getByRole('button',{name:'Clear filters'}).click();
- await expect(page.locator('[data-resource]:visible')).toHaveCount(79);
+ await expect(page.locator('[data-resource]:visible')).toHaveCount(80);
  await page.getByLabel('Search this collection').fill('PurpleAir');
  await expect(page.locator('[data-resource]:visible')).toHaveCount(1);
  await page.getByLabel('Audience',{exact:true}).selectOption('Pod Leads');
@@ -26,7 +26,7 @@ test('Filter combinations, empty state, clear, and shareable query', async({page
  await page.getByLabel('Type',{exact:true}).selectOption('Book');
  await expect(page.locator('[data-empty]')).toBeVisible();
  await page.getByRole('button',{name:'Clear filters'}).click();
- await expect(page.locator('[data-resource]:visible')).toHaveCount(79);
+ await expect(page.locator('[data-resource]:visible')).toHaveCount(80);
 });
 test('Site search resolves the requested example terms',async({page})=>{
  for(const term of ['airspace','PurpleAir','STL','Part 107','balloon tracking','PM2.5','wildfire smoke','radiosondes','pod leads']) {
@@ -81,7 +81,7 @@ test('No fabricated files or unsolicited YouTube embeds', async({page})=>{
 });
 test('Pages and resource links remain usable without JavaScript',async({browser})=>{
  const context=await browser.newContext({javaScriptEnabled:false});const page=await context.newPage();
- await page.goto('http://127.0.0.1:8081/library/');await expect(page.locator('[data-resource]')).toHaveCount(79);
+ await page.goto('http://127.0.0.1:8081/library/');await expect(page.locator('[data-resource]')).toHaveCount(80);
  await page.getByRole('link',{name:'Airspace Student Worksheet',exact:true}).click();
  await expect(page.locator('h1')).toHaveText('Airspace Student Worksheet');await context.close();
 });
@@ -114,7 +114,7 @@ test('Web resources are discoverable by subject, platform, and activity without 
  await page.goto('/library/?platform=Fixed-Wing+UAS&activity=Building+%26+Integration');
  await expect(page.locator('[data-resource]:visible')).toHaveCount(14);
  await page.getByRole('button',{name:'Clear filters'}).click();
- await expect(page.locator('[data-resource]:visible')).toHaveCount(79);
+ await expect(page.locator('[data-resource]:visible')).toHaveCount(80);
 });
 
 test('New Part 107 activities and YELLOWSTONE documents have readable PDFs and native files', async({page,request})=>{

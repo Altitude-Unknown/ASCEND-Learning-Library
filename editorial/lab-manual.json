@@ -480,6 +480,67 @@
         ]
       ]
     },
+    "6": {
+      "sourceHeading": "Chapter 6: Flight Controllers",
+      "answerKeyHeading": "Chapter 6 Review Questions — Answer Key",
+      "answerStyle": "numbered",
+      "title": "Chapter 6: Flight Controllers",
+      "description": "What flight controllers do, from simple training stabilizers to Pixhawk autopilots; Betaflight, ArduPilot, Mission Planner, and QGroundControl; automation, safety, and failsafes; flight modes; and planning an autonomous mission.",
+      "courseId": "flightControllers",
+      "courseData": "content/_data/flightControllersCourse.json",
+      "topic": "uas",
+      "url": "/flight-controllers/textbook/flight-controllers/",
+      "output": "content/flight-controllers/textbook/flight-controllers.njk",
+      "assets": "flight-controllers",
+      "sourceNote": "From Mike Walach’s lab manual, Remote and Autonomous Aircraft Systems. Original wording is retained with small corrections; image descriptions have been added for web reading.",
+      "headerLinks": [
+        {
+          "title": "About the lab manual",
+          "url": "/resources/remote-aircraft-textbook/"
+        }
+      ],
+      "omitSections": [
+        "^Lab Activity",
+        "^Review Questions$",
+        "^Skills Checksheet$"
+      ],
+      "skipParagraphs": [
+        "^Name:?_+$"
+      ],
+      "closing": "",
+      "headings": {
+        "Training Controllers—Simple IMU (Inertial Measurement Unit) Stabilization": "Training controllers: simple IMU stabilization",
+        "Pixhawk and Other Open-Source Flight Controllers": "Pixhawk and other open-source flight controllers",
+        "Flight-Control Software": "Flight-control software",
+        "Automating a Mission": "Automating a mission",
+        "Safety Around Flight-Controlled Aircraft": "Safety around flight-controlled aircraft",
+        "Planning a Mission": "Planning a mission",
+        "Flight Modes": "Flight modes",
+        "FBWA — Fly By Wire A": "FBWA (Fly By Wire A)",
+        "FBWB — Fly By Wire B": "FBWB (Fly By Wire B)",
+        "Using Mission Planner to Fly an Autonomous Mission": "Using Mission Planner to fly an autonomous mission"
+      },
+      "replace": [
+        [
+          "the following activity is intended",
+          "the <a href=\"/resources/mission-planning-lab/\">mission planning lab</a> is intended"
+        ],
+        [
+          "<p>As a general safety practice, <strong>remove the propeller whenever you are configuring, programming, troubleshooting, or testing an electric aircraft indoors</strong>",
+          "<p class=\"notice\"><strong>Remove the propeller</strong>As a general safety practice, remove the propeller whenever you are configuring, programming, troubleshooting, or testing an electric aircraft indoors"
+        ]
+      ],
+      "dataReplace": [
+        [
+          "way points",
+          "waypoints"
+        ],
+        [
+          "auto take off and auto landings",
+          "automatic takeoff and automatic landing"
+        ]
+      ]
+    },
     "9": {
       "sourceHeading": "Chapter 9 PID Controllers",
       "answerKeyHeading": "Chapter 9: PID Controllers — Answer Key",
@@ -1264,6 +1325,31 @@
       "file": "propeller-directions.jpg",
       "alt": "Top view of a quadcopter with yellow three-blade propellers, front at the top. Arrows show the front-left and rear-right motors spinning counterclockwise and the front-right and rear-left motors spinning clockwise. The clockwise propellers are marked 5042R. Close-ups in the corners show each blade’s angle of attack, and a note reads “Must check all props rotation direction before take off!”",
       "caption": "Each propeller’s pitch must match its motor’s direction. This quadcopter uses reversed (“props out”) directions, the mirror image of the Betaflight default used in this chapter. On your quadcopter, match each propeller to the direction you checked in the Motors tab."
+    },
+    "image393.jpg": {
+      "file": "training-stabilizer.jpg",
+      "alt": "A small red circuit board labeled Aura Lite, with a square microcontroller chip, two blue buttons labeled BIND, rows of three-pin servo headers, a micro-USB port, and two white connectors.",
+      "caption": "A small training stabilizer: a microcontroller and motion sensors on one board, connected between the receiver and the servos."
+    },
+    "image57.jpg": {
+      "file": "pixhawk-2-4-8.jpg",
+      "alt": "A black Pixhawk 2.4.8 flight controller case. Labeled ports include GPS, two telemetry ports, I2C, CAN, power, USB, SPI, and a switch, and an arrow on top points toward the front of the aircraft.",
+      "caption": "A Pixhawk-compatible flight controller (Pixhawk 2.4.8). The labeled ports connect GPS, telemetry radios, power, and other devices; the arrow points toward the front of the aircraft."
+    },
+    "image286.jpg": {
+      "file": "betaflight-configurator.jpg",
+      "alt": "The Betaflight Configurator 10.10.0 welcome screen, with Update Firmware and Connect buttons at the top right and a menu on the left: Welcome, Privacy Policy, Documentation & Support, Options, and Firmware Flasher.",
+      "caption": "Betaflight Configurator, the computer program used to set up a flight controller running Betaflight."
+    },
+    "image228.png": {
+      "file": "mission-planner.png",
+      "alt": "Mission Planner’s Flight Data screen. On the left, an artificial horizon reads DISARMED with a pre-arm warning, above readouts for altitude, ground speed, distance to waypoint, yaw, vertical speed, and distance to the ground station. On the right is a satellite map. Tabs across the top include Flight Data, Flight Plan, Initial Setup, Config/Tuning, and Simulation.",
+      "caption": "Mission Planner’s Flight Data screen shows the aircraft’s attitude, telemetry, and position on a map. Missions are built on the Flight Plan tab."
+    },
+    "image259.png": {
+      "file": "qgroundcontrol.png",
+      "alt": "QGroundControl over a satellite map of a park. A takeoff point and six numbered waypoints are joined by an orange route, a prompt reads “Takeoff from ground and start the current mission,” and instruments, a compass, and a video window surround the map.",
+      "caption": "QGroundControl with a planned mission: a takeoff point and six waypoints, ready to start."
     }
   }
 }

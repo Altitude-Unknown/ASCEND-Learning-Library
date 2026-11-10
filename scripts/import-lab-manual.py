@@ -319,6 +319,9 @@ def review_and_answers(doc, chapter, blocks):
         else:
             questions.append([normalized(text(block))])
     key_start = next(i for i, b in enumerate(doc.blocks) if text(b).strip() == chapter['answerKeyHeading'])
+    # Most keys mark each answer with "Answer:"; some (answerStyle "numbered")
+    # start each one with its numbered question on its own line instead.
+    numbered = chapter.get('answerStyle') == 'numbered'
     answers = []
     for block in doc.blocks[key_start + 1:]:
         value = text(block).strip()
@@ -326,7 +329,7 @@ def review_and_answers(doc, chapter, blocks):
             break
         if not value:
             continue
-        if 'Answer:' in value:
+        if 'Answer:' in value or (numbered and re.match(r'^\d+\.\s', value)):
             answers.append([block])
         elif answers:
             answers[-1].append(block)  # worked steps or a list under the answer
@@ -335,7 +338,10 @@ def review_and_answers(doc, chapter, blocks):
     for number, (question, blocks_) in enumerate(zip(questions, answers), 1):
         lines = [line for b in blocks_ for line in block_lines(b)]
         joined = '\n'.join(lines)
-        key_question, first = joined.split('Answer:', 1)
+        if numbered:
+            key_question, first = re.sub(r'^\d+\.\s*', '', lines[0]), '\n'.join(lines[1:])
+        else:
+            key_question, first = joined.split('Answer:', 1)
         key_question = normalized(key_question)
         assert key_question[:12].lower() == question[0][:12].lower(), (number, question[0], key_question)
         if len(question) > 1:

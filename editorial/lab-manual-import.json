@@ -903,6 +903,47 @@
       "skills": 7,
       "htmlSha256": "f4bf8130b01890d119920317ebfdaf3a9b324bde74d7141f518e99ddb5f859de"
     },
+    "6": {
+      "chapter": 6,
+      "output": "content/flight-controllers/textbook/flight-controllers.njk",
+      "tables": 0,
+      "images": [
+        {
+          "file": "training-stabilizer.jpg",
+          "source": "image393.jpg",
+          "sha256": "bf84faf430cc1911aa399c0735069e8bd7da3e8f334e0a8cccfd00b4ea98cbd6"
+        },
+        {
+          "file": "pixhawk-2-4-8.jpg",
+          "source": "image57.jpg",
+          "sha256": "8db6a93e01267f0f50c097c23454fa85824c3ebae350018ac67297b4b9d4a26e"
+        },
+        {
+          "file": "flight-controller.jpg",
+          "source": "image251.jpg",
+          "sha256": "870e053ffa16f064567c3815633d66a381e155d8700fa14f9d4dd488ee981744"
+        },
+        {
+          "file": "betaflight-configurator.jpg",
+          "source": "image286.jpg",
+          "sha256": "54174481b8f5a734ab5d05f213120b7f9d6fd6f8db22c12f170d3ab202a88c94"
+        },
+        {
+          "file": "mission-planner.png",
+          "source": "image228.png",
+          "sha256": "38ce24fb2ad6189497f997815ed09560c832a3be1f808f5f96880c9f9c133b49"
+        },
+        {
+          "file": "qgroundcontrol.png",
+          "source": "image259.png",
+          "sha256": "1ca64dc9a0c3d943a0e7edfe2284d122010491439d3600adaccc08ba75fdd906"
+        }
+      ],
+      "verifiedTextBlocks": 97,
+      "reviewQuestions": 25,
+      "skills": 4,
+      "htmlSha256": "ea3d245497e180fdc294c20944266956c9e59fd6496d7aaaf345320880126f4c"
+    },
     "9": {
       "chapter": 9,
       "output": "content/pid-controllers/textbook/pid-controllers.njk",

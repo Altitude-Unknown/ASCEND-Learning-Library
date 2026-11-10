@@ -1,0 +1,13 @@
+---
+layout: layouts/base.njk
+eleventyExcludeFromCollections: true
+title: Flight Controllers
+description: "Learn how flight controllers stabilize and automate aircraft in three units: what flight controllers do; automation, safety, and failsafes; and flight modes and mission planning. Each unit pairs a reading with practice or a lab and review questions."
+permalink: /flight-controllers/
+---
+{% set course = courses.flightControllers %}
+<div class="container">
+<nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/uas/">UAS</a><span aria-hidden="true">/</span><span aria-current="page">{{ course.title }}</span></nav>
+<header class="section-hero"><span class="eyebrow">LEARN</span><div class="section-hero-row"><div><h1>{{ course.title }}</h1><p class="lead">{{ description }}</p></div><span class="section-symbol" aria-hidden="true"><svg><use href="#i-aircraft"/></svg></span></div></header>
+{% include "components/course-overview.njk" %}
+</div>

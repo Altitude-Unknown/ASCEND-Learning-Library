@@ -10,6 +10,7 @@ const electricalBasics = read('./electricalBasicsCourse.json');
 const pidControllers = read('./pidControllersCourse.json');
 const uasHardware = read('./uasHardwareCourse.json');
 const buildMultirotor = read('./buildMultirotorCourse.json');
+const flightControllers = read('./flightControllersCourse.json');
 
 // Lab manual courses share one study method; only the chapter differs.
 const labManualMethod = chapter => [
@@ -108,6 +109,28 @@ export default {
     chapterTitle: buildMultirotor.chapterTitle,
     reviewQuestions: buildMultirotor.reviewQuestions,
     units: buildMultirotor.units
+  },
+  flightControllers: {
+    id: 'flightControllers',
+    title: 'Flight Controllers',
+    shortTitle: 'Flight Controllers',
+    url: '/flight-controllers/',
+    label: 'FLIGHT CONTROLLERS',
+    sidebarLabel: 'BROWSE THE COURSE',
+    sidebarCollection: 'flightControllersModules',
+    overviewLabel: 'Course overview',
+    check: 'review',
+    final: {url: '/pid-controllers/', title: 'PID Controllers'},
+    intro: [
+      'This course takes you from what a flight controller does to flying an autonomous mission. It follows Chapter 6, Flight Controllers, of the Remote and Autonomous Aircraft Systems lab manual.',
+      'The examples use Betaflight, ArduPilot with Mission Planner, and QGroundControl, but the ideas apply to most flight controllers. Building a Multirotor UAS covers setting up Betaflight step by step, and PID Controllers explains how a flight controller holds an aircraft on target.'
+    ],
+    notice: {title: 'Work safely', text: 'Remove the propeller whenever you configure, program, or test an aircraft indoors. Before any automated flight, know how to disarm the aircraft, switch flight modes, and take manual control, and know what its failsafes will do.'},
+    method: labManualMethod('Chapter 6'),
+    chapterUrl: flightControllers.chapterUrl,
+    chapterTitle: flightControllers.chapterTitle,
+    reviewQuestions: flightControllers.reviewQuestions,
+    units: flightControllers.units
   },
   electricalBasics: {
     id: 'electricalBasics',

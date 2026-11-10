@@ -37,13 +37,13 @@ Mike Walach’s lab manual is being published chapter by chapter as web pages, w
 - [Chapter 3: Piloting Remote Aircraft](/learn-to-fly/textbook/piloting-remote-aircraft/), the reading for the [Learning to Fly a UAS](/learn-to-fly/) course.
 - [Chapter 4: Building a Fixed Wing Aircraft](/build-fixed-wing/textbook/building-a-fixed-wing-aircraft/), the reading for the [Building a Fixed-Wing UAS](/build-fixed-wing/) course and the [ASCEND Trainer Airplane](/uas/trainer-airplane/).
 - [Chapter 5: Building a Multirotor Aircraft](/build-multirotor/textbook/building-a-multirotor-aircraft/), the reading for the [Building a Multirotor UAS](/build-multirotor/) course.
+- [Chapter 6: Flight Controllers](/flight-controllers/textbook/flight-controllers/), the reading for the [Flight Controllers](/flight-controllers/) course.
 - [Chapter 9: PID Controllers](/pid-controllers/textbook/pid-controllers/), the reading for the [PID Controllers](/pid-controllers/) course.
 
 **Coming as web chapters**
 
 Each chapter becomes its own course:
 
-- Chapter 6: Flight Controllers.
 - Chapter 7: Camera and Video Systems.
 - Chapter 8: Advanced Sensors.
 
