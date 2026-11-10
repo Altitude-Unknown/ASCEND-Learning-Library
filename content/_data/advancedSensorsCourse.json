@@ -1,0 +1,207 @@
+{
+  "units": [
+    {
+      "slug": "position-speed-and-altitude",
+      "title": "Position, Speed, and Altitude Sensors",
+      "number": 1,
+      "url": "/advanced-sensors/position-speed-and-altitude/",
+      "summary": "See how GPS finds position, how an airspeed sensor compares two pressures, how LIDAR measures distance with light, and how a pressure sensor measures altitude.",
+      "outcomes": [
+        "Explain how GPS uses satellite signal travel time to find a position, and how many satellites a fix needs.",
+        "Explain how an airspeed sensor compares ram air and static pressure, and how LIDAR measures distance.",
+        "Explain how a pressure sensor measures altitude, and calibrate it to sea level with a METAR altimeter setting."
+      ],
+      "readings": [
+        {
+          "title": "GPS (Global Positioning System)",
+          "id": "gps-global-positioning-system"
+        },
+        {
+          "title": "Airspeed indicators",
+          "id": "airspeed-indicators"
+        },
+        {
+          "title": "LIDAR (light detection and ranging)",
+          "id": "lidar-light-detection-and-ranging"
+        },
+        {
+          "title": "Pressure sensors",
+          "id": "pressure-sensors"
+        }
+      ],
+      "activities": [],
+      "practice": {
+        "title": "Read the altimeter setting",
+        "text": "Look up the current METAR for an airport near you on the Aviation Weather Center site (aviationweather.gov). Find the altimeter setting, the group that starts with A, and write it in inches of mercury (A3007 is 30.07). Look it up again a few hours later and note how it changed. Explain why a pressure sensor zeroed at launch still measures height above the launch site, but needs this setting to give altitude above sea level. Compare with your answer to review question 19.",
+        "sections": [
+          {
+            "title": "Pressure sensors",
+            "id": "pressure-sensors"
+          }
+        ]
+      },
+      "lessonVideo": null,
+      "reviewQuestions": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        8,
+        13,
+        14,
+        15,
+        19
+      ]
+    },
+    {
+      "slug": "motion-and-heading-sensors",
+      "title": "Motion and Heading Sensors",
+      "number": 2,
+      "url": "/advanced-sensors/motion-and-heading-sensors/",
+      "summary": "Learn how the IMU’s gyroscopes and accelerometers sense motion, how a magnetometer finds heading, and where AI is taking drones. Then install and calibrate a sensor.",
+      "outcomes": [
+        "Explain what an IMU does and the gyroscope and accelerometer at its core.",
+        "Explain how a magnetometer finds heading, what disturbs it, and why it works when GPS heading does not.",
+        "Install a sensor on a flight controller, calibrate it, and show it working in ground-control software."
+      ],
+      "readings": [
+        {
+          "title": "IMUs (inertial measurement units)",
+          "id": "imus-inertial-measurement-units"
+        },
+        {
+          "title": "Gyroscopes",
+          "id": "gyroscopes"
+        },
+        {
+          "title": "Accelerometers",
+          "id": "accelerometers"
+        },
+        {
+          "title": "Magnetometers",
+          "id": "magnetometers"
+        },
+        {
+          "title": "Artificial intelligence",
+          "id": "artificial-intelligence"
+        }
+      ],
+      "activities": [
+        "sensor-installation-lab"
+      ],
+      "signoff": [
+        "Identify a GPS, airspeed sensor, and LIDAR unit by sight.",
+        "Connect a GPS, airspeed sensor, or other external sensor to a flight control board.",
+        "Calibrate a sensor on a drone."
+      ],
+      "lessonVideo": null,
+      "reviewQuestions": [
+        6,
+        7,
+        9,
+        10,
+        11,
+        12,
+        16,
+        17,
+        18,
+        20
+      ],
+      "skills": [
+        "Identify a GPS, airspeed sensor, and LIDAR unit by sight.",
+        "Connect a GPS, airspeed sensor, or other external sensor to a flight control board.",
+        "Calibrate a sensor on a drone."
+      ]
+    }
+  ],
+  "chapterUrl": "/advanced-sensors/textbook/advanced-sensors/",
+  "chapterTitle": "Chapter 8: Advanced Sensors",
+  "reviewQuestions": {
+    "1": {
+      "question": "What is the purpose of a GPS?",
+      "answer": "GPS uses a constellation of satellites to determine the precise location of a receiver. It measures the travel time of radio signals from satellites to calculate the receiver's position."
+    },
+    "2": {
+      "question": "How many satellites does a GPS need for a 3D fix?",
+      "answer": "At least 4 satellites are needed to determine position, although the chapter notes that about 11 satellites are typically needed for a very good location fix."
+    },
+    "3": {
+      "question": "How much error is there in a GPS altitude measurement?",
+      "answer": "The chapter does not give a figure for GPS altitude error. It notes that LIDAR measures distance from the ground far more accurately than GPS or a pressure sensor."
+    },
+    "4": {
+      "question": "Explain the operation of an airspeed sensor.",
+      "answer": "An airspeed sensor compares ram air pressure from forward aircraft motion with static air pressure from the surrounding atmosphere. It uses a pitot tube and static port to make this comparison and determine airspeed."
+    },
+    "5": {
+      "question": "What is LIDAR and how does it work?",
+      "answer": "LIDAR stands for Light Detection and Ranging. It measures the time required for light to travel from the sensor to an object and return. This allows it to accurately calculate distance."
+    },
+    "6": {
+      "question": "What is an IMU? What is its function in a drone?",
+      "answer": "An IMU is an Inertial Measurement Unit. It combines a gyroscope and accelerometer to determine the aircraft's position or orientation in space. It is a critical sensor for an automated aircraft system."
+    },
+    "7": {
+      "question": "What do accelerometers do?",
+      "answer": "Accelerometers measure forces, including gravity or G-force, along the X, Y, and Z axes. This information helps the flight computer determine motion and acceleration."
+    },
+    "8": {
+      "question": "What is the main function of a pressure sensor on a remote aircraft?",
+      "answer": "Its primary function is to determine altitude by measuring atmospheric pressure. As altitude increases, atmospheric pressure decreases."
+    },
+    "9": {
+      "question": "Why is it important to understand the function of a gyroscope when learning how a drone detects its motion through space?",
+      "answer": "The gyroscope is one of the primary sensors a drone uses to detect changes in its orientation. A digital gyroscope measures resistance to movement using a vibrating element, providing information used by the flight-control system for gyroscopic control."
+    },
+    "10": {
+      "question": "What does a magnetometer do?",
+      "answer": "A magnetometer acts as a digital compass. It senses Earth's magnetic field and provides heading information, either as cardinal directions or as a heading from 0–360°."
+    },
+    "11": {
+      "question": "What can cause a magnetometer to produce erroneous readings?",
+      "answer": "Large metal objects can negatively affect magnetometer readings. Because of this interference, magnetometers need to be calibrated regularly and sometimes before every flight."
+    },
+    "12": {
+      "question": "What are some impacts of AI on drones?",
+      "answer": "AI could provide real-time image processing, help aircraft operate where GPS is unavailable, coordinate swarms of drones, and rapidly process remote-sensing imagery for applications such as wildfire detection, crop inspection, and search and rescue."
+    },
+    "13": {
+      "question": "Why does a GPS receiver need signals from multiple satellites to determine its position?",
+      "answer": "The receiver determines its distance from satellites by measuring the travel time of their radio signals. Measurements from multiple satellites allow the receiver to calculate its position. At least four satellites are needed for a position fix."
+    },
+    "14": {
+      "question": "What are the two sources of air pressure compared by an airspeed indicator, and where does each pressure come from?",
+      "answer": "They are ram air pressure and static air pressure. Ram air is forced into the pitot tube by the aircraft's forward motion, while static pressure represents ambient atmospheric pressure measured in relatively smooth airflow."
+    },
+    "15": {
+      "question": "Give two examples of how LIDAR can be used on an autonomous aircraft.",
+      "answer": "LIDAR can assist with automatic landings by accurately determining distance from the ground, and it can be used to map surfaces and create detailed maps and 3D models."
+    },
+    "16": {
+      "question": "What two types of sensors are combined to form the core of an IMU?",
+      "answer": "A gyroscope and accelerometer."
+    },
+    "17": {
+      "question": "What three axes does an accelerometer measure, and what type of force does it detect?",
+      "answer": "It measures along the X, Y, and Z axes and detects acceleration forces, including the force of gravity or G-force."
+    },
+    "18": {
+      "question": "Why can a magnetometer provide useful heading information when an aircraft is stationary, while GPS cannot?",
+      "answer": "A magnetometer senses Earth's magnetic field directly, so the aircraft does not have to be moving to determine its heading. GPS generally requires movement to determine heading from changes in position."
+    },
+    "19": {
+      "question": "Why must a pressure sensor be calibrated if it is being used to determine altitude above sea level?",
+      "answer": "Atmospheric pressure changes with weather and temperature. The pressure sensor must therefore be corrected for current atmospheric conditions to accurately determine altitude above sea level. An airport altimeter setting, such as the value reported in a METAR, can be used for this calibration."
+    },
+    "20": {
+      "question": "Give three examples from the chapter of ways AI could improve or expand the capabilities of drones.",
+      "answer": [
+        "Examples include:",
+        "Real-time image processing that could allow operation without GPS.",
+        "Coordinating large swarms of drones.",
+        "Automatically identifying objects or conditions during wildfire detection, crop inspection, or search-and-rescue missions."
+      ]
+    }
+  }
+}

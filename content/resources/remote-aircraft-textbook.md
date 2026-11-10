@@ -11,7 +11,7 @@ audience:
 - Students
 - Faculty Mentors
 - Pod Leads
-updated: '2026-11-08'
+updated: '2026-11-09'
 format: Web
 author: Mike Walach, Ph.D.
 related:
@@ -28,9 +28,7 @@ activities:
 
 ## Read it online
 
-Mike Walach’s lab manual is being published chapter by chapter as web pages, which are kept current as the book is revised. The PDF and Word downloads are no longer offered.
-
-**Available now**
+All nine chapters of Mike Walach’s lab manual are published as web pages, which are kept current as the book is revised. Each chapter is the reading for a course. The PDF and Word downloads are no longer offered.
 
 - [Chapter 1: Electrical Basics](/electrical-basics/textbook/electrical-basics/), the reading for the [Electrical Basics](/electrical-basics/) course.
 - [Chapter 2: Hardware and Electronics for Unmanned Aircraft](/uas-hardware/textbook/hardware-and-electronics/), the reading for the [UAS Hardware and Electronics](/uas-hardware/) course.
@@ -38,13 +36,8 @@ Mike Walach’s lab manual is being published chapter by chapter as web pages, w
 - [Chapter 4: Building a Fixed Wing Aircraft](/build-fixed-wing/textbook/building-a-fixed-wing-aircraft/), the reading for the [Building a Fixed-Wing UAS](/build-fixed-wing/) course and the [ASCEND Trainer Airplane](/uas/trainer-airplane/).
 - [Chapter 5: Building a Multirotor Aircraft](/build-multirotor/textbook/building-a-multirotor-aircraft/), the reading for the [Building a Multirotor UAS](/build-multirotor/) course.
 - [Chapter 6: Flight Controllers](/flight-controllers/textbook/flight-controllers/), the reading for the [Flight Controllers](/flight-controllers/) course.
+- [Chapter 7: Camera and Video Systems](/camera-video-systems/textbook/camera-and-video-systems/), the reading for the [Camera and Video Systems](/camera-video-systems/) course.
+- [Chapter 8: Advanced Sensors](/advanced-sensors/textbook/advanced-sensors/), the reading for the [Advanced Sensors](/advanced-sensors/) course.
 - [Chapter 9: PID Controllers](/pid-controllers/textbook/pid-controllers/), the reading for the [PID Controllers](/pid-controllers/) course.
-
-**Coming as web chapters**
-
-Each chapter becomes its own course:
-
-- Chapter 7: Camera and Video Systems.
-- Chapter 8: Advanced Sensors.
 
 The chapters cover off-the-shelf hardware, so they also suit teams using equipment they already have. Lessons on ASCEND’s custom hardware will be added to them over time.

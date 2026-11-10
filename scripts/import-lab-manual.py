@@ -310,7 +310,8 @@ def review_and_answers(doc, chapter, blocks):
     """Questions from the chapter list (sub-items join their question) paired
     with the answer key. The key's wording is used: it is the corrected copy."""
     questions = []
-    for block in section_items(doc, blocks, 'Review Questions'):
+    # The list sits under "Review Questions" unless the chapter names another heading.
+    for block in section_items(doc, blocks, chapter.get('reviewQuestionsHeading', 'Review Questions')):
         info = doc.list_info(block)
         if not info:
             continue

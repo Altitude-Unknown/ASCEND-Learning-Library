@@ -1,0 +1,77 @@
+---
+{
+  "layout": "layouts/textbook-chapter.njk",
+  "tags": [],
+  "eleventyExcludeFromCollections": true,
+  "topic": "uas",
+  "courseId": "cameraVideo",
+  "title": "Chapter 7: Camera and Video Systems",
+  "description": "Cameras for remote aircraft: action, 360°, and multispectral cameras; first person view (FPV) systems, analog and digital; and automating a camera with a Raspberry Pi.",
+  "chapterNumber": 7,
+  "textbookEyebrow": "REMOTE AND AUTONOMOUS AIRCRAFT SYSTEMS · WEB EDITION",
+  "sourceNote": "From Mike Walach’s lab manual, Remote and Autonomous Aircraft Systems. Original wording is retained with small corrections; image descriptions have been added for web reading.",
+  "headerLinks": [
+    {
+      "title": "About the lab manual",
+      "url": "/resources/remote-aircraft-textbook/"
+    }
+  ],
+  "toc": [
+    {
+      "title": "Action cameras",
+      "id": "action-cameras"
+    },
+    {
+      "title": "360° cameras",
+      "id": "360-cameras"
+    },
+    {
+      "title": "Multispectral cameras",
+      "id": "multispectral-cameras"
+    },
+    {
+      "title": "First person view (FPV) cameras",
+      "id": "first-person-view-fpv-cameras"
+    },
+    {
+      "title": "— Analog FPV",
+      "id": "analog-fpv"
+    },
+    {
+      "title": "— High-definition FPV",
+      "id": "high-definition-fpv"
+    },
+    {
+      "title": "Automating cameras with a Raspberry Pi computer",
+      "id": "automating-cameras-with-a-raspberry-pi-computer"
+    },
+    {
+      "title": "Artificial intelligence cameras",
+      "id": "artificial-intelligence-cameras"
+    }
+  ],
+  "permalink": "/camera-video-systems/textbook/camera-and-video-systems/"
+}
+---
+<h2 id="action-cameras">Action cameras</h2>
+<p>Filming great video from the air is easy with the range of action cameras available. Most are waterproof and can take a lot of rough handling, even some crashes and still keep working. Attaching an action camera to an aircraft is a great way to capture still and video images from a unique perspective.</p>
+<figure class="textbook-figure"><a href="/assets/camera-video-systems/action-camera.jpg"><img src="/assets/camera-video-systems/action-camera.jpg" alt="Front of a GoPro action camera: a small black box with a square lens on the right and a color screen on the left showing an underwater scene." width="1600" height="840" loading="lazy"></a><figcaption><p>An action camera (GoPro). Small, rugged, and often waterproof, it is easy to mount on an aircraft.</p></figcaption></figure>
+<h2 id="360-cameras">360° cameras</h2>
+<p>While an action camera can capture great video, a 360 camera will capture video in every direction and will auto stabilize the image. This means that you do not need to worry about what the camera is pointing at as it will capture everything. In post-production you can select the camera views that you want.</p>
+<figure class="textbook-figure"><a href="/assets/camera-video-systems/360-camera.jpg"><img src="/assets/camera-video-systems/360-camera.jpg" alt="An Insta360 camera standing upright: a tall, narrow black body with a round fisheye lens at the top and a screen below it showing a wide-angle selfie of two hikers." width="1600" height="1600" loading="lazy"></a><figcaption><p>A 360° camera (Insta360). It has a lens on each side, so together they record every direction at once.</p></figcaption></figure>
+<h2 id="multispectral-cameras">Multispectral cameras</h2>
+<p>If your work requires the analysis of plants or other objects that need more analysis than a basic video camera can capture, then a multispectral camera may be what you need. A multispectral camera will capture wavelengths of light outside of the visual range. This can be used to analyze crop health and stress, detect pests and crop damage and other agricultural issues.</p>
+<figure class="textbook-figure"><a href="/assets/camera-video-systems/multispectral-camera.png"><img src="/assets/camera-video-systems/multispectral-camera.png" alt="A multispectral camera with a red and silver body and six lenses in a black faceplate on its front, with connectors on the side." width="675" height="450" loading="lazy"></a><figcaption><p>A multispectral camera. Each lens records a different band of light, including wavelengths outside the visible range.</p></figcaption></figure>
+<h2 id="first-person-view-fpv-cameras">First person view (FPV) cameras</h2>
+<p>Ever wonder what it would be like to sit in your RC aircraft and fly it? With an FPV (First Person View) camera you can! These small cameras transmit near-real-time video back to a video monitor or headset on the ground allowing you to fly the aircraft from the point of view of the airplane. The main components of an FPV system are a camera, video transmitter (VTx), a video receiver (VRx) and a video display (usually a set of goggles). FPV systems can be either analog or High Definition digital. Analog systems are simpler and lower cost but the high definition digital systems have much higher quality video.</p>
+<h3 id="analog-fpv">Analog FPV</h3>
+<figure class="textbook-figure"><a href="/assets/camera-video-systems/fpv-camera.jpg"><img src="/assets/camera-video-systems/fpv-camera.jpg" alt="A small black RunCam Phoenix 2 FPV camera with a round lens on the front, a mounting hole on the side, and a white connector on top." width="1014" height="948" loading="lazy"></a><figcaption><p>FPV camera (RunCam Phoenix 2). A small, light camera that sends live video to the video transmitter.</p></figcaption></figure>
+<figure class="textbook-figure"><a href="/assets/camera-video-systems/video-transmitter.jpg"><img src="/assets/camera-video-systems/video-transmitter.jpg" alt="A small video transmitter circuit board with a short cable running to a gold antenna connector." width="700" height="700" loading="lazy"></a><figcaption><p>FPV video transmitter (VTx). It sends the camera’s video from the aircraft to the ground; the antenna screws onto the gold connector.</p></figcaption></figure>
+<figure class="textbook-figure"><a href="/assets/camera-video-systems/fpv-goggles.jpg"><img src="/assets/camera-video-systems/fpv-goggles.jpg" alt="White and blue Fat Shark FPV goggles with a padded face opening, a blue head strap, and channel and volume buttons on the side." width="1560" height="1157" loading="lazy"></a><figcaption><p>FPV video display goggles with a built-in video receiver (VRx). The pilot sees the aircraft’s live video inside the goggles.</p></figcaption></figure>
+<h3 id="high-definition-fpv">High-definition FPV</h3>
+<figure class="textbook-figure"><a href="/assets/camera-video-systems/hd-fpv-goggles.jpg"><img src="/assets/camera-video-systems/hd-fpv-goggles.jpg" alt="Front view of gray DJI digital FPV goggles fitted with two Lumenier AXII HD antennas on their front face and two more antennas at the top corners." width="1514" height="931" loading="lazy"></a><figcaption><p>High-definition digital FPV goggles (DJI). Digital systems give much higher-quality video than analog.</p></figcaption></figure>
+<h2 id="automating-cameras-with-a-raspberry-pi-computer">Automating cameras with a Raspberry Pi computer</h2>
+<figure class="textbook-figure"><a href="/assets/camera-video-systems/raspberry-pi-zero-2-w.jpg"><img src="/assets/camera-video-systems/raspberry-pi-zero-2-w.jpg" alt="A Raspberry Pi Zero 2 W board with labels pointing to its 40-pin GPIO header, micro SD card slot, processor, Wi-Fi and Bluetooth chip, camera interface, mini HDMI port, micro USB data port, and micro USB power port." width="1256" height="1315" loading="lazy"></a><figcaption><p>A Raspberry Pi Zero 2 W. Its camera interface connects a camera, and its GPIO pins can connect to an RC receiver or GPS.</p></figcaption></figure>
+<p>A low cost single board computer such as the Raspberry Pi pictured above can be used to control a camera. A simple interface between an RC receiver and this Pi computer could trigger the camera to take pictures at the pilot’s request. With the addition of a GPS or even a flight computer the process could be automated with geotagged pictures. Geotagged pictures could then be stitched together to form a photo mosaic.</p>
+<h2 id="artificial-intelligence-cameras">Artificial intelligence cameras</h2>
+<figure class="textbook-figure"><a href="/assets/camera-video-systems/raspberry-pi-ai-camera.jpg"><img src="/assets/camera-video-systems/raspberry-pi-ai-camera.jpg" alt="A Raspberry Pi AI Camera: a small green circuit board with a black camera module in the middle and an orange ribbon cable running down from it." width="640" height="640" loading="lazy"></a><figcaption><p>A Raspberry Pi AI Camera. It connects to a Raspberry Pi by a ribbon cable and can run image-recognition models on the camera itself.</p></figcaption></figure>
