@@ -16,7 +16,7 @@ const advancedSensors = read('./advancedSensorsCourse.json');
 
 // Lab manual courses share one study method; only the chapter differs.
 const labManualMethod = chapter => [
-  {title: 'Watch & review', text: 'Begin with the unit’s video lesson. Videos are being recorded; until they are ready, start with the reading.'},
+  {title: 'Watch & review', text: 'Start with the unit’s short videos. Each one shows a single skill or idea. If a unit has no videos yet, start with the reading.'},
   {title: 'Read & clarify', text: `Read the sections of ${chapter} listed for the unit. Each unit links straight to its sections.`},
   {title: 'Apply & sign off', text: 'Work the practice problems or complete the lab, then demonstrate the unit’s skills to your instructor.'},
   {title: 'Check & revisit', text: 'Answer the review questions in your own words, then open each answer to compare.'}
@@ -53,7 +53,7 @@ export default {
     ],
     notice: {title: 'Fly with an instructor', text: 'Outdoor flights in this course are flown with an instructor, ideally on a buddy box. Follow the FAA rules that apply to your flights; the FAA Part 107 course explains them.'},
     method: [
-      {title: 'Watch & review', text: 'Begin with the unit’s video lesson. Videos are being recorded; until they are ready, start with the reading.'},
+      {title: 'Watch & review', text: 'Start with the unit’s short videos. Each one shows a single skill or idea. If a unit has no videos yet, start with the reading.'},
       {title: 'Read & clarify', text: 'Read the sections of Chapter 3 listed for the unit. Each unit links straight to its sections.'},
       {title: 'Apply & practice', text: 'Complete the lab or practice plan: in a simulator first, then in the field with your instructor.'},
       {title: 'Check & revisit', text: 'Answer the review questions in your own words, then open each answer to compare. The last unit uses the checkride rubrics and skills checksheet.'}
@@ -80,7 +80,7 @@ export default {
     ],
     notice: {title: 'Work safely', text: 'Cut away from yourself with sharp knives, use breathing protection when drilling carbon fiber, and never install the propeller until you are outside and ready to fly.'},
     method: [
-      {title: 'Watch & review', text: 'Begin with the unit’s video lesson. Videos are being recorded; until they are ready, start with the reading.'},
+      {title: 'Watch & review', text: 'Start with the unit’s short videos. Each one shows a single skill or idea. If a unit has no videos yet, start with the reading.'},
       {title: 'Read & clarify', text: 'Read the sections of Chapter 4 listed for the unit. Each unit links straight to its sections, with a description of every photo.'},
       {title: 'Build & sign off', text: 'Build that part of the airplane, or complete the lab, then demonstrate the unit’s skills to your instructor.'},
       {title: 'Check & revisit', text: 'Answer the review questions in your own words, then open each answer to compare. The last unit includes the full skills checksheet.'}

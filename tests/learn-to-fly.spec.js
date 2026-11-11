@@ -27,7 +27,7 @@ test('Every unit follows Watch, Read, Apply, Check and links to the next unit', 
       await expect(page.locator('.module-content > .eyebrow')).toContainText(`UNIT ${unit.number} OF 6`);
       const order = await page.locator('#lesson, #reading, #activity, #check').evaluateAll(nodes => nodes.map(n => n.id));
       expect(order).toEqual(['lesson', 'reading', 'activity', 'check']);
-      await expect(page.locator('#lesson')).toContainText('Coming soon');
+      await expect(page.locator('#lesson')).not.toContainText('Coming soon');
       for (const section of unit.readings) {
         await expect(page.locator(`#reading a[href="${course.chapterUrl}#${section.id}"]`)).toHaveCount(1);
       }
@@ -85,4 +85,18 @@ test('Activities read as web pages, and the weight and balance key is corrected'
 test('The old Unit 1 address redirects to Flying Fixed Wings', () => {
   const rules = readFileSync(new URL('../public/_redirects', import.meta.url), 'utf8');
   expect(rules).toContain('/learn-to-fly/getting-started/ /learn-to-fly/flying-fixed-wings/ 301');
+});
+
+test('Units show their own short videos, or point to the reading when there are none', async ({page}) => {
+  await page.goto('/learn-to-fly/flying-fixed-wings/');
+  for (const id of ['control-surfaces-video', 'buddy-box-video', 'first-takeoff-video', 'hand-launch-video', 'landing-video']) {
+    await expect(page.locator(`#lesson .unit-videos a[href="/resources/${id}/"]`)).toHaveCount(1);
+  }
+  await expect(page.locator('#activity a[href$="-video/"]')).toHaveCount(0);
+  await page.goto('/learn-to-fly/flying-multirotors/');
+  await expect(page.locator('#lesson .resource-card')).toHaveCount(0);
+  await expect(page.locator('#lesson')).toContainText('This unit has no videos yet');
+  await page.goto('/learn-to-fly/');
+  await expect(page.locator('#unit-1 a[href="/resources/landing-video/"]')).toHaveCount(1);
+  await expect(page.locator('#learning-path')).not.toContainText('coming soon');
 });

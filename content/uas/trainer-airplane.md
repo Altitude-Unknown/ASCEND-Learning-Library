@@ -13,6 +13,10 @@ resourceIds:
 - spektrum-binding-video
 - servo-receiver-connection-video
 - motor-direction-video
+- control-surfaces-video
+- stitched-hinges-video
+- battery-charging-video
+- flight-controller-rx-video
 - trainer-build-instructions
 - trainer-tpu-parts
 - trainer-petg-parts
