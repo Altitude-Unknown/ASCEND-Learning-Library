@@ -27,6 +27,12 @@ The contributor exported every trainer part from the current Fusion designs (`AS
 
 The textbook's Landing Gear and both 2 mm plywood clip cards now link to the 64D TPU parts. The library now has 116 material records.
 
+## Flight Controller V4 PCB — November 11
+
+Added the ASCEND flight controller's design kit from `ASCEND-Materials/ECAD/Flight_Controller-V4/`: Fusion design (`.f3z`, 19.2 MiB), schematic, board, BOM, and the v241 manufacturing ZIP. All five files are under the Pages limit and hosted directly. Resource: `/resources/flight-controller-v4-pcb/`. It replaces the "coming soon" note under Electronic Designs > Flight Controller and is also listed under UAS > Electronics and UAS > Flight Controllers. The library has 115 material records.
+
+The BOM's *BOM* sheet lists the wrong Digi-Key numbers for the 2.2 kΩ resistors (`497-17720-ND`, the STM32) and the 22 pF capacitors (the 2.2 pF part). The original is unchanged; the resource page tells builders to use the *Build* sheet's numbers.
+
 ## RC transmitter case — November 8
 
 Added the transmitter's 3D-printed case from `ASCEND-Materials/Tx-3D-Print/`: 9 STL files hosted on Pages, plus `v4 Trasmitter Case.f3z` (135.5 MiB). The Fusion file was uploaded to `ascend-files` at `r2-upload/tx-3d-print-v4-trasmitter-case.f3z`; its downloaded size and SHA-256 match the original. Resource: `/resources/transmitter-case/`, listed under CAD & Fabrication > Electronics Enclosures and Electronic Designs > RC Transmitter. The case fits transmitter boards V3 and V4.

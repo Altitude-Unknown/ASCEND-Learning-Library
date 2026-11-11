@@ -1,5 +1,60 @@
 [
   {
+    "id": "ecad-flight-controller-v4-ascend-flight-controllerv4-brd",
+    "source": "ECAD/Flight_Controller-V4/ASCEND-Flight_ControllerV4.brd",
+    "filename": "ASCEND-Flight_ControllerV4.brd",
+    "format": "BRD",
+    "bytes": 379105,
+    "sha256": "a465665ef5c763b5abeebdcb7cdbe8631aea5e1c1adeac76da29f3a9603a80a2",
+    "localPath": "downloads/imported/ecad-flight-controller-v4-ascend-flight-controllerv4-brd.brd",
+    "hostedLocally": true,
+    "publicUrl": ""
+  },
+  {
+    "id": "ecad-flight-controller-v4-ascend-flight-controllerv4-sch",
+    "source": "ECAD/Flight_Controller-V4/ASCEND-Flight_ControllerV4.sch",
+    "filename": "ASCEND-Flight_ControllerV4.sch",
+    "format": "SCH",
+    "bytes": 942123,
+    "sha256": "64999675021833664862ee997bce45e4f09182793b6946e84b2e3677d6db33bc",
+    "localPath": "downloads/imported/ecad-flight-controller-v4-ascend-flight-controllerv4-sch.sch",
+    "hostedLocally": true,
+    "publicUrl": ""
+  },
+  {
+    "id": "ecad-flight-controller-v4-ascend-flight-controller-v241-manufacturing-output",
+    "source": "ECAD/Flight_Controller-V4/ASCEND-Flight_Controller_v241_Manufacturing_Output.zip",
+    "filename": "ASCEND-Flight_Controller_v241_Manufacturing_Output.zip",
+    "format": "ZIP",
+    "bytes": 390352,
+    "sha256": "752968b9db58d7130ce6ca90e8207ce5e68f5a306ec36f95d4dbb0aa061f901a",
+    "localPath": "downloads/imported/ecad-flight-controller-v4-ascend-flight-controller-v241-manufacturing-output.zip",
+    "hostedLocally": true,
+    "publicUrl": ""
+  },
+  {
+    "id": "ecad-flight-controller-v4-ascend-flight-controllerv4",
+    "source": "ECAD/Flight_Controller-V4/ASCEND_Flight_ControllerV4.f3z",
+    "filename": "ASCEND_Flight_ControllerV4.f3z",
+    "format": "F3Z",
+    "bytes": 20143554,
+    "sha256": "0e6891b45d1f74d0b0fc5640eb8209e725c2e9e72c38c275d4a9571ca547369e",
+    "localPath": "downloads/imported/ecad-flight-controller-v4-ascend-flight-controllerv4.f3z",
+    "hostedLocally": true,
+    "publicUrl": ""
+  },
+  {
+    "id": "ecad-flight-controller-v4-bom-flight-controller-v4",
+    "source": "ECAD/Flight_Controller-V4/BOM-Flight-controller-V4.xlsx",
+    "filename": "BOM-Flight-controller-V4.xlsx",
+    "format": "XLSX",
+    "bytes": 16849,
+    "sha256": "401fbc7754acf5d6bff9389b0920573305d3b965f94a0ee0110b5f76209411fd",
+    "localPath": "downloads/imported/ecad-flight-controller-v4-bom-flight-controller-v4.xlsx",
+    "hostedLocally": true,
+    "publicUrl": ""
+  },
+  {
     "id": "ecad-transmitter-v4-transmitter-v4-bom",
     "source": "ECAD/Transmitter-V4/Transmitter V4 BOM.xlsx",
     "filename": "Transmitter V4 BOM.xlsx",

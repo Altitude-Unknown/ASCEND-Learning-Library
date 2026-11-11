@@ -22,6 +22,7 @@ format: F3Z, SCH, BRD, XLSX, ZIP
 related:
 - transmitter-configurator
 - transmitter-case
+- flight-controller-v4-pcb
 delivery: download
 origin: contributed
 subjects:
