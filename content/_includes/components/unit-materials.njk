@@ -1,5 +1,7 @@
 {% set linked = collections.resources | related(resourceIds) %}
 {% set unitActivities = courseUnit.activities or [courseUnit.activity] %}
+{% set videos = linked | byKind('Video') %}
+{% if courseUnit.lessonVideo or courseUnit.slides %}
 <section class="section-block unit-study-step" id="lesson" aria-labelledby="lesson-heading">
   <div class="section-heading"><div><span class="eyebrow">STEP 1 · WATCH & REVIEW</span>{% if courseUnit.slides %}<h2 id="lesson-heading">Video lesson & presentation slides</h2><p>Begin with the instructional video and use the matching slides alongside it.</p>{% else %}<h2 id="lesson-heading">Video lesson</h2><p>Begin with the instructional video for this unit.</p>{% endif %}</div></div>
   <div class="resource-grid two unit-lesson-pair">
@@ -10,11 +12,16 @@
     {% endif %}
     {% if courseUnit.slides %}{% for resource in collections.resources | related([courseUnit.slides]) %}{% include "components/card.njk" %}{% endfor %}{% endif %}
   </div>
-  {% set videos = linked | byKind('Video') %}
   {% if videos.length > 1 or (videos.length and not courseUnit.lessonVideo) %}
   <section class="unit-supplemental" aria-label="Supplemental videos"><h3>Supplemental videos for this unit</h3><div class="resource-grid two">{% for resource in videos %}{% if resource.data.id != courseUnit.lessonVideo %}{% include "components/card.njk" %}{% endif %}{% endfor %}</div></section>
   {% endif %}
 </section>
+{% else %}
+<section class="section-block unit-study-step" id="lesson" aria-labelledby="lesson-heading">
+  <div class="section-heading"><div><span class="eyebrow">STEP 1 · WATCH & REVIEW</span><h2 id="lesson-heading">Videos for this unit</h2>{% if videos.length %}<p>Watch these short videos. Each one shows a single skill or idea from this unit.</p>{% else %}<p>This unit has no videos yet. Start with the reading in Step 2.</p>{% endif %}</div></div>
+  {% if videos.length %}<div class="resource-grid two unit-videos">{% for resource in videos %}{% include "components/card.njk" %}{% endfor %}</div>{% endif %}
+</section>
+{% endif %}
 
 <section class="section-block unit-study-step" id="reading" aria-labelledby="reading-heading">
   {% if courseUnit.readings %}
