@@ -4,6 +4,7 @@ description: "See how a flight controller senses and steadies an aircraft, from 
 order: 1
 courseOrder: 1
 permalink: "/flight-controllers/what-flight-controllers-do/"
+resourceIds: ["flight-controller-rx-video"]
 status: "Lesson video coming soon"
 ---
 

@@ -4,6 +4,7 @@ description: "Choose a battery by chemistry, cell count, capacity, and C-rating,
 order: 4
 courseOrder: 4
 permalink: "/uas-hardware/batteries-and-chargers/"
+resourceIds: ["battery-charging-video"]
 status: "Lesson video coming soon"
 ---
 

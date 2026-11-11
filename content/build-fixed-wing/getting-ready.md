@@ -4,7 +4,7 @@ description: "Print the 3D parts, gather materials and tools, choose landing gea
 order: 1
 courseOrder: 1
 permalink: "/build-fixed-wing/getting-ready/"
-resourceIds: ["trainer-tpu-parts", "trainer-petg-parts"]
+resourceIds: ["trainer-tpu-parts", "trainer-petg-parts", "control-surfaces-video"]
 status: "Lesson video coming soon"
 ---
 

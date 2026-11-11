@@ -4,7 +4,7 @@ description: "Check every control direction, set dual rates, expo, and mixing, a
 order: 6
 courseOrder: 6
 permalink: "/build-fixed-wing/testing-and-setup/"
-resourceIds: ["spektrum-new-model-video", "spektrum-binding-video", "spektrum-model-setup-video", "motor-direction-video", "trainer-bench-test-cradle"]
+resourceIds: ["spektrum-new-model-video", "spektrum-binding-video", "spektrum-model-setup-video", "motor-direction-video", "trainer-bench-test-cradle", "flight-controller-rx-video"]
 status: "Lesson video coming soon"
 ---
 

@@ -4,7 +4,7 @@ description: "Fly the five airplane checkrides with your instructor and reach Ma
 order: 6
 courseOrder: 6
 permalink: "/learn-to-fly/checkrides-and-solo/"
-resourceIds: []
+resourceIds: ["buddy-box-video"]
 status: "Lesson video coming soon"
 ---
 

@@ -4,7 +4,7 @@ description: "Build the elevator and rudder from foamboard or plywood with stitc
 order: 4
 courseOrder: 4
 permalink: "/build-fixed-wing/building-the-tail/"
-resourceIds: ["trainer-dxf-patterns"]
+resourceIds: ["trainer-dxf-patterns", "stitched-hinges-video"]
 status: "Lesson video coming soon"
 ---
 

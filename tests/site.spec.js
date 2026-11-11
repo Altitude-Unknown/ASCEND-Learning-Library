@@ -18,7 +18,7 @@ test('Filter combinations, empty state, clear, and shareable query', async({page
  await expect(page.locator('[data-resource]:visible')).toHaveCount(13);
  await expect(page.locator('[data-resource]:visible').filter({hasText:'Sensor Mount'})).toHaveCount(1);
  await page.getByRole('button',{name:'Clear filters'}).click();
- await expect(page.locator('[data-resource]:visible')).toHaveCount(84);
+ await expect(page.locator('[data-resource]:visible')).toHaveCount(92);
  await page.getByLabel('Search this collection').fill('PurpleAir');
  await expect(page.locator('[data-resource]:visible')).toHaveCount(1);
  await page.getByLabel('Audience',{exact:true}).selectOption('Pod Leads');
@@ -26,7 +26,7 @@ test('Filter combinations, empty state, clear, and shareable query', async({page
  await page.getByLabel('Type',{exact:true}).selectOption('Book');
  await expect(page.locator('[data-empty]')).toBeVisible();
  await page.getByRole('button',{name:'Clear filters'}).click();
- await expect(page.locator('[data-resource]:visible')).toHaveCount(84);
+ await expect(page.locator('[data-resource]:visible')).toHaveCount(92);
 });
 test('Site search resolves the requested example terms',async({page})=>{
  for(const term of ['airspace','PurpleAir','STL','Part 107','balloon tracking','PM2.5','wildfire smoke','radiosondes','pod leads']) {
@@ -81,7 +81,7 @@ test('No fabricated files or unsolicited YouTube embeds', async({page})=>{
 });
 test('Pages and resource links remain usable without JavaScript',async({browser})=>{
  const context=await browser.newContext({javaScriptEnabled:false});const page=await context.newPage();
- await page.goto('http://127.0.0.1:8081/library/');await expect(page.locator('[data-resource]')).toHaveCount(84);
+ await page.goto('http://127.0.0.1:8081/library/');await expect(page.locator('[data-resource]')).toHaveCount(92);
  await page.getByRole('link',{name:'Airspace Student Worksheet',exact:true}).click();
  await expect(page.locator('h1')).toHaveText('Airspace Student Worksheet');await context.close();
 });
@@ -114,7 +114,7 @@ test('Web resources are discoverable by subject, platform, and activity without 
  await page.goto('/library/?platform=Fixed-Wing+UAS&activity=Building+%26+Integration');
  await expect(page.locator('[data-resource]:visible')).toHaveCount(14);
  await page.getByRole('button',{name:'Clear filters'}).click();
- await expect(page.locator('[data-resource]:visible')).toHaveCount(84);
+ await expect(page.locator('[data-resource]:visible')).toHaveCount(92);
 });
 
 test('New Part 107 activities and YELLOWSTONE documents have readable PDFs and native files', async({page,request})=>{
@@ -139,7 +139,7 @@ test('New Part 107 activities and YELLOWSTONE documents have readable PDFs and n
 
 test('Published lessons load YouTube only on request and retain a direct link', async({page})=>{
  await page.route('https://www.youtube-nocookie.com/**',route=>route.fulfill({contentType:'text/html',body:'<title>Video test frame</title>'}));
- for(const [name,id] of [['airspace','DUzC1lTjQJk'],['regulations','6_vm2nQtgQM'],['operations','Z9VZ-8zJkJ4'],['loading-performance','Y0MSfvZialw'],['tfr', 'j2-7djCYNcc'],['aviation-weather', 'pzHEfzTi3mI'],['flight-service', 'hgBdksCAdeI'],['metar', 'SWFE3yazpp4'],['atis-captioned', '3acRn61LJGo'],['atis-listening', '1kZq8FwL6Y0'],['fixed-wing-launch', 'Es1En_LPqDA'],['esc-programming', 'G8Hm2jxW3rY'],['spektrum-model-setup', 'aAAzVhM4dgQ'],['motor-esc-connection', 'IjSNAErO1Dk'],['esc-receiver-connection', 'rFiI6Vqx3yM'],['spektrum-new-model', 'ctCNojHtejY'],['servo-receiver-connection', 'DaCcsg5hr5k'],['motor-direction', '9QDkdhOt4qg'],['spektrum-binding', 'yuYsWz5tQts'],['mission-planner', 'msD4o5iYLZY'],['traffic-patterns', '9VYylorEKlg']]){
+ for(const [name,id] of [['airspace','DUzC1lTjQJk'],['regulations','6_vm2nQtgQM'],['operations','Z9VZ-8zJkJ4'],['loading-performance','Y0MSfvZialw'],['tfr', 'j2-7djCYNcc'],['aviation-weather', 'pzHEfzTi3mI'],['flight-service', 'hgBdksCAdeI'],['metar', 'SWFE3yazpp4'],['atis-captioned', '3acRn61LJGo'],['atis-listening', '1kZq8FwL6Y0'],['fixed-wing-launch', 'Es1En_LPqDA'],['esc-programming', 'G8Hm2jxW3rY'],['spektrum-model-setup', 'aAAzVhM4dgQ'],['motor-esc-connection', 'IjSNAErO1Dk'],['esc-receiver-connection', 'rFiI6Vqx3yM'],['spektrum-new-model', 'ctCNojHtejY'],['servo-receiver-connection', 'DaCcsg5hr5k'],['motor-direction', '9QDkdhOt4qg'],['battery-charging', '1Vfgq-lmDzQ'],['stitched-hinges', 'QAC0VP8KUZQ'],['control-surfaces', 'gp-BkrN4Qbc'],['flight-controller-rx', '_cM8cGj2jXw'],['buddy-box', '2QqY0Tcj-Wg'],['hand-launch', '-i_BKq_ZT6A'],['first-takeoff', 'gkOefM1J2gs'],['landing', 'yxC_W0QiNTE'],['spektrum-binding', 'yuYsWz5tQts'],['mission-planner', 'msD4o5iYLZY'],['traffic-patterns', '9VYylorEKlg']]){
   await page.goto('/resources/'+name+'-video/');
   await expect(page.locator('iframe')).toHaveCount(0);
   await expect(page.getByRole('link',{name:/Watch on YouTube/})).toHaveAttribute('href','https://www.youtube.com/watch?v='+id);

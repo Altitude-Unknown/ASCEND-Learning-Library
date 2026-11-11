@@ -4,7 +4,7 @@ description: "Start flying airplanes: choose a trainer, practice in a simulator,
 order: 1
 courseOrder: 1
 permalink: "/learn-to-fly/flying-fixed-wings/"
-resourceIds: ["flight-lab-rc"]
+resourceIds: ["flight-lab-rc", "control-surfaces-video", "buddy-box-video", "first-takeoff-video", "hand-launch-video", "landing-video"]
 status: "Lesson video coming soon"
 ---
 

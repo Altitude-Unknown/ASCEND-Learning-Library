@@ -4,7 +4,7 @@ description: "Compare Manual, FBWA, FBWB, and Auto modes, plan an autonomous mis
 order: 3
 courseOrder: 3
 permalink: "/flight-controllers/flight-modes-and-missions/"
-resourceIds: ["mission-planner-video", "fixed-wing-launch-video"]
+resourceIds: ["mission-planner-video", "fixed-wing-launch-video", "flight-controller-rx-video"]
 status: "Lesson video coming soon"
 ---
 

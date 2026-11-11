@@ -130,7 +130,10 @@
           "spektrum-new-model-video",
           "spektrum-binding-video",
           "servo-receiver-connection-video",
-          "motor-direction-video"
+          "motor-direction-video",
+          "control-surfaces-video",
+          "stitched-hinges-video",
+          "battery-charging-video"
         ]
       },
       {
@@ -151,7 +154,9 @@
           "spektrum-binding-video",
           "transmitter-v4-pcb",
           "servo-receiver-connection-video",
-          "motor-direction-video"
+          "motor-direction-video",
+          "battery-charging-video",
+          "flight-controller-rx-video"
         ]
       },
       {
@@ -159,7 +164,8 @@
         "slug": "flight-controllers",
         "resourceIds": [
           "remote-aircraft-textbook",
-          "mission-planner-video"
+          "mission-planner-video",
+          "flight-controller-rx-video"
         ]
       },
       {
@@ -168,7 +174,11 @@
         "resourceIds": [
           "remote-aircraft-textbook",
           "flight-lab-rc",
-          "fixed-wing-launch-video"
+          "fixed-wing-launch-video",
+          "buddy-box-video",
+          "first-takeoff-video",
+          "hand-launch-video",
+          "landing-video"
         ]
       },
       {
