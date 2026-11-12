@@ -31,7 +31,7 @@ The textbook's Landing Gear and both 2 mm plywood clip cards now link to the 64D
 
 Added the ASCEND flight controller's design kit from `ASCEND-Materials/ECAD/Flight_Controller-V4/`: Fusion design (`.f3z`, 19.2 MiB), schematic, board, BOM, and the v241 manufacturing ZIP. All five files are under the Pages limit and hosted directly. Resource: `/resources/flight-controller-v4-pcb/`. It replaces the "coming soon" note under Electronic Designs > Flight Controller and is also listed under UAS > Electronics and UAS > Flight Controllers. The library has 115 material records.
 
-The BOM's *BOM* sheet lists the wrong Digi-Key numbers for the 2.2 kΩ resistors (`497-17720-ND`, the STM32) and the 22 pF capacitors (the 2.2 pF part). The original is unchanged; the resource page tells builders to use the *Build* sheet's numbers.
+The spreadsheet has two sheets. Per the contributor, the *Build* sheet is the build guide and the *BOM* sheet is redundant (its 2.2 kΩ and 22 pF lines also carry wrong Digi-Key numbers), so the resource page points builders to the *Build* sheet only. The original file is unchanged.
 
 ## RC transmitter case — November 8
 

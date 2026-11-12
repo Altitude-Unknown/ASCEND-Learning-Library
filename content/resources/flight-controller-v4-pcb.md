@@ -59,16 +59,16 @@ Version 4 of the ASCEND flight controller, the autopilot board for ASCEND fixed-
 
 - **Fusion design** (`ASCEND_Flight_ControllerV4.f3z`): the full electronics design. Open it in Autodesk Fusion.
 - **Schematic** (`ASCEND-Flight_ControllerV4.sch`) and **board layout** (`ASCEND-Flight_ControllerV4.brd`): EAGLE files. Open them in Fusion or EAGLE, or import them into KiCad.
-- **Bill of materials** (`BOM-Flight-controller-V4.xlsx`): the *BOM* sheet lists each part with its Digi-Key number, price, and quantity; the *Build* sheet lists the reference designators where each part goes and whether it has a polarity.
+- **Build guide** (`BOM-Flight-controller-V4.xlsx`): use the *Build* sheet. It lists every part with its Digi-Key number, the reference designators where it goes on the board, and whether it must be placed the right way around.
 - **Manufacturing files** (`ASCEND-Flight_Controller_v241_Manufacturing_Output.zip`): Gerber and drill files for making the board, plus pick-and-place files for assembly. Upload it to a PCB manufacturer.
 
 ## Having your own boards made
 
 1. Upload `ASCEND-Flight_Controller_v241_Manufacturing_Output.zip` to a PCB manufacturer's website. It contains the Gerber and drill files they need.
-2. Order the parts listed in the BOM. The parts for one board cost about $140, including a share of a three-board PCB order. For the **2.2 kΩ resistors** and the **22 pF capacitors**, use the Digi-Key numbers on the *Build* sheet (`YAG1321CT-ND` and `478-1280-1-ND`); the *BOM* sheet repeats the numbers of other parts on those two lines.
+2. Order the parts listed on the *Build* sheet, using its Digi-Key numbers.
 3. Solder the parts, or ask the manufacturer to assemble the board using the pick-and-place files in the ZIP. The *Build* sheet marks the parts that must be placed the right way around.
 
-Leave **JP3** empty. It is the programming header, and the BOM marks it *Do not Solder*.
+Leave **JP3** empty. It is the programming header, and the build guide marks it *Do not Solder*.
 
 This page publishes the hardware design. Firmware and setup instructions for this board are not on the site yet.
 
