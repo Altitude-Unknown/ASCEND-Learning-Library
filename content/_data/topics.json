@@ -153,6 +153,7 @@
           "spektrum-new-model-video",
           "spektrum-binding-video",
           "transmitter-v4-pcb",
+          "flight-controller-v4-pcb",
           "servo-receiver-connection-video",
           "motor-direction-video",
           "battery-charging-video",
@@ -165,7 +166,8 @@
         "resourceIds": [
           "remote-aircraft-textbook",
           "mission-planner-video",
-          "flight-controller-rx-video"
+          "flight-controller-rx-video",
+          "flight-controller-v4-pcb"
         ]
       },
       {
@@ -270,7 +272,9 @@
       {
         "title": "Flight Controller",
         "slug": "flight-controller",
-        "description": "Design files for the ASCEND flight controller are coming soon."
+        "resourceIds": [
+          "flight-controller-v4-pcb"
+        ]
       },
       {
         "title": "YELLOWSTONE",
