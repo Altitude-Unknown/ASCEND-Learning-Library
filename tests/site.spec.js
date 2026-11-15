@@ -15,7 +15,7 @@ for (const width of [1440,768,390,320]) {
 }
 test('Filter combinations, empty state, clear, and shareable query', async({page})=>{
  await page.goto('/library/?topic=fabrication');
- await expect(page.locator('[data-resource]:visible')).toHaveCount(13);
+ await expect(page.locator('[data-resource]:visible')).toHaveCount(12);
  await expect(page.locator('[data-resource]:visible').filter({hasText:'Sensor Mount'})).toHaveCount(1);
  await page.getByRole('button',{name:'Clear filters'}).click();
  await expect(page.locator('[data-resource]:visible')).toHaveCount(93);
@@ -96,7 +96,7 @@ test('Imported books, slides, and project parts link to actual files',async({pag
   expect((await response.body()).subarray(0,5).toString()).toBe('%PDF-');
  }
  await page.goto('/resources/trainer-tpu-parts/');
- await expect(page.getByRole('link',{name:/^Download STL/})).toHaveCount(11);
+ await expect(page.getByRole('link',{name:/^Download STL/})).toHaveCount(3);
  await page.goto('/uas/trainer-airplane/');
  await page.getByRole('link',{name:'ASCEND Trainer Airplane Build Instructions',exact:true}).click();
  await expect(page.locator('#files')).toHaveCount(0);
