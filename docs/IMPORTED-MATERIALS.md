@@ -4,6 +4,18 @@ The intake folder is `ASCEND-Materials/` inside this repository. It is preserved
 unchanged and ignored by Git. Back it up independently. The provided
 `ASCEND_Logo_v2.jpg` is copied unchanged to `public/assets/ascend-logo.jpg`.
 
+## Trainer parts replaced with the current design set — November 14
+
+The contributor's updated set in `ASCEND-Airplane/` (16 Fusion files and 16 STLs, not tracked) is now the trainer's complete published set. `ASCEND-Materials/RC-Airplanes/Trainer-Airplane/` was made to match it exactly (checked by SHA-256), then `import-materials.py` was run. The previous intake folder is kept in `editorial/intake/retired/trainer-airplane-before-2026-11-14/` (git-ignored).
+
+- **Updated in place** (same URL): Test-Mount (STL and Fusion), and the PETG control horn, foam-tail clip, motor mount, motor mount nut and front wing-band clip.
+- **Added:** `64D_TPU_Parts/Fuselag.stl` and `Servo.stl`; `PETG_Parts/Fuselage-Lid.stl`, `empanage-clip-3mm-ply.stl`, `empanage-clip-v-tail-30.stl`, `wind-support-V2.stl` and `Wind-band-clip-rear.stl`; Fusion `Fuselag.f3z`, `Fuselage-Lid.f3d` and `empanage-clip-3mm-ply.f3d`. Per the contributor, the fuselage and servo mount print in 64D TPU and the fuselage lid and 3 mm plywood clip in PETG.
+- **Retired:** canopies (standard and stretch), stretched fuselage, the old `Fuselage` STL and Fusion file, servo brackets (T-tail and V-tail), landing gear, the 2 mm plywood clips (plain and with skid, STL and Fusion), the PETG `empanage-clip-v-tail.stl`, `rear-wing-support.stl` and `wing-band-clip-rear.stl`, and `AU-Assembly.f3z` with its resource page (`/resources/trainer-fusion-assembly/`). Their download copies were removed. Old URLs redirect (301) to the closest current part in `public/_redirects`; the landing gear and the assembly page redirect to the parts pages.
+- **R2:** `r2-upload/rc-airplanes-trainer-airplane-au-assembly.f3z` is no longer linked. Delete it from `ascend-files` after this change is live.
+- **Build guide:** Chapter 4's printed-parts grid and materials list now match the new parts (servo mount, fuselage lid, 3 mm plywood clip and sheet). The fuselage, servo mount, lid and 3 mm clip images are renders of the new STLs (`part-*-2026-11.jpg`); the retired parts' images were removed. The chapter's procedure text was not changed.
+
+The library has 105 material records.
+
 ## Textbooks are web chapters only — November 8
 
 The contributor keeps revising the textbooks, and the web chapters are now the current versions, so the PDF and Word downloads were removed:

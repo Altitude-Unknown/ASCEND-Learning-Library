@@ -21,7 +21,6 @@ resourceIds:
 - trainer-tpu-parts
 - trainer-petg-parts
 - trainer-dxf-patterns
-- trainer-fusion-assembly
 - trainer-fusion-parts
 - trainer-bench-test-cradle
 ---
@@ -34,10 +33,10 @@ Mike Walach’s illustrated instructions cover the parts list, foamboard wing, c
 
 ## Find the right files
 
-- **64D TPU:** fuselage (standard or stretched), nose, canopy, servo brackets, empennage clips, and landing gear.
-- **PETG:** motor mounting, wing supports and clips, a control horn, and tail clips (including 45° V-tail clips).
+- **64D TPU:** fuselage, nose, and servo mount.
+- **PETG:** fuselage lid, motor mounting, wing support and clips, a control horn, and tail clips (foam tail, 3 mm plywood, and 30° and 45° V-tails).
 - **DXF:** two patterns for the horizontal and vertical tailfeathers.
-- **Fusion:** editable designs for most printed parts, plus the original `AU-Assembly.f3z` archive.
+- **Fusion:** editable designs for every printed part.
 
 - **Bench test cradle:** holds the airplane on a table for motor and flight-controller tests with the propeller on.
 

@@ -18,7 +18,7 @@ related:
 - trainer-tpu-parts
 - trainer-petg-parts
 - trainer-dxf-patterns
-- trainer-fusion-assembly
+- trainer-fusion-parts
 delivery: web
 origin: contributed
 subjects:

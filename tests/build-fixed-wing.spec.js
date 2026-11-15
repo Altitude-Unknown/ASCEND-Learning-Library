@@ -50,7 +50,7 @@ test('The web chapter has every linked section and a description for every image
     expect(img.alt.length).toBeGreaterThan(20);
     expect(existsSync(new URL(`../public${img.src}`, import.meta.url))).toBeTruthy();
   }
-  await expect(page.locator('.parts-grid li')).toHaveCount(15);
+  await expect(page.locator('.parts-grid li')).toHaveCount(13);
   await expect(page.getByRole('table', {name: /Control direction check/})).toBeVisible();
   await expect(page.locator('#terminology + .key-terms dt')).toHaveCount(18);
   await expect(page.locator('.textbook-content')).not.toContainText('2.8');

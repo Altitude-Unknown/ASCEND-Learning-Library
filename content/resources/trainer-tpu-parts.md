@@ -1,8 +1,8 @@
 ---
 id: trainer-tpu-parts
 title: Trainer Airplane — 64D TPU Parts
-description: Eleven supplied files for the trainer fuselage (standard and stretched),
-  nose, canopy, servo brackets, empennage clips, and landing gear.
+description: "Three files printed in 64D TPU for the trainer airplane: the fuselage,
+  the nose and the servo mount."
 topic: fabrication
 kind: CAD model
 status: Available
@@ -12,18 +12,10 @@ audience:
 - Faculty Mentors
 - Pod Leads
 assetIds:
-- rc-airplanes-trainer-airplane-64d-tpu-parts-canapy
-- rc-airplanes-trainer-airplane-64d-tpu-parts-fuselage
+- rc-airplanes-trainer-airplane-64d-tpu-parts-fuselag
 - rc-airplanes-trainer-airplane-64d-tpu-parts-nose
-- rc-airplanes-trainer-airplane-64d-tpu-parts-fuselag-stretch
-- rc-airplanes-trainer-airplane-64d-tpu-parts-canapy-for-stretch
-- rc-airplanes-trainer-airplane-64d-tpu-parts-servo-bracket-v-tail
-- rc-airplanes-trainer-airplane-64d-tpu-parts-servo-v-tail
-- rc-airplanes-trainer-airplane-64d-tpu-parts-empanage-clip-2mm-ply-w-skid
-- rc-airplanes-trainer-airplane-64d-tpu-parts-empanage-clip-2mm-ply
-- rc-airplanes-trainer-airplane-64d-tpu-parts-landinggear
-- rc-airplanes-trainer-airplane-64d-tpu-parts-servo-bracket-t-tail
-updated: '2026-11-08'
+- rc-airplanes-trainer-airplane-64d-tpu-parts-servo
+updated: '2026-11-14'
 format: STL
 related:
 - trainer-build-instructions
@@ -39,15 +31,12 @@ platforms:
 
 ## About these files
 
-Eleven supplied files for the trainer fuselage, nose, canopy, servo brackets, empennage clips, and landing gear.
+Three trainer parts printed in 64D TPU, the flexible filament used where a part must absorb impacts:
 
-- **Stretched fuselage option:** `Fuselag-Stretch.stl` with its matching `Canapy for stretch.stl`.
-- **2 mm plywood tail clips:** `empanage-clip-2mm-ply.stl` (plain) and `empanage-clip-2mm-ply-w-skid.stl` (with a tail skid).
+- **Fuselage:** `Fuselag.stl`.
+- **Nose:** `Nose.stl`.
+- **Servo mount:** `Servo.stl`.
 
-The fuselage, nose, and plain plywood clip were updated to the latest designs on November 8, 2026. Their editable versions are in the [Fusion part designs](/resources/trainer-fusion-parts/).
+The trainer's other printed parts, including the fuselage lid and the tail clips, are printed in [PETG](/resources/trainer-petg-parts/). Editable versions of every part are in the [Fusion part designs](/resources/trainer-fusion-parts/).
 
-These downloads preserve the original file contents and filenames. Visit the [aircraft project page](/uas/trainer-airplane/) for the related components.
-
-## Duplicate filename retained
-
-`Servo_V-tail.stl` and `Servo-bracket-V-tail.stl` are byte-for-byte identical. Both names are retained to match references in existing materials.
+The trainer parts were updated to the current designs on November 14, 2026. The earlier canopies, stretched fuselage, servo brackets, landing gear and 2 mm plywood tail clips were retired. These downloads preserve the original file contents and filenames. Visit the [aircraft project page](/uas/trainer-airplane/) for the related components.
