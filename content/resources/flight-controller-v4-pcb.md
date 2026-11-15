@@ -21,6 +21,7 @@ assetIds:
 updated: '2026-11-11'
 format: F3Z, SCH, BRD, XLSX, ZIP
 related:
+- flight-controller-v4-setup
 - transmitter-v4-pcb
 - flight-controller-rx-video
 delivery: download
@@ -70,6 +71,6 @@ Version 4 of the ASCEND flight controller, the autopilot board for ASCEND fixed-
 
 Leave **JP3** empty. It is the programming header, and the build guide marks it *Do not Solder*.
 
-This page publishes the hardware design. Firmware and setup instructions for this board are not on the site yet.
+This page publishes the hardware design. To flash, calibrate and set up a finished board, follow the [Flight Controller V4 Setup Guide](/resources/flight-controller-v4-setup/).
 
 These downloads preserve the original file contents and filenames. See the [Electronic Designs](/electronics/) section for the other ASCEND boards.
