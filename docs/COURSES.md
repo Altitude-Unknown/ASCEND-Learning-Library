@@ -72,6 +72,14 @@ its 152 images (`public/assets/build-fixed-wing/`), and the control surface lab
 were generated from the manual’s Word file. Every image has a written
 description. Changes from the printed chapter:
 
+- **Photo crops (November 14):** the first conversion used the full original
+  photos and ignored the crops set in Word, so feet and legs showed below the
+  bench. The 30 photos Word crops are now cropped the same way (from each
+  picture's `srcRect`). Photos used twice with different crops have their own
+  files (`build-032-b`, `build-043-b`, `build-066-b`); the uncropped uses keep
+  the full photo (`build-043-c`, `build-126-b`). Any future re-import must apply
+  Word's crops.
+
 - STL and tail DXF links point to the site’s trainer files, not Google Drive.
   The V-tail DXF has no site copy and still links to Google Drive.
 - Terminology: RC transmitters and receivers operate at 2.4 GHz (the manual says 2.8 GHz).
