@@ -39,6 +39,10 @@ The contributor exported every trainer part from the current Fusion designs (`AS
 
 The textbook's Landing Gear and both 2 mm plywood clip cards now link to the 64D TPU parts. The library now has 116 material records.
 
+## RC Receiver V5 PCB — November 16
+
+Added the ASCEND RC receiver V5 design kit from `ASCEND-Materials/ECAD/Receiver-V5/`: Fusion design (`Receiver.f3z`, 17.8 MiB), schematic (`Rx-Rev-1.sch`), board (`Receiver.brd`) and the v233 manufacturing ZIP. All four files are under the Pages limit and hosted directly. Resource: `/resources/receiver-v5-pcb/`, listed under Electronic Designs > RC Receiver (new) and UAS > Electronics. The contributor's BOM is held back until a build sheet with part numbers is ready, so the page says the BOM is coming soon.
+
 ## Flight Controller V4 PCB — November 11
 
 Added the ASCEND flight controller's design kit from `ASCEND-Materials/ECAD/Flight_Controller-V4/`: Fusion design (`.f3z`, 19.2 MiB), schematic, board, BOM, and the v241 manufacturing ZIP. All five files are under the Pages limit and hosted directly. Resource: `/resources/flight-controller-v4-pcb/`. It replaces the "coming soon" note under Electronic Designs > Flight Controller and is also listed under UAS > Electronics and UAS > Flight Controllers. The library has 115 material records.

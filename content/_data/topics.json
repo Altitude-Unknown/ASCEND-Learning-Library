@@ -154,6 +154,7 @@
           "spektrum-binding-video",
           "transmitter-v4-pcb",
           "flight-controller-v4-pcb",
+          "receiver-v5-pcb",
           "servo-receiver-connection-video",
           "motor-direction-video",
           "battery-charging-video",
@@ -274,6 +275,13 @@
         "slug": "flight-controller",
         "resourceIds": [
           "flight-controller-v4-pcb"
+        ]
+      },
+      {
+        "title": "RC Receiver",
+        "slug": "rc-receiver",
+        "resourceIds": [
+          "receiver-v5-pcb"
         ]
       },
       {

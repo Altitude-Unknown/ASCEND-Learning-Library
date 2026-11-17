@@ -55,6 +55,50 @@
     "publicUrl": ""
   },
   {
+    "id": "ecad-receiver-v5-receiver-brd",
+    "source": "ECAD/Receiver-V5/Receiver.brd",
+    "filename": "Receiver.brd",
+    "format": "BRD",
+    "bytes": 240724,
+    "sha256": "aa51ef483729adeceab35cc43a195cde865b01558679ee6000777e8022bcd25f",
+    "localPath": "downloads/imported/ecad-receiver-v5-receiver-brd.brd",
+    "hostedLocally": true,
+    "publicUrl": ""
+  },
+  {
+    "id": "ecad-receiver-v5-receiver-f3z",
+    "source": "ECAD/Receiver-V5/Receiver.f3z",
+    "filename": "Receiver.f3z",
+    "format": "F3Z",
+    "bytes": 18690126,
+    "sha256": "02e5343b17b54991ee932c45decd299e14ae5b0d31380a66a1a1b1f6a0994883",
+    "localPath": "downloads/imported/ecad-receiver-v5-receiver-f3z.f3z",
+    "hostedLocally": true,
+    "publicUrl": ""
+  },
+  {
+    "id": "ecad-receiver-v5-receiver-v233-manufacturing-output",
+    "source": "ECAD/Receiver-V5/Receiver_v233_Manufacturing_Output.zip",
+    "filename": "Receiver_v233_Manufacturing_Output.zip",
+    "format": "ZIP",
+    "bytes": 194687,
+    "sha256": "0c54e527634f28b68f7d8d4fdeffed40a240d3bb18e28d17907ab65f55b629d2",
+    "localPath": "downloads/imported/ecad-receiver-v5-receiver-v233-manufacturing-output.zip",
+    "hostedLocally": true,
+    "publicUrl": ""
+  },
+  {
+    "id": "ecad-receiver-v5-rx-rev-1",
+    "source": "ECAD/Receiver-V5/Rx-Rev-1.sch",
+    "filename": "Rx-Rev-1.sch",
+    "format": "SCH",
+    "bytes": 792854,
+    "sha256": "63904140bb724f14a8afb57ca6b01ed285c07ee697e75f941326a293cceb7cb6",
+    "localPath": "downloads/imported/ecad-receiver-v5-rx-rev-1.sch",
+    "hostedLocally": true,
+    "publicUrl": ""
+  },
+  {
     "id": "ecad-transmitter-v4-transmitter-v4-bom",
     "source": "ECAD/Transmitter-V4/Transmitter V4 BOM.xlsx",
     "filename": "Transmitter V4 BOM.xlsx",
