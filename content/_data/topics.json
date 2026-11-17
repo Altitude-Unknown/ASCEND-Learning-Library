@@ -167,6 +167,7 @@
         "resourceIds": [
           "remote-aircraft-textbook",
           "mission-planner-video",
+          "qgroundcontrol-mission-video",
           "flight-controller-rx-video",
           "flight-controller-v4-pcb"
         ]
@@ -189,14 +190,16 @@
         "slug": "mission-planning",
         "resourceIds": [
           "remote-aircraft-textbook",
-          "mission-planner-video"
+          "mission-planner-video",
+          "qgroundcontrol-mission-video"
         ]
       },
       {
         "title": "Autonomous Flight",
         "slug": "autonomous-flight",
         "resourceIds": [
-          "remote-aircraft-textbook"
+          "remote-aircraft-textbook",
+          "qgroundcontrol-mission-video"
         ]
       },
       {

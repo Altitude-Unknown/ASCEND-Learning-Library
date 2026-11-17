@@ -14,6 +14,7 @@ captionStatus: Caption availability and accuracy have not yet been verified. Che
 transcript: ''
 related:
 - uas-field-applications
+- qgroundcontrol-mission-video
 - fixed-wing-launch-video
 status: Available
 permalink: /resources/mission-planner-video/

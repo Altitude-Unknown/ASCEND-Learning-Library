@@ -42,6 +42,18 @@
       "note": "Derived from PicaSim; free for noncommercial use."
     },
     {
+      "group": "rc",
+      "kind": "Ground control station",
+      "name": "QGroundControl",
+      "summary": "Connect to the ASCEND flight controller to check sensors, calibrate, change ArduPilot parameters, and plan autonomous missions.",
+      "platforms": ["Windows", "macOS", "Linux", "Android"],
+      "download": "https://docs.qgroundcontrol.com/master/en/qgc-user-guide/getting_started/download_and_install.html",
+      "external": true,
+      "guide": "/resources/flight-controller-v4-setup/",
+      "source": "https://github.com/mavlink/qgroundcontrol",
+      "note": "Made by the Dronecode project, not Altitude Unknown. The download link opens the official QGroundControl install page."
+    },
+    {
       "group": "balloon",
       "name": "YELLOWSTONE Ground Station",
       "summary": "The ground station for YELLOWSTONE, the balloon tracking and flight termination board, which balloon teams use to follow their flight.",

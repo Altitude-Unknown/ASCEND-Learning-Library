@@ -14,7 +14,11 @@ test('Software page lists every app with current download links', async ({page})
    await expect(card).toHaveCount(1);
    const download = card.getByRole('link', {name: /^Download latest/});
    if (app.download) {
-    expect(app.download).toMatch(/^https:\/\/github\.com\/Altitude-Unknown\/[^/]+\/releases\/latest$/);
+    if (app.external) {
+     expect(app.download).toMatch(/^https:\/\//);
+    } else {
+     expect(app.download).toMatch(/^https:\/\/github\.com\/Altitude-Unknown\/[^/]+\/releases\/latest$/);
+    }
     await expect(download).toHaveAttribute('href', app.download);
    } else {
     await expect(download).toHaveCount(0);

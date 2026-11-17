@@ -123,7 +123,7 @@
       "title": "Flight Modes and Mission Planning",
       "number": 3,
       "url": "/flight-controllers/flight-modes-and-missions/",
-      "summary": "Compare Manual, FBWA, FBWB, and Auto modes, plan an autonomous mission with waypoints in Mission Planner, and fly it.",
+      "summary": "Compare Manual, FBWA, FBWB, and Auto modes, plan an autonomous mission with waypoints in QGroundControl (or Mission Planner, if your team prefers it), and fly it.",
       "outcomes": [
         "Explain how much control the pilot and the flight controller each have in Manual, FBWA, FBWB, and Auto modes.",
         "Plan a mission with takeoff, waypoints, return-to-launch, and landing, and review it before flight.",
