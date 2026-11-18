@@ -110,13 +110,14 @@ test('Chapter 3 walks through Flight Lab RC setup and the labs link to it', asyn
   const guide = page.locator('#example-set-up-flight-lab-rc');
   await expect(guide).toHaveCount(1);
   await expect(page.locator('.textbook-content h5[id^="flrc-"]')).toHaveCount(8);
-  await expect(page.locator('.textbook-content img[src*="/flight-lab-rc-setup/"]')).toHaveCount(12);
+  await expect(page.locator('.textbook-content img[src*="/flight-lab-rc-setup/"]')).toHaveCount(18);
   for (const img of await page.locator('.textbook-content img[src*="/flight-lab-rc-setup/"]').all()) {
     await img.scrollIntoViewIfNeeded();
     expect(await img.evaluate(el => el.complete && el.naturalWidth > 0)).toBeTruthy();
   }
   await expect(page.locator('#flrc-2-connect-the-transmitter + p')).toContainText('simulator mode');
   await expect(page.locator('.textbook-content')).toContainText('Altitude RC Tx');
+  await expect(page.locator('.textbook-content')).toContainText('Ch5 button');
   await expect(page.locator('.textbook-content')).toContainText('untick Zoom view');
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1)).toBeTruthy();
   for (const path of ['/resources/flight-lab-rc/', '/resources/flight-lab-rc-setup-video/', '/resources/fly-simulator-airplane-lab/', '/resources/fly-simulator-quadcopter-lab/', '/learn-to-fly/flying-fixed-wings/']) {
