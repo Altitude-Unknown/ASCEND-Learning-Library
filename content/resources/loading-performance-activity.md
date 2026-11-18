@@ -47,7 +47,7 @@ The first question switches between 1 lb and 1.5 lb and gives battery weight rat
 <li>What is the purpose of flaps?</li>
 </ol>
 
-<figure class="textbook-figure"><a href="/assets/part107/activities/airplane-control-surfaces.jpg"><img src="/assets/part107/activities/airplane-control-surfaces.jpg" alt="Diagram of a high-wing airplane labelling the wing, ailerons (green), flaps (pink), vertical stabilizer, rudder (red), horizontal stabilizer, elevator (blue), propeller, fuselage, and landing gear." loading="lazy"></a><figcaption><p>Parts of an airplane, for questions 3 and 4. Ailerons and flaps are on the wing; the rudder is on the vertical stabilizer; the elevator is on the horizontal stabilizer.</p></figcaption></figure>
+<figure class="textbook-figure"><a href="/assets/part107/activities/airplane-control-surfaces.jpg"><img src="/assets/part107/activities/airplane-control-surfaces.jpg" alt="Diagram of a high-wing airplane labeling the wing, ailerons (green), flaps (pink), vertical stabilizer, rudder (red), horizontal stabilizer, elevator (blue), propeller, fuselage, and landing gear." loading="lazy"></a><figcaption><p>Parts of an airplane, for questions 3 and 4. Ailerons and flaps are on the wing; the rudder is on the vertical stabilizer; the elevator is on the horizontal stabilizer.</p></figcaption></figure>
 
 <ol class="activity-questions" start="5">
 <li>As you increase your angle of bank in a turn, does your stall speed increase or decrease?</li>
