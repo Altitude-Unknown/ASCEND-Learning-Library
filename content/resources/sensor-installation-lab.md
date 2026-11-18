@@ -29,6 +29,7 @@ keywords:
 - Pixhawk
 - calibration
 - Mission Planner
+- QGroundControl
 ---
 ## About this activity
 
@@ -36,7 +37,7 @@ keywords:
 
 **Materials:** an aircraft with a flight controller such as a Pixhawk, and a GPS module, airspeed indicator, or other external sensor.
 
-**Procedure:** install and calibrate the sensor you have been supplied with. Demonstrate the working sensor in Mission Planner or other flight control software.
+**Procedure:** install and calibrate the sensor you have been supplied with. Demonstrate the working sensor in [Mission Planner](https://ardupilot.org/planner/), [QGroundControl](/software/#software-rc) or other flight control software.
 
 Read [Chapter 8](/advanced-sensors/textbook/advanced-sensors/) for how each sensor works, and [ArduPilot and Mission Planner](/flight-controllers/textbook/flight-controllers/#ardupilot-and-mission-planner) in Chapter 6 for the software.
 

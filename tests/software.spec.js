@@ -41,3 +41,19 @@ test('Software is in the header, mobile menu, and footer', async ({page}) => {
  await page.locator('.topic-menu summary').click();
  await expect(page.getByRole('navigation', {name: 'Site menu'}).getByRole('link', {name: 'Software downloads'})).toHaveAttribute('href', '/software/');
 });
+
+test('Mission Planner is offered alongside QGroundControl, with the Configurator-only firmware warning', async ({page}) => {
+ await page.goto('/software/');
+ for (const name of ['QGroundControl', 'Mission Planner']) {
+  const card = page.locator('.software-card', {has: page.getByRole('heading', {name, exact: true})});
+  await expect(card).toContainText('update firmware only with the RC Configurator');
+ }
+ await expect(page.locator('.software-card', {has: page.getByRole('heading', {name: 'Mission Planner', exact: true})}).getByRole('link', {name: /^Download latest/})).toHaveAttribute('href', 'https://ardupilot.org/planner/');
+ await page.goto('/resources/flight-controller-v4-setup/');
+ await expect(page.locator('main')).toContainText('Flash the flight controller only with the Configurator.');
+ await expect(page.locator('main a[href="https://ardupilot.org/planner/"]').first()).toBeVisible();
+ for (const path of ['/flight-controllers/textbook/flight-controllers/', '/flight-controllers/flight-modes-and-missions/', '/resources/mission-planner-video/', '/resources/mission-planning-lab/', '/resources/sensor-installation-lab/']) {
+  await page.goto(path);
+  await expect(page.locator('main a[href="https://ardupilot.org/planner/"]').first()).toBeVisible();
+ }
+});

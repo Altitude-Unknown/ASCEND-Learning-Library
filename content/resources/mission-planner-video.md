@@ -39,6 +39,6 @@ Select **Load video** above to watch here, or [open the video on YouTube](https:
 
 ## UAS mission planning
 
-Find this demonstration in [UAS Mission Planning](/uas/#mission-planning). Use it alongside the [UAS Field Applications activity](/resources/uas-field-applications/) when discussing how to plan an aircraft mission.
+[Download Mission Planner](https://ardupilot.org/planner/) from ArduPilot (Windows). Mac teams can use [QGroundControl](/software/#software-rc) instead; see the [QGroundControl mission video](/resources/qgroundcontrol-mission-video/). Find this demonstration in [UAS Mission Planning](/uas/#mission-planning). Use it alongside the [UAS Field Applications activity](/resources/uas-field-applications/) when discussing how to plan an aircraft mission.
 
 [Visit the ASCEND-BOREALIS YouTube channel](https://www.youtube.com/@ASCEND-BOREALIS) for more project videos.
