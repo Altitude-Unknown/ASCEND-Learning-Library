@@ -10,6 +10,6 @@ resourceIds: ["mission-planner-video", "qgroundcontrol-mission-video", "fixed-wi
 ## Work through this unit
 
 1. **Watch.** Start with the short videos for this unit. If it has none yet, go straight to the reading.
-2. **Read and clarify.** Read the sections of Chapter 6 on planning a mission, flight modes, and using Mission Planner to fly an autonomous mission. ASCEND teams plan missions in QGroundControl, which works the same way: the QGroundControl video for this unit walks through a waypoint mission on the ASCEND flight controller. Mission Planner is still an option if your team prefers it.
+2. **Read and clarify.** Read the sections of Chapter 6 on planning a mission, flight modes, and using Mission Planner to fly an autonomous mission. ASCEND teams plan missions in QGroundControl, which works the same way: the QGroundControl video for this unit and the [step-by-step QGroundControl example](/flight-controllers/textbook/flight-controllers/#example-plan-a-mission-in-qgroundcontrol) in Chapter 6 walk through a waypoint mission on the ASCEND flight controller. Mission Planner is still an option if your team prefers it.
 3. **Apply your understanding.** Complete the mission planning lab with your instructor, then show your instructor the skills listed for sign-off.
 4. **Check and revisit.** Answer the review questions in your own words, then open each answer to compare. The full skills checksheet for the chapter is at the end of this unit.

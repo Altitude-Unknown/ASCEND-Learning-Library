@@ -6,7 +6,7 @@
   "topic": "uas",
   "courseId": "flightControllers",
   "title": "Chapter 6: Flight Controllers",
-  "description": "What flight controllers do, from simple training stabilizers to Pixhawk autopilots; Betaflight, ArduPilot, Mission Planner, and QGroundControl; automation, safety, and failsafes; flight modes; and planning an autonomous mission.",
+  "description": "What flight controllers do, from simple training stabilizers to Pixhawk autopilots; Betaflight, ArduPilot, Mission Planner, and QGroundControl; automation, safety, and failsafes; flight modes; and planning an autonomous mission, with a step-by-step QGroundControl example.",
   "chapterNumber": 6,
   "textbookEyebrow": "REMOTE AND AUTONOMOUS AIRCRAFT SYSTEMS · WEB EDITION",
   "sourceNote": "From Mike Walach’s lab manual, Remote and Autonomous Aircraft Systems. Original wording is retained with small corrections; image descriptions have been added for web reading.",
@@ -44,6 +44,10 @@
     {
       "title": "Automating a mission",
       "id": "automating-a-mission"
+    },
+    {
+      "title": "— Example: plan a mission in QGroundControl",
+      "id": "example-plan-a-mission-in-qgroundcontrol"
     },
     {
       "title": "Safety around flight-controlled aircraft",
@@ -148,6 +152,114 @@ Returning automatically to a launch or home location
 </li></ul>
 <p>A basic autonomous system generally requires an <strong>aircraft, flight controller, appropriate sensors, a control link, and software for configuring and programming the flight controller</strong>. GPS is required for most position-based autonomous operations.</p>
 <p>Adding automation also introduces additional risks. Understanding those risks and knowing how to respond when automation does not behave as expected are important parts of operating an autonomous aircraft.</p>
+<h3 id="example-plan-a-mission-in-qgroundcontrol">Example: plan a mission in QGroundControl</h3>
+<p>This example walks through building a simple autonomous mission for the ASCEND airplane in QGroundControl. The mission has three parts:</p>
+<ol>
+<li>a <strong>takeoff</strong> that climbs to a safe altitude,</li>
+<li>a loop of <strong>waypoints</strong> around the field, and</li>
+<li>a <strong>loiter</strong> that circles until the pilot takes control and lands.</li>
+</ol>
+<p>That is the mission the <a href="/resources/mission-planning-lab/">Mission Planning lab</a> asks you to fly. The screenshots were taken in QGroundControl 5.1.4 on a Mac. The steps are the same on a PC. If you prefer to watch, the <a href="/resources/qgroundcontrol-mission-video/">QGroundControl mission video</a> covers the same mission.</p>
+<p>You can plan the whole mission without the airplane connected. You only need the airplane to upload the finished plan.</p>
+<h4 id="qgc-1-before-you-start">1. Before you start</h4>
+<ul>
+<li>Install <a href="/software/#software-rc">QGroundControl</a> on your laptop.</li>
+<li>Set up the flight controller with the <a href="/resources/flight-controller-v4-setup/">ASCEND Flight Controller V4 setup guide</a>, including the calibrations and the failsafe test.</li>
+<li>Know where you will fly. You need a field large enough for the whole route to stay within visual line of sight, clear of people, roads and buildings.</li>
+<li>Read <a href="#safety-around-flight-controlled-aircraft">Safety around flight-controlled aircraft</a>, <a href="#failsafes">Failsafes</a>, <a href="#planning-a-mission">Planning a mission</a> and <a href="#flight-modes">Flight modes</a> later in this chapter.</li>
+</ul>
+<h4 id="qgc-2-open-the-plan-view">2. Open the Plan view</h4>
+<p>Click the <strong>Q</strong> icon in the top-left corner, then click <strong>Plan</strong>.</p>
+<figure class="textbook-figure"><a href="/assets/flight-controllers/qgc-mission/01-plan-menu.jpg"><img src="/assets/flight-controllers/qgc-mission/01-plan-menu.jpg" alt="QGroundControl's main menu, opened from the Q icon in the top-left corner. Six tiles are shown: Fly, Plan, Configure, Analyze, Settings and Close. Plan is highlighted. The header reads Disconnected - Click to manually connect, and the version is 5.1.4." width="1200" height="562" loading="lazy"></a><figcaption><p>The QGroundControl menu. Plan is where you build missions. You don't need to be connected to the airplane.</p></figcaption></figure>
+<h4 id="qgc-3-check-the-plan-settings">3. Check the plan settings</h4>
+<p>The Plan view shows a map with tools down the left side and the plan settings on the right. Scroll the map to your flying field.</p>
+<figure class="textbook-figure"><a href="/assets/flight-controllers/qgc-mission/02-plan-view.jpg"><img src="/assets/flight-controllers/qgc-mission/02-plan-view.jpg" alt="The full Plan view. A satellite map of farm fields fills the screen with a green home marker near the top. Along the top are the Open, Save, Upload and Clear buttons. A tool column on the left lists Takeoff, Pattern, Waypoint, ROI and Land. The Plan Info panel is on the right, and an empty altitude graph runs along the bottom." width="1600" height="1000" loading="lazy"></a><figcaption><p>The Plan view before any mission items are added. The green house icon is the expected home position. Select the image to open it full size.</p></figcaption></figure>
+<p>Check these settings in the panel on the right:</p>
+<ul>
+<li><strong>Vehicle Info:</strong> <strong>ArduPilot</strong> and <strong>Fixed Wing</strong>. When the airplane is connected, QGroundControl reads these from the flight controller.</li>
+<li><strong>Expected Home Position:</strong> drag the green home marker to your launch point. This is only for planning: the airplane sets its real home position from GPS when it arms.</li>
+<li><strong>Defaults → Alt Frame:</strong> <strong>Rel</strong> (relative) means each altitude is measured from the home position, not from sea level.</li>
+<li><strong>Defaults → Waypoints Altitude:</strong> the altitude every new waypoint starts with. Choose it for your local terrain and your mission objectives; the example uses <strong>75 ft</strong>. Set this before you add waypoints, so you don't have to change each one later.</li>
+<li><strong>Flight Speed:</strong> leave it unchecked. The airplane then flies at its normal cruise speed.</li>
+</ul>
+<figure class="textbook-figure"><a href="/assets/flight-controllers/qgc-mission/03-plan-settings.jpg"><img src="/assets/flight-controllers/qgc-mission/03-plan-settings.jpg" alt="Close-up of the Plan Info panel. Vehicle Info is set to ArduPilot and Fixed Wing. Under Expected Home Position: Drag to move home position, click to set new position, altitude 4891.7 feet above mean sea level, actual position set by vehicle at flight time. Plan Templates offers Survey, Corridor Scan and No Template. Under Defaults: Alt Frame Rel, Waypoints Altitude 75.0 feet on a 0 to 400 slider, and Flight Speed unchecked at 33.6 miles per hour." width="481" height="1533" loading="lazy"></a><figcaption><p>Plan settings used in this guide: ArduPilot, Fixed Wing, relative altitudes, and a default waypoint altitude of 75 ft.</p></figcaption></figure>
+<p>The 0–400 ft slider matches the FAA Part 107 limit of 400 ft above ground level. A relative altitude is measured from the home position. If the ground under your route rises or falls, the airplane's height above that ground changes too. The altitude graph at the bottom of the screen shows this (step 5).</p>
+<h4 id="qgc-4-add-the-takeoff">4. Add the takeoff</h4>
+<ol>
+<li>Click <strong>Takeoff</strong> in the tool column on the left.</li>
+</ol>
+<figure class="textbook-figure"><a href="/assets/flight-controllers/qgc-mission/04-takeoff-tool.jpg"><img src="/assets/flight-controllers/qgc-mission/04-takeoff-tool.jpg" alt="The top-left corner of the Plan view, with the Takeoff tool highlighted at the top of the tool column. Below it are Pattern, Waypoint, ROI and Land." width="1152" height="679" loading="lazy"></a><figcaption><p>The Takeoff tool, at the top of the tool column.</p></figcaption></figure>
+<ol start="2">
+<li>A green <strong>T</strong> marker appears near home. Drag it to the point where the airplane should finish its climb-out. QGroundControl reminds you to keep that path clear of obstacles and to take off <strong>into the wind</strong>. Click <strong>Done</strong>.</li>
+</ol>
+<figure class="textbook-figure"><a href="/assets/flight-controllers/qgc-mission/05-takeoff-placed.jpg"><img src="/assets/flight-controllers/qgc-mission/05-takeoff-placed.jpg" alt="A green circle labelled T Takeoff sits on the map just south of a road. In the panel on the right, the Takeoff item reads: Move T Takeoff to the climbout location. Ensure clear of obstacles and into the wind. A Done button is below." width="1400" height="867" loading="lazy"></a><figcaption><p>Place the takeoff marker on the climb-out path, then click Done.</p></figcaption></figure>
+<ol start="3">
+<li>Set the takeoff values:
+<ul>
+<li><strong>Altitude (Rel):</strong> the height the airplane climbs to before it heads for the first waypoint. The altitude is your team's choice, based on the local terrain and your mission objectives. The example uses 75 ft.</li>
+<li><strong>Pitch:</strong> the minimum nose-up angle held during the climb. ASCEND teams use <strong>15°</strong>.</li>
+</ul>
+</li>
+</ol>
+<figure class="textbook-figure"><a href="/assets/flight-controllers/qgc-mission/06-takeoff-settings.jpg"><img src="/assets/flight-controllers/qgc-mission/06-takeoff-settings.jpg" alt="The Takeoff item's settings in the right panel: Altitude (Rel) 75.0 feet on a 0 to 400 slider, and Pitch 15.00 degrees on a 0 to 45 slider. The T Takeoff marker is on the map to the left." width="1400" height="867" loading="lazy"></a><figcaption><p>Takeoff settings: climb to 75 ft relative altitude at a pitch of at least 15°.</p></figcaption></figure>
+<p class="textbook-callout"><strong>Launching for this example.</strong> Hand launch the airplane in MANUAL or FBWA and fly it up to a safe altitude yourself. Then flip the mode switch to AUTO (step 8) to start the mission. Keep the takeoff item in the plan anyway: it sets the altitude the mission climbs to before the first waypoint.</p>
+<h4 id="qgc-5-add-the-waypoints">5. Add the waypoints</h4>
+<ol>
+<li>Click <strong>Waypoint</strong> in the tool column. It stays selected (highlighted) until you click it again.</li>
+</ol>
+<figure class="textbook-figure"><a href="/assets/flight-controllers/qgc-mission/07-waypoint-tool.jpg"><img src="/assets/flight-controllers/qgc-mission/07-waypoint-tool.jpg" alt="The top-left corner of the Plan view with the Waypoint tool highlighted in the tool column. The Takeoff tool above it is now greyed out, and the Save button in the top bar is active." width="1152" height="679" loading="lazy"></a><figcaption><p>With the Waypoint tool selected, every click on the map adds a waypoint.</p></figcaption></figure>
+<ol start="2">
+<li>Click the map where you want the first waypoint. QGroundControl numbers it <strong>2</strong>, because the takeoff is item 1. An orange line joins the takeoff to the waypoint, with an arrow showing the direction of flight.</li>
+</ol>
+<figure class="textbook-figure"><a href="/assets/flight-controllers/qgc-mission/08-first-waypoint.jpg"><img src="/assets/flight-controllers/qgc-mission/08-first-waypoint.jpg" alt="An orange line runs south from the takeoff marker T to a green waypoint numbered 2. The Waypoint panel on the right shows Altitude (Rel) 75.0 feet and an unchecked Flight Speed. The graph at the bottom shows an orange line climbing from the home point to waypoint 2, above a flat green terrain line." width="1600" height="1000" loading="lazy"></a><figcaption><p>The first waypoint. In the graph at the bottom, the orange line is the planned altitude and the green line is the ground.</p></figcaption></figure>
+<ol start="3">
+<li>Keep clicking to add more waypoints. The lab asks for <strong>at least four</strong>. Each one takes the default altitude from step 3. To change a single waypoint, select it and edit its <strong>Altitude (Rel)</strong> in the panel.</li>
+</ol>
+<figure class="textbook-figure"><a href="/assets/flight-controllers/qgc-mission/09-waypoint-loop.jpg"><img src="/assets/flight-controllers/qgc-mission/09-waypoint-loop.jpg" alt="An orange four-sided loop on the map: from takeoff T south to waypoint 2, west to 3, north to 4, then east to waypoint 5 near the takeoff point. The altitude graph shows the climb to waypoint 2 and a level line at the same altitude through waypoints 3, 4 and 5." width="1600" height="1000" loading="lazy"></a><figcaption><p>Four waypoints (2 to 5) make a loop around the field and bring the airplane back near the launch point.</p></figcaption></figure>
+<p>A few things to know while placing waypoints:</p>
+<ul>
+<li>Drag a numbered marker to move that waypoint.</li>
+<li>The small <strong>+</strong> circle halfway along each leg inserts a new waypoint there.</li>
+<li>The trash-can icon in a waypoint's panel deletes it.</li>
+<li>Keep the turns gentle. An airplane can't stop and turn on the spot, so a sharp corner makes it overshoot the waypoint and swing wide.</li>
+</ul>
+<h4 id="qgc-6-end-the-mission-with-a-loiter">6. End the mission with a loiter</h4>
+<p>A mission that simply ends leaves the airplane to decide what to do next. Instead, finish with a <strong>Loiter</strong>: the airplane circles one point until you take control. The lab finishes the same way: circle near the launch area, then switch to manual and land.</p>
+<ol>
+<li>With the Waypoint tool still selected, click inside the loop to add one last waypoint (6 in the example).</li>
+</ol>
+<figure class="textbook-figure"><a href="/assets/flight-controllers/qgc-mission/10-final-waypoint.jpg"><img src="/assets/flight-controllers/qgc-mission/10-final-waypoint.jpg" alt="A sixth waypoint, numbered 6, has been added inside the loop, joined to waypoint 5 by a diagonal orange line. The Mission Items list on the right shows Takeoff followed by four Waypoint entries, with the sixth item open in the panel." width="1600" height="1000" loading="lazy"></a><figcaption><p>A final waypoint placed inside the loop, near the launch area. Next, change it to a Loiter.</p></figcaption></figure>
+<ol start="2">
+<li>In the panel on the right, click the item's name, <strong>Waypoint ▾</strong>. The <strong>Select Mission Command</strong> window opens.</li>
+</ol>
+<figure class="textbook-figure"><a href="/assets/flight-controllers/qgc-mission/11-mission-command.jpg"><img src="/assets/flight-controllers/qgc-mission/11-mission-command.jpg" alt="The Select Mission Command window, category Basic, listing Waypoint, Return To Launch, Land, Takeoff, Spline waypoint and Delay, each with a one-line description. On the right, the selected item's header reads Waypoint with a small drop-down arrow." width="1400" height="837" loading="lazy"></a><figcaption><p>Clicking the item's name (right) opens Select Mission Command, which can change it to a different kind of mission item.</p></figcaption></figure>
+<ol start="3">
+<li>Open the <strong>Category</strong> list and choose <strong>Loiter</strong>.</li>
+</ol>
+<figure class="textbook-figure"><a href="/assets/flight-controllers/qgc-mission/12-command-category.jpg"><img src="/assets/flight-controllers/qgc-mission/12-command-category.jpg" alt="The Category drop-down open, listing Basic, Loiter, Flight control, Advanced, Conditionals, Camera, Safety and All commands." width="700" height="1060" loading="lazy"></a><figcaption><p>The command categories. Loiter is second in the list.</p></figcaption></figure>
+<ol start="4">
+<li>Choose the first command, <strong>Loiter</strong>, which circles the point indefinitely. The other three stop after a number of turns, an amount of time, or when the airplane reaches an altitude.</li>
+</ol>
+<figure class="textbook-figure"><a href="/assets/flight-controllers/qgc-mission/13-loiter-commands.jpg"><img src="/assets/flight-controllers/qgc-mission/13-loiter-commands.jpg" alt="The Loiter category with four commands: Loiter, travel to a position and loiter around it indefinitely; Loiter (turns), for a number of turns; Loiter (time), for an amount of time; and Loiter (altitude), until an altitude is reached." width="700" height="858" loading="lazy"></a><figcaption><p>Choose Loiter, the first command, to circle until the pilot takes over.</p></figcaption></figure>
+<ol start="5">
+<li>The marker becomes <strong>L</strong> and a circle shows the loiter path. Check the <strong>Altitude (Rel)</strong> and the <strong>Radius</strong>. The default radius is 164.04 ft (50 m). An arrow on the circle shows which way the airplane will circle.</li>
+</ol>
+<figure class="textbook-figure"><a href="/assets/flight-controllers/qgc-mission/14-loiter-set.jpg"><img src="/assets/flight-controllers/qgc-mission/14-loiter-set.jpg" alt="The finished mission. The last item is now an L Loiter marker inside the loop, with an orange circle and arrows showing the loiter path. The Loiter panel on the right shows Altitude (Rel) 75.0 feet and Radius 164.04 feet." width="1600" height="1000" loading="lazy"></a><figcaption><p>The finished mission: takeoff, four waypoints, and a 164 ft (50 m) loiter circle at 75 ft.</p></figcaption></figure>
+<p>The loiter radius and the circling direction are your team's choice.</p>
+<h4 id="qgc-7-save-the-plan">7. Save the plan</h4>
+<p>Click <strong>Save</strong> in the top bar and give the plan a name. QGroundControl saves it as a <code>.plan</code> file. Use <strong>Open</strong> to load it again later, on the same laptop or another one. Save before you go to the field, and keep a copy you can hand to your instructor.</p>
+<h4 id="qgc-8-upload-and-review">8. Upload and review</h4>
+<p><strong>Upload</strong> stays greyed out until the airplane is connected. At the field, with the propeller removed:</p>
+<ol>
+<li>Connect the airplane and wait for a 3D GPS fix. The real home position is set when the airplane arms.</li>
+<li>Open the Plan view and click <strong>Upload</strong> to send the mission to the flight controller.</li>
+<li>Check every item in the list once more: the order, each altitude, and the loiter at the end.</li>
+<li>Make sure every waypoint is clear of trees, buildings and power lines at its planned altitude, and that the whole route stays where you can see the airplane.</li>
+</ol>
+<p><strong>Set up a mode switch for AUTO.</strong> Teams set their flight modes on channel 5, channel 6, or both. For this mission, use the channel 5 switch: set one position to <strong>AUTO</strong> and the other to <strong>MANUAL</strong> or <strong>FBWA</strong>. Once you have launched in MANUAL or FBWA and reached a safe altitude, flipping the switch to AUTO starts the mission. Flipping it back gives you control again at any point. Set the modes in QGroundControl under <strong>Vehicle Setup → Flight Modes</strong>. A two-position switch uses Flight Mode 1 (switch low) and Flight Mode 6 (switch high). With the propeller removed, flip the switch and check that the mode shown in the toolbar changes.</p>
+<p class="notice"><strong>Before you fly</strong>Review the whole mission with your instructor. Practise flipping the mode switch out of AUTO, so you can take control in MANUAL or FBWA at any point in the mission. If the radio link is lost, the failsafe returns the airplane to launch at 100 m (about 330 ft). Follow the FAA rules that apply to your flight.</p>
+<h4 id="qgc-fly-the-mission">Fly the mission</h4>
+<p>Fly this mission in the <a href="/resources/mission-planning-lab/">Mission Planning lab</a>, as part of the <a href="/flight-controllers/flight-modes-and-missions/">Flight Modes and Mission Planning</a> unit. The <a href="https://docs.qgroundcontrol.com/master/en/qgc-user-guide/plan_view/plan_view.html">QGroundControl documentation</a> describes every tool in the Plan view.</p>
 <h2 id="safety-around-flight-controlled-aircraft">Safety around flight-controlled aircraft</h2>
 <p>An aircraft equipped with a flight controller may start its motors unexpectedly if it is armed or improperly configured. Changes in flight mode, failsafe conditions, programming errors, or unexpected system behavior can also cause motors or servos to activate.</p>
 <p>Automation can fail because of <strong>mechanical, electrical, software, sensor, communication, or user errors</strong>. Flyaways, crashes, and injuries or damage to people and property are possible whenever an aircraft is operated.</p>
