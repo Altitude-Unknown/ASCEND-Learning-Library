@@ -28,6 +28,7 @@ related:
 - remote-aircraft-textbook
 keywords:
 - Mission Planner
+- QGroundControl
 - ArduPilot
 - autonomous flight
 - waypoints
@@ -37,7 +38,7 @@ keywords:
 
 **Goal:** plan and execute an autonomous mission in which an aircraft flies to preprogrammed GPS waypoints and then returns to its launch location.
 
-**Procedure:** using Mission Planner or other appropriate mission-planning software, create a flight that follows a predetermined route over a designated area. You do not need to collect photographs or mapping data during this activity. The objective is to successfully launch, fly a preprogrammed course, and return to the launch area using the aircraft's autonomous flight system.
+**Procedure:** using [Mission Planner](https://ardupilot.org/planner/), [QGroundControl](/software/#software-rc) or other appropriate mission-planning software, create a flight that follows a predetermined route over a designated area. You do not need to collect photographs or mapping data during this activity. The objective is to successfully launch, fly a preprogrammed course, and return to the launch area using the aircraft's autonomous flight system.
 
 Because flight-control software changes frequently, this activity is a general introduction to autonomous mission planning rather than step-by-step instructions for one software version. Read [Planning a mission](/flight-controllers/textbook/flight-controllers/#planning-a-mission), [Flight modes](/flight-controllers/textbook/flight-controllers/#flight-modes), and [Failsafes](/flight-controllers/textbook/flight-controllers/#failsafes) in Chapter 6 first. For a worked example, follow the [QGroundControl mission example](/flight-controllers/textbook/flight-controllers/#example-plan-a-mission-in-qgroundcontrol), which builds this mission step by step.
 

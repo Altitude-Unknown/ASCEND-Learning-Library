@@ -53,7 +53,7 @@ The firmware in release **2026.11.14** carries the setup flown on 2026-11-14: mo
 - The ASCEND airplane with the V4 flight controller installed: components up, I2C header facing forward, servo header (J3) facing aft.
 - An ASCEND transmitter.
 - A USB-C data cable at least 1 m long. A short cable keeps the board next to the laptop, and the compass calibration fails there.
-- A laptop with [QGroundControl](https://qgroundcontrol.com) and the [Altitude Unknown RC Configurator](/resources/transmitter-configurator/) installed.
+- A laptop with a ground control station, either [QGroundControl](/software/#software-rc) or [Mission Planner](https://ardupilot.org/planner/) (Windows only), and the [Altitude Unknown RC Configurator](/resources/transmitter-configurator/) installed. This guide shows QGroundControl; Mission Planner works with the board as it is.
 - A level surface or fixture that holds the airplane at its cruise attitude.
 - Remove the propeller before any powered bench work.
 
@@ -68,9 +68,13 @@ Use the Configurator's firmware update, and update all three parts: the **transm
 
 **Do not** update the onboard receiver with an older receiver firmware that has no SBUS output. Without SBUS the flight controller gets no RC input.
 
+**Flash the flight controller only with the Configurator.** QGroundControl's **Firmware** page and Mission Planner's **Install Firmware** page can also write ArduPlane to a board, but the ArduPilot firmware server has no build for the ASCEND flight controller, and a stock or other board's ArduPlane would not have the ASCEND changes: the pin mapping for the servo outputs, the onboard GPS driver, the flight-tested setup and the Bind trim-save. Use those apps to connect, calibrate and plan missions, never to load firmware. If someone has flashed other firmware, run the Configurator's flight controller update to put the ASCEND firmware back.
+
 **New board vs. existing board.** A new board comes up with the flight-tested setup already in place. A board that was set up before keeps its own saved settings after an update; firmware defaults apply only to settings that were never saved. On such a board, check in QGroundControl that `RC7_OPTION` is 155 (trim-save). The [RC system manual](https://github.com/Altitude-Unknown/RC-Airplane/blob/main/MANUAL.md#ascend-flight-controller-rev2) lists every built-in value if you want the full setup on an existing board.
 
 ## 3. Connect in QGroundControl
+
+These steps use QGroundControl. If your team uses Mission Planner instead, select the board's COM port and **Connect**; the calibrations in section 4 are under **Setup → Mandatory Hardware**.
 
 1. Close the Configurator, because only one program can use the USB port at a time. Then open QGroundControl and plug the board in at J2. It connects automatically.
 2. Click the **Q** icon, then **Vehicle Setup**. The vehicle type should read ArduPlane.

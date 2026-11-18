@@ -51,7 +51,19 @@
       "external": true,
       "guide": "/resources/flight-controller-v4-setup/",
       "source": "https://github.com/mavlink/qgroundcontrol",
-      "note": "Made by the Dronecode project, not Altitude Unknown. The download link opens the official QGroundControl install page."
+      "note": "Made by the Dronecode project, not Altitude Unknown. The download link opens the official QGroundControl install page. Don't use its Firmware page on the ASCEND flight controller: update firmware only with the RC Configurator."
+    },
+    {
+      "group": "rc",
+      "kind": "Ground control station",
+      "name": "Mission Planner",
+      "summary": "An alternative to QGroundControl for the ASCEND flight controller: calibrate, change ArduPilot parameters, view telemetry, and plan autonomous missions. Use whichever your team prefers.",
+      "platforms": ["Windows"],
+      "download": "https://ardupilot.org/planner/",
+      "external": true,
+      "guide": "/resources/flight-controller-v4-setup/",
+      "source": "https://github.com/ArduPilot/MissionPlanner",
+      "note": "Made by the ArduPilot project, not Altitude Unknown. The download link opens the official Mission Planner page. Windows only; Mac teams use QGroundControl. Don't use its Install Firmware page on the ASCEND flight controller: update firmware only with the RC Configurator."
     },
     {
       "group": "balloon",
