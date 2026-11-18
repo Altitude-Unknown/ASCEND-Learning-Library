@@ -41,9 +41,9 @@ The bench test cradle holds the assembled trainer on a table, so you can run the
 
 It is one printed part. The fuselage sits in the cradle, and the wing rests against the two uprights, which stop the airplane from moving forward when the propeller pulls.
 
-<figure class="textbook-figure"><img src="/assets/resources/bench-test-cradle-setup.jpg" alt="The trainer airplane strapped into a grey and red printed cradle at the corner of a table. Two clamps hold the cradle to the table, and the propeller extends past the table edge. The transmitter sits on the table beside it." width="1600" height="1057" loading="lazy"><figcaption>The cradle clamped at the table corner, with the propeller past the edge.</figcaption></figure>
+<figure class="textbook-figure"><img src="/assets/resources/bench-test-cradle-setup.jpg" alt="The trainer airplane strapped into a gray and red printed cradle at the corner of a table. Two clamps hold the cradle to the table, and the propeller extends past the table edge. The transmitter sits on the table beside it." width="1600" height="1057" loading="lazy"><figcaption>The cradle clamped at the table corner, with the propeller past the edge.</figcaption></figure>
 
-<figure class="textbook-figure"><img src="/assets/resources/bench-test-cradle-closeup.jpg" alt="Close-up of the cradle: the fuselage lies in a channel between two grey uprights, held down with rubber bands, and the wing's leading edge rests against the uprights." width="1600" height="1200" loading="lazy"><figcaption>The fuselage sits in the cradle, held down with rubber bands. The wing rests against the uprights. The cradle is one part; the two colors are from a filament change.</figcaption></figure>
+<figure class="textbook-figure"><img src="/assets/resources/bench-test-cradle-closeup.jpg" alt="Close-up of the cradle: the fuselage lies in a channel between two gray uprights, held down with rubber bands, and the wing's leading edge rests against the uprights." width="1600" height="1200" loading="lazy"><figcaption>The fuselage sits in the cradle, held down with rubber bands. The wing rests against the uprights. The cradle is one part; the two colors are from a filament change.</figcaption></figure>
 
 ## Files
 

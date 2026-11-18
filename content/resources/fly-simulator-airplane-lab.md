@@ -50,7 +50,7 @@ You need a flight simulator, such as [Flight Lab RC](/software/), and a transmit
 <li>Label each of the parts of the airplane pictured below, A to K.</li>
 </ol>
 
-<figure class="textbook-figure"><a href="/assets/learn-to-fly/airplane-parts-labeled.jpg"><img src="/assets/learn-to-fly/airplane-parts-labeled.jpg" alt="Line drawing of a high-wing airplane with eleven parts marked by the letters A to K on the tail, wings, nose, and landing gear." loading="lazy"></a><figcaption><p>Label parts A to K. The coloured surfaces are the moving control surfaces.</p></figcaption></figure>
+<figure class="textbook-figure"><a href="/assets/learn-to-fly/airplane-parts-labeled.jpg"><img src="/assets/learn-to-fly/airplane-parts-labeled.jpg" alt="Line drawing of a high-wing airplane with eleven parts marked by the letters A to K on the tail, wings, nose, and landing gear." loading="lazy"></a><figcaption><p>Label parts A to K. The colored surfaces are the moving control surfaces.</p></figcaption></figure>
 
 <ol class="activity-questions" start="2">
 <li>Which control surface on the airplane controls yaw?</li>
