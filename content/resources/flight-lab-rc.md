@@ -22,12 +22,13 @@ version: '1.0.4'
 permalink: /resources/flight-lab-rc/
 externalUrl: https://github.com/Altitude-Unknown/Flight-Lab-RC/releases/tag/v1.0.4
 related:
+- flight-lab-rc-setup-video
 - transmitter-configurator
 ---
 
 ## Download the application
 
-Install the desktop application that matches your computer. Downloads are hosted on GitHub.
+Install the desktop application that matches your computer. Downloads are hosted on GitHub. The [Flight Lab RC setup video](/resources/flight-lab-rc-setup-video/) (5:16) walks through downloading and setting it up.
 
 - [Download for macOS — Apple Silicon and Intel](https://github.com/Altitude-Unknown/Flight-Lab-RC/releases/download/v1.0.4/Flight-Lab-RC-macOS-1.0.4.dmg)
 - [Download for Windows — x64](https://github.com/Altitude-Unknown/Flight-Lab-RC/releases/download/v1.0.4/Flight-Lab-RC-Windows-x64-1.0.4.zip)

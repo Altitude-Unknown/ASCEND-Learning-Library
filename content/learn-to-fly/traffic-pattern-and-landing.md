@@ -4,7 +4,7 @@ description: "Fly a left-hand traffic pattern, go around when an approach is uns
 order: 5
 courseOrder: 5
 permalink: "/learn-to-fly/traffic-pattern-and-landing/"
-resourceIds: ["flight-lab-rc", "traffic-patterns-video", "landing-video"]
+resourceIds: ["flight-lab-rc", "flight-lab-rc-setup-video", "traffic-patterns-video", "landing-video"]
 ---
 
 ## Work through this unit

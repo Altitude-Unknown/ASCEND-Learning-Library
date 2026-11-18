@@ -22,6 +22,7 @@ activities:
 courseUnit: 1
 related:
 - flight-lab-rc
+- flight-lab-rc-setup-video
 ---
 ## About this activity
 
@@ -29,7 +30,7 @@ related:
 
 Work through this activity on your own or with your team, then show your results to your instructor. Write your answers on paper or in your own notes.
 
-You need a flight simulator, such as [Flight Lab RC](/software/), and a transmitter or gamepad.
+You need a flight simulator, such as [Flight Lab RC](/software/), and a transmitter or gamepad. The [Flight Lab RC setup video](/resources/flight-lab-rc-setup-video/) shows how to download and set it up.
 
 ## By the end of this session you should be able to
 

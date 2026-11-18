@@ -23,6 +23,7 @@ permalink: /resources/transmitter-configurator/
 externalUrl: https://github.com/Altitude-Unknown/RC-Airplane/releases/tag/transmitter-gui-v2026.11.14
 related:
 - flight-lab-rc
+- flight-lab-rc-setup-video
 - flight-controller-v4-setup
 ---
 

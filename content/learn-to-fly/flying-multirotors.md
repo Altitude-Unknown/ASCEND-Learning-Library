@@ -4,7 +4,7 @@ description: "Take off, hover, and fly a quadcopter, and learn why staying out o
 order: 2
 courseOrder: 2
 permalink: "/learn-to-fly/flying-multirotors/"
-resourceIds: ["flight-lab-rc"]
+resourceIds: ["flight-lab-rc", "flight-lab-rc-setup-video"]
 ---
 
 ## Work through this unit

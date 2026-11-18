@@ -20,12 +20,17 @@ subjects:
 activities:
 - Flight Training
 courseUnit: 2
+related:
+- flight-lab-rc
+- flight-lab-rc-setup-video
 ---
 ## About this activity
 
 **Goal:** complete first flights with a quadcopter (multirotor) in the simulator. Become familiar with all flight controls and attempt take-offs, landings, and flights around the flying area.
 
 Work through this activity on your own or with your team, then show your results to your instructor. Write your answers on paper or in your own notes.
+
+You need a flight simulator, such as [Flight Lab RC](/software/), and a transmitter or gamepad. The [Flight Lab RC setup video](/resources/flight-lab-rc-setup-video/) shows how to download and set it up.
 
 ## By the end of this session you should be able to
 
