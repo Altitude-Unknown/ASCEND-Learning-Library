@@ -39,14 +39,14 @@ keywords:
 
 **Procedure:** using Mission Planner or other appropriate mission-planning software, create a flight that follows a predetermined route over a designated area. You do not need to collect photographs or mapping data during this activity. The objective is to successfully launch, fly a preprogrammed course, and return to the launch area using the aircraft's autonomous flight system.
 
-Because flight-control software changes frequently, this activity is a general introduction to autonomous mission planning rather than step-by-step instructions for one software version. Read [Planning a mission](/flight-controllers/textbook/flight-controllers/#planning-a-mission), [Flight modes](/flight-controllers/textbook/flight-controllers/#flight-modes), and [Failsafes](/flight-controllers/textbook/flight-controllers/#failsafes) in Chapter 6 first.
+Because flight-control software changes frequently, this activity is a general introduction to autonomous mission planning rather than step-by-step instructions for one software version. Read [Planning a mission](/flight-controllers/textbook/flight-controllers/#planning-a-mission), [Flight modes](/flight-controllers/textbook/flight-controllers/#flight-modes), and [Failsafes](/flight-controllers/textbook/flight-controllers/#failsafes) in Chapter 6 first. For a worked example, follow the [QGroundControl mission example](/flight-controllers/textbook/flight-controllers/#example-plan-a-mission-in-qgroundcontrol), which builds this mission step by step.
 
 <p class="notice"><strong>Before you fly</strong>Remove the propeller while you set up and upload the mission indoors. Before the flight, review every waypoint and altitude, check the failsafe settings, and know how to switch modes and take manual control. Fly with your instructor and follow the FAA rules that apply to your flight.</p>
 
 ## Airplane
 
 <ol class="activity-questions">
-<li>Hand launch using an appropriate automatic takeoff mode. Instructor signature ________</li>
+<li>Hand launch in MANUAL or FBWA, climb to a safe altitude, then switch to AUTO. Instructor signature ________</li>
 <li>Fly to at least four GPS waypoints. Instructor signature ________</li>
 <li>Return to the launch area at a safe altitude. Instructor signature ________</li>
 <li>Circle or loiter near the launch location. Instructor signature ________</li>

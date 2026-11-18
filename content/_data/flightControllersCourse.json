@@ -164,8 +164,7 @@
       ],
       "signoff": [
         "Plan and upload an autonomous mission to a flight controller.",
-        "Execute an autonomous mission.",
-        "Plan an autonomous mission with automatic takeoff and automatic landing."
+        "Execute an autonomous mission."
       ],
       "lessonVideo": null,
       "reviewQuestions": [
@@ -181,7 +180,7 @@
         "Plan and upload an autonomous mission to a flight controller.",
         "Execute an autonomous mission.",
         "Plan an autonomous mission that takes pictures at predefined waypoints.",
-        "Plan an autonomous mission with automatic takeoff and automatic landing."
+        "Advanced: plan an autonomous mission with automatic takeoff and automatic landing. A separate lesson covers this skill."
       ]
     }
   ],

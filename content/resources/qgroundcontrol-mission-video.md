@@ -41,4 +41,6 @@ Select **Load video** above to watch here, or [open the video on YouTube](https:
 
 [Download QGroundControl](/software/#software-rc) from the Software page, and set up the board with the [ASCEND Flight Controller V4 setup guide](/resources/flight-controller-v4-setup/). Find this video in [UAS Mission Planning](/uas/#mission-planning) and in the [Flight Modes and Mission Planning](/flight-controllers/flight-modes-and-missions/) unit.
 
+For written steps with screenshots, follow the [QGroundControl mission example](/flight-controllers/textbook/flight-controllers/#example-plan-a-mission-in-qgroundcontrol) in Chapter 6.
+
 [Visit the ASCEND-BOREALIS YouTube channel](https://www.youtube.com/@ASCEND-BOREALIS) for more project videos.
