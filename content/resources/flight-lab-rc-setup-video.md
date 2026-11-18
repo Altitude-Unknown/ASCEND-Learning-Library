@@ -38,6 +38,8 @@ Select **Load video** above to watch here, or [open the video on YouTube](https:
 
 ## Get the simulator
 
+Prefer to read? The [Flight Lab RC setup example](/learn-to-fly/textbook/piloting-remote-aircraft/#example-set-up-flight-lab-rc) in Chapter 3 covers the same steps with screenshots.
+
 [Download Flight Lab RC](/software/#software-rc) from the Software page, or open the [Flight Lab RC resource page](/resources/flight-lab-rc/) for each download link and controller setup notes. Then practice with the [airplane simulator lab](/resources/fly-simulator-airplane-lab/) and the [quadcopter simulator lab](/resources/fly-simulator-quadcopter-lab/) in the [Learning to Fly a UAS](/learn-to-fly/) course.
 
 [Visit the ASCEND-BOREALIS YouTube channel](https://www.youtube.com/@ASCEND-BOREALIS) for more project videos.
