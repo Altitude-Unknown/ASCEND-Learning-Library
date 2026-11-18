@@ -38,6 +38,8 @@ These links download version 1.0.4. [Check GitHub for newer releases](https://gi
 
 ## Start practicing
 
+For an illustrated, step-by-step walkthrough (connecting the ASCEND transmitter over Bluetooth or USB, calibrating each stick, and turning off the zoom view), follow the [Flight Lab RC setup example](/learn-to-fly/textbook/piloting-remote-aircraft/#example-set-up-flight-lab-rc) in Chapter 3.
+
 Connect your transmitter or gamepad before launching the simulator. In **Settings → Joystick**, configure the connected controller. For the Altitude Unknown transmitter preset, choose **Load → Altitude Unknown RC Tx**. Verify control directions and throttle response before practicing.
 
 Raspberry Pi requires a 64-bit Raspberry Pi OS desktop with OpenGL. Make the downloaded AppImage executable before opening it:

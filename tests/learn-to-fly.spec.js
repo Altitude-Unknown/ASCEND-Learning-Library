@@ -94,9 +94,33 @@ test('Units show their own short videos, or point to the reading when there are 
   }
   await expect(page.locator('#activity a[href$="-video/"]')).toHaveCount(0);
   await page.goto('/learn-to-fly/flying-multirotors/');
+  await expect(page.locator('#lesson .resource-card')).toHaveCount(1);
+  await expect(page.locator('#lesson a[href="/resources/flight-lab-rc-setup-video/"]')).toHaveCount(1);
+  await page.goto('/learn-to-fly/forces-of-flight-and-weight-and-balance/');
   await expect(page.locator('#lesson .resource-card')).toHaveCount(0);
   await expect(page.locator('#lesson')).toContainText('This unit has no videos yet');
   await page.goto('/learn-to-fly/');
   await expect(page.locator('#unit-1 a[href="/resources/landing-video/"]')).toHaveCount(1);
   await expect(page.locator('#learning-path')).not.toContainText('coming soon');
+});
+
+test('Chapter 3 walks through Flight Lab RC setup and the labs link to it', async ({page}) => {
+  await page.setViewportSize({width: 320, height: 900});
+  await page.goto('/learn-to-fly/textbook/piloting-remote-aircraft/#example-set-up-flight-lab-rc');
+  const guide = page.locator('#example-set-up-flight-lab-rc');
+  await expect(guide).toHaveCount(1);
+  await expect(page.locator('.textbook-content h5[id^="flrc-"]')).toHaveCount(8);
+  await expect(page.locator('.textbook-content img[src*="/flight-lab-rc-setup/"]')).toHaveCount(12);
+  for (const img of await page.locator('.textbook-content img[src*="/flight-lab-rc-setup/"]').all()) {
+    await img.scrollIntoViewIfNeeded();
+    expect(await img.evaluate(el => el.complete && el.naturalWidth > 0)).toBeTruthy();
+  }
+  await expect(page.locator('#flrc-2-connect-the-transmitter + p')).toContainText('simulator mode');
+  await expect(page.locator('.textbook-content')).toContainText('Altitude RC Tx');
+  await expect(page.locator('.textbook-content')).toContainText('untick Zoom view');
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1)).toBeTruthy();
+  for (const path of ['/resources/flight-lab-rc/', '/resources/flight-lab-rc-setup-video/', '/resources/fly-simulator-airplane-lab/', '/resources/fly-simulator-quadcopter-lab/', '/learn-to-fly/flying-fixed-wings/']) {
+    await page.goto(path);
+    await expect(page.locator('main a[href="/learn-to-fly/textbook/piloting-remote-aircraft/#example-set-up-flight-lab-rc"]').first()).toBeVisible();
+  }
 });

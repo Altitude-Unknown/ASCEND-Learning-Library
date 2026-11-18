@@ -90,6 +90,10 @@
       "id": "flight-lab-rc"
     },
     {
+      "title": "— Example: set up Flight Lab RC with your transmitter",
+      "id": "example-set-up-flight-lab-rc"
+    },
+    {
       "title": "— Absolute RC web-based flight simulator",
       "id": "absolute-rc-web-based-flight-simulator"
     },
@@ -181,7 +185,64 @@
 <h3 id="flight-lab-rc">Flight Lab RC</h3>
 <p>I have made my own free RC Flight simulator software. It works on Mac OS, Windows, and Raspberry Pi computers. It will work with most controllers including Spektrum and my own custom Transmitters. I often make improvements to the code and the latest version can always be found on my github link below.</p>
 <p><a href="/software/">Download the latest Flight Lab RC from the Software page</a> (source: <a href="https://github.com/Altitude-Unknown/Flight-Lab-RC/releases/latest">Flight Lab RC on GitHub</a>)</p>
-<p><a href="/resources/flight-lab-rc-setup-video/">Watch the Flight Lab RC setup video</a> (5:16) to see how to download and set it up.</p>
+<h4 id="example-set-up-flight-lab-rc">Example: set up Flight Lab RC with your transmitter</h4>
+<p>This example sets up Flight Lab RC to fly with the ASCEND transmitter. You will connect the transmitter to your computer, map and calibrate each stick, and turn off the zoom view. The screenshots were taken on a Mac. The steps are the same on Windows and Raspberry Pi. If you prefer to watch, the <a href="/resources/flight-lab-rc-setup-video/">Flight Lab RC setup video</a> (5:16) covers the same setup.</p>
+<h5 id="flrc-1-install">1. Install Flight Lab RC</h5>
+<p>Download the version for your computer from the <a href="/software/#software-rc">Software page</a> and install it. The <a href="/resources/flight-lab-rc/">Flight Lab RC page</a> has the download for each computer and notes for the Raspberry Pi.</p>
+<h5 id="flrc-2-connect-the-transmitter">2. Connect the transmitter to your computer</h5>
+<p>The ASCEND transmitter works as a game controller when you start it in <strong>simulator mode</strong>. In simulator mode it does not send any commands to an airplane, so it is safe to use with an aircraft nearby.</p>
+<ol>
+<li>Switch the transmitter off.</li>
+<li>Hold the <strong>AUX/trainer</strong> button while you switch the transmitter on. Release it once the transmitter starts. The user LED stays solid.</li>
+<li>To connect without a cable, open your computer's Bluetooth settings (on a Mac, <strong>System Settings → Bluetooth</strong>; on Windows, <strong>Settings → Bluetooth &amp; devices → Add device</strong>) and pair <strong>Altitude RC Tx</strong>. To connect with a cable instead, plug the transmitter into the computer with a USB cable.</li>
+<li>Open Flight Lab RC. If it was already open when you connected the transmitter, close it and open it again so it finds the transmitter.</li>
+</ol>
+<p>If pairing fails, remove <strong>Altitude RC Tx</strong> from your computer's Bluetooth devices and pair it again. To fly a real airplane afterwards, switch the transmitter off and on again without holding AUX.</p>
+<h5 id="flrc-3-choose-the-powered-trainer">3. Choose the powered trainer</h5>
+<p>On the main menu, select <strong>Free-Fly</strong>.</p>
+<figure class="textbook-figure"><a href="/assets/learn-to-fly/flight-lab-rc-setup/01-main-menu.jpg"><img src="/assets/learn-to-fly/flight-lab-rc-setup/01-main-menu.jpg" alt="The Flight Lab RC main menu over a photo of rolling green hills. The title reads Flight Lab RC by Altitude Unknown. A Free-Fly button is on the left and a Challenge button on the right. Along the bottom are a Facebook icon, a question-mark help button, and a gear settings button." width="1200" height="750" loading="lazy"></a><figcaption><p>The Flight Lab RC main menu. Free-Fly lets you fly without a set challenge.</p></figcaption></figure>
+<p>Then choose <strong>Powered trainer</strong>. It is a 1.5 m trainer airplane in a flat field, similar to the airplanes you will learn on.</p>
+<figure class="textbook-figure"><a href="/assets/learn-to-fly/flight-lab-rc-setup/02-scenario.jpg"><img src="/assets/learn-to-fly/flight-lab-rc-setup/02-scenario.jpg" alt="The Scenario screen with three choices. First: make your own choice of plane and scenery. Second, highlighted: Powered trainer, learn to fly with a powered 1.5 m span trainer plane in a flat field, shown with a red and white high-wing airplane. Third: Glider trainer, learn to fly and find slope lift with a rudder and elevator glider on a hill. A Use default/previous button is at the bottom." width="1600" height="1000" loading="lazy"></a><figcaption><p>Choose Powered trainer.</p></figcaption></figure>
+<p>A box explains the on-screen controls. Select <strong>OK</strong>. The airplane is now on the ground in the field. Select the <strong>gear</strong> button at the top of the screen to open the settings.</p>
+<figure class="textbook-figure"><a href="/assets/learn-to-fly/flight-lab-rc-setup/03-settings-button.jpg"><img src="/assets/learn-to-fly/flight-lab-rc-setup/03-settings-button.jpg" alt="A red and white trainer airplane sits on a grass field with houses and trees behind it. Buttons across the top of the screen are, from left: close, help, a gear for settings in the middle, rewind, and play. Two thin crosshairs near the bottom corners are the on-screen sticks." width="1200" height="750" loading="lazy"></a><figcaption><p>The trainer ready to fly. The gear button in the top middle opens the settings. Play launches the airplane and rewind resets it.</p></figcaption></figure>
+<h5 id="flrc-4-turn-on-the-joystick">4. Turn on the joystick</h5>
+<p>Select the <strong>Joystick</strong> tab and tick <strong>Enable joystick</strong>. Each stick on your transmitter appears as a numbered joystick axis below it. The <strong>Input</strong> and <strong>Output</strong> numbers next to each axis change as you move that stick, so you can tell which axis belongs to which stick.</p>
+<figure class="textbook-figure"><a href="/assets/learn-to-fly/flight-lab-rc-setup/04-joystick-tab.jpg"><img src="/assets/learn-to-fly/flight-lab-rc-setup/04-joystick-tab.jpg" alt="The Joystick settings tab. Under External joystick settings: Name Joystick 0, Joystick ID 0, Enable joystick ticked, and Adjust for circular stick movement unticked, followed by a Clear joystick settings button. Below, Joystick 0 is mapped to Roll stick and Joystick 1 to Pitch stick. Each has Input Offset, Input negative scale and Input positive scale values with buttons labelled Press when centred, Press when left or down, and Press when right or up, plus a Dead zone slider. Load, Save and Advanced buttons run along the bottom." width="1600" height="1000" loading="lazy"></a><figcaption><p>The Joystick tab with Enable joystick ticked. The note at the top is a reminder to restart the program if you connect the transmitter while it is open.</p></figcaption></figure>
+<h5 id="flrc-5-map-each-stick">5. Map each stick</h5>
+<p>For each joystick axis, use the <strong>Map to</strong> menu to choose the control it should move. On the ASCEND transmitter the axes are in this order:</p>
+<div class="textbook-table" role="region" aria-label="Flight Lab RC joystick mapping for the ASCEND transmitter" tabindex="0"><table><caption>Flight Lab RC joystick mapping for the ASCEND transmitter</caption>
+<thead><tr><th scope="col">Axis</th><th scope="col">Map to</th><th scope="col">Transmitter stick (Mode 2)</th></tr></thead>
+<tbody>
+<tr><th scope="row">Joystick 0</th><td>Roll stick</td><td>Right stick, left and right (ailerons)</td></tr>
+<tr><th scope="row">Joystick 1</th><td>Pitch stick</td><td>Right stick, up and down (elevator)</td></tr>
+<tr><th scope="row">Joystick 2</th><td>Yaw stick</td><td>Left stick, left and right (rudder)</td></tr>
+<tr><th scope="row">Joystick 3</th><td>Throttle stick</td><td>Left stick, up and down (throttle)</td></tr>
+<tr><th scope="row">Joystick 4 and higher</th><td>None</td><td>Not used</td></tr>
+</tbody>
+</table></div>
+<p>If your controller lists the axes in a different order, move one stick at a time and watch which Input number changes.</p>
+<figure class="textbook-figure"><a href="/assets/learn-to-fly/flight-lab-rc-setup/05-map-to.jpg"><img src="/assets/learn-to-fly/flight-lab-rc-setup/05-map-to.jpg" alt="The Map to menu for Joystick 0 is open. Options are Roll stick (highlighted), Pitch stick, Yaw stick, Throttle stick, Tilt horizontal, Tilt vertical, Arrows horizontal and Arrows vertical." width="1600" height="333" loading="lazy"></a><figcaption><p>Choosing what Joystick 0 controls. Use only the four stick options for the transmitter.</p></figcaption></figure>
+<h5 id="flrc-6-calibrate-each-stick">6. Calibrate each stick</h5>
+<p>Calibrating tells Flight Lab RC where the centre and the ends of each stick are, so the airplane responds the same way your real airplane will. Do these three steps for each of the four axes:</p>
+<ol>
+<li>Let the stick rest in the centre and select <strong>Press when centred</strong>. For the throttle, hold the stick halfway.</li>
+<li>Hold the stick all the way left (or all the way down) and select <strong>Press when left or down</strong>.</li>
+<li>Hold the stick all the way right (or all the way up) and select <strong>Press when right or up</strong>.</li>
+</ol>
+<figure class="textbook-figure"><a href="/assets/learn-to-fly/flight-lab-rc-setup/06-calibrate-buttons.jpg"><img src="/assets/learn-to-fly/flight-lab-rc-setup/06-calibrate-buttons.jpg" alt="The Joystick 0 section, mapped to Roll stick. Input Offset 0.09 next to a Press when centred button, Input negative scale 1.13 next to Press when left or down, Input positive scale 0.98 next to Press when right or up, and a Dead zone slider at 0.256." width="1600" height="233" loading="lazy"></a><figcaption><p>The three calibration buttons for the roll stick. The numbers on the left update each time you press a button.</p></figcaption></figure>
+<p>Scroll down to reach the yaw and throttle axes. When you finish, the four axes are mapped and any extra axes are set to None.</p>
+<figure class="textbook-figure"><a href="/assets/learn-to-fly/flight-lab-rc-setup/07-axes-mapped.jpg"><img src="/assets/learn-to-fly/flight-lab-rc-setup/07-axes-mapped.jpg" alt="The Joystick tab scrolled down. Joystick 0 is mapped to Roll stick, Joystick 1 to Pitch stick with negative scale values of about minus 1, Joystick 2 to Yaw stick, and Joystick 3 to Throttle stick, each with its calibration values and buttons." width="1600" height="1000" loading="lazy"></a><figcaption><p>Roll, pitch, yaw and throttle mapped. The pitch scales are negative because that stick's input runs the opposite way; calibration takes care of this for you.</p></figcaption></figure>
+<figure class="textbook-figure"><a href="/assets/learn-to-fly/flight-lab-rc-setup/08-throttle-mapped.jpg"><img src="/assets/learn-to-fly/flight-lab-rc-setup/08-throttle-mapped.jpg" alt="Further down the Joystick tab. Joystick 2 is mapped to Yaw stick and Joystick 3 to Throttle stick with Input Offset minus 0.16, negative scale 0.87 and positive scale 1.20. Joysticks 4 and 5 are mapped to None." width="1600" height="1000" loading="lazy"></a><figcaption><p>The throttle calibrated, and the unused axes left at None.</p></figcaption></figure>
+<p>Check your work: move each stick and watch its <strong>Output</strong>. It should read close to 0 with the stick centred (throttle halfway), close to −1 at full left or down, and close to +1 at full right or up. If an axis doesn't, calibrate it again.</p>
+<h5 id="flrc-7-turn-off-zoom-view">7. Turn off the zoom view</h5>
+<p>Select the <strong>Options 1</strong> tab. Under <strong>Camera settings</strong>, untick <strong>Zoom view</strong>.</p>
+<figure class="textbook-figure"><a href="/assets/learn-to-fly/flight-lab-rc-setup/09-zoom-view-on.jpg"><img src="/assets/learn-to-fly/flight-lab-rc-setup/09-zoom-view-on.jpg" alt="Camera settings on the Options 1 tab with Zoom view ticked, Draw plane alone in zoom view unticked, Only draw smoke in main view ticked, and sliders for ground autozoom 0.5, ground horizon amount 0.6 and ground camera lag 0.1 seconds." width="1600" height="322" loading="lazy"></a><figcaption><p>Before: Zoom view is ticked.</p></figcaption></figure>
+<figure class="textbook-figure"><a href="/assets/learn-to-fly/flight-lab-rc-setup/10-zoom-view-off.jpg"><img src="/assets/learn-to-fly/flight-lab-rc-setup/10-zoom-view-off.jpg" alt="The same Camera settings with Zoom view now unticked. The other settings are unchanged." width="1600" height="322" loading="lazy"></a><figcaption><p>After: Zoom view is unticked.</p></figcaption></figure>
+<p>With zoom view on, a small window in the corner shows a close-up of the airplane. It is tempting to fly by watching that window, but that builds bad habits. At the field you can't zoom in. The airplane gets small and hard to see as it flies away, and learning to judge its attitude and direction at a distance is part of learning to fly. Practice the way you will fly.</p>
+<figure class="textbook-figure"><a href="/assets/learn-to-fly/flight-lab-rc-setup/11-zoom-inset.jpg"><img src="/assets/learn-to-fly/flight-lab-rc-setup/11-zoom-inset.jpg" alt="The trainer on the grass field with zoom view on. A small inset window in the top-left corner shows a close-up of the airplane." width="1200" height="750" loading="lazy"></a><figcaption><p>Zoom view on: the close-up window in the top-left corner.</p></figcaption></figure>
+<figure class="textbook-figure"><a href="/assets/learn-to-fly/flight-lab-rc-setup/12-zoom-off-field.jpg"><img src="/assets/learn-to-fly/flight-lab-rc-setup/12-zoom-off-field.jpg" alt="The same view of the trainer on the grass field with zoom view off. There is no inset window." width="1200" height="750" loading="lazy"></a><figcaption><p>Zoom view off: you see only what you would see standing at the field.</p></figcaption></figure>
+<h5 id="flrc-8-start-flying">8. Start flying</h5>
+<p>Select <strong>Back</strong> to return to the field. Select <strong>play</strong> to launch the airplane and <strong>rewind</strong> to reset it after a crash. Before your first flight, move each stick and check that the control surfaces move the right way. Then work through the <a href="/resources/fly-simulator-airplane-lab/">airplane simulator lab</a>.</p>
 <h3 id="absolute-rc-web-based-flight-simulator">Absolute RC web-based flight simulator</h3>
 <p>There are a range of free and paid for flight simulators to practice flying RC with. Absolute RC has both free and paid versions and works within your web browser so can work with both Windows PCs and Macs.</p>
 <p><a href="https://absolutesim.com/ver007/">Absolute RC web simulator</a></p>

@@ -30,7 +30,7 @@ related:
 
 Work through this activity on your own or with your team, then show your results to your instructor. Write your answers on paper or in your own notes.
 
-You need a flight simulator, such as [Flight Lab RC](/software/), and a transmitter or gamepad. The [Flight Lab RC setup video](/resources/flight-lab-rc-setup-video/) shows how to download and set it up.
+You need a flight simulator, such as [Flight Lab RC](/software/), and a transmitter or gamepad. Set it up first with the [Flight Lab RC setup example](/learn-to-fly/textbook/piloting-remote-aircraft/#example-set-up-flight-lab-rc) in Chapter 3 or the [setup video](/resources/flight-lab-rc-setup-video/). Turn off the zoom view so you practice watching the airplane the way you will at the field.
 
 ## By the end of this session you should be able to
 
