@@ -7,9 +7,9 @@
       "url": "/camera-video-systems/cameras-for-aerial-imaging/",
       "summary": "Compare action, 360°, and multispectral cameras, and see how a Raspberry Pi can trigger a camera and geotag its photos.",
       "outcomes": [
-        "Explain why action cameras suit remote aircraft, and how a 360° camera differs from one.",
-        "Describe what a multispectral camera records and its agricultural uses.",
-        "Explain how a Raspberry Pi can trigger a camera and how geotagged photos become a photo mosaic."
+        "Explain why action cameras suit remote aircraft, how to get steady video from one, and how a 360° camera differs from one.",
+        "Describe what a multispectral camera records, how NDVI shows crop health, and how the camera is calibrated.",
+        "Explain how a flight controller or Raspberry Pi can trigger a camera, how geotagged, overlapping photos become a map, and what AI cameras can do."
       ],
       "readings": [
         {
@@ -27,6 +27,10 @@
         {
           "title": "Automating cameras with a Raspberry Pi computer",
           "id": "automating-cameras-with-a-raspberry-pi-computer"
+        },
+        {
+          "title": "Making maps from photos",
+          "id": "making-maps-from-photos"
         },
         {
           "title": "Artificial intelligence cameras",
@@ -65,7 +69,12 @@
         10,
         11,
         19,
-        20
+        20,
+        21,
+        22,
+        23,
+        24,
+        25
       ]
     },
     {
@@ -200,7 +209,27 @@
     },
     "20": {
       "question": "What are geotagged photographs, and how can they be used to create a photo mosaic?",
-      "answer": "In the context of the chapter, geotagged photographs are photographs associated with GPS location information. Multiple geotagged photographs can then be stitched together to form a photo mosaic."
+      "answer": "Geotagged photographs have the location (and often the altitude and attitude) where each photo was taken saved with them, usually from the flight controller's record of each camera trigger. Mapping software uses the geotags and the features that appear in several overlapping photos to stitch them into one map-like image, called a photo mosaic or orthomosaic."
+    },
+    "21": {
+      "question": "What is a rolling shutter, and why does vibration make video from an aircraft look like jello?",
+      "answer": "A rolling shutter records the picture one row at a time from top to bottom instead of all at once. If the camera is vibrating, each row is recorded in a slightly different position, so the picture wobbles. Balancing the propellers and soft-mounting the camera reduces it."
+    },
+    "22": {
+      "question": "Why does a 360° camera's video look less sharp than an action camera's when you pick out one direction to view?",
+      "answer": "The 360° camera spreads its pixels across the whole sphere around it, so any single view only uses a small part of the picture."
+    },
+    "23": {
+      "question": "What is NDVI, and why does healthy vegetation have a high NDVI?",
+      "answer": "NDVI (Normalized Difference Vegetation Index) compares near-infrared and red light: (NIR − Red) ÷ (NIR + Red). Healthy leaves absorb most red light for photosynthesis and reflect a lot of near-infrared, so the difference is large and NDVI is close to 1. Bare soil scores near 0 and water below 0."
+    },
+    "24": {
+      "question": "Why do mapping missions fly in tight back-and-forth lines?",
+      "answer": "Mapping software needs each spot on the ground to appear in several photos. Pix4D recommends at least 75 percent overlap along each line and 60 percent between lines, which means flying lines close together like mowing a lawn."
+    },
+    "25": {
+      "question": "What can a camera like the Raspberry Pi AI Camera do that a normal camera can't, and what are its limits?",
+      "answer": "It runs a small neural network on the camera chip, so it can report what it sees (for example, a person or vehicle and where it is in the picture), not just send images. It only recognizes what its model was trained on, small models are less accurate, and it can miss things or see things that aren't there, so a person should check important results."
     }
   }
 }
