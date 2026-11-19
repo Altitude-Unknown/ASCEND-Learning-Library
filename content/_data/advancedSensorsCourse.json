@@ -9,7 +9,7 @@
       "outcomes": [
         "Explain how GPS uses satellite signal travel time to find a position, and how many satellites a fix needs.",
         "Explain how an airspeed sensor compares ram air and static pressure, and how LIDAR measures distance.",
-        "Explain how a pressure sensor measures altitude, and calibrate it to sea level with a METAR altimeter setting."
+        "Explain how a pressure sensor measures altitude, why it is zeroed on the ground and what disturbs it, and calibrate it to sea level with a METAR altimeter setting."
       ],
       "readings": [
         {
@@ -51,7 +51,10 @@
         13,
         14,
         15,
-        19
+        19,
+        28,
+        29,
+        30
       ]
     },
     {
@@ -241,6 +244,24 @@
     "27": {
       "question": "In a crosswind, why might the GPS direction of travel be different from the compass heading?",
       "answer": "GPS measures the direction the aircraft is moving over the ground (its track). In a crosswind an airplane crabs, pointing its nose partly into the wind, so it points one way and travels another. The compass measures where the nose is pointing."
+    },
+    "28": {
+      "question": "Near sea level, about how much does air pressure change when you climb 1,000 feet?",
+      "answer": "About 1 inch of mercury, or roughly 1 hPa (millibar) for every 8 meters (27 feet). The rate gets smaller as you go higher."
+    },
+    "29": {
+      "question": "Why do we zero the pressure sensor on the ground before flight instead of trusting its absolute reading?",
+      "answer": "A sensor like the MS5611 can detect very small pressure changes (about 10 cm of height) but its absolute accuracy is only about ±1.5 mbar, or about ±12 meters. Zeroing it at the launch site uses what it does well, measuring change, and ArduPilot does this automatically at power-up and while disarmed."
+    },
+    "30": {
+      "question": "Besides a change in altitude, name three things that can change a pressure sensor's reading, and one way to reduce each.",
+      "answer": [
+        "Any three of:",
+        "Weather systems changing the air pressure: keep flights short or expect some altitude error by landing.",
+        "Airflow from wind, prop wash or air through the fuselage: shelter the flight controller and cover the sensor with open-cell foam.",
+        "Bright light on the sensor: cover it with foam or keep it inside the fuselage.",
+        "Sudden temperature changes: keep the flight controller shaded and let the aircraft settle to outdoor temperature before power-up."
+      ]
     }
   }
 }
