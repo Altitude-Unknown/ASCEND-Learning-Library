@@ -7,7 +7,7 @@
       "url": "/advanced-sensors/position-speed-and-altitude/",
       "summary": "See how GPS finds position, how an airspeed sensor compares two pressures, how LIDAR measures distance with light, and how a pressure sensor measures altitude.",
       "outcomes": [
-        "Explain how GPS uses satellite signal travel time to find a position, and how many satellites a fix needs.",
+        "Explain how GPS uses satellite signal travel time to find a position, why a fix needs four satellites, how accurate GPS is, and what the flight controller uses it for.",
         "Explain how an airspeed sensor compares ram air and static pressure, and how LIDAR measures distance.",
         "Explain how a pressure sensor measures altitude, why it is zeroed on the ground and what disturbs it, and calibrate it to sea level with a METAR altimeter setting."
       ],
@@ -54,7 +54,10 @@
         19,
         28,
         29,
-        30
+        30,
+        31,
+        32,
+        33
       ]
     },
     {
@@ -138,11 +141,11 @@
     },
     "2": {
       "question": "How many satellites does a GPS need for a 3D fix?",
-      "answer": "At least 4 satellites are needed to determine position, although the chapter notes that about 11 satellites are typically needed for a very good location fix."
+      "answer": "At least 4 satellites are needed for a 3D fix (latitude, longitude, and altitude). The fourth satellite lets the receiver correct its own clock. In practice about 11 or more give a very good fix."
     },
     "3": {
       "question": "How much error is there in a GPS altitude measurement?",
-      "answer": "The chapter does not give a figure for GPS altitude error. It notes that LIDAR measures distance from the ground far more accurately than GPS or a pressure sensor."
+      "answer": "Under open sky a typical receiver is accurate to about 5 meters (16 feet) horizontally, and GPS altitude is usually about one and a half to two times less accurate than that, because all the satellites are above the receiver. That is why flight controllers use the pressure sensor as their main altitude source."
     },
     "4": {
       "question": "Explain the operation of an airspeed sensor.",
@@ -262,6 +265,24 @@
         "Bright light on the sensor: cover it with foam or keep it inside the fuselage.",
         "Sudden temperature changes: keep the flight controller shaded and let the aircraft settle to outdoor temperature before power-up."
       ]
+    },
+    "31": {
+      "question": "Three satellites would be enough to find a point in space. Why does a GPS receiver need a fourth?",
+      "answer": "The satellites have atomic clocks, but the receiver's clock is not nearly accurate enough, and a clock error of one millionth of a second is about 300 meters of distance. The fourth satellite lets the receiver solve for its own clock error along with its position."
+    },
+    "32": {
+      "question": "List three things that can reduce GPS accuracy and how to avoid each.",
+      "answer": [
+        "Any three of:",
+        "A blocked view of the sky: mount the GPS on top of the aircraft and get the fix outdoors.",
+        "Signals reflecting off buildings or the ground (multipath): fly away from buildings.",
+        "Poor satellite geometry (high HDOP): wait for more satellites and a lower HDOP before arming.",
+        "Interference from video transmitters, USB 3 cables or other electronics: keep them away from the GPS antenna."
+      ]
+    },
+    "33": {
+      "question": "Why should you wait for a good 3D fix before arming, and what can still be flown if the GPS fails?",
+      "answer": "The flight controller records the home position when you arm, and that is where RTL will return to, so a poor fix gives a poor home. If the GPS fails, the airplane can still be flown in modes such as MANUAL and FBWA, but it can't navigate on its own (no RTL, loiter or AUTO missions)."
     }
   }
 }
