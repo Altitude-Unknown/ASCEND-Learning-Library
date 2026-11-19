@@ -155,3 +155,12 @@ test('UAS page lists courses in the recommended order for a new team', async ({p
  await expect(page.locator('.section-courses .section-heading p')).toHaveText('Suggested order for a new team; take them in any order you like.');
  await expect(page.locator('.section-courses .course-card h3')).toHaveText(['FAA Part 107 Remote Pilot course', 'Electrical Basics', 'UAS Hardware and Electronics', 'Advanced Sensors', 'Flight Controllers', 'PID Controllers', 'Camera and Video Systems', 'Building a Fixed-Wing UAS', 'Building a Multirotor UAS', 'Learning to Fly a UAS']);
 });
+
+test('Electronic Designs is a downloads page, not a course page', async ({page}) => {
+ await page.goto('/electronics/');
+ await expect(page.locator('.section-courses')).toHaveCount(0);
+ await expect(page.locator('#flight-controller a[href="/resources/flight-controller-v4-setup/"]')).toHaveCount(1);
+ await expect(page.locator('#rc-transmitter a[href="/resources/transmitter-configurator/"]')).toHaveCount(1);
+ for (const id of ['yellowstone-design-files', 'yellowstone-guide', 'yellowstone-io-map', 'yellowstone-buildsheet']) await expect(page.locator(`#yellowstone a[href="/resources/${id}/"]`)).toHaveCount(1);
+ await expect(page.locator('#yellowstone')).not.toContainText('coming soon');
+});
