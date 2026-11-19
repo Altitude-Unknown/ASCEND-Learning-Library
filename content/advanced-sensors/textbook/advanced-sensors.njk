@@ -46,6 +46,14 @@
       "id": "lidar-light-detection-and-ranging"
     },
     {
+      "title": "— Mapping with LIDAR",
+      "id": "mapping-with-lidar"
+    },
+    {
+      "title": "— What fools LIDAR",
+      "id": "what-fools-lidar"
+    },
+    {
       "title": "IMUs (inertial measurement units)",
       "id": "imus-inertial-measurement-units"
     },
@@ -149,6 +157,25 @@
 <h2 id="lidar-light-detection-and-ranging">LIDAR (light detection and ranging)</h2>
 <p>LIDAR works by measuring the time it takes light to travel from the sensor to an object and return. LIDAR, if properly calibrated, can provide very accurate distance measurements. On an autonomous aircraft system LIDAR can be used to assist in autoland to detect distance from the ground far more accurately than GPS or a pressure sensor. LIDAR can also be used to map surfaces that a UAS flies over creating very detailed maps and 3D models.</p>
 <figure class="textbook-figure"><a href="/assets/advanced-sensors/lidar-sensor.jpg"><img src="/assets/advanced-sensors/lidar-sensor.jpg" alt="A Garmin LIDAR rangefinder: a black housing with two round lenses side by side, one to send light and one to receive it, and a bundle of colored wires." width="1052" height="1147" loading="lazy"></a><figcaption><p>A LIDAR rangefinder (Garmin). One lens sends a pulse of light and the other receives its reflection.</p></figcaption></figure>
+<h3 id="how-lidar-measures-distance">How LIDAR measures distance</h3>
+<p>A LIDAR sends out a short pulse of invisible infrared laser light and starts a timer. The light bounces off whatever it hits, and the second lens collects the small amount that comes back. Light travels about 30 cm (one foot) in a billionth of a second, a nanosecond. The pulse has to go out and come back, so every nanosecond of travel time means about 15 cm of distance. For an object 10 meters away the whole round trip takes only about 67 nanoseconds, so the electronics have to measure time extremely precisely.</p>
+<p>The Garmin LIDAR-Lite v3 in the picture is a single-beam rangefinder: it measures the distance to one spot straight in front of it. It can measure up to about 40 meters on a typical surface and is accurate to within a few centimeters. Compare that with the pressure sensor, which drifts several meters with the weather, and GPS altitude, which is off by several meters. Close to the ground, LIDAR is far more accurate than either.</p>
+<h3 id="how-ardupilot-uses-a-rangefinder">How ArduPilot uses a rangefinder</h3>
+<p>On an airplane, a LIDAR rangefinder is mounted pointing straight down. The flight controller’s altitude from the pressure sensor is measured from where you armed, so if the landing spot is higher or lower than the launch spot, the barometer is wrong about how high the airplane is above the ground. The rangefinder measures the real height above the ground directly. ArduPilot can use it on the landing approach and to decide exactly when to flare, which makes autonomous landings much more consistent.</p>
+<p>The flight controller also has to account for the airplane’s attitude. In a bank or a pitch, the beam hits the ground at an angle and measures a longer distance than the true height. ArduPilot uses the attitude from the IMU to correct the reading, and ignores it if the beam isn’t pointing at the ground at all. Multirotors use rangefinders the same way to hold their height close to the ground and to follow the terrain.</p>
+<h3 id="mapping-with-lidar">Mapping with LIDAR</h3>
+<p>Mapping LIDAR works on the same principle but sweeps the laser across the ground with spinning mirrors or several beams, measuring hundreds of thousands of points every second. Each measurement becomes a point in 3D space, and all of them together make a point cloud that can be turned into a detailed map or 3D model.</p>
+<p>To put each point in the right place, the system has to know exactly where the drone was and which way the sensor was pointing at the instant each pulse was sent. That takes very accurate GPS, often RTK, and a high-quality IMU. Almost every sensor in this chapter has to work together to make a LIDAR map.</p>
+<p>LIDAR has one big advantage over making maps from photographs: a single pulse can return more than one reflection. Some of the light bounces off the top of the trees, some off the branches, and some makes it through gaps in the leaves to the ground. By keeping only the last return, mappers can see the shape of the bare ground under a forest. Archaeologists have used this to find the remains of ancient cities hidden under jungle canopy.</p>
+<h3 id="what-fools-lidar">What fools LIDAR</h3>
+<ul>
+<li><strong>The surface.</strong> LIDAR needs some of its light to bounce back. Dark surfaces absorb much of it, shiny surfaces and glass can bounce it away at an angle, and water absorbs infrared light, so readings over water are unreliable. The maximum range listed for a sensor is for a reasonably bright target; on a dark surface it will be shorter.</li>
+<li><strong>Tall grass and crops.</strong> The beam measures the first thing it hits, which may be the top of the grass rather than the ground. An airplane landing in a hay field may think the ground is higher than it is.</li>
+<li><strong>Sunlight.</strong> Bright sunlight contains infrared light too, which adds noise and can shorten the range outdoors.</li>
+<li><strong>Weather and dirt.</strong> Rain, fog, dust, and snow scatter the beam, and a dirty or scratched lens blocks it. Keep the lenses clean.</li>
+<li><strong>Range limits.</strong> Every rangefinder has a minimum and a maximum distance. Outside that range it gives no reading, and the flight controller has to fall back on its other sensors.</li>
+</ul>
+<p>LIDAR uses a laser, so treat it with respect: never look into the lenses while it is running, and follow the safety information that comes with the sensor.</p>
 <h2 id="imus-inertial-measurement-units">IMUs (inertial measurement units)</h2>
 <figure class="textbook-figure"><a href="/assets/advanced-sensors/imu-axes.png"><img src="/assets/advanced-sensors/imu-axes.png" alt="Diagram titled “UAV Inertial Measurement Units” showing a box with three axes through it and a curved arrow around each, labeled yaw, pitch, and roll." width="1536" height="864" loading="lazy"></a><figcaption><p>An IMU senses rotation about the yaw, pitch, and roll axes.</p></figcaption></figure>
 <p>An IMU (Inertial Measurement Unit) uses a combination of gyroscopes and accelerometers to measure how the aircraft is rotating and accelerating. The flight controller uses those measurements to work out the aircraft’s orientation in space, also called its attitude: how far it is pitched, rolled, and yawed. This device is arguably the most important in an automated system. If the IMU fails in flight a crash is very likely.</p>

@@ -8,7 +8,7 @@
       "summary": "See how GPS finds position, how an airspeed sensor compares two pressures, how LIDAR measures distance with light, and how a pressure sensor measures altitude.",
       "outcomes": [
         "Explain how GPS uses satellite signal travel time to find a position, why a fix needs four satellites, how accurate GPS is, and what the flight controller uses it for.",
-        "Explain how an airspeed sensor compares ram air and static pressure, how airspeed differs from ground speed, how to set up an airspeed sensor, and how LIDAR measures distance.",
+        "Explain how an airspeed sensor compares ram air and static pressure, how airspeed differs from ground speed, how to set up an airspeed sensor, and how LIDAR measures distance, helps with landings, and makes maps.",
         "Explain how a pressure sensor measures altitude, why it is zeroed on the ground and what disturbs it, and calibrate it to sea level with a METAR altimeter setting."
       ],
       "readings": [
@@ -60,7 +60,10 @@
         33,
         34,
         35,
-        36
+        36,
+        37,
+        38,
+        39
       ]
     },
     {
@@ -298,6 +301,25 @@
     "36": {
       "question": "How does ArduPilot fly an airplane, such as the standard ASCEND airplane, that has no airspeed sensor, and what is the downside?",
       "answer": "It estimates airspeed from the GPS ground speed and its own estimate of the wind, and uses throttle settings known to work. The estimate is only as good as the wind estimate and can't detect a gust or an approaching stall the way a real sensor can."
+    },
+    "37": {
+      "question": "A LIDAR pulse takes 100 nanoseconds to go out and come back. About how far away is the object?",
+      "answer": "About 15 meters. Light travels about 30 cm per nanosecond, and the pulse travels out and back, so each nanosecond of round-trip time is about 15 cm of distance: 100 × 15 cm = 15 m."
+    },
+    "38": {
+      "question": "Why is a downward-facing rangefinder better than the pressure sensor for an autonomous landing?",
+      "answer": "The pressure sensor's altitude is measured from where the airplane was armed and drifts with the weather, so if the landing spot is higher or lower than the launch spot it is wrong about the height above the ground. The rangefinder measures the real height above the ground directly, to within a few centimeters, so ArduPilot can time the flare accurately."
+    },
+    "39": {
+      "question": "Name three surfaces or conditions that can give a LIDAR rangefinder bad readings.",
+      "answer": [
+        "Any three of:",
+        "Water, which absorbs infrared light.",
+        "Dark surfaces that absorb the light, or shiny surfaces and glass that reflect it away.",
+        "Tall grass or crops, which the beam hits before the ground.",
+        "Bright sunlight, rain, fog, dust, snow, or a dirty lens.",
+        "Distances outside the sensor's minimum or maximum range."
+      ]
     }
   }
 }
