@@ -22,6 +22,14 @@
       "id": "gps-global-positioning-system"
     },
     {
+      "title": "— How accurate is GPS?",
+      "id": "how-accurate-is-gps"
+    },
+    {
+      "title": "— How ArduPilot uses GPS",
+      "id": "how-ardupilot-uses-gps"
+    },
+    {
       "title": "Airspeed indicators",
       "id": "airspeed-indicators"
     },
@@ -83,7 +91,31 @@
 ---
 <h2 id="gps-global-positioning-system">GPS (Global Positioning System)</h2>
 <figure class="textbook-figure"><a href="/assets/advanced-sensors/gps-module.png"><img src="/assets/advanced-sensors/gps-module.png" alt="Top view of a round black Here4 GPS module with a triangle on top pointing forward." width="1000" height="1000" loading="lazy"></a><figcaption><p>A GPS module (Here4). Mounted on top of an aircraft, it receives signals from GPS satellites; the triangle points toward the front of the aircraft.</p></figcaption></figure>
-<p>GPS uses a constellation of satellites in earth orbit to determine the precise location of a receiver on the ground. Radio frequency waves are transmitted from the satellite to the receiver and the time it takes for a signal to travel between the two is measured and a distance calculation is derived. It takes at least 4 satellites to determine position on the surface of the earth however, in practice it takes about 11 satellites to get a very good fix on a location. Atomic clocks aboard the orbiting satellites help to make very accurate measurements of signal travel time.</p>
+<p>GPS uses a constellation of satellites in earth orbit to determine the precise location of a receiver on the ground. Radio frequency waves are transmitted from the satellite to the receiver and the time it takes for a signal to travel between the two is measured and a distance calculation is derived. It takes at least 4 satellites to determine a 3D position (latitude, longitude, and altitude) however, in practice it takes about 11 satellites to get a very good fix on a location. Atomic clocks aboard the orbiting satellites help to make very accurate measurements of signal travel time.</p>
+<h3 id="how-gps-finds-your-position">How GPS finds your position</h3>
+<p>The GPS satellites orbit about 20,200 km (12,550 miles) above the earth and circle it twice a day. The United States keeps at least 24 of them working at all times, spread across six orbits so that at least four are above the horizon from almost anywhere on the planet. Each satellite constantly broadcasts its position and the exact time from its atomic clock.</p>
+<p>The radio signal travels at the speed of light and takes less than a tenth of a second to reach you. Your receiver compares the time the signal was sent with the time it arrived, and that tells it how far away the satellite is. This is why the clocks matter so much: light travels about 30 cm (one foot) in a billionth of a second, so a clock that is off by just one millionth of a second puts you about 300 meters off.</p>
+<p>Knowing your distance from one satellite puts you somewhere on a giant sphere around it. A second satellite narrows that down to a circle where the two spheres cross, and a third narrows it to two points, one of which is usually far out in space. So why do you need four? The satellites carry atomic clocks, but the receiver in your drone has a cheap clock that isn’t nearly accurate enough. The fourth satellite lets the receiver solve for its own clock error at the same time as its position. With more than four, the receiver can average out errors, which is why more satellites give a better fix.</p>
+<h3 id="gps-glonass-galileo-and-beidou">GPS, GLONASS, Galileo, and BeiDou</h3>
+<p>GPS is the United States’ system, but it is not the only one. Russia runs GLONASS, Europe runs Galileo, and China runs BeiDou. The general name for all of them is GNSS (Global Navigation Satellite System), though most people still just say GPS. Modern receivers listen to several systems at once, so they see many more satellites. The ASCEND flight controller uses a u-blox M9 receiver, which can track all four systems at the same time. With a clear view of the sky it can often see more than the 11 satellites mentioned above.</p>
+<h3 id="how-accurate-is-gps">How accurate is GPS?</h3>
+<p>Under open sky, a GPS-enabled smartphone is typically accurate to within about 5 meters (16 feet). The receivers in flight controllers are about as good, and often better. Accuracy gets worse near buildings, bridges, and trees.</p>
+<p>GPS altitude is less accurate than its horizontal position, usually about one and a half to two times worse. All the satellites a receiver can see are above it, none below, so the geometry is much better for measuring side to side than up and down. That is why flight controllers use the pressure sensor as their main altitude source and use GPS altitude only as a check.</p>
+<p>When you need better accuracy there are ways to get it. In North America, WAAS satellites send corrections that improve accuracy for receivers that can use them. For mapping and surveying, RTK (real-time kinematic) GPS uses a base station on the ground with a known position to correct the aircraft’s receiver to within a few centimeters.</p>
+<h3 id="what-reduces-gps-accuracy">What reduces GPS accuracy</h3>
+<ul>
+<li><strong>A blocked view of the sky.</strong> Buildings, trees, hills, and even the wing or the pilot’s body block signals. Mount the GPS on top of the aircraft with nothing above it, and get your fix outdoors, not in a building or a vehicle.</li>
+<li><strong>Reflections (multipath).</strong> Signals that bounce off buildings or the ground arrive a little late, which makes the satellite seem farther away than it is.</li>
+<li><strong>Satellite geometry.</strong> Satellites spread across the sky give a better fix than satellites bunched together. Receivers report this as dilution of precision, or HDOP for the horizontal part. Lower is better; under about 2 is good. QGroundControl shows HDOP when you click the GPS icon.</li>
+<li><strong>Interference.</strong> GPS signals are extremely weak by the time they reach the ground. Video transmitters, USB 3 cables, and other electronics close to the GPS antenna can drown them out. Keep other electronics away from the GPS antenna.</li>
+<li><strong>The atmosphere.</strong> The upper atmosphere slows the signals down a little. Receivers correct for most of this, but not all of it.</li>
+</ul>
+<h3 id="getting-a-fix">Getting a fix</h3>
+<p>When a receiver starts from scratch, called a cold start, it has to find the satellites and download information about where they are. With a clear view of the sky a modern receiver usually gets a fix in about half a minute. It can take a few minutes the first time you use a new receiver, or after it has been off for a long time or moved a long distance. If it was used recently it can get a fix in a couple of seconds.</p>
+<p>Wait for a 3D fix before you arm. The flight controller records your home position when you arm, and a poor fix gives you a poor home position, which is where the airplane will try to return. On the ASCEND flight controller the GPS LED shows this: off means no 3D fix, blinking means it has a fix but it is not yet good enough to arm, and solid means the GPS is ready.</p>
+<h3 id="how-ardupilot-uses-gps">How ArduPilot uses GPS</h3>
+<p>GPS gives the flight controller three things: where the aircraft is, how fast and in what direction it is moving, and the exact time. The speed comes from the Doppler shift of the satellite signals and is far more precise than the position, accurate to a few centimeters per second. As you read in the sensor fusion section, the EKF uses that speed to keep the attitude estimate accurate in turns.</p>
+<p>Anything that needs to know where the airplane is depends on GPS: the home position, return to launch (RTL), loiter, AUTO missions, and geofences. If the GPS fails, the airplane can still be flown in modes like MANUAL and FBWA, which don’t need to know where the airplane is, but it can’t navigate on its own. That is a good reason to keep your manual flying skills sharp even when you plan to fly autonomous missions.</p>
 <h2 id="airspeed-indicators">Airspeed indicators</h2>
 <figure class="textbook-figure"><a href="/assets/advanced-sensors/airspeed-sensor.png"><img src="/assets/advanced-sensors/airspeed-sensor.png" alt="An airspeed sensor: a long metal pitot-static tube with two tubing connectors at its back end, beside a small circuit board carrying a pressure sensor." width="486" height="328" loading="lazy"></a><figcaption><p>An airspeed sensor: a pitot-static tube and the pressure sensor board it connects to.</p></figcaption></figure>
 <p>Airspeed indicators compare ram air (air forced into a tube from forward aircraft motion) with static air (ambient air pressure outside of the aircraft in a relatively smooth area of airflow) to determine speed. An airspeed sensor is made up of a pitot tube and a static port.</p>
