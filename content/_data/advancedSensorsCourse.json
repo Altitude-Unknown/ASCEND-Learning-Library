@@ -62,7 +62,7 @@
       "summary": "Learn how the IMU’s gyroscopes and accelerometers sense motion, how a magnetometer finds heading, and where AI is taking drones. Then install and calibrate a sensor.",
       "outcomes": [
         "Explain what an IMU does, how its MEMS gyroscopes and accelerometers work inside, and why the flight controller fuses them.",
-        "Explain how a magnetometer finds heading, what disturbs it, and why it works when GPS heading does not.",
+        "Explain how a magnetometer finds heading, what disturbs it and how calibration and declination correct it, and how compass heading differs from GPS direction of travel.",
         "Install a sensor on a flight controller, calibrate it, and show it working in ground-control software."
       ],
       "readings": [
@@ -114,7 +114,10 @@
         21,
         22,
         23,
-        24
+        24,
+        25,
+        26,
+        27
       ],
       "skills": [
         "Identify a GPS, airspeed sensor, and LIDAR unit by sight.",
@@ -168,7 +171,7 @@
     },
     "11": {
       "question": "What can cause a magnetometer to produce erroneous readings?",
-      "answer": "Large metal objects can negatively affect magnetometer readings. Because of this interference, magnetometers need to be calibrated regularly and sometimes before every flight."
+      "answer": "Large metal objects, magnets (such as those in motors), and the magnetic fields around wires carrying current, such as the battery and motor wires, can all cause wrong readings. This is why the compass must be calibrated after the aircraft is built and whenever its electronics are moved, and why it should be mounted away from power wires."
     },
     "12": {
       "question": "What are some impacts of AI on drones?",
@@ -226,6 +229,18 @@
     "24": {
       "question": "Why can't the IMU alone tell an aircraft where it is? What sensor does that job?",
       "answer": "Working out position from the accelerometers means adding up readings twice over time, so even a tiny error grows very quickly (0.01 m/s/s becomes about 18 meters after one minute and almost 2 kilometers after ten). GPS provides the position instead."
+    },
+    "25": {
+      "question": "What is magnetic declination, and how does ArduPilot handle it?",
+      "answer": "Magnetic declination is the angle between magnetic north (where a compass points) and true north. It changes from place to place. ArduPilot has a built-in model of the earth's magnetic field and sets the declination automatically from the GPS position, so you don't need to recalibrate at a new flying field."
+    },
+    "26": {
+      "question": "Why can opening the throttle change the compass heading, and what can you do about it?",
+      "answer": "The current flowing from the battery through the ESC to the motor creates a magnetic field that gets stronger as the throttle increases. Keep the compass away from the battery, ESC, motor and power wires, and twist the positive and negative power wires together so their fields mostly cancel."
+    },
+    "27": {
+      "question": "In a crosswind, why might the GPS direction of travel be different from the compass heading?",
+      "answer": "GPS measures the direction the aircraft is moving over the ground (its track). In a crosswind an airplane crabs, pointing its nose partly into the wind, so it points one way and travels another. The compass measures where the nose is pointing."
     }
   }
 }
