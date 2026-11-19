@@ -48,6 +48,7 @@
     "id": "uas",
     "title": "UAS",
     "tagline": "From first principles to first flight.",
+    "coursesNote": "Suggested order for a new team; take them in any order you like.",
     "courses": [
       {
         "title": "FAA Part 107 Remote Pilot course",
