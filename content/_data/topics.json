@@ -55,9 +55,34 @@
         "description": "Prepare for the FAA Remote Pilot certificate in five units: regulations, airspace, weather, loading and performance, and operations. Each unit pairs videos and slides with a book chapter, an activity, and a practice quiz."
       },
       {
-        "title": "Learning to Fly a UAS",
-        "url": "/learn-to-fly/",
-        "description": "Learn to fly airplanes and multirotors in six units, from simulator practice to your first solo. Each unit pairs a reading with a lab or practice plan and review questions."
+        "title": "Electrical Basics",
+        "url": "/electrical-basics/",
+        "description": "Learn voltage, current, resistance, and power, Ohm’s law, wire gauge, multimeters, and waveforms in two units. Each unit pairs a reading with practice or a lab, instructor sign-off, and review questions."
+      },
+      {
+        "title": "UAS Hardware and Electronics",
+        "url": "/uas-hardware/",
+        "description": "Learn the hardware every remote aircraft shares in five units: transmitters, receivers and servos, motors and ESCs, batteries and chargers, and linkages and soldering. Each unit pairs a reading with a lab or practice, instructor sign-off, and review questions."
+      },
+      {
+        "title": "Advanced Sensors",
+        "url": "/advanced-sensors/",
+        "description": "Learn the sensors behind automated flight in two units: GPS, airspeed, LIDAR, and pressure sensors, then IMUs, gyroscopes, accelerometers, and magnetometers. Each unit pairs a reading with practice or a lab and review questions."
+      },
+      {
+        "title": "Flight Controllers",
+        "url": "/flight-controllers/",
+        "description": "Learn how flight controllers stabilize and automate aircraft in three units: what flight controllers do; automation, safety, and failsafes; and flight modes and mission planning. Each unit pairs a reading with practice or a lab and review questions."
+      },
+      {
+        "title": "PID Controllers",
+        "url": "/pid-controllers/",
+        "description": "Learn how a flight controller holds an aircraft on target in two units: what the proportional, integral, and derivative terms do, and how to tune each gain. Each unit pairs a reading with practice or a lab and review questions."
+      },
+      {
+        "title": "Camera and Video Systems",
+        "url": "/camera-video-systems/",
+        "description": "Learn the cameras remote aircraft carry in two units: action, 360°, and multispectral cameras with Raspberry Pi automation, and first person view (FPV) systems. Each unit pairs a reading with practice or a lab and review questions."
       },
       {
         "title": "Building a Fixed-Wing UAS",
@@ -70,34 +95,9 @@
         "description": "Build and set up a quadcopter in three units: how multirotors fly, the flight controller stack, and setting up Betaflight. Each unit pairs a reading with a lab or practice, instructor sign-off, and review questions."
       },
       {
-        "title": "Flight Controllers",
-        "url": "/flight-controllers/",
-        "description": "Learn how flight controllers stabilize and automate aircraft in three units: what flight controllers do; automation, safety, and failsafes; and flight modes and mission planning. Each unit pairs a reading with practice or a lab and review questions."
-      },
-      {
-        "title": "Camera and Video Systems",
-        "url": "/camera-video-systems/",
-        "description": "Learn the cameras remote aircraft carry in two units: action, 360°, and multispectral cameras with Raspberry Pi automation, and first person view (FPV) systems. Each unit pairs a reading with practice or a lab and review questions."
-      },
-      {
-        "title": "Advanced Sensors",
-        "url": "/advanced-sensors/",
-        "description": "Learn the sensors behind automated flight in two units: GPS, airspeed, LIDAR, and pressure sensors, then IMUs, gyroscopes, accelerometers, and magnetometers. Each unit pairs a reading with practice or a lab and review questions."
-      },
-      {
-        "title": "Electrical Basics",
-        "url": "/electrical-basics/",
-        "description": "Learn voltage, current, resistance, and power, Ohm’s law, wire gauge, multimeters, and waveforms in two units. Each unit pairs a reading with practice or a lab, instructor sign-off, and review questions."
-      },
-      {
-        "title": "UAS Hardware and Electronics",
-        "url": "/uas-hardware/",
-        "description": "Learn the hardware every remote aircraft shares in five units: transmitters, receivers and servos, motors and ESCs, batteries and chargers, and linkages and soldering. Each unit pairs a reading with a lab or practice, instructor sign-off, and review questions."
-      },
-      {
-        "title": "PID Controllers",
-        "url": "/pid-controllers/",
-        "description": "Learn how a flight controller holds an aircraft on target in two units: what the proportional, integral, and derivative terms do, and how to tune each gain. Each unit pairs a reading with practice or a lab and review questions."
+        "title": "Learning to Fly a UAS",
+        "url": "/learn-to-fly/",
+        "description": "Learn to fly airplanes and multirotors in six units, from simulator practice to your first solo. Each unit pairs a reading with a lab or practice plan and review questions."
       }
     ],
     "description": "Explore aircraft design, electronics, flight systems, and scientific missions.",

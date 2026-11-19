@@ -147,3 +147,8 @@ test('Published lessons load YouTube only on request and retain a direct link', 
   await expect(page.locator('iframe')).toHaveAttribute('src','https://www.youtube-nocookie.com/embed/'+id);
  }
 });
+
+test('UAS page lists courses in the recommended order for a new team', async ({page}) => {
+ await page.goto('/uas/');
+ await expect(page.locator('.section-courses .course-card h3')).toHaveText(['FAA Part 107 Remote Pilot course', 'Electrical Basics', 'UAS Hardware and Electronics', 'Advanced Sensors', 'Flight Controllers', 'PID Controllers', 'Camera and Video Systems', 'Building a Fixed-Wing UAS', 'Building a Multirotor UAS', 'Learning to Fly a UAS']);
+});
