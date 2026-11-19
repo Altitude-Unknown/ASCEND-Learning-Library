@@ -54,6 +54,14 @@
       "id": "magnetometers"
     },
     {
+      "title": "— What fools a magnetometer",
+      "id": "what-fools-a-magnetometer"
+    },
+    {
+      "title": "— Calibrating the compass",
+      "id": "calibrating-the-compass"
+    },
+    {
       "title": "Pressure sensors",
       "id": "pressure-sensors"
     },
@@ -114,7 +122,38 @@
 <li><strong>Watch out for big temperature changes.</strong> The readings shift slightly as the chip warms up or cools down. The EKF keeps correcting for small drift in flight, but going straight from a warm car to a cold field and powering up right away is asking for trouble. Let the aircraft sit at the field’s temperature for a few minutes first.</li>
 </ul>
 <h2 id="magnetometers">Magnetometers</h2>
-<p>A magnetometer is a digital compass. A magnetometer measures the earth&#x27;s magnetic field to generate a heading using cardinal coordinates north, south, east, west or a numbered heading 0-360 degrees. Magnetometers are negatively affected by large metal objects and need to be calibrated often, sometimes before every flight. GPS often provides for a more accurate heading, however an aircraft needs to be moving for a GPS to provide a heading. A magnetometer however, can provide a heading even when not moving. Most remote aircraft use both magnetometers and GPS to provide heading information.</p>
+<p>A magnetometer is a digital compass. A magnetometer measures the earth&#x27;s magnetic field to generate a heading using cardinal coordinates north, south, east, west or a numbered heading 0-360 degrees. Magnetometers are negatively affected by large metal objects and need to be calibrated carefully whenever an aircraft is built or its electronics are moved. Some consumer drones ask for a calibration before every flight. GPS often provides a more accurate direction of travel, however an aircraft needs to be moving for a GPS to provide one. A magnetometer however, can provide a heading even when not moving. Most remote aircraft use both magnetometers and GPS to provide heading information.</p>
+<h3 id="how-a-magnetometer-works">How a magnetometer works</h3>
+<p>The earth’s magnetic field is weak. Depending on where you are on the planet it is only about 25 to 65 microtesla, roughly a hundred times weaker than the field right next to a refrigerator magnet. A magnetometer has to measure that tiny field accurately while sitting a few centimeters away from motors, batteries, and wires carrying many amps. That is why the magnetometer is the sensor most likely to give you trouble.</p>
+<p>The field also doesn’t point straight north along the ground. It points north and <em>down</em> into the earth at an angle, called the dip or inclination. Across most of the United States it dips at more than 60 degrees, so most of the field is actually pointing into the ground. A flight controller’s magnetometer measures the field along all three axes, X, Y, and Z, and uses the accelerometer to work out which way is level. Then it can figure out which way north is even when the aircraft is banked or pitched. A handheld compass needle can’t do that, which is why you have to hold a hiking compass flat.</p>
+<p>Most magnetometers in flight controllers are small chips that sense the field with a material whose electrical properties change in a magnetic field. Some use the Hall effect, where a magnetic field pushes the current in a conductor to one side and creates a small voltage. Others, including the MMC5983MA on the ASCEND flight controller, are magnetoresistive: the resistance of a thin metal film changes depending on the direction of the magnetic field passing through it.</p>
+<h3 id="magnetic-north-and-true-north">Magnetic north and true north</h3>
+<p>A compass points to magnetic north, which is not the same place as the geographic North Pole (true north). The angle between the two is called the magnetic declination, and it depends on where you are. In Montana a compass points roughly 10 to 13 degrees east of true north, while on the East Coast it points west of true north. Maps and GPS use true north, so the flight controller has to correct for declination. ArduPilot does this automatically: it has a built-in model of the earth’s magnetic field and looks up the declination from your GPS position. You don’t need to recalibrate the compass just because you are flying at a new field. You can look up the declination anywhere with <a href="https://www.ngdc.noaa.gov/geomag/calculators/magcalc.shtml">NOAA’s magnetic field calculator</a>.</p>
+<h3 id="what-fools-a-magnetometer">What fools a magnetometer</h3>
+<p>Anything near the magnetometer that is magnetic, or that changes the magnetic field, can make it read the wrong heading. There are two kinds of interference:</p>
+<ul>
+<li><strong>Hard iron</strong> is anything that makes its own magnetic field: the magnets in motors and speakers, steel screws or tools that have become magnetized, and any wire carrying current. It adds a fixed offset to every reading, like someone holding a small magnet next to your compass.</li>
+<li><strong>Soft iron</strong> is magnetic material that doesn’t make its own field but bends the earth’s field around it, such as steel brackets and screws. It stretches and squashes the readings depending on which way the aircraft is pointing.</li>
+</ul>
+<p>Electric current is the sneaky one. The wires between the battery, the ESC, and the motor can carry tens of amps, and every wire carrying current has a magnetic field around it. That field gets stronger as you open the throttle, so a compass that reads perfectly on the bench can be off by many degrees at full power. Some things that help:</p>
+<ul>
+<li>Keep the flight controller, and the magnetometer on it, as far as practical from the battery, the ESC, the motor, and the power wires. Many aircraft put the compass in the GPS module on a mast for exactly this reason. The ASCEND flight controller has its magnetometer on the board, so route the battery and motor wires away from it.</li>
+<li>Twist the positive and negative power wires together. The current flows in opposite directions in the two wires, so their magnetic fields mostly cancel out.</li>
+<li>Use nylon or aluminum screws near the flight controller instead of steel, and keep magnetized tools away from it.</li>
+</ul>
+<p>The world around you matters too. A compass will read wrong next to a car, on a metal workbench, over steel reinforcing bars in a concrete floor, or with a phone in your pocket. If your heading looks strange indoors, take the aircraft outside before you assume something is broken.</p>
+<h3 id="calibrating-the-compass">Calibrating the compass</h3>
+<p>Compass calibration measures the interference from your aircraft so the flight controller can subtract it. ArduPilot does this with an onboard calibration in QGroundControl or Mission Planner. You hold the aircraft in the air and slowly rotate it so that each side, the front, back, left, right, top, and bottom, points down toward the earth in turn, until the progress bars fill. From those readings the flight controller works out an offset for the hard iron and a correction for the soft iron, then asks you to reboot.</p>
+<ul>
+<li>Calibrate outdoors, away from cars, metal tables, computers, and phones, and ideally with a good GPS lock.</li>
+<li>Calibrate after you build the aircraft and again whenever you move or replace the flight controller, the battery, the ESC, or the wiring near the compass. You don’t need to recalibrate at a new flying field.</li>
+<li>Calibration can’t be done while the aircraft is armed.</li>
+<li>If calibration keeps failing, or the offsets it finds are large (ArduPilot treats offsets over 600 as a sign of magnetic interference), look for something magnetic near the flight controller before you try again.</li>
+</ul>
+<p>The <a href="/resources/flight-controller-v4-setup/">ASCEND Flight Controller V4 setup guide</a> includes the compass calibration with the other sensor calibrations.</p>
+<h3 id="compass-heading-and-gps-direction-of-travel">Compass heading and GPS direction of travel</h3>
+<p>GPS doesn’t actually know which way the aircraft is pointing. It knows which way the aircraft is moving over the ground, called its track or course. Most of the time those are close, but in a crosswind an airplane flies with its nose turned partly into the wind, called crabbing, so it points one way and travels another. A magnetometer measures where the nose is pointing, and GPS measures where the aircraft is going. The flight controller uses both.</p>
+<p>ArduPilot airplanes can even fly without a compass. A few seconds after takeoff, once the airplane is moving steadily, ArduPilot lines up its heading with the GPS direction of travel. That needs a good GPS with a clear view of the sky, and until it happens the flight controller doesn’t know its heading. A working compass gives the flight controller a heading before you launch, which is why most autonomous aircraft use one.</p>
 <h2 id="pressure-sensors">Pressure sensors</h2>
 <p>Manned aircraft have used the weight of the atmosphere to determine altitude from almost the very beginning of aviation. As you go higher above sea level the weight of the air above you gets less at a known rate. A pressure sensor is the primary tool for determining altitude. The easiest way to measure your altitude is to zero out your pressure sensor on the ground, then as you climb into the air the pressure sensor can determine how high your aircraft is above the launch location. If you want to know your altitude above sea level however, you will have to calibrate your pressure sensor to account for the current atmospheric conditions at your location. Air pressure changes all the time and temperature impacts air density as well. Airport weather stations report the altimeter correction about every 20 minutes. If your pressure sensor allows for this correction it can give a very accurate altitude.</p>
 <p>The highlighted part of this METAR weather report, A3007, shows the altimeter calibration value of 30.07 inches of mercury. This value can be used to calibrate a pressure sensor to sea level.</p>
