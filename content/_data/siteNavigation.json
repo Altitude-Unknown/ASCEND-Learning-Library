@@ -1,18 +1,46 @@
 {
   "learn": [
-    { "title": "Start here", "url": "/learn/" },
-    { "title": "UAS", "url": "/uas/" },
-    { "title": "Electronic Designs", "url": "/electronics/" },
-    { "title": "FAA Part 107 course", "url": "/part107/" },
-    { "title": "High-Altitude Ballooning", "url": "/ballooning/" },
-    { "title": "Air Quality & the ASCEND Logger", "url": "/air-quality/" },
-    { "title": "Faculty & Pod Resources", "url": "/teachers/" },
-    { "title": "Resource library", "url": "/library/" }
+    {
+      "title": "UAS",
+      "url": "/uas/"
+    },
+    {
+      "title": "High-Altitude Balloons",
+      "url": "/ballooning/"
+    },
+    {
+      "title": "Radiosondes",
+      "url": "/radiosondes/"
+    },
+    {
+      "title": "Air Quality & the ASCEND Logger",
+      "url": "/air-quality/"
+    },
+    {
+      "title": "Electronic Designs",
+      "url": "/electronics/"
+    },
+    {
+      "title": "Resource library",
+      "url": "/library/"
+    }
   ],
   "data": [
-    { "title": "Data Explorer", "url": "/data/" },
-    { "title": "Member workspace", "url": "/data/team/" },
-    { "title": "Check a data file", "url": "/data/upload/" },
-    { "title": "Data standard", "url": "/data/standard/" }
+    {
+      "title": "Data Explorer",
+      "url": "/data/"
+    },
+    {
+      "title": "Member workspace",
+      "url": "/data/team/"
+    },
+    {
+      "title": "Check a data file",
+      "url": "/data/upload/"
+    },
+    {
+      "title": "Data standard",
+      "url": "/data/standard/"
+    }
   ]
 }

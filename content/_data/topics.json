@@ -495,12 +495,70 @@
     ],
     "contextLinks": [
       {
+        "title": "Radiosondes",
+        "url": "/radiosondes/"
+      },
+      {
         "title": "Compare measurement platforms",
         "url": "/science/#platforms"
       },
       {
         "title": "Explore long-range transport",
         "url": "/science/#rq7"
+      }
+    ]
+  },
+  {
+    "id": "radiosondes",
+    "title": "Radiosondes",
+    "tagline": "Profile the atmosphere from the ground up.",
+    "description": "Launch small meteorological balloons with radiosondes to measure profiles of temperature, pressure, humidity, and wind through the atmosphere.",
+    "icon": "balloon",
+    "overview": [
+      "Small meteorological balloons with radiosondes provide profiles of temperature, pressure, humidity, and wind.",
+      "ASCEND plans to combine these observations with UAS, high-altitude balloon, and surface measurements. Shared sensing, data logging, and comparison practices will help teams connect observations across platforms. Radiosonde teams may run the ASCEND Logger as a ground station.",
+      "Radiosonde guides and resources are in development."
+    ],
+    "contextLinks": [
+      {
+        "title": "High-altitude ballooning",
+        "url": "/ballooning/"
+      },
+      {
+        "title": "Compare measurement platforms",
+        "url": "/science/#platforms"
+      }
+    ],
+    "subsections": [
+      {
+        "title": "Introduction",
+        "slug": "introduction",
+        "description": "Guides for this topic are in development."
+      },
+      {
+        "title": "Radiosonde Systems",
+        "slug": "radiosonde-systems",
+        "description": "Guides for this topic are in development."
+      },
+      {
+        "title": "Launch Planning",
+        "slug": "launch-planning",
+        "description": "Guides for this topic are in development."
+      },
+      {
+        "title": "Ground Station & Data Reception",
+        "slug": "ground-station",
+        "description": "Guides for this topic are in development."
+      },
+      {
+        "title": "Atmospheric Profiles",
+        "slug": "atmospheric-profiles",
+        "description": "Guides for this topic are in development."
+      },
+      {
+        "title": "Safety",
+        "slug": "safety",
+        "description": "Guides for this topic are in development."
       }
     ]
   },
