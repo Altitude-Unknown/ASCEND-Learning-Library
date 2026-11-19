@@ -34,6 +34,14 @@
       "id": "airspeed-indicators"
     },
     {
+      "title": "— Airspeed, ground speed, and wind",
+      "id": "airspeed-ground-speed-and-wind"
+    },
+    {
+      "title": "— Setting up an airspeed sensor",
+      "id": "setting-up-an-airspeed-sensor"
+    },
+    {
       "title": "LIDAR (light detection and ranging)",
       "id": "lidar-light-detection-and-ranging"
     },
@@ -119,6 +127,25 @@
 <h2 id="airspeed-indicators">Airspeed indicators</h2>
 <figure class="textbook-figure"><a href="/assets/advanced-sensors/airspeed-sensor.png"><img src="/assets/advanced-sensors/airspeed-sensor.png" alt="An airspeed sensor: a long metal pitot-static tube with two tubing connectors at its back end, beside a small circuit board carrying a pressure sensor." width="486" height="328" loading="lazy"></a><figcaption><p>An airspeed sensor: a pitot-static tube and the pressure sensor board it connects to.</p></figcaption></figure>
 <p>Airspeed indicators compare ram air (air forced into a tube from forward aircraft motion) with static air (ambient air pressure outside of the aircraft in a relatively smooth area of airflow) to determine speed. An airspeed sensor is made up of a pitot tube and a static port.</p>
+<h3 id="how-an-airspeed-sensor-works">How an airspeed sensor works</h3>
+<p>The pitot tube points straight into the oncoming air. Air rams into the hole in its tip and stops, which raises the pressure inside the tube. Small holes in the side of the tube, the static ports, feel only the normal air pressure around the aircraft. The difference between the two is called dynamic pressure, and it depends on how fast the air is moving past the aircraft and how thick, or dense, the air is. Double the speed and the dynamic pressure goes up four times.</p>
+<p>The sensor itself is a differential pressure sensor: a MEMS diaphragm like the one in the barometer, but with the pitot pressure on one side and the static pressure on the other, so it measures only the difference. That difference is very small. At 15 meters per second (about 34 mph), a typical speed for a trainer airplane, the dynamic pressure is only about 1.4 hPa. That is the same pressure change the barometer sees when you climb about 11 meters, which is why airspeed sensors need to be so sensitive and are so easily upset.</p>
+<h3 id="airspeed-ground-speed-and-wind">Airspeed, ground speed, and wind</h3>
+<p>An airplane flies through the air, not over the ground. The wing only cares about how fast the air is moving over it, which is the airspeed. GPS measures ground speed, how fast the aircraft is moving over the ground. The difference between the two is the wind.</p>
+<p>Say your airplane flies at an airspeed of 15 m/s in a 5 m/s wind. Flying into the wind, its ground speed is only 10 m/s, and flying with the wind it is 20 m/s. The airspeed, and the lift from the wing, are the same both ways. This is why airplanes take off and land into the wind: the airplane reaches flying airspeed at a slower ground speed and needs less runway. It is also a trap for new RC pilots. After turning downwind the airplane suddenly looks fast because its ground speed went up, so the pilot pulls the throttle back, the airspeed drops, and the airplane stalls. Trust the airspeed, not how fast the airplane looks.</p>
+<p>Air density matters too. Higher up, or on a hot day, the air is thinner, so the airplane has to fly faster through it to get the same dynamic pressure and the same lift. Pilots call the speed from the pitot tube indicated airspeed, and the airplane’s actual speed through the air true airspeed. True airspeed is about 2 percent higher than indicated for every 1,000 feet above sea level. The wing stalls at the same indicated airspeed no matter how high you are, which makes indicated airspeed the number the flight controller watches to keep the airplane flying.</p>
+<h3 id="how-ardupilot-uses-airspeed">How ArduPilot uses airspeed</h3>
+<p>In automatic modes ArduPilot uses airspeed to control the throttle and pitch together, keeping the airplane above its minimum airspeed and near its cruise airspeed while it climbs, descends, and turns. A real airspeed sensor helps most in windy conditions, slow flight, and autonomous landings.</p>
+<p>ArduPilot can also fly without an airspeed sensor. It estimates the airspeed from the GPS ground speed and its own estimate of the wind, and uses throttle settings that are known to work. The standard ASCEND airplane flies this way: the firmware is set up with no airspeed sensor, and teams can add an MS4525 pitot sensor on the flight controller’s I2C header when they are ready for it. The estimate is good enough for normal flying, but it is only as good as the wind estimate, and it can’t warn you about a gust or a stall the way a real sensor can.</p>
+<h3 id="setting-up-an-airspeed-sensor">Setting up an airspeed sensor</h3>
+<ul>
+<li><strong>Mount the pitot tube in clean air.</strong> With the propeller on the nose, the prop wash would make the airspeed read high, so mount the pitot tube out on one wing, at least a foot from the fuselage. Point it straight into the airflow, with the side holes uncovered and out in front of the wing where the air is undisturbed.</li>
+<li><strong>Connect the tubes the right way around.</strong> The pitot tube has two connectors: one for the pressure from the tip and one for the static holes. Follow your sensor’s instructions for which goes to which port, and make sure neither tube is kinked or leaking.</li>
+<li><strong>Cover the pitot tube when you power up.</strong> The flight controller zeros the airspeed sensor when it starts. If the wind is blowing into the tube at that moment, it will think that is zero airspeed. Slip a loose cover over the tube before you plug in the battery and remove it before flight. Some sensors are also sensitive to light, so shade them.</li>
+<li><strong>Check it before every flight.</strong> Gently blow into the pitot tube, or cup your hand over it, and watch the airspeed rise in the ground station. Blowing into it should show 6 m/s or more. If it barely moves, look for a blocked, leaking, or disconnected tube. An airspeed of exactly zero that never moves at all is also a sign of a problem.</li>
+<li><strong>Calibrate it in flight.</strong> Every pitot installation is slightly different, so ArduPilot uses a ratio to convert the pressure into airspeed (the default is around 2.0). ArduPilot can work out the right ratio on its own during a calibration flight of a few minutes of circuits or loitering. The <a href="https://ardupilot.org/plane/docs/calibrating-an-airspeed-sensor.html">ArduPilot airspeed calibration guide</a> describes how.</li>
+</ul>
+<p>A blocked or failing airspeed sensor can make an autonomous airplane stall or overspeed, and it is hard for the flight controller to detect. Manned aircraft have the same problem: blocked pitot tubes from ice, water, or insects have caused serious accidents, which is why airliners heat their pitot tubes and why pilots check them before every flight.</p>
 <h2 id="lidar-light-detection-and-ranging">LIDAR (light detection and ranging)</h2>
 <p>LIDAR works by measuring the time it takes light to travel from the sensor to an object and return. LIDAR, if properly calibrated, can provide very accurate distance measurements. On an autonomous aircraft system LIDAR can be used to assist in autoland to detect distance from the ground far more accurately than GPS or a pressure sensor. LIDAR can also be used to map surfaces that a UAS flies over creating very detailed maps and 3D models.</p>
 <figure class="textbook-figure"><a href="/assets/advanced-sensors/lidar-sensor.jpg"><img src="/assets/advanced-sensors/lidar-sensor.jpg" alt="A Garmin LIDAR rangefinder: a black housing with two round lenses side by side, one to send light and one to receive it, and a bundle of colored wires." width="1052" height="1147" loading="lazy"></a><figcaption><p>A LIDAR rangefinder (Garmin). One lens sends a pulse of light and the other receives its reflection.</p></figcaption></figure>
