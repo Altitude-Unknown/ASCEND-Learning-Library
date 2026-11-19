@@ -85,7 +85,8 @@
       "summary": "Learn the parts of an FPV system, compare analog and high-definition digital FPV, then build a working system and fly it with a safety pilot.",
       "outcomes": [
         "Name the four main parts of an FPV system and what the video transmitter and receiver each do.",
-        "Compare analog and high-definition digital FPV systems.",
+        "Compare analog and high-definition digital FPV systems, including delay, range, antennas, and how each behaves when the signal weakens.",
+        "Explain the FAA visual observer rule and FCC licensing for FPV, and how to fly FPV safely.",
         "Connect a camera and video transmitter at safe voltages, get live video on a display, and mount the system on an aircraft."
       ],
       "readings": [
@@ -100,6 +101,14 @@
         {
           "title": "High-definition FPV",
           "id": "high-definition-fpv"
+        },
+        {
+          "title": "FPV rules: the FAA and the FCC",
+          "id": "fpv-rules"
+        },
+        {
+          "title": "Flying FPV safely",
+          "id": "flying-fpv-safely"
         }
       ],
       "activities": [
@@ -119,7 +128,11 @@
         15,
         16,
         17,
-        18
+        18,
+        26,
+        27,
+        28,
+        29
       ],
       "skills": [
         "Connect an FPV camera to a video transmitter.",
@@ -193,7 +206,7 @@
     },
     "16": {
       "question": "What are the primary differences between analog and high-definition digital FPV systems?",
-      "answer": "Analog FPV systems are generally simpler and lower cost, while high-definition digital FPV systems provide much higher-quality video."
+      "answer": "Analog FPV systems are simpler and lower cost, have very little delay, and fade gradually into static as the signal weakens. High-definition digital systems give much higher-quality video and can record HD footage, but cost and weigh more, may have slightly more delay, and can freeze or drop out more suddenly when the signal is weak."
     },
     "17": {
       "question": "Why is it important to verify the operating voltage of an FPV camera and video transmitter before connecting them?",
@@ -230,6 +243,22 @@
     "25": {
       "question": "What can a camera like the Raspberry Pi AI Camera do that a normal camera can't, and what are its limits?",
       "answer": "It runs a small neural network on the camera chip, so it can report what it sees (for example, a person or vehicle and where it is in the picture), not just send images. It only recognizes what its model was trained on, small models are less accurate, and it can miss things or see things that aren't there, so a person should check important results."
+    },
+    "26": {
+      "question": "Why is it useful that an analog FPV picture fills with static as the signal weakens?",
+      "answer": "It gives the pilot a gradual warning that the aircraft is reaching the edge of its range, so they can turn back before the picture is lost. Digital systems may freeze or drop out with less warning."
+    },
+    "27": {
+      "question": "Why must you never power a video transmitter without its antenna attached?",
+      "answer": "With no antenna, the transmitter's power has nowhere to go, so the transmitter can overheat and damage itself."
+    },
+    "28": {
+      "question": "Under Part 107, does the view through FPV goggles count as visual line of sight? What is required instead?",
+      "answer": "No. A visual observer must keep the aircraft in sight with their own eyes and stay in constant communication with the pilot wearing the goggles. Recreational flyers also need a visual observer beside them."
+    },
+    "29": {
+      "question": "Why do most FPV pilots in the United States need an amateur (ham) radio license?",
+      "answer": "Very few FPV video transmitters, especially analog ones, are FCC-certified for license-free use, so operating them legally requires an amateur radio license. The entry-level Technician license covers the 5.8 GHz band. A transmitter with a valid FCC ID is certified and may not need one, sometimes only on certain channels or power levels."
     }
   }
 }

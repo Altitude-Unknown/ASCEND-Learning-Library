@@ -9,6 +9,6 @@ permalink: "/camera-video-systems/first-person-view/"
 ## Work through this unit
 
 1. **Watch.** Start with the short videos for this unit. If it has none yet, go straight to the reading.
-2. **Read and clarify.** Read the FPV sections of Chapter 7: first person view cameras, analog FPV, and high-definition FPV.
+2. **Read and clarify.** Read the FPV sections of Chapter 7: first person view cameras, analog FPV, high-definition FPV, FPV rules, and flying FPV safely.
 3. **Apply your understanding.** Complete the FPV setup lab, then show your instructor the skills listed for sign-off.
 4. **Check and revisit.** Answer the review questions in your own words, then open each answer to compare. The full skills checksheet for the chapter is at the end of this unit.
