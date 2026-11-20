@@ -18,7 +18,7 @@ platforms:
 - Fixed-Wing UAS
 actionLabel: View latest release on GitHub
 format: ZIP
-version: '2026.11.15'
+version: '2026.11.19.1'
 permalink: /resources/transmitter-configurator/
 externalUrl: https://github.com/Altitude-Unknown/RC-Airplane/releases/latest
 related:
@@ -54,7 +54,7 @@ The **Altitude Unknown RC Configurator** is the desktop app for the ASCEND trans
 - **update firmware** on the transmitter, the receiver, and the ASCEND flight controller;
 - **test the speaker** that sounds the flight-timer alarms.
 
-The app has four tabs, one for each job. This guide walks through them in order. It describes release **2026.11.15**; newer releases may add features.
+The app has four tabs, one for each job. This guide walks through them in order. It describes release **2026.11.19.1**; newer releases may add features.
 
 <p class="notice"><strong>Safety first</strong>Keep the aircraft powered off and remove the propeller whenever the transmitter is connected to the configurator. After any change to a model or any firmware update, check every control direction, the throttle safety, and the failsafe before flight.</p>
 
@@ -179,6 +179,8 @@ Two buttons on the transmitter can be assigned per model.
 - **Off — use selected rates**: the table's rates always apply.
 - **FBWA at CH5 low — full surface rates** or **FBWA at CH5 high — full surface rates**: in that channel 5 position the rudder, aileron and elevator rates go to 100%; in the other position your selected rates come back. Throttle, trims and expo don't change.
 
+**ASCEND flight controller standard** (firmware 2026.11.19.1 and later): set D10 to **Channel 5 — Toggle** (FBWA low, MANUAL high) and D7 to **Channel 6 — Toggle** (AUTO when high; low returns to the channel 5 mode), with **FBWA at CH5 low — full surface rates**.
+
 Pick the option that matches how channel 5 is set up on your flight controller. The transmitter cannot see which mode the flight controller is really in, so check on the bench that the mode and the rates change together. The [Flight Controller V4 Setup Guide](/resources/flight-controller-v4-setup/) has the ASCEND flight controller's mode settings.
 
 ### Control mixing
@@ -211,7 +213,7 @@ Export every model before a firmware update. A transmitter that stores models in
 1. Remove the propeller and keep the airplane powered off. Connect the transmitter in USB Config Mode.
 2. Click **New**, name the model, and select it in the list. Click **Load From Radio**.
 3. Choose the **Aircraft Type**. Leave **Mix aileron into rudder** off for now.
-4. Set **D10 / Trainer** to **Trainer** for buddy-box training, or to a Channel 5 option if the button switches flight modes.
+4. Set **D10 / Trainer** to **Trainer** for buddy-box training. For the ASCEND flight controller, set it to **Channel 5 — Toggle** (FBWA/MANUAL) and **D7 / Aux** to **Channel 6 — Toggle** (AUTO).
 5. Start with modest rates, for example 70%, and leave expo at 0. Check that every end point is between 1000 and 2000 µs.
 6. Click **Save To Radio**, then **Set Active**.
 7. If you clicked **New Bind**, or this is a new receiver, rebind the receiver.
@@ -336,6 +338,8 @@ If the status says the command is not supported, update the transmitter firmware
 
 ## Recent releases
 
+- **Channel 6 AUTO switch** (2026.11.19.1). The ASCEND flight controller firmware sets `RC6_OPTION 16`: with D7 set to Channel 6 — Toggle, D7 switches to AUTO and back.
+- **New transmitters flash straight after the bootloader** (2026.11.19). The Firmware Update tab no longer needs another sketch uploaded first on a board that only has its bootloader.
 - **Flash a local file** (2026.11.15). The Firmware Update tab can flash a firmware file from your computer.
 - **Bind trim-save and the flight-tested setup** (2026.11.14). Hold the transmitter's Bind button for 1 second to save your trims to the ASCEND flight controller. Update the transmitter, receiver and flight controller together, then rebind. See the [Flight Controller V4 Setup Guide](/resources/flight-controller-v4-setup/).
 - **Sensor orientation built in** (2026.11.09). Boards set up with 2026.11.01 used `AHRS_ORIENTATION=14`: after updating, set it to 0 and redo the accelerometer and compass calibrations before flight.
