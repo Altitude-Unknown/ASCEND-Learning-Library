@@ -10,8 +10,8 @@ permalink: /resources/flight-controller-v4-setup/
 delivery: web
 origin: contributed
 author: ASCEND-BOREALIS
-updated: '2026-11-14'
-version: '2026.11.14'
+updated: '2026-11-19'
+version: '2026.11.19.1'
 audience:
 - Students
 - Faculty Mentors
@@ -46,7 +46,7 @@ keywords:
 
 This guide is for teams setting up the ASCEND V4 flight controller in the standard ASCEND airplane. Every team flies the same airframe, so the firmware ships with the board settings and the tuned gains already in place. Your job is limited to the steps that differ from board to board: flashing, three calibrations, radio setup and pre-flight checks.
 
-The firmware in release **2026.11.14** carries the setup flown on 2026-11-14: mode switch, limits, response, AUTOTUNE gains and Bind trim-save. Steps marked *not yet confirmed* still need a detail checked; ask your pod lead.
+The firmware in release **2026.11.19.1** carries the setup flown on 2026-11-14 (mode switch, limits, response, AUTOTUNE gains and Bind trim-save) plus a channel 6 AUTO switch. Steps marked *not yet confirmed* still need a detail checked; ask your pod lead.
 
 ## 1. What you need
 
@@ -97,7 +97,11 @@ Do these in order, every time a board is installed or replaced. All three are in
 
 1. **Bind.** Turn the transmitter on, then hold **SW1** and press **SW2** on the flight controller board. The receiver LED shows when it's linked. *Not yet confirmed: the exact bind sequence and the LED pattern.*
 2. **Radio calibration.** Go to **Vehicle Setup → Radio** and move every stick and switch through its full range. With the sticks centered and the transmitter trims centered, the channels should read about 1500.
-3. **Flight mode switch.** The mode switch is Aux 1 (channel 5), a two-position switch: **low = FBWA, high = MANUAL**. This is built into the firmware, and every team starts with it. As your team progresses, you can change the modes to suit your needs, on channel 5, channel 6 or both. For example, an autonomous mission needs AUTO on one switch position: the [QGroundControl mission example](/flight-controllers/textbook/flight-controllers/#example-plan-a-mission-in-qgroundcontrol) in Chapter 6 sets this up. In the transmitter model, turn on full surface rates at CH5 low (`ch5_rate_mode 1`), so FBWA gets full surface travel and MANUAL keeps your selected rates.
+3. **Flight mode buttons.** Two mode controls are built into the firmware, and every team starts with them:
+   - **Channel 5** (Aux 1): **low = FBWA, high = MANUAL**.
+   - **Channel 6** (Aux 2): **high = AUTO**; low returns to the channel 5 mode. AUTO needs a GPS fix and a loaded mission, otherwise the flight controller stays in the channel 5 mode. See the [QGroundControl mission example](/flight-controllers/textbook/flight-controllers/#example-plan-a-mission-in-qgroundcontrol) in Chapter 6.
+
+   In the [RC Configurator](/resources/transmitter-configurator/), set the transmitter model's **D10 / Trainer** to **Channel 5 — Toggle** and **D7 / Aux** to **Channel 6 — Toggle**, and turn on full surface rates at CH5 low (`ch5_rate_mode 1`) so FBWA gets full surface travel and MANUAL keeps your selected rates. Both buttons start low at power-up, so the airplane starts in FBWA. A board set up before release 2026.11.19.1 keeps its own `RC6_OPTION`; set it to 16 for the AUTO button. On an instructor's radio used for buddy-box training, D10 is the trainer hand-off instead, so the instructor can't switch FBWA/MANUAL with it.
 4. **Arming.** Arm with the board's ARM button: throttle at zero, mode MANUAL or FBWA, hold 2 s. The button does nothing in other modes. The GPS must have a 3D fix before the airplane will arm, so that Return to Launch knows where home is. The sticks must also read neutral: a transmitter trim the flight controller doesn't know about blocks arming with "Roll (RC1) is not neutral" (or Pitch, Yaw). Save your trims with the Bind button (next step).
 5. **Trims (Bind trim-save).** Trim with the transmitter as usual, then save the trims to the flight controller: in **MANUAL**, sticks released and the airplane still (or in level flight), hold **Bind for 1 second**. The transmitter plays two short chirps. When the flight controller accepts the save, its **status LED blinks fast for about 3 seconds**. **Leave the transmitter trims where they are afterward; do not zero them.** The save is rejected, and nothing changes, outside MANUAL, with a stick more than 20% off center, while the airplane rotates fast or in radio failsafe. On the ground before a first flight: set the surfaces neutral with the trims in MANUAL, then save. In the air: trim in MANUAL until it flies straight hands-off, then save. Each save replaces the last.
 6. **Failsafe.** If the radio link is lost, the airplane returns to launch at 100 m. Test this on the bench with the propeller removed: arm, turn the transmitter off, and confirm QGroundControl reports a radio failsafe.
