@@ -13,6 +13,7 @@ const buildMultirotor = read('./buildMultirotorCourse.json');
 const flightControllers = read('./flightControllersCourse.json');
 const cameraVideo = read('./cameraVideoCourse.json');
 const advancedSensors = read('./advancedSensorsCourse.json');
+const part101 = read('./part101Course.json');
 
 // Lab manual courses share one study method; only the chapter differs.
 const labManualMethod = chapter => [
@@ -242,5 +243,32 @@ export default {
     chapterTitle: pidControllers.chapterTitle,
     reviewQuestions: pidControllers.reviewQuestions,
     units: pidControllers.units
+  },
+  part101: {
+    id: 'part101',
+    title: 'FAA Part 101 for High-Altitude Balloons',
+    shortTitle: 'Part 101',
+    url: '/part101/',
+    label: 'FAA PART 101',
+    sidebarLabel: 'BROWSE THE COURSE',
+    sidebarCollection: 'part101Modules',
+    overviewLabel: 'Course overview',
+    check: 'review',
+    final: {url: '/ballooning/', title: 'High-Altitude Ballooning'},
+    intro: [
+      'This course teaches the FAA rules for unmanned free balloons in 14 CFR Part 101: when the rules apply to your balloon, the general rules every balloon follows, the operating limitations, the equipment and markings a covered balloon needs, and the notices and position reports you give air traffic control.',
+      'Each unit quotes the regulation exactly, explains it in plain English, and then has you apply it to a sample flight and to your own. The chapter cites every source, so you can check each rule yourself.'
+    ],
+    notice: {title: 'Check the current rules', text: 'This course explains the rules for training; it is not legal advice. The regulation text was taken from the eCFR, current as of November 19, 2026. Read the current text on the eCFR before every flight, and follow any instructions from ATC.'},
+    method: [
+      {title: 'Watch & review', text: 'Start with the unit’s lesson video. If a unit has no video yet, start with the reading.'},
+      {title: 'Read & clarify', text: 'Read the sections of the chapter listed for the unit. Each rule is quoted exactly, then explained.'},
+      {title: 'Apply', text: 'Work the activity: first the sample flight, then your own team’s balloon.'},
+      {title: 'Check & revisit', text: 'Answer the review questions in your own words, then open each answer to compare.'}
+    ],
+    chapterUrl: part101.chapterUrl,
+    chapterTitle: part101.chapterTitle,
+    reviewQuestions: part101.reviewQuestions,
+    units: part101.units
   }
 };

@@ -1,0 +1,235 @@
+---
+{
+  "layout": "layouts/textbook-chapter.njk",
+  "tags": [],
+  "eleventyExcludeFromCollections": true,
+  "topic": "ballooning",
+  "courseId": "part101",
+  "title": "FAA Part 101 for High-Altitude Balloons",
+  "description": "The FAA rules for unmanned free balloons: when Part 101 applies, the general rules, operating limitations, equipment and marking, notices to ATC, and position reports.",
+  "chapterNumber": 1,
+  "textbookEyebrow": "FAA PART 101 · WEB EDITION",
+  "sourceNote": "Written for ASCEND from the text of 14 CFR Part 101 (eCFR, current as of November 19, 2026), FAA Order JO 7110.65BB, and the Aeronautical Information Manual. Regulation text is quoted exactly. This chapter explains the rules for training; it is not legal advice. Check the current regulation on the eCFR before every flight.",
+  "headerLinks": [
+    {"title": "14 CFR Part 101 on the eCFR", "url": "https://www.ecfr.gov/current/title-14/chapter-I/subchapter-F/part-101"},
+    {"title": "Sources", "url": "#sources"}
+  ],
+  "toc": [
+    {"title": "What Part 101 covers", "id": "what-part-101-covers"},
+    {"title": "Is your balloon covered?", "id": "is-your-balloon-covered"},
+    {"title": "Working out the weight/size ratio", "id": "weight-size-ratio"},
+    {"title": "Waivers", "id": "waivers"},
+    {"title": "Rules for every balloon", "id": "rules-for-every-balloon"},
+    {"title": "Restricted areas and Subpart D", "id": "restricted-areas-and-subpart-d"},
+    {"title": "Checking your launch site and path", "id": "checking-the-map"},
+    {"title": "Operating limitations", "id": "operating-limitations"},
+    {"title": "Reading clouds and visibility", "id": "reading-the-weather"},
+    {"title": "Equipment and marking", "id": "equipment-and-marking"},
+    {"title": "Lights, antennas, and suspension lines", "id": "lights-and-markings"},
+    {"title": "The prelaunch notice", "id": "prelaunch-notice"},
+    {"title": "Cancellation and launch notices", "id": "cancellation-and-launch-notices"},
+    {"title": "Balloon position reports", "id": "position-reports"},
+    {"title": "What ATC does with your balloon", "id": "what-atc-does"},
+    {"title": "Derelict balloons", "id": "derelict-balloons"},
+    {"title": "Sources", "id": "sources"}
+  ],
+  "permalink": "/part101/textbook/part-101-for-high-altitude-balloons/"
+}
+---
+<p>Every high-altitude balloon flight shares the sky with airplanes. The FAA rules for unmanned free balloons are in Title 14 of the Code of Federal Regulations, Part 101, “Moored Balloons, Kites, Amateur Rockets, and Unmanned Free Balloons.” Two of its four subparts matter for a high-altitude balloon (HAB) flight: <strong>Subpart A, General</strong> (§§ 101.1–101.7) and <strong>Subpart D, Unmanned Free Balloons</strong> (§§ 101.31–101.39). Subpart B covers moored balloons and kites, and Subpart C covers amateur rockets; this course leaves them out.</p>
+<p>Each section below quotes the regulation exactly, in a box with its citation, and then explains it. When you plan a real flight, read the current text on the <a href="https://www.ecfr.gov/current/title-14/chapter-I/subchapter-F/part-101">eCFR</a>: regulations change, and the eCFR is the official, up-to-date version.</p>
+
+<h2 id="what-part-101-covers">What Part 101 covers</h2>
+<p>Part 101 starts by listing what it applies to. For balloons that fly free (not tied to the ground), the list is in § 101.1(a)(4):</p>
+<blockquote class="regulation-quote">
+<p>(a) This part prescribes rules governing the operation in the United States, of the following: …</p>
+<p>(4) Except as provided for in § 101.7, any unmanned free balloon that—</p>
+<p>(i) Carries a payload package that weighs more than four pounds and has a weight/size ratio of more than three ounces per square inch on any surface of the package, determined by dividing the total weight in ounces of the payload package by the area in square inches of its smallest surface;</p>
+<p>(ii) Carries a payload package that weighs more than six pounds;</p>
+<p>(iii) Carries a payload, of two or more packages, that weighs more than 12 pounds; or</p>
+<p>(iv) Uses a rope or other device for suspension of the payload that requires an impact force of more than 50 pounds to separate the suspended payload from the balloon.</p>
+<footer><cite>14 CFR 101.1(a)(4)</cite></footer>
+</blockquote>
+<p>Notice the words “Except as provided for in § 101.7.” Section 101.7, the hazardous operations rule, applies to every unmanned free balloon, even one too light to meet any of the four tests. A small balloon is not covered by the rest of Part 101, but it still may not be flown in a way that creates a hazard, and nothing may be dropped from it in a way that creates a hazard. The <a href="#rules-for-every-balloon">rules for every balloon</a> section explains § 101.7.</p>
+
+<h2 id="is-your-balloon-covered">Is your balloon covered?</h2>
+<p>Your balloon is covered by Part 101 if <strong>any one</strong> of the four tests in § 101.1(a)(4) is true. Check all four for every flight, because adding a camera, a second sensor box, or a stronger line can change the answer.</p>
+<div class="table-wrap"><table>
+<caption>The four tests of § 101.1(a)(4). One “yes” is enough for Part 101 to apply.</caption>
+<thead><tr><th scope="col">Test</th><th scope="col">The balloon is covered if…</th><th scope="col">What to measure</th></tr></thead>
+<tbody>
+<tr><th scope="row">(i)</th><td>A payload package weighs more than 4 pounds <strong>and</strong> its weight/size ratio is more than 3 ounces per square inch</td><td>Each package’s weight in ounces and the area of its smallest side in square inches</td></tr>
+<tr><th scope="row">(ii)</th><td>Any one payload package weighs more than 6 pounds</td><td>Each package’s weight</td></tr>
+<tr><th scope="row">(iii)</th><td>A payload of two or more packages weighs more than 12 pounds in total</td><td>The total weight of all the packages</td></tr>
+<tr><th scope="row">(iv)</th><td>The line or other device holding the payload needs an impact force of more than 50 pounds to separate the payload from the balloon</td><td>What it takes to separate your suspension line or device</td></tr>
+</tbody>
+</table></div>
+<p>The rule says “payload package” and “payload”; it does not count the balloon itself in these tests. Test (iv) is written as an <em>impact force</em> to separate the payload. Keep the manufacturer’s information for your line or separation device with your flight records, and ask your instructor how your program shows that it meets this test.</p>
+
+<h2 id="weight-size-ratio">Working out the weight/size ratio</h2>
+<p>Test (i) uses a weight/size ratio, worked out the way the rule says: “dividing the total weight in ounces of the payload package by the area in square inches of its smallest surface.”</p>
+<ol>
+<li>Weigh the package and convert to ounces. There are 16 ounces in a pound.</li>
+<li>Find the package’s smallest side and work out its area: length × width, in square inches.</li>
+<li>Divide the weight in ounces by that area. The answer is in ounces per square inch.</li>
+</ol>
+<p><strong>Example 1.</strong> A 5-pound payload in a box 6 inches × 6 inches × 8 inches. Weight: 5 × 16 = 80 ounces. Smallest side: 6 × 6 = 36 square inches. Ratio: 80 ÷ 36 ≈ 2.2 ounces per square inch. The package is over 4 pounds, but the ratio is not more than 3, so test (i) is not met. It is not over 6 pounds, so test (ii) is not met either.</p>
+<p><strong>Example 2.</strong> The same 5 pounds packed into a box 4 inches × 4 inches × 6 inches. Weight: 80 ounces. Smallest side: 4 × 4 = 16 square inches. Ratio: 80 ÷ 16 = 5 ounces per square inch. The package is over 4 pounds <strong>and</strong> the ratio is more than 3, so test (i) is met and the balloon is covered by Part 101. The same weight in a smaller, denser box changes the answer.</p>
+<p><strong>Example 3.</strong> Three packages of 4.5 pounds each: 13.5 pounds in total. Each package is checked on its own for tests (i) and (ii), but together they are more than 12 pounds, so test (iii) is met and the balloon is covered.</p>
+
+<h2 id="waivers">Waivers</h2>
+<blockquote class="regulation-quote">
+<p>No person may conduct operations that require a deviation from this part except under a certificate of waiver issued by the Administrator.</p>
+<footer><cite>14 CFR 101.3</cite></footer>
+</blockquote>
+<p>If a flight cannot meet a Part 101 rule, it may only be flown under a certificate of waiver from the FAA. Plan your flight to meet the rules; a waiver is for a deviation the FAA has approved in advance, not a way around a rule on launch day.</p>
+
+<h2 id="rules-for-every-balloon">Rules for every balloon</h2>
+<p>Two short sections of Subpart A apply to every unmanned free balloon covered by Part 101. The second one, § 101.7, also applies to the smaller balloons that § 101.1(a)(4) leaves out.</p>
+<blockquote class="regulation-quote">
+<p>No person may operate a moored balloon, kite, amateur rocket, or unmanned free balloon in a prohibited or restricted area unless he has permission from the using or controlling agency, as appropriate.</p>
+<footer><cite>14 CFR 101.5</cite></footer>
+</blockquote>
+<blockquote class="regulation-quote">
+<p>(a) No person may operate any moored balloon, kite, amateur rocket, or unmanned free balloon in a manner that creates a hazard to other persons, or their property.</p>
+<p>(b) No person operating any moored balloon, kite, amateur rocket, or unmanned free balloon may allow an object to be dropped therefrom, if such action creates a hazard to other persons or their property.</p>
+<footer><cite>14 CFR 101.7</cite></footer>
+</blockquote>
+<p>Prohibited and restricted areas are kinds of special use airspace (<a href="https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap3_section_4.html">AIM 3-4-2 and 3-4-3</a>). Flying a balloon in one needs permission from the agency that uses or controls the area. The AIM notes that special use airspace is depicted on aeronautical charts, “except for controlled firing areas (CFA), temporary military operations areas (MOA), and temporary restricted areas,” so a chart alone does not show a temporary restricted area. Section 101.7 is about people and property: how and where you fly, and anything that comes off the balloon, such as a payload released by a cut-down, must not create a hazard to others.</p>
+
+<h2 id="restricted-areas-and-subpart-d">Restricted areas and Subpart D</h2>
+<blockquote class="regulation-quote">
+<p>This subpart applies to the operation of unmanned free balloons. However, a person operating an unmanned free balloon within a restricted area must comply only with § 101.33 (d) and (e) and with any additional limitations that are imposed by the using or controlling agency, as appropriate.</p>
+<footer><cite>14 CFR 101.31</cite></footer>
+</blockquote>
+<p>Subpart D is the set of balloon rules in the rest of this course. Inside a restricted area, where you already need the controlling agency’s permission under § 101.5, Subpart D asks only for § 101.33(d) and (e), the congested-area and impact rules, plus whatever limits that agency sets.</p>
+
+<h2 id="checking-the-map">Checking your launch site and path</h2>
+<p>Several rules depend on where the balloon is: § 101.5 (prohibited and restricted areas), § 101.33(a) (the surface areas of Class B, C, D, and E airspace designated for an airport), and § 101.33(d) (congested areas during the first 1,000 feet of ascent). Before each flight, check both the launch site and the predicted path.</p>
+<ul>
+<li><strong>FAA sectional chart.</strong> The FAA publishes sectional charts on its <a href="https://www.faa.gov/air_traffic/flight_info/aeronav/digital_products/vfr/">VFR Raster Charts</a> page. They show charted prohibited and restricted areas and the airspace around airports; temporary restricted areas are not charted. The <a href="https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap3_section_2.html">Aeronautical Information Manual, Chapter 3, Section 2</a> describes controlled airspace, and the airspace unit of the <a href="/part107/airspace/">FAA Part 107 course</a> explains how to read it on a chart.</li>
+<li><strong>ASCEND Flight Control.</strong> The ASCEND ground station, on the <a href="/software/">Software page</a>, can show the sectional chart and FAA airspace on its map. In <strong>Layers ▾</strong>, choose <strong>VFR sectional chart</strong>, then turn on <strong>Controlled airspace (Class B, C, D, E surface)</strong> and <strong>Special use airspace (prohibited, restricted, MOA)</strong>. Right-click the map and choose <strong>What airspace is here?</strong> to check one spot. The app marks these layers “for planning only”; the FAA chart and ATC have the final word.</li>
+</ul>
+
+<h2 id="operating-limitations">Operating limitations</h2>
+<blockquote class="regulation-quote">
+<p>No person may operate an unmanned free balloon—</p>
+<p>(a) Unless otherwise authorized by ATC, below 2,000 feet above the surface within the lateral boundaries of the surface areas of Class B, Class C, Class D, or Class E airspace designated for an airport;</p>
+<p>(b) At any altitude where there are clouds or obscuring phenomena of more than five-tenths coverage;</p>
+<p>(c) At any altitude below 60,000 feet standard pressure altitude where the horizontal visibility is less than five miles;</p>
+<p>(d) During the first 1,000 feet of ascent, over a congested area of a city, town, or settlement or an open-air assembly of persons not associated with the operation; or</p>
+<p>(e) In such a manner that impact of the balloon, or part thereof including its payload, with the surface creates a hazard to persons or property not associated with the operation.</p>
+<footer><cite>14 CFR 101.33</cite></footer>
+</blockquote>
+<h3 id="limitation-airspace">(a) Airport surface areas</h3>
+<p>Inside the lateral boundaries of an airport’s Class B, C, D, or E surface area, the balloon may not be below 2,000 feet above the surface unless ATC authorizes it. A launch from inside one of these areas, or a climb that drifts through one, needs that authorization.</p>
+<h3 id="limitation-weather">(b) and (c) Clouds and visibility</h3>
+<p>Two weather limits: no flight at any altitude where clouds or obscuring phenomena cover more than five-tenths of the sky, and no flight below 60,000 feet standard pressure altitude where horizontal visibility is less than five miles. The cloud limit applies at <em>any</em> altitude, so it covers the whole ascent and descent, not only the launch site. The next section shows how to read these from a weather report.</p>
+<h3 id="limitation-people">(d) and (e) People and property</h3>
+<p>During the first 1,000 feet of ascent, the balloon may not be over a congested area of a city, town, or settlement, or over an open-air assembly of people not associated with the flight. Think about the wind, too: a balloon drifts while it climbs. And at no point may the impact of the balloon, or any part of it, including the payload, with the surface create a hazard to people or property not associated with the flight. That shapes where you launch and where your predicted landing is.</p>
+
+<h2 id="reading-the-weather">Reading clouds and visibility</h2>
+<p>Aviation weather reports (METARs) and forecasts (TAFs) report cloud cover in eighths of the sky. The Aeronautical Information Manual’s key to TAF and METAR (<a href="https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap7_section_1.html">AIM 7-1-28</a>) defines the cloud amounts:</p>
+<div class="table-wrap"><table>
+<caption>Cloud amounts in METARs and TAFs (AIM 7-1-28), compared with the more-than-five-tenths limit of § 101.33(b).</caption>
+<thead><tr><th scope="col">Report</th><th scope="col">Sky covered</th><th scope="col">More than five-tenths?</th></tr></thead>
+<tbody>
+<tr><th scope="row">FEW</th><td>More than 0/8 up to 2/8</td><td>No</td></tr>
+<tr><th scope="row">SCT (scattered)</th><td>3/8 to 4/8</td><td>No: 4/8 is exactly half, and the rule says <em>more than</em> five-tenths</td></tr>
+<tr><th scope="row">BKN (broken)</th><td>5/8 to 7/8</td><td>Yes</td></tr>
+<tr><th scope="row">OVC (overcast)</th><td>8/8</td><td>Yes</td></tr>
+</tbody>
+</table></div>
+<p>So a broken or overcast layer anywhere the balloon will fly rules out the flight. A METAR describes the sky over one airport at one time; the rule applies wherever the balloon is, so use forecasts for the whole path and timing of the flight. The same AIM paragraph says surface visibility is reported in statute miles; anything less than 5 miles rules out flight below 60,000 feet standard pressure altitude. The weather unit of the <a href="/part107/">FAA Part 107 course</a> explains how to read METARs and TAFs.</p>
+
+<h2 id="equipment-and-marking">Equipment and marking</h2>
+<blockquote class="regulation-quote">
+<p>(a) No person may operate an unmanned free balloon unless—</p>
+<p>(1) It is equipped with at least two payload cut-down systems or devices that operate independently of each other;</p>
+<p>(2) At least two methods, systems, devices, or combinations thereof, that function independently of each other, are employed for terminating the flight of the balloon envelope; and</p>
+<p>(3) The balloon envelope is equipped with a radar reflective device(s) or material that will present an echo to surface radar operating in the 200 MHz to 2700 MHz frequency range.</p>
+<p>The operator shall activate the appropriate devices required by paragraphs (a) (1) and (2) of this section when weather conditions are less than those prescribed for operation under this subpart, or if a malfunction or any other reason makes the further operation hazardous to other air traffic or to persons and property on the surface.</p>
+<footer><cite>14 CFR 101.35(a)</cite></footer>
+</blockquote>
+<p>A covered balloon needs three things: two <strong>independent</strong> ways to cut the payload loose, two <strong>independent</strong> ways to end the flight of the balloon envelope, and a radar reflector on the envelope that shows up on surface radar from 200 to 2,700 MHz. “Independently” matters: two cut-downs that share one battery, one radio, or one timer can fail together. The last paragraph is a duty, not just equipment: you must use those devices if the weather drops below the Subpart D limits, or if anything makes the flight hazardous.</p>
+<p>ASCEND balloon teams use <a href="/resources/yellowstone-guide/">YELLOWSTONE</a> for flight tracking and flight termination. When you plan a covered flight, count how many independent cut-down systems and envelope termination methods your whole payload has, and what each one depends on.</p>
+
+<h2 id="lights-and-markings">Lights, antennas, and suspension lines</h2>
+<blockquote class="regulation-quote">
+<p>(b) No person may operate an unmanned free balloon below 60,000 feet standard pressure altitude between sunset and sunrise (as corrected to the altitude of operation) unless the balloon and its attachments and payload, whether or not they become separated during the operation, are equipped with lights that are visible for at least 5 miles and have a flash frequency of at least 40, and not more than 100, cycles per minute.</p>
+<p>(c) No person may operate an unmanned free balloon that is equipped with a trailing antenna that requires an impact force of more than 50 pounds to break it at any point, unless the antenna has colored pennants or streamers that are attached at not more than 50 foot intervals and that are visible for at least one mile.</p>
+<p>(d) No person may operate between sunrise and sunset an unmanned free balloon that is equipped with a suspension device (other than a highly conspicuously colored open parachute) more than 50 feet along [sic], unless the suspension device is colored in alternate bands of high conspicuity colors or has colored pennants or streamers attached which are visible for at least one mile.</p>
+<footer><cite>14 CFR 101.35(b)–(d)</cite></footer>
+</blockquote>
+<div class="table-wrap"><table>
+<caption>Lighting and marking requirements of § 101.35(b)–(d).</caption>
+<thead><tr><th scope="col">When</th><th scope="col">Requirement</th></tr></thead>
+<tbody>
+<tr><th scope="row">Below 60,000 feet, between sunset and sunrise</th><td>Lights on the balloon, its attachments, and the payload (even if they separate), visible for at least 5 miles, flashing 40 to 100 times per minute</td></tr>
+<tr><th scope="row">A trailing antenna that needs more than 50 pounds to break</th><td>Colored pennants or streamers at intervals of 50 feet or less, visible for at least 1 mile</td></tr>
+<tr><th scope="row">Between sunrise and sunset, a suspension device more than 50 feet long</th><td>Alternate bands of high conspicuity colors, or colored pennants or streamers visible for at least 1 mile (not needed for a highly conspicuously colored open parachute)</td></tr>
+</tbody>
+</table></div>
+<p>The eCFR text of § 101.35(d) reads “more than 50 feet along”; it is quoted exactly above.</p>
+
+<h2 id="prelaunch-notice">The prelaunch notice</h2>
+<blockquote class="regulation-quote">
+<p>(a) Prelaunch notice: Except as provided in paragraph (b) of this section, no person may operate an unmanned free balloon unless, within 6 to 24 hours before beginning the operation, he gives the following information to the FAA ATC facility that is nearest to the place of intended operation:</p>
+<p>(1) The balloon identification.</p>
+<p>(2) The estimated date and time of launching, amended as necessary to remain within plus or minus 30 minutes.</p>
+<p>(3) The location of the launching site.</p>
+<p>(4) The cruising altitude.</p>
+<p>(5) The forecast trajectory and estimated time to cruising altitude or 60,000 feet standard pressure altitude, whichever is lower.</p>
+<p>(6) The length and diameter of the balloon, length of the suspension device, weight of the payload, and length of the trailing antenna.</p>
+<p>(7) The duration of flight.</p>
+<p>(8) The forecast time and location of impact with the surface of the earth.</p>
+<p>(b) For solar or cosmic disturbance investigations involving a critical time element, the information in paragraph (a) of this section shall be given within 30 minutes to 24 hours before beginning the operation.</p>
+<footer><cite>14 CFR 101.37(a)–(b)</cite></footer>
+</blockquote>
+<p>The notice goes to the FAA ATC facility nearest to the launch site, <strong>no more than 24 hours and no less than 6 hours</strong> before the operation begins. For a 9:00 a.m. launch, that window runs from 9:00 a.m. the day before to 3:00 a.m. on launch day. If your launch time changes, the estimate has to stay within plus or minus 30 minutes, so call back with an amended time. Most of the eight items come from your flight prediction and your build sheet, so have them written down before you call.</p>
+
+<h2 id="cancellation-and-launch-notices">Cancellation and launch notices</h2>
+<blockquote class="regulation-quote">
+<p>(c) Cancellation notice: If the operation is canceled, the person who intended to conduct the operation shall immediately notify the nearest FAA ATC facility.</p>
+<p>(d) Launch notice: Each person operating an unmanned free balloon shall notify the nearest FAA or military ATC facility of the launch time immediately after the balloon is launched.</p>
+<footer><cite>14 CFR 101.37(c)–(d)</cite></footer>
+</blockquote>
+<p>Two more calls: if you cancel, tell the nearest FAA ATC facility right away; and as soon as the balloon is up, report the launch time to the nearest FAA or military ATC facility.</p>
+
+<h2 id="position-reports">Balloon position reports</h2>
+<blockquote class="regulation-quote">
+<p>(a) Each person operating an unmanned free balloon shall:</p>
+<p>(1) Unless ATC requires otherwise, monitor the course of the balloon and record its position at least every two hours; and</p>
+<p>(2) Forward any balloon position reports requested by ATC.</p>
+<p>(b) One hour before beginning descent, each person operating an unmanned free balloon shall forward to the nearest FAA ATC facility the following information regarding the balloon:</p>
+<p>(1) The current geographical position.</p>
+<p>(2) The altitude.</p>
+<p>(3) The forecast time of penetration of 60,000 feet standard pressure altitude (if applicable).</p>
+<p>(4) The forecast trajectory for the balance of the flight.</p>
+<p>(5) The forecast time and location of impact with the surface of the earth.</p>
+<p>(c) If a balloon position report is not recorded for any two-hour period of flight, the person operating an unmanned free balloon shall immediately notify the nearest FAA ATC facility. The notice shall include the last recorded position and any revision of the forecast trajectory. The nearest FAA ATC facility shall be notified immediately when tracking of the balloon is re-established.</p>
+<p>(d) Each person operating an unmanned free balloon shall notify the nearest FAA ATC facility when the operation is ended.</p>
+<footer><cite>14 CFR 101.39</cite></footer>
+</blockquote>
+<p>During the flight you <strong>record</strong> the balloon’s position at least every two hours, and send reports to ATC when ATC asks for them. One hour before descent begins, you call with five items. If two hours go by without a recorded position, call immediately with the last position and any change to the forecast path, and call again when you have the balloon back. When the operation is over, tell the nearest FAA ATC facility.</p>
+<p>A tracking system such as <a href="/resources/yellowstone-guide/">YELLOWSTONE</a> with the ASCEND ground station gives you positions to record. Keep a flight log with the time and position of each record, so you can see at a glance when the next one is due.</p>
+
+<h2 id="what-atc-does">What ATC does with your balloon</h2>
+<p>Controllers follow FAA Order JO 7110.65BB, <em>Air Traffic Control</em> (effective July 9, 2026). Paragraph <a href="https://www.faa.gov/air_traffic/publications/atpubs/atc_html/chap9_section_6.html">9-6-1</a> tells them what to do when an unmanned free balloon described in § 101.1(a)(4) is in their airspace. Among other things, controllers:</p>
+<ul>
+<li>post the balloon flight on flight progress strips along the planned trajectory, using the prelaunch notice information, and revise it as tracking and position reports come in;</li>
+<li>radar flight follow the balloon as far as their equipment allows, and otherwise track it through a chase plane, telephone contact with the operator, or ground observation reports;</li>
+<li>give traffic advisories to affected aircraft with the balloon’s known or estimated position, direction of movement, and altitude, reported as “reported” or “unknown”.</li>
+</ul>
+<p>The same paragraph notes that, as § 101.39(a) says, operators do not forward position reports unless ATC asks, and that the operator must advise ATC one hour before descent. Your notices and reports are what controllers use to keep other aircraft clear of your balloon.</p>
+
+<h2 id="derelict-balloons">Derelict balloons</h2>
+<p>JO 7110.65BB paragraph <a href="https://www.faa.gov/air_traffic/publications/atpubs/atc_html/chap9_section_6.html">9-6-2</a> calls a balloon <em>derelict</em> when “an unmanned free balloon flight cannot be terminated as planned.” Controllers then flight follow the balloon and, as far as possible, separate the aircraft they control from it. If radar contact is lost, they broadcast an advisory to all aircraft in the affected airspace every 10 minutes until the balloon is no longer a factor. That is why the termination equipment of § 101.35 and the calls of § 101.39 matter: a balloon that can’t be brought down, or that nobody is tracking, becomes a problem for every pilot nearby.</p>
+
+<h2 id="sources">Sources</h2>
+<ul>
+<li>14 CFR Part 101, Subpart A (§§ 101.1–101.7) and Subpart D (§§ 101.31–101.39), <a href="https://www.ecfr.gov/current/title-14/chapter-I/subchapter-F/part-101">Electronic Code of Federal Regulations</a>, current as of November 19, 2026. Citations to the Federal Register amendments are listed with each section on the eCFR.</li>
+<li>FAA Order JO 7110.65BB, <em>Air Traffic Control</em>, effective July 9, 2026: <a href="https://www.faa.gov/air_traffic/publications/atpubs/atc_html/chap9_section_6.html">Chapter 9, Section 6, Unmanned Free Balloons</a> (paragraphs 9-6-1 and 9-6-2).</li>
+<li>FAA <em>Aeronautical Information Manual</em>, effective July 9, 2026: <a href="https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap7_section_1.html">paragraph 7-1-28, Key to Aerodrome Forecast (TAF) and Aviation Routine Weather Report (METAR)</a>; <a href="https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap3_section_2.html">Chapter 3, Section 2, Controlled Airspace</a>; and <a href="https://www.faa.gov/air_traffic/publications/atpubs/aim_html/chap3_section_4.html">Chapter 3, Section 4, Special Use Airspace</a>.</li>
+<li>FAA <a href="https://www.faa.gov/air_traffic/flight_info/aeronav/digital_products/vfr/">VFR Raster Charts</a> (sectional charts).</li>
+</ul>

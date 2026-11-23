@@ -448,7 +448,18 @@
       },
       {
         "title": "Flight Planning",
-        "slug": "flight-planning"
+        "slug": "flight-planning",
+        "description": "Check whether FAA Part 101 applies to your balloon, then plan the launch site, weather, and notices it requires.",
+        "links": [
+          {
+            "title": "FAA Part 101 for High-Altitude Balloons",
+            "url": "/part101/"
+          },
+          {
+            "title": "Prepare a prelaunch notice",
+            "url": "/resources/part101-prelaunch-notice/"
+          }
+        ]
       },
       {
         "title": "Tracking & Flight Termination",
@@ -481,7 +492,18 @@
       },
       {
         "title": "Safety",
-        "slug": "safety"
+        "slug": "safety",
+        "description": "Fly within the Part 101 operating limitations, carry the required termination equipment, and keep ATC informed during the flight.",
+        "links": [
+          {
+            "title": "FAA Part 101 for High-Altitude Balloons",
+            "url": "/part101/"
+          },
+          {
+            "title": "Go or no-go?",
+            "url": "/resources/part101-go-no-go/"
+          }
+        ]
       }
     ],
     "overview": [
@@ -501,6 +523,13 @@
       {
         "title": "Explore long-range transport",
         "url": "/science/#rq7"
+      }
+    ],
+    "courses": [
+      {
+        "title": "FAA Part 101 for High-Altitude Balloons",
+        "url": "/part101/",
+        "description": "Learn the FAA rules for unmanned free balloons in six units: when Part 101 applies, the general rules, operating limitations, equipment and marking, notices to ATC, and position reports. Each unit pairs a reading with an activity and review questions."
       }
     ]
   },

@@ -2,8 +2,9 @@ import {test, expect} from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
 import {readFileSync, existsSync} from 'node:fs';
 
-// Courses built from lab manual chapters by scripts/import-lab-manual.py.
-// Add each new chapter's course here.
+// Single-chapter courses: those built from lab manual chapters by
+// scripts/import-lab-manual.py, and others that follow the same layout.
+// Add each new course here.
 const COURSES = [
   {data: 'electricalBasicsCourse.json', url: '/electrical-basics/', title: 'Electrical Basics', images: 3},
   {data: 'uasHardwareCourse.json', url: '/uas-hardware/', title: 'UAS Hardware and Electronics', images: 88},
@@ -11,7 +12,8 @@ const COURSES = [
   {data: 'flightControllersCourse.json', url: '/flight-controllers/', title: 'Flight Controllers', images: 20},
   {data: 'cameraVideoCourse.json', url: '/camera-video-systems/', title: 'Camera and Video Systems', images: 9},
   {data: 'advancedSensorsCourse.json', url: '/advanced-sensors/', title: 'Advanced Sensors', images: 7},
-  {data: 'pidControllersCourse.json', url: '/pid-controllers/', title: 'PID Controllers', images: 0, equations: 6}
+  {data: 'pidControllersCourse.json', url: '/pid-controllers/', title: 'PID Controllers', images: 0, equations: 6},
+  {data: 'part101Course.json', url: '/part101/', title: 'FAA Part 101 for High-Altitude Balloons', images: 0}
 ];
 const axe = page => new AxeBuilder({page}).withTags(['wcag2a', 'wcag2aa', 'wcag21aa', 'wcag22aa']).analyze();
 
