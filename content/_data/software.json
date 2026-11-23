@@ -33,6 +33,17 @@
     },
     {
       "group": "rc",
+      "kind": "Ground control station",
+      "name": "ASCEND Flight Control",
+      "status": "Beta",
+      "summary": "The ground station made for the ASCEND flight controller: plan and upload missions on a map, watch a flight with an attitude indicator and the airplane's track, change settings explained in plain English, and run the accelerometer, level, compass, and radio calibrations. The RC Configurator is built in.",
+      "platforms": ["Windows x64", "macOS (Apple Silicon)", "Raspberry Pi (64-bit)"],
+      "download": "https://github.com/Altitude-Unknown/RC-Airplane/releases/tag/flight-control-v2026.11.22.1",
+      "source": "https://github.com/Altitude-Unknown/RC-Airplane/tree/main/ascend_flight_control",
+      "note": "Beta: tested with the ArduPilot simulator but not yet on many airplanes, so save a backup of your settings first (Aircraft Settings, then Save Backup…). On Windows, if you see “Windows protected your PC,” choose More info, then Run anyway."
+    },
+    {
+      "group": "rc",
       "name": "Flight Lab RC",
       "summary": "A free RC flight simulator with flying sites, wind, and thermals. Practice with the Altitude Unknown transmitter or a gamepad before flying the trainer.",
       "platforms": ["macOS (Apple Silicon and Intel)", "Windows x64", "Raspberry Pi (64-bit)"],
