@@ -16,6 +16,11 @@ test('Software page lists every app with current download links', async ({page})
    if (app.download) {
     if (app.external) {
      expect(app.download).toMatch(/^https:\/\//);
+    } else if (app.pinnedRelease) {
+     // A repository whose "latest" release belongs to another app links to a specific
+     // release tag instead; the data must say why, so it gets updated with each release.
+     expect(app.pinnedRelease.length).toBeGreaterThan(20);
+     expect(app.download).toMatch(/^https:\/\/github\.com\/Altitude-Unknown\/[^/]+\/releases\/tag\/[\w.-]+$/);
     } else {
      expect(app.download).toMatch(/^https:\/\/github\.com\/Altitude-Unknown\/[^/]+\/releases\/latest$/);
     }
