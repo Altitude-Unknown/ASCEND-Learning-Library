@@ -102,3 +102,8 @@
 .parts-grid{list-style:none;padding:0;margin:20px 0;display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}.part-card{margin:0;border:1px solid var(--line);background:var(--white);padding:10px;height:100%;display:flex;flex-direction:column;gap:8px}.part-card img{display:block;width:100%;aspect-ratio:4/3;object-fit:contain}.part-card figcaption{font-size:.85rem;line-height:1.4;display:flex;flex-direction:column;gap:2px}.unit-build-card{background:#f4f6ef}.unit-signoff{margin-top:24px;max-width:760px}.unit-signoff h3{margin-bottom:6px}
 .textbook-equation{margin:1.2em 0;padding:10px 14px;background:var(--white);border-left:3px solid var(--line);overflow-x:auto;font-size:1.05rem}.textbook-equation math[display=block]{margin:0}.textbook-content math{font-size:1.1em}
 .prose ul.parts-grid{padding-left:0}
+
+/* Tables in web chapters: wrap at spaces, not inside words. The chapter text uses
+   overflow-wrap:anywhere, which lets table columns shrink until "Test" breaks as "Te-st". */
+.textbook-content .table-wrap{overflow-x:auto}
+.textbook-content .table-wrap th,.textbook-content .table-wrap td{overflow-wrap:normal}

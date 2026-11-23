@@ -1,0 +1,13 @@
+---
+layout: layouts/base.njk
+eleventyExcludeFromCollections: true
+title: FAA Part 101 for High-Altitude Balloons
+description: "Learn the FAA rules for unmanned free balloons in six units: when Part 101 applies, the general rules, operating limitations, equipment and marking, notices to ATC, and position reports. Each unit pairs a reading with an activity and review questions."
+permalink: /part101/
+---
+{% set course = courses.part101 %}
+<div class="container">
+<nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/ballooning/">High-Altitude Ballooning</a><span aria-hidden="true">/</span><span aria-current="page">{{ course.title }}</span></nav>
+<header class="section-hero"><span class="eyebrow">LEARN</span><div class="section-hero-row"><div><h1>{{ course.title }}</h1><p class="lead">{{ description }}</p></div><span class="section-symbol" aria-hidden="true"><svg><use href="#i-balloon"/></svg></span></div></header>
+{% include "components/course-overview.njk" %}
+</div>

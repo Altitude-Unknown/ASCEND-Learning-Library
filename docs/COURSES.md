@@ -91,6 +91,30 @@ description. Changes from the printed chapter:
   gravity is found, but it has no CG procedure, although the skills checksheet
   lists that skill. No procedure was added.
 
+## FAA Part 101 for High-Altitude Balloons
+
+Written for ASCEND, not imported: one web chapter
+(`content/part101/textbook/part-101-for-high-altitude-balloons.njk`), six units,
+six web activities (`content/resources/part101-*.md`), and review questions with
+answers in `content/_data/part101Course.json`. It covers 14 CFR Part 101
+Subpart A (General) and Subpart D (Unmanned Free Balloons); Subparts B (moored
+balloons and kites) and C (amateur rockets) are left out.
+
+Sources, each quoted or cited where it is used:
+
+- 14 CFR Part 101, from the eCFR versioner API, current as of November 19, 2026.
+  Regulation text is quoted exactly, including the eCFR's “50 feet along [sic]”
+  in § 101.35(d).
+- FAA Order JO 7110.65BB (effective July 9, 2026), paragraphs 9-6-1 and 9-6-2.
+- AIM (effective July 9, 2026): 7-1-28 for METAR cloud amounts and visibility,
+  3-2 for controlled airspace, and 3-4 for special use airspace.
+- FAA VFR Raster Charts.
+
+When the regulation changes, update the quoted text, the “current as of” date
+in the chapter's `sourceNote` and in the course notice in `courses.js`, and any
+review question or activity answer that depends on it. Sample flights in the
+activities are labeled sample data.
+
 ## Lab manual courses
 
 Every chapter of the Remote and Autonomous Aircraft Systems lab manual becomes
