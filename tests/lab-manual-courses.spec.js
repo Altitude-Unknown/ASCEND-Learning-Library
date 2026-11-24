@@ -13,7 +13,8 @@ const COURSES = [
   {data: 'cameraVideoCourse.json', url: '/camera-video-systems/', title: 'Camera and Video Systems', images: 9},
   {data: 'advancedSensorsCourse.json', url: '/advanced-sensors/', title: 'Advanced Sensors', images: 7},
   {data: 'pidControllersCourse.json', url: '/pid-controllers/', title: 'PID Controllers', images: 0, equations: 6},
-  {data: 'part101Course.json', url: '/part101/', title: 'FAA Part 101 for High-Altitude Balloons', images: 0}
+  {data: 'part101Course.json', url: '/part101/', title: 'FAA Part 101 for High-Altitude Balloons', images: 0},
+  {data: 'pm25Course.json', url: '/pm25/', title: 'Measuring PM2.5 from the Sky', images: 0, equations: 3}
 ];
 const axe = page => new AxeBuilder({page}).withTags(['wcag2a', 'wcag2aa', 'wcag21aa', 'wcag22aa']).analyze();
 

@@ -14,6 +14,7 @@ const flightControllers = read('./flightControllersCourse.json');
 const cameraVideo = read('./cameraVideoCourse.json');
 const advancedSensors = read('./advancedSensorsCourse.json');
 const part101 = read('./part101Course.json');
+const pm25 = read('./pm25Course.json');
 
 // Lab manual courses share one study method; only the chapter differs.
 const labManualMethod = chapter => [
@@ -270,5 +271,32 @@ export default {
     chapterTitle: part101.chapterTitle,
     reviewQuestions: part101.reviewQuestions,
     units: part101.units
+  },
+  pm25: {
+    id: 'pm25',
+    title: 'Measuring PM2.5 from the Sky',
+    shortTitle: 'PM2.5 from the Sky',
+    url: '/pm25/',
+    label: 'AIR QUALITY',
+    sidebarLabel: 'BROWSE THE COURSE',
+    sidebarCollection: 'pm25Modules',
+    overviewLabel: 'Course overview',
+    check: 'review',
+    final: {url: '/air-quality/', title: 'Air Quality'},
+    intro: [
+      'In this course you learn to measure fine particulate matter (PM2.5) from two airborne platforms: a drone that profiles the lowest 400 feet, and a high-altitude balloon that carries a sensor through the whole troposphere and into the stratosphere. Together they show how particle pollution changes with height, which ground monitors alone cannot do.',
+      'Read Units 1–5 before your first flight. Unit 6 and the activities guide your analysis afterward, ending in a research report that combines drone, balloon, and ground data.'
+    ],
+    notice: {title: 'Check the current standards and rules', text: 'The standards, court case, and FAA rules in this course were checked against their sources on November 23, 2026. They change: follow the links in the chapter’s Sources section before you rely on them, and read the current regulation on the eCFR before every flight.'},
+    method: [
+      {title: 'Watch & review', text: 'Start with the unit’s lesson video. If a unit has no video yet, start with the reading.'},
+      {title: 'Read & clarify', text: 'Read the sections of the chapter listed for the unit.'},
+      {title: 'Apply', text: 'Work the activity: a worksheet, a bench lab, or a flight.'},
+      {title: 'Check & revisit', text: 'Answer the review questions in your own words, then open each answer to compare.'}
+    ],
+    chapterUrl: pm25.chapterUrl,
+    chapterTitle: pm25.chapterTitle,
+    reviewQuestions: pm25.reviewQuestions,
+    units: pm25.units
   }
 };

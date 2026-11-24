@@ -1,0 +1,317 @@
+---
+{
+  "layout": "layouts/textbook-chapter.njk",
+  "tags": [],
+  "eleventyExcludeFromCollections": true,
+  "topic": "air-quality",
+  "courseId": "pm25",
+  "title": "Measuring PM2.5 from the Sky",
+  "description": "A student guide to measuring fine particulate matter (PM2.5) from a drone and a high-altitude balloon: what PM2.5 is, the standards and the AQI, the lower atmosphere, low-cost sensors, platforms and FAA rules, and data analysis.",
+  "chapterNumber": 1,
+  "textbookEyebrow": "AIR QUALITY · WEB EDITION",
+  "sourceNote": "Written for ASCEND and checked against the sources listed at the end of the chapter (EPA, the eCFR, NOAA, and peer-reviewed papers), current as of November 23, 2026. Standards, court cases, and FAA rules change: check the linked sources before you rely on them.",
+  "headerLinks": [
+    {"title": "EPA particulate matter (PM) basics", "url": "https://www.epa.gov/pm-pollution/particulate-matter-pm-basics"},
+    {"title": "Glossary", "url": "#glossary"},
+    {"title": "Sources", "url": "#sources-list"}
+  ],
+  "toc": [
+    {"title": "What PM2.5 is", "id": "what-is-pm25"},
+    {"title": "Size classes", "id": "size-classes"},
+    {"title": "Where PM2.5 comes from", "id": "pm25-sources"},
+    {"title": "Why PM2.5 matters", "id": "why-pm25-matters"},
+    {"title": "The PM2.5 standards", "id": "naaqs"},
+    {"title": "The standard in court", "id": "standard-in-court"},
+    {"title": "The Air Quality Index", "id": "the-aqi"},
+    {"title": "The AQI and airborne data", "id": "aqi-and-airborne-data"},
+    {"title": "Layers you will fly through", "id": "layers"},
+    {"title": "Mixing, inversions, and the daily cycle", "id": "key-concepts"},
+    {"title": "Reading a profile", "id": "reading-a-profile"},
+    {"title": "How the sensor works", "id": "how-sensors-work"},
+    {"title": "Main error sources", "id": "error-sources"},
+    {"title": "Calibration", "id": "calibration"},
+    {"title": "UAS or HAB?", "id": "uas-or-hab"},
+    {"title": "Payload design", "id": "payload-design"},
+    {"title": "FAA rules", "id": "faa-rules"},
+    {"title": "Safety checklist", "id": "safety-checklist"},
+    {"title": "The analysis workflow", "id": "workflow"},
+    {"title": "Standard figures", "id": "standard-figures"},
+    {"title": "Suggested tools", "id": "tools"},
+    {"title": "Glossary", "id": "glossary"},
+    {"title": "Sources", "id": "sources-list"}
+  ],
+  "permalink": "/pm25/textbook/measuring-pm25-from-the-sky/"
+}
+---
+<p>In this project you measure fine particulate matter (PM2.5) from two airborne platforms: a small unmanned aircraft system (UAS, or drone) that profiles the lowest few hundred feet, and a high-altitude balloon (HAB) that carries a sensor through the whole troposphere and into the stratosphere. Together they show how particle pollution changes with height, which ground monitors alone cannot do.</p>
+<p>The chapter follows the six units of the course. Read Units 1–5 before your first flight; Unit 6 and the activities guide your analysis afterward. Terms in <strong>bold</strong> are in the <a href="#glossary">glossary</a>, and every source is listed at the <a href="#sources-list">end of the chapter</a>.</p>
+
+<h2 id="what-is-pm25">What PM2.5 is</h2>
+<p><strong>PM2.5</strong> is the mass concentration of airborne particles with an <strong>aerodynamic diameter</strong> of 2.5 micrometers (µm) or smaller, reported in micrograms per cubic meter (µg/m³). The EPA puts its size in perspective: “The average human hair is about 70 micrometers in diameter – making it 30 times larger than the largest fine particle.”</p>
+
+<h2 id="size-classes">Size classes</h2>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Particle size classes"><table>
+<caption>Particle size classes. PM10 includes PM2.5; the coarse fraction is the part between 2.5 and 10 µm.</caption>
+<thead><tr><th scope="col">Class</th><th scope="col">Diameter</th><th scope="col">Typical origin</th><th scope="col">Where it deposits in the body</th></tr></thead>
+<tbody>
+<tr><th scope="row">PM10 (coarse fraction 2.5–10 µm)</th><td>≤ 10 µm</td><td>Dust, pollen, sea spray, road and construction dust</td><td>Nose, throat, upper airways</td></tr>
+<tr><th scope="row">PM2.5 (fine)</th><td>≤ 2.5 µm</td><td>Combustion, smoke, secondary aerosol</td><td>Deep lung, alveoli</td></tr>
+<tr><th scope="row">Ultrafine (PM0.1)</th><td>≤ 0.1 µm</td><td>Fresh combustion exhaust, new particle formation</td><td>Alveoli; may pass into the bloodstream</td></tr>
+</tbody>
+</table></div>
+
+<h2 id="pm25-sources">Where PM2.5 comes from</h2>
+<ul>
+<li><strong>Primary particles</strong> are emitted directly: vehicle exhaust, diesel engines, wood stoves, wildfires, prescribed burns, cooking, industrial processes, and wind-blown dust (mostly coarse, but with a fine tail).</li>
+<li><strong>Secondary particles</strong> form in the air from gases: sulfur dioxide becomes sulfate, nitrogen oxides become nitrate, ammonia neutralizes both, and volatile organic compounds oxidize into <strong>secondary organic aerosol</strong> (SOA). The EPA notes that “most particles form in the atmosphere as a result of complex reactions of chemicals such as sulfur dioxide and nitrogen oxides.”</li>
+<li><strong>Long-range transport</strong> matters at altitude. Wildfire smoke and Asian or Saharan dust can travel thousands of kilometers in layers above the boundary layer, which a HAB can detect and a ground monitor may miss.</li>
+</ul>
+
+<h2 id="why-pm25-matters">Why PM2.5 matters</h2>
+<ul>
+<li><strong>Health:</strong> fine particles reach the deepest parts of the lung. The EPA links particle exposure to premature death in people with heart or lung disease, nonfatal heart attacks, irregular heartbeat, aggravated asthma, decreased lung function, and increased respiratory symptoms. In the EPA’s words, “people with heart or lung diseases, children, older adults, minority populations, and low socioeconomic status populations are the most likely to be affected.”</li>
+<li><strong>Climate:</strong> particles scatter sunlight (cooling), absorb it if they contain black carbon (warming), and act as cloud condensation nuclei that change cloud brightness and lifetime.</li>
+<li><strong>Visibility:</strong> fine particles cause most haze. Particles about 0.1–1 µm across, close to the wavelength of visible light, scatter it most efficiently.</li>
+</ul>
+<p><strong>Discussion prompt:</strong> which sources near your launch site would you expect to dominate in the morning, in the afternoon, and on a wildfire smoke day? The <a href="/resources/pm25-sources-at-your-site/">Unit 1 activity</a> walks you through it.</p>
+
+<h2 id="naaqs">The PM2.5 standards</h2>
+<p>The U.S. health-based limits for PM2.5 are 9.0 µg/m³ as an annual average and 35 µg/m³ over 24 hours. They are set under the Clean Air Act as <strong>National Ambient Air Quality Standards</strong> (NAAQS). Primary standards protect public health; secondary standards protect public welfare, such as visibility and ecosystems.</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="The particle pollution NAAQS, from the EPA NAAQS table (last updated October 21, 2026)"><table>
+<caption>The particle pollution NAAQS, from the EPA NAAQS table (last updated October 21, 2026).</caption>
+<thead><tr><th scope="col">Standard</th><th scope="col">Level</th><th scope="col">Form</th><th scope="col">Purpose</th></tr></thead>
+<tbody>
+<tr><th scope="row">Primary annual PM2.5</th><td>9.0 µg/m³</td><td>Annual mean, averaged over 3 years</td><td>Public health (lowered from 12.0 µg/m³ in 2024)</td></tr>
+<tr><th scope="row">Secondary annual PM2.5</th><td>15.0 µg/m³</td><td>Annual mean, averaged over 3 years</td><td>Welfare (visibility, ecosystems)</td></tr>
+<tr><th scope="row">Primary and secondary 24-hour PM2.5</th><td>35 µg/m³</td><td>98th percentile, averaged over 3 years</td><td>Health and welfare</td></tr>
+<tr><th scope="row">Primary and secondary 24-hour PM10</th><td>150 µg/m³</td><td>Not to be exceeded more than once per year on average over 3 years</td><td>Health and welfare</td></tr>
+</tbody>
+</table></div>
+
+<h2 id="standard-in-court">The standard in court</h2>
+<p>The 9.0 µg/m³ standard has been contested, which makes it a useful case study in how science and policy interact. States and industry groups challenged the 2024 rule, and the EPA itself later asked the court to vacate it. On June 26, 2026, the U.S. Court of Appeals for the D.C. Circuit denied the petitions for review and the EPA’s motion for vacatur, leaving the standard in place (<em>Commonwealth of Kentucky v. EPA</em>, No. 24-1050). Petitions asking the Supreme Court to review that decision were filed in late summer 2026 and were pending as of November 2026. The Harvard Environmental and Energy Law Program tracker follows the case.</p>
+
+<h2 id="the-aqi">The Air Quality Index</h2>
+<p>The <strong>Air Quality Index</strong> (AQI) turns a concentration into a 0–500 scale with color-coded health messages. EPA updated the PM2.5 breakpoints in 2024, moving the top of “Good” from 12.0 to 9.0 µg/m³ to match the new annual standard. The breakpoints apply to 24-hour average concentrations.</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="2024 AQI breakpoints for PM2.5 (24-hour average)"><table>
+<caption>2024 AQI breakpoints for PM2.5 (24-hour average). An AQI of 500 corresponds to 325.4 µg/m³; higher concentrations give an AQI above 500.</caption>
+<thead><tr><th scope="col">Category</th><th scope="col">AQI</th><th scope="col">PM2.5 (µg/m³, 24-hour)</th><th scope="col">Color</th></tr></thead>
+<tbody>
+<tr><th scope="row">Good</th><td>0–50</td><td>0.0–9.0</td><td>Green</td></tr>
+<tr><th scope="row">Moderate</th><td>51–100</td><td>9.1–35.4</td><td>Yellow</td></tr>
+<tr><th scope="row">Unhealthy for Sensitive Groups</th><td>101–150</td><td>35.5–55.4</td><td>Orange</td></tr>
+<tr><th scope="row">Unhealthy</th><td>151–200</td><td>55.5–125.4</td><td>Red</td></tr>
+<tr><th scope="row">Very Unhealthy</th><td>201–300</td><td>125.5–225.4</td><td>Purple</td></tr>
+<tr><th scope="row">Hazardous</th><td>301+</td><td>225.5+</td><td>Maroon</td></tr>
+</tbody>
+</table></div>
+<p>To calculate the AQI, EPA’s Technical Assistance Document has you truncate the PM2.5 concentration to one decimal place, find the two breakpoints that contain it, apply the equation below, and round the result to the nearest whole number. The equation is linear interpolation within the category:</p>
+<p class="textbook-equation" tabindex="0" role="region" aria-label="AQI equation"><math display="block"><mi>I</mi><mo>=</mo><mfrac><mrow><msub><mi>I</mi><mi>hi</mi></msub><mo>−</mo><msub><mi>I</mi><mi>lo</mi></msub></mrow><mrow><msub><mi>C</mi><mi>hi</mi></msub><mo>−</mo><msub><mi>C</mi><mi>lo</mi></msub></mrow></mfrac><mo>(</mo><mi>C</mi><mo>−</mo><msub><mi>C</mi><mi>lo</mi></msub><mo>)</mo><mo>+</mo><msub><mi>I</mi><mi>lo</mi></msub></math></p>
+<p>Here <var>C</var> is the concentration truncated to 0.1 µg/m³, <var>C</var><sub>lo</sub> and <var>C</var><sub>hi</sub> are the breakpoints of the category that contains <var>C</var>, and <var>I</var><sub>lo</sub> and <var>I</var><sub>hi</sub> are the matching index values.</p>
+<p><strong>Worked example:</strong> a 24-hour average of 20.0 µg/m³ falls in Moderate (9.1–35.4 µg/m³, AQI 51–100).</p>
+<p class="textbook-equation">I = (100 − 51) ÷ (35.4 − 9.1) × (20.0 − 9.1) + 51 = 49 ÷ 26.3 × 10.9 + 51 = 71.3</p>
+<p>Rounded, that is an AQI of 71. A daily AQI takes a full 24 hours of data (24 hourly values for PM). For a value closer to real time, AirNow shows the <strong>NowCast</strong> AQI, computed from the most recent hourly values.</p>
+
+<h2 id="aqi-and-airborne-data">The AQI and airborne data</h2>
+<p><strong>Important caveat for this project:</strong> the AQI and the NAAQS are defined for ground-level, 24-hour or annual averages. A 1-second reading at 2,000 m is not an AQI. Report airborne data as concentrations in µg/m³, and use the AQI only when you compare with surface conditions.</p>
+
+<h2 id="layers">Layers you will fly through</h2>
+<p>Most PM2.5 is trapped in the <strong>planetary boundary layer</strong> (PBL), the turbulent bottom layer of the atmosphere. A vertical profile usually shows high concentrations near the ground and a sharp drop at the top of the PBL. Finding that drop, and any layers above it, is the core scientific goal of this project.</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="The layers a drone and a balloon fly through, with typical heights and the PM2.5 you can expect"><table>
+<caption>The layers a drone and a balloon fly through, with typical heights and the PM2.5 you can expect. Heights vary with latitude, season, time of day, and weather.</caption>
+<thead><tr><th scope="col">Layer</th><th scope="col">Typical height</th><th scope="col">Temperature trend</th><th scope="col">What to expect in PM2.5</th></tr></thead>
+<tbody>
+<tr><th scope="row">Surface layer</th><td>0 to about 100 m</td><td>Strong gradients near the ground</td><td>Highest values, local sources, fast swings</td></tr>
+<tr><th scope="row">Planetary boundary layer (mixed layer)</th><td>About 0.2–0.5 km at night; about 1–3 km on sunny afternoons</td><td>Cools with height when well mixed</td><td>Roughly uniform when mixed, sharp drop at its top</td></tr>
+<tr><th scope="row">Residual layer</th><td>Above the night-time stable layer</td><td>Near-neutral</td><td>Yesterday’s pollution, cut off from the surface</td></tr>
+<tr><th scope="row">Free troposphere</th><td>PBL top to the tropopause</td><td>Cools about 6.5 °C per km on average</td><td>Low background, plus transported smoke or dust layers</td></tr>
+<tr><th scope="row">Tropopause</th><td>About 18–20 km at the equator, 9 km at 50° latitude, and 6 km at the poles</td><td>Cooling stops; on average about −51 °C, colder over the tropics</td><td>Often a change in aerosol type</td></tr>
+<tr><th scope="row">Stratosphere</th><td>Tropopause to about 50 km (balloons usually burst at 25–35 km)</td><td>Warms with height</td><td>Very low PM2.5, except after volcanic eruptions or very large fires</td></tr>
+</tbody>
+</table></div>
+
+<h2 id="key-concepts">Mixing, inversions, and the daily cycle</h2>
+<ul>
+<li><strong>Mixing height:</strong> the depth of the layer that surface pollution can mix into. The same emissions give higher concentrations under a shallow PBL than under a deep one.</li>
+<li><strong>Temperature inversion:</strong> warmer air sits over cooler air and suppresses vertical mixing like a lid. Night-time radiation inversions and winter valley inversions are common in mountain regions, and they cause many of the worst PM2.5 episodes.</li>
+<li><strong>Daily (diurnal) cycle:</strong> after sunrise the sun heats the ground, the mixed layer grows through the morning, and surface concentrations often fall as pollution dilutes upward. After sunset a shallow stable layer forms again.</li>
+<li><strong>Lofted layers:</strong> smoke plumes injected above the PBL can travel far and show up as a PM2.5 peak well above the mixed layer.</li>
+</ul>
+
+<h2 id="reading-a-profile">Reading a profile</h2>
+<p>Always plot PM2.5 next to temperature and relative humidity (RH) against altitude. The PBL top usually appears as a temperature inversion or a change in <strong>lapse rate</strong>, a sharp drop in humidity, and a sharp drop in PM2.5, all at the same height. If PM2.5 jumps without a matching change in temperature or humidity, suspect an instrument artifact (see <a href="#error-sources">Main error sources</a>) before claiming a real layer.</p>
+<p><strong>Pre-flight prediction exercise:</strong> before each flight, sketch the PM2.5, temperature, and humidity profiles you expect, using the time of day, the weather, and a nearby sounding, such as the National Weather Service radiosonde nearest your site from the University of Wyoming sounding archive. Compare your sketch with your data afterward. The <a href="/resources/pm25-profile-prediction/">Unit 3 activity</a> is a worksheet for it.</p>
+
+<h2 id="how-sensors-work">How the sensor works</h2>
+<p>Your sensor does not weigh particles. It counts them with light and estimates mass from assumptions, so its readings are estimates that need correcting for humidity and calibrating against a reference instrument.</p>
+<p>It works as an optical particle counter:</p>
+<ol>
+<li>A small fan draws air through a chamber.</li>
+<li>A laser beam crosses the airflow, and each particle scatters a pulse of light onto a photodiode.</li>
+<li>Pulse height relates to particle size, so the sensor sorts counts into size bins (for example 0.3, 0.5, 1.0, 2.5, 5, and 10 µm).</li>
+<li>Firmware converts the counts to mass (PM1, PM2.5, PM10) by assuming a particle shape, density, and refractive index.</li>
+</ol>
+<p>Common sensors of this type include the Plantower PMS5003 (two of them are inside each PurpleAir monitor) and the Sensirion SPS30. The <strong>ASCEND Logger</strong> carries a Plantower PMSA003I, a sensor of the same family. It reports PM1.0, PM2.5, and PM10 “in both standard &amp; environmental units” and counts particles in 0.3, 0.5, 1.0, 2.5, 5.0, and 10 µm bins. The “standard” values are Plantower’s <strong>CF=1</strong> output, the input the EPA correction below expects, so make sure your data file records them.</p>
+<p>Regulatory monitors use gravimetric filters (<strong>FRM</strong>) or approved continuous instruments (<strong>FEM</strong>) and control the sample’s humidity, which is why they are the reference.</p>
+
+<h2 id="error-sources">Main error sources</h2>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Main error sources for low-cost optical PM2.5 sensors, and how to manage each"><table>
+<caption>Main error sources for low-cost optical PM2.5 sensors, and how to manage each.</caption>
+<thead><tr><th scope="col">Error source</th><th scope="col">Effect on reading</th><th scope="col">How to manage it</th></tr></thead>
+<tbody>
+<tr><th scope="row">High relative humidity (above about 70–80%)</th><td>Particles absorb water and grow (<strong>hygroscopic growth</strong>), so the sensor reads too high; fog or cloud droplets cause large false spikes</td><td>Log RH alongside PM2.5, flag RH above 85%, apply an RH correction, and never trust readings inside cloud</td></tr>
+<tr><th scope="row">Particle composition</th><td>Smoke, dust, and urban aerosol scatter light differently, so the mass conversion is off</td><td>Calibrate under conditions like those you will fly in, and report the aerosol type</td></tr>
+<tr><th scope="row">Small particles below about 0.3 µm</th><td>Not detected, so mass is underestimated for fresh combustion</td><td>Note it as a known limitation</td></tr>
+<tr><th scope="row">Large particles (dust)</th><td>Coarse particles are undercounted, so PM10 is unreliable</td><td>Treat PM10 output with caution</td></tr>
+<tr><th scope="row">Unit-to-unit variation</th><td>Two identical sensors can read noticeably differently</td><td>Collocate every unit before flight and derive a unit-specific correction</td></tr>
+<tr><th scope="row">Low pressure and cold (HAB)</th><td>Fan flow, laser output, and electronics drift; batteries fail in the cold</td><td>Insulate the payload, log internal temperature and pressure, and treat stratospheric data as qualitative</td></tr>
+<tr><th scope="row">Airflow from propellers (UAS)</th><td>Downwash mixes or dilutes the sample</td><td>Mount the inlet away from rotor wash (see <a href="#payload-design">Payload design</a>)</td></tr>
+</tbody>
+</table></div>
+
+<h2 id="calibration">Calibration</h2>
+<p>The best calibration is your own: <strong>collocate</strong> your sensors next to a regulatory FEM monitor for several days before flight, then fit a linear regression of reference PM2.5 against sensor PM2.5 and RH.</p>
+<p>If you cannot collocate, the EPA’s U.S.-wide correction for PurpleAir data is a widely used starting point (Barkjohn, Gantt, and Clements, 2021):</p>
+<p class="textbook-equation" tabindex="0" role="region" aria-label="EPA U.S.-wide correction equation"><math display="block"><msub><mi>PM</mi><mrow><mn>2.5</mn><mo>,</mo><mtext>corrected</mtext></mrow></msub><mo>=</mo><mn>0.524</mn><mo>×</mo><msub><mi>PM</mi><mrow><mn>2.5</mn><mo>,</mo><mtext>cf_1</mtext></mrow></msub><mo>−</mo><mn>0.0862</mn><mo>×</mo><mi>RH</mi><mo>+</mo><mn>5.75</mn></math></p>
+<p>Here PM<sub>2.5, cf_1</sub> is the sensor’s CF=1 (“standard”) output in µg/m³ (for a PurpleAir, the average of its A and B channels), and RH is relative humidity in percent. The EPA developed it from 24-hour averages at ground-level monitors, at mostly typical concentrations; a later extension is used for extreme wildfire smoke above about 300 µg/m³ (Barkjohn et al., 2022). Applying it to fast airborne data at altitude is an approximation, so say so in your report.</p>
+<p><strong>Lab check:</strong> run two sensors side by side for an hour indoors and compare their readings. The spread you see is your baseline precision. The <a href="/resources/pm25-sensor-bench-test/">bench test</a>, <a href="/resources/pm25-humidity-experiment/">humidity experiment</a>, and <a href="/resources/pm25-collocation/">collocation</a> activities build on it.</p>
+
+<h2 id="uas-or-hab">UAS or HAB?</h2>
+<p>Use the drone for repeatable, detailed profiles of the lowest 120 m (400 ft), and the balloon for a single profile through the whole atmosphere. The two overlap only near the ground, which is where you compare them.</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Comparing a drone (UAS) and a high-altitude balloon (HAB) for PM2.5 profiles"><table>
+<caption>Comparing a drone (UAS) and a high-altitude balloon (HAB) for PM2.5 profiles.</caption>
+<thead><tr><th scope="col">Feature</th><th scope="col">UAS (multirotor drone)</th><th scope="col">HAB (latex weather balloon)</th></tr></thead>
+<tbody>
+<tr><th scope="row">Altitude range</th><td>Surface to 400 ft (about 120 m) above ground level under Part 107</td><td>Surface to burst, typically 25–35 km</td></tr>
+<tr><th scope="row">Vertical resolution</th><td>Very fine: you control the climb rate and can hover</td><td>About 5 m per reading at 1 Hz and a 5 m/s ascent</td></tr>
+<tr><th scope="row">Repeatability</th><td>Many flights per day</td><td>Usually one flight per launch; recovery is uncertain</td></tr>
+<tr><th scope="row">Flight time</th><td>About 15–40 minutes per battery</td><td>About 1.5–3 hours ascent and descent</td></tr>
+<tr><th scope="row">Control</th><td>Fully piloted, returns to you</td><td>Drifts with the wind, lands tens to more than 100 km away</td></tr>
+<tr><th scope="row">Payload limits</th><td>Set by the aircraft, often under 1 kg useful</td><td>Set by the FAA Part 101 tests (below) and balloon lift</td></tr>
+<tr><th scope="row">Environment</th><td>Ground-level temperature and humidity</td><td>About −50 °C or colder near the tropopause, and about 1% of surface pressure at 30 km</td></tr>
+<tr><th scope="row">Best for</th><td>Inversions, PBL growth, near-source plumes, daily change</td><td>PBL top, lofted smoke or dust layers, the tropopause</td></tr>
+</tbody>
+</table></div>
+
+<h2 id="payload-design">Payload design</h2>
+<h3>UAS</h3>
+<ul>
+<li>Mount the sensor inlet above the rotors on a mast, or on a boom extending beyond the rotor disk. Downwash below a multirotor mixes and dilutes the sample.</li>
+<li>During vertical profiles, climb slowly (about 1–2 m/s) or pause for 10–30 s at set altitudes so the sensor can respond.</li>
+<li>Log GPS altitude, time, temperature, RH, and pressure with every PM2.5 reading, and sync clocks before flight.</li>
+<li>Before profiling, hover for 1–2 minutes at 2 m to get a clean surface value.</li>
+</ul>
+<h3>HAB</h3>
+<ul>
+<li>Insulate the payload box (foam, hand warmers) so the sensor and battery stay warm. Lithium primary cells handle cold better than rechargeables.</li>
+<li>Keep the inlet open to outside air and shielded from direct sun, and put the RH and temperature sensors outside the box.</li>
+<li>Add redundant tracking (APRS or satellite, plus GPS), and record data onboard to an SD card in case telemetry drops. YELLOWSTONE handles tracking and flight termination for ASCEND balloon teams.</li>
+<li>Run a cold test in a freezer and, if possible, a vacuum-chamber test before launch.</li>
+<li>Use a flight predictor, such as the CUSF Landing Predictor at predict.sondehub.org, to choose a launch time and site that lands safely.</li>
+</ul>
+
+<h2 id="faa-rules">FAA rules</h2>
+<p>These are summaries for planning. The <a href="/part107/">FAA Part 107</a> and <a href="/part101/">FAA Part 101</a> courses cover the rules in detail; read the current regulation on the eCFR before you fly.</p>
+<h3>Drones (14 CFR Part 107)</h3>
+<p>Part 107 is the usual path for university research flights.</p>
+<ul>
+<li>The remote pilot in command holds a remote pilot certificate (§ 107.12), the aircraft weighs less than 55 pounds on takeoff (§ 107.3), and it is registered (§ 107.13) and meets the Remote ID rules.</li>
+<li>Fly no higher than 400 feet above ground level, unless you are within 400 feet of a structure (§ 107.51), and keep the aircraft within visual line of sight (§ 107.31).</li>
+<li>Don’t fly over people or over people in moving vehicles unless the operation qualifies under §§ 107.39 and 107.145.</li>
+<li>Get prior authorization from air traffic control before flying in Class B, C, or D airspace or the surface area of Class E airspace for an airport (§ 107.41), for example through <strong>LAANC</strong>, and check for temporary flight restrictions, which are common around wildfires.</li>
+<li>Flying beyond visual line of sight (<strong>BVLOS</strong>) still requires a waiver. The proposed BVLOS rule, Part 108, was not final as of November 2026.</li>
+<li>Ask your institution’s UAS office which rules your project flies under. Many universities require Part 107 for all research flights.</li>
+</ul>
+<h3>Balloons (14 CFR Part 101)</h3>
+<p>The Subpart D rules apply to an unmanned free balloon if any one of these is true (§ 101.1(a)(4)):</p>
+<ul>
+<li>A payload package weighs more than 4 pounds and has a weight/size ratio of more than 3 ounces per square inch, worked out on its smallest surface.</li>
+<li>A payload package weighs more than 6 pounds.</li>
+<li>A payload of two or more packages weighs more than 12 pounds.</li>
+<li>The rope or device that suspends the payload needs an impact force of more than 50 pounds to separate the payload from the balloon.</li>
+</ul>
+<p>Most student payloads stay under these limits, so most of Part 101 does not apply to them. Even then, § 101.7 applies to every unmanned free balloon: you may not fly it in a way that creates a hazard to other persons or their property, or drop anything from it that creates one. Good practice is to notify the local air traffic facility before launch and to avoid launching near airports.</p>
+
+<h2 id="safety-checklist">Safety checklist</h2>
+<p>Use this checklist for both platforms.</p>
+<ul class="skills-checklist">
+<li>Weather briefing: wind, ceiling, precipitation, and the forecast at landing (HAB).</li>
+<li>Airspace and TFR check completed, and authorizations in hand.</li>
+<li>Sensor warmed up for at least 5 minutes, and clocks synced.</li>
+<li>Batteries charged and checked; spare batteries packed.</li>
+<li>Roles assigned: pilot, visual observer, data logger, safety officer.</li>
+<li>Recovery plan and landowner permissions (HAB).</li>
+<li>Pre-flight ground reading logged next to the reference monitor or a second sensor.</li>
+</ul>
+
+<h2 id="workflow">The analysis workflow</h2>
+<p>Raw sensor output is not a result. Every dataset in this project goes through the same steps, documented in a notebook or script, so that anyone can reproduce your figures from the raw files.</p>
+<ol>
+<li><strong>Archive raw data.</strong> Save the untouched files from every flight with a flight ID, date, platform, and sensor serial number. Never edit them.</li>
+<li><strong>Merge and align.</strong> Join PM2.5, GPS, temperature, RH, and pressure on a common UTC timestamp. Check for clock offsets by matching a known event, such as takeoff.</li>
+<li><strong>Compute altitude.</strong> Use GPS altitude, barometric altitude, or both, and convert to height above ground level (<strong>AGL</strong>) by subtracting the launch-site elevation.</li>
+<li><strong>Flag bad data.</strong> Mark (do not delete) readings with RH above 85%, cloud or fog, sensor warm-up periods, values outside the sensor’s range, and stuck or repeated values. For dual-channel sensors such as the PurpleAir, also flag A/B channel disagreement: Barkjohn et al. (2021) removed 24-hour averages when the channels differed by more than 5 µg/m³ and by more than 61%.</li>
+<li><strong>Apply calibration.</strong> Use your collocation regression, or the EPA correction from <a href="#calibration">Calibration</a>, and record which one you used.</li>
+<li><strong>Average to sensible bins.</strong> For profiles, average into altitude bins (for example 10 m for UAS, 100–250 m for HAB). Report the mean, standard deviation, and number of readings in each bin.</li>
+<li><strong>Separate ascent and descent.</strong> For a HAB, the descent is fast and the sensor may lag, so analyze the ascent first. For a UAS, compare the up and down legs to check for sensor lag.</li>
+<li><strong>Estimate uncertainty.</strong> Combine calibration error (the regression’s <strong>RMSE</strong>), sensor-to-sensor precision, and the variability within each bin. State it on every figure.</li>
+<li><strong>Interpret.</strong> Identify the PBL top, inversions, and any lofted layers. Compare with a nearby regulatory monitor, a radiosonde sounding, satellite smoke products, and back-trajectory models such as NOAA HYSPLIT.</li>
+</ol>
+
+<h2 id="standard-figures">Standard figures</h2>
+<p>Make these figures for every flight:</p>
+<ul>
+<li>PM2.5, temperature, and RH against altitude, side by side with a shared vertical axis.</li>
+<li>A time series of PM2.5, with altitude on a second axis.</li>
+<li>A map of the flight track, colored by PM2.5.</li>
+<li>A collocation scatter plot (sensor against reference) with the regression line, R², and RMSE.</li>
+</ul>
+
+<h2 id="tools">Suggested tools</h2>
+<p>Python (pandas, matplotlib, xarray) and R (tidyverse, openair) both work well. Keep one script for each step, and keep a data dictionary that lists every column, its units, and its source. The <a href="/data/standard/">ASCEND data standard</a> describes how to share your files with other teams.</p>
+
+<h2 id="glossary">Glossary</h2>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Terms used in this chapter"><table>
+<caption>Terms used in this chapter.</caption>
+<thead><tr><th scope="col">Term</th><th scope="col">Meaning</th></tr></thead>
+<tbody>
+<tr><th scope="row">AGL</th><td>Above ground level</td></tr>
+<tr><th scope="row">AQI</th><td>Air Quality Index, the EPA’s 0–500 health-communication scale</td></tr>
+<tr><th scope="row">Aerodynamic diameter</th><td>The diameter of a unit-density sphere that settles at the same speed as the particle</td></tr>
+<tr><th scope="row">ASCEND Logger</th><td>The ASCEND air-quality board every team flies: GPS, pressure, temperature, and humidity sensors, plus a PM2.5 sensor</td></tr>
+<tr><th scope="row">BVLOS</th><td>Beyond visual line of sight</td></tr>
+<tr><th scope="row">CF=1</th><td>Plantower’s “standard” output (correction factor 1); PurpleAir calls it cf_1. The input to the EPA correction</td></tr>
+<tr><th scope="row">Collocation</th><td>Running a sensor next to a reference monitor to calibrate it</td></tr>
+<tr><th scope="row">FEM / FRM</th><td>Federal Equivalent Method / Federal Reference Method: EPA-approved regulatory monitors</td></tr>
+<tr><th scope="row">HAB</th><td>High-altitude balloon</td></tr>
+<tr><th scope="row">Hygroscopic growth</th><td>Particles swelling as they absorb water at high humidity</td></tr>
+<tr><th scope="row">Inversion</th><td>A layer where temperature increases with height, suppressing mixing</td></tr>
+<tr><th scope="row">LAANC</th><td>Low Altitude Authorization and Notification Capability, the FAA’s fast airspace authorization system</td></tr>
+<tr><th scope="row">Lapse rate</th><td>The rate at which temperature falls with height</td></tr>
+<tr><th scope="row">NAAQS</th><td>National Ambient Air Quality Standards</td></tr>
+<tr><th scope="row">NowCast</th><td>The EPA’s near-real-time AQI, computed from the most recent hourly values</td></tr>
+<tr><th scope="row">PBL</th><td>Planetary boundary layer, the turbulent layer next to the ground</td></tr>
+<tr><th scope="row">RH</th><td>Relative humidity</td></tr>
+<tr><th scope="row">RMSE</th><td>Root-mean-square error, a measure of calibration accuracy</td></tr>
+<tr><th scope="row">SOA</th><td>Secondary organic aerosol</td></tr>
+<tr><th scope="row">UAS</th><td>Unmanned aircraft system: the drone plus its controller and links</td></tr>
+</tbody>
+</table></div>
+
+<h2 id="sources-list">Sources</h2>
+<p>All pages were checked on November 23, 2026.</p>
+<ul>
+<li>U.S. EPA, <a href="https://www.epa.gov/pm-pollution/particulate-matter-pm-basics">Particulate Matter (PM) Basics</a>: size comparison with a human hair, and how particles form.</li>
+<li>U.S. EPA, <a href="https://www.epa.gov/pm-pollution/health-and-environmental-effects-particulate-matter-pm">Health and Environmental Effects of Particulate Matter (PM)</a>: health effects, groups most at risk, and visibility.</li>
+<li>U.S. EPA, <a href="https://www.epa.gov/criteria-air-pollutants/naaqs-table">NAAQS Table</a> (last updated October 21, 2026).</li>
+<li>U.S. EPA, <a href="https://www.epa.gov/system/files/documents/2024-02/pm-naaqs-air-quality-index-fact-sheet.pdf">Final Updates to the Air Quality Index (AQI) for Particulate Matter</a> (fact sheet, February 2024): the 2024 PM2.5 breakpoints.</li>
+<li>U.S. EPA, <a href="https://document.airnow.gov/technical-assistance-document-for-the-reporting-of-daily-air-quailty.pdf">Technical Assistance Document for the Reporting of Daily Air Quality – the Air Quality Index (AQI)</a> (2024): truncation, the AQI equation, rounding, the breakpoint table, and the NowCast.</li>
+<li>U.S. Court of Appeals for the D.C. Circuit, <a href="https://law.justia.com/cases/federal/appellate-courts/cadc/24-1050/24-1050-2026-06-26.html"><em>Commonwealth of Kentucky v. EPA</em>, No. 24-1050</a> (June 26, 2026); Harvard Environmental and Energy Law Program, <a href="https://eelp.law.harvard.edu/tracker/epa-finalized-stricter-national-ambient-air-quality-standards-naaqs-for-particulate-matter-pm/">NAAQS for Particulate Matter tracker</a>.</li>
+<li>Barkjohn, K. K., Gantt, B., and Clements, A. L. (2021). <a href="https://amt.copernicus.org/articles/14/4617/2021/">Development and application of a United States-wide correction for PM2.5 data collected with the PurpleAir sensor</a>. <em>Atmospheric Measurement Techniques</em>, 14, 4617–4637.</li>
+<li>Barkjohn, K. K., et al. (2022). <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9784900/">Correction and Accuracy of PurpleAir PM2.5 Measurements for Extreme Wildfire Smoke</a>. <em>Sensors</em>, 22(24), 9669.</li>
+<li>Adafruit, <a href="https://learn.adafruit.com/pmsa003i">PMSA003I Air Quality Breakout</a>: standard and environmental outputs and size bins.</li>
+<li>NOAA JetStream, <a href="https://www.noaa.gov/jetstream/atmosphere/layers-of-atmosphere">Layers of the Atmosphere</a>: tropopause heights and temperature.</li>
+<li>14 CFR Part 107, <a href="https://www.ecfr.gov/current/title-14/chapter-I/subchapter-F/part-107">Small Unmanned Aircraft Systems</a>, and 14 CFR Part 101, <a href="https://www.ecfr.gov/current/title-14/chapter-I/subchapter-F/part-101">Moored Balloons, Kites, Amateur Rockets, and Unmanned Free Balloons</a>, Electronic Code of Federal Regulations, current as of November 19, 2026.</li>
+<li><a href="https://predict.sondehub.org/">CUSF Landing Predictor</a>, run with the SondeHub Tawhiri prediction service.</li>
+<li>Data sources for the activities: <a href="https://www.airnow.gov/">AirNow</a>, the <a href="https://fire.airnow.gov/">AirNow Fire and Smoke Map</a>, EPA <a href="https://www.epa.gov/outdoor-air-quality-data">Outdoor Air Quality Data</a> (AirData), NOAA <a href="https://www.ready.noaa.gov/HYSPLIT.php">HYSPLIT</a>, and the University of Wyoming <a href="https://weather.uwyo.edu/upperair/sounding.shtml">atmospheric soundings</a>.</li>
+</ul>
