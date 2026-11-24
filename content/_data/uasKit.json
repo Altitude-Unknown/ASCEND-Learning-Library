@@ -7,6 +7,7 @@
       "items": [
         { "name": "Altitude Unknown Transmitter", "detail": "Custom ASCEND transmitter PCB", "qty": 1 },
         { "name": "Flight controller and receiver combo", "detail": "Custom ASCEND flight controller PCB with built-in receiver", "qty": 1 },
+        { "name": "Altitude Unknown V5 receiver", "detail": "Custom ASCEND receiver PCB", "qty": 1 },
         { "name": "USB-C data cable", "qty": 1, "photo": "usb-c-cable.jpg", "alt": "A braided black USB-C cable, coiled in its orange retail bag." },
         { "name": "Micro-USB data cable", "qty": 1, "photo": "micro-usb-cable.jpg", "alt": "A coiled gray braided USB cable with a micro-USB connector." }
       ]
@@ -81,6 +82,8 @@
         { "name": "Z-bend pliers", "qty": 1, "photo": "z-bend-pliers.jpg", "alt": "Z-bend pliers in their box." },
         { "name": "Utility knives", "qty": 2, "photo": "utility-knives.jpg", "alt": "Two blue snap-blade utility knives in plastic sleeves." },
         { "name": "Metal ruler", "detail": "150 mm", "qty": 1, "photo": "ruler.jpg", "alt": "A short metal ruler in an orange sleeve." },
+        { "name": "Metric tape measure", "detail": "8 m", "qty": 1, "photo": "tape-measure.jpg", "alt": "A black and yellow Komelon 8 meter tape measure on its card." },
+        { "name": "Quick-release bar clamps", "qty": 2, "photo": "bar-clamps.jpg", "alt": "Two red and black one-handed quick-release bar clamps." },
         { "name": "Torpedo level", "qty": 1, "photo": "torpedo-level.jpg", "alt": "A yellow torpedo level on its card." },
         { "name": "Super glue gel", "detail": "3 g tubes", "qty": 2, "photo": "super-glue.jpg", "alt": "Two small tubes of super glue gel with red caps." },
         { "name": "Hot glue sticks", "qty": 10, "photo": "hot-glue-sticks.jpg", "alt": "Ten clear hot glue sticks." },
