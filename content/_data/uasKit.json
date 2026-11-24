@@ -1,0 +1,102 @@
+{
+  "updated": "2026-11-24",
+  "groups": [
+    {
+      "id": "radio-and-flight-control",
+      "title": "Radio and flight control",
+      "items": [
+        { "name": "Altitude Unknown Transmitter", "detail": "Custom ASCEND transmitter PCB", "qty": 1 },
+        { "name": "Flight controller and receiver combo", "detail": "Custom ASCEND flight controller PCB with built-in receiver", "qty": 1 },
+        { "name": "USB-C data cable", "qty": 1, "photo": "usb-c-cable.jpg", "alt": "A braided black USB-C cable, coiled in its orange retail bag." },
+        { "name": "Micro-USB data cable", "qty": 1, "photo": "micro-usb-cable.jpg", "alt": "A coiled gray braided USB cable with a micro-USB connector." }
+      ]
+    },
+    {
+      "id": "power-system",
+      "title": "Motor, speed control and propellers",
+      "items": [
+        { "name": "Flite Test Radial 2218 brushless motor", "detail": "1180 kV", "qty": 1, "photo": "motor.jpg", "alt": "A Flite Test Radial 2218B 1180 kV motor in its cardboard box." },
+        { "name": "Flite Test 40 A speed controller (ESC)", "detail": "With XT-60 connector", "qty": 1, "photo": "esc.jpg", "alt": "A Flite Test electronic speed controller in its foil retail bag." },
+        { "name": "HQProp propellers", "detail": "10 × 4.5", "qty": 2, "photo": "prop-10x4-5.jpg", "alt": "A black two-blade HQProp propeller in a clear bag." },
+        { "name": "Slow-fly propellers", "detail": "9 × 4.7", "qty": 20 }
+      ]
+    },
+    {
+      "id": "batteries-and-charging",
+      "title": "Batteries and charging",
+      "items": [
+        { "name": "4S LiPo batteries", "detail": "1500 mAh", "qty": 2 },
+        { "name": "Venom battery charger", "qty": 1 },
+        { "name": "XT-90 charge cable for the Venom charger", "qty": 1, "photo": "xt90-charge-cable.jpg", "alt": "A red and black charge lead with banana plugs on one end and a yellow XT-90 connector on the other." },
+        { "name": "XT-60 battery extension", "detail": "6 in", "qty": 1, "photo": "xt60-extension.jpg", "alt": "A short red and black lead with a yellow XT-60 connector on each end." },
+        { "name": "Battery tester", "qty": 1 },
+        { "name": "LiPo fire bag", "qty": 1, "photo": "lipo-fire-bag.jpg", "alt": "A black box-shaped fire-resistant LiPo bag with a carry handle and a reflective stripe." }
+      ]
+    },
+    {
+      "id": "servos-and-wiring",
+      "title": "Servos and wiring",
+      "items": [
+        { "name": "9 g servos, plastic gear", "detail": "Flite Test FT9G", "qty": 4, "photo": "servo-plastic-gear.jpg", "alt": "Four Flite Test FT9G 9 gram servos in their cardboard boxes." },
+        { "name": "9 g servos, metal gear", "qty": 4, "photo": "servo-metal-gear.jpg", "alt": "Four small metal-gear servos with orange, red and brown leads." },
+        { "name": "Servo horns and screws", "detail": "Bags", "qty": 4, "photo": "servo-horns.jpg", "alt": "Four small bags of black plastic servo horns and screws." },
+        { "name": "Servo extensions", "detail": "30 cm", "qty": 4, "photo": "servo-extensions.jpg", "alt": "Four servo extension leads with three-wire connectors." },
+        { "name": "Y-harness for the aileron servos", "qty": 1, "photo": "y-harness.jpg", "alt": "A servo Y-harness: one connector splitting into two." }
+      ]
+    },
+    {
+      "id": "airframe",
+      "title": "Airframe parts and materials",
+      "items": [
+        { "name": "Laser-cut horizontal stabilizers", "qty": 2 },
+        { "name": "Laser-cut vertical stabilizers", "qty": 2 },
+        { "name": "Laser-cut elevators", "qty": 2 },
+        { "name": "Laser-cut rudders", "qty": 2 },
+        { "name": "Carbon fiber rod", "detail": "470 mm", "qty": 1, "photo": "carbon-rod.jpg", "alt": "A long black carbon fiber rod." },
+        { "name": "Push rods", "qty": 4, "photo": "push-rods.jpg", "alt": "Four thin steel push rods with Z-bends at one end." },
+        { "name": "Linkage stoppers", "detail": "1.5 mm", "qty": 6, "photo": "linkage-stoppers.jpg", "alt": "A small bag of brass linkage stoppers labeled 1.5 mm." },
+        { "name": "Rubber bands", "detail": "Bag", "qty": 1, "photo": "rubber-bands.jpg", "alt": "A bag of number 64 rubber bands." },
+        { "name": "PETG filament", "detail": "1 kg roll", "qty": 1 },
+        { "name": "64D TPU filament", "detail": "1 kg roll", "qty": 1 }
+      ]
+    },
+    {
+      "id": "hardware",
+      "title": "Bolts, nuts and cable ties",
+      "items": [
+        { "name": "M5 × 30 hex bolts", "qty": 8 },
+        { "name": "M5 × 20 hex bolts", "qty": 4 },
+        { "name": "M3 × 20 or M3 × 25 bolts", "qty": 6 },
+        { "name": "M3 × 55 bolts", "qty": 2 },
+        { "name": "M3 nuts", "qty": 8 },
+        { "name": "Cable ties", "qty": 25, "photo": "cable-ties.jpg", "alt": "A pile of black cable ties." }
+      ]
+    },
+    {
+      "id": "tools-and-supplies",
+      "title": "Tools and supplies",
+      "items": [
+        { "name": "Metric hex key set", "qty": 1, "photo": "hex-keys.jpg", "alt": "A boxed set of color-coded metric hex keys." },
+        { "name": "#0 Phillips screwdriver", "qty": 1, "photo": "screwdriver.jpg", "alt": "A small Craftsman Phillips screwdriver on its card." },
+        { "name": "Z-bend pliers", "qty": 1, "photo": "z-bend-pliers.jpg", "alt": "Z-bend pliers in their box." },
+        { "name": "Utility knives", "qty": 2, "photo": "utility-knives.jpg", "alt": "Two blue snap-blade utility knives in plastic sleeves." },
+        { "name": "Metal ruler", "detail": "150 mm", "qty": 1, "photo": "ruler.jpg", "alt": "A short metal ruler in an orange sleeve." },
+        { "name": "Torpedo level", "qty": 1, "photo": "torpedo-level.jpg", "alt": "A yellow torpedo level on its card." },
+        { "name": "Super glue gel", "detail": "3 g tubes", "qty": 2, "photo": "super-glue.jpg", "alt": "Two small tubes of super glue gel with red caps." },
+        { "name": "Hot glue sticks", "qty": 10, "photo": "hot-glue-sticks.jpg", "alt": "Ten clear hot glue sticks." },
+        { "name": "Sewing needle kit with needle threader", "detail": "For stitched hinges", "qty": 1, "photo": "sewing-needles.jpg", "alt": "A round case of sewing needles with two needle threaders." },
+        { "name": "Black thread", "detail": "Roll", "qty": 1, "photo": "thread.jpg", "alt": "A spool of black thread." }
+      ]
+    }
+  ],
+  "standard": {
+    "id": "standard-equipment",
+    "title": "Standard equipment for every ASCEND team",
+    "items": [
+      { "name": "ASCEND Logger PCB", "qty": 1 },
+      { "name": "3.7 V LiPo battery", "detail": "For the logger", "qty": 1 },
+      { "name": "PM2.5 air-quality sensor", "qty": 1 },
+      { "name": "32 GB microSD card", "qty": 1 }
+    ]
+  }
+}
