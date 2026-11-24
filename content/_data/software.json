@@ -107,10 +107,12 @@
     {
       "group": "builders",
       "name": "SAMD21 Bootloader Flasher",
-      "summary": "Install the Altitude Unknown bootloaders on new SAMD21 boards (transmitter, receiver, YELLOWSTONE, and BOREALIS) with an Atmel-ICE programmer.",
-      "platforms": ["macOS", "Windows"],
-      "status": "Not yet public",
-      "note": "Most teams never need this: boards arrive with their bootloader installed. Contact your ASCEND project lead if you do."
+      "summary": "Install the Altitude Unknown USB bootloader on new SAMD21 boards (transmitter, receiver, YELLOWSTONE, and BOREALIS) with an Atmel-ICE programmer. Check Board shows which chip and bootloader a board has; Install Bootloader writes, verifies, and protects it. The bootloader lets the board take Arduino uploads over USB and shows a drive you can drop a UF2 file on.",
+      "platforms": ["macOS (Apple Silicon)", "Windows x64", "Raspberry Pi (64-bit)"],
+      "status": "Beta",
+      "download": "https://github.com/Altitude-Unknown/SAMD21-Bootloader-Flasher/releases/latest",
+      "source": "https://github.com/Altitude-Unknown/SAMD21-Bootloader-Flasher",
+      "note": "Most teams never need this: boards arrive with their bootloader installed. The bootloader itself is open source too: Altitude-Unknown/Altitude-SAMD21-Bootloader on GitHub."
     }
   ]
 }
