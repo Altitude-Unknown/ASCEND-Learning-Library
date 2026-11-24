@@ -25,11 +25,11 @@
       "id": "batteries-and-charging",
       "title": "Batteries and charging",
       "items": [
-        { "name": "4S LiPo batteries", "detail": "1500 mAh", "qty": 2 },
-        { "name": "Venom battery charger", "qty": 1 },
+        { "name": "4S LiPo batteries", "detail": "Tattu R-Line 5.0, 1550 mAh", "qty": 2, "photo": "lipo-4s.jpg", "alt": "Two yellow Tattu R-Line version 5.0 1550 mAh LiPo battery boxes." },
+        { "name": "Venom battery charger", "detail": "Pro Duo dual-power charger", "qty": 1, "photo": "venom-charger.jpg", "alt": "A Venom Pro Duo dual-power battery charger in its black box." },
         { "name": "XT-90 charge cable for the Venom charger", "qty": 1, "photo": "xt90-charge-cable.jpg", "alt": "A red and black charge lead with banana plugs on one end and a yellow XT-90 connector on the other." },
         { "name": "XT-60 battery extension", "detail": "6 in", "qty": 1, "photo": "xt60-extension.jpg", "alt": "A short red and black lead with a yellow XT-60 connector on each end." },
-        { "name": "Battery tester", "qty": 1 },
+        { "name": "Battery tester", "detail": "Digital cell and capacity checker", "qty": 1, "photo": "battery-tester.jpg", "alt": "A black digital battery capacity checker with an LCD screen and three buttons." },
         { "name": "LiPo fire bag", "qty": 1, "photo": "lipo-fire-bag.jpg", "alt": "A black box-shaped fire-resistant LiPo bag with a carry handle and a reflective stripe." }
       ]
     },
@@ -56,8 +56,8 @@
         { "name": "Push rods", "qty": 4, "photo": "push-rods.jpg", "alt": "Four thin steel push rods with Z-bends at one end." },
         { "name": "Linkage stoppers", "detail": "1.5 mm", "qty": 6, "photo": "linkage-stoppers.jpg", "alt": "A small bag of brass linkage stoppers labeled 1.5 mm." },
         { "name": "Rubber bands", "detail": "Bag", "qty": 1, "photo": "rubber-bands.jpg", "alt": "A bag of number 64 rubber bands." },
-        { "name": "PETG filament", "detail": "1 kg roll", "qty": 1 },
-        { "name": "64D TPU filament", "detail": "1 kg roll", "qty": 1 }
+        { "name": "PETG filament", "detail": "Elegoo, 1 kg roll", "qty": 1, "photo": "petg-filament.jpg", "alt": "An Elegoo 1 kg 3D printer filament box." },
+        { "name": "64D TPU filament", "detail": "Siraya Tech, 1 kg roll", "qty": 1, "photo": "tpu-filament.jpg", "alt": "A brown Siraya Tech filament box." }
       ]
     },
     {
