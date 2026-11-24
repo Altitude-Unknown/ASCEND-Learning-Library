@@ -216,6 +216,11 @@
     ],
     "projects": [
       {
+        "title": "UAS Team Kit",
+        "url": "/uas/team-kit/",
+        "description": "Everything a UAS team receives: electronics, power system, airframe parts, tools and supplies."
+      },
+      {
         "title": "ASCEND Trainer Airplane",
         "url": "/uas/trainer-airplane/",
         "description": "Illustrated build instructions, printed parts, tail drawings, and Fusion assembly."

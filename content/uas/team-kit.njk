@@ -1,0 +1,24 @@
+---
+layout: layouts/base.njk
+title: UAS Team Kit
+description: The parts, electronics, tools and supplies every ASCEND UAS team receives to build and fly the ASCEND Trainer Airplane.
+permalink: /uas/team-kit/
+---
+{%- macro kitItem(item) -%}
+<li class="kit-item">
+{%- if item.photo %}<img src="/assets/uas/team-kit/{{ item.photo }}" alt="{{ item.alt }}" width="800" height="600" loading="lazy">
+{%- else %}<div class="kit-photo-pending" aria-hidden="true"><span>Photo coming soon</span></div>{% endif %}
+<div class="kit-item-text"><h3>{{ item.name }}</h3>{% if item.detail %}<p>{{ item.detail }}</p>{% endif %}</div>
+<span class="kit-qty"><span class="visually-hidden">Quantity: </span>× {{ item.qty }}</span>
+</li>
+{%- endmacro -%}
+<div class="container">
+<nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/uas/">UAS</a><span aria-hidden="true">/</span><span aria-current="page">{{ title }}</span></nav>
+<header class="section-hero"><span class="eyebrow">What you’ll receive</span><h1>{{ title }}</h1><p class="lead">{{ description }}</p><div class="project-links"><a class="button" href="/uas/trainer-airplane/">See the Trainer Airplane project →</a><a class="button outline" href="/build-fixed-wing/">Building a Fixed-Wing UAS course</a></div></header>
+<nav class="kit-contents" aria-label="Kit sections"><span class="eyebrow">Jump to a section</span><ul>{% for group in uasKit.groups %}<li><a href="#{{ group.id }}">{{ group.title }}</a></li>{% endfor %}<li><a href="#{{ uasKit.standard.id }}">{{ uasKit.standard.title }}</a></li></ul></nav>
+{% for group in uasKit.groups %}
+<section class="kit-group" aria-labelledby="{{ group.id }}"><h2 id="{{ group.id }}">{{ group.title }}</h2><ul class="kit-grid">{% for item in group.items %}{{ kitItem(item) }}{% endfor %}</ul></section>
+{% endfor %}
+<section class="kit-group kit-standard" aria-labelledby="{{ uasKit.standard.id }}"><h2 id="{{ uasKit.standard.id }}">{{ uasKit.standard.title }}</h2><p>Every team flies the ASCEND Logger, which records GPS position, pressure, temperature and humidity, and reads the PM2.5 sensor over I2C. Learn more on the <a href="/air-quality/">Air Quality &amp; the ASCEND Logger</a> page.</p><ul class="kit-grid">{% for item in uasKit.standard.items %}{{ kitItem(item) }}{% endfor %}</ul></section>
+<p class="small muted kit-note">Quantities are per team. Photos for the remaining items will be added as parts arrive. List updated {{ uasKit.updated }}.</p>
+</div>
