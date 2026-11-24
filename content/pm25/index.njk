@@ -1,0 +1,13 @@
+---
+layout: layouts/base.njk
+eleventyExcludeFromCollections: true
+title: Measuring PM2.5 from the Sky
+description: "Measure fine particulate matter from a drone and a high-altitude balloon in six units: what PM2.5 is, the standards and the AQI, the lower atmosphere, low-cost sensors, platforms and FAA rules, and data analysis. Each unit pairs a reading with an activity and review questions."
+permalink: /pm25/
+---
+{% set course = courses.pm25 %}
+<div class="container">
+<nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/air-quality/">Air Quality</a><span aria-hidden="true">/</span><span aria-current="page">{{ course.title }}</span></nav>
+<header class="section-hero"><span class="eyebrow">LEARN</span><div class="section-hero-row"><div><h1>{{ course.title }}</h1><p class="lead">{{ description }}</p></div><span class="section-symbol" aria-hidden="true"><svg><use href="#i-sensor"/></svg></span></div></header>
+{% include "components/course-overview.njk" %}
+</div>

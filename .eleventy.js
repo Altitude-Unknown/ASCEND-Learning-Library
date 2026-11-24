@@ -35,6 +35,7 @@ export default function(eleventy) {
   eleventy.addCollection('cameraVideoModules', api => api.getFilteredByTag('cameraVideoModule').sort((a,b) => a.data.order - b.data.order));
   eleventy.addCollection('advancedSensorsModules', api => api.getFilteredByTag('advancedSensorsModule').sort((a,b) => a.data.order - b.data.order));
   eleventy.addCollection('part101Modules', api => api.getFilteredByTag('part101Module').sort((a,b) => a.data.order - b.data.order));
+  eleventy.addCollection('pm25Modules', api => api.getFilteredByTag('pm25Module').sort((a,b) => a.data.order - b.data.order));
   eleventy.addCollection('electricalBasicsModules', api => api.getFilteredByTag('electricalBasicsModule').sort((a,b) => a.data.order - b.data.order));
   eleventy.addCollection('uasHardwareModules', api => api.getFilteredByTag('uasHardwareModule').sort((a,b) => a.data.order - b.data.order));
   eleventy.addCollection('pidControllersModules', api => api.getFilteredByTag('pidControllersModule').sort((a,b) => a.data.order - b.data.order));

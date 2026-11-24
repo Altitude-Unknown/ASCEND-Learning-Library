@@ -115,6 +115,56 @@ in the chapter's `sourceNote` and in the course notice in `courses.js`, and any
 review question or activity answer that depends on it. Sample flights in the
 activities are labeled sample data.
 
+## Measuring PM2.5 from the Sky
+
+The first course in the Air Quality section (`/pm25/`), built from the
+student guide *Measuring PM2.5 from the Sky* (November 23, 2026): one web chapter
+(`content/pm25/textbook/measuring-pm25-from-the-sky.njk`), six units (one per
+module), nine web activities (`content/resources/pm25-*.md`, the guide's
+discussion prompt, prediction exercise and seven labs), and the guide's ten
+review questions with answers in `content/_data/pm25Course.json`. The guide gave
+answers for questions 3 and 6; the other answers were written for the course.
+
+Every fact was checked on November 23, 2026 against the sources listed at the
+end of the chapter: EPA (PM basics, health effects, the NAAQS table, the 2024 AQI
+fact sheet and Technical Assistance Document), the D.C. Circuit opinion and the
+Harvard EELP tracker, Barkjohn et al. (2021, 2022), Adafruit's PMSA003I guide,
+NOAA JetStream, and 14 CFR Parts 101 and 107 (eCFR, current as of November 19,
+2026). Changes from the guide:
+
+- Hair comparison uses EPA's wording (about 70 µm, 30 times larger).
+- Health effects and the groups most at risk follow EPA's list.
+- “Secondary aerosol is often more than half of PM2.5” became EPA's statement
+  that most particles form in the atmosphere.
+- The size table notes that PM10 includes PM2.5.
+- Court case: dated (June 26, 2026, No. 24-1050); the court also denied EPA's
+  motion for vacatur; Supreme Court petitions pending as of November 2026.
+- AQI: rounding to the nearest integer, the 24-hour basis, AQI 500 = 325.4 µg/m³,
+  and the NowCast added.
+- Tropopause: about 18–20 km at the equator, 9 km at 50°, 6 km at the poles,
+  about −51 °C on average (NOAA), not “8–16 km, −50 to −60 °C”. The balloon
+  environment row follows.
+- EPA correction: input is the CF=1 (“standard”) output, for a PurpleAir the
+  A/B average; developed on 24-hour averages; the extreme-smoke extension is for
+  concentrations above about 300 µg/m³.
+- A/B disagreement flag: more than 5 µg/m³ **and** more than 61 % (Barkjohn et
+  al. 2021), not “5 µg/m³ or 70 %”.
+- “Two identical sensors can differ by 10–30 %” became “can read noticeably
+  differently” (no source found for the range).
+- Part 101 tests quoted precisely (smallest surface; impact force to separate the
+  payload); § 101.7 also bars dropping objects that create a hazard.
+- Part 107: section numbers, the structure exception to 400 ft, and Part 108
+  “not final as of November 2026” (the cited USI guide was not used).
+- Flight predictor: the CUSF Landing Predictor at predict.sondehub.org.
+- Review question 1 compares PM2.5 with *coarse* particles (PM10 includes PM2.5).
+- The AQI exercise uses AirNow or EPA AirData for daily averages.
+- Added: the ASCEND Logger's PMSA003I and which output to record; links to the
+  Part 107 and Part 101 courses and the ASCEND data standard.
+
+Kept as general background without a separate source: the scattering size range
+(0.1–1 µm), the 70–80 % RH onset of hygroscopic growth, the typical boundary
+layer depths, and the payload and flight-technique tips.
+
 ## Lab manual courses
 
 Every chapter of the Remote and Autonomous Aircraft Systems lab manual becomes

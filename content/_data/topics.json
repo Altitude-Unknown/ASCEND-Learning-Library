@@ -302,6 +302,13 @@
     "title": "Air Quality",
     "tagline": "Make the invisible measurable.",
     "description": "Investigate wildfire smoke and other pollutants through sensor comparisons, vertical profiles, and observations across the landscape.",
+    "courses": [
+      {
+        "title": "Measuring PM2.5 from the Sky",
+        "url": "/pm25/",
+        "description": "Measure fine particulate matter from a drone and a high-altitude balloon in six units: what PM2.5 is, the standards and the AQI, the lower atmosphere, low-cost sensors, platforms and FAA rules, and data analysis. Each unit pairs a reading with an activity and review questions."
+      }
+    ],
     "icon": "sensor",
     "subsections": [
       {

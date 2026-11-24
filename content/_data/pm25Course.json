@@ -1,0 +1,177 @@
+{
+  "chapterUrl": "/pm25/textbook/measuring-pm25-from-the-sky/",
+  "chapterTitle": "Measuring PM2.5 from the Sky",
+  "units": [
+    {
+      "slug": "what-is-pm25",
+      "title": "What Is PM2.5?",
+      "number": 1,
+      "url": "/pm25/what-is-pm25/",
+      "summary": "Learn what PM2.5 is, how it compares with coarse and ultrafine particles, where it comes from, and why it matters for health, climate, and visibility.",
+      "outcomes": [
+        "Define PM2.5 and its units, and compare its size with a human hair.",
+        "Tell coarse, fine, and ultrafine particles apart by size, typical source, and where they deposit in the body.",
+        "Explain the difference between primary and secondary particles, with examples of each.",
+        "Describe how PM2.5 affects health, climate, and visibility, and who is most at risk."
+      ],
+      "readings": [
+        {"title": "What PM2.5 is", "id": "what-is-pm25"},
+        {"title": "Size classes", "id": "size-classes"},
+        {"title": "Where PM2.5 comes from", "id": "pm25-sources"},
+        {"title": "Why PM2.5 matters", "id": "why-pm25-matters"}
+      ],
+      "activities": ["pm25-sources-at-your-site"],
+      "lessonVideo": null,
+      "reviewQuestions": [1, 2]
+    },
+    {
+      "slug": "standards-and-the-aqi",
+      "title": "Standards and the Air Quality Index",
+      "number": 2,
+      "url": "/pm25/standards-and-the-aqi/",
+      "summary": "Learn the U.S. health-based PM2.5 standards, how a concentration becomes an Air Quality Index value, and why a reading from an aircraft is not an AQI.",
+      "outcomes": [
+        "State the 2024 primary annual and 24-hour PM2.5 standards and their averaging forms.",
+        "Convert a 24-hour PM2.5 concentration to an AQI value and category using the 2024 breakpoints.",
+        "Explain why the AQI and the standards apply to ground-level 24-hour or annual averages, not to airborne readings.",
+        "Describe how the 2024 standard has been challenged in court, as an example of science and policy interacting."
+      ],
+      "readings": [
+        {"title": "The PM2.5 standards", "id": "naaqs"},
+        {"title": "The standard in court", "id": "standard-in-court"},
+        {"title": "The Air Quality Index", "id": "the-aqi"},
+        {"title": "The AQI and airborne data", "id": "aqi-and-airborne-data"}
+      ],
+      "activities": ["pm25-aqi-exercise"],
+      "lessonVideo": null,
+      "reviewQuestions": [3, 4]
+    },
+    {
+      "slug": "the-lower-atmosphere",
+      "title": "The Lower Atmosphere and Vertical Profiles",
+      "number": 3,
+      "url": "/pm25/the-lower-atmosphere/",
+      "summary": "Learn the layers a drone and a balloon fly through, how the boundary layer and inversions trap pollution, and how to read a PM2.5 profile alongside temperature and humidity.",
+      "outcomes": [
+        "Name the layers of the lower atmosphere and the PM2.5 you expect in each.",
+        "Explain mixing height, temperature inversions, the daily cycle of the boundary layer, and lofted layers.",
+        "Find the top of the boundary layer in a profile of PM2.5, temperature, and humidity.",
+        "Predict a PM2.5 profile before a flight from the time of day, the weather, and a nearby sounding."
+      ],
+      "readings": [
+        {"title": "Layers you will fly through", "id": "layers"},
+        {"title": "Mixing, inversions, and the daily cycle", "id": "key-concepts"},
+        {"title": "Reading a profile", "id": "reading-a-profile"}
+      ],
+      "activities": ["pm25-profile-prediction"],
+      "lessonVideo": null,
+      "reviewQuestions": [5]
+    },
+    {
+      "slug": "low-cost-sensors",
+      "title": "How Low-Cost PM2.5 Sensors Work",
+      "number": 4,
+      "url": "/pm25/low-cost-sensors/",
+      "summary": "Learn how an optical particle sensor estimates PM2.5, the errors that come with it, and how to correct and calibrate its readings.",
+      "outcomes": [
+        "Explain how an optical particle sensor turns scattered laser light into a PM2.5 estimate.",
+        "Describe the main error sources, especially humidity, and how to manage each.",
+        "Apply the EPA U.S.-wide correction to a raw reading and state its limits.",
+        "Plan a collocation with a regulatory monitor and fit your own correction."
+      ],
+      "readings": [
+        {"title": "How the sensor works", "id": "how-sensors-work"},
+        {"title": "Main error sources", "id": "error-sources"},
+        {"title": "Calibration", "id": "calibration"}
+      ],
+      "activities": ["pm25-sensor-bench-test", "pm25-humidity-experiment", "pm25-collocation"],
+      "lessonVideo": null,
+      "reviewQuestions": [6, 7]
+    },
+    {
+      "slug": "platforms-and-rules",
+      "title": "Platforms, Payloads, and FAA Rules",
+      "number": 5,
+      "url": "/pm25/platforms-and-rules/",
+      "summary": "Choose between a drone and a balloon for your research question, design the payload for each, and plan flights that follow FAA Parts 107 and 101.",
+      "outcomes": [
+        "Compare UAS and HAB sampling and choose the right platform for a research question.",
+        "Describe payload design practices for a drone and for a balloon.",
+        "Summarize the Part 107 rules for drone research flights and the Part 101 tests for balloons.",
+        "Complete a safety checklist before a flight."
+      ],
+      "readings": [
+        {"title": "UAS or HAB?", "id": "uas-or-hab"},
+        {"title": "Payload design", "id": "payload-design"},
+        {"title": "FAA rules", "id": "faa-rules"},
+        {"title": "Safety checklist", "id": "safety-checklist"}
+      ],
+      "activities": ["pm25-drone-profiles", "pm25-balloon-flight"],
+      "lessonVideo": null,
+      "reviewQuestions": [8, 9]
+    },
+    {
+      "slug": "data-quality-and-analysis",
+      "title": "Data Quality and Analysis",
+      "number": 6,
+      "url": "/pm25/data-quality-and-analysis/",
+      "summary": "Turn raw flight files into calibrated profiles with stated uncertainty, make the standard figures, and answer a research question in a report.",
+      "outcomes": [
+        "Follow the nine-step workflow from raw files to interpreted profiles.",
+        "Apply quality-control flags and a calibration, and record which you used.",
+        "Estimate and state the uncertainty of a profile.",
+        "Make the standard figures for a flight and report the results as a research paper."
+      ],
+      "readings": [
+        {"title": "The analysis workflow", "id": "workflow"},
+        {"title": "Standard figures", "id": "standard-figures"},
+        {"title": "Suggested tools", "id": "tools"}
+      ],
+      "activities": ["pm25-synthesis-report"],
+      "lessonVideo": null,
+      "reviewQuestions": [10]
+    }
+  ],
+  "reviewQuestions": {
+    "1": {
+      "question": "Why do PM2.5 particles cause more health harm than the same mass of coarse particles (2.5–10 µm)?",
+      "answer": "Fine particles are small enough to reach the deepest parts of the lung, the alveoli, while coarse particles are mostly caught in the nose, throat, and upper airways. The same mass of smaller particles is also many more particles with much more surface area, and the smallest (ultrafine) particles may pass into the bloodstream."
+    },
+    "2": {
+      "question": "Name two primary and two secondary sources of PM2.5, and explain how secondary particles form.",
+      "answer": "Primary (emitted directly), any two of: vehicle and diesel exhaust, wood stoves, wildfires and prescribed burns, cooking, industrial processes, wind-blown dust. Secondary, any two of: sulfate from sulfur dioxide, nitrate from nitrogen oxides, secondary organic aerosol from volatile organic compounds. Secondary particles form in the air when gases react (are oxidized) and the products condense into particles; ammonia neutralizes the sulfate and nitrate."
+    },
+    "3": {
+      "question": "Calculate the AQI for a 24-hour PM2.5 average of 40.0 µg/m³.",
+      "answer": "40.0 µg/m³ is in Unhealthy for Sensitive Groups (35.5–55.4 µg/m³, AQI 101–150). I = (150 − 101) ÷ (55.4 − 35.5) × (40.0 − 35.5) + 101 = 49 ÷ 19.9 × 4.5 + 101 = 112.08, which rounds to an AQI of 112, Unhealthy for Sensitive Groups."
+    },
+    "4": {
+      "question": "Why is it incorrect to report a 1-second reading at 1,500 m as an AQI value?",
+      "answer": "The AQI is defined for ground-level concentrations averaged over 24 hours (24 hourly values), compared with health-based breakpoints for the air people breathe. A 1-second reading is not a 24-hour average, and air at 1,500 m is not where people breathe, so report it as a concentration in µg/m³."
+    },
+    "5": {
+      "question": "Sketch the PM2.5 and temperature profiles you would expect at sunrise under a radiation inversion, and again at 3 p.m. on a sunny day.",
+      "answer": "At sunrise: temperature rises with height through a shallow inversion near the ground (often a few hundred meters or less); PM2.5 is highest near the surface and drops sharply at the top of the inversion, with a residual layer of yesterday’s pollution possible above it. At 3 p.m.: temperature falls with height through a deep mixed layer (often 1–3 km); PM2.5 is roughly uniform through the mixed layer and lower near the surface than at sunrise, then drops sharply at the top of the boundary layer, often where a small inversion caps it."
+    },
+    "6": {
+      "question": "A sensor reads 30 µg/m³ (CF=1) at 50% RH. Apply the EPA correction.",
+      "answer": "0.524 × 30 − 0.0862 × 50 + 5.75 = 15.72 − 4.31 + 5.75 = 17.16, about 17.2 µg/m³."
+    },
+    "7": {
+      "question": "Your HAB sensor shows PM2.5 rising from 5 to 80 µg/m³ at 3 km while RH jumps to 98%. Give two explanations and say how you would tell them apart.",
+      "answer": "(1) An artifact: the balloon is in cloud or near-saturated air, and water droplets or swollen (hygroscopic) particles are counted as PM2.5. (2) A real layer of smoke or dust that is also moist. To tell them apart: check whether the peak ends exactly where RH drops below about 85% (artifact) or continues into drier air (real); look at the size bins, since cloud droplets push up the large-particle counts; compare the ascent with the descent; and check satellite smoke products, the Fire and Smoke Map, and a HYSPLIT back trajectory for smoke or dust at that height."
+    },
+    "8": {
+      "question": "Why should a drone’s PM2.5 inlet sit above or outside the rotor disk?",
+      "answer": "Below and inside the rotor disk, downwash pushes air from above down through the rotors and mixes it, so the sensor samples a diluted, stirred mixture instead of the air at the drone’s altitude. An inlet above the rotors on a mast, or on a boom beyond the rotor disk, samples undisturbed air."
+    },
+    "9": {
+      "question": "Which platform would you use to study morning inversion breakup, and which to detect a smoke layer at 5 km? Justify each choice.",
+      "answer": "Inversion breakup: a UAS. A morning inversion is strongest near the ground, and a drone can fly many repeatable profiles through the lowest 400 feet as the morning goes on, hovering or climbing slowly, so you can watch it change. A balloon gives only one profile per launch and passes through those 400 feet in about half a minute. A smoke layer at 5 km: a HAB. Part 107 limits a drone to 400 feet above ground level, while a balloon carries the sensor up through the whole troposphere."
+    },
+    "10": {
+      "question": "List four quality-control flags you would apply before analysis, and why each matters.",
+      "answer": "Any four, with reasons: RH above 85% (particles swell with water and read too high); cloud or fog (droplets are counted as particles); sensor warm-up (readings are not yet stable); values outside the sensor’s range (not trustworthy); stuck or repeated values (the sensor or logger has failed); A/B channel disagreement on a dual-channel sensor (one channel is faulty). Flag rather than delete, so the decision can be checked and changed later."
+    }
+  }
+}
