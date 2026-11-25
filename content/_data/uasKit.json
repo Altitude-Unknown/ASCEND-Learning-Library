@@ -99,8 +99,8 @@
     "title": "Standard equipment for every ASCEND team",
     "items": [
       { "name": "ASCEND Logger PCB", "qty": 1 },
-      { "name": "3.7 V LiPo battery", "detail": "For the logger", "qty": 1 },
-      { "name": "PM2.5 air-quality sensor", "qty": 1 },
+      { "name": "3.7 V LiPo battery", "detail": "PKCELL LP785060, 2500 mAh, for the logger", "qty": 1, "photo": "logger-lipo.jpg", "alt": "A flat silver PKCELL LP785060 3.7 V 2500 mAh LiPo pouch cell with red and black leads." },
+      { "name": "PM2.5 air-quality sensor", "detail": "Adafruit PMSA003I, with STEMMA QT cable", "qty": 1, "photo": "pm25-sensor.jpg", "alt": "A blue Plantower PM2.5 sensor on an Adafruit PMSA003I breakout board, with a four-wire STEMMA QT cable." },
       { "name": "32 GB microSD card", "qty": 1, "photo": "microsd-card.jpg", "alt": "A red and white Kootion 32 GB microSDHC card." }
     ]
   }
