@@ -65,11 +65,12 @@
       "id": "hardware",
       "title": "Bolts, nuts and cable ties",
       "items": [
-        { "name": "M5 × 30 hex bolts", "qty": 8 },
-        { "name": "M5 × 20 hex bolts", "qty": 4 },
-        { "name": "M3 × 20 or M3 × 25 bolts", "qty": 6 },
-        { "name": "M3 × 55 bolts", "qty": 2 },
-        { "name": "M3 nuts", "qty": 8 },
+        { "name": "M5 × 30 hex bolts", "qty": 8, "photo": "m5x30-bolts.jpg", "alt": "Eight stainless M5 × 30 socket-head bolts below a label reading M5 X 30." },
+        { "name": "M5 × 20 hex bolts", "qty": 4, "photo": "m5x20-bolts.jpg", "alt": "Four stainless M5 × 20 socket-head bolts below a label reading M5 X 20." },
+        { "name": "M3 × 20 or M3 × 25 bolts", "qty": 6, "photo": "m3x20-bolts.jpg", "alt": "Six stainless M3 × 20 socket-head bolts below a label reading M3 X 20." },
+        { "name": "M3 × 55 bolts", "qty": 2, "photo": "m3x55-bolts.jpg", "alt": "Two long stainless M3 × 55 socket-head bolts below a label reading M3 X 55." },
+        { "name": "M3 nuts", "qty": 8, "photo": "m3-nuts.jpg", "alt": "Eight zinc-plated M3 hex nuts below a label reading M3 NUTS." },
+        { "name": "M2 × 6 self-tapping screws", "detail": "Black, countersunk", "qty": 8, "photo": "m2x6-screws.jpg", "alt": "Eight small black countersunk self-tapping screws below a label reading M2 X 6." },
         { "name": "Cable ties", "qty": 25, "photo": "cable-ties.jpg", "alt": "A pile of black cable ties." }
       ]
     },
