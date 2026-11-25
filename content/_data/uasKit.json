@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-24",
+  "updated": "2026-11-25",
   "groups": [
     {
       "id": "radio-and-flight-control",
@@ -49,10 +49,10 @@
       "id": "airframe",
       "title": "Airframe parts and materials",
       "items": [
-        { "name": "Laser-cut horizontal stabilizers", "qty": 2 },
-        { "name": "Laser-cut vertical stabilizers", "qty": 2 },
-        { "name": "Laser-cut elevators", "qty": 2 },
-        { "name": "Laser-cut rudders", "qty": 2 },
+        { "name": "Laser-cut horizontal stabilizers", "qty": 2, "photo": "horizontal-stabilizer.jpg", "alt": "A laser-cut plywood horizontal stabilizer with rounded tips, a notch at the center and a row of hinge holes along one edge." },
+        { "name": "Laser-cut vertical stabilizers", "qty": 2, "photo": "vertical-stabilizer.jpg", "alt": "A triangular laser-cut plywood vertical stabilizer with hinge holes along its long straight edge." },
+        { "name": "Laser-cut elevators", "qty": 2, "photo": "elevator.jpg", "alt": "A long, narrow laser-cut plywood elevator with rounded ends, hinge holes along one edge and a slot for the control horn." },
+        { "name": "Laser-cut rudders", "qty": 2, "photo": "rudder.jpg", "alt": "A laser-cut plywood rudder with one angled end, hinge holes along one edge and a slot for the control horn." },
         { "name": "Carbon fiber rod", "detail": "470 mm", "qty": 1, "photo": "carbon-rod.jpg", "alt": "A long black carbon fiber rod." },
         { "name": "Push rods", "qty": 4, "photo": "push-rods.jpg", "alt": "Four thin steel push rods with Z-bends at one end." },
         { "name": "Linkage stoppers", "detail": "1.5 mm", "qty": 6, "photo": "linkage-stoppers.jpg", "alt": "A small bag of brass linkage stoppers labeled 1.5 mm." },
@@ -100,7 +100,7 @@
       { "name": "ASCEND Logger PCB", "qty": 1 },
       { "name": "3.7 V LiPo battery", "detail": "For the logger", "qty": 1 },
       { "name": "PM2.5 air-quality sensor", "qty": 1 },
-      { "name": "32 GB microSD card", "qty": 1 }
+      { "name": "32 GB microSD card", "qty": 1, "photo": "microsd-card.jpg", "alt": "A red and white Kootion 32 GB microSDHC card." }
     ]
   }
 }
