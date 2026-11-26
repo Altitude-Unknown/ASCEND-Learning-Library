@@ -40,6 +40,7 @@
       "platforms": ["Windows x64", "macOS (Apple Silicon)", "Raspberry Pi (64-bit)"],
       "download": "https://github.com/Altitude-Unknown/RC-Airplane/releases/tag/flight-control-v2026.11.24.2",
       "pinnedRelease": "RC-Airplane's latest release must stay the RC Configurator (its firmware updater reads it), so this links to a specific ASCEND Flight Control release. Update it with each new release.",
+      "guide": "/resources/ascend-flight-control/",
       "source": "https://github.com/Altitude-Unknown/RC-Airplane/tree/main/ascend_flight_control",
       "note": "Beta: tested with the ArduPilot simulator but not yet on many airplanes, so save a backup of your settings first (Aircraft Settings, then Save Backup…). On Windows, if you see “Windows protected your PC,” choose More info, then Run anyway."
     },
